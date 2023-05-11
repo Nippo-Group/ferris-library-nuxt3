@@ -26,6 +26,9 @@
     "vite-plugin-vuetify": "^1.0.2",
     "vuetify": "^3.2.3"
   },
+  "dependencies": {
+    "dayjs": "^1.11.7"
+  },
   "lint-staged": {
     "*.{ts,vue}": [
       "prettier --write",
