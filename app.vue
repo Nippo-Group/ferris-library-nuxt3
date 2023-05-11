@@ -1,3 +1,5 @@
 <template>
-  <div><VBtn>Vuetify のボタン</VBtn><IconTest></IconTest></div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>

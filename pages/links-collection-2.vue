@@ -1,0 +1,177 @@
+<template>
+  <v-container>
+    <text-page-title>{{ title }}</text-page-title>
+    <div v-html="comment"></div>
+    <v-select
+      v-model="selected"
+      :items="categories"
+      filled
+      label="カテゴリー"
+    ></v-select>
+    <list-links-collection
+      :items="items"
+      :category="selected"
+    ></list-links-collection>
+  </v-container>
+</template>
+
+<script>
+export default {
+  name: 'PageLinksCollection2',
+  data: () => ({
+    title: '二次情報リンク集',
+    comment:
+      '<p>国内外の図書館の所蔵情報、図書や雑誌（論文）のタイトル・著者といった書誌情報など、一次情報にアクセスするための二次情報を入手できるサイトを集めました。</p>',
+    categories: [
+      '各種図書館が所蔵している資料を探す',
+      '雑誌（論文）、図書の情報を探す',
+      '出版情報',
+      '研究者、研究活動情報',
+    ],
+    selected: '各種図書館が所蔵している資料を探す',
+    items: [
+      {
+        name: 'CiNii Books',
+        url: 'https://ci.nii.ac.jp/books/',
+        category: '各種図書館が所蔵している資料を探す',
+        overseas: false,
+        author: '国立情報学研究所 (NII)',
+        text: '国内の大学図書館等の蔵書（所蔵している図書、雑誌、その他の資料）を検索できる',
+      },
+      {
+        name: 'Webcat Plus',
+        url: 'http://webcatplus.nii.ac.jp/',
+        category: '各種図書館が所蔵している資料を探す',
+        overseas: false,
+        author: '国立情報学研究所 (NII)',
+        text: '自然言語(思いついたことば)で検索できる',
+      },
+      {
+        name: 'NDL ONLINE',
+        url: 'http://opac.ndl.go.jp/',
+        category: '各種図書館が所蔵している資料を探す',
+        overseas: false,
+        author: '国立国会図書館 (NDL)',
+        text: '国立国会図書館の所蔵資料及び国立国会図書館で利用可能なデジタルコンテンツを検索、各種の申し込みができる',
+      },
+      {
+        name: '国立国会図書館サーチ',
+        url: 'https://iss.ndl.go.jp/',
+        category: '各種図書館が所蔵している資料を探す',
+        overseas: false,
+        author: '国立国会図書館 (NDL)',
+        text: '国立国会図書館をはじめ、全国の公共図書館、公文書館、美術館や学術研究機関等が提供する資料、デジタルコンテンツを統合的に検索できる',
+      },
+      {
+        name: '神奈川県立の図書館OPAC',
+        url: 'http://www.klnet.pref.kanagawa.jp/opac/index.jsp',
+        category: '各種図書館が所蔵している資料を探す',
+        overseas: false,
+        author: '神奈川県立図書館',
+        text: '神奈川県立図書館と、県内公共図書館の横断検索が可能',
+      },
+      {
+        name: '横浜市立図書館所蔵検索ページ',
+        url: 'http://opac.lib.city.yokohama.lg.jp/opac/',
+        category: '各種図書館が所蔵している資料を探す',
+        overseas: false,
+        author: '横浜市立図書館',
+        text: '市内地区センター蔵書検索も可能',
+      },
+      {
+        name: 'Explore the British Library',
+        url: 'http://explore.bl.uk/',
+        category: '各種図書館が所蔵している資料を探す',
+        overseas: true,
+        author: 'British Library (BL)',
+        text: '英国図書館(BL)の蔵書を検索し、所属図書館を通じてDocument Supply Centre (BLDSC)に複写・貸借依頼をすることができる',
+      },
+      {
+        name: 'copac',
+        url: 'http://copac.ac.uk/copac/',
+        category: '各種図書館が所蔵している資料を探す',
+        overseas: true,
+        author: 'Consortium of University Research Libraries (CURL)',
+        text: 'イギリスの大学図書館の蔵書横断検索。BLDSCで求める資料を利用できない場合（紛失、破損、所蔵なし等）、協力館に依頼してもらえる',
+      },
+      {
+        name: 'Gateway to Library Catalogs Z39.50',
+        url: 'http://lcweb.loc.gov/z3950/gateway.html',
+        category: '各種図書館が所蔵している資料を探す',
+        overseas: true,
+        author: 'Library of Conygess (LC)',
+        text: 'アメリカの議会図書館(LC)、大学、専門図書館の蔵書検索',
+      },
+      {
+        name: 'IRDB',
+        url: 'https://irdb.nii.ac.jp/',
+        category: '雑誌（論文）、図書の情報を探す',
+        overseas: false,
+        author: '国立情報学研究所 (NII)',
+        text: '日本の学術機関リポジトリに蓄積された学術情報を横断的に検索できる',
+      },
+      {
+        name: 'NDL ONLINE',
+        url: 'http://opac.ndl.go.jp/',
+        category: '雑誌（論文）、図書の情報を探す',
+        overseas: false,
+        author: '国立国会図書館 (NDL)',
+        text: '一般雑誌、学術雑誌、紀要など、国内で刊行された雑誌に収録されている記事、論文の著者名、タイトル、掲載誌名、刊行年（月・日）、ページ等の情報が検索できる。レポート・論文の参考文献収集に必須のデータベース',
+      },
+      {
+        name: '国文学論文目録データベース',
+        url: 'http://base1.nijl.ac.jp/~rombun/',
+        category: '雑誌（論文）、図書の情報を探す',
+        overseas: false,
+        author: '国文学研究資料館',
+        text: '国文学研究資料館で所蔵している日本国内で発表された文献に収められた、日本文学・日本語学・日本語教育の研究論文に関する情報を掲載',
+      },
+      {
+        name: 'ERIC',
+        url: 'http://eric.ed.gov/',
+        category: '雑誌（論文）、図書の情報を探す',
+        overseas: true,
+        author: 'Education Resources Information Center	',
+        text: '教育学関係の雑誌論文の書誌情報を中心に収録',
+      },
+      {
+        name: 'Books.or.jp',
+        url: 'http://www.books.or.jp/',
+        category: '出版情報',
+        overseas: false,
+        author: '日本書籍出版協会',
+        text: '現在国内で出版されている図書を検索できる。『日本書籍総目録』の最新・Web版。更新が不定期なので、最新情報に関しては各出版社のＨＰをチェックすると良い',
+      },
+      {
+        name: 'e-hon',
+        url: 'http://www.e-hon.ne.jp/bec/EB/Top',
+        category: '出版情報',
+        overseas: false,
+        author: 'トーハン',
+        text: '国内で販売されている書籍検索。注文して書店で受け取る事ができる',
+      },
+      {
+        name: 'J-GLOBAL',
+        url: 'http://jglobal.jst.go.jp/',
+        category: '研究者、研究活動情報',
+        overseas: false,
+        author: '国立研究開発法人科学技術振興機構(JST)',
+        text: '研究者や文献，特許，研究課題などの情報を搭載し、それらを相互に関連付けた科学技術情報の総合サイト',
+      },
+      {
+        name: 'KAKEN',
+        url: 'http://kaken.nii.ac.jp/',
+        category: '研究者、研究活動情報',
+        overseas: false,
+        author: '国立情報学研究所（NII）',
+        text: '文部科学省および日本学術振興会が交付する科学研究費補助金により行われた研究の当初採択時のデータ（採択課題）と研究成果の概要（研究実績報告，研究成果概要）を収録',
+      },
+    ],
+  }),
+  head() {
+    return {
+      title: this.title,
+    }
+  },
+}
+</script>
