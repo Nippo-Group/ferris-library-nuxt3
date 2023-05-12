@@ -1,3 +1,12 @@
+<script setup>
+definePageMeta({ layout: "LayoutEnglish" });
+
+const loading = ref(true);
+onMounted(() => {
+  loading.value = false;
+});
+</script>
+
 <template>
   <v-container>
     <v-skeleton-loader
@@ -20,23 +29,3 @@
     </v-skeleton-loader>
   </v-container>
 </template>
-
-<script>
-export default {
-  name: 'PageEnglishIndex',
-  layout: 'LayoutEnglish',
-  data: () => ({
-    title: 'Ferris University Library',
-    loading: true,
-  }),
-  head() {
-    return {
-      title: this.title,
-      titleTemplate: '',
-    }
-  },
-  mounted() {
-    this.loading = false
-  },
-}
-</script>

@@ -1,3 +1,9 @@
+<script setup>
+const title = ref("Calendar");
+useSeoMeta({ title: title.value });
+definePageMeta({ layout: "LayoutEnglish" });
+</script>
+
 <template>
   <v-container>
     <text-page-title>{{ title }}</text-page-title>
@@ -8,19 +14,3 @@
     </v-row>
   </v-container>
 </template>
-
-<script>
-export default {
-  name: 'PageEnglishCalender',
-  layout: 'LayoutEnglish',
-  data: () => ({
-    title: 'Calendar',
-    layout: 'LayoutEnglish',
-  }),
-  head() {
-    return {
-      title: this.title,
-    }
-  },
-}
-</script>
