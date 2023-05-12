@@ -1,14 +1,10 @@
+<script setup lang="ts">
+import { useLanguageStore } from "@/stores/language";
+useLanguageStore().setLang("en");
+</script>
+
 <template>
   <layout-wrapper>
     <slot />
   </layout-wrapper>
 </template>
-
-<script>
-export default {
-  name: "LayoutEnglish",
-  created() {
-    this.$store.commit("languageEn");
-  },
-};
-</script>
