@@ -27,7 +27,12 @@
     "vuetify": "^3.2.3"
   },
   "dependencies": {
-    "dayjs": "^1.11.7"
+    "@pinia/nuxt": "^0.4.10",
+    "dayjs": "^1.11.7",
+    "pinia": "^2.0.36"
+  },
+  "overrides": {
+    "vue": "latest"
   },
   "lint-staged": {
     "*.{ts,vue}": [

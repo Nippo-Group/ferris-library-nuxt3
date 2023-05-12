@@ -10,6 +10,7 @@ export default defineNuxtConfig({
       config.plugins!.push(vuetify());
     },
   },
+  modules: ["@pinia/nuxt"],
   vite: {
     ssr: {
       noExternal: ["vuetify"],
