@@ -8,12 +8,12 @@ export const mainTheme: ThemeDefinition = {
   colors: {
     background: "#FFFFFF",
     surface: "#FFFFFF",
-    primary: "#4f46e5",
-    secondary: "#9333ea",
-    error: "#ef4444",
-    info: "#3b82f6",
-    success: "#22c55e",
-    warning: "#f59e0b",
+    primary: "#b71c1c",
+    accent: "#212121",
+    error: "#f44336",
+    info: "#2196f3",
+    success: "#4caf50",
+    warning: "#ff9800",
   },
 };
 
@@ -25,11 +25,11 @@ export const mainDarkTheme: ThemeDefinition = {
   colors: {
     background: "#0C111B",
     surface: "#1f2937",
-    primary: "#6366f1",
-    secondary: "#9333ea",
-    error: "#ef4444",
-    info: "#3b82f6",
-    success: "#22c55e",
-    warning: "#f59e0b",
+    primary: "#b71c1c",
+    accent: "#212121",
+    error: "#f44336",
+    info: "#2196f3",
+    success: "#4caf50",
+    warning: "#ff9800",
   },
 };

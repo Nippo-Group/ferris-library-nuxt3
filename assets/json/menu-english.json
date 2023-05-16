@@ -2,13 +2,11 @@
   {
     "category": "Home",
     "id": "home",
-    "icon": "mdi-home",
     "push": "/english"
   },
   {
     "category": "Facility",
     "id": "facility",
-    "icon": "mdi-library",
     "contents": [
       {
         "title": "Contact / Access",
@@ -25,7 +23,6 @@
   {
     "category": "Service",
     "id": "service",
-    "icon": "mdi-information",
     "contents": [
       {
         "title": "Lending Service",
@@ -45,46 +42,39 @@
       {
         "title": "Various application form",
         "id": "application",
-        "href": "https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open",
-        "icon": "mdi-open-in-new"
+        "href": "https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open"
       }
     ]
   },
   {
     "category": "Information search",
     "id": "informationSearch",
-    "icon": "mdi-text-box-search-outline",
     "push": "/english/information-search"
   },
   {
     "category": "Links",
     "id": "links",
-    "icon": "mdi-connection",
     "contents": [
       {
         "title": "OPAC",
         "id": "opac",
-        "href": "https://www2.library.ferris.ac.jp/top/index?method=change&langMode=ENG",
-        "icon": "mdi-open-in-new"
+        "href": "https://www2.library.ferris.ac.jp/top/index?method=change&langMode=ENG"
       },
       {
         "title": "FAIR：Ferris Academic Intelligence repository",
         "id": "fair",
-        "href": "https://ferris.repo.nii.ac.jp/",
-        "icon": "mdi-open-in-new"
+        "href": "https://ferris.repo.nii.ac.jp/"
       },
       {
         "title": "Ferris University",
         "id": "ferrisUniversity",
-        "href": "https://www.ferris.ac.jp/en/",
-        "icon": "mdi-open-in-new"
+        "href": "https://www.ferris.ac.jp/en/"
       }
     ]
   },
   {
     "category": "日本語ページ",
     "id": "japanesePage",
-    "icon": "mdi-translate",
     "push": "/"
   }
 ]

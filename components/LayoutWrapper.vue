@@ -11,12 +11,6 @@
   </v-app>
 </template>
 
-<script>
-export default {
-  name: 'LayoutWrapper',
-}
-</script>
-
 <style scoped>
 .fade-page-enter-active {
   transition: opacity 1s ease-in;

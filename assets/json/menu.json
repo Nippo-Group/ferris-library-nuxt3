@@ -2,13 +2,11 @@
   {
     "category": "ホーム",
     "id": "home",
-    "icon": "mdi-home",
     "push": "/"
   },
   {
     "category": "施設について",
     "id": "facility",
-    "icon": "mdi-library",
     "contents": [
       {
         "title": "アクセス・問い合わせ",
@@ -40,7 +38,6 @@
   {
     "category": "利用案内",
     "id": "service",
-    "icon": "mdi-information",
     "contents": [
       {
         "title": "貸出サービス",
@@ -85,15 +82,13 @@
       {
         "title": "各種申込書",
         "id": "application",
-        "href": "https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open",
-        "icon": "mdi-open-in-new"
+        "href": "https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open"
       }
     ]
   },
   {
     "category": "情報検索",
     "id": "retrieval",
-    "icon": "mdi-text-box-search-outline",
     "contents": [
       {
         "title": "情報検索",
@@ -135,7 +130,7 @@
   {
     "category": "ニュース",
     "id": "news",
-    "icon": "mdi-newspaper-variant-outline",
+    "icon": "newspaper",
     "push": "/news",
     "contents": [
       {
@@ -148,7 +143,7 @@
   {
     "category": "トピックス",
     "id": "topics",
-    "icon": "mdi-book-open-variant",
+    "icon": "book",
     "contents": [
       {
         "title": "読書運動プロジェクト",
@@ -180,38 +175,32 @@
   {
     "category": "関連リンク",
     "id": "links",
-    "icon": "mdi-connection",
     "contents": [
       {
         "title": "OPAC",
         "id": "opac",
-        "href": "https://www2.library.ferris.ac.jp/top/index?method=open",
-        "icon": "mdi-open-in-new"
+        "href": "https://www2.library.ferris.ac.jp/top/index?method=open"
       },
       {
         "title": "学術機関リポジトリ",
         "id": "fair",
-        "href": "https://ferris.repo.nii.ac.jp/",
-        "icon": "mdi-open-in-new"
+        "href": "https://ferris.repo.nii.ac.jp/"
       },
       {
         "title": "Book Web Pro",
         "id": "bookWebPro",
-        "href": "https://pro.kinokuniya.co.jp/",
-        "icon": "mdi-open-in-new"
+        "href": "https://pro.kinokuniya.co.jp/"
       },
       {
         "title": "フェリス女学院大学",
         "id": "ferrisUniversity",
-        "href": "http://www.ferris.ac.jp/",
-        "icon": "mdi-open-in-new"
+        "href": "http://www.ferris.ac.jp/"
       }
     ]
   },
   {
     "category": "English page",
     "id": "englishPage",
-    "icon": "mdi-translate",
     "push": "/english"
   }
 ]

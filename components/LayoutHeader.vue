@@ -8,37 +8,35 @@ const language = ref(langStore.language);
 </script>
 
 <template>
-  <div>
-    <v-navigation-drawer v-model="drawer" app>
-      <layout-navigation-drawer></layout-navigation-drawer>
-    </v-navigation-drawer>
-    <v-app-bar app color="white" elevate-on-scroll>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+  <v-navigation-drawer v-model="drawer">
+    <layout-navigation-drawer></layout-navigation-drawer>
+  </v-navigation-drawer>
+  <v-app-bar color="white">
+    <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title class="pl-2">
-        <transition name="fade-image">
-          <img
-            v-if="language === 'en'"
-            src="~/assets/images/layouts/site-logo-english.png"
-            class="ferris-logo"
-            width="120"
-            height="34"
-            alt="Ferris University Library"
-          />
-        </transition>
-        <transition name="fade-image">
-          <img
-            v-if="language === 'ja'"
-            src="~/assets/images/layouts/site-logo.png"
-            class="ferris-logo"
-            width="200"
-            height="65"
-            alt="フェリス女学院大学附属図書館"
-          />
-        </transition>
-      </v-toolbar-title>
-    </v-app-bar>
-  </div>
+    <v-toolbar-title class="pl-2">
+      <transition name="fade-image">
+        <img
+          v-if="language === 'en'"
+          src="~/assets/images/layouts/site-logo-english.png"
+          class="ferris-logo"
+          width="120"
+          height="34"
+          alt="Ferris University Library"
+        />
+      </transition>
+      <transition name="fade-image">
+        <img
+          v-if="language === 'ja'"
+          src="~/assets/images/layouts/site-logo.png"
+          class="ferris-logo"
+          width="200"
+          height="65"
+          alt="フェリス女学院大学附属図書館"
+        />
+      </transition>
+    </v-toolbar-title>
+  </v-app-bar>
 </template>
 
 <style scoped>

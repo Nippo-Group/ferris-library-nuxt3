@@ -1,41 +1,38 @@
+<script setup>
+const fab = ref(false);
+
+const onScroll = (e) => {
+  if (typeof window === "undefined") return;
+  const top = window.pageYOffset || e.target.scrollTop || 0;
+  fab.value = top > 500;
+};
+
+const toTop = () => {
+  window.scroll({ top: 0, behavior: "smooth" });
+};
+</script>
+
 <template>
   <transition name="fade">
     <v-btn
       v-show="fab"
       v-scroll="onScroll"
-      class="mx-2"
-      fab
-      fixed
-      bottom
-      right
+      class="el_btnToTop"
       color="primary"
+      icon
       @click="toTop"
     >
-      <v-icon large>mdi-format-vertical-align-top</v-icon>
+      <icons-align-top size="large"></icons-align-top>
     </v-btn>
   </transition>
 </template>
 
-<script>
-export default {
-  name: 'LayoutToTop',
-  data: () => ({
-    fab: false,
-  }),
-  methods: {
-    onScroll(e) {
-      if (typeof window === 'undefined') return
-      const top = window.pageYOffset || e.target.scrollTop || 0
-      this.fab = top > 500
-    },
-    toTop() {
-      this.$vuetify.goTo(0)
-    },
-  },
-}
-</script>
-
 <style scoped>
+.el_btnToTop {
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+}
 .fade-enter-active,
 .fade-leave-active {
   transition: 0.5s;
