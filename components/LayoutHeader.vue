@@ -1,3 +1,12 @@
+<script setup>
+import { useLanguageStore } from "@/stores/language";
+
+const drawer = ref(null);
+
+const langStore = useLanguageStore();
+const language = ref(langStore.language);
+</script>
+
 <template>
   <div>
     <v-navigation-drawer v-model="drawer" app>
@@ -10,7 +19,7 @@
         <transition name="fade-image">
           <img
             v-if="language === 'en'"
-            :src="require('@/assets/images/layouts/site-logo-english.png')"
+            src="~/assets/images/layouts/site-logo-english.png"
             class="ferris-logo"
             width="120"
             height="34"
@@ -20,7 +29,7 @@
         <transition name="fade-image">
           <img
             v-if="language === 'ja'"
-            :src="require('@/assets/images/layouts/site-logo.png')"
+            src="~/assets/images/layouts/site-logo.png"
             class="ferris-logo"
             width="200"
             height="65"
@@ -32,46 +41,13 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'LayoutHeader',
-  data: () => ({
-    drawer: null,
-  }),
-  computed: {
-    language: {
-      get() {
-        return this.$store.state.language
-      },
-    },
-    siteTitle() {
-      const siteTitle =
-        this.language === 'en'
-          ? {
-              name: 'Ferris University Library',
-              img: require('@/assets/images/layouts/site-logo-english.png'),
-              width: '120',
-              height: '34',
-            }
-          : {
-              name: 'フェリス女学院大学附属図書館',
-              img: require('@/assets/images/layouts/site-logo.png'),
-              width: '200',
-              height: '65',
-            }
-      return siteTitle
-    },
-  },
-}
-</script>
-
 <style scoped>
 .ferris-logo {
   vertical-align: middle;
   max-width: 100%;
 }
 .site-title {
-  font-feature-settings: 'palt';
+  font-feature-settings: "palt";
   font-weight: bold;
 }
 .fade-image-enter-active {

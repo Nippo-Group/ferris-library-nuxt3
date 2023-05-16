@@ -35,35 +35,35 @@
 
 <script>
 export default {
-  name: 'PageReadingProjectIndex',
+  name: "PageReadingProjectIndex",
   async asyncData({ $microcms }) {
     const data = await $microcms.get({
-      endpoint: 'news',
-      queries: { ids: 'tzndu8jahabw,rne-f461pg' },
-    })
-    return data
+      endpoint: "news",
+      queries: { ids: "tzndu8jahabw,rne-f461pg" },
+    });
+    return data;
   },
   data: () => ({
-    title: '読書運動プロジェクト',
-    titleImage: require(`@/assets/images/reading-project/reading-project-title.png`),
+    title: "読書運動プロジェクト",
+    titleImage: "~/assets/images/reading-project/reading-project-title.png",
     openFile: {
-      name: '活動報告書',
-      url: '/documents/reading-project/activity-report2020-2021.pdf',
-      type: 'PDF',
+      name: "活動報告書",
+      url: "/documents/reading-project/activity-report2020-2021.pdf",
+      type: "PDF",
     },
   }),
   head() {
     return {
       title: this.title,
-    }
+    };
   },
   methods: {
     openConfirmDownload(content) {
-      this.openFile = content
-      this.$refs.confirmDownload.dialogOpen()
+      this.openFile = content;
+      this.$refs.confirmDownload.dialogOpen();
     },
   },
-}
+};
 </script>
 
 <style scoped>

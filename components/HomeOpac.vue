@@ -1,13 +1,27 @@
+<script setup>
+import { useLanguageStore } from "@/stores/language";
+
+const tab = ref(null);
+const qSearchWord = ref("");
+
+const langStore = useLanguageStore();
+const language = ref(langStore.language);
+const submitBtn = computed(() => {
+  const inputLength = qSearchWord.value !== null ? qSearchWord.value.length : 0;
+  return inputLength <= 0 || inputLength > 20;
+});
+</script>
+
 <template>
   <v-card>
     <v-tabs v-model="tab">
-      <v-tab v-text="language === 'en' ? 'Search' : '検索'"></v-tab>
-      <v-tab
-        v-text="language === 'en' ? 'Smartphone' : 'スマートフォン'"
-      ></v-tab>
+      <v-tab>
+        {{ language === "en" ? "Search" : "検索" }}
+      </v-tab>
+      <v-tab> {{ language === "en" ? "Smartphone" : "スマートフォン" }}</v-tab>
     </v-tabs>
-    <v-tabs-items v-model="tab">
-      <v-tab-item>
+    <v-window v-model="tab">
+      <v-window-item>
         <v-card flat>
           <v-card-text>
             <form
@@ -59,8 +73,8 @@
             <btn-my-library></btn-my-library>
           </v-card-text>
         </v-card>
-      </v-tab-item>
-      <v-tab-item>
+      </v-window-item>
+      <v-window-item>
         <v-card flat class="d-md-flex justify-start">
           <div>
             <v-card-text>
@@ -76,32 +90,10 @@
             <img src="@/assets/images/opac/qr.gif" />
           </div>
         </v-card>
-      </v-tab-item>
-    </v-tabs-items>
+      </v-window-item>
+    </v-window>
   </v-card>
 </template>
-
-<script>
-export default {
-  name: 'HomeOpac',
-  data: () => ({
-    tab: null,
-    qSearchWord: '',
-  }),
-  computed: {
-    language: {
-      get() {
-        return this.$store.state.language
-      },
-    },
-    submitBtn() {
-      const inputLength =
-        this.qSearchWord !== null ? this.qSearchWord.length : 0
-      return inputLength <= 0 || inputLength > 20
-    },
-  },
-}
-</script>
 
 <style scoped>
 .submit-btn {

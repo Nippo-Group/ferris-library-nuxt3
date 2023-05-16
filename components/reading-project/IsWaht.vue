@@ -83,9 +83,9 @@
                               media.source
                             }}</v-list-item-subtitle>
                           </v-list-item-content>
-                          <v-list-item-icon>
+                          <template #prepend>
                             <v-icon>mdi-open-in-new</v-icon>
-                          </v-list-item-icon>
+                          </template>
                         </v-list-item>
                       </v-list>
                     </v-card-text>
@@ -107,74 +107,74 @@
 
 <script>
 export default {
-  name: 'IsWhat',
+  name: "IsWhat",
   data: () => ({
-    title: '「読書運動プロジェクト」とは？',
+    title: "「読書運動プロジェクト」とは？",
     loading: true,
     leadSentence:
-      '本学の読書運動プロジェクトは、1998年にシアトル市で始まり、シカゴ市で2001年以降大きな成果を収め全米各地に広まった《One Book, One Community.》にヒントを得たものです。この取組みは、選定された図書の読書を通じてコミュニティの意識を育むOneBook, One Chicagoとしてシカゴ公共図書館で現在も続いています。本学では2002年度から始まり、図書館を拠点として「読書」を個人的な経験だけでなく他者と共有・発信する活動を支援しています。',
+      "本学の読書運動プロジェクトは、1998年にシアトル市で始まり、シカゴ市で2001年以降大きな成果を収め全米各地に広まった《One Book, One Community.》にヒントを得たものです。この取組みは、選定された図書の読書を通じてコミュニティの意識を育むOneBook, One Chicagoとしてシカゴ公共図書館で現在も続いています。本学では2002年度から始まり、図書館を拠点として「読書」を個人的な経験だけでなく他者と共有・発信する活動を支援しています。",
     mainActivity: {
-      title: '主な活動',
+      title: "主な活動",
       content: [
-        '本の展示',
-        'POPコンテスト・創作コンクール',
-        '選書ツアー',
-        '朗読会',
-        '各種イベントの実施',
+        "本の展示",
+        "POPコンテスト・創作コンクール",
+        "選書ツアー",
+        "朗読会",
+        "各種イベントの実施",
       ],
     },
     documents: [
       {
-        name: '活動報告書',
-        url: '/documents/reading-project/activity-report2020-2021.pdf',
-        type: 'PDF',
+        name: "活動報告書",
+        url: "/documents/reading-project/activity-report2020-2021.pdf",
+        type: "PDF",
       },
       {
-        name: 'リーフレット',
-        url: '/documents/reading-project/activity-introduction-leaflet.pdf',
-        type: 'PDF',
+        name: "リーフレット",
+        url: "/documents/reading-project/activity-introduction-leaflet.pdf",
+        type: "PDF",
       },
     ],
     recruiting: {
-      title: '《学内のみなさまへ》学生メンバー募集中！',
+      title: "《学内のみなさまへ》学生メンバー募集中！",
       content: [
-        '<p>図書館や本の魅力を学内外の様々な人に伝える活動を、一緒にしてみませんか？<br />学年不問で、いつからでも参加できます。</p>',
-        '【こんな人におすすめ！】<ul><li>本が好き</li><li>イラストを描くのが好き</li><li>イベントが好き、企画してみたい</li><li>大学生だからこそできる活動がしたい</li><li>人前で話すのは苦手だが、克服したい</li></ul>',
-        '<p>参加希望の方、もっと詳しく活動について知りたい方は、図書館カウンターもしくは下記メールアドレスまでお問い合わせください。</p>',
+        "<p>図書館や本の魅力を学内外の様々な人に伝える活動を、一緒にしてみませんか？<br />学年不問で、いつからでも参加できます。</p>",
+        "【こんな人におすすめ！】<ul><li>本が好き</li><li>イラストを描くのが好き</li><li>イベントが好き、企画してみたい</li><li>大学生だからこそできる活動がしたい</li><li>人前で話すのは苦手だが、克服したい</li></ul>",
+        "<p>参加希望の方、もっと詳しく活動について知りたい方は、図書館カウンターもしくは下記メールアドレスまでお問い合わせください。</p>",
       ],
     },
     mediaInformation: {
-      title: '掲載されました！',
+      title: "掲載されました！",
       actions: [
         {
-          url: 'https://magazine.ferris.ac.jp/20220830/16312/',
-          title: '読書運動プロジェクト活動報告　～2022夏～',
-          source: 'フェリスを綴る　2022年8月30日掲載',
+          url: "https://magazine.ferris.ac.jp/20220830/16312/",
+          title: "読書運動プロジェクト活動報告　～2022夏～",
+          source: "フェリスを綴る　2022年8月30日掲載",
         },
         {
-          url: 'https://magazine.ferris.ac.jp/20221021/17101/',
+          url: "https://magazine.ferris.ac.jp/20221021/17101/",
           title:
-            '読書体験の魅力を共有し、新たな本に出会う機会を創出する読書運動プロジェクト',
-          source: 'フェリスを綴る　2022年10月11日掲載',
+            "読書体験の魅力を共有し、新たな本に出会う機会を創出する読書運動プロジェクト",
+          source: "フェリスを綴る　2022年10月11日掲載",
         },
         {
-          url: 'https://magazine.ferris.ac.jp/20230328/17905/',
+          url: "https://magazine.ferris.ac.jp/20230328/17905/",
           title:
-            '読書運動プロジェクト：朗読会「しあわせの、かたち。 ―ひとりひとりが願うこと―」を開催しました',
-          source: 'フェリスを綴る　2023年3月28日掲載',
+            "読書運動プロジェクト：朗読会「しあわせの、かたち。 ―ひとりひとりが願うこと―」を開催しました",
+          source: "フェリスを綴る　2023年3月28日掲載",
         },
       ],
     },
   }),
   methods: {
     onClickButton(content) {
-      this.$emit('onClick', content)
+      this.$emit("onClick", content);
     },
     loaded() {
-      this.loading = false
+      this.loading = false;
     },
   },
-}
+};
 </script>
 
 <style scoped>

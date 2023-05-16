@@ -1,3 +1,28 @@
+<script setup>
+const title = ref("企画展示");
+useSeoMeta({ title: title.value });
+
+const nuxtApp = useNuxtApp();
+
+//  async asyncData({ $microcms }) {
+//   const data = await $microcms.get({
+//     endpoint: 'exhibition',
+//     queries: { orders: '-date' },
+//   })
+//   return data
+// },
+//   const show = ref(false)
+//   const items = reactive({})
+
+//  const openDitails = (content) => {
+//     items = content
+//     $refs.cardExhibitionDetails.dialogSwitching()
+//   }
+//  const reverseOrder = () => {
+//     contents.reverse()
+//   }
+</script>
+
 <template>
   <v-container>
     <v-row>
@@ -37,7 +62,7 @@
             {{ content.title }}
           </v-card-title>
           <v-card-subtitle>
-            {{ $dayjs(content.date).format('YYYY年M月D日') }}
+            {{ nuxtApp.$dayjs(content.date).format("YYYY年M月D日") }}
           </v-card-subtitle>
         </v-card>
       </v-col>
@@ -48,38 +73,6 @@
     ></card-exhibition-details>
   </v-container>
 </template>
-
-<script>
-export default {
-  name: 'PageExhibition',
-  async asyncData({ $microcms }) {
-    const data = await $microcms.get({
-      endpoint: 'exhibition',
-      queries: { orders: '-date' },
-    })
-    return data
-  },
-  data: () => ({
-    title: '企画展示',
-    show: false,
-    items: {},
-  }),
-  head() {
-    return {
-      title: this.title,
-    }
-  },
-  methods: {
-    openDitails(content) {
-      this.items = content
-      this.$refs.cardExhibitionDetails.dialogSwitching()
-    },
-    reverseOrder() {
-      this.contents.reverse()
-    },
-  },
-}
-</script>
 
 <style scoped>
 .v-card:hover .eyecatch {

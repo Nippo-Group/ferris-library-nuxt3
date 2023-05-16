@@ -1,15 +1,24 @@
+<script setup>
+import { useLanguageStore } from "@/stores/language";
+
+const props = defineProps({
+  items: {
+    type: Array,
+    default: () => {},
+  },
+});
+const active = ref(1);
+const langStore = useLanguageStore();
+const language = ref(langStore.language);
+</script>
+
 <template>
   <v-stepper v-model="active" vertical non-linear>
-    <template v-for="(item, i) in items">
-      <v-stepper-step
-        :key="'item' + i"
-        editable
-        :complete="active > item.step"
-        :step="item.step"
-      >
+    <template v-for="(item, i) in props.items" :key="'item-' + i">
+      <v-stepper-step editable :complete="active > item.step" :step="item.step">
         {{ item.subTitle }}
       </v-stepper-step>
-      <v-stepper-content :key="'itemContent' + i" :step="item.step">
+      <v-stepper-content :step="item.step">
         <ul class="link-list">
           <li v-for="(listItem, j) in item.list" :key="'listItem' + i + j">
             <v-btn
@@ -28,35 +37,13 @@
         </ul>
         <div class="text-right">
           <v-btn color="primary" @click="active = item.step + 1">
-            {{ language === 'en' ? 'Next' : 'つぎへ' }}
+            {{ language === "en" ? "Next" : "つぎへ" }}
           </v-btn>
         </div>
       </v-stepper-content>
     </template>
   </v-stepper>
 </template>
-
-<script>
-export default {
-  name: 'ListInformationSearch',
-  props: {
-    items: {
-      type: Array,
-      default: () => {},
-    },
-  },
-  data: () => ({
-    active: 1,
-  }),
-  computed: {
-    language: {
-      get() {
-        return this.$store.state.language
-      },
-    },
-  },
-}
-</script>
 
 <style scoped>
 .link-list {

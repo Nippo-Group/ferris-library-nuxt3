@@ -12,7 +12,7 @@ const items = reactive([
     tel: "045 (812) 6999",
     fax: "045 (812) 9772",
     eMali: "r_library@ferris.ac.jp",
-    image: require(`@/assets/images/contact/contact-ryokuen.jpg`),
+    image: "~/assets/images/contact/contact-ryokuen.jpg",
     accesses: [
       {
         transportation: "Sotetsu Izumino Line",
@@ -34,7 +34,7 @@ const items = reactive([
     tel: "045 (681) 5149",
     fax: "045 (681) 5188",
     eMali: "y_library@ferris.ac.jp",
-    image: require(`@/assets/images/contact/contact-yamate.jpg`),
+    image: "~/assets/images/contact/contact-yamate.jpg",
     accesses: [
       {
         transportation: "JR-EAST Keihin Tohoku Line",

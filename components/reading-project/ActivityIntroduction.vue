@@ -13,7 +13,9 @@
                   sm="6"
                 >
                   <card-reading-project-detail-article :name="item.name">
-                    <v-card-text v-html="item.content"></v-card-text>
+                    <v-card-text>
+                      <div v-html="item.content"></div
+                    ></v-card-text>
                     <v-container>
                       <v-row dense>
                         <v-col
@@ -42,35 +44,35 @@
 
 <script>
 export default {
-  name: 'ActivityIntroduction',
+  name: "ActivityIntroduction",
   data: () => ({
-    title: '活動紹介',
+    title: "活動紹介",
     leadSentence:
-      '読書運動プロジェクト（通称：読プロ）は、「本が好き」「図書館が好き」な学生が集まって、教職員と一緒に活動している公認団体です。<br />学生が主体となり、読書の魅力を届ける様々な活動を展開中です。',
+      "読書運動プロジェクト（通称：読プロ）は、「本が好き」「図書館が好き」な学生が集まって、教職員と一緒に活動している公認団体です。<br />学生が主体となり、読書の魅力を届ける様々な活動を展開中です。",
     about: {
       planning: {
-        name: '企画チーム',
+        name: "企画チーム",
         content:
-          '毎年テーマを決めて読書会や本の展示を行うほか、大学祭では展示発表やワークショップを主催します。<br />本をツールとしたおもしろい企画やアイデアいっぱいの広報を展開します。',
+          "毎年テーマを決めて読書会や本の展示を行うほか、大学祭では展示発表やワークショップを主催します。<br />本をツールとしたおもしろい企画やアイデアいっぱいの広報を展開します。",
         images: [
-          require(`@/assets/images/reading-project/about-planning-01.png`),
-          require(`@/assets/images/reading-project/about-planning-02.png`),
+          "~/assets/images/reading-project/about-planning-01.png",
+          "~/assets/images/reading-project/about-planning-02.png",
         ],
       },
       recitation: {
-        name: '朗読チーム',
+        name: "朗読チーム",
         content:
-          '朗読の専門家から直々に指導を受けられるので、 マイクなしで相手に伝わりやすい声、 表現方法が身につきます。<br />大学祭や文学館など、学内外で発表の機会があります。',
+          "朗読の専門家から直々に指導を受けられるので、 マイクなしで相手に伝わりやすい声、 表現方法が身につきます。<br />大学祭や文学館など、学内外で発表の機会があります。",
         images: [
-          require(`@/assets/images/reading-project/about-recitation-01.png`),
-          require(`@/assets/images/reading-project/about-recitation-02.png`),
+          "~/assets/images/reading-project/about-recitation-01.png",
+          "~/assets/images/reading-project/about-recitation-02.png",
         ],
         movie: {
-          src: 'https://www.youtube.com/embed/WcCruNTE__M',
-          title: '朗読動画（演目「やまなし」）',
+          src: "https://www.youtube.com/embed/WcCruNTE__M",
+          title: "朗読動画（演目「やまなし」）",
         },
       },
     },
   }),
-}
+};
 </script>

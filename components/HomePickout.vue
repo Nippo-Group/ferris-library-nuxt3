@@ -1,6 +1,9 @@
 <template>
   <v-slide-group multiple show-arrows>
-    <v-slide-item v-for="(item, index) in pickOut" :key="'pickout-' + index">
+    <v-slide-group-item
+      v-for="(item, index) in pickOut"
+      :key="'pickout-' + index"
+    >
       <v-card outlined :to="item.to" hover class="mx-1" width="240">
         <v-img
           :src="item.image"
@@ -12,46 +15,46 @@
         </v-img>
         <v-card-text>{{ item.text }}</v-card-text>
       </v-card>
-    </v-slide-item>
+    </v-slide-group-item>
   </v-slide-group>
 </template>
 
 <script>
 export default {
-  name: 'HomePickout',
+  name: "HomePickout",
   data: () => ({
     pickOut: [
       {
-        name: '読書運動プロジェクト',
-        to: '/reading-project',
-        text: '図書館を拠点とした、「読書」を共有・発信する様々な活動をご紹介します',
-        image: require(`@/assets/images/pickout/home-pickout-reading-project.png`),
+        name: "読書運動プロジェクト",
+        to: "/reading-project",
+        text: "図書館を拠点とした、「読書」を共有・発信する様々な活動をご紹介します",
+        image: "~/assets/images/pickout/home-pickout-reading-project.png",
       },
       {
-        name: '企画展示',
-        to: '/exhibition',
-        text: '図書館で実施する企画展示をご紹介します',
-        image: require(`@/assets/images/pickout/home-pickout-exhibition.png`),
+        name: "企画展示",
+        to: "/exhibition",
+        text: "図書館で実施する企画展示をご紹介します",
+        image: "~/assets/images/pickout/home-pickout-exhibition.png",
       },
       {
-        name: 'データベース・電子ブック',
-        to: '/database',
-        text: '図書館で契約しているデータベースや電子ブックを検索することができます',
-        image: require(`@/assets/images/pickout/home-pickout-database.png`),
+        name: "データベース・電子ブック",
+        to: "/database",
+        text: "図書館で契約しているデータベースや電子ブックを検索することができます",
+        image: "~/assets/images/pickout/home-pickout-database.png",
       },
       {
-        name: '電子コレクション',
-        to: '/digital-collection',
-        text: '図書館所蔵の貴重な資料をWEBから閲覧できます',
-        image: require(`@/assets/images/pickout/home-pickout-digital-collection.png`),
+        name: "電子コレクション",
+        to: "/digital-collection",
+        text: "図書館所蔵の貴重な資料をWEBから閲覧できます",
+        image: "~/assets/images/pickout/home-pickout-digital-collection.png",
       },
       {
-        name: 'レファレンスサービス',
-        to: '/reference',
-        text: 'ご希望の資料が当図書館にない場合も資料を探すお手伝いができます',
-        image: require(`@/assets/images/pickout/home-pickout-reference.png`),
+        name: "レファレンスサービス",
+        to: "/reference",
+        text: "ご希望の資料が当図書館にない場合も資料を探すお手伝いができます",
+        image: "~/assets/images/pickout/home-pickout-reference.png",
       },
     ],
   }),
-}
+};
 </script>

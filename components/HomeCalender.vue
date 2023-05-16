@@ -1,3 +1,36 @@
+<script setup>
+import ryokuen from "@/assets/json/calender-ryokuen.json";
+import yamate from "@/assets/json/calender-yamate.json";
+import common from "@/assets/json/calender-common.json";
+
+const nuxtApp = useNuxtApp();
+
+const todayEvents = (libraryName) => {
+  let events = [];
+  const todayEvents = [];
+  const today = nuxtApp.$dayjs();
+  switch (libraryName) {
+    case "ryokuen":
+      events = ryokuen.concat(common);
+      break;
+    case "yamate":
+      events = yamate.concat(common);
+      break;
+  }
+  events.forEach(function (value) {
+    const start = new Date(value.start);
+    start.setHours(0, 0, 0);
+    const end =
+      value.end !== undefined ? new Date(value.end) : new Date(value.start);
+    end.setHours(23, 59, 59);
+    if (today.isBetween(start, end, null, "[]")) {
+      todayEvents.push(value.name);
+    }
+  });
+  return todayEvents;
+};
+</script>
+
 <template>
   <v-container class="grey lighten-3">
     <v-row justify="center" dense>
@@ -7,7 +40,9 @@
             <div class="text-h6">
               <v-icon left>mdi-calendar-multiselect</v-icon>本日の開館時間
             </div>
-            <p class="mb-0">{{ $dayjs().format('YYYY年M月D日（dd）') }}</p>
+            <p class="mb-0">
+              {{ nuxtApp.$dayjs().format("YYYY年M月D日（dd）") }}
+            </p>
           </v-card-text>
           <v-card-actions class="justify-center">
             <btn-inside link="カレンダーをみる" to="/calender"></btn-inside>
@@ -49,47 +84,6 @@
     </v-row>
   </v-container>
 </template>
-
-<script>
-import ryokuen from '@/assets/json/calender-ryokuen.json'
-import yamate from '@/assets/json/calender-yamate.json'
-import common from '@/assets/json/calender-common.json'
-
-export default {
-  name: 'HomeCalender',
-  data: () => ({
-    ryokuen,
-    yamate,
-    common,
-  }),
-  methods: {
-    todayEvents(libraryName) {
-      let events = []
-      const todayEvents = []
-      const today = this.$dayjs()
-      switch (libraryName) {
-        case 'ryokuen':
-          events = this.ryokuen.concat(this.common)
-          break
-        case 'yamate':
-          events = this.yamate.concat(this.common)
-          break
-      }
-      events.forEach(function (value) {
-        const start = new Date(value.start)
-        start.setHours(0, 0, 0)
-        const end =
-          value.end !== undefined ? new Date(value.end) : new Date(value.start)
-        end.setHours(23, 59, 59)
-        if (today.isBetween(start, end, null, '[]')) {
-          todayEvents.push(value.name)
-        }
-      })
-      return todayEvents
-    },
-  },
-}
-</script>
 
 <style scoped>
 .events {

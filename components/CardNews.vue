@@ -1,13 +1,28 @@
+<script setup>
+const props = defineProps({
+  items: {
+    type: Object,
+    default: () => {},
+  },
+});
+const items = reactive(props.items);
+
+const nuxtApp = useNuxtApp();
+</script>
+
 <template>
   <v-card tag="article">
     <v-system-bar color="primary" dark> News </v-system-bar>
     <v-card-title tag="h1">
       {{ items.title }}
     </v-card-title>
-    <v-card-subtitle v-text="$dayjs(items.date).format('YYYY年M月D日')">
+    <v-card-subtitle>
+      {{ nuxtApp.$dayjs(items.date).format("YYYY年M月D日") }}
     </v-card-subtitle>
     <div class="content-body">
-      <v-card-text class="news-contents" v-html="items.contents"> </v-card-text>
+      <v-card-text class="news-contents">
+        <div v-html="items.contents"></div>
+      </v-card-text>
       <v-card-actions v-if="items.actions" class="overflow-x-auto">
         <btn-inside
           v-if="items.actions && items.actions.link && items.actions.to"
@@ -41,16 +56,6 @@
     </v-card-actions>
   </v-card>
 </template>
-
-<script>
-export default {
-  name: 'CardNews',
-  props: {
-    items: { type: Object, default: () => {} },
-  },
-  data: () => ({}),
-}
-</script>
 
 <style scoped>
 .wrap-text {

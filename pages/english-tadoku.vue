@@ -12,7 +12,7 @@
           <v-img
             position="top center"
             max-height="164"
-            :src="require(`@/assets/images/english-tadoku/tadoku-01.jpg`)"
+            src="~/assets/images/english-tadoku/tadoku-01.jpg"
           ></v-img>
           <v-card-text>
             Macmillan Readers や Magic Tree
@@ -48,7 +48,7 @@
           <v-img
             position="top center"
             max-height="164"
-            :src="require(`@/assets/images/english-tadoku/tadoku-02.jpg`)"
+            src="~/assets/images/english-tadoku/tadoku-02.jpg"
           ></v-img>
           <v-card-text>
             <p>
@@ -73,7 +73,7 @@
             緑園本館4階に、英語多読図書を集めたコーナーがあります。貸出条件は一般図書と同じです。
           </v-card-text>
           <v-img
-            :src="require(`@/assets/images/english-tadoku/tadoku-03.jpg`)"
+            src="~/assets/images/english-tadoku/tadoku-03.jpg"
             width="90%"
           ></v-img>
         </v-card>
@@ -84,14 +84,14 @@
 
 <script>
 export default {
-  name: 'PageEnglishTadoku',
+  name: "PageEnglishTadoku",
   data: () => ({
-    title: '英語多読図書',
+    title: "英語多読図書",
   }),
   head() {
     return {
       title: this.title,
-    }
+    };
   },
-}
+};
 </script>

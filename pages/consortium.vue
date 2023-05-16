@@ -12,7 +12,7 @@
             <v-spacer></v-spacer>
             <v-btn icon>
               <v-icon>{{
-                show ? 'mdi-chevron-up' : 'mdi-chevron-down'
+                show ? "mdi-chevron-up" : "mdi-chevron-down"
               }}</v-icon>
             </v-btn>
           </v-card-actions>
@@ -20,25 +20,20 @@
             <div v-show="show">
               <v-divider></v-divider>
               <v-list>
-                <template v-for="(item, i) in items">
+                <template v-for="(item, i) in items" :key="'item' + i">
                   <v-list-item
                     v-if="item.url"
-                    :key="'item' + i"
                     link
                     @click="openConfirmDownload(item)"
                   >
-                    <v-list-item-content>
-                      <v-list-item-title v-text="item.name"></v-list-item-title>
-                    </v-list-item-content>
-                    <v-list-item-icon>
+                    <v-list-item-title> {{ item.name }}</v-list-item-title>
+                    <template #append>
                       <v-icon>mdi-file-pdf-box</v-icon>
-                    </v-list-item-icon>
+                    </template>
                   </v-list-item>
 
-                  <v-list-item v-else :key="'item' + i">
-                    <v-list-item-content>
-                      <v-list-item-title v-text="item.name"></v-list-item-title>
-                    </v-list-item-content>
+                  <v-list-item v-else>
+                    <v-list-item-title> {{ item.name }}</v-list-item-title>
                   </v-list-item>
                 </template>
               </v-list>
@@ -72,87 +67,87 @@
 
 <script>
 export default {
-  name: 'PageConsortium',
+  name: "PageConsortium",
   data: () => ({
-    title: '横浜市内大学図書館コンソーシアム',
+    title: "横浜市内大学図書館コンソーシアム",
     show: false,
     openFile: {},
     items: [
       {
-        name: '神奈川大学図書館',
-        url: '/documents/consortium/kanagawa.pdf',
-        type: 'PDF',
+        name: "神奈川大学図書館",
+        url: "/documents/consortium/kanagawa.pdf",
+        type: "PDF",
       },
       {
-        name: '関東学院大学図書館',
-        url: '/documents/consortium/kangaku_hon.pdf',
-        type: 'PDF',
+        name: "関東学院大学図書館",
+        url: "/documents/consortium/kangaku_hon.pdf",
+        type: "PDF",
       },
       {
-        name: '慶應義塾大学日吉メディアセンター',
-        url: '/documents/consortium/keio.pdf',
-        type: 'PDF',
+        name: "慶應義塾大学日吉メディアセンター",
+        url: "/documents/consortium/keio.pdf",
+        type: "PDF",
       },
       {
-        name: '國學院大學たまプラーザ図書館',
-        url: '/documents/consortium/kokugakuin.pdf',
-        type: 'PDF',
+        name: "國學院大學たまプラーザ図書館",
+        url: "/documents/consortium/kokugakuin.pdf",
+        type: "PDF",
       },
       {
-        name: '鶴見大学図書館',
-        url: '/documents/consortium/turumi.pdf',
-        type: 'PDF',
+        name: "鶴見大学図書館",
+        url: "/documents/consortium/turumi.pdf",
+        type: "PDF",
       },
       {
-        name: '桐蔭横浜大学大学情報センター',
-        url: '/documents/consortium/toin.pdf',
-        type: 'PDF',
+        name: "桐蔭横浜大学大学情報センター",
+        url: "/documents/consortium/toin.pdf",
+        type: "PDF",
       },
       {
-        name: '東京都市大学横浜キャンパス図書館',
-        url: '/documents/consortium/toshi.pdf',
-        type: 'PDF',
+        name: "東京都市大学横浜キャンパス図書館",
+        url: "/documents/consortium/toshi.pdf",
+        type: "PDF",
       },
       {
-        name: '東洋英和女学院大学図書館',
-        url: '/documents/consortium/toyoeiwa.pdf',
-        type: 'PDF',
+        name: "東洋英和女学院大学図書館",
+        url: "/documents/consortium/toyoeiwa.pdf",
+        type: "PDF",
       },
       {
-        name: 'フェリス女学院大学附属図書館',
+        name: "フェリス女学院大学附属図書館",
       },
       {
-        name: '明治学院大学横浜校舎図書館',
-        url: '/documents/consortium/meigaku.pdf',
-        type: 'PDF',
+        name: "明治学院大学横浜校舎図書館",
+        url: "/documents/consortium/meigaku.pdf",
+        type: "PDF",
       },
       {
-        name: '横浜国立大学附属図書館',
-        url: '/documents/consortium/yokokoku.pdf',
-        type: 'PDF',
+        name: "横浜国立大学附属図書館",
+        url: "/documents/consortium/yokokoku.pdf",
+        type: "PDF",
       },
       {
-        name: '横浜商科大学図書館',
-        url: '/documents/consortium/yokosho.pdf',
-        type: 'PDF',
+        name: "横浜商科大学図書館",
+        url: "/documents/consortium/yokosho.pdf",
+        type: "PDF",
       },
       {
-        name: '横浜市立大学学術情報センター',
-        url: '/documents/consortium/yokoichi.pdf',
-        type: 'PDF',
+        name: "横浜市立大学学術情報センター",
+        url: "/documents/consortium/yokoichi.pdf",
+        type: "PDF",
       },
     ],
   }),
   head() {
     return {
       title: this.title,
-    }
+    };
   },
   methods: {
     openConfirmDownload(content) {
-      this.openFile = content
-      this.$refs.confirmDownload.dialogOpen()
+      this.openFile = content;
+      this.$refs.confirmDownload.dialogOpen();
     },
   },
-}
+};
 </script>

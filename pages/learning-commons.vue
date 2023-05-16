@@ -23,26 +23,26 @@
 
 <script>
 export default {
-  name: 'PageLearningCommons',
+  name: "PageLearningCommons",
   data: () => ({
-    title: 'ラーニングコモンズ',
+    title: "ラーニングコモンズ",
     items: [
       {
-        title: 'ラーニングコモンズの紹介',
-        href: 'https://www.ferris.ac.jp/information/library/learningcommons.html',
-        img: require(`@/assets/images/learning-commons/learning-commons-01.jpg`),
+        title: "ラーニングコモンズの紹介",
+        href: "https://www.ferris.ac.jp/information/library/learningcommons.html",
+        img: "~/assets/images/learning-commons/learning-commons-01.jpg",
       },
       {
-        title: 'ピアノの弾ける図書館',
-        href: 'https://www.ferris.ac.jp/blog/20210202/7203/',
-        img: require(`@/assets/images/learning-commons/learning-commons-02.jpg`),
+        title: "ピアノの弾ける図書館",
+        href: "https://www.ferris.ac.jp/blog/20210202/7203/",
+        img: "~/assets/images/learning-commons/learning-commons-02.jpg",
       },
     ],
   }),
   head() {
     return {
       title: this.title,
-    }
+    };
   },
-}
+};
 </script>

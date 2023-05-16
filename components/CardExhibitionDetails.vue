@@ -16,15 +16,15 @@
       >
       <v-card-text class="content-body">
         <v-list-item v-if="items.placeToExhibit">
-          <v-list-item-icon>
+          <template v-slot:prepend>
             <v-icon>mdi-map-marker</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            展示場所 ‐ {{ items.placeToExhibit.placeToExhibit }}
-          </v-list-item-content>
+          </template>
+          展示場所 ‐ {{ items.placeToExhibit.placeToExhibit }}
         </v-list-item>
         <v-divider></v-divider>
-        <v-list-item class="mt-8" v-html="items.content"> </v-list-item>
+        <v-list-item class="mt-8">
+          <div v-html="items.content"></div>
+        </v-list-item>
       </v-card-text>
       <v-divider></v-divider>
       <v-card-actions>
@@ -39,7 +39,7 @@
 
 <script>
 export default {
-  name: 'CardExhibitionDetails',
+  name: "CardExhibitionDetails",
   props: {
     items: {
       type: Object,
@@ -51,10 +51,10 @@ export default {
   }),
   methods: {
     dialogSwitching() {
-      this.dialog = !this.dialog
+      this.dialog = !this.dialog;
     },
   },
-}
+};
 </script>
 
 <style scoped>
