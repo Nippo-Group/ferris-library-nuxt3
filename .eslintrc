@@ -2,7 +2,8 @@
   "extends": [
     "eslint:recommended",
     "@nuxtjs/eslint-config-typescript",
-    "prettier"
+    "prettier",
+    "plugin:vuetify/base"
   ],
   "rules": {
     "no-console": "off"

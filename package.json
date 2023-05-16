@@ -17,6 +17,7 @@
     "@types/node": "^18",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-vuetify": "^2.0.0-beta.4",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "nuxt": "^3.4.3",
