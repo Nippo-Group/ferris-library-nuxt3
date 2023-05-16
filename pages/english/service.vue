@@ -1,7 +1,7 @@
 <script setup>
 const title = ref("Lending Service");
 useSeoMeta({ title: title.value });
-definePageMeta({ layout: "LayoutEnglish" });
+definePageMeta({ layout: "english" });
 
 const panel = [0, 1];
 const items = reactive([
@@ -128,7 +128,7 @@ const quantity = reactive([
     <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col cols="12" md="10" lg="8">
-        <v-expansion-panels v-model="panel" accordion multiple>
+        <v-expansion-panels v-model="panel" variant="accordion" multiple>
           <v-expansion-panel v-for="(item, i) in items" :key="i">
             <v-expansion-panel-header>{{
               item.title
@@ -149,8 +149,8 @@ const quantity = reactive([
         <v-alert
           v-for="(note, j) in pleaseNotes"
           :key="'note' + j"
-          dense
-          outlined
+          density="compact"
+          variant="outlined"
           :type="note.type"
         >
           {{ note.text }}

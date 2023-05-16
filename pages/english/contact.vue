@@ -1,7 +1,7 @@
 <script setup>
 const title = ref("Contact / Access");
 useSeoMeta({ title: title.value });
-definePageMeta({ layout: "LayoutEnglish" });
+definePageMeta({ layout: "english" });
 
 const items = reactive([
   {

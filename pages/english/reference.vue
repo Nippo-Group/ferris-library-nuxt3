@@ -1,7 +1,7 @@
 <script setup>
 const title = ref("Reference Service");
 useSeoMeta({ title: title.value });
-definePageMeta({ layout: "LayoutEnglish" });
+definePageMeta({ layout: "english" });
 
 const items = reactive([
   {
@@ -98,7 +98,7 @@ const items = reactive([
           >
             <v-card-title>
               {{ content.subtitle }}
-              <v-icon v-if="content.link" right>mdi-open-in-new</v-icon>
+              <v-icon v-if="content.link" end>mdi-open-in-new</v-icon>
             </v-card-title>
             <v-card-text>
               {{ content.text }}

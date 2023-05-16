@@ -1,7 +1,7 @@
 <script setup>
 const title = ref("Tour and Guidance Workshops");
 useSeoMeta({ title: title.value });
-definePageMeta({ layout: "LayoutEnglish" });
+definePageMeta({ layout: "english" });
 
 const items = reactive([
   {

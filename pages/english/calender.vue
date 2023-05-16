@@ -1,7 +1,7 @@
 <script setup>
 const title = ref("Calendar");
 useSeoMeta({ title: title.value });
-definePageMeta({ layout: "LayoutEnglish" });
+definePageMeta({ layout: "english" });
 </script>
 
 <template>
