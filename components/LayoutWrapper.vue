@@ -1,6 +1,12 @@
+<script setup lang="ts">
+const drawer: Ref<boolean | null> = ref(null);
+provide("drawer", drawer);
+</script>
+
 <template>
   <v-app id="inspire">
     <layout-header></layout-header>
+    <layout-navigation-drawer v-model="drawer"></layout-navigation-drawer>
     <v-main>
       <transition name="fade-page">
         <slot />

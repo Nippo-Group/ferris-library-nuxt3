@@ -1,19 +1,15 @@
 <script setup>
 import { useLanguageStore } from "@/stores/language";
 
-const drawer = ref(null);
-
 const langStore = useLanguageStore();
 const language = ref(langStore.language);
+
+const drawer = inject("drawer");
 </script>
 
 <template>
-  <v-navigation-drawer v-model="drawer">
-    <layout-navigation-drawer></layout-navigation-drawer>
-  </v-navigation-drawer>
   <v-app-bar color="white">
     <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
     <v-toolbar-title class="pl-2">
       <transition name="fade-image">
         <img
