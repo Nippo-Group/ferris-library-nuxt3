@@ -18,12 +18,17 @@ export default defineNuxtConfig({
   build: {
     transpile: ["vuetify"],
   },
+  css: ["@/assets/main.scss"],
   hooks: {
     "vite:extendConfig": (config) => {
       config.plugins!.push(vuetify());
     },
   },
-  modules: ["@pinia/nuxt"],
+  modules: ["@pinia/nuxt", "nuxt-microcms-module"],
+  microCMS: {
+    serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
+    apiKey: process.env.MICROCMS_API_KEY,
+  },
   vite: {
     ssr: {
       noExternal: ["vuetify"],
@@ -32,5 +37,4 @@ export default defineNuxtConfig({
       "process.env.DEBUG": false,
     },
   },
-  css: ["@/assets/main.scss"],
 });

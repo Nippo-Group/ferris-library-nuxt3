@@ -30,6 +30,7 @@
   "dependencies": {
     "@pinia/nuxt": "^0.4.10",
     "dayjs": "^1.11.7",
+    "nuxt-microcms-module": "^3.0.1",
     "pinia": "^2.0.36"
   },
   "overrides": {
