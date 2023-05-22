@@ -1,47 +1,55 @@
 <script setup>
+import { useDisplay } from "vuetify";
+
 const items = [
-  "~/assets/images/main-visual/main-visual-01.jpg",
-  "~/assets/images/main-visual/main-visual-02.jpg",
-  "~/assets/images/main-visual/main-visual-03.jpg",
-  "~/assets/images/main-visual/main-visual-04.jpg",
-  "~/assets/images/main-visual/main-visual-06.jpg",
-  "~/assets/images/main-visual/main-visual-05.jpg",
-  "~/assets/images/main-visual/main-visual-07.jpg",
-  "~/assets/images/main-visual/main-visual-08.jpg",
+  "main-visual-01.jpg",
+  "main-visual-02.jpg",
+  "main-visual-03.jpg",
+  "main-visual-04.jpg",
+  "main-visual-06.jpg",
+  "main-visual-05.jpg",
+  "main-visual-07.jpg",
+  "main-visual-08.jpg",
 ];
 
-/* const carouselHeight = computed(() => {
-  let height;
-  switch (this.$vuetify.breakpoint.name) {
+const generateImgPath = (fileName) => {
+  return new URL(`../assets/images/main-visual/${fileName}`, import.meta.url)
+    .href;
+};
+
+const carouselHeight = computed(() => {
+  const breakpoint = useDisplay().name.value;
+  switch (breakpoint) {
     case "xs":
-      height = 260;
-      break;
+      return 240;
     case "sm":
-      height = 280;
-      break;
+      return 280;
     case "md":
-      height = 300;
-      break;
+      return 340;
     case "lg":
-      height = 320;
-      break;
+      return 360;
     case "xl":
-      height = 340;
-      break;
+      return 380;
+    default:
+      return 300;
   }
-  return height;
-}); */
+});
 </script>
 
 <template>
   <v-carousel
     cycle
     hide-delimiter-background
-    show-arrows-on-hover
-    :height="300"
+    show-arrows="hover"
+    :height="carouselHeight"
+    color="white"
   >
-    <v-carousel-item v-for="(item, i) in items" :key="i">
-      <v-img :src="item" class="imageFilter" :height="300"></v-img>
+    <v-carousel-item
+      v-for="(item, i) in items"
+      :key="i"
+      :src="generateImgPath(item)"
+      cover
+    >
     </v-carousel-item>
   </v-carousel>
 </template>

@@ -32,16 +32,22 @@ const todayEvents = (libraryName) => {
 </script>
 
 <template>
-  <v-container class="grey lighten-3">
+  <v-container class="bg-grey-lighten-3">
     <v-row justify="center" dense>
       <v-col cols="12" md="4">
-        <v-card height="100%" color="rgba(255, 255, 255, 0.8)" outlined tile>
+        <v-card
+          height="100%"
+          color="rgba(255, 255, 255, 0.8)"
+          rounded="0"
+          variant="flat"
+        >
           <v-card-text class="text-center pb-0">
             <div class="text-h6">
-              <v-icon left>mdi-calendar-multiselect</v-icon>本日の開館時間
+              <icons-calendar-multiselect start size="small" />
+              本日の開館時間
             </div>
             <p class="mb-0">
-              {{ nuxtApp.$dayjs().format("YYYY年M月D日（dd）") }}
+              {{ nuxtApp.$dayjs().format("YYYY年M月D日（ddd）") }}
             </p>
           </v-card-text>
           <v-card-actions class="justify-center">
@@ -50,14 +56,19 @@ const todayEvents = (libraryName) => {
         </v-card>
       </v-col>
       <v-col cols="12" sm="6" md="4">
-        <v-card height="100%" color="rgba(255, 255, 255, 0.8)" outlined tile>
+        <v-card
+          height="100%"
+          color="rgba(255, 255, 255, 0.8)"
+          rounded="0"
+          variant="flat"
+        >
           <v-card-text class="text-center">
             <p class="text-h6 mb-0">緑園本館</p>
             <ul class="events">
               <li
                 v-for="(item, i) in todayEvents('ryokuen')"
                 :key="'ryokuen' + i"
-                class="grey lighten-4"
+                class="bg-grey-lighten-4"
               >
                 {{ item }}
               </li>
@@ -66,14 +77,19 @@ const todayEvents = (libraryName) => {
         </v-card>
       </v-col>
       <v-col cols="12" sm="6" md="4">
-        <v-card height="100%" color="rgba(255, 255, 255, 0.8)" outlined tile>
+        <v-card
+          height="100%"
+          color="rgba(255, 255, 255, 0.8)"
+          rounded="0"
+          variant="flat"
+        >
           <v-card-text class="text-center">
             <p class="text-h6 mb-0">山手分室</p>
             <ul class="events">
               <li
                 v-for="(item, i) in todayEvents('yamate')"
                 :key="'yamate' + i"
-                class="grey lighten-4"
+                class="bg-grey-lighten-4"
               >
                 {{ item }}
               </li>

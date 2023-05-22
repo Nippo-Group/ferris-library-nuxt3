@@ -1,4 +1,5 @@
 <script setup>
+import { mdiOpenInNew, mdiMagnify, mdiSend } from "@mdi/js";
 import { useLanguageStore } from "@/stores/language";
 
 const tab = ref(null);
@@ -6,15 +7,15 @@ const qSearchWord = ref("");
 
 const langStore = useLanguageStore();
 const language = ref(langStore.language);
-const submitBtn = computed(() => {
-  const inputLength = qSearchWord.value !== null ? qSearchWord.value.length : 0;
-  return inputLength <= 0 || inputLength > 20;
+
+const rules = ref({
+  required: (value) => !!value || "Field is required",
 });
 </script>
 
 <template>
   <v-card>
-    <v-tabs v-model="tab">
+    <v-tabs v-model="tab" color="primary">
       <v-tab>
         {{ language === "en" ? "Search" : "検索" }}
       </v-tab>
@@ -24,7 +25,7 @@ const submitBtn = computed(() => {
       <v-window-item>
         <v-card flat>
           <v-card-text>
-            <form
+            <v-form
               name="QSearch"
               action="https://www2.library.ferris.ac.jp/gate"
               method="POST"
@@ -39,6 +40,7 @@ const submitBtn = computed(() => {
               <v-text-field
                 id="QSearch"
                 v-model="qSearchWord"
+                :rules="[rules.required]"
                 name="word"
                 :label="language === 'en' ? 'Quick search' : 'クイックサーチ'"
                 :placeholder="
@@ -46,26 +48,19 @@ const submitBtn = computed(() => {
                     ? 'Please enter a keyword'
                     : 'キーワードを入力してください'
                 "
-                outlined
-                dense
-                append-icon="mdi-open-in-new"
-                prepend-inner-icon="mdi-magnify"
+                type="text"
+                variant="outlined"
+                density="compact"
+                :prepend-inner-icon="mdiMagnify"
+                :append-inner-icon="mdiOpenInNew"
                 clearable
+                maxlength="128"
               >
-                <template #append-outer>
-                  <v-btn
-                    type="submit"
-                    class="submit-btn"
-                    small
-                    fab
-                    icon
-                    color="primary"
-                    :disabled="submitBtn"
-                    ><v-icon>mdi-send</v-icon></v-btn
-                  >
+                <template #append>
+                  <v-btn type="submit" :icon="mdiSend" variant="text"></v-btn>
                 </template>
               </v-text-field>
-            </form>
+            </v-form>
             <btn-open-in-new
               :link="language === 'en' ? 'Detailed search' : '詳細検索'"
               url="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
@@ -94,9 +89,3 @@ const submitBtn = computed(() => {
     </v-window>
   </v-card>
 </template>
-
-<style scoped>
-.submit-btn {
-  margin-top: -8px;
-}
-</style>

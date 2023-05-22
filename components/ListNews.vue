@@ -21,7 +21,7 @@ const dialog = ref(false);
 const dialogContent = ref({});
 
 onMounted(() => {
-  const mode = $route.query.mode ?? "public";
+  const mode = useRoute().query.mode ?? "public";
   let contents = props.contents;
   if (mode !== "private") {
     contents = contents.filter((element) => {
@@ -50,28 +50,26 @@ const dialogClose = () => {
       <template v-for="(content, index) in filteredContents" :key="content.id">
         <v-divider v-if="index !== 0"></v-divider>
         <v-list-item
-          two-line
+          lines="two"
           link
           @click="(dialog = true), (dialogContent = content)"
         >
-          <v-list-item-content>
-            <v-list-item-title class="wrap-text">
-              <span
-                v-show="nuxtApp.$dayjs(content.date) > nuxtApp.$dayjs()"
-                class="red--text text--lighten-2"
-                >予約投稿：</span
-              >
-              {{ content.title }}
-            </v-list-item-title>
-            <v-list-item-subtitle>
-              {{ nuxtApp.$dayjs(content.date).format("YYYY年M月D日") }}
-            </v-list-item-subtitle>
-          </v-list-item-content>
-          <v-list-item-action>
-            <v-icon color="grey lighten-1"
-              >mdi-arrow-right-circle-outline</v-icon
+          <v-list-item-title class="wrap-text">
+            <span
+              v-show="nuxtApp.$dayjs(content.date) > nuxtApp.$dayjs()"
+              class="text-red-lighten-2"
+              >予約投稿：</span
             >
-          </v-list-item-action>
+            {{ content.title }}
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            {{ nuxtApp.$dayjs(content.date).format("YYYY年M月D日") }}
+          </v-list-item-subtitle>
+          <template #append>
+            <icons-arrow-right-circle
+              class="text-gray-lighten-1"
+            ></icons-arrow-right-circle>
+          </template>
         </v-list-item>
       </template>
     </v-list>
@@ -79,7 +77,7 @@ const dialogClose = () => {
       <v-pagination
         v-model="page"
         :length="pageLength"
-        @input="pageChange"
+        @update:model-value="pageChange"
       ></v-pagination>
     </v-card-text>
     <v-dialog v-model="dialog" scrollable max-width="600">

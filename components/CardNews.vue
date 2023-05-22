@@ -12,13 +12,18 @@ const nuxtApp = useNuxtApp();
 
 <template>
   <v-card tag="article">
-    <v-system-bar color="primary" dark> News </v-system-bar>
-    <v-card-title tag="h1">
-      {{ items.title }}
-    </v-card-title>
-    <v-card-subtitle>
-      {{ nuxtApp.$dayjs(items.date).format("YYYY年M月D日") }}
-    </v-card-subtitle>
+    <v-card-item>
+      <p class="text-primary mb-4">
+        <icons-newspaper-variant></icons-newspaper-variant>
+        News
+      </p>
+      <v-card-title tag="h1" class="card-title">
+        {{ items.title }}
+      </v-card-title>
+      <v-card-subtitle>
+        {{ nuxtApp.$dayjs(items.date).format("YYYY年M月D日") }}
+      </v-card-subtitle>
+    </v-card-item>
     <div class="content-body">
       <v-card-text class="news-contents">
         <div v-html="items.contents"></div>
@@ -52,12 +57,16 @@ const nuxtApp = useNuxtApp();
     </div>
     <v-divider></v-divider>
     <v-card-actions class="justify-end">
-      <v-btn text @click="$emit('dialogClose')">Close</v-btn>
+      <v-btn variant="text" @click="$emit('dialogClose')">Close</v-btn>
     </v-card-actions>
   </v-card>
 </template>
 
 <style scoped>
+.card-title {
+  text-overflow: inherit;
+  white-space: unset;
+}
 .wrap-text {
   word-break: break-all;
   white-space: normal;
@@ -91,6 +100,9 @@ const nuxtApp = useNuxtApp();
   max-width: 100%;
   height: auto;
 }
+.news-contents >>> p {
+  margin-bottom: 1em;
+}
 .news-contents >>> table {
   display: block;
   border-spacing: 0;
@@ -105,6 +117,12 @@ const nuxtApp = useNuxtApp();
 }
 .news-contents >>> th {
   background-color: #eee;
+}
+.news-contents >>> dl,
+.news-contents >>> ul,
+.news-contents >>> ol {
+  padding-left: 1em;
+  margin-bottom: 1em;
 }
 .news-contents >>> dt {
   font-weight: bold;
