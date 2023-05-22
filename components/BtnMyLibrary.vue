@@ -5,15 +5,9 @@
     class="my-library ma-2"
   >
     MyLibrary login
-    <v-icon right>mdi-open-in-new</v-icon>
+    <icons-open-in-new end></icons-open-in-new>
   </v-btn>
 </template>
-
-<script>
-export default {
-  name: 'BtnMyLibrary',
-}
-</script>
 
 <style scoped>
 .my-library {

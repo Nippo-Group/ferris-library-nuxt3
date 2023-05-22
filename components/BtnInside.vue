@@ -1,12 +1,12 @@
 <template>
-  <v-btn color="primary" outlined :to="to">
+  <v-btn color="primary" variant="outlined" :to="to">
     {{ link }}
   </v-btn>
 </template>
 
 <script>
 export default {
-  name: 'BtnInside',
+  name: "BtnInside",
   props: {
     link: {
       type: String,
@@ -17,5 +17,5 @@ export default {
       required: true,
     },
   },
-}
+};
 </script>

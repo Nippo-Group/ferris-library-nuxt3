@@ -1,25 +1,22 @@
+<script setup>
+const props = defineProps({
+  link: {
+    type: String,
+    required: true,
+  },
+  url: {
+    type: String,
+    required: true,
+  },
+});
+</script>
+
 <template>
-  <v-btn :href="url" target="_blank" class="btn-open-in-new">
-    {{ link }}
-    <v-icon right>mdi-open-in-new</v-icon>
+  <v-btn :href="props.url" target="_blank" class="btn-open-in-new">
+    {{ props.link }}
+    <icons-open-in-new end></icons-open-in-new>
   </v-btn>
 </template>
-
-<script>
-export default {
-  name: 'BtnOpenInNew',
-  props: {
-    link: {
-      type: String,
-      required: true,
-    },
-    url: {
-      type: String,
-      required: true,
-    },
-  },
-}
-</script>
 
 <style scoped>
 .btn-open-in-new {
