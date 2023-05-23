@@ -12,7 +12,7 @@ const items = reactive([
     tel: "045 (812) 6999",
     fax: "045 (812) 9772",
     eMali: "r_library@ferris.ac.jp",
-    image: "~/assets/images/contact/contact-ryokuen.jpg",
+    image: "contact-ryokuen.jpg",
     accesses: [
       {
         transportation: "Sotetsu Izumino Line",
@@ -34,7 +34,7 @@ const items = reactive([
     tel: "045 (681) 5149",
     fax: "045 (681) 5188",
     eMali: "y_library@ferris.ac.jp",
-    image: "~/assets/images/contact/contact-yamate.jpg",
+    image: "contact-yamate.jpg",
     accesses: [
       {
         transportation: "JR-EAST Keihin Tohoku Line",
@@ -51,7 +51,17 @@ const items = reactive([
     <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col v-for="(item, i) in items" :key="i" cols="12" sm="8" md="6" lg="4">
-        <card-contact :item="item"></card-contact>
+        <card-contact
+          :name="item.name"
+          :accesses="item.accesses"
+          :address="item.address"
+          :address-number="item.addressNumber"
+          :e-mali="item.eMali"
+          :fax="item.fax"
+          :google-map="item.googleMap"
+          :image="item.image"
+          :tel="item.tel"
+        ></card-contact>
       </v-col>
     </v-row>
   </v-container>

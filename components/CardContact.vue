@@ -1,58 +1,100 @@
+<script setup lang="ts">
+import {
+  mdiPhone,
+  mdiFax,
+  mdiEmail,
+  mdiMapMarker,
+  mdiTrain,
+  mdiTrainCarPassengerVariant,
+} from "@mdi/js";
+
+type Access = {
+  transportation: string;
+  root: string;
+  icon: string;
+};
+type State = {
+  name: string;
+  image: string;
+  addressNumber?: string;
+  address?: string;
+  googleMap?: string;
+  tel?: string;
+  fax?: string;
+  eMali?: string;
+  accesses?: Access[];
+};
+const props = defineProps<State>();
+
+const directory = "contact";
+
+const accessIcon = (type: string): string | undefined => {
+  switch (type) {
+    case "train":
+      return mdiTrain;
+    case "car":
+      return mdiTrainCarPassengerVariant;
+  }
+};
+</script>
+
 <template>
   <v-card>
     <v-img
-      :src="item.image"
+      :src="generateImgPath(props.image, directory)"
       height="200px"
       gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
       class="align-end"
-      dark
+      cover
     >
-      <v-card-title>
+      <v-card-title class="text-white">
         <div class="text-h5">
-          {{ item.name }}
+          {{ props.name }}
         </div>
       </v-card-title>
     </v-img>
-    <v-list two-line>
-      <v-list-item :href="'tel:' + item.tel">
-        <template #prepend>
-          <v-icon color="primary"> mdi-phone </v-icon>
-        </template>
-        <v-list-item-title>{{ item.tel }}</v-list-item-title>
+    <v-list lines="two">
+      <v-list-item
+        v-if="props.tel"
+        :href="'tel:' + props.tel"
+        :prepend-icon="mdiPhone"
+      >
+        <v-list-item-title>{{ props.tel }}</v-list-item-title>
         <v-list-item-subtitle>Phone</v-list-item-subtitle>
       </v-list-item>
-      <v-list-item>
-        <v-list-item-action></v-list-item-action>
-        <v-list-item-title>{{ item.fax }}</v-list-item-title>
+      <v-list-item v-if="props.fax" :prepend-icon="mdiFax">
+        <v-list-item-title>{{ props.fax }}</v-list-item-title>
         <v-list-item-subtitle>Fax</v-list-item-subtitle>
       </v-list-item>
       <v-divider inset></v-divider>
-      <v-list-item :href="'mailto:' + item.eMali">
-        <template #prepend>
-          <v-icon color="primary"> mdi-email </v-icon>
-        </template>
-        <v-list-item-title>{{ item.eMali }}</v-list-item-title>
+      <v-list-item
+        v-if="props.eMali"
+        :href="'mailto:' + props.eMali"
+        :prepend-icon="mdiEmail"
+      >
+        <v-list-item-title>{{ props.eMali }}</v-list-item-title>
         <v-list-item-subtitle>Organization</v-list-item-subtitle>
       </v-list-item>
       <v-divider inset></v-divider>
-      <v-list-item :href="item.googleMap" target="_blank">
-        <template #prepend>
-          <v-icon color="primary"> mdi-map-marker </v-icon>
-        </template>
-        <v-list-item-subtitle>
-          〒{{ item.addressNumber }}
+      <v-list-item
+        :href="props.googleMap || undefined"
+        target="_blank"
+        :prepend-icon="mdiMapMarker"
+      >
+        <v-list-item-subtitle v-if="props.addressNumber">
+          〒{{ props.addressNumber }}
         </v-list-item-subtitle>
-        <v-list-item-title class="wrap-text">{{
-          item.address
+        <v-list-item-title v-if="props.address" class="wrap-text">{{
+          props.address
         }}</v-list-item-title>
-        <template #append>
-          <v-icon>mdi-open-in-new</v-icon>
+        <template v-if="props.googleMap" #append>
+          <icons-open-in-new></icons-open-in-new>
         </template>
       </v-list-item>
       <v-divider inset></v-divider>
-      <v-list-item v-for="(access, i) in item.accesses" :key="i">
+      <v-list-item v-for="(access, i) in props.accesses" :key="i">
         <template #prepend>
-          <v-icon color="primary"> {{ access.icon }} </v-icon>
+          <v-icon color="primary" :icon="accessIcon(access.icon)"></v-icon>
         </template>
         <v-list-item-subtitle>
           {{ access.transportation }}
@@ -64,44 +106,6 @@
     </v-list>
   </v-card>
 </template>
-
-<script>
-export default {
-  name: "CardContact",
-  props: {
-    item: {
-      type: Object,
-      default: () => ({
-        name: "施設名",
-        addressNumber: "000-0000",
-        address: "住所",
-        googleMap: "https://グーグルマップへのリンク",
-        tel: "000 (000) 0000",
-        fax: "000 (000) 0000",
-        eMali: "sample@sample.jp",
-        image: "~/assets/images/contact/contact-ryokuen.jpg",
-        accesses: [
-          {
-            transportation: "路線名",
-            root: "「駅名」下車徒歩00分",
-            icon: "mdi-train",
-          },
-          {
-            transportation: "路線名",
-            root: "「バス停名」下車徒歩00分",
-            icon: "mdi-train-car-passenger-variant",
-          },
-        ],
-      }),
-    },
-    englishPage: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  data: () => ({}),
-};
-</script>
 
 <style scoped>
 .wrap-text {
