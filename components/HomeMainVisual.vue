@@ -11,11 +11,7 @@ const items = [
   "main-visual-07.jpg",
   "main-visual-08.jpg",
 ];
-
-const generateImgPath = (fileName) => {
-  return new URL(`../assets/images/main-visual/${fileName}`, import.meta.url)
-    .href;
-};
+const itemsDirectory = "main-visual";
 
 const carouselHeight = computed(() => {
   const breakpoint = useDisplay().name.value;
@@ -47,7 +43,7 @@ const carouselHeight = computed(() => {
     <v-carousel-item
       v-for="(item, i) in items"
       :key="i"
-      :src="generateImgPath(item)"
+      :src="generateImgPath(item, itemsDirectory)"
       cover
     >
     </v-carousel-item>

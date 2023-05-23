@@ -31,10 +31,7 @@ const pickOut = [
     image: "home-pickout-reference.png",
   },
 ];
-
-const generateImgPath = (fileName) => {
-  return new URL(`../assets/images/pickout/${fileName}`, import.meta.url).href;
-};
+const directory = "pickout";
 </script>
 
 <template>
@@ -52,7 +49,7 @@ const generateImgPath = (fileName) => {
         width="240"
       >
         <v-img
-          :src="generateImgPath(item.image)"
+          :src="generateImgPath(item.image, directory)"
           height="160px"
           cover
           class="align-end"
