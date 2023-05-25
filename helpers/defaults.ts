@@ -6,5 +6,7 @@ export const defaults: DefaultsInstance = {
   },
   VAlert: {
     variant: "tonal",
+    density: "compact",
+    border: "start",
   },
 };
