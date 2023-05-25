@@ -4,4 +4,7 @@ export const defaults: DefaultsInstance = {
   VAppBar: {
     elevation: 0,
   },
+  VAlert: {
+    variant: "tonal",
+  },
 };

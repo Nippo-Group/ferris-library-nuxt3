@@ -1,9 +1,59 @@
+<script setup>
+const title = ref("学科推奨図書");
+useSeoMeta({ title: title.value });
+
+const items = [
+  {
+    category: "文学部",
+    contents: [
+      {
+        name: "英語英米文学科",
+        url: "/documents/recommend/recommend-english-literature.pdf",
+        type: "PDF",
+      },
+      {
+        name: "日本語日本文学科",
+        url: "/documents/recommend/recommend-japanese-literature.pdf",
+        type: "PDF",
+      },
+      {
+        name: "コミュニケーション学科",
+        url: "/documents/recommend/recommend-communication.pdf",
+        type: "PDF",
+      },
+    ],
+  },
+  {
+    category: "音楽学部",
+    contents: [
+      {
+        name: "音楽芸術学科",
+        url: "/documents/recommend/recommend-musical-art.pdf",
+        type: "PDF",
+      },
+    ],
+  },
+  {
+    category: "国際交流学部",
+    contents: [
+      {
+        name: "国際交流学科",
+        url: "/documents/recommend/recommend-international-exchange.pdf",
+        type: "PDF",
+      },
+    ],
+  },
+];
+
+const confirmDialog = inject("confirmDialog");
+</script>
+
 <template>
   <v-container>
     <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col cols="12" md="10" lg="8" xl="9">
-        <v-alert border="top" colored-border type="info" elevation="2">
+        <v-alert type="info" class="recommend-info">
           <p>
             各学科の専任教員が「〇〇学科の学生なら読んでおいてほしい本」として選定された図書です。
           </p>
@@ -35,87 +85,28 @@
               v-for="(content, j) in item.contents"
               :key="j"
               link
-              @click="openConfirmDownload(content)"
+              @click="confirmDialog(content.name, content.url, content.type)"
             >
               <v-list-item-title class="wrap-text">
                 {{ content.name }}
               </v-list-item-title>
               <template #append>
-                <v-icon>mdi-file-pdf-box</v-icon>
+                <icons-file-pdf></icons-file-pdf>
               </template>
             </v-list-item>
           </v-list>
         </v-card>
       </v-col>
     </v-row>
-    <confirm-download ref="confirmDownload" :file="openFile"></confirm-download>
   </v-container>
 </template>
 
-<script>
-export default {
-  name: "PageRecommend",
-  data: () => ({
-    title: "学科推奨図書",
-    openFile: {},
-    items: [
-      {
-        category: "文学部",
-        contents: [
-          {
-            name: "英語英米文学科",
-            url: "/documents/recommend/recommend-english-literature.pdf",
-            type: "PDF",
-          },
-          {
-            name: "日本語日本文学科",
-            url: "/documents/recommend/recommend-japanese-literature.pdf",
-            type: "PDF",
-          },
-          {
-            name: "コミュニケーション学科",
-            url: "/documents/recommend/recommend-communication.pdf",
-            type: "PDF",
-          },
-        ],
-      },
-      {
-        category: "音楽学部",
-        contents: [
-          {
-            name: "音楽芸術学科",
-            url: "/documents/recommend/recommend-musical-art.pdf",
-            type: "PDF",
-          },
-        ],
-      },
-      {
-        category: "国際交流学部",
-        contents: [
-          {
-            name: "国際交流学科",
-            url: "/documents/recommend/recommend-international-exchange.pdf",
-            type: "PDF",
-          },
-        ],
-      },
-    ],
-  }),
-  head() {
-    return {
-      title: this.title,
-    };
-  },
-  methods: {
-    openConfirmDownload(content) {
-      this.openFile = content;
-      this.$refs.confirmDownload.dialogOpen();
-    },
-  },
-};
-</script>
-
-<style scoped>
+<style scoped lang="scss">
+.recommend-info {
+  & p {
+    margin-bottom: 0.5em;
+  }
+}
 .wrap-text {
   word-break: break-all;
   white-space: normal;
