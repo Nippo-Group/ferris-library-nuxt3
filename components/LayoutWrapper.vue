@@ -1,6 +1,16 @@
 <script setup lang="ts">
 const drawer: Ref<boolean | null> = ref(null);
 provide("drawer", drawer);
+
+const confirmRef = ref();
+const confirmDialog = (
+  fileName: string,
+  fileUrl: string,
+  fileType: string
+): void => {
+  confirmRef.value.dialogOpen(fileName, fileUrl, fileType);
+};
+provide("confirmDialog", confirmDialog);
 </script>
 
 <template>
@@ -12,5 +22,6 @@ provide("drawer", drawer);
     </v-main>
     <layout-footer></layout-footer>
     <layout-to-top></layout-to-top>
+    <confirm-download ref="confirmRef"></confirm-download>
   </v-app>
 </template>

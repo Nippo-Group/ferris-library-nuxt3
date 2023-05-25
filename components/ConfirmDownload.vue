@@ -1,46 +1,48 @@
+<script setup lang="ts">
+const name = ref<string>("");
+const url = ref<string>("");
+const type = ref<string>("");
+
+const dialog = ref<boolean>(false);
+const timeout = 6000;
+
+watch(dialog, () => {
+  if (dialog.value === false) {
+    name.value = "";
+    url.value = "";
+    type.value = "";
+  }
+});
+
+const dialogOpen = (
+  fileName: string,
+  fileUrl: string,
+  fileType: string
+): void => {
+  if (fileName && fileUrl && fileType) {
+    name.value = fileName;
+    url.value = fileUrl;
+    type.value = fileType;
+    dialog.value = true;
+  }
+};
+defineExpose({
+  dialogOpen,
+});
+</script>
+
 <template>
-  <v-snackbar
-    v-model="confirmDownload"
-    :multi-line="multiLine"
-    :timeout="timeout"
-  >
-    {{ file.type }}ファイルを開きますか？<br />
-    {{ file.name }}
-    <template #action="{ attrs }">
-      <v-btn class="mx-3" :href="file.url" target="_blank">
+  <v-snackbar v-model="dialog" multi-line :timeout="timeout">
+    {{ type }}ファイルを開きますか？<br />
+    {{ name }}
+    <template #actions>
+      <v-btn class="mx-3" :href="url" target="_blank">
         はい
-        <v-icon right>mdi-download</v-icon>
+        <icons-download-defult end>mdi-download</icons-download-defult>
       </v-btn>
-      <v-btn icon v-bind="attrs" @click="confirmDownload = false">
-        <v-icon>mdi-close</v-icon>
+      <v-btn icon @click="dialog = false">
+        <icons-close-defult></icons-close-defult>
       </v-btn>
     </template>
   </v-snackbar>
 </template>
-
-<script>
-export default {
-  name: 'ConfirmDownload',
-  props: {
-    file: {
-      type: Object,
-      require: true,
-      default: () => ({
-        name: '',
-        url: '',
-        type: '',
-      }),
-    },
-  },
-  data: () => ({
-    confirmDownload: false,
-    multiLine: true,
-    timeout: 6000,
-  }),
-  methods: {
-    dialogOpen(file) {
-      this.confirmDownload = true
-    },
-  },
-}
-</script>
