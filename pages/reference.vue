@@ -1,9 +1,16 @@
+<script setup>
+const title = ref("レファレンスサービス");
+useSeoMeta({ title: title.value });
+
+const show = ref(false);
+</script>
+
 <template>
   <v-container>
     <text-page-title>{{ title }}</text-page-title>
 
     <text-sub-title>サービス一覧</text-sub-title>
-    <v-row dense>
+    <v-row>
       <v-col cols="12" md="10" lg="8" xl="6">
         <v-card height="100%">
           <v-card-title> 事項調査 </v-card-title>
@@ -19,11 +26,9 @@
             ご希望の資料が当図書館にない時、他の図書館や資料館の所蔵調査をいたします。学部生はMyLibraryにログインして調査の依頼ができます。
           </v-card-text>
           <v-card-actions class="d-flex flex-wrap">
-            <btn-dialog-default>
-              <template #name>文献複写</template>
+            <btn-dialog-default title="文献複写">
               <template #contents>
-                <div class="text-h5 pt-12">文献複写</div>
-                <div class="text-h6 pt-6">サービス内容</div>
+                <div class="text-h6">サービス内容</div>
                 <ul>
                   <li>当館にない文献のコピーを取り寄せることができます。</li>
                   <li>
@@ -41,10 +46,8 @@
               </template>
             </btn-dialog-default>
 
-            <btn-dialog-default>
-              <template #name>現物貸借</template>
+            <btn-dialog-default title="現物貸借">
               <template #contents>
-                <div class="text-h5 pt-12">現物貸借</div>
                 <div class="text-h6 pt-6">サービス内容</div>
                 <ul>
                   <li>
@@ -85,10 +88,8 @@
             他大学の図書館を利用するために必要な紹介状を発行します。
           </v-card-text>
           <v-card-actions class="d-flex flex-wrap">
-            <btn-dialog-default>
-              <template #name>大学図書館</template>
+            <btn-dialog-default title="大学図書館">
               <template #contents>
-                <div class="text-h5 pt-12">大学図書館</div>
                 <div class="text-h6 pt-6">注意事項</div>
                 <p>
                   当館からの問い合わせと紹介状が必要です。カウンターに希望の利用日と資料名をお知らせください。資料を借りることはできませんが、館内で閲覧したりコピーしたりすることができます。
@@ -106,10 +107,8 @@
               </template>
             </btn-dialog-default>
 
-            <btn-dialog-default>
-              <template #name>横浜市立図書館</template>
+            <btn-dialog-default title="横浜市立図書館">
               <template #contents>
-                <div class="text-h5 pt-12">横浜市立図書館</div>
                 <div class="text-h6 pt-6">注意事項</div>
                 <p>
                   自由に利用することができます。図書館カードを作れば、資料を借りることもできますのでお勧めします。
@@ -127,10 +126,8 @@
               </template>
             </btn-dialog-default>
 
-            <btn-dialog-default>
-              <template #name>神奈川県立図書館</template>
+            <btn-dialog-default title="神奈川県立図書館">
               <template #contents>
-                <div class="text-h5 pt-12">神奈川県立図書館</div>
                 <div class="text-h6 pt-6">注意事項</div>
                 <p>
                   自由に利用することができます。図書館カードを作れば、資料を借りることもできますのでお勧めします。
@@ -145,10 +142,8 @@
               </template>
             </btn-dialog-default>
 
-            <btn-dialog-default>
-              <template #name>国立国会図書館</template>
+            <btn-dialog-default title="国立国会図書館">
               <template #contents>
-                <div class="text-h5 pt-12">国立国会図書館</div>
                 <div class="text-h6 pt-6">注意事項</div>
                 <p>
                   自由に利用できますが、閉架式なので直接書架を見ることはできません。利用したい資料を申し出て出納してもらうので、事前に希望の資料を調べてから訪問してください。また、個人への貸出は行っていません。
@@ -172,11 +167,11 @@
             紹介状なしで他大学の図書館を利用できる共通閲覧証を発行します。
           </v-card-text>
           <v-card-actions @click="show = !show">
-            <v-btn color="primary" text> 詳細をみる </v-btn>
+            <v-btn color="primary" variant="text"> 詳細をみる </v-btn>
             <v-spacer></v-spacer>
             <v-btn icon>
               <v-icon>{{
-                show ? 'mdi-chevron-up' : 'mdi-chevron-down'
+                show ? "mdi-chevron-up" : "mdi-chevron-down"
               }}</v-icon>
             </v-btn>
           </v-card-actions>
@@ -187,12 +182,8 @@
                 下記の共通閲覧証があれば、紹介状なしで加盟大学図書館・機関が利用できます。カウンターで毎年度発行手続きをしてください。
               </v-card-text>
               <v-card-actions class="d-flex flex-wrap">
-                <btn-dialog-default>
-                  <template #name>神奈川県内大学図書館共通閲覧証</template>
+                <btn-dialog-default title="神奈川県内大学図書館共通閲覧証">
                   <template #contents>
-                    <div class="text-h5 pt-12">
-                      神奈川県内大学図書館共通閲覧証
-                    </div>
                     <div class="text-h6 pt-6">対象館</div>
                     <p>神奈川県図書館協会加盟の大学図書館</p>
                     <div class="text-h6 pt-6">対象者</div>
@@ -206,10 +197,8 @@
                   </template>
                 </btn-dialog-default>
 
-                <btn-dialog-default>
-                  <template #name>音楽図書館協議会共通閲覧証</template>
+                <btn-dialog-default title="音楽図書館協議会共通閲覧証">
                   <template #contents>
-                    <div class="text-h5 pt-12">音楽図書館協議会共通閲覧証</div>
                     <div class="text-h6 pt-6">対象館</div>
                     <p>音楽図書館協議会加盟館</p>
                     <div class="text-h6 pt-6">対象者</div>
@@ -261,18 +250,3 @@
     </v-row>
   </v-container>
 </template>
-
-<script>
-export default {
-  name: 'PageReference',
-  data: () => ({
-    title: 'レファレンスサービス',
-    show: false,
-  }),
-  head() {
-    return {
-      title: this.title,
-    }
-  },
-}
-</script>

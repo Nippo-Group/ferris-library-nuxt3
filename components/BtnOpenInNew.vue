@@ -12,7 +12,13 @@ const props = defineProps({
 </script>
 
 <template>
-  <v-btn :href="props.url" target="_blank" class="btn-open-in-new">
+  <v-btn
+    :href="props.url"
+    target="_blank"
+    class="btn-open-in-new"
+    color="grey-lighten-4"
+    variant="elevated"
+  >
     {{ props.link }}
     <icons-open-in-new end></icons-open-in-new>
   </v-btn>

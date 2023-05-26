@@ -1,16 +1,9 @@
-<template>
-  <v-btn
-    href="https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open"
-    target="_blank"
-    class="my-library ma-2"
-  >
-    MyLibrary login
-    <icons-open-in-new end></icons-open-in-new>
-  </v-btn>
-</template>
+<script setup lang="ts">
+const name = "MyLibrary login";
+const url =
+  "https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open";
+</script>
 
-<style scoped>
-.my-library {
-  text-transform: none;
-}
-</style>
+<template>
+  <btn-open-in-new :link="name" :url="url"></btn-open-in-new>
+</template>
