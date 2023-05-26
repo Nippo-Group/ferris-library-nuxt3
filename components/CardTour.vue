@@ -1,20 +1,18 @@
-<script setup>
+<script setup lang="ts">
+import { mdiChevronUp, mdiChevronDown } from "@mdi/js";
 import { useLanguageStore } from "@/stores/language";
 
-const props = defineProps({
-  title: {
-    type: String,
-    default: "タイトル",
-  },
-  text: {
-    type: String,
-    default: "文章",
-  },
-  contents: {
-    type: Array,
-    default: () => {},
-  },
-});
+type Content = {
+  subtitle: String;
+  text?: String;
+  list?: string[];
+};
+type Item = {
+  title: string;
+  text: string;
+  contents: Content[];
+};
+const props = defineProps<Item>();
 
 const show = ref(false);
 const langStore = useLanguageStore();
@@ -23,18 +21,16 @@ const language = ref(langStore.language);
 
 <template>
   <v-card>
-    <v-card-title> {{ props.title }} </v-card-title>
+    <v-card-title> {{ title }} </v-card-title>
     <v-card-text>
       <div v-html="props.text"></div>
     </v-card-text>
     <v-card-actions @click="show = !show">
-      <v-btn color="primary" text>{{
+      <v-btn color="primary" variant="text">{{
         language === "en" ? "Show more" : "詳細を見る"
       }}</v-btn>
       <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>{{ show ? "mdi-chevron-up" : "mdi-chevron-down" }}</v-icon>
-      </v-btn>
+      <v-btn :icon="show ? mdiChevronUp : mdiChevronDown"> </v-btn>
     </v-card-actions>
     <v-expand-transition>
       <div v-show="show">
