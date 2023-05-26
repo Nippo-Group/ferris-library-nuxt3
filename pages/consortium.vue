@@ -3,7 +3,6 @@ const title = ref("横浜市内大学図書館コンソーシアム");
 useSeoMeta({ title: title.value });
 
 const show = ref(false);
-const openFile = {};
 const confirmDialog = inject("confirmDialog");
 const items = [
   {
@@ -131,6 +130,5 @@ const items = [
         </v-alert>
       </v-col>
     </v-row>
-    <confirm-download ref="confirmDownload" :file="openFile"></confirm-download>
   </v-container>
 </template>
