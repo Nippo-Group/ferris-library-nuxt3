@@ -1,3 +1,77 @@
+<script setup>
+const title = ref("横浜市内大学図書館コンソーシアム");
+useSeoMeta({ title: title.value });
+
+const show = ref(false);
+const openFile = {};
+const confirmDialog = inject("confirmDialog");
+const items = [
+  {
+    name: "神奈川大学図書館",
+    url: "/documents/consortium/kanagawa.pdf",
+    type: "PDF",
+  },
+  {
+    name: "関東学院大学図書館",
+    url: "/documents/consortium/kangaku_hon.pdf",
+    type: "PDF",
+  },
+  {
+    name: "慶應義塾大学日吉メディアセンター",
+    url: "/documents/consortium/keio.pdf",
+    type: "PDF",
+  },
+  {
+    name: "國學院大學たまプラーザ図書館",
+    url: "/documents/consortium/kokugakuin.pdf",
+    type: "PDF",
+  },
+  {
+    name: "鶴見大学図書館",
+    url: "/documents/consortium/turumi.pdf",
+    type: "PDF",
+  },
+  {
+    name: "桐蔭横浜大学大学情報センター",
+    url: "/documents/consortium/toin.pdf",
+    type: "PDF",
+  },
+  {
+    name: "東京都市大学横浜キャンパス図書館",
+    url: "/documents/consortium/toshi.pdf",
+    type: "PDF",
+  },
+  {
+    name: "東洋英和女学院大学図書館",
+    url: "/documents/consortium/toyoeiwa.pdf",
+    type: "PDF",
+  },
+  {
+    name: "フェリス女学院大学附属図書館",
+  },
+  {
+    name: "明治学院大学横浜校舎図書館",
+    url: "/documents/consortium/meigaku.pdf",
+    type: "PDF",
+  },
+  {
+    name: "横浜国立大学附属図書館",
+    url: "/documents/consortium/yokokoku.pdf",
+    type: "PDF",
+  },
+  {
+    name: "横浜商科大学図書館",
+    url: "/documents/consortium/yokosho.pdf",
+    type: "PDF",
+  },
+  {
+    name: "横浜市立大学学術情報センター",
+    url: "/documents/consortium/yokoichi.pdf",
+    type: "PDF",
+  },
+];
+</script>
+
 <template>
   <v-container>
     <text-page-title>{{ title }}</text-page-title>
@@ -8,13 +82,9 @@
             横浜市内大学図書館コンソーシアムは、「横浜市内大学間学術・教育交流協議会」の会員校によって、学生の教育機会の多様化を図ること、相互に各図書館の特性を生かしつつ協力し、交流を深め、教育・研究活動の推進を図ることを目的として結成されました。
           </v-card-text>
           <v-card-actions @click="show = !show">
-            <v-btn color="primary" text> 大学名一覧（50音順） </v-btn>
+            <v-btn color="primary" variant="text"> 大学名一覧（50音順） </v-btn>
             <v-spacer></v-spacer>
-            <v-btn icon>
-              <v-icon>{{
-                show ? "mdi-chevron-up" : "mdi-chevron-down"
-              }}</v-icon>
-            </v-btn>
+            <v-btn :icon="iconChevron(show)"> </v-btn>
           </v-card-actions>
           <v-expand-transition>
             <div v-show="show">
@@ -24,11 +94,11 @@
                   <v-list-item
                     v-if="item.url"
                     link
-                    @click="openConfirmDownload(item)"
+                    @click="confirmDialog(item.name, item.url, item.type)"
                   >
                     <v-list-item-title> {{ item.name }}</v-list-item-title>
                     <template #append>
-                      <v-icon>mdi-file-pdf-box</v-icon>
+                      <icons-file-pdf></icons-file-pdf>
                     </template>
                   </v-list-item>
 
@@ -42,7 +112,7 @@
         </v-card>
       </v-col>
       <v-col cols="12" lg="10" xl="6">
-        <v-alert dense text type="success">
+        <v-alert density="compact" text type="success">
           <p>
             大学名一覧の13大学の学生・教職員は、以下のとおりそれぞれの図書館を利用することができます。
           </p>
@@ -64,90 +134,3 @@
     <confirm-download ref="confirmDownload" :file="openFile"></confirm-download>
   </v-container>
 </template>
-
-<script>
-export default {
-  name: "PageConsortium",
-  data: () => ({
-    title: "横浜市内大学図書館コンソーシアム",
-    show: false,
-    openFile: {},
-    items: [
-      {
-        name: "神奈川大学図書館",
-        url: "/documents/consortium/kanagawa.pdf",
-        type: "PDF",
-      },
-      {
-        name: "関東学院大学図書館",
-        url: "/documents/consortium/kangaku_hon.pdf",
-        type: "PDF",
-      },
-      {
-        name: "慶應義塾大学日吉メディアセンター",
-        url: "/documents/consortium/keio.pdf",
-        type: "PDF",
-      },
-      {
-        name: "國學院大學たまプラーザ図書館",
-        url: "/documents/consortium/kokugakuin.pdf",
-        type: "PDF",
-      },
-      {
-        name: "鶴見大学図書館",
-        url: "/documents/consortium/turumi.pdf",
-        type: "PDF",
-      },
-      {
-        name: "桐蔭横浜大学大学情報センター",
-        url: "/documents/consortium/toin.pdf",
-        type: "PDF",
-      },
-      {
-        name: "東京都市大学横浜キャンパス図書館",
-        url: "/documents/consortium/toshi.pdf",
-        type: "PDF",
-      },
-      {
-        name: "東洋英和女学院大学図書館",
-        url: "/documents/consortium/toyoeiwa.pdf",
-        type: "PDF",
-      },
-      {
-        name: "フェリス女学院大学附属図書館",
-      },
-      {
-        name: "明治学院大学横浜校舎図書館",
-        url: "/documents/consortium/meigaku.pdf",
-        type: "PDF",
-      },
-      {
-        name: "横浜国立大学附属図書館",
-        url: "/documents/consortium/yokokoku.pdf",
-        type: "PDF",
-      },
-      {
-        name: "横浜商科大学図書館",
-        url: "/documents/consortium/yokosho.pdf",
-        type: "PDF",
-      },
-      {
-        name: "横浜市立大学学術情報センター",
-        url: "/documents/consortium/yokoichi.pdf",
-        type: "PDF",
-      },
-    ],
-  }),
-  head() {
-    return {
-      title: this.title,
-    };
-  },
-  methods: {
-    openConfirmDownload(content) {
-      this.openFile = content;
-      this.$refs.confirmDownload.dialogOpen();
-    },
-  },
-};
-</script>
