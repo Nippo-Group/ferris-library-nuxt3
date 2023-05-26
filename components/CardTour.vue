@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { mdiChevronUp, mdiChevronDown } from "@mdi/js";
 import { useLanguageStore } from "@/stores/language";
 
 type Content = {
@@ -30,7 +29,7 @@ const language = ref(langStore.language);
         language === "en" ? "Show more" : "詳細を見る"
       }}</v-btn>
       <v-spacer></v-spacer>
-      <v-btn :icon="show ? mdiChevronUp : mdiChevronDown"> </v-btn>
+      <v-btn :icon="iconChevron(show)"> </v-btn>
     </v-card-actions>
     <v-expand-transition>
       <div v-show="show">
