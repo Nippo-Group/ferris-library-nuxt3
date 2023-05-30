@@ -1,17 +1,23 @@
+<script setup>
+const props = defineProps({
+  items: { type: Array, required: true },
+});
+const confirmDialog = inject("confirmDialog");
+</script>
+
 <template>
   <div>
     <v-row dense>
-      <v-col v-for="(item, i) in items" :key="i" cols="12" xl="8">
+      <v-col v-for="(item, i) in props.items" :key="i" cols="12" xl="8">
         <v-card>
           <v-container>
             <v-row dense>
               <v-col cols="12" sm="4">
-                <v-card-title>{{ item.name }}</v-card-title>
+                <v-card-title class="wrap-text">{{ item.name }}</v-card-title>
                 <v-card-text>
                   <v-chip
                     v-for="(language, m) in item.languages"
                     :key="'lang' + m"
-                    small
                     color="secondary"
                     class="mb-1 mr-1"
                     >{{ language }}</v-chip
@@ -19,9 +25,7 @@
                   <v-chip
                     v-for="(cat, j) in item.categories"
                     :key="'cat' + j"
-                    small
-                    color="blue lighten-1"
-                    text-color="white"
+                    color="blue-lighten-1"
                     class="mb-1 mr-1"
                   >
                     {{ cat }}
@@ -32,7 +36,7 @@
                 <v-card-text>
                   <div class="explanation" v-html="item.explanation"></div>
                   <div v-if="item.feature">
-                    <v-chip small>特長</v-chip>
+                    <v-chip color="grey" variant="tonal">特長</v-chip>
                     <div v-html="item.feature"></div>
                   </div>
                 </v-card-text>
@@ -46,8 +50,8 @@
                   </p>
                   <p class="my-0">
                     同時アクセス数：{{ item.access }}
-                    <span v-if="item.logout" class="orange--text ml-2">
-                      <v-icon small color="orange"
+                    <span v-if="item.logout" class="blue-lighten-1 ml-2">
+                      <v-icon siza="small" color="orange"
                         >mdi-alert-circle-outline</v-icon
                       >
                       利用後は必ずログアウトしてください
@@ -68,18 +72,17 @@
                       v-for="(file, n) in item.documents"
                       :key="'file' + n"
                       class="mb-2 mb-sm-0"
-                      @click.native="openConfirmDownload(file)"
+                      variant="elevated"
+                      @click="confirmDialog(file.name, file.url, file.type)"
                     >
                       {{ file.name }}
-                      <v-icon v-if="file.type == 'PDF'" dark right
-                        >mdi-file-pdf-box</v-icon
-                      >
-                      <v-icon v-else-if="file.type == 'Excel'" dark right
-                        >mdi-file-excel-outline</v-icon
-                      >
-                      <v-icon v-else dark right
-                        >mdi-file-document-multiple-outline</v-icon
-                      >
+                      <icons-file-pdf v-if="file.type == 'PDF'" dark end />
+                      <icons-file-excel
+                        v-else-if="file.type == 'Excel'"
+                        dark
+                        end
+                      />
+                      <icons-file-document v-else dark end />
                     </v-btn>
                   </template>
                   <!--<v-btn icon absolute bottom right
@@ -96,39 +99,15 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'ListDatabase',
-  props: {
-    items: { type: Array, required: true },
-  },
-  data: () => ({
-    openFile: {},
-  }),
-  methods: {
-    openConfirmDownload(content) {
-      this.openFile = content
-      this.$refs.confirmDownload.dialogOpen()
-    },
-  },
-}
-</script>
-
 <style scoped>
-.explanation >>> caption {
+.wrap-text {
+  word-break: break-all;
+  white-space: normal;
+}
+.explanation::v-deep(caption) {
   text-align: left;
 }
-.explanation >>> p {
+.explanation::v-deep(p) {
   margin-bottom: 0.5em;
-}
-.explanation >>> table {
-  border-collapse: collapse;
-}
-.explanation >>> th,
-.explanation >>> td {
-  text-align: left;
-  vertical-align: top;
-  border-top: gray solid 1px;
-  border-bottom: gray solid 1px;
 }
 </style>

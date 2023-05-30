@@ -1,3 +1,61 @@
+<script setup>
+import database from "@/assets/json/database.json";
+
+const title = ref("データベース・電子ブック");
+useSeoMeta({ title: title.value });
+
+const items = database;
+const dialog = ref(false);
+const available = ref("onCampus");
+const languages = ref(["日本語", "外国語"]);
+const categories = ref([
+  "電子ブック",
+  "総合",
+  "参考・辞書事典類",
+  "新聞記事",
+  "英米文学",
+  "日本文学",
+  "言語学",
+  "社会科学",
+  "音楽",
+  "判例・法令・議会資料",
+]);
+const filterLanguage = ref();
+const filterCategory = ref([]);
+
+const listfilter = computed(() => {
+  const searchAvailable = available.value;
+  const searchLanguage = filterLanguage.value;
+  const searchCategory = filterCategory.value;
+
+  return items.filter(function (value) {
+    let flagAvailable = true;
+    let flagLanguage = true;
+    let flagCategory = true;
+    if (
+      (!value.available.includes("学外") && searchAvailable === "offCampus") ||
+      (!value.available.includes("学内") && searchAvailable === "onCampus")
+    ) {
+      flagAvailable = false;
+    }
+
+    if (searchLanguage) {
+      flagLanguage = value.languages.includes(searchLanguage);
+    }
+    if (searchCategory.length !== 0) {
+      flagCategory = false;
+      for (let i = 0; i < searchCategory.length; i++) {
+        if (value.categories.includes(searchCategory[i])) {
+          flagCategory = true;
+        }
+      }
+    }
+    const flag = flagAvailable && flagLanguage && flagCategory;
+    return flag;
+  });
+});
+</script>
+
 <template>
   <v-container>
     <text-page-title>{{ title }}</text-page-title>
@@ -5,10 +63,9 @@
       <v-col cols="12" xl="8">
         <v-toolbar dense flat>
           <v-toolbar-title>
-            <v-chip v-if="available === 'onCampus'" color="primary">
-              学内
+            <v-chip color="primary" size="default" class="mr-1">
+              {{ available === "onCampus" ? "学内" : "学外" }}
             </v-chip>
-            <v-chip v-else color="primary"> 学外 </v-chip>
             <span v-if="listfilter.length === 0">
               該当する項目はみつかりませんでした
             </span>
@@ -22,8 +79,8 @@
             clearable
             class="mr-2"
           ></v-text-field> -->
-          <v-btn outlined @click="dialog = true">
-            <v-icon>mdi-magnify</v-icon>
+          <v-btn variant="outlined" @click="dialog = true">
+            <icons-search-defult />
             検索
           </v-btn>
         </v-toolbar>
@@ -49,7 +106,7 @@
                 v-model.lazy="filterLanguage"
                 :items="languages"
                 label="言語"
-                solo
+                variant="solo"
                 clearable
               ></v-select>
             </v-col>
@@ -60,7 +117,7 @@
                 label="カテゴリー"
                 chips
                 multiple
-                solo
+                variant="solo"
                 clearable
               ></v-select>
             </v-col>
@@ -82,7 +139,7 @@
           <p>
             期間限定のデータベースはフェリス生限定のサービスです。ID、パスワードは各サービスごとに確認してください。
           </p>
-          <v-card height="200" class="overflow-auto" outlined>
+          <v-card height="200" class="overflow-auto" variant="outlined">
             <v-card-text>
               <p>2021.8.1追記</p>
               <ul>
@@ -123,78 +180,9 @@
           </v-card>
         </v-card-text>
         <v-card-actions class="justify-end">
-          <v-btn text @click="dialog = false"> Close </v-btn>
+          <v-btn variant="text" @click="dialog = false"> Close </v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
   </v-container>
 </template>
-
-<script>
-import database from '@/assets/json/database.json'
-
-export default {
-  name: 'PageDatabase',
-  data: () => ({
-    title: 'データベース・電子ブック',
-    database,
-    items: database,
-    dialog: false,
-    available: 'onCampus',
-    languages: ['日本語', '外国語'],
-    categories: [
-      '電子ブック',
-      '総合',
-      '参考・辞書事典類',
-      '新聞記事',
-      '英米文学',
-      '日本文学',
-      '言語学',
-      '社会科学',
-      '音楽',
-      '判例・法令・議会資料',
-    ],
-    filterLanguage: '',
-    filterCategory: [],
-  }),
-  head() {
-    return {
-      title: this.title,
-    }
-  },
-  computed: {
-    listfilter() {
-      const searchAvailable = this.available
-      const searchLanguage = this.filterLanguage
-      const searchCategory = this.filterCategory
-
-      return this.items.filter(function (value) {
-        let flagAvailable = true
-        let flagLanguage = true
-        let flagCategory = true
-        if (
-          (!value.available.includes('学外') &&
-            searchAvailable === 'offCampus') ||
-          (!value.available.includes('学内') && searchAvailable === 'onCampus')
-        ) {
-          flagAvailable = false
-        }
-
-        if (searchLanguage) {
-          flagLanguage = value.languages.includes(searchLanguage)
-        }
-        if (searchCategory.length !== 0) {
-          flagCategory = false
-          for (let i = 0; i < searchCategory.length; i++) {
-            if (value.categories.includes(searchCategory[i])) {
-              flagCategory = true
-            }
-          }
-        }
-        const flag = flagAvailable && flagLanguage && flagCategory
-        return flag
-      })
-    },
-  },
-}
-</script>
