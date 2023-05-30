@@ -50,10 +50,8 @@ const confirmDialog = inject("confirmDialog");
                   </p>
                   <p class="my-0">
                     同時アクセス数：{{ item.access }}
-                    <span v-if="item.logout" class="blue-lighten-1 ml-2">
-                      <v-icon siza="small" color="orange"
-                        >mdi-alert-circle-outline</v-icon
-                      >
+                    <span v-if="item.logout" class="text-orange ml-2">
+                      <icons-alert-circle siza="small" />
                       利用後は必ずログアウトしてください
                     </span>
                   </p>
@@ -85,9 +83,6 @@ const confirmDialog = inject("confirmDialog");
                       <icons-file-document v-else dark end />
                     </v-btn>
                   </template>
-                  <!--<v-btn icon absolute bottom right
-                    ><v-icon>mdi-heart-outline</v-icon></v-btn
-                  >-->
                 </v-card-actions>
               </v-col>
             </v-row>
