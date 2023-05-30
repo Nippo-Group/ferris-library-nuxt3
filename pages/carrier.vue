@@ -199,7 +199,7 @@ const items3 = [
     </p>
     <v-row>
       <v-col cols="12" xl="8">
-        <v-tabs v-model="tab" fixed-tabs show-arrows color="primary">
+        <v-tabs v-model="tab">
           <v-tab>企業や業種を研究する</v-tab>
           <v-tab>最新の時事情報をつかむ</v-tab>
           <v-tab>職種や資格について調べる</v-tab>

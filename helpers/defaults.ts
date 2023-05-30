@@ -13,6 +13,11 @@ export const defaults: DefaultsInstance = {
     variant: "elevated",
     size: "small",
   },
+  VTabs: {
+    fixedTabs: true,
+    showArrows: true,
+    color: "primary",
+  },
   VTimelineItem: {
     dotColor: "primary",
   },

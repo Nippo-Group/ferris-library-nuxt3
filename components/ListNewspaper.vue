@@ -1,34 +1,31 @@
+<script setup>
+const props = defineProps({
+  items: { type: Array, required: true },
+});
+</script>
+
 <template>
-  <v-expansion-panels accordion focusable multiple>
+  <v-expansion-panels variant="accordion" multiple>
     <v-expansion-panel
-      v-for="(newspaper, index) in items"
+      v-for="(newspaper, index) in props.items"
       :key="'newspaper' + index"
     >
-      <v-expansion-panel-header>
+      <v-expansion-panel-title>
         <span v-if="!newspaper.subTitle">
-          <v-icon left>mdi-newspaper-variant</v-icon>
+          <icons-newspaper-variant start />
           {{ newspaper.title }}
         </span>
         <span v-else class="newspaper-sub-title">
-          <v-icon left>mdi-menu-right</v-icon>
+          <icons-menu-right start />
           {{ newspaper.subTitle }}
         </span>
-      </v-expansion-panel-header>
-      <v-expansion-panel-content>
+      </v-expansion-panel-title>
+      <v-expansion-panel-text>
         <list-newspaper-details :items="newspaper"></list-newspaper-details>
-      </v-expansion-panel-content>
+      </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>
 </template>
-
-<script>
-export default {
-  name: 'ListNewspaper',
-  props: {
-    items: { type: Array, required: true },
-  },
-}
-</script>
 
 <style scoped>
 .newspaper-sub-title {
