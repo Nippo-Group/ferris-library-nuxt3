@@ -122,14 +122,12 @@ const items = [
               <div class="list-item-head mb-2">
                 <v-chip
                   v-if="content.target"
-                  size="small"
                   color="primary-lighten-2"
-                  variant="elevated"
                   class="mr-1"
                 >
                   {{ content.target }}
                 </v-chip>
-                <v-chip v-if="content.date" size="small" variant="outlined">
+                <v-chip v-if="content.date" variant="outlined">
                   {{ content.date }}
                 </v-chip>
               </div>
