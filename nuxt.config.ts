@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ["vuetify"],
   },
-  css: ["@/assets/main.scss"],
+  css: ["@/assets/css/main.scss"],
   hooks: {
     "vite:extendConfig": (config) => {
       config.plugins!.push(vuetify());

@@ -9,4 +9,8 @@ export const defaults: DefaultsInstance = {
     density: "compact",
     border: "start",
   },
+  VChip: {
+    variant: "elevated",
+    size: "small",
+  },
 };
