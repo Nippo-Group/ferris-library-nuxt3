@@ -8,7 +8,11 @@ const confirmDialog = (
   fileUrl: string,
   fileType: string
 ): void => {
-  confirmRef.value.dialogOpen(fileName, fileUrl, fileType);
+  if (fileName && fileUrl && fileType) {
+    confirmRef.value.dialogOpen(fileName, fileUrl, fileType);
+  } else {
+    console.log("Error: ファイル名・パス・タイプのいずれかが不足しています。");
+  }
 };
 provide("confirmDialog", confirmDialog);
 </script>
