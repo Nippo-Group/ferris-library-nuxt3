@@ -13,4 +13,7 @@ export const defaults: DefaultsInstance = {
     variant: "elevated",
     size: "small",
   },
+  VTimelineItem: {
+    dotColor: "primary",
+  },
 };
