@@ -75,59 +75,59 @@ const nuxtApp = useNuxtApp();
   max-height: 80vh;
   overflow-y: scroll;
 }
-.news-contents >>> h1 {
+.news-contents::v-deep(h1) {
   display: none;
 }
-.news-contents >>> h2 {
+.news-contents::v-deep(h2) {
   font-size: 1rem;
   font-weight: bold;
 }
-.news-contents >>> h3 {
+.news-contents::v-deep(h3) {
   font-size: 1rem;
   font-weight: bold;
 }
-.news-contents >>> h4 {
+.news-contents::v-deep(h4) {
   font-size: 1rem;
   border-bottom: 1px solid currentColor;
 }
-.news-contents >>> h5 {
+.news-contents::v-deep(h5) {
   font-size: 1rem;
 }
-.news-contents >>> h6 {
+.news-contents::v-deep(h6) {
   font-size: 1rem;
 }
-.news-contents >>> img {
+.news-contents::v-deep(img) {
   max-width: 100%;
   height: auto;
 }
-.news-contents >>> p {
+.news-contents::v-deep(p) {
   margin-bottom: 1em;
 }
-.news-contents >>> table {
+.news-contents::v-deep(table) {
   display: block;
   border-spacing: 0;
   overflow-x: scroll;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
 }
-.news-contents >>> th,
-.news-contents >>> td {
+.news-contents::v-deep(th),
+.news-contents::v-deep(td) {
   border: solid 1px #ddd;
   padding: 10px 5px;
 }
-.news-contents >>> th {
+.news-contents::v-deep(th) {
   background-color: #eee;
 }
-.news-contents >>> dl,
-.news-contents >>> ul,
-.news-contents >>> ol {
+.news-contents::v-deep(dl),
+.news-contents::v-deep(ul),
+.news-contents::v-deep(ol) {
   padding-left: 1em;
   margin-bottom: 1em;
 }
-.news-contents >>> dt {
+.news-contents::v-deep(dt) {
   font-weight: bold;
 }
-.news-contents >>> dd {
+.news-contents::v-deep(dd) {
   padding-left: 1em;
 }
 </style>
