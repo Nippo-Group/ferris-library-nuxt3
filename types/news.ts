@@ -1,9 +1,25 @@
-import type { MicroCMSImage, MicroCMSListContent } from "microcms-js-sdk";
-import type { Category } from "@/types/category";
+type Actions = {
+  fieldId: string;
+  link: string;
+  to: string;
+};
+type Openinnew = {
+  fieldId: string;
+  link: string;
+  url: string;
+};
 
 export type News = {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  revisedAt: string;
   title?: string;
+  date?: string;
   content?: string;
-  eyecatch?: MicroCMSImage;
-  category: (MicroCMSListContent & Category) | null;
+  actions?: Actions;
+  actions2?: Actions;
+  openinnew?: Openinnew;
+  openinnew2?: Openinnew;
 };
