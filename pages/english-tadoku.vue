@@ -1,3 +1,8 @@
+<script setup>
+const title = ref("英語多読図書");
+useSeoMeta({ title: title.value });
+</script>
+
 <template>
   <v-container>
     <text-page-title>{{ title }}</text-page-title>
@@ -7,12 +12,11 @@
     <v-row>
       <v-col cols="12" sm="8" md="6" lg="4">
         <v-card>
-          <v-card-subtitle class="pb-0">電子ブック</v-card-subtitle>
+          <v-card-subtitle class="pt-4 pb-0">電子ブック</v-card-subtitle>
           <v-card-title class="pt-0">EBSCO eBooks</v-card-title>
           <v-img
-            position="top center"
             max-height="164"
-            src="~/assets/images/english-tadoku/tadoku-01.jpg"
+            :src="generateImgPath('tadoku-01.jpg', 'english-tadoku')"
           ></v-img>
           <v-card-text>
             Macmillan Readers や Magic Tree
@@ -26,7 +30,7 @@
           </v-card-actions>
           <v-divider></v-divider>
           <v-card-text>
-            <v-alert dense text type="success" class="mb-0">
+            <v-alert density="compact" text type="success" class="mb-0">
               学部生・大学院生・教職員は学外からも利用が可能です。
               ※大学のアカウントでログインできます。
             </v-alert>
@@ -41,14 +45,13 @@
       </v-col>
       <v-col cols="12" sm="8" md="6" lg="4">
         <v-card>
-          <v-card-subtitle class="pb-0">電子ブック</v-card-subtitle>
+          <v-card-subtitle class="pt-4 pb-0">電子ブック</v-card-subtitle>
           <v-card-title class="pt-0"
             >Gale Virtual Reference Library</v-card-title
           >
           <v-img
-            position="top center"
             max-height="164"
-            src="~/assets/images/english-tadoku/tadoku-02.jpg"
+            :src="generateImgPath('tadoku-02.jpg', 'english-tadoku')"
           ></v-img>
           <v-card-text>
             <p>
@@ -67,13 +70,13 @@
       </v-col>
       <v-col cols="12" sm="8" md="6" lg="4">
         <v-card>
-          <v-card-subtitle class="pb-0">書籍</v-card-subtitle>
+          <v-card-subtitle class="pt-4 pb-0">書籍</v-card-subtitle>
           <v-card-title class="pt-0">英語多読図書コーナー</v-card-title>
           <v-card-text>
             緑園本館4階に、英語多読図書を集めたコーナーがあります。貸出条件は一般図書と同じです。
           </v-card-text>
           <v-img
-            src="~/assets/images/english-tadoku/tadoku-03.jpg"
+            :src="generateImgPath('tadoku-03.jpg', 'english-tadoku')"
             width="90%"
           ></v-img>
         </v-card>
@@ -81,17 +84,3 @@
     </v-row>
   </v-container>
 </template>
-
-<script>
-export default {
-  name: "PageEnglishTadoku",
-  data: () => ({
-    title: "英語多読図書",
-  }),
-  head() {
-    return {
-      title: this.title,
-    };
-  },
-};
-</script>
