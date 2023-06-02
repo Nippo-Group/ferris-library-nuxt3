@@ -138,7 +138,7 @@ const items = [
     <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col v-for="(item, i) in items" :key="i" cols="12" sm="6" lg="4" xl="3">
-        <v-card height="100%">
+        <v-card height="100%" class="d-flex flex-column">
           <v-container>
             <v-row no-gutters>
               <v-col cols="7" class="text-left">
@@ -171,11 +171,13 @@ const items = [
               v-if="item.identification"
               link="資料をみる"
               :to="'/digital-collection/' + item.identification"
+              block
             ></btn-inside>
             <btn-open-in-new
               v-if="item.link"
               link="資料をみる"
               :url="item.link"
+              block
             ></btn-open-in-new>
           </v-card-actions>
         </v-card>
