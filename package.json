@@ -31,7 +31,8 @@
     "@pinia/nuxt": "^0.4.10",
     "dayjs": "^1.11.7",
     "nuxt-microcms-module": "^3.0.1",
-    "pinia": "^2.0.36"
+    "pinia": "^2.0.36",
+    "vue-easy-lightbox": "^1.16.0"
   },
   "overrides": {
     "vue": "latest"
