@@ -5,12 +5,6 @@ const title = ref("Henry More, The Apology of Dr. Henry More");
 useSeoMeta({ title: title.value });
 
 const titleLogo = "/images/digital-collection/collection08/title-logo.png";
-const index = ref(null);
-const multiLine = ref(true);
-const snackbar = ref(false);
-const university = ref("");
-const fileUrl = ref(null);
-const timeout = 6000;
 const topImage = "/images/digital-collection/collection08/eyecatching.png";
 const commentary1 =
   "<p>Henry More, The Apology of Dr. Henry More, Fellow of Christ's College in Cambridge: Wherein Is Contained as Well a More General Account of the Manner and Scope of His Writings, as a Particular Explication of Several Passages in His Grand Mystery of Godliness （London, 1664）</p>";
@@ -33,6 +27,21 @@ const zipFile = {
   name: "一括ダウンロード",
   url: "/documents/digital-collection/collection08/henry_more.zip",
   type: "ZIP",
+};
+
+// Lightbox用
+const lightboxComponent = ref();
+const imgs = computed(() => {
+  return images.map((value) => {
+    return {
+      src: value.src,
+      title: value.caption,
+      alt: value.caption,
+    };
+  });
+});
+const lightboxShow = (index) => {
+  lightboxComponent.value.onShow(index);
 };
 </script>
 
@@ -95,7 +104,7 @@ const zipFile = {
           elevation="0"
           color="grey-lighten-4"
           height="100%"
-          @click="index = idx"
+          @click="lightboxShow(idx)"
         >
           <v-img :src="image.src" class="open-tinybox" aspect-ratio="1.5" cover>
             <template #placeholder>
@@ -108,18 +117,7 @@ const zipFile = {
         </v-card>
       </v-col>
     </v-row>
-    <VueTinybox v-model="index" :images="images" loop></VueTinybox>
-    <v-snackbar v-model="snackbar" :multi-line="multiLine" :timeout="timeout">
-      {{ university }}ファイルを開きますか？
-      <template #action="{ attrs }">
-        <v-btn class="mx-3" :href="fileUrl" target="_blank"
-          >はい<icons-download-defult
-        /></v-btn>
-        <v-btn icon v-bind="attrs" @click="snackbar = false">
-          <icons-close-defult />
-        </v-btn>
-      </template>
-    </v-snackbar>
+    <the-lightbox ref="lightboxComponent" :imgs="imgs"></the-lightbox>
   </v-container>
 </template>
 

@@ -1,11 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import images from "@/assets/json/digital-collection/collection04.json";
+import type { ImgsObj } from "@/components/TheLightbox.vue";
 
 const title = ref("Japanese Fairy Tale");
 useSeoMeta({ title: title.value });
 
 const titleLogo = "/images/digital-collection/collection04/title-logo.gif";
-const index = ref(null);
 const commentary = [
   "はじめに",
   "フェリス女学院大学の図書館にある、この希少本シリーズは小型の和装本で、縮緬本（ちりめんぼん）とよばれるものです。このシリーズは英語で書かれていて、昔話絵本のシリーズになっています。日本の代表的な昔話、「桃太郎」「瘤取り爺」「猿蟹合戦」などが入っています。",
@@ -32,6 +32,21 @@ const breadcrumbs = [
     href: "/digital-collection/collection04",
   },
 ];
+
+// Lightbox用
+const lightboxComponent = ref();
+const imgs = computed(() => {
+  return images.map((value): ImgsObj => {
+    return {
+      src: value.src,
+      title: value.caption,
+      alt: value.caption,
+    };
+  });
+});
+const lightboxShow = (index: number): void => {
+  lightboxComponent.value.onShow(index);
+};
 </script>
 
 <template>
@@ -70,10 +85,12 @@ const breadcrumbs = [
           elevation="0"
           color="grey-lighten-4"
           height="100%"
-          @click="index = idx"
+          @click="lightboxShow(idx)"
         >
           <v-card-text
-            ><v-chip small class="mr-2">{{ image.num }}</v-chip></v-card-text
+            ><v-chip small class="mr-2" variant="tonal">{{
+              image.num
+            }}</v-chip></v-card-text
           >
           <v-img :src="image.src" class="open-tinybox" aspect-ratio="1" cover>
             <template #placeholder>
@@ -89,7 +106,7 @@ const breadcrumbs = [
         </v-card>
       </v-col>
     </v-row>
-    <VueTinybox v-model="index" :images="images" loop></VueTinybox>
+    <the-lightbox ref="lightboxComponent" :imgs="imgs"></the-lightbox>
   </v-container>
 </template>
 

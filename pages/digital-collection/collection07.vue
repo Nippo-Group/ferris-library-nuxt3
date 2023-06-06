@@ -1,11 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import imageList from "@/assets/json/digital-collection/collection07.json";
+import type { ImgsObj } from "@/components/TheLightbox.vue";
 
 const title = ref("横浜絵葉書（手彩色）");
 useSeoMeta({ title: title.value });
 
 const titleLogo = "/images/digital-collection/collection07/title-logo.png";
-const index = ref(null);
 const topImage =
   "/images/digital-collection/collection07/group01/group01_023.jpg";
 const commentary1 =
@@ -54,9 +54,44 @@ const list = [
   },
 ];
 
-const images = ref();
-const gallery = (group) => {
-  images.value = imageList[group];
+type Images = {
+  src: string;
+  caption: string;
+};
+const images = ref<Images[]>();
+const gallery = (group: string | undefined) => {
+  switch (group) {
+    case "group01":
+      images.value = imageList.group01;
+      break;
+    case "group02":
+      images.value = imageList.group02;
+      break;
+    case "group03":
+      images.value = imageList.group03;
+      break;
+    default:
+      break;
+  }
+};
+
+// Lightbox用
+const lightboxComponent = ref();
+const imgs = computed(() => {
+  if (images.value) {
+    return images.value.map((value: Images): ImgsObj => {
+      return {
+        src: value.src,
+        title: value.caption,
+        alt: value.caption,
+      };
+    });
+  } else {
+    console.log();
+  }
+});
+const lightboxShow = (index: number): void => {
+  lightboxComponent.value.onShow(index);
 };
 </script>
 
@@ -127,6 +162,8 @@ const gallery = (group) => {
           </v-card-text>
         </v-card>
       </v-col>
+    </v-row>
+    <v-row if="images">
       <v-col
         v-for="(image, idx) in images"
         :key="idx"
@@ -139,7 +176,7 @@ const gallery = (group) => {
           elevation="0"
           color="grey-lighten-4"
           height="100%"
-          @click="index = idx"
+          @click="lightboxShow(idx)"
         >
           <v-img :src="image.src" class="open-tinybox" aspect-ratio="1.2" cover>
             <template #placeholder>
@@ -152,7 +189,9 @@ const gallery = (group) => {
         </v-card>
       </v-col>
     </v-row>
-    <VueTinybox v-model="index" :images="images" loop></VueTinybox>
+    <template v-if="imgs !== undefined">
+      <the-lightbox ref="lightboxComponent" :imgs="imgs"></the-lightbox>
+    </template>
   </v-container>
 </template>
 

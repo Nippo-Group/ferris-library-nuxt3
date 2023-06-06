@@ -1,11 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import images from "@/assets/json/digital-collection/collection05.json";
+import type { ImgsObj } from "@/components/TheLightbox.vue";
 
 const title = ref("ビアトリクス・ポターの絵本");
 useSeoMeta({ title: title.value });
 
 const titleLogo = "/images/digital-collection/collection05/title-logo.gif";
-const index = null;
 const layoutCover = [12, 6];
 const layoutOther = [6, 3];
 const commentary1 =
@@ -24,6 +24,21 @@ const breadcrumbs = [
     href: "/digital-collection/collection05",
   },
 ];
+
+// Lightbox用
+const lightboxComponent = ref();
+const imgs = computed(() => {
+  return images.map((value): ImgsObj => {
+    return {
+      src: value.src,
+      title: value.caption,
+      alt: value.caption,
+    };
+  });
+});
+const lightboxShow = (index: number): void => {
+  lightboxComponent.value.onShow(index);
+};
 </script>
 
 <template>
@@ -57,7 +72,7 @@ const breadcrumbs = [
           elevation="0"
           color="grey-lighten-4"
           height="100%"
-          @click="index = idx"
+          @click="lightboxShow(idx)"
         >
           <v-card-title>
             {{ image.caption }}
@@ -84,7 +99,8 @@ const breadcrumbs = [
               </v-col>
               <v-col cols="12" sm="7">
                 <p>{{ image.text }}</p>
-                <v-chip v-if="image.num" small class="mr-2">請求記号</v-chip
+                <v-chip v-if="image.num" small class="mr-2" variant="tonal"
+                  >請求記号</v-chip
                 >{{ image.num }}
               </v-col>
             </v-row>
@@ -96,7 +112,7 @@ const breadcrumbs = [
           elevation="0"
           color="grey-lighten-4"
           height="100%"
-          @click="index = idx"
+          @click="lightboxShow(idx)"
         >
           <v-img :src="image.src" class="open-tinybox" aspect-ratio="1" cover>
             <template #placeholder>
@@ -109,7 +125,7 @@ const breadcrumbs = [
         </v-card>
       </v-col>
     </v-row>
-    <VueTinybox v-model="index" :images="images" loop></VueTinybox>
+    <the-lightbox ref="lightboxComponent" :imgs="imgs"></the-lightbox>
   </v-container>
 </template>
 

@@ -1,12 +1,12 @@
-<script setup>
+<script setup lang="ts">
 import images from "@/assets/json/digital-collection/collection02.json";
+import type { ImgsObj } from "@/components/TheLightbox.vue";
 
 const title = ref("竹取物語");
 useSeoMeta({ title: title.value });
 
 const titleLogo = "/images/digital-collection/collection02/title-logo.gif";
 const topImage = "/images/digital-collection/collection02/00.jpg";
-const index = ref(null);
 const topImageCaptions = ["三田村雅子　新生優希"];
 const commentary = [
   "フェリス女学院大学図書館では2004年度に絵入り竹取物語写本三冊を貴重書として購入しました。紺地金襴表紙のこの竹取物語は、二十四枚の極彩色の絵を伴っており、これは、竹取物語の絵入本としてはもっとも多い絵を含む新出写本であり、しかもその絵には際立った個性が認められます。",
@@ -35,6 +35,21 @@ const breadcrumbs = [
     href: "/digital-collection/collection02",
   },
 ];
+
+// Lightbox用
+const lightboxComponent = ref();
+const imgs = computed(() => {
+  return images.map((value): ImgsObj => {
+    return {
+      src: value.src,
+      title: value.caption,
+      alt: value.caption,
+    };
+  });
+});
+const lightboxShow = (index: number): void => {
+  lightboxComponent.value.onShow(index);
+};
 </script>
 
 <template>
@@ -88,10 +103,10 @@ const breadcrumbs = [
           elevation="0"
           color="grey-lighten-4"
           height="100%"
-          @click="index = idx"
+          @click="lightboxShow(idx)"
         >
           <v-card-text
-            ><v-chip small class="mr-2">{{ image.num }}</v-chip
+            ><v-chip small class="mr-2" variant="tonal">{{ image.num }}</v-chip
             ><span if="image.caption2" class="caption2">{{
               image.caption2
             }}</span></v-card-text
@@ -109,7 +124,7 @@ const breadcrumbs = [
         </v-card>
       </v-col>
     </v-row>
-    <VueTinybox v-model="index" :images="images" loop></VueTinybox>
+    <the-lightbox ref="lightboxComponent" :imgs="imgs"></the-lightbox>
   </v-container>
 </template>
 
