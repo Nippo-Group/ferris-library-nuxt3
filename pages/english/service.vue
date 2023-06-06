@@ -3,7 +3,7 @@ const title = ref("Lending Service");
 useSeoMeta({ title: title.value });
 definePageMeta({ layout: "english" });
 
-const panel = [0, 1];
+const panel = ref([0, 1]);
 const items = reactive([
   {
     title: "Borrowing",
@@ -130,12 +130,8 @@ const quantity = reactive([
       <v-col cols="12" md="10" lg="8">
         <v-expansion-panels v-model="panel" variant="accordion" multiple>
           <v-expansion-panel v-for="(item, i) in items" :key="i">
-            <v-expansion-panel-header>{{
-              item.title
-            }}</v-expansion-panel-header>
-            <v-expansion-panel-content>{{
-              item.content
-            }}</v-expansion-panel-content>
+            <v-expansion-panel-title>{{ item.title }}</v-expansion-panel-title>
+            <v-expansion-panel-text>{{ item.content }}</v-expansion-panel-text>
           </v-expansion-panel>
         </v-expansion-panels>
       </v-col>
@@ -152,6 +148,7 @@ const quantity = reactive([
           density="compact"
           variant="outlined"
           :type="note.type"
+          class="mt-4"
         >
           {{ note.text }}
         </v-alert>
@@ -160,13 +157,25 @@ const quantity = reactive([
     <v-row>
       <v-col cols="12" md="10" lg="8">
         <text-sub-title>Loan periods and checkouts limits</text-sub-title>
-        <v-data-table
-          :headers="headersQuantity"
-          :items="quantity"
-          :items-per-page="5"
-          hide-default-footer
-          class="elevation-1"
-        ></v-data-table>
+        <v-table>
+          <thead>
+            <tr>
+              <th v-for="headerQ in headersQuantity" :key="headerQ.value">
+                {{ headerQ.text }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="quantityItem in quantity" :key="quantityItem.id">
+              <td>{{ quantityItem.name }}</td>
+              <td>{{ quantityItem.books }}</td>
+              <td>{{ quantityItem.journals }}</td>
+              <td>{{ quantityItem.courseReserveBooks }}</td>
+              <td>{{ quantityItem.scores }}</td>
+              <td>{{ quantityItem.cds }}</td>
+            </tr>
+          </tbody>
+        </v-table>
       </v-col>
     </v-row>
   </v-container>

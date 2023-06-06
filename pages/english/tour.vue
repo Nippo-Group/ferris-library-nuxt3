@@ -62,7 +62,11 @@ const items = reactive([
         lg="8"
         xl="6"
       >
-        <card-tour :item="item"></card-tour>
+        <card-tour
+          :title="item.title"
+          :text="item.text"
+          :contents="item.contents"
+        ></card-tour>
       </v-col>
     </v-row>
   </v-container>
