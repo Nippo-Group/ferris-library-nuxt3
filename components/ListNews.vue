@@ -10,8 +10,6 @@ const props = defineProps({
   },
 });
 
-const nuxtApp = useNuxtApp();
-
 const page = ref(1);
 const pageSize = ref(10);
 const pageLength = ref(1);
@@ -56,14 +54,14 @@ const dialogClose = () => {
         >
           <v-list-item-title class="wrap-text">
             <span
-              v-show="nuxtApp.$dayjs(content.date) > nuxtApp.$dayjs()"
+              v-show="dateFormat(content.date).utc > dateFormat().utc"
               class="text-red-lighten-2"
               >予約投稿：</span
             >
             {{ content.title }}
           </v-list-item-title>
           <v-list-item-subtitle>
-            {{ nuxtApp.$dayjs(content.date).format("YYYY年M月D日") }}
+            {{ dateFormat(content.date).format }}
           </v-list-item-subtitle>
           <template #append>
             <icons-arrow-right-circle

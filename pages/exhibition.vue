@@ -28,12 +28,6 @@ const openDitails = (item: Exhibitions) => {
   childRef.value.dialogSwitching();
 };
 
-// 日付の整形
-const { $dayjs } = useNuxtApp();
-const generateDate = (date: string): string => {
-  return $dayjs(date).format("YYYY年M月D日");
-};
-
 // ソートの切り替え
 const reverseOrder = (): void => {
   data.value?.contents.reverse();
@@ -80,7 +74,7 @@ const reverseOrder = (): void => {
             {{ item.title }}
           </v-card-title>
           <v-card-subtitle v-if="item.date" class="pb-2">
-            {{ generateDate(item.date) }}
+            {{ dateFormat(item.date).format }}
           </v-card-subtitle>
         </v-card>
       </v-col>

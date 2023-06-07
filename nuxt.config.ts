@@ -20,12 +20,21 @@ export default defineNuxtConfig({
     transpile: ["vuetify"],
   },
   css: ["@/assets/css/main.scss"],
+  dayjs: {
+    locales: ["en", "ja"],
+    defaultLocale: "ja",
+    defaultTimezone: "Asia/Tokyo",
+    plugins: [
+      "utc", // import 'dayjs/plugin/utc'
+      "timezone", // import 'dayjs/plugin/timezone'
+    ], // Your Day.js plugin
+  },
   hooks: {
     "vite:extendConfig": (config) => {
       config.plugins!.push(vuetify());
     },
   },
-  modules: ["@pinia/nuxt", "nuxt-microcms-module"],
+  modules: ["@pinia/nuxt", "nuxt-microcms-module", "dayjs-nuxt"],
   microCMS: {
     serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
     apiKey: process.env.MICROCMS_API_KEY,

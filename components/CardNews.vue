@@ -6,8 +6,6 @@ const props = defineProps({
   },
 });
 const items = reactive(props.items);
-
-const nuxtApp = useNuxtApp();
 </script>
 
 <template>
@@ -21,7 +19,7 @@ const nuxtApp = useNuxtApp();
         {{ items.title }}
       </v-card-title>
       <v-card-subtitle>
-        {{ nuxtApp.$dayjs(items.date).format("YYYY年M月D日") }}
+        {{ dateFormat(items.date).format }}
       </v-card-subtitle>
     </v-card-item>
     <div class="content-body">
