@@ -3,6 +3,13 @@ const title = ref("障がいのある方への支援");
 useSeoMeta({ title: title.value });
 
 const panelOpen = ref([0, 1]);
+
+const confirmDialog = inject("confirmDialog");
+const nationalDietLibraryFile = {
+  name: "国立国会図書館 視覚障害者等用データ送信サービス 利用案内",
+  url: "/documents/supports/national-diet-library.docx",
+  type: "Word",
+};
 </script>
 
 <template>
@@ -32,6 +39,23 @@ const panelOpen = ref([0, 1]);
               <p>
                 コピー機、プリンター、PC、AV機器など、館内機器の利用が困難な場合は、図書館スタッフが介助します。
               </p>
+              <div class="text-h6 pt-3">
+                国立国会図書館視覚障害者等データ送信サービス
+              </div>
+              <p class="mb-2">
+                国立国会図書館が製作した視覚障害者等用のDAISYデータ等と、図書館等が製作し国立国会図書館が収集した視覚障害者等用データを、インターネット経由で提供します。このサービスが受けられるのは「図書館の障害者サービスにおける著作権法第37条第3項に基づく著作物の複製等に関するガイドライン」に定められた、視覚障害その他の理由で通常の印刷物の読書が困難な方です。
+              </p>
+              <v-btn
+                @click="
+                  confirmDialog(
+                    nationalDietLibraryFile.name,
+                    nationalDietLibraryFile.url,
+                    nationalDietLibraryFile.type
+                  )
+                "
+                >利用案内ファイル
+                <icons-file-word end></icons-file-word>
+              </v-btn>
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel title="施設設備">
