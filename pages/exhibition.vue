@@ -74,7 +74,7 @@ const reverseOrder = (): void => {
             {{ item.title }}
           </v-card-title>
           <v-card-subtitle v-if="item.date" class="pb-2">
-            {{ dateFormat(item.date).format }}
+            {{ dateFormat(item.date) }}
           </v-card-subtitle>
         </v-card>
       </v-col>

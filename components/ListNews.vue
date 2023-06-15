@@ -54,14 +54,14 @@ const dialogClose = () => {
         >
           <v-list-item-title class="wrap-text">
             <span
-              v-show="dateFormat(content.date).utc > dateFormat().utc"
+              v-show="new Date(content.date) > new Date().utc"
               class="text-red-lighten-2"
               >予約投稿：</span
             >
             {{ content.title }}
           </v-list-item-title>
           <v-list-item-subtitle>
-            {{ dateFormat(content.date).format }}
+            {{ dateFormat(content.date) }}
           </v-list-item-subtitle>
           <template #append>
             <icons-arrow-right-circle

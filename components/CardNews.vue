@@ -19,7 +19,7 @@ const items = reactive(props.items);
         {{ items.title }}
       </v-card-title>
       <v-card-subtitle>
-        {{ dateFormat(items.date).format }}
+        {{ dateFormat(items.date) }}
       </v-card-subtitle>
     </v-card-item>
     <div class="content-body">

@@ -54,8 +54,8 @@ const FindEventsToday = (events: Event[]) => {
               <icons-calendar-multiselect start size="small" />
               本日の開館時間
             </div>
-            <time :datetime="dateFormat(today).utc">
-              {{ dateFormat(today).format }}
+            <time :datetime="dateFormatSimple(today)">
+              {{ dateFormat(today) }}
             </time>
           </v-card-text>
           <v-card-actions class="justify-center">
