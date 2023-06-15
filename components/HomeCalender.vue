@@ -1,29 +1,37 @@
-<script setup>
+<script setup lang="ts">
 import ryokuen from "@/assets/json/calender-ryokuen.json";
 import yamate from "@/assets/json/calender-yamate.json";
 import common from "@/assets/json/calender-common.json";
 
-const nuxtApp = useNuxtApp();
+type Event = {
+  name: string;
+  start: string;
+  end?: string;
+};
 
-const todayEvents = (libraryName) => {
-  let events = [];
-  const todayEvents = [];
-  const today = nuxtApp.$dayjs();
-  switch (libraryName) {
-    case "ryokuen":
-      events = ryokuen.concat(common);
-      break;
-    case "yamate":
-      events = yamate.concat(common);
-      break;
-  }
-  events.forEach(function (value) {
+const dayjs = useDayjs();
+const today = dayjs();
+
+const eventsRyokuen = ryokuen.concat(common);
+const eventsYamate = yamate.concat(common);
+
+const todaysEventsRyokuen = computed(() => {
+  return FindEventsToday(eventsRyokuen);
+});
+const todaysEventsYamate = computed(() => {
+  return FindEventsToday(eventsYamate);
+});
+
+const FindEventsToday = (events: Event[]) => {
+  const todayEvents: string[] = [];
+
+  events.forEach((value: Event) => {
     const start = new Date(value.start);
     start.setHours(0, 0, 0);
     const end =
       value.end !== undefined ? new Date(value.end) : new Date(value.start);
     end.setHours(23, 59, 59);
-    if (today.isBetween(start, end, null, "[]")) {
+    if (today > start && today < end) {
       todayEvents.push(value.name);
     }
   });
@@ -46,9 +54,9 @@ const todayEvents = (libraryName) => {
               <icons-calendar-multiselect start size="small" />
               本日の開館時間
             </div>
-            <p class="mb-0">
-              {{ nuxtApp.$dayjs().format("YYYY年M月D日（ddd）") }}
-            </p>
+            <time :datetime="dateFormat(today).utc">
+              {{ dateFormat(today).format }}
+            </time>
           </v-card-text>
           <v-card-actions class="justify-center">
             <btn-inside link="カレンダーをみる" to="/calender"></btn-inside>
@@ -66,7 +74,7 @@ const todayEvents = (libraryName) => {
             <p class="text-h6 mb-0">緑園本館</p>
             <ul class="events">
               <li
-                v-for="(item, i) in todayEvents('ryokuen')"
+                v-for="(item, i) in todaysEventsRyokuen"
                 :key="'ryokuen' + i"
                 class="bg-grey-lighten-4"
               >
@@ -87,7 +95,7 @@ const todayEvents = (libraryName) => {
             <p class="text-h6 mb-0">山手分室</p>
             <ul class="events">
               <li
-                v-for="(item, i) in todayEvents('yamate')"
+                v-for="(item, i) in todaysEventsYamate"
                 :key="'yamate' + i"
                 class="bg-grey-lighten-4"
               >
