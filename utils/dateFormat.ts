@@ -1,9 +1,4 @@
-export const dateFormat = (date?: string, simple?: boolean) => {
+export const dateFormat = (date?: string): string => {
   const dayjs = useDayjs();
-  const specifiedDate = dayjs(date);
-  const format = specifiedDate.format(
-    simple ? "YYYY-MM-DD" : "YYYY年M月D日（dd）"
-  );
-  const utc = specifiedDate.utc();
-  return { format, utc };
+  return dayjs(date).format("YYYY年M月D日（dd）");
 };
