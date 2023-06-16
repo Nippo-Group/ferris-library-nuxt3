@@ -3,9 +3,9 @@ import FullCalendar from "@fullcalendar/vue3";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import dayListPlugin from "@fullcalendar/list";
 
-import ryokuen from "@/assets/json/calender-ryokuen.json";
-import yamate from "@/assets/json/calender-yamate.json";
-import common from "@/assets/json/calender-common.json";
+import ryokuen from "@/assets/json/calendar-ryokuen.json";
+import yamate from "@/assets/json/calendar-yamate.json";
+import common from "@/assets/json/calendar-common.json";
 
 import { useLanguageStore } from "@/stores/language";
 

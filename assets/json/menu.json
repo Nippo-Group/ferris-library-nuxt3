@@ -15,8 +15,8 @@
       },
       {
         "title": "開館カレンダー・開館時間",
-        "id": "calender",
-        "push": "/calender"
+        "id": "calendar",
+        "push": "/calendar"
       },
       {
         "title": "フロアマップ",

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import ryokuen from "@/assets/json/calender-ryokuen.json";
-import yamate from "@/assets/json/calender-yamate.json";
-import common from "@/assets/json/calender-common.json";
+import ryokuen from "@/assets/json/calendar-ryokuen.json";
+import yamate from "@/assets/json/calendar-yamate.json";
+import common from "@/assets/json/calendar-common.json";
 
 type Event = {
   name: string;
@@ -59,7 +59,7 @@ const FindEventsToday = (events: Event[]) => {
             </time>
           </v-card-text>
           <v-card-actions class="justify-center">
-            <btn-inside link="カレンダーをみる" to="/calender"></btn-inside>
+            <btn-inside link="カレンダーをみる" to="/calendar"></btn-inside>
           </v-card-actions>
         </v-card>
       </v-col>

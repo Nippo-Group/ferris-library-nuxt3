@@ -15,8 +15,8 @@
       },
       {
         "title": "Calendar",
-        "id": "calender",
-        "push": "/english/calender"
+        "id": "calendar",
+        "push": "/english/calendar"
       }
     ]
   },
