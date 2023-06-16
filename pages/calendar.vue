@@ -8,7 +8,7 @@ useSeoMeta({ title: title.value });
     <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col cols="12" xl="8">
-        <full-calendar></full-calendar>
+        <the-calendar></the-calendar>
       </v-col>
       <v-col>
         <info-covid-19></info-covid-19>

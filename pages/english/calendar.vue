@@ -9,7 +9,7 @@ definePageMeta({ layout: "english" });
     <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col cols="12" xl="8">
-        <full-calendar></full-calendar>
+        <the-calendar></the-calendar>
       </v-col>
     </v-row>
   </v-container>
