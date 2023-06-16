@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import FullCalendar from "@fullcalendar/vue3";
-import interactionPlugin from "@fullcalendar/interaction";
-import timeGridPlugin from "@fullcalendar/timegrid";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import dayListPlugin from "@fullcalendar/list";
 
@@ -24,38 +22,49 @@ type Event = {
   allday?: boolean;
 };
 
+// 言語の状態
 const langStore = useLanguageStore();
 const language = ref(langStore.language);
 
+// 緑園本館・山手分室の状態
+const selectLocation = ref<"ryokuen" | "yamate">("ryokuen");
+const locationLabel = computed(() => {
+  if (language.value === "en") {
+    return {
+      ryokuen: "Ryokuen",
+      yamate: "Yamate",
+    };
+  } else {
+    return {
+      ryokuen: "緑園本館",
+      yamate: "山手分室",
+    };
+  }
+});
+
+// イベントをフォーマットする
 const eventFormat = (events: BeforeFormatEvent[]): Event[] => {
   const arr = [];
   for (const event of events) {
     const color = eventColors[eventNames.indexOf(event.name)];
 
+    let nameSubstitution = false;
     if (
       language.value === "en" &&
       (event.name === "閉館" || event.name === "閉室")
     ) {
-      arr.push({
-        title: "Closed",
-        color,
-        start: event.start,
-        end: event.end ? `${event.end} 24:00:00` : undefined,
-        allDay: true,
-      });
-    } else {
-      arr.push({
-        title: event.name,
-        color,
-        start: event.start,
-        end: event.end ? `${event.end} 24:00:00` : undefined,
-        allDay: true,
-      });
+      nameSubstitution = true;
     }
+    arr.push({
+      title: nameSubstitution ? "Closed" : event.name,
+      color,
+      start: event.start,
+      end: event.end ? `${event.end} 24:00:00` : undefined,
+      allDay: true,
+    });
   }
   return arr;
 };
-
 const eventColors = [
   "#5C6BC0",
   "#BDBDBD",
@@ -85,21 +94,7 @@ const eventNames = [
   "10:00～17:00",
 ];
 
-const selectLocation = ref<"ryokuen" | "yamate">("ryokuen");
-const locationLabel = computed(() => {
-  if (language.value === "en") {
-    return {
-      ryokuen: "Ryokuen",
-      yamate: "Yamate",
-    };
-  } else {
-    return {
-      ryokuen: "緑園本館",
-      yamate: "山手分室",
-    };
-  }
-});
-
+// イベントを取得する
 const eventsRyokuen = eventFormat(ryokuen.concat(common));
 const eventsYamate = eventFormat(yamate.concat(common));
 const events = computed(() => {
@@ -110,13 +105,14 @@ const events = computed(() => {
   }
 });
 
+// FullCalendarのオプション設定
 const calendarOptions = reactive({
-  plugins: [interactionPlugin, timeGridPlugin, dayGridPlugin, dayListPlugin],
+  plugins: [dayGridPlugin, dayListPlugin],
   initialView: "dayGridMonth",
   nowIndicator: true,
   editable: false,
   events,
-  locale: language,
+  locale: language.value,
   timeZone: "Asia/Tokyo",
   height: "auto",
   headerToolbar: {
@@ -138,9 +134,9 @@ const calendarOptions = reactive({
     </v-tab>
   </v-tabs>
   <v-sheet class="mt-4">
-    <FullCalendar :options="calendarOptions" class="calendarCustom">
+    <FullCalendar :options="calendarOptions">
       <template #eventContent="arg">
-        <b>
+        <b class="pa-1">
           {{ arg.event.title }}
           <v-tooltip activator="parent" location="top">
             {{ arg.event.title }}
