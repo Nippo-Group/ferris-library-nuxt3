@@ -1,3 +1,10 @@
+<script setup>
+const title = ref("学生向けパンフレット");
+useSeoMeta({ title: title.value });
+
+const tab = ref(null);
+</script>
+
 <template>
   <v-container>
     <text-page-title>{{ title }}</text-page-title>
@@ -11,32 +18,17 @@
 
         <v-window v-model="tab">
           <v-window-item>
-            <display-pdf
-              location="/documents/pamphlet/pamphlet_ryokuen.pdf"
-            ></display-pdf>
+            <the-pdf-viewer
+              src="/documents/pamphlet/pamphlet_ryokuen.pdf"
+            ></the-pdf-viewer>
           </v-window-item>
           <v-window-item>
-            <display-pdf
-              location="/documents/pamphlet/pamphlet_yamate.pdf"
-            ></display-pdf>
+            <the-pdf-viewer
+              src="/documents/pamphlet/pamphlet_yamate.pdf"
+            ></the-pdf-viewer>
           </v-window-item>
         </v-window>
       </v-col>
     </v-row>
   </v-container>
 </template>
-
-<script>
-export default {
-  name: "PagePamphlet",
-  data: () => ({
-    title: "学生向けパンフレット",
-    tab: null,
-  }),
-  head() {
-    return {
-      title: this.title,
-    };
-  },
-};
-</script>

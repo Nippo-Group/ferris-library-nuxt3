@@ -1,3 +1,10 @@
+<script setup>
+const title = ref("フロアマップ");
+useSeoMeta({ title: title.value });
+
+const tab = ref(null);
+</script>
+
 <template>
   <v-container>
     <text-page-title>{{ title }}</text-page-title>
@@ -12,10 +19,10 @@
 
         <v-window v-model="tab">
           <v-window-item>
-            <display-pdf
-              location="/documents/floor-map/floor-map-ryokuen.pdf"
-            ></display-pdf>
-            <v-sheet align="center" color="grey lighten-3" class="pa-6">
+            <the-pdf-viewer
+              src="/documents/floor-map/floor-map-ryokuen.pdf"
+            ></the-pdf-viewer>
+            <v-sheet align="center" color="grey-lighten-3" class="pa-6">
               <text-sub-title>今どこマップ</text-sub-title>
               <p>パワーポイントのファイルをダウンロードしますか？</p>
               <v-row justify="space-around" class="mt-4">
@@ -24,33 +31,18 @@
                   download="floor-map_3d.ppsx"
                 >
                   ダウンロード
-                  <v-icon right>mdi-download</v-icon>
+                  <icons-download-defult />
                 </v-btn>
               </v-row>
             </v-sheet>
           </v-window-item>
           <v-window-item>
-            <display-pdf
-              location="/documents/floor-map/floor-map-yamate.pdf"
-            ></display-pdf>
+            <the-pdf-viewer
+              src="/documents/floor-map/floor-map-yamate.pdf"
+            ></the-pdf-viewer>
           </v-window-item>
         </v-window>
       </v-col>
     </v-row>
   </v-container>
 </template>
-
-<script>
-export default {
-  name: "PageFloorMap",
-  data: () => ({
-    title: "フロアマップ",
-    tab: null,
-  }),
-  head() {
-    return {
-      title: this.title,
-    };
-  },
-};
-</script>
