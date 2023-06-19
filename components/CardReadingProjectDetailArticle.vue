@@ -1,15 +1,19 @@
+<script setup lang="ts">
+type State = {
+  name?: string;
+};
+defineProps<State>();
+</script>
+
 <template>
-  <v-card outlined class="d-flex align-start flex-column">
-    <v-card-title v-if="name">{{ name }}</v-card-title>
+  <v-card variant="outlined" class="d-flex align-start flex-column">
+    <v-card-title v-if="name" class="card-title">{{ name }}</v-card-title>
     <slot />
   </v-card>
 </template>
 
-<script>
-export default {
-  name: 'CardReadingProjectDetailArticle',
-  props: {
-    name: { type: String, default: '' },
-  },
+<style scoped>
+.card-title {
+  white-space: normal;
 }
-</script>
+</style>

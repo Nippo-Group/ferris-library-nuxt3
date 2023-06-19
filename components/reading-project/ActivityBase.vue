@@ -1,3 +1,17 @@
+<script setup lang="ts">
+const title = "活動拠点～附属図書館～";
+const movie = [
+  {
+    src: "https://www.youtube.com/embed/HRKpRB5fZ-o",
+    title: "図書館施設・設備編",
+  },
+  {
+    src: "https://www.youtube.com/embed/rBAip8vAxKU",
+    title: "ラーニングコモンズ編",
+  },
+];
+</script>
+
 <template>
   <card-reading-project :title="title">
     <v-container>
@@ -14,7 +28,8 @@
                 >
                   <card-reading-project-detail-article>
                     <v-card-text>
-                      <display-youtube :item="item"> </display-youtube>
+                      <the-youtube :title="item.title" :src="item.src">
+                      </the-youtube>
                     </v-card-text>
                   </card-reading-project-detail-article>
                 </v-col>
@@ -26,22 +41,3 @@
     </v-container>
   </card-reading-project>
 </template>
-
-<script>
-export default {
-  name: 'ActivityBase',
-  data: () => ({
-    title: '活動拠点～附属図書館～',
-    movie: [
-      {
-        src: 'https://www.youtube.com/embed/HRKpRB5fZ-o',
-        title: '図書館施設・設備編',
-      },
-      {
-        src: 'https://www.youtube.com/embed/rBAip8vAxKU',
-        title: 'ラーニングコモンズ編',
-      },
-    ],
-  }),
-}
-</script>

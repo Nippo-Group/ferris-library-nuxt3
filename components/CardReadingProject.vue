@@ -1,29 +1,24 @@
+<script setup lang="ts">
+type State = {
+  title: string;
+  leadSentence?: string;
+};
+defineProps<State>();
+</script>
+
 <template>
   <v-col cols="12" xl="8">
-    <v-card tile color="red lighten-3" dark outlined>
+    <v-card rounded="0" color="red-lighten-3 text-white">
       <v-card-title>
         {{ title }}
       </v-card-title>
-      <v-card-text
-        v-if="leadSentence"
-        class="text-justify grey--text text--darken-3"
-      >
+      <v-card-text v-if="leadSentence" class="text-justify text-grey-darken-3">
         <div class="lead-sentence" v-html="leadSentence"></div>
       </v-card-text>
     </v-card>
     <slot />
   </v-col>
 </template>
-
-<script>
-export default {
-  name: 'CardReadingProject',
-  props: {
-    title: { type: String, default: '' },
-    leadSentence: { type: String, default: '' },
-  },
-}
-</script>
 
 <style scoped>
 .lead-sentence {
@@ -33,9 +28,9 @@ export default {
   border-radius: 8px;
 }
 .lead-sentence::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: -16px;
+  top: -15px;
   left: 24px;
   margin-left: -8px;
   border: 8px solid transparent;

@@ -1,3 +1,7 @@
+<script setup>
+const title = "お問い合わせ";
+</script>
+
 <template>
   <card-reading-project :title="title">
     <v-container>
@@ -8,7 +12,7 @@
               <p>
                 読書運動プロジェクトについてのお問い合わせは下記メールアドレスまでお願いいたします。
               </p>
-              <btn-email></btn-email>
+              <btn-email address="r_library@ferris.ac.jp"></btn-email>
             </v-card-text>
           </card-reading-project-detail>
         </v-col>
@@ -16,12 +20,3 @@
     </v-container>
   </card-reading-project>
 </template>
-
-<script>
-export default {
-  name: 'ContactAddress',
-  data: () => ({
-    title: 'お問い合わせ',
-  }),
-}
-</script>
