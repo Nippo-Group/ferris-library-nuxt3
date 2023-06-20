@@ -20,7 +20,7 @@ const { data } = await useMicroCMSGetList<News>({
         <info-covid-19></info-covid-19>
       </v-col>
       <v-col cols="12" xl="8">
-        <div class="text-center text-md-left text-h5 mb-2">
+        <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
           <icons-gesture-tap start />Pick Out
         </div>
         <home-pickout></home-pickout>
@@ -28,7 +28,7 @@ const { data } = await useMicroCMSGetList<News>({
     </v-row>
     <v-row v-if="data">
       <v-col cols="12" lg="6" xl="4">
-        <div class="text-center text-md-left text-h5 mb-2">
+        <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
           <icons-newspaper-variant size="small" start></icons-newspaper-variant
           >News
         </div>
@@ -38,7 +38,7 @@ const { data } = await useMicroCMSGetList<News>({
         </div>
       </v-col>
       <v-col cols="12" lg="6" xl="4">
-        <div class="text-center text-md-left text-h5 mb-2">
+        <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
           <icons-library-shelves size="small" start />OPAC 蔵書検索
         </div>
         <home-opac></home-opac>
