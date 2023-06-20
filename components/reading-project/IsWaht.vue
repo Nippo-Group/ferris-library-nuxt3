@@ -97,7 +97,10 @@ const mediaInformation = {
                 >
                   <card-reading-project-detail-article>
                     <v-card-text>
-                      <the-pdf-viewer :src="document.url"></the-pdf-viewer>
+                      <the-pdf-viewer
+                        :src="document.url"
+                        :button-hidden="true"
+                      ></the-pdf-viewer>
                       <v-btn
                         v-if="confirmDialog"
                         block
