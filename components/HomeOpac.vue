@@ -61,11 +61,13 @@ const rules = ref({
                 </template>
               </v-text-field>
             </v-form>
-            <btn-open-in-new
-              :link="language === 'en' ? 'Detailed search' : '詳細検索'"
-              url="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
-            ></btn-open-in-new>
-            <btn-my-library></btn-my-library>
+            <v-btn-toggle divided density="compact">
+              <btn-open-in-new
+                :link="language === 'en' ? 'Detailed search' : '詳細検索'"
+                url="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
+              ></btn-open-in-new>
+              <btn-my-library></btn-my-library>
+            </v-btn-toggle>
           </v-card-text>
         </v-card>
       </v-window-item>
