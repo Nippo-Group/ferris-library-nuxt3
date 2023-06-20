@@ -50,9 +50,15 @@ const mediaInformation = {
   title: "掲載されました！",
   actions: [
     {
-      url: "https://magazine.ferris.ac.jp/20220830/16312/",
-      title: "読書運動プロジェクト活動報告　～2022夏～",
-      source: "フェリスを綴る　2022年8月30日掲載",
+      url: "https://magazine.ferris.ac.jp/20230511/18045/",
+      title: "読書運動プロジェクト活動報告　～2023春～",
+      source: "フェリスを綴る　2023年5月11日掲載",
+    },
+    {
+      url: "https://magazine.ferris.ac.jp/20230328/17905/",
+      title:
+        "読書運動プロジェクト：朗読会「しあわせの、かたち。 ―ひとりひとりが願うこと―」を開催しました",
+      source: "フェリスを綴る　2023年3月28日掲載",
     },
     {
       url: "https://magazine.ferris.ac.jp/20221021/17101/",
@@ -61,10 +67,9 @@ const mediaInformation = {
       source: "フェリスを綴る　2022年10月11日掲載",
     },
     {
-      url: "https://magazine.ferris.ac.jp/20230328/17905/",
-      title:
-        "読書運動プロジェクト：朗読会「しあわせの、かたち。 ―ひとりひとりが願うこと―」を開催しました",
-      source: "フェリスを綴る　2023年3月28日掲載",
+      url: "https://magazine.ferris.ac.jp/20220830/16312/",
+      title: "読書運動プロジェクト活動報告　～2022夏～",
+      source: "フェリスを綴る　2022年8月30日掲載",
     },
   ],
 };

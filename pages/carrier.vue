@@ -42,7 +42,7 @@ const items1 = [
     links: [
       {
         name: "アクセス",
-        url: "https://www.db-month.biglobe.ne.jp/cgi-bin/telcom21/ferris/enter.cgi",
+        url: "https://www.db-month.biglobe.ne.jp/ferris/",
       },
     ],
   },
