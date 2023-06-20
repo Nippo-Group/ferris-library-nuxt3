@@ -17,12 +17,12 @@ const items = reactive([
       {
         transportation: "Sotetsu Izumino Line",
         root: "「Ryokuen-toshi Station」3 minutes walk",
-        icon: "mdi-train",
+        icon: "train",
       },
       {
         transportation: "Kanachu Bus",
         root: "「Ferris」1 minutes walk",
-        icon: "mdi-train-car-passenger-variant",
+        icon: "car",
       },
     ],
   },
@@ -39,7 +39,7 @@ const items = reactive([
       {
         transportation: "JR-EAST Keihin Tohoku Line",
         root: "「Ishikawacho Station」10 minutes walk",
-        icon: "mdi-train",
+        icon: "train",
       },
     ],
   },
