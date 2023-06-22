@@ -1,4 +1,7 @@
 <script setup>
+import imgCarrier01 from "~/assets/images/carrier/carrier-01.gif";
+import imgCarrier02 from "~/assets/images/carrier/carrier-02.gif";
+
 const title = ref("キャリア支援");
 useSeoMeta({ title: title.value });
 
@@ -236,7 +239,7 @@ const items3 = [
           <v-timeline density="compact" side="end">
             <v-timeline-item size="small">
               <v-img
-                :src="generateImgPath('carrier-01.gif', 'carrier')"
+                :src="imgCarrier01"
                 width="65vw"
                 aspect-ratio="4/3"
               ></v-img>
@@ -244,7 +247,7 @@ const items3 = [
             </v-timeline-item>
             <v-timeline-item size="small">
               <v-img
-                :src="generateImgPath('carrier-02.gif', 'carrier')"
+                :src="imgCarrier02"
                 width="65vw"
                 aspect-ratio="4/3"
               ></v-img>

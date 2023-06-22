@@ -1,4 +1,8 @@
 <script setup>
+import imgTadoku01 from "~/assets/images/english-tadoku/tadoku-01.jpg";
+import imgTadoku02 from "~/assets/images/english-tadoku/tadoku-02.jpg";
+import imgTadoku03 from "~/assets/images/english-tadoku/tadoku-03.jpg";
+
 const title = ref("英語多読図書");
 useSeoMeta({ title: title.value });
 </script>
@@ -14,10 +18,7 @@ useSeoMeta({ title: title.value });
         <v-card>
           <v-card-subtitle class="pt-4 pb-0">電子ブック</v-card-subtitle>
           <v-card-title class="pt-0">EBSCO eBooks</v-card-title>
-          <v-img
-            max-height="164"
-            :src="generateImgPath('tadoku-01.jpg', 'english-tadoku')"
-          ></v-img>
+          <v-img max-height="164" :src="imgTadoku01"></v-img>
           <v-card-text>
             Macmillan Readers や Magic Tree
             Houseといった、英語多読用の電子ブック398冊が利用できます。
@@ -49,10 +50,7 @@ useSeoMeta({ title: title.value });
           <v-card-title class="pt-0"
             >Gale Virtual Reference Library</v-card-title
           >
-          <v-img
-            max-height="164"
-            :src="generateImgPath('tadoku-02.jpg', 'english-tadoku')"
-          ></v-img>
+          <v-img max-height="164" :src="imgTadoku02"></v-img>
           <v-card-text>
             <p>
               俳優、ミュージシャン、アスリート、実業家、政治家などの各界の有名人についての伝記シリーズ「People
@@ -75,10 +73,7 @@ useSeoMeta({ title: title.value });
           <v-card-text>
             緑園本館4階に、英語多読図書を集めたコーナーがあります。貸出条件は一般図書と同じです。
           </v-card-text>
-          <v-img
-            :src="generateImgPath('tadoku-03.jpg', 'english-tadoku')"
-            width="90%"
-          ></v-img>
+          <v-img :src="imgTadoku03" width="90%"></v-img>
         </v-card>
       </v-col>
     </v-row>

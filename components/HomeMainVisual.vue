@@ -1,17 +1,25 @@
 <script setup>
 import { useDisplay } from "vuetify";
 
+import mainVisual01 from "~/assets/images/main-visual/main-visual-01.jpg";
+import mainVisual02 from "~/assets/images/main-visual/main-visual-02.jpg";
+import mainVisual03 from "~/assets/images/main-visual/main-visual-03.jpg";
+import mainVisual04 from "~/assets/images/main-visual/main-visual-04.jpg";
+import mainVisual05 from "~/assets/images/main-visual/main-visual-05.jpg";
+import mainVisual06 from "~/assets/images/main-visual/main-visual-06.jpg";
+import mainVisual07 from "~/assets/images/main-visual/main-visual-07.jpg";
+import mainVisual08 from "~/assets/images/main-visual/main-visual-08.jpg";
+
 const items = [
-  "main-visual-01.jpg",
-  "main-visual-02.jpg",
-  "main-visual-03.jpg",
-  "main-visual-04.jpg",
-  "main-visual-06.jpg",
-  "main-visual-05.jpg",
-  "main-visual-07.jpg",
-  "main-visual-08.jpg",
+  mainVisual01,
+  mainVisual02,
+  mainVisual03,
+  mainVisual04,
+  mainVisual05,
+  mainVisual06,
+  mainVisual07,
+  mainVisual08,
 ];
-const itemsDirectory = "main-visual";
 
 const carouselHeight = computed(() => {
   const breakpoint = useDisplay().name.value;
@@ -40,12 +48,7 @@ const carouselHeight = computed(() => {
     :height="carouselHeight"
     color="white"
   >
-    <v-carousel-item
-      v-for="(item, i) in items"
-      :key="i"
-      :src="generateImgPath(item, itemsDirectory)"
-      cover
-    >
+    <v-carousel-item v-for="(item, i) in items" :key="i" :src="item" cover>
     </v-carousel-item>
   </v-carousel>
 </template>

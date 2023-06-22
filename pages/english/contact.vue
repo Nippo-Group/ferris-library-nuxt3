@@ -1,4 +1,7 @@
 <script setup>
+import imgRyokuen from "~/assets/images/contact/contact-ryokuen.jpg";
+import imgYamate from "~/assets/images/contact/contact-yamate.jpg";
+
 const title = ref("Contact / Access");
 useSeoMeta({ title: title.value });
 definePageMeta({ layout: "english" });
@@ -12,7 +15,7 @@ const items = reactive([
     tel: "045 (812) 6999",
     fax: "045 (812) 9772",
     eMali: "r_library@ferris.ac.jp",
-    image: "contact-ryokuen.jpg",
+    image: imgRyokuen,
     accesses: [
       {
         transportation: "Sotetsu Izumino Line",
@@ -34,7 +37,7 @@ const items = reactive([
     tel: "045 (681) 5149",
     fax: "045 (681) 5188",
     eMali: "y_library@ferris.ac.jp",
-    image: "contact-yamate.jpg",
+    image: imgYamate,
     accesses: [
       {
         transportation: "JR-EAST Keihin Tohoku Line",

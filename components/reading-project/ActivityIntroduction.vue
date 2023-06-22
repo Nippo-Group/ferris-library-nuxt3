@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import imgPlanning01 from "~/assets/images/reading-project/about-planning-01.png";
+import imgPlanning02 from "~/assets/images/reading-project/about-planning-02.png";
+import imgRecitation01 from "~/assets/images/reading-project/about-recitation-01.png";
+import imgRecitation02 from "~/assets/images/reading-project/about-recitation-02.png";
+
 const title = "活動紹介";
 const leadSentence =
   "読書運動プロジェクト（通称：読プロ）は、「本が好き」「図書館が好き」な学生が集まって、教職員と一緒に活動している公認団体です。<br />学生が主体となり、読書の魅力を届ける様々な活動を展開中です。";
@@ -21,13 +26,13 @@ const about: About = {
     name: "企画チーム",
     content:
       "毎年テーマを決めて読書会や本の展示を行うほか、大学祭では展示発表やワークショップを主催します。<br />本をツールとしたおもしろい企画やアイデアいっぱいの広報を展開します。",
-    images: ["about-planning-01.png", "about-planning-02.png"],
+    images: [imgPlanning01, imgPlanning02],
   },
   recitation: {
     name: "朗読チーム",
     content:
       "朗読の専門家から直々に指導を受けられるので、 マイクなしで相手に伝わりやすい声、 表現方法が身につきます。<br />大学祭や文学館など、学内外で発表の機会があります。",
-    images: ["about-recitation-01.png", "about-recitation-02.png"],
+    images: [imgRecitation01, imgRecitation02],
     movie: {
       src: "https://www.youtube.com/embed/WcCruNTE__M",
       title: "朗読動画（演目「やまなし」）",
@@ -62,9 +67,7 @@ const about: About = {
                           cols="12"
                           sm="6"
                         >
-                          <v-img
-                            :src="generateImgPath(image, 'reading-project')"
-                          ></v-img>
+                          <v-img :src="image"></v-img>
                         </v-col>
                       </v-row>
                     </v-container>

@@ -1,11 +1,8 @@
-<script setup lang="ts">
+<script setup>
+import titleImage from "~/assets/images/reading-project/reading-project-title.png";
+
 const title = ref("読書運動プロジェクト");
 useSeoMeta({ title: title.value });
-
-const titleImage = generateImgPath(
-  "reading-project-title.png",
-  "reading-project"
-);
 </script>
 
 <template>

@@ -26,8 +26,6 @@ type State = {
 };
 const props = defineProps<State>();
 
-const directory = "contact";
-
 const accessIcon = (type: string): string | undefined => {
   switch (type) {
     case "train":
@@ -41,7 +39,7 @@ const accessIcon = (type: string): string | undefined => {
 <template>
   <v-card>
     <v-img
-      :src="generateImgPath(props.image, directory)"
+      :src="props.image"
       height="200px"
       gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
       class="align-end"

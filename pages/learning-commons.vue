@@ -1,4 +1,6 @@
 <script setup>
+import imgLearningCommons01 from "~/assets/images/learning-commons/learning-commons-01.jpg";
+import imgLearningCommons02 from "~/assets/images/learning-commons/learning-commons-02.jpg";
 const title = ref("ラーニングコモンズ");
 useSeoMeta({ title: title.value });
 
@@ -6,16 +8,14 @@ const items = [
   {
     title: "ラーニングコモンズの紹介",
     href: "https://www.ferris.ac.jp/information/library/learningcommons.html",
-    img: "learning-commons-01.jpg",
+    img: imgLearningCommons01,
   },
   {
     title: "ピアノの弾ける図書館",
     href: "https://magazine.ferris.ac.jp/20210202/7203/",
-    img: "learning-commons-02.jpg",
+    img: imgLearningCommons02,
   },
 ];
-
-const directory = "learning-commons";
 </script>
 
 <template>
@@ -25,7 +25,7 @@ const directory = "learning-commons";
       <v-col v-for="(item, i) in items" :key="i" cols="12" md="6">
         <v-card :href="item.href" target="_blank" dark>
           <v-img
-            :src="generateImgPath(item.img, directory)"
+            :src="item.img"
             class="align-end"
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px"
