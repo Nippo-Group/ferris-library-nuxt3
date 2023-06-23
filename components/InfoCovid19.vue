@@ -36,7 +36,7 @@ const openSubContents = (contents) => {
 </script>
 
 <template>
-  <v-expansion-panels variant="flat" color="grey-lighten-3">
+  <v-expansion-panels color="grey-lighten-3">
     <v-expansion-panel title="新型コロナウイルスによる入館制限について">
       <v-expansion-panel-text>
           <template v-for="(section, i) in mainContents" :key="'section-' + i">
