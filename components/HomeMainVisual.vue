@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useDisplay } from "vuetify";
 
 import mainVisual01 from "~/assets/images/main-visual/main-visual-01.jpg";
@@ -35,7 +35,7 @@ const carouselHeight = computed(() => {
     case "xl":
       return 380;
     default:
-      return 300;
+      return 340;
   }
 });
 </script>
