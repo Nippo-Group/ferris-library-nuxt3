@@ -27,7 +27,8 @@ const langStore = useLanguageStore();
 const language = ref(langStore.language);
 
 // 緑園本館・山手分室の状態
-const selectLocation = ref<"ryokuen" | "yamate">("ryokuen");
+type Location = "ryokuen" | "yamate";
+const selectLocation = ref<Location>("ryokuen");
 const locationLabel = computed(() => {
   if (language.value === "en") {
     return {
@@ -105,6 +106,14 @@ const events = computed(() => {
   }
 });
 
+// Fullcalendarコンポーネントよりメソッドの取得
+const fullCalendarRef = ref();
+const fullcalendarApi = computed(() => {
+  if (fullCalendarRef) {
+    return fullCalendarRef.value.getApi();
+  }
+});
+
 // FullCalendarのオプション設定
 const calendarOptions = reactive({
   plugins: [dayGridPlugin, dayListPlugin],
@@ -116,25 +125,69 @@ const calendarOptions = reactive({
   timeZone: "Asia/Tokyo",
   height: "auto",
   headerToolbar: {
-    start: "dayGridMonth listMonth",
-    center: "title",
-    end: "today prev,next",
+    start: "title",
+    end: "dayGridMonth listMonth",
   },
   displayEventTime: false,
+});
+
+const flag = ref<boolean>(false);
+const show = () => {
+  flag.value = true;
+};
+
+onMounted(() => {
+  window.setTimeout(show, 500);
 });
 </script>
 
 <template>
-  <v-tabs fixed-tabs color="primary">
-    <v-tab @click="selectLocation = 'ryokuen'">
-      {{ locationLabel.ryokuen }}
-    </v-tab>
-    <v-tab @click="selectLocation = 'yamate'">
-      {{ locationLabel.yamate }}
-    </v-tab>
-  </v-tabs>
+  <v-toolbar density="compact">
+    <v-menu>
+      <template #activator="{ props }">
+        <v-btn v-bind="props" color="primary" variant="elevated">
+          {{ locationLabel[selectLocation] }}
+          <icons-menu-down end />
+        </v-btn>
+      </template>
+      <v-list>
+        <v-list-item link>
+          <v-list-item-title @click="selectLocation = 'ryokuen'">
+            {{ locationLabel.ryokuen }}
+          </v-list-item-title>
+        </v-list-item>
+        <v-list-item link>
+          <v-list-item-title @click="selectLocation = 'yamate'">
+            {{ locationLabel.yamate }}
+          </v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+    <v-tooltip text="Previous" location="top">
+      <template #activator="{ props }">
+        <v-btn v-bind="props" icon @click="fullcalendarApi.prev()">
+          <icons-chevron-left />
+        </v-btn>
+      </template>
+    </v-tooltip>
+    <v-tooltip text="Next" location="top">
+      <template #activator="{ props }">
+        <v-btn v-bind="props" icon @click="fullcalendarApi.next()">
+          <icons-chevron-right />
+        </v-btn>
+      </template>
+    </v-tooltip>
+    <v-spacer></v-spacer>
+    <v-tooltip text="Today" location="top">
+      <template #activator="{ props }">
+        <v-btn v-bind="props" icon @click="fullcalendarApi.today()">
+          <icons-calendar-today />
+        </v-btn>
+      </template>
+    </v-tooltip>
+  </v-toolbar>
   <v-sheet class="mt-4">
-    <FullCalendar :options="calendarOptions">
+    <FullCalendar v-if="flag" ref="fullCalendarRef" :options="calendarOptions">
       <template #eventContent="arg">
         <b class="pa-1">
           {{ arg.event.title }}
