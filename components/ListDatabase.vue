@@ -57,32 +57,32 @@ const confirmDialog = inject("confirmDialog");
                   </p>
                   <span v-if="item.attention">※{{ item.attention }}</span>
                 </v-card-text>
-                <v-card-actions class="flex-wrap">
-                  <btn-open-in-new
-                    v-for="(link, k) in item.links"
-                    :key="'link' + k"
-                    class="mb-2 mb-sm-0"
-                    :link="link.name"
-                    :url="link.url"
-                  ></btn-open-in-new>
-                  <template v-if="item.documents">
-                    <v-btn
-                      v-for="(file, n) in item.documents"
-                      :key="'file' + n"
-                      class="mb-2 mb-sm-0"
-                      variant="elevated"
-                      @click="confirmDialog(file.name, file.url, file.type)"
-                    >
-                      {{ file.name }}
-                      <icons-file-pdf v-if="file.type == 'PDF'" dark end />
-                      <icons-file-excel
-                        v-else-if="file.type == 'Excel'"
-                        dark
-                        end
-                      />
-                      <icons-file-document v-else dark end />
-                    </v-btn>
-                  </template>
+                <v-card-actions class="overflow-x-auto">
+                  <align-elements>
+                    <btn-open-in-new
+                      v-for="(link, k) in item.links"
+                      :key="'link' + k"
+                      :link="link.name"
+                      :url="link.url"
+                    ></btn-open-in-new>
+                    <template v-if="item.documents">
+                      <v-btn
+                        v-for="(file, n) in item.documents"
+                        :key="'file' + n"
+                        variant="elevated"
+                        @click="confirmDialog(file.name, file.url, file.type)"
+                      >
+                        {{ file.name }}
+                        <icons-file-pdf v-if="file.type == 'PDF'" dark end />
+                        <icons-file-excel
+                          v-else-if="file.type == 'Excel'"
+                          dark
+                          end
+                        />
+                        <icons-file-document v-else dark end />
+                      </v-btn>
+                    </template>
+                  </align-elements>
                 </v-card-actions>
               </v-col>
             </v-row>
