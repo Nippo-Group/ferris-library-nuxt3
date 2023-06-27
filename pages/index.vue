@@ -29,8 +29,7 @@ const { data } = await useMicroCMSGetList<News>({
     <v-row v-if="data">
       <v-col cols="12" lg="6" xl="4">
         <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
-          <icons-newspaper-variant size="small" start></icons-newspaper-variant
-          >News
+          <icons-newspaper-variant start></icons-newspaper-variant>News
         </div>
         <list-news :contents="data.contents"></list-news>
         <div class="text-center mt-5">
@@ -39,7 +38,7 @@ const { data } = await useMicroCMSGetList<News>({
       </v-col>
       <v-col cols="12" lg="6" xl="4">
         <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
-          <icons-library-shelves size="small" start />OPAC 蔵書検索
+          <icons-library-shelves start />OPAC 蔵書検索
         </div>
         <home-opac></home-opac>
       </v-col>

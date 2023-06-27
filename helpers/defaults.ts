@@ -13,6 +13,9 @@ export const defaults: DefaultsInstance = {
     variant: "elevated",
     size: "small",
   },
+  VIcon: {
+    size: "small",
+  },
   VTabs: {
     fixedTabs: true,
     showArrows: true,

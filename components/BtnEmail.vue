@@ -26,7 +26,7 @@ const setCopyMessage = () => {
 
 <template>
   <v-banner single-line>
-    <icons-email-defult size="large" />
+    <icons-email-defult start size="large" color="primary" />
     {{ address }}
 
     <v-tooltip :text="copyMessage" location="top">
