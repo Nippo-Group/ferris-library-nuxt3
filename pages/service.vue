@@ -36,113 +36,51 @@ const items = [
   },
 ];
 const headersQuantity = [
-  {
-    text: "対象",
-    align: "start",
-    sortable: false,
-    value: "name",
-  },
-  { text: "図書／雑誌", value: "books" },
-  { text: "学科推奨図書", value: "recommendeds" },
-  { text: "楽譜", value: "scores" },
-  { text: "CD/レコード", value: "cds" },
+  "対象",
+  "図書／雑誌",
+  "学科推奨図書",
+  "楽譜",
+  "CD/レコード",
 ];
 const quantity = [
-  {
-    id: "student1",
-    name: "学部生／大学院生／科目等履修生／ディプロマ生",
-    books: "各30冊",
-    recommendeds: "30冊",
-    scores: "8冊",
-    cds: "各8点",
-  },
-  {
-    id: "student2",
-    name: "卒業生／中高生",
-    books: "各30冊",
-    recommendeds: "不可",
-    scores: "8冊",
-    cds: "各8点",
-  },
-  {
-    id: "personnel",
-    name: "職員／定年退職教職員",
-    books: "各30冊",
-    recommendeds: "不可",
-    scores: "8冊",
-    cds: "各8点",
-  },
-  {
-    id: "faculty",
-    name: "教員／名誉教授",
-    books: "各60冊",
-    recommendeds: "不可",
-    scores: "30冊",
-    cds: "各30点",
-  },
+  [
+    "学部生／大学院生／科目等履修生／ディプロマ生",
+    "各30冊",
+    "30冊",
+    "8冊",
+    "各8点",
+  ],
+  ["卒業生／中高生", "各30冊", "不可", "8冊", "各8点"],
+  ["職員／定年退職教職員", "各30冊", "不可", "8冊", "各8点"],
+  ["教員／名誉教授", "各60冊", "不可", "30冊", "各30点"],
 ];
 const headersPeriod = [
-  {
-    text: "対象",
-    align: "start",
-    sortable: false,
-    value: "name",
-  },
-  { text: "図書", value: "books" },
-  { text: "学科推奨図書", value: "recommendeds" },
-  { text: "雑誌／楽譜", value: "scores" },
-  { text: "CD/レコード", value: "cds" },
+  "対象",
+  "図書",
+  "学科推奨図書",
+  "雑誌／楽譜",
+  "CD/レコード",
 ];
 const period = [
-  {
-    name: "1～3年生／科目等履修生／ディプロマ生",
-    books: "2週間",
-    recommendeds: "2週間",
-    scores: "1週間",
-    cds: "翌々日",
-  },
-  {
-    name: "4年生",
-    books: "30日",
-    recommendeds: "2週間",
-    scores: "1週間",
-    cds: "翌々日",
-  },
-  {
-    name: "大学院生",
-    books: "30日",
-    recommendeds: "2週間",
-    scores: "1週間",
-    cds: "1週間",
-  },
-  {
-    name: "職員／定年退職教職員",
-    books: "30日",
-    recommendeds: "不可",
-    scores: "1週間",
-    cds: "1週間",
-  },
-  {
-    name: "卒業生／中高生",
-    books: "2週間",
-    recommendeds: "不可",
-    scores: "1週間",
-    cds: "翌々日",
-  },
-  {
-    name: "専任教員／名誉教授",
-    books: "当年度2月末まで",
-    recommendeds: "不可",
-    scores: "当年度2月末まで",
-    cds: "当年度2月末まで",
-  },
-  {
-    name: "非常勤教員",
-    books: "当年度1月末まで",
-    recommendeds: "不可",
-    scores: "当年度1月末まで",
-    cds: "当年度1月末まで",
-  },
+  ["1～3年生／科目等履修生／ディプロマ生", "2週間", "2週間", "1週間", "翌々日"],
+  ["4年生", "30日", "2週間", "1週間", "翌々日"],
+  ["大学院生", "30日", "2週間", "1週間", "1週間"],
+  ["職員／定年退職教職員", "30日", "不可", "1週間", "1週間"],
+  ["卒業生／中高生", "2週間", "不可", "1週間", "翌々日"],
+  [
+    "専任教員／名誉教授",
+    "当年度2月末まで",
+    "不可",
+    "当年度2月末まで",
+    "当年度2月末まで",
+  ],
+  [
+    "非常勤教員",
+    "当年度1月末まで",
+    "不可",
+    "当年度1月末まで",
+    "当年度1月末まで",
+  ],
 ];
 </script>
 
@@ -169,24 +107,10 @@ const period = [
     <v-row>
       <v-col cols="12" md="10" lg="8">
         <text-sub-title>貸出冊数</text-sub-title>
-        <v-table>
-          <thead>
-            <tr>
-              <th v-for="headerQ in headersQuantity" :key="headerQ.value">
-                {{ headerQ.text }}
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="quantityItem in quantity" :key="quantityItem.id">
-              <td>{{ quantityItem.name }}</td>
-              <td>{{ quantityItem.books }}</td>
-              <td>{{ quantityItem.recommendeds }}</td>
-              <td>{{ quantityItem.scores }}</td>
-              <td>{{ quantityItem.cds }}</td>
-            </tr>
-          </tbody>
-        </v-table>
+        <the-table
+          :items-array="quantity"
+          :headers="headersQuantity"
+        ></the-table>
         <v-alert type="success" class="mt-4">
           参考図書、雑誌の最新号、貴重書、マイクロ資料、ビデオ、LD、DVD、CD-ROMは館内でご利用ください。
         </v-alert>
@@ -195,24 +119,7 @@ const period = [
     <v-row>
       <v-col cols="12" md="10" lg="8">
         <text-sub-title>貸出期間</text-sub-title>
-        <v-table>
-          <thead>
-            <tr>
-              <th v-for="headerP in headersPeriod" :key="headerP.value">
-                {{ headerP.text }}
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="periodItem in period" :key="periodItem.id">
-              <td>{{ periodItem.name }}</td>
-              <td>{{ periodItem.books }}</td>
-              <td>{{ periodItem.recommendeds }}</td>
-              <td>{{ periodItem.scores }}</td>
-              <td>{{ periodItem.cds }}</td>
-            </tr>
-          </tbody>
-        </v-table>
+        <the-table :items-array="period" :headers="headersPeriod"></the-table>
         <v-alert type="info" class="mt-4">
           春・夏・冬季休暇中には学部生・大学院生を対象に長期貸出を行います。詳細はこのHPや掲示などでお知らせします。
         </v-alert>

@@ -66,60 +66,55 @@ const pleaseNotes = reactive([
     text: "Certain materials may be borrowed for same-day use. There is no limit on the number of these items that may be borrowed.",
   },
 ]);
-const headersQuantity = reactive([
-  {
-    text: "User Status",
-    align: "start",
-    sortable: false,
-    value: "name",
-  },
-  { text: "Books", value: "books" },
-  { text: "Journals", value: "journals" },
-  { text: "Course Reserve Books", value: "courseReserveBooks" },
-  { text: "Musical Scores", value: "scores" },
-  { text: "CDs & Records", value: "cds" },
+const headersQuantity = ref([
+  "User Status",
+  "Books",
+  "Journals",
+  "Course Reserve Books",
+  "Musical Scores",
+  "CDs & Records",
 ]);
 const quantity = reactive([
-  {
-    name: "Undergraduate students (1st, 2nd and 3rd year)",
-    books: "30 items / 2 weeks",
-    journals: "30 items / 1 week",
-    courseReserveBooks: "5 items / 1 week",
-    scores: "8 items / 1 week",
-    cds: "8 items each / 2 days",
-  },
-  {
-    name: "Undergraduate students (4th year)",
-    books: "30 items / 30 days",
-    journals: "30 items / 1 week",
-    courseReserveBooks: "5 items / 1 week",
-    scores: "8 items / 1 week",
-    cds: "8 items each / 2 days",
-  },
-  {
-    name: "Graduate students",
-    books: "30 items / 30 days",
-    journals: "30 items / 1 week",
-    courseReserveBooks: "5 items / 1 week",
-    scores: "8 items / 1 week",
-    cds: "8 items each / 1 week",
-  },
-  {
-    name: "Faculty",
-    books: "60 items / Until the end of Febrary",
-    journals: "30 items / Until the end of Febrary",
-    courseReserveBooks: "0 items",
-    scores: "30 items / Until the end of Febrary",
-    cds: "30 items each / Until the end of Febrary",
-  },
-  {
-    name: "Staff",
-    books: "30 items / 30 days",
-    journals: "30 items / 1 week",
-    courseReserveBooks: "0 items",
-    scores: "8 items / 1 week",
-    cds: "8 items each / 1 week",
-  },
+  [
+    "Undergraduate students (1st, 2nd and 3rd year)",
+    "30 items / 2 weeks",
+    "30 items / 1 week",
+    "5 items / 1 week",
+    "8 items / 1 week",
+    "8 items each / 2 days",
+  ],
+  [
+    "Undergraduate students (4th year)",
+    "30 items / 30 days",
+    "30 items / 1 week",
+    "5 items / 1 week",
+    "8 items / 1 week",
+    "8 items each / 2 days",
+  ],
+  [
+    "Graduate students",
+    "30 items / 30 days",
+    "30 items / 1 week",
+    "5 items / 1 week",
+    "8 items / 1 week",
+    "8 items each / 1 week",
+  ],
+  [
+    "Faculty",
+    "60 items / Until the end of Febrary",
+    "30 items / Until the end of Febrary",
+    "0 items",
+    "30 items / Until the end of Febrary",
+    "30 items each / Until the end of Febrary",
+  ],
+  [
+    "Staff",
+    "30 items / 30 days",
+    "30 items / 1 week",
+    "0 items",
+    "8 items / 1 week",
+    "8 items each / 1 week",
+  ],
 ]);
 </script>
 
@@ -157,25 +152,10 @@ const quantity = reactive([
     <v-row>
       <v-col cols="12" md="10" lg="8">
         <text-sub-title>Loan periods and checkouts limits</text-sub-title>
-        <v-table>
-          <thead>
-            <tr>
-              <th v-for="headerQ in headersQuantity" :key="headerQ.value">
-                {{ headerQ.text }}
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="quantityItem in quantity" :key="quantityItem.id">
-              <td>{{ quantityItem.name }}</td>
-              <td>{{ quantityItem.books }}</td>
-              <td>{{ quantityItem.journals }}</td>
-              <td>{{ quantityItem.courseReserveBooks }}</td>
-              <td>{{ quantityItem.scores }}</td>
-              <td>{{ quantityItem.cds }}</td>
-            </tr>
-          </tbody>
-        </v-table>
+        <the-table
+          :items-array="quantity"
+          :headers="headersQuantity"
+        ></the-table>
       </v-col>
     </v-row>
   </v-container>
