@@ -75,6 +75,11 @@
         "push": "/visitor"
       },
       {
+        "title": "よくある質問 Q&A",
+        "id": "question",
+        "push": "/question"
+      },
+      {
         "title": "各種申込書",
         "id": "application",
         "href": "https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open"
