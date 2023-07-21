@@ -136,6 +136,10 @@ const items = [
 <template>
   <v-container>
     <text-page-title>{{ title }}</text-page-title>
+    <v-alert density="compact" border="start" variant="outlined" type="warning">
+      当WEBサイト上にある情報や画像などは、フェリス女学院大学附属図書館が所有または管理しています。<br />
+      無断転載や無断使用を禁じます。</v-alert
+    >
     <v-row>
       <v-col v-for="(item, i) in items" :key="i" cols="12" sm="6" lg="4" xl="3">
         <v-card height="100%" class="d-flex flex-column">

@@ -5,6 +5,8 @@ import imgTadoku03 from "~/assets/images/english-tadoku/tadoku-03.jpg";
 
 const title = ref("英語多読図書");
 useSeoMeta({ title: title.value });
+
+const confirmDialog = inject("confirmDialog");
 </script>
 
 <template>
@@ -41,6 +43,20 @@ useSeoMeta({ title: title.value });
               link="学外からはこちら"
               url="https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top.do&method=open"
             ></btn-open-in-new>
+            <v-btn
+              variant="elevated"
+              color="grey-lighten-4"
+              @click="
+                confirmDialog(
+                  'アクセスガイド',
+                  '/documents/english-tadoku/EBSCOeBooks-access-guide.pdf',
+                  'PDF'
+                )
+              "
+            >
+              アクセスガイド
+              <icons-file-pdf end></icons-file-pdf>
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -74,6 +90,30 @@ useSeoMeta({ title: title.value });
             緑園本館4階に、英語多読図書を集めたコーナーがあります。貸出条件は一般図書と同じです。
           </v-card-text>
           <v-img :src="imgTadoku03" width="90%"></v-img>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="8" md="6" lg="4">
+        <v-card>
+          <v-card-title>読書記録シート</v-card-title>
+          <v-card-text>
+            英語多読図書用の「読書記録シート」です。読んだ多読図書のタイトル、出版社、レベル、単語数、評価、感想を記録できます。
+          </v-card-text>
+          <v-card-actions>
+            <v-btn
+              variant="elevated"
+              color="grey-lighten-4"
+              @click="
+                confirmDialog(
+                  '読書記録シート',
+                  '/documents/english-tadoku/reading-record-sheet.pdf',
+                  'PDF'
+                )
+              "
+            >
+              読書記録シート
+              <icons-file-pdf end></icons-file-pdf>
+            </v-btn>
+          </v-card-actions>
         </v-card>
       </v-col>
     </v-row>
