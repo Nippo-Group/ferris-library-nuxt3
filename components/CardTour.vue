@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLanguageStore } from "@/stores/language";
+import { useLanguage } from "@/composable/language/useLanguage";
 
 type Content = {
   subtitle: String;
@@ -14,8 +14,7 @@ type Item = {
 const props = defineProps<Item>();
 
 const show = ref(false);
-const langStore = useLanguageStore();
-const language = ref(langStore.language);
+const { langState } = useLanguage();
 </script>
 
 <template>
@@ -26,7 +25,7 @@ const language = ref(langStore.language);
     </v-card-text>
     <v-card-actions @click="show = !show">
       <v-btn color="primary" variant="text">{{
-        language === "en" ? "Show more" : "詳細を見る"
+        langState === "en" ? "Show more" : "詳細を見る"
       }}</v-btn>
       <v-spacer></v-spacer>
       <v-btn :icon="iconChevron(show)"> </v-btn>

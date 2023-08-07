@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useLanguageStore } from "@/stores/language";
-useLanguageStore().setLang("en");
+import { useLanguage } from "@/composable/language/useLanguage";
+useLanguage().setLang("en");
 
 const siteTitle = ref("Ferris University Library");
 useHead({

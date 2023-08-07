@@ -12,12 +12,12 @@ import {
 } from "@mdi/js";
 import menusJapanese from "@/assets/json/menu.json";
 import menusEnglish from "@/assets/json/menu-english.json";
-import { useLanguageStore } from "@/stores/language";
+import { useLanguage } from "@/composable/language/useLanguage";
 
-const langStore = useLanguageStore();
+const { langState } = useLanguage();
 
 const menus = computed(() => {
-  switch (langStore.language) {
+  switch (langState.value) {
     case "en":
       return menusEnglish;
     default:

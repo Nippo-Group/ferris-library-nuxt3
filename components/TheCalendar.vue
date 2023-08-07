@@ -7,7 +7,7 @@ import ryokuen from "@/assets/json/calendar-ryokuen.json";
 import yamate from "@/assets/json/calendar-yamate.json";
 import common from "@/assets/json/calendar-common.json";
 
-import { useLanguageStore } from "@/stores/language";
+import { useLanguage } from "@/composable/language/useLanguage";
 
 type BeforeFormatEvent = {
   name: string;
@@ -23,14 +23,13 @@ type Event = {
 };
 
 // 言語の状態
-const langStore = useLanguageStore();
-const language = ref(langStore.language);
+const { langState } = useLanguage();
 
 // 緑園本館・山手分室の状態
 type Location = "ryokuen" | "yamate";
 const selectLocation = ref<Location>("ryokuen");
 const locationLabel = computed(() => {
-  if (language.value === "en") {
+  if (langState.value === "en") {
     return {
       ryokuen: "Ryokuen",
       yamate: "Yamate",
@@ -51,7 +50,7 @@ const eventFormat = (events: BeforeFormatEvent[]): Event[] => {
 
     let nameSubstitution = false;
     if (
-      language.value === "en" &&
+      langState.value === "en" &&
       (event.name === "閉館" || event.name === "閉室")
     ) {
       nameSubstitution = true;
@@ -121,7 +120,7 @@ const calendarOptions = reactive({
   nowIndicator: true,
   editable: false,
   events,
-  locale: language.value,
+  locale: langState.value,
   timeZone: "Asia/Tokyo",
   height: "auto",
   headerToolbar: {

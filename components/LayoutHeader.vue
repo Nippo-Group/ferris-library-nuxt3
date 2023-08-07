@@ -1,8 +1,7 @@
 <script setup>
-import { useLanguageStore } from "@/stores/language";
+import { useLanguage } from "@/composable/language/useLanguage";
 
-const langStore = useLanguageStore();
-const language = ref(langStore.language);
+const { langState } = useLanguage();
 
 const drawer = inject("drawer");
 </script>
@@ -13,7 +12,7 @@ const drawer = inject("drawer");
     <v-toolbar-title class="pl-2">
       <transition name="fade-image">
         <img
-          v-if="language === 'en'"
+          v-if="langState === 'en'"
           src="~/assets/images/layouts/site-logo-english.png"
           class="ferris-logo"
           width="120"
@@ -23,7 +22,7 @@ const drawer = inject("drawer");
       </transition>
       <transition name="fade-image">
         <img
-          v-if="language === 'ja'"
+          v-if="langState === 'ja'"
           src="~/assets/images/layouts/site-logo.png"
           class="ferris-logo"
           width="200"

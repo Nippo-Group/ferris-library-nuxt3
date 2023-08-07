@@ -1,12 +1,11 @@
 <script setup>
 import { mdiOpenInNew, mdiMagnify, mdiSend } from "@mdi/js";
-import { useLanguageStore } from "@/stores/language";
+import { useLanguage } from "@/composable/language/useLanguage";
 
 const tab = ref(null);
 const qSearchWord = ref("");
 
-const langStore = useLanguageStore();
-const language = ref(langStore.language);
+const { langState } = useLanguage();
 
 const rules = ref({
   required: (value) => !!value || "Field is required",
@@ -17,9 +16,9 @@ const rules = ref({
   <v-card>
     <v-tabs v-model="tab" color="primary">
       <v-tab>
-        {{ language === "en" ? "Search" : "検索" }}
+        {{ langState === "en" ? "Search" : "検索" }}
       </v-tab>
-      <v-tab> {{ language === "en" ? "Smartphone" : "スマートフォン" }}</v-tab>
+      <v-tab> {{ langState === "en" ? "Smartphone" : "スマートフォン" }}</v-tab>
     </v-tabs>
     <v-window v-model="tab">
       <v-window-item>
@@ -42,9 +41,9 @@ const rules = ref({
                 v-model="qSearchWord"
                 :rules="[rules.required]"
                 name="word"
-                :label="language === 'en' ? 'Quick search' : 'クイックサーチ'"
+                :label="langState === 'en' ? 'Quick search' : 'クイックサーチ'"
                 :placeholder="
-                  language === 'en'
+                  langState === 'en'
                     ? 'Please enter a keyword'
                     : 'キーワードを入力してください'
                 "
@@ -63,7 +62,7 @@ const rules = ref({
             </v-form>
             <v-btn-toggle divided density="compact">
               <btn-open-in-new
-                :link="language === 'en' ? 'Detailed search' : '詳細検索'"
+                :link="langState === 'en' ? 'Detailed search' : '詳細検索'"
                 url="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
               ></btn-open-in-new>
               <btn-my-library></btn-my-library>
@@ -77,7 +76,9 @@ const rules = ref({
             <v-card-text>
               <btn-open-in-new
                 :link="
-                  language === 'en' ? 'Smartphone OPAC' : 'スマートフォン版OPAC'
+                  langState === 'en'
+                    ? 'Smartphone OPAC'
+                    : 'スマートフォン版OPAC'
                 "
                 url="http://osirabe.net/opac.ferris/"
               ></btn-open-in-new>
