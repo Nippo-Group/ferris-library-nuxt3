@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useLanguage } from "@/composable/language/useLanguage";
+import { useVisible } from "@/composable/utilities/useVisible";
 
 type Content = {
   subtitle: String;
@@ -13,8 +14,8 @@ type Item = {
 };
 const props = defineProps<Item>();
 
-const show = ref(false);
 const { langState } = useLanguage();
+const { visible, inversion } = useVisible();
 </script>
 
 <template>
@@ -23,15 +24,15 @@ const { langState } = useLanguage();
     <v-card-text>
       <div v-html="props.text"></div>
     </v-card-text>
-    <v-card-actions @click="show = !show">
+    <v-card-actions @click="inversion">
       <v-btn color="primary" variant="text">{{
         langState === "en" ? "Show more" : "詳細を見る"
       }}</v-btn>
       <v-spacer></v-spacer>
-      <v-btn :icon="iconChevron(show)"> </v-btn>
+      <v-btn :icon="iconChevron(visible)"> </v-btn>
     </v-card-actions>
     <v-expand-transition>
-      <div v-show="show">
+      <div v-show="visible">
         <v-divider></v-divider>
         <v-card-text>
           <template
@@ -56,3 +57,4 @@ const { langState } = useLanguage();
     </v-expand-transition>
   </v-card>
 </template>
+~/composable/utilities/useVisible

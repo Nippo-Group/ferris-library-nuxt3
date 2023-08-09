@@ -25,7 +25,7 @@ const openDitails = (item: Exhibitions) => {
     ? item.placeToExhibit.placeToExhibit
     : undefined;
   content.value = item.content ? item.content : "読み込みエラー";
-  childRef.value.dialogSwitching();
+  childRef.value.show();
 };
 
 // ソートの切り替え

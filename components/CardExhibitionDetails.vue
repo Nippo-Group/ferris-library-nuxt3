@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useVisible } from "@/composable/utilities/useVisible";
+
 type Props = {
   title: string;
   content: string;
@@ -8,18 +10,14 @@ type Props = {
 };
 defineProps<Props>();
 
-const dialog = ref(false);
-
-const dialogSwitching = () => {
-  dialog.value = !dialog.value;
-};
+const { visible, show, dismiss } = useVisible();
 defineExpose({
-  dialogSwitching,
+  show,
 });
 </script>
 
 <template>
-  <v-dialog v-model="dialog" scrollable max-width="800px">
+  <v-dialog v-model="visible" scrollable max-width="800px">
     <v-card>
       <v-img
         :src="eyecatch || undefined"
@@ -50,7 +48,7 @@ defineExpose({
       <v-divider></v-divider>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn color="grey-darken-1" variant="text" @click="dialogSwitching()">
+        <v-btn color="grey-darken-1" variant="text" @click="dismiss">
           Close
         </v-btn>
       </v-card-actions>
@@ -67,3 +65,4 @@ defineExpose({
   max-width: 100%;
 }
 </style>
+~/composable/utilities/useVisible

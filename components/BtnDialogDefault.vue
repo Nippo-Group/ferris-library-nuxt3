@@ -1,15 +1,18 @@
 <script setup lang="ts">
+import { useVisible } from "@/composable/utilities/useVisible";
+
 defineProps<{
   title: string;
 }>();
-const dialog = ref(false);
+
+const { visible, show, dismiss } = useVisible();
 </script>
 
 <template>
-  <v-btn color="primary-lighten-1" variant="elevated" @click="dialog = true">
+  <v-btn color="primary-lighten-1" variant="elevated" @click="show">
     {{ title }}
     <v-dialog
-      v-model="dialog"
+      v-model="visible"
       transition="dialog-top-transition"
       max-width="600"
     >
@@ -22,7 +25,7 @@ const dialog = ref(false);
           <slot name="actions"></slot>
         </v-card-actions>
         <v-card-actions class="justify-end">
-          <v-btn variant="tonal" @click="dialog = false">Close</v-btn>
+          <v-btn variant="tonal" @click="dismiss">Close</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -35,3 +38,4 @@ const dialog = ref(false);
   padding-left: 1.5em;
 }
 </style>
+~/composable/utilities/useVisible
