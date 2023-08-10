@@ -65,4 +65,3 @@ defineExpose({
   max-width: 100%;
 }
 </style>
-~/composable/utilities/useVisible

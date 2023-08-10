@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import {
   mdiHome,
   mdiLibrary,
@@ -16,7 +16,21 @@ import { useLanguage } from "@/composable/language/useLanguage";
 
 const { langState } = useLanguage();
 
-const menus = computed(() => {
+type Submenu = {
+  title: string;
+  id: string;
+  push?: string;
+  href?: string;
+};
+type Menu = {
+  category: string;
+  id: string;
+  icon?: string;
+  push?: string;
+  contents?: Submenu[];
+};
+
+const menus = computed<Menu[]>(() => {
   switch (langState.value) {
     case "en":
       return menusEnglish;
@@ -25,7 +39,7 @@ const menus = computed(() => {
   }
 });
 
-const menusIcons = (name) => {
+const menusIcons = (name: string) => {
   switch (name) {
     case "home":
       return mdiHome;

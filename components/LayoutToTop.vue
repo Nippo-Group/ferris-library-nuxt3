@@ -1,9 +1,9 @@
-<script setup>
+<script setup lang="ts">
 const fab = ref(false);
 
-const onScroll = (e) => {
+const onScroll = () => {
   if (typeof window === "undefined") return;
-  const top = window.pageYOffset || e.target.scrollTop || 0;
+  const top = window.scrollY || 0;
   fab.value = top > 500;
 };
 
@@ -35,7 +35,7 @@ const toTop = () => {
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: 0.5s;
+  transition: all 0.5s;
 }
 .fade-enter,
 .fade-leave-to {

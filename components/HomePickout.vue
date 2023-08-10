@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import imgReadingProject from "~/assets/images/pickout/home-pickout-reading-project.png";
 import imgExhibition from "~/assets/images/pickout/home-pickout-exhibition.png";
 import imgDatabase from "~/assets/images/pickout/home-pickout-database.png";

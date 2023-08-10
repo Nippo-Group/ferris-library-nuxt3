@@ -1,4 +1,30 @@
 <script setup>
+/* type Link = {
+  name: string;
+  url: string;
+};
+type Document = {
+  name: string;
+  url: string;
+  type: string;
+};
+type Available = "学外" | "学内";
+type Item = {
+  name: string;
+  languages: string[];
+  explanation: string;
+  access: string;
+  logout: boolean;
+  feature: string;
+  attention: string;
+  links: Link[];
+  categories: string[];
+  available: Available[];
+  documents: Document[];
+};
+type State = {
+  items: Item[];
+}; */
 const props = defineProps({
   items: { type: Array, required: true },
 });

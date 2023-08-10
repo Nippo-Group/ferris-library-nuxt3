@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useLanguage } from "@/composable/language/useLanguage";
 
 const { langState } = useLanguage();

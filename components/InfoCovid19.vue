@@ -1,7 +1,18 @@
-<script setup>
+<script setup lang="ts">
+type Action = {
+  link: string;
+  to: string;
+}
+type Content = {
+  title: string;
+  contents: string;
+  date?: string;
+  actions?: Action[];
+}
+
 const subContentsDialog = ref(false);
-const subContentsCard = ref([]);
-const mainContents = [
+const subContentsCard = ref<Content>();
+const mainContents: Content[] = [
   {
     title: "緑園・山手とも対象者を限定して開館",
     contents:
@@ -9,7 +20,7 @@ const mainContents = [
     date: "2022年6月22日現在",
   },
 ];
-const subContents = [
+const subContents: Content[] = [
   {
     title: "名誉教授の先生方へ",
     contents:
@@ -29,7 +40,7 @@ const subContents = [
   },
 ];
 
-const openSubContents = (contents) => {
+const openSubContents = (contents: Content) => {
   subContentsDialog.value = true;
   subContentsCard.value = contents;
 };
@@ -66,7 +77,7 @@ const openSubContents = (contents) => {
           </v-item-group>
 
         <v-dialog v-model="subContentsDialog" max-width="600">
-          <v-card>
+          <v-card v-if="subContentsCard">
             <v-card-title>
               {{ subContentsCard.title }}
             </v-card-title>
@@ -78,8 +89,8 @@ const openSubContents = (contents) => {
             </v-card-text>
             <v-card-actions v-if="subContentsCard.actions">
               <btn-inside
-                v-for="btn in subContentsCard.actions"
-                :key="btn.id"
+                v-for="(btn, btnIndex) in subContentsCard.actions"
+                :key="btnIndex"
                 :link="btn.link"
                 :to="btn.to"
               ></btn-inside>

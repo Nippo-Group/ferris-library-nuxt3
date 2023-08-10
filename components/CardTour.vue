@@ -57,4 +57,3 @@ const { visible, inversion } = useVisible();
     </v-expand-transition>
   </v-card>
 </template>
-~/composable/utilities/useVisible

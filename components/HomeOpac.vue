@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { mdiOpenInNew, mdiMagnify, mdiSend } from "@mdi/js";
 import { useLanguage } from "@/composable/language/useLanguage";
 
@@ -8,7 +8,7 @@ const qSearchWord = ref("");
 const { langState } = useLanguage();
 
 const rules = ref({
-  required: (value) => !!value || "Field is required",
+  required: (value: string) => !!value || "Field is required",
 });
 </script>
 
