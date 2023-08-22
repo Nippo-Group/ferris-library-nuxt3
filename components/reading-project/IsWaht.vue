@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { News } from "@/types/news";
+import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
 
 const { data } = await useMicroCMSGetList<News>({
   endpoint: "news",
@@ -31,12 +32,7 @@ const documents = [
     type: "PDF",
   },
 ];
-type ConfirmDialog = (
-  fileName: string,
-  fileUrl: string,
-  fileType: string
-) => void;
-const confirmDialog = inject<ConfirmDialog>("confirmDialog");
+const { show } = useConfirmDL();
 
 const recruiting = {
   title: "《学内のみなさまへ》学生メンバー募集中！",
@@ -107,15 +103,10 @@ const mediaInformation = {
                         :button-hidden="true"
                       ></the-pdf-viewer>
                       <v-btn
-                        v-if="confirmDialog"
                         block
                         variant="text"
                         @click="
-                          confirmDialog(
-                            document.name,
-                            document.url,
-                            document.type
-                          )
+                          show(document.name, document.url, document.type)
                         "
                       >
                         {{ document.name }}

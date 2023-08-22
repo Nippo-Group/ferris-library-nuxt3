@@ -1,46 +1,19 @@
 <script setup lang="ts">
-const name = ref<string>("");
-const url = ref<string>("");
-const type = ref<string>("");
+import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
 
-const dialog = ref<boolean>(false);
-const timeout = 6000;
-
-watch(dialog, () => {
-  if (dialog.value === false) {
-    name.value = "";
-    url.value = "";
-    type.value = "";
-  }
-});
-
-const dialogOpen = (
-  fileName: string,
-  fileUrl: string,
-  fileType: string
-): void => {
-  if (fileName && fileUrl && fileType) {
-    name.value = fileName;
-    url.value = fileUrl;
-    type.value = fileType;
-    dialog.value = true;
-  }
-};
-defineExpose({
-  dialogOpen,
-});
+const { visible, fileName, fileType, fileUrl, dismiss } = useConfirmDL();
 </script>
 
 <template>
-  <v-snackbar v-model="dialog" multi-line :timeout="timeout">
-    {{ type }}ファイルを開きますか？<br />
-    {{ name }}
+  <v-snackbar v-model="visible" multi-line>
+    {{ fileType }}ファイルを開きますか？<br />
+    {{ fileName }}
     <template #actions>
-      <v-btn class="mx-3" :href="url" target="_blank">
+      <v-btn class="mx-3" :href="fileUrl" target="_blank">
         はい
         <icons-download-defult end>mdi-download</icons-download-defult>
       </v-btn>
-      <v-btn icon @click="dialog = false">
+      <v-btn icon @click="dismiss">
         <icons-close-defult></icons-close-defult>
       </v-btn>
     </template>

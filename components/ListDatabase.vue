@@ -1,4 +1,5 @@
 <script setup>
+import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
 /* type Link = {
   name: string;
   url: string;
@@ -28,7 +29,7 @@ type State = {
 const props = defineProps({
   items: { type: Array, required: true },
 });
-const confirmDialog = inject("confirmDialog");
+const { show } = useConfirmDL();
 </script>
 
 <template>
@@ -96,7 +97,7 @@ const confirmDialog = inject("confirmDialog");
                         v-for="(file, n) in item.documents"
                         :key="'file' + n"
                         variant="elevated"
-                        @click="confirmDialog(file.name, file.url, file.type)"
+                        @click="show(file.name, file.url, file.type)"
                       >
                         {{ file.name }}
                         <icons-file-pdf v-if="file.type == 'PDF'" dark end />
@@ -116,7 +117,6 @@ const confirmDialog = inject("confirmDialog");
         </v-card>
       </v-col>
     </v-row>
-    <confirm-download ref="confirmDownload" :file="openFile"></confirm-download>
   </div>
 </template>
 

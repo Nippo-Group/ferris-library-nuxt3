@@ -1,8 +1,10 @@
-<script setup>
+<script setup lang="ts">
+import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
+
 const title = ref("資料の探し方");
 useSeoMeta({ title: title.value });
 
-const confirmDialog = inject("confirmDialog");
+const { show } = useConfirmDL();
 
 const items = [
   {
@@ -117,7 +119,7 @@ const items = [
               v-for="(content, j) in item.contents"
               :key="j"
               link
-              @click="confirmDialog(content.name, content.url, content.type)"
+              @click="show(content.name, content.url, content.type)"
             >
               <div class="list-item-head mb-2">
                 <v-chip

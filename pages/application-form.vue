@@ -1,10 +1,11 @@
 <script setup>
 import { mdiFilePdfBox, mdiFileWordOutline, mdiFile } from "@mdi/js";
+import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
 
 const title = ref("各種申込書");
 useSeoMeta({ title: title.value });
 
-const confirmDialog = inject("confirmDialog");
+const { show } = useConfirmDL();
 
 const open = ref([
   "list0",
@@ -156,7 +157,7 @@ const fileIcon = (type) => {
               <v-list-item
                 v-for="(file, linkIndex) in item.files"
                 :key="linkIndex"
-                @click="confirmDialog(file.name, file.url, file.type)"
+                @click="show(file.name, file.url, file.type)"
               >
                 <v-list-item-title class="pl-4">
                   {{ file.name }}

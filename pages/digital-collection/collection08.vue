@@ -1,5 +1,8 @@
-<script setup>
+<script setup lant="ts">
 import images from "@/assets/json/digital-collection/collection08.json";
+import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
+
+const { show } = useConfirmDL();
 
 const title = ref("Henry More, The Apology of Dr. Henry More");
 useSeoMeta({ title: title.value });
@@ -22,7 +25,7 @@ const breadcrumbs = [
     href: "/digital-collection/collection08",
   },
 ];
-const confirmDialog = inject("confirmDialog");
+
 const zipFile = {
   name: "一括ダウンロード",
   url: "/documents/digital-collection/collection08/henry_more.zip",
@@ -70,9 +73,7 @@ const lightboxShow = (index) => {
                   </btn-dialog-default>
                   <v-btn
                     variant="elevated"
-                    @click="
-                      confirmDialog(zipFile.name, zipFile.url, zipFile.type)
-                    "
+                    @click="show(zipFile.name, zipFile.url, zipFile.type)"
                   >
                     一括ダウンロード
                     <icons-download-defult />

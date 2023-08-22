@@ -1,12 +1,13 @@
-<script setup>
+<script setup lang="ts">
 import imgTadoku01 from "~/assets/images/english-tadoku/tadoku-01.jpg";
 import imgTadoku02 from "~/assets/images/english-tadoku/tadoku-02.jpg";
 import imgTadoku03 from "~/assets/images/english-tadoku/tadoku-03.jpg";
+import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
 
 const title = ref("英語多読図書");
 useSeoMeta({ title: title.value });
 
-const confirmDialog = inject("confirmDialog");
+const { show } = useConfirmDL();
 </script>
 
 <template>
@@ -47,7 +48,7 @@ const confirmDialog = inject("confirmDialog");
               variant="elevated"
               color="grey-lighten-4"
               @click="
-                confirmDialog(
+                show(
                   'アクセスガイド',
                   '/documents/english-tadoku/EBSCOeBooks-access-guide.pdf',
                   'PDF'
@@ -103,7 +104,7 @@ const confirmDialog = inject("confirmDialog");
               variant="elevated"
               color="grey-lighten-4"
               @click="
-                confirmDialog(
+                show(
                   '読書記録シート',
                   '/documents/english-tadoku/reading-record-sheet.pdf',
                   'PDF'

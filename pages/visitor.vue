@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import type { News } from "@/types/news";
+import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
+
+const { show } = useConfirmDL();
 
 const title = ref("学外の方へ");
 useSeoMeta({ title: title.value });
@@ -10,10 +13,6 @@ const { data } = await useMicroCMSGetList<News>({
 });
 
 const selected = ref();
-const confirmDialog =
-  inject<(fileName: string, fileUrl: string, fileType: string) => void>(
-    "confirmDialog"
-  );
 
 const items = [
   "卒業生・修了生",
@@ -231,11 +230,7 @@ const itemsContents: ItemsContents[] = [
                   v-for="(pdf, index3) in content.pdfs"
                   :key="'pdf' + index3"
                   link
-                  @click="
-                    confirmDialog
-                      ? confirmDialog(pdf.title, pdf.url, pdf.type)
-                      : console.log('エラーが発生しました')
-                  "
+                  @click="show(pdf.title, pdf.url, pdf.type)"
                 >
                   <v-list-item-title class="wrap-text">
                     {{ pdf.title }}

@@ -1,10 +1,12 @@
-<script setup>
+<script setup lang="ts">
+import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
+
 const title = ref("障がいのある方への支援");
 useSeoMeta({ title: title.value });
 
 const panelOpen = ref([0, 1]);
 
-const confirmDialog = inject("confirmDialog");
+const { show } = useConfirmDL();
 const nationalDietLibraryFile = {
   name: "国立国会図書館 視覚障害者等用データ送信サービス 利用案内",
   url: "/documents/supports/national-diet-library.docx",
@@ -47,7 +49,7 @@ const nationalDietLibraryFile = {
               </p>
               <v-btn
                 @click="
-                  confirmDialog(
+                  show(
                     nationalDietLibraryFile.name,
                     nationalDietLibraryFile.url,
                     nationalDietLibraryFile.type

@@ -1,4 +1,8 @@
-<script setup>
+<script setup lang="ts">
+import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
+
+const { show } = useConfirmDL();
+
 const title = ref("学科推奨図書");
 useSeoMeta({ title: title.value });
 
@@ -44,8 +48,6 @@ const items = [
     ],
   },
 ];
-
-const confirmDialog = inject("confirmDialog");
 </script>
 
 <template>
@@ -85,7 +87,7 @@ const confirmDialog = inject("confirmDialog");
               v-for="(content, j) in item.contents"
               :key="j"
               link
-              @click="confirmDialog(content.name, content.url, content.type)"
+              @click="show(content.name, content.url, content.type)"
             >
               <v-list-item-title class="wrap-text">
                 {{ content.name }}

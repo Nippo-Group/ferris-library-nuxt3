@@ -1,9 +1,11 @@
-<script setup>
+<script setup lang="ts">
+import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
+
 const title = ref("横浜市内大学図書館コンソーシアム");
 useSeoMeta({ title: title.value });
 
 const show = ref(false);
-const confirmDialog = inject("confirmDialog");
+const confirmDLShow = useConfirmDL().show;
 const items = [
   {
     name: "神奈川大学図書館",
@@ -93,7 +95,7 @@ const items = [
                   <v-list-item
                     v-if="item.url"
                     link
-                    @click="confirmDialog(item.name, item.url, item.type)"
+                    @click="confirmDLShow(item.name, item.url, item.type)"
                   >
                     <v-list-item-title> {{ item.name }}</v-list-item-title>
                     <template #append>
