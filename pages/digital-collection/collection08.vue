@@ -1,4 +1,4 @@
-<script setup lant="ts">
+<script setup lang="ts">
 import images from "@/assets/json/digital-collection/collection08.json";
 import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
 
@@ -43,7 +43,7 @@ const imgs = computed(() => {
     };
   });
 });
-const lightboxShow = (index) => {
+const lightboxShow = (index: number) => {
   lightboxComponent.value.onShow(index);
 };
 </script>

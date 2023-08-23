@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import imgCarrier01 from "~/assets/images/carrier/carrier-01.gif";
 import imgCarrier02 from "~/assets/images/carrier/carrier-02.gif";
 

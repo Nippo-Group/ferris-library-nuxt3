@@ -1,10 +1,12 @@
-<script setup>
+<script setup lang="ts">
+import type { NewspapersItems } from "@/types/newspaper";
+
 const title = ref("緑園本館所蔵新聞リスト");
 useSeoMeta({ title: title.value });
 
 const updateDate = "2022年4月現在";
 const tab = ref(null);
-const items = [
+const items: NewspapersItems = [
   {
     category: "日本語（全国紙・地方紙）",
     newspapers: [

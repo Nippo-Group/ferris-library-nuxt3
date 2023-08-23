@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const title = ref("Reference Service");
 useSeoMeta({ title: title.value });
 definePageMeta({ layout: "english" });

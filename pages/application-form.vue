@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { mdiFilePdfBox, mdiFileWordOutline, mdiFile } from "@mdi/js";
 import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
 

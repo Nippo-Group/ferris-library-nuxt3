@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import database from "@/assets/json/database.json";
 
 const title = ref("データベース・電子ブック");

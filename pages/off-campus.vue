@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const title = ref("学外から受けられるサポート");
 useSeoMeta({ title: title.value });
 

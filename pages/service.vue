@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const title = ref("貸出サービス");
 useSeoMeta({ title: title.value });
 

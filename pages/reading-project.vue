@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import titleImage from "~/assets/images/reading-project/reading-project-title.png";
 
 const title = ref("読書運動プロジェクト");

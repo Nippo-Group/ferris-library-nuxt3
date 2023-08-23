@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const title = ref("ツアー・ガイダンス");
 useSeoMeta({ title: title.value });
 

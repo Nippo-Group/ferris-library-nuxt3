@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const title = ref("二次情報リンク集");
 useSeoMeta({ title: title.value });
 

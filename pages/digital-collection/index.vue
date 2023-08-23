@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const title = ref("電子コレクション");
 useSeoMeta({ title: title.value });
 

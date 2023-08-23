@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import imgLearningCommons01 from "~/assets/images/learning-commons/learning-commons-01.jpg";
 import imgLearningCommons02 from "~/assets/images/learning-commons/learning-commons-02.jpg";
 const title = ref("ラーニングコモンズ");

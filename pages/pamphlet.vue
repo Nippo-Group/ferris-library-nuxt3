@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const title = ref("学生向けパンフレット");
 useSeoMeta({ title: title.value });
 

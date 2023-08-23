@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const title = ref("よくある質問 Q&A");
 useSeoMeta({ title: title.value });
 

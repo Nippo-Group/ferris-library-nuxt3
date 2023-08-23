@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const title = ref("フロアマップ");
 useSeoMeta({ title: title.value });
 

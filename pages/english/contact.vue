@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import imgRyokuen from "~/assets/images/contact/contact-ryokuen.jpg";
 import imgYamate from "~/assets/images/contact/contact-yamate.jpg";
 

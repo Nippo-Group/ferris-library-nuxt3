@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const title = ref("Calendar");
 useSeoMeta({ title: title.value });
 definePageMeta({ layout: "english" });
