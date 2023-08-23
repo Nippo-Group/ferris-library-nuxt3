@@ -1,7 +1,10 @@
-<script setup>
-const props = defineProps({
-  items: { type: Array, required: true },
-});
+<script setup lang="ts">
+import type { Newspapers } from "@/types/newspaper";
+
+type State = {
+  items: Newspapers;
+};
+const props = defineProps<State>();
 </script>
 
 <template>

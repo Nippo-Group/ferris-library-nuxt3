@@ -1,29 +1,27 @@
-<script setup>
-const props = defineProps({
-  pagination: {
-    type: Boolean,
-    default: false,
-  },
-  contents: {
-    type: Array,
-    default: () => [],
-  },
-});
+<script setup lang="ts">
+import type { News } from "@/types/news";
 
-const page = ref(1);
-const pageSize = ref(10);
-const pageLength = ref(1);
-const publishContents = ref([]);
-const filteredContents = ref([]);
-const dialog = ref(false);
-const dialogContent = ref({});
+type State = {
+  contents: News[];
+  pagination?: boolean;
+};
+const props = defineProps<State>();
+
+const page = ref<number>(1);
+const pageSize = ref<number>(10);
+const pageLength = ref<number>(1);
+const publishContents = ref<News[]>([]);
+const filteredContents = ref<News[]>([]);
+const dialog = ref<boolean>(false);
+const dialogContent = ref<News | null>();
+const today = new Date();
 
 onMounted(() => {
   const mode = useRoute().query.mode ?? "public";
   let contents = props.contents;
   if (mode !== "private") {
     contents = contents.filter((element) => {
-      return new Date() >= new Date(element.date);
+      return today >= new Date(element.date);
     });
   }
   publishContents.value = contents;
@@ -31,7 +29,7 @@ onMounted(() => {
   pageLength.value = Math.ceil(publishContents.value.length / pageSize.value);
 });
 
-const pageChange = (pageNumber) => {
+const pageChange = (pageNumber: number) => {
   filteredContents.value = publishContents.value.slice(
     pageSize.value * (pageNumber - 1),
     pageSize.value * pageNumber
@@ -54,7 +52,7 @@ const dialogClose = () => {
         >
           <v-list-item-title class="wrap-text">
             <span
-              v-show="new Date(content.date) > new Date().utc"
+              v-show="new Date(content.date) > today"
               class="text-red-lighten-2"
               >予約投稿：</span
             >

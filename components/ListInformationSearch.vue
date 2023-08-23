@@ -1,11 +1,22 @@
-<script setup>
+<script setup lang="ts">
 import { mdiOpenInNew, mdiBookSearchOutline } from "@mdi/js";
-const props = defineProps({
-  items: {
-    type: Array,
-    default: () => {},
-  },
-});
+
+type List = {
+  name?: string;
+  href?: string;
+  push?: string;
+  openInNew?: boolean;
+  comment?: string;
+};
+type Item = {
+  subTitle: string;
+  step: number;
+  list: List[];
+};
+type State = {
+  items: Item[];
+};
+const props = defineProps<State>();
 </script>
 
 <template>

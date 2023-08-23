@@ -1,22 +1,25 @@
-<script setup>
-const props = defineProps({
-  items: {
-    type: Array,
-    default: () => {},
-  },
-  category: {
-    type: String,
-    default: null,
-  },
-});
+<script setup lang="ts">
+type Item = {
+  name: string;
+  url: string;
+  category: string;
+  overseas: boolean;
+  author: string;
+  text: string;
+};
+type State = {
+  items: Item[];
+  category: string;
+};
+const props = defineProps<State>();
 </script>
 
 <template>
   <v-row>
     <v-col
-      v-for="item in props.items"
+      v-for="(item, index) in props.items"
       v-show="item.category === props.category"
-      :key="item.id"
+      :key="index"
       cols="12"
       lg="6"
     >

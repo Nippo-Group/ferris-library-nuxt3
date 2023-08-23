@@ -1,9 +1,11 @@
-<script setup>
-const props = defineProps({
-  items: { type: Object, required: true },
-});
+<script setup lang="ts">
+import type { Newspaper } from "@/types/newspaper";
+type State = {
+  items: Newspaper[];
+};
+const props = defineProps<State>();
 
-const displayTitle = (name) => {
+const displayTitle = (name: string): string => {
   switch (name) {
     case "country":
       return "発行国";
@@ -21,8 +23,8 @@ const displayTitle = (name) => {
       return name;
   }
 };
-const showValue = (value, name) => {
-  const flag = value !== "" && name !== "title" && name !== "subTitle";
+const showValue = (value: Newspaper, name: string): boolean => {
+  const flag = value && name !== "title" && name !== "subTitle";
   return flag;
 };
 </script>
@@ -32,10 +34,10 @@ const showValue = (value, name) => {
     <tbody>
       <tr
         v-for="(value, name, index) in props.items"
-        v-show="showValue(value, name)"
+        v-show="showValue(value, String(name))"
         :key="index"
       >
-        <th>{{ displayTitle(name) }}</th>
+        <th>{{ displayTitle(String(name)) }}</th>
         <td v-html="value"></td>
       </tr>
     </tbody>

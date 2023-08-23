@@ -1,6 +1,6 @@
-<script setup>
+<script setup lang="ts">
 import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
-/* type Link = {
+type Link = {
   name: string;
   url: string;
 };
@@ -25,10 +25,8 @@ type Item = {
 };
 type State = {
   items: Item[];
-}; */
-const props = defineProps({
-  items: { type: Array, required: true },
-});
+};
+const props = defineProps<State>();
 const { show } = useConfirmDL();
 </script>
 
