@@ -7,6 +7,9 @@ useHead({
   titleTemplate: (title) => {
     return title ? `${title} - ${siteTitle.value}` : siteTitle.value;
   },
+  htmlAttrs: {
+    lang: "en",
+  },
 });
 </script>
 
