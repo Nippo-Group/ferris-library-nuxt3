@@ -50,7 +50,7 @@ const pickOut = [
         color="rgba(0, 0, 0, 0.4)"
         :to="item.to"
         hover
-        class="mx-1"
+        class="ma-1"
         width="240"
       >
         <v-img
