@@ -16,7 +16,19 @@ const open = ref([
   "list5",
   "list6",
 ]);
-const items = [
+type File = {
+  name: string;
+  url: string;
+  type: string;
+  note?: string;
+};
+type Item = {
+  name: string;
+  target: string;
+  note?: string;
+  files: File[];
+};
+const items: Item[] = [
   {
     name: "リクエスト",
     target: "学部生・大学院生",
@@ -114,7 +126,7 @@ const items = [
     ],
   },
 ];
-const fileIcon = (type) => {
+const fileIcon = (type: string) => {
   switch (type) {
     case "PDF":
       return mdiFilePdfBox;
@@ -142,11 +154,8 @@ const fileIcon = (type) => {
                 <v-list-item v-bind="props">
                   <v-list-item-title class="text-h6 text-primary wrap-text">
                     {{ item.name }}
-                    <v-chip color="accent" size="small">
+                    <v-chip color="primary" size="small">
                       {{ item.target }}
-                    </v-chip>
-                    <v-chip v-if="item.date" variant="outlined" size="small">
-                      {{ item.date }}
                     </v-chip>
                   </v-list-item-title>
                   <v-list-item-subtitle v-if="item.note" class="mt-1">
