@@ -1,12 +1,12 @@
 <script setup lang="ts">
-const drawer: Ref<boolean | null> = ref(null);
+const drawer = ref<boolean | null>(null);
 provide("drawer", drawer);
 </script>
 
 <template>
   <v-app id="inspire">
-    <layout-header></layout-header>
     <layout-navigation-drawer v-model="drawer"></layout-navigation-drawer>
+    <layout-header></layout-header>
     <v-main>
       <slot />
     </v-main>
