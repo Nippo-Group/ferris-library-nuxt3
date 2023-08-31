@@ -68,7 +68,7 @@ const open = ref([]);
 </script>
 
 <template>
-  <v-navigation-drawer :width="360">
+  <v-navigation-drawer :width="320">
     <v-list v-model:opened="open">
       <template v-for="menu in menus" :key="menu.id">
         <v-list-item
