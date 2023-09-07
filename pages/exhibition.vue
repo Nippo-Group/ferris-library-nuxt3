@@ -7,7 +7,7 @@ useSeoMeta({ title: title.value });
 // CMSから記事を取得
 const { data } = await useMicroCMSGetList<Exhibitions>({
   endpoint: "exhibition",
-  queries: { orders: "-date" },
+  queries: { limit: 100, orders: "-date" },
 });
 
 // ダイアログで詳細を表示
