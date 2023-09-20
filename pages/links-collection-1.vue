@@ -26,14 +26,6 @@ const items = [
     text: "国立国会図書館で収集・保存しているデジタル資料を検索・閲覧できる",
   },
   {
-    name: "CiNii Articles",
-    url: "http://ci.nii.ac.jp/",
-    category: "電子図書館 (Digital Library) ／ 電子化された資料とリンク集",
-    overseas: false,
-    author: "国立情報学研究所",
-    text: "雑誌論文を検索し、掲載されている雑誌名、巻号、ページ数などを参照できるほか、参考文献、その論文を引用した文献、本文（PDF）を表示できる",
-  },
-  {
     name: "青空文庫",
     url: "http://www.aozora.gr.jp/",
     category: "電子図書館 (Digital Library) ／ 電子化された資料とリンク集",
@@ -58,7 +50,7 @@ const items = [
     text: "UCの9つのキャンパスの蔵書を横断検索できるMELVIL、電子化された資料にアクセスできるthe Online Archive of California (OAC)などを提供",
   },
   {
-    name: "Digital Library (BL top page)",
+    name: "British Library Catalogues & Collections",
     url: "http://www.bl.uk/",
     category: "電子図書館 (Digital Library) ／ 電子化された資料とリンク集",
     overseas: true,
@@ -122,15 +114,15 @@ const items = [
     text: "都道府県別の最新情報を掲載",
   },
   {
-    name: "毎日新聞",
-    url: "http://www.mainichi.co.jp/",
+    name: "毎日新聞デジタル",
+    url: "https://mainichi.jp/",
     category: "新聞／ニュース",
     overseas: false,
     author: "毎日新聞社",
     text: "都道府県別の最新情報を掲載",
   },
   {
-    name: "YOMIURI ONLINE",
+    name: "読売新聞オンライン",
     url: "http://www.yomiuri.co.jp/",
     category: "新聞／ニュース",
     overseas: false,
@@ -226,15 +218,15 @@ const items = [
     text: "著名作家による連載あり",
   },
   {
-    name: "人民日報網絡版",
+    name: "人民網日本語版",
     url: "http://j.peopledaily.com.cn/",
     category: "新聞／ニュース",
     overseas: true,
     author: "人民日報",
-    text: "中国語、英語、日本語版が用意されており、1995年以降の記事を検索できる",
+    text: "中国語、英語、日本語など15言語に対応。1995年以降の記事を検索できる。",
   },
   {
-    name: "nna",
+    name: "NNA ASIA（アジア経済ニュース）",
     url: "http://news.nna.jp/",
     category: "新聞／ニュース",
     overseas: true,
@@ -266,7 +258,7 @@ const items = [
     text: "日刊ゲンダイに掲載された書評と新刊書籍の案内",
   },
   {
-    name: "The Horn Book Magazine",
+    name: "The Horn Book",
     url: "http://www.hbook.com/",
     category: "書評／書評紙・誌",
     overseas: true,
@@ -275,7 +267,7 @@ const items = [
   },
   {
     name: "The New York Review of Books",
-    url: "http://www.nybooks.com/nyrev/index.html",
+    url: "https://www.nybooks.com/",
     category: "書評／書評紙・誌",
     overseas: true,
     author: "",
@@ -306,7 +298,7 @@ const items = [
     text: "学校基本調査など",
   },
   {
-    name: "内閣府 統計情報・調査結果",
+    name: "内閣府 経済社会総合研究所",
     url: "http://www.esri.cao.go.jp/",
     category: "統計／白書／議事録",
     overseas: false,
@@ -323,7 +315,7 @@ const items = [
   },
   {
     name: "女性情報CASS",
-    url: "http://winet.nwec.jp/hbs/index.html",
+    url: "https://winet2.nwec.go.jp/cass/",
     category: "統計／白書／議事録",
     overseas: false,
     author: "	NWEC（国立女性教育会館）",
@@ -354,11 +346,11 @@ const items = [
     text: "日本の学協会が出版した最新の論文を検索し閲覧できる",
   },
   {
-    name: "e-Gav",
-    url: "http://law.e-gov.go.jp/cgi-bin/idxsearch.cgi",
+    name: "e-Gov",
+    url: "https://www.e-gov.go.jp/",
     category: "法律",
     overseas: false,
-    author: "総務省行政管理局",
+    author: "内閣デジタル庁",
     text: "法令（憲法・法律・政令・勅令・府令・省令）の内容を検索して提供。索引検索と用語検索が可能",
   },
   {
@@ -379,7 +371,7 @@ const items = [
   },
   {
     name: "日本・外国の法律・政府行政文書の調べ方",
-    url: "http://ilpdc.law.kyoto-u.ac.jp/",
+    url: "https://warp.da.ndl.go.jp/info:ndljp/pid/1334645/ilpdc.law.kyoto-u.ac.jp/frameset-mokuji.htm",
     category: "法律",
     overseas: false,
     author: "京都大学大学院法学研究科附属国際法政文献資料センター",

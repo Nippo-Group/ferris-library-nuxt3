@@ -210,6 +210,13 @@
         "url": "http://infotrac.galegroup.com/itweb/ferris"
       }
     ],
+    "documents": [
+      {
+        "name": "操作マニュアル2023年5月版",
+        "url": "/documents/database/how-to-use-gale-literature.pdf",
+        "type": "PDF"
+      }
+    ],
     "categories": ["英米文学"],
     "available": ["学内"]
   },
@@ -259,7 +266,7 @@
     "languages": ["外国語"],
     "explanation": "<p>バレエ、Hip-hop、ジャズ、フォーク、モダンダンスなど主要なジャンルに加え、振り付けやミュージカルダンス、運動学・解剖学的アプローチでダンスを解説するタイトルなども収録したデータベースです。</p><p>電子書籍や画像に加え、500本以上のビデオと800本以上の動画クリップも搭載しています。</p>",
     "access": "無制限",
-    "logout": true,
+    "logout": false,
     "links": [
       {
         "name": "アクセス",
@@ -306,7 +313,7 @@
   {
     "name": "JapanKnowledge Lib",
     "languages": ["日本語"],
-    "explanation": "<p>70以上の辞事典、叢書、雑誌が検索できる国内最大級の辞書・事典サイト。</p><p>すべてのコンテンツを横断検索できる。</p><p>収載コンテンツ：「日本大百科全書」「日本国語大辞典」「国史大辞典」「大漢和辞典」のほか、英和・和英辞典などの外国語辞典、「新編日本古典文学全集」（小学館）全88巻、「新釈漢文大系」（明治書院）全120巻など。</p>",
+    "explanation": "<p>70以上の辞事典、叢書、雑誌が検索できる国内最大級の辞書・事典サイト。</p><p>すべてのコンテンツを横断検索できる。</p><p>収載コンテンツ：「日本大百科全書」「日本国語大辞典」「国史大辞典」「大漢和辞典」のほか、英和・和英辞典などの外国語辞典、「新編日本古典文学全集」（小学館）全88巻、「新釈漢文大系」（明治書院）全120巻、「明治文学全集」（筑摩書房）全100巻など。</p>",
     "access": "4",
     "logout": true,
     "attention": "",
@@ -318,6 +325,13 @@
       {
         "name": "JKBooksとは",
         "url": "https://japanknowledge.com/library/jkbooks.html"
+      }
+    ],
+    "documents": [
+      {
+        "name": "操作マニュアル2023年5月版",
+        "url": "/documents/database/how-to-use-japan-knowledge.pdf",
+        "type": "PDF"
       }
     ],
     "categories": ["電子ブック", "参考・辞書事典類"],
@@ -345,6 +359,11 @@
         "name": "Arts & Science Ⅲ",
         "url": "https://www.jstor.org/titlelists/journals/asiii?filter=head_titles&fileFormat=xls",
         "type": "Excel"
+      },
+      {
+        "name": "操作マニュアル2023年5月版",
+        "url": "/documents/database/how-to-use-jstor.pdf",
+        "type": "PDF"
       }
     ],
     "categories": ["総合"],
@@ -574,7 +593,7 @@
     "languages": ["外国語"],
     "explanation": "<p>1950年代から1970年代までの英米ポピュラーカルチャー・コレクションです。ファッション、音楽、映画、スポーツ、アート等、多岐に渡るテーマの一次資料を収録しています。</p>",
     "access": "無制限",
-    "logout": true,
+    "logout": false,
     "links": [
       {
         "name": "アクセス",
@@ -594,6 +613,13 @@
       {
         "name": "アクセス",
         "url": "https://search.proquest.com/?accountid=27276"
+      }
+    ],
+    "documents": [
+      {
+        "name": "操作マニュアル2023年5月版",
+        "url": "/documents/database/how-to-use-pro-quest.pdf",
+        "type": "PDF"
       }
     ],
     "categories": ["総合"],
@@ -842,6 +868,13 @@
         "url": "https://xsearch.asahi.com/login/"
       }
     ],
+    "documents": [
+      {
+        "name": "操作マニュアル2023年5月版",
+        "url": "/documents/database/how-to-use-asahi-xserch.pdf",
+        "type": "PDF"
+      }
+    ],
     "categories": ["新聞記事"],
     "available": ["学内"]
   },
@@ -983,6 +1016,11 @@
         "name": "ダウンロード",
         "url": "https://webtosho.blob.core.windows.net/prog/webtosho_t-installer.exe",
         "type": "EXE"
+      },
+      {
+        "name": "操作マニュアル2023年5月版",
+        "url": "/documents/database/how-to-use-japanese-literature-web.pdf",
+        "type": "PDF"
       }
     ],
     "categories": ["参考・辞書事典類", "日本文学"],

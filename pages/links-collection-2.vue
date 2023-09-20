@@ -13,6 +13,14 @@ const categories = [
 const selected = ref("各種図書館が所蔵している資料を探す");
 const items = [
   {
+    name: "CiNii Research",
+    url: "https://cir.nii.ac.jp/",
+    category: "各種図書館が所蔵している資料を探す",
+    overseas: false,
+    author: "国立情報学研究所 (NII)",
+    text: "国内で発行された雑誌論文や紀要論文、研究データの情報を検索することができる",
+  },
+  {
     name: "CiNii Books",
     url: "https://ci.nii.ac.jp/books/",
     category: "各種図書館が所蔵している資料を探す",
@@ -45,8 +53,8 @@ const items = [
     text: "国立国会図書館をはじめ、全国の公共図書館、公文書館、美術館や学術研究機関等が提供する資料、デジタルコンテンツを統合的に検索できる",
   },
   {
-    name: "神奈川県立の図書館OPAC",
-    url: "http://www.klnet.pref.kanagawa.jp/opac/index.jsp",
+    name: "神奈川県立の図書館 県内横断検索",
+    url: "https://ufinity.pen-kanagawa.ed.jp/?page_id=722",
     category: "各種図書館が所蔵している資料を探す",
     overseas: false,
     author: "神奈川県立図書館",
@@ -69,16 +77,16 @@ const items = [
     text: "英国図書館(BL)の蔵書を検索し、所属図書館を通じてDocument Supply Centre (BLDSC)に複写・貸借依頼をすることができる",
   },
   {
-    name: "copac",
-    url: "http://copac.ac.uk/copac/",
+    name: "Library Hub Discover",
+    url: "https://discover.libraryhub.jisc.ac.uk/",
     category: "各種図書館が所蔵している資料を探す",
     overseas: true,
-    author: "Consortium of University Research Libraries (CURL)",
+    author: "Joint Information Systems Committee (JISC)",
     text: "イギリスの大学図書館の蔵書横断検索。BLDSCで求める資料を利用できない場合（紛失、破損、所蔵なし等）、協力館に依頼してもらえる",
   },
   {
-    name: "Gateway to Library Catalogs Z39.50",
-    url: "http://lcweb.loc.gov/z3950/gateway.html",
+    name: "Library of congress Catalog",
+    url: "https://catalog.loc.gov",
     category: "各種図書館が所蔵している資料を探す",
     overseas: true,
     author: "Library of Conygess (LC)",
@@ -117,12 +125,12 @@ const items = [
     text: "教育学関係の雑誌論文の書誌情報を中心に収録",
   },
   {
-    name: "Books.or.jp",
+    name: "本の総合カタログ Books（出版書誌データベース）",
     url: "http://www.books.or.jp/",
     category: "出版情報",
     overseas: false,
-    author: "日本書籍出版協会",
-    text: "現在国内で出版されている図書を検索できる。『日本書籍総目録』の最新・Web版。更新が不定期なので、最新情報に関しては各出版社のＨＰをチェックすると良い",
+    author: "日本出版インフラセンター",
+    text: "現在国内で出版されている図書を検索できる。『日本書籍総目録』の最新・Web版。更新が不定期なので、最新情報に関しては各出版社のHPをチェックすると良い",
   },
   {
     name: "e-hon",

@@ -94,7 +94,7 @@ const items2 = [
     links: [
       {
         name: "アクセス",
-        url: "https://www.db-month.biglobe.ne.jp/cgi-bin/telcom21/ferris/enter.cgi",
+        url: "https://www.db-month.biglobe.ne.jp/ferris/",
       },
     ],
   },
@@ -123,12 +123,12 @@ const items2 = [
     type: "雑誌",
     logout: false,
     content:
-      "政治、経済、生活関連のニュース週刊誌です。（保存期間1年）（「聞蔵Ⅱビジュアル」からも検索・閲覧できます）",
+      "政治、経済、生活関連のニュース週刊誌です。（保存期間1年）（「朝日新聞クロスサーチ」からも検索・閲覧できます）",
     access: "緑園本館2階雑誌コーナー",
     links: [
       {
-        name: "聞蔵Ⅱビジュアル",
-        url: "https://database.asahi.com/login/loginexec.php?user_id=fej248gyk&password=bby046wwt",
+        name: "朝日新聞クロスサーチ",
+        url: "https://xsearch.asahi.com/login/",
       },
     ],
   },
