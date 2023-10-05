@@ -9,7 +9,7 @@ useSeoMeta({ title: title.value });
 
 const { data } = await useMicroCMSGetList<News>({
   endpoint: "news",
-  queries: { ids: "ugtb1i4y1_10" },
+  queries: { ids: "a7oeej8j623" },
 });
 
 const selected = ref();
@@ -157,11 +157,6 @@ const itemsContents: ItemsContents[] = [
     name: "一般の方",
     service: [
       {
-        type: "warning",
-        notes:
-          "現在、コロナウィルス感染拡大防止のため、一般の方のご来館はご遠慮いただいております。（2021年5月12日現在）",
-      },
-      {
         title: "来館 館内複写",
         type: "success",
         notes:
@@ -181,11 +176,6 @@ const itemsContents: ItemsContents[] = [
   <v-container>
     <text-page-title>{{ title }}</text-page-title>
     <v-row dense>
-      <v-col cols="12" md="10" lg="8" xl="6">
-        <v-alert density="compact" type="warning">
-          現在、学外の方はご利用いただけません。
-        </v-alert>
-      </v-col>
       <v-col v-if="data" cols="12" md="10" lg="8" xl="6">
         <div class="text-center text-md-left text-h6 mb-2">
           <icons-newspaper-variant start></icons-newspaper-variant>

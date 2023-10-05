@@ -17,9 +17,6 @@ const { data } = await useMicroCMSGetList<News>({
         <home-calendar></home-calendar>
       </v-col>
       <v-col cols="12" xl="8">
-        <info-covid-19></info-covid-19>
-      </v-col>
-      <v-col cols="12" xl="8">
         <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
           <icons-gesture-tap start />Pick Out
         </div>
