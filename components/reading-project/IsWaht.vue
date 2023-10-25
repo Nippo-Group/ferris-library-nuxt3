@@ -4,7 +4,7 @@ import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
 
 const { data } = await useMicroCMSGetList<News>({
   endpoint: "news",
-  queries: { ids: "tzndu8jahabw,rne-f461pg" },
+  queries: { ids: "zt10lnwef,tzndu8jahabw,rne-f461pg" },
 });
 
 const title = "「読書運動プロジェクト」とは？";
