@@ -36,6 +36,7 @@
     "@fullcalendar/timegrid": "^6.1.8",
     "@fullcalendar/vue3": "^6.1.8",
     "@pinia/nuxt": "^0.4.10",
+    "caniuse-lite": "^1.0.30001558",
     "nuxt-microcms-module": "^3.0.1",
     "pinia": "^2.0.36",
     "vue-easy-lightbox": "^1.16.0"
