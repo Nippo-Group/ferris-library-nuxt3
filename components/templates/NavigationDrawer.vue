@@ -10,11 +10,9 @@ import {
   mdiTranslate,
   mdiOpenInNew,
 } from "@mdi/js";
-import menusJapanese from "@/assets/json/menu.json";
-import menusEnglish from "@/assets/json/menu-english.json";
-import { useLanguage } from "@/composable/language/useLanguage";
+import { useDrawer } from "@/composable/utilities/useDrawer";
 
-const { langState } = useLanguage();
+const { visible } = useDrawer();
 
 type Submenu = {
   title: string;
@@ -29,15 +27,9 @@ type Menu = {
   push?: string;
   contents?: Submenu[];
 };
-
-const menus = computed<Menu[]>(() => {
-  switch (langState.value) {
-    case "en":
-      return menusEnglish;
-    default:
-      return menusJapanese;
-  }
-});
+defineProps<{
+  menus: Menu[];
+}>();
 
 const menusIcons = (name: string) => {
   switch (name) {
@@ -68,7 +60,7 @@ const open = ref([]);
 </script>
 
 <template>
-  <v-navigation-drawer :width="320">
+  <v-navigation-drawer v-model="visible" :width="320">
     <v-list v-model:opened="open">
       <template v-for="menu in menus" :key="menu.id">
         <v-list-item

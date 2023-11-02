@@ -14,7 +14,7 @@ useHead({
 </script>
 
 <template>
-  <layout-wrapper>
+  <contents-layout-wrapper>
     <slot />
-  </layout-wrapper>
+  </contents-layout-wrapper>
 </template>
