@@ -17,7 +17,7 @@ export type News = {
   revisedAt: string;
   title: string;
   date: string;
-  content: string;
+  contents: string;
   actions?: Actions;
   actions2?: Actions;
   openinnew?: Openinnew;

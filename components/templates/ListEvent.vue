@@ -1,42 +1,15 @@
 <script setup lang="ts">
-import ryokuen from "@/assets/json/calendar-ryokuen.json";
-import yamate from "@/assets/json/calendar-yamate.json";
-import common from "@/assets/json/calendar-common.json";
-
 type Event = {
   name: string;
   start: string;
   end?: string;
 };
-
-const dayjs = useDayjs();
-const today = dayjs();
-
-const eventsRyokuen = ryokuen.concat(common);
-const eventsYamate = yamate.concat(common);
-
-const todaysEventsRyokuen = computed(() => {
-  return FindEventsToday(eventsRyokuen);
-});
-const todaysEventsYamate = computed(() => {
-  return FindEventsToday(eventsYamate);
-});
-
-const FindEventsToday = (events: Event[]) => {
-  const todayEvents: string[] = [];
-
-  events.forEach((value: Event) => {
-    const start = new Date(value.start);
-    start.setHours(0, 0, 0);
-    const end =
-      value.end !== undefined ? new Date(value.end) : new Date(value.start);
-    end.setHours(23, 59, 59);
-    if (today > start && today < end) {
-      todayEvents.push(value.name);
-    }
-  });
-  return todayEvents;
-};
+defineProps<{
+  title: string;
+  date: string;
+  eventsRyokuen: Event[];
+  eventsYamate: Event[];
+}>();
 </script>
 
 <template>
@@ -52,10 +25,10 @@ const FindEventsToday = (events: Event[]) => {
           <v-card-text class="text-center pb-0">
             <div class="text-h6">
               <icons-calendar-multiselect start size="small" />
-              本日の開館時間
+              {{ title }}
             </div>
-            <time :datetime="dateFormatSimple(today)">
-              {{ dateFormat(today) }}
+            <time :datetime="dateFormatSimple(date)">
+              {{ dateFormat(date) }}
             </time>
           </v-card-text>
           <v-card-actions class="justify-center">
@@ -74,7 +47,7 @@ const FindEventsToday = (events: Event[]) => {
             <p class="text-h6 mb-0">緑園本館</p>
             <ul class="events">
               <li
-                v-for="(item, i) in todaysEventsRyokuen"
+                v-for="(item, i) in eventsRyokuen"
                 :key="'ryokuen' + i"
                 class="bg-grey-lighten-4"
               >
@@ -95,7 +68,7 @@ const FindEventsToday = (events: Event[]) => {
             <p class="text-h6 mb-0">山手分室</p>
             <ul class="events">
               <li
-                v-for="(item, i) in todaysEventsYamate"
+                v-for="(item, i) in eventsYamate"
                 :key="'yamate' + i"
                 class="bg-grey-lighten-4"
               >

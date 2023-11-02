@@ -2,7 +2,7 @@
 import type { News } from "@/types/news";
 
 type State = {
-  contents: News[];
+  contents: News[] | undefined;
   pagination?: boolean;
 };
 const props = defineProps<State>();

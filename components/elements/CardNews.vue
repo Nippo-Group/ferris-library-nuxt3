@@ -1,11 +1,9 @@
 <script setup lang="ts">
-const props = defineProps({
-  items: {
-    type: Object,
-    default: () => {},
-  },
-});
-const items = reactive(props.items);
+import type { News } from "@/types/news";
+
+defineProps<{
+  items: News;
+}>();
 </script>
 
 <template>
@@ -26,7 +24,10 @@ const items = reactive(props.items);
       <v-card-text class="news-contents">
         <div v-html="items.contents"></div>
       </v-card-text>
-      <v-card-actions v-if="items.actions" class="overflow-x-auto">
+      <v-card-actions
+        v-if="items.actions && items.actions.link"
+        class="overflow-x-auto"
+      >
         <btn-inside
           v-if="items.actions && items.actions.link && items.actions.to"
           :link="items.actions.link"
@@ -38,7 +39,10 @@ const items = reactive(props.items);
           :to="items.actions2.to"
         ></btn-inside>
       </v-card-actions>
-      <v-card-actions v-if="items.openinnew" class="overflow-x-auto">
+      <v-card-actions
+        v-if="items.openinnew && items.openinnew.link"
+        class="overflow-x-auto"
+      >
         <btn-open-in-new
           v-if="items.openinnew && items.openinnew.link && items.openinnew.url"
           :link="items.openinnew.link"
@@ -77,22 +81,26 @@ const items = reactive(props.items);
   display: none;
 }
 .news-contents::v-deep(h2) {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
+  margin-top: 2rem;
 }
 .news-contents::v-deep(h3) {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: bold;
+  margin-top: 1rem;
 }
 .news-contents::v-deep(h4) {
-  font-size: 1rem;
-  border-bottom: 1px solid currentColor;
+  font-size: 1.125rem;
+  margin-top: 1rem;
 }
 .news-contents::v-deep(h5) {
   font-size: 1rem;
+  margin-top: 1rem;
 }
 .news-contents::v-deep(h6) {
-  font-size: 1rem;
+  font-size: 0.875rem;
+  margin-top: 1rem;
 }
 .news-contents::v-deep(img) {
   max-width: 100%;
