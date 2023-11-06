@@ -1,90 +1,38 @@
 <script setup lang="ts">
+import { usePagination } from "@/composable/utilities/usePagination";
 import type { News } from "@/types/news";
 
-type State = {
-  contents: News[] | undefined;
-  pagination?: boolean;
-};
-const props = defineProps<State>();
-
-const page = ref<number>(1);
-const pageSize = ref<number>(10);
-const pageLength = ref<number>(1);
-const publishContents = ref<News[]>([]);
-const filteredContents = ref<News[]>([]);
-const dialog = ref<boolean>(false);
-const dialogContent = ref<News | null>();
-const today = new Date();
-
-onMounted(() => {
-  const mode = useRoute().query.mode ?? "public";
-  let contents = props.contents;
-  if (mode !== "private") {
-    contents = contents.filter((element) => {
-      return today >= new Date(element.date);
-    });
-  }
-  publishContents.value = contents;
-  pageChange(page.value);
-  pageLength.value = Math.ceil(publishContents.value.length / pageSize.value);
+const { data } = await useMicroCMSGetList<News>({
+  endpoint: "news",
+  queries: { limit: 100, orders: "-date" },
 });
 
-const pageChange = (pageNumber: number) => {
-  filteredContents.value = publishContents.value.slice(
-    pageSize.value * (pageNumber - 1),
-    pageSize.value * pageNumber
-  );
-};
-const dialogClose = () => {
-  dialog.value = false;
-};
+const contents = computed(() => {
+  if (data) {
+    return data.value?.contents;
+  } else {
+    return undefined;
+  }
+});
+const contentsLength = computed(() => {
+  return contents.value ? contents.value.length : 0;
+});
+
+const pageBreak = 10;
+const { page, pageLength, itemEnd, itemStart } = computed(() => {
+  return usePagination(contentsLength.value, pageBreak);
+}).value;
+
+const displayList = computed(() => {
+  return contents.value?.slice(itemStart.value, itemEnd.value);
+});
 </script>
 
 <template>
-  <v-card>
-    <v-list>
-      <template v-for="(content, index) in filteredContents" :key="content.id">
-        <v-divider v-if="index !== 0"></v-divider>
-        <v-list-item
-          lines="two"
-          link
-          @click="(dialog = true), (dialogContent = content)"
-        >
-          <v-list-item-title class="wrap-text">
-            <span
-              v-show="new Date(content.date) > today"
-              class="text-red-lighten-2"
-              >予約投稿：</span
-            >
-            {{ content.title }}
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            {{ dateFormat(content.date) }}
-          </v-list-item-subtitle>
-          <template #append>
-            <icons-arrow-right-circle
-              class="text-gray-lighten-1"
-            ></icons-arrow-right-circle>
-          </template>
-        </v-list-item>
-      </template>
-    </v-list>
-    <v-card-text v-if="props.pagination">
-      <v-pagination
-        v-model="page"
-        :length="pageLength"
-        @update:model-value="pageChange"
-      ></v-pagination>
-    </v-card-text>
-    <v-dialog v-model="dialog" scrollable max-width="600">
-      <card-news :items="dialogContent" @dialog-close="dialogClose"></card-news>
-    </v-dialog>
-  </v-card>
+  <templates-list-news :contents-list="displayList"></templates-list-news>
+  <v-pagination
+    v-if="displayList"
+    v-model="page"
+    :length="pageLength"
+  ></v-pagination>
 </template>
-
-<style scoped>
-.wrap-text {
-  word-break: break-all;
-  white-space: normal;
-}
-</style>
