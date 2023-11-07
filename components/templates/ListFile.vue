@@ -21,7 +21,9 @@ defineProps<{
         link
         @click="confirmDLShow(item.name, item.url, item.type)"
       >
-        <v-list-item-title> {{ item.name }}</v-list-item-title>
+        <v-list-item-title class="wrap-text">
+          {{ item.name }}</v-list-item-title
+        >
         <template #append>
           <icons-file-pdf v-if="item.type === 'PDF'"></icons-file-pdf>
           <icons-file-word v-else-if="item.type === 'Word'"></icons-file-word>
@@ -33,8 +35,17 @@ defineProps<{
       </v-list-item>
 
       <v-list-item v-else>
-        <v-list-item-title> {{ item.name }}</v-list-item-title>
+        <v-list-item-title class="wrap-text">
+          {{ item.name }}</v-list-item-title
+        >
       </v-list-item>
     </template>
   </v-list>
 </template>
+
+<style scoped>
+.wrap-text {
+  word-break: break-all;
+  white-space: normal;
+}
+</style>
