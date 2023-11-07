@@ -1,11 +1,7 @@
-<template>
-  <span class="question">Q.</span>
-</template>
+<script setup lang="ts">
+import { mdiChatQuestion } from "@mdi/js";
+</script>
 
-<style scoped>
-.question {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #ffcdd2;
-}
-</style>
+<template>
+  <v-icon :icon="mdiChatQuestion"></v-icon>
+</template>
