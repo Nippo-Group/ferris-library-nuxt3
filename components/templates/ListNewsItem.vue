@@ -29,10 +29,10 @@ const { isReservation } = useReservation();
     </template>
   </v-list-item>
   <v-dialog v-model="visible" scrollable max-width="600">
-    <elements-card-news
+    <templates-card-news
       :items="contents"
       @dialog-close="dismiss"
-    ></elements-card-news>
+    ></templates-card-news>
   </v-dialog>
 </template>
 
