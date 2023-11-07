@@ -6,7 +6,7 @@ const confirmDLShow = useConfirmDL().show;
 type File = {
   name: string;
   url?: string;
-  type?: string;
+  type?: "PDF" | "Word" | "Excel" | "Other";
 };
 defineProps<{
   items: File[];
@@ -23,7 +23,12 @@ defineProps<{
       >
         <v-list-item-title> {{ item.name }}</v-list-item-title>
         <template #append>
-          <icons-file-pdf></icons-file-pdf>
+          <icons-file-pdf v-if="item.type === 'PDF'"></icons-file-pdf>
+          <icons-file-word v-else-if="item.type === 'Word'"></icons-file-word>
+          <icons-file-excel
+            v-else-if="item.type === 'Excel'"
+          ></icons-file-excel>
+          <icons-file-document v-else></icons-file-document>
         </template>
       </v-list-item>
 
