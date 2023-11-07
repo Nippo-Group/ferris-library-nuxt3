@@ -1,71 +1,17 @@
 <script setup lang="ts">
 const title = ref("ツアー・ガイダンス");
 useSeoMeta({ title: title.value });
-
-const items = [
-  {
-    title: "ツアー",
-    text: "新入生が大学での学習を始めるにあたり、必要不可欠な図書館の利用方法を知ってもらうことを目的としています。R&Rや導入演習などの授業単位で実施します。専任教員・非常勤教員の方々からのお申し込みを受け付けます。",
-    contents: [
-      {
-        subtitle: "実施期間",
-        text: "毎年度4月上旬から6月下旬",
-      },
-      {
-        subtitle: "内容",
-        list: [
-          "図書館案内…図書館内を見て回りながら、施設設備の配置やその使い方を紹介します。",
-          "蔵書検索…OPACの使い方と検索結果の見方、入手までを解説します。",
-        ],
-      },
-      {
-        subtitle: "申込方法",
-        text: "毎年度3月中旬に配付する「新入生図書館ツアー申込書」（MyLibraryにログインして取得できます）にご記入の上お申し込みください。",
-      },
-    ],
-  },
-  {
-    title: "ガイダンス",
-    text: "卒業論文やレポートを執筆する際に必要となる、文献の探し方の習得を目的としています。<br />基礎的な文献検索の実習などをパッケージ化して、ゼミ単位・授業単位で実施します。専任教員・非常勤教員の方々からのお申し込みを受け付けます。<br />このほか学生の希望により個別のガイダンスも受け付けています。",
-    contents: [
-      {
-        subtitle: "実施期間",
-        text: "学期期間中の平日※図書館ツアーが集中する4月から5月はツアーを優先させていただきます。",
-      },
-      {
-        subtitle: "内容",
-        list: [
-          "DVD視聴…レポート・論文を書くためのステップを解説します。上映時間は約10分です。",
-          "各種データベースの検索方法の説明と実習を実施します。",
-          "その他、ゼミの内容に応じた文献の紹介などを行います。",
-        ],
-      },
-      {
-        subtitle: "申込方法",
-        text: "「ゼミ対象図書館ガイダンス申込書」（MyLibraryにログインして取得できます）にご記入の上お申し込みください。",
-      },
-    ],
-  },
-];
 </script>
 
 <template>
   <v-container>
     <text-page-title>{{ title }}</text-page-title>
     <v-row>
-      <v-col
-        v-for="(item, i) in items"
-        :key="'item' + i"
-        cols="12"
-        md="10"
-        lg="8"
-        xl="6"
-      >
-        <card-tour
-          :title="item.title"
-          :text="item.text"
-          :contents="item.contents"
-        ></card-tour>
+      <v-col cols="12" md="10" lg="8" xl="6">
+        <contents-the-tour />
+      </v-col>
+      <v-col cols="12" md="10" lg="8" xl="6">
+        <contents-the-guidance />
       </v-col>
     </v-row>
   </v-container>
