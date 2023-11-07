@@ -7,6 +7,7 @@ type File = {
   name: string;
   url?: string;
   type?: "PDF" | "Word" | "Excel" | "Other";
+  note?: string;
 };
 defineProps<{
   items: File[];
@@ -22,8 +23,9 @@ defineProps<{
         @click="confirmDLShow(item.name, item.url, item.type)"
       >
         <v-list-item-title class="wrap-text">
-          {{ item.name }}</v-list-item-title
-        >
+          {{ item.name }}
+        </v-list-item-title>
+        <v-list-item-subtitle>{{ item.note }}</v-list-item-subtitle>
         <template #append>
           <icons-file-pdf v-if="item.type === 'PDF'"></icons-file-pdf>
           <icons-file-word v-else-if="item.type === 'Word'"></icons-file-word>
@@ -36,8 +38,9 @@ defineProps<{
 
       <v-list-item v-else>
         <v-list-item-title class="wrap-text">
-          {{ item.name }}</v-list-item-title
-        >
+          {{ item.name }}
+        </v-list-item-title>
+        <v-list-item-subtitle>{{ item.note }}</v-list-item-subtitle>
       </v-list-item>
     </template>
   </v-list>
