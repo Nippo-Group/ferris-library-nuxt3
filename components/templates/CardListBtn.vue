@@ -1,0 +1,51 @@
+<script setup lang="ts">
+import { mdiOpenInNew } from "@mdi/js";
+
+type List = {
+  name?: string;
+  href?: string;
+  push?: string;
+  openInNew?: boolean;
+  comment?: string;
+};
+defineProps<{
+  title: string;
+  step: number;
+  list: List[];
+  icon?: string;
+}>();
+</script>
+
+<template>
+  <v-card :title="title" :prepend-icon="icon">
+    <v-card-text>
+      <ul class="link-list">
+        <li v-for="(item, j) in list" :key="'item' + i + j">
+          <v-btn
+            v-if="item.name"
+            class="text-none"
+            color="primary"
+            :to="item.push"
+            :href="item.href"
+            :target="item.href ? '_blank' : '_self'"
+            variant="tonal"
+          >
+            {{ item.name }}
+            <v-icon v-show="item.openInNew" end :icon="mdiOpenInNew"></v-icon>
+          </v-btn>
+          <p class="text-grey">{{ item.comment }}</p>
+        </li>
+      </ul>
+    </v-card-text>
+  </v-card>
+</template>
+
+<style scoped>
+.link-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+</style>
