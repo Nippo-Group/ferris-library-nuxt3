@@ -8,6 +8,8 @@ type File = {
   url?: string;
   type?: "PDF" | "Word" | "Excel" | "Other";
   note?: string;
+  target?: string;
+  date?: string;
 };
 defineProps<{
   items: File[];
@@ -22,6 +24,14 @@ defineProps<{
         link
         @click="confirmDLShow(item.name, item.url, item.type)"
       >
+        <div class="mb-2">
+          <v-chip v-if="item.target" color="primary-lighten-2" class="mr-1">
+            {{ item.target }}
+          </v-chip>
+          <v-chip v-if="item.date" variant="outlined">
+            {{ item.date }}
+          </v-chip>
+        </div>
         <v-list-item-title class="wrap-text">
           {{ item.name }}
         </v-list-item-title>

@@ -1,0 +1,114 @@
+<script setup lang="ts">
+const items = [
+  {
+    category: "音楽資料の探し方",
+    contents: [
+      {
+        target: "学部生向け",
+        name: "音楽資料の探し方：超入門",
+        date: "2021年2月",
+        url: "/documents/how-to-find/music-materials.pdf",
+        type: "PDF",
+      },
+    ],
+  },
+  {
+    category: "検索ツールの使い方",
+    contents: [
+      {
+        target: "学部生向け",
+        name: "OPACの使い方",
+        date: "2020年6月",
+        url: "/documents/how-to-find/how-to-use-opac.pdf",
+        type: "PDF",
+      },
+      {
+        target: "学部生向け",
+        name: "CiNiiの使い方",
+        date: "2022年8月",
+        url: "/documents/how-to-find/how-to-use-cinii.pdf",
+        type: "PDF",
+      },
+    ],
+  },
+  {
+    category: "図書館アドバイス会配付資料",
+    contents: [
+      {
+        target: "学部生向け",
+        name: "かしこい図書館の使い方ちょっとアドバイス会（レポート準備編）",
+        date: "2022年6月2日実施",
+        url: "/documents/how-to-find/report-advice.pdf",
+        type: "PDF",
+      },
+      {
+        target: "留学生向け",
+        name: "かしこい図書館の使い方ちょっとアドバイス会",
+        date: "2022年5月11日実施",
+        url: "/documents/how-to-find/advice-for-international-students.pdf",
+        type: "PDF",
+      },
+      {
+        target: "学部生向け",
+        name: "かしこい図書館の使い方ちょっとアドバイス会（卒論準備編）",
+        date: "2022年7月5日日実施",
+        url: "/documents/how-to-find/graduation-thesis-advice.pdf",
+        type: "PDF",
+      },
+    ],
+  },
+  {
+    category: "参考：文献検索のレッスン資料",
+    contents: [
+      {
+        target: "3～4年生向け",
+        name: "英語英米文学科専門ゼミ（アメリカ文学）説明資料",
+        date: "2022年4月実施",
+        url: "/documents/how-to-find/english-literature-seminar-american.pdf",
+        type: "PDF",
+      },
+      {
+        target: "3～4年生向け",
+        name: "英語英米文学科専門ゼミ（日英語比較・異文化コミュニケーション）説明資料",
+        date: "2022年6月実施",
+        url: "/documents/how-to-find/english-literature-seminar-comparison.pdf",
+        type: "PDF",
+      },
+      {
+        target: "3～4年生向け",
+        name: "コミュニケーション学科専門ゼミ（心理学）説明資料",
+        date: "2022年6月実施",
+        url: "/documents/how-to-find/communication-seminar-psychology.pdf",
+        type: "PDF",
+      },
+      {
+        target: "3～4年生向け",
+        name: "国際交流学科専門演習（ヨーロッパ史）説明資料",
+        date: "2022年5月実施",
+        url: "/documents/how-to-find/international-exchange-semina-european.pdf",
+        type: "PDF",
+      },
+      {
+        target: "3～4年生向け",
+        name: "国際交流学科専門演習（中国研究）説明資料",
+        date: "2022年6月実施",
+        url: "/documents/how-to-find/international-exchange-seminar-chinese.pdf",
+        type: "PDF",
+      },
+    ],
+  },
+];
+</script>
+
+<template>
+  <v-container>
+    <v-row>
+      <v-col v-for="(item, i) in items" :key="i" cols="12" lg="6">
+        <v-card>
+          <v-card-title>{{ item.category }}</v-card-title>
+          <templates-list-file :items="item.contents"></templates-list-file>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
