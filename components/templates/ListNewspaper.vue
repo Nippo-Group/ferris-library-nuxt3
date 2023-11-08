@@ -24,7 +24,9 @@ const props = defineProps<State>();
         </span>
       </v-expansion-panel-title>
       <v-expansion-panel-text>
-        <list-newspaper-details :items="newspaper"></list-newspaper-details>
+        <templates-list-newspaper-item
+          :items="newspaper"
+        ></templates-list-newspaper-item>
       </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>
