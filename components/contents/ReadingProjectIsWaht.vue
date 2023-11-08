@@ -1,11 +1,5 @@
 <script setup lang="ts">
-import type { News } from "@/types/news";
 import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
-
-const { data } = await useMicroCMSGetList<News>({
-  endpoint: "news",
-  queries: { ids: "zt10lnwef,tzndu8jahabw,rne-f461pg" },
-});
 
 const title = "「読書運動プロジェクト」とは？";
 const leadSentence =
@@ -170,10 +164,9 @@ const mediaInformation = {
             </v-container>
           </card-reading-project-detail>
         </v-col>
-        <v-col v-if="data" cols="12" xl="4">
+        <v-col cols="12" xl="4">
           <card-reading-project-detail sub-title="News">
-            <list-news :pagination="false" :contents="data.contents">
-            </list-news>
+            <contents-reading-project-news />
           </card-reading-project-detail>
         </v-col>
       </v-row>

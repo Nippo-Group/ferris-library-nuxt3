@@ -24,10 +24,10 @@ useSeoMeta({ title: title.value });
             </v-img>
           </v-card>
         </v-col>
-        <reading-project-is-waht> </reading-project-is-waht>
-        <reading-project-activity-introduction />
-        <reading-project-activity-base />
-        <reading-project-contact-address />
+        <contents-reading-project-is-waht />
+        <contents-reading-project-activity-introduction />
+        <contents-reading-project-activity-base />
+        <contents-reading-project-contact-address />
       </v-row>
     </v-container>
   </v-sheet>
