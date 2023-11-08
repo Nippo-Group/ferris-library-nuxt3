@@ -45,7 +45,9 @@ const lightboxShow = (index: number): void => {
   <v-container>
     <v-row dense>
       <v-col cols="12">
-        <nav-breadcrumbs :items="breadcrumbs"></nav-breadcrumbs>
+        <elements-nav-breadcrumbs
+          :items="breadcrumbs"
+        ></elements-nav-breadcrumbs>
       </v-col>
       <v-col cols="12">
         <v-card>
@@ -125,7 +127,10 @@ const lightboxShow = (index: number): void => {
         </v-card>
       </v-col>
     </v-row>
-    <the-lightbox ref="lightboxComponent" :imgs="imgs"></the-lightbox>
+    <templates-the-lightbox
+      ref="lightboxComponent"
+      :imgs="imgs"
+    ></templates-the-lightbox>
   </v-container>
 </template>
 

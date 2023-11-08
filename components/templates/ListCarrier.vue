@@ -49,12 +49,12 @@ const props = defineProps<State>();
             >{{ item.access }}
           </v-card-text>
           <v-card-actions v-if="item.links">
-            <btn-open-in-new
+            <elements-btn-open-in-new
               v-for="(link, j) in item.links"
               :key="'link' + j"
               :link="link.name"
               :url="link.url"
-            ></btn-open-in-new>
+            ></elements-btn-open-in-new>
           </v-card-actions>
         </div>
       </v-card>

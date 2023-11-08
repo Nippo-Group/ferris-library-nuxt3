@@ -73,13 +73,13 @@ defineProps<{
             <span v-if="attention">※{{ attention }}</span>
           </v-card-text>
           <v-card-actions class="overflow-x-auto">
-            <align-elements>
-              <btn-open-in-new
+            <elements-align-elements>
+              <elements-btn-open-in-new
                 v-for="(link, k) in links"
                 :key="'link' + k"
                 :link="link.name"
                 :url="link.url"
-              ></btn-open-in-new>
+              ></elements-btn-open-in-new>
               <template v-if="documents">
                 <v-btn
                   v-for="(file, n) in documents"
@@ -93,7 +93,7 @@ defineProps<{
                   <icons-file-document v-else dark end />
                 </v-btn>
               </template>
-            </align-elements>
+            </elements-align-elements>
           </v-card-actions>
         </v-col>
       </v-row>

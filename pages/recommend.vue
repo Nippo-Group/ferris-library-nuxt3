@@ -52,7 +52,7 @@ const items = [
 
 <template>
   <v-container>
-    <text-page-title>{{ title }}</text-page-title>
+    <elements-text-page-title>{{ title }}</elements-text-page-title>
     <v-row>
       <v-col cols="12" md="10" lg="8" xl="9">
         <v-alert type="info" class="recommend-info">

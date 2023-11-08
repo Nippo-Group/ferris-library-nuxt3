@@ -43,6 +43,6 @@ const menus = computed(() => {
     </v-main>
     <templates-a-footer :copyright="copyright"></templates-a-footer>
     <templates-to-top></templates-to-top>
-    <confirm-download></confirm-download>
+    <templates-confirm-download></templates-confirm-download>
   </v-app>
 </template>

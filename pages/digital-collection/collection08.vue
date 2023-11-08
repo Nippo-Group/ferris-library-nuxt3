@@ -52,7 +52,9 @@ const lightboxShow = (index: number) => {
   <v-container>
     <v-row dense>
       <v-col cols="12">
-        <nav-breadcrumbs :items="breadcrumbs"></nav-breadcrumbs>
+        <elements-nav-breadcrumbs
+          :items="breadcrumbs"
+        ></elements-nav-breadcrumbs>
       </v-col>
       <v-col cols="12" xl="6">
         <v-card>
@@ -66,11 +68,11 @@ const lightboxShow = (index: number) => {
                   <div v-html="commentary1"></div>
                 </v-card-text>
                 <v-card-actions>
-                  <btn-dialog-default title="解説">
+                  <elements-btn-dialog-default title="解説">
                     <template #contents>
                       <div v-html="commentary2"></div>
                     </template>
-                  </btn-dialog-default>
+                  </elements-btn-dialog-default>
                   <v-btn
                     variant="elevated"
                     @click="show(zipFile.name, zipFile.url, zipFile.type)"
@@ -118,7 +120,10 @@ const lightboxShow = (index: number) => {
         </v-card>
       </v-col>
     </v-row>
-    <the-lightbox ref="lightboxComponent" :imgs="imgs"></the-lightbox>
+    <templates-the-lightbox
+      ref="lightboxComponent"
+      :imgs="imgs"
+    ></templates-the-lightbox>
   </v-container>
 </template>
 

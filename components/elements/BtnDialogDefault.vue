@@ -38,4 +38,3 @@ const { visible, show, dismiss } = useVisible();
   padding-left: 1.5em;
 }
 </style>
-~/composable/utilities/useVisible

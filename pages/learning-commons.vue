@@ -5,7 +5,7 @@ useSeoMeta({ title: title.value });
 
 <template>
   <v-container>
-    <text-page-title>{{ title }}</text-page-title>
+    <elements-text-page-title>{{ title }}</elements-text-page-title>
     <v-row dense>
       <v-col cols="12" md="6">
         <contents-learning-commons />

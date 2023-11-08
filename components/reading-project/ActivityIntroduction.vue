@@ -72,10 +72,10 @@ const about: About = {
                       </v-row>
                     </v-container>
                     <v-card-text v-if="item.movie">
-                      <the-youtube
+                      <elements-youtube-viewer
                         :title="item.movie.title"
                         :src="item.movie.src"
-                      ></the-youtube>
+                      ></elements-youtube-viewer>
                     </v-card-text>
                   </card-reading-project-detail-article>
                 </v-col>

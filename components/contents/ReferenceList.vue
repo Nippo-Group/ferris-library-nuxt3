@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <text-sub-title>サービス一覧</text-sub-title>
+        <elements-text-sub-title>サービス一覧</elements-text-sub-title>
       </v-col>
       <v-col cols="12" md="10" lg="8" xl="6">
         <v-card height="100%">
@@ -19,8 +19,8 @@
             ご希望の資料が当図書館にない時、他の図書館や資料館の所蔵調査をいたします。学部生はMyLibraryにログインして調査の依頼ができます。
           </v-card-text>
           <v-card-actions class="overflow-x-auto">
-            <align-elements>
-              <btn-dialog-default title="文献複写">
+            <elements-align-elements>
+              <elements-btn-dialog-default title="文献複写">
                 <template #contents>
                   <div class="text-h6">サービス内容</div>
                   <ul>
@@ -36,11 +36,11 @@
                   <p>コピー代金・送料・手数料等</p>
                 </template>
                 <template #actions>
-                  <btn-my-library></btn-my-library>
+                  <elements-btn-my-library></elements-btn-my-library>
                 </template>
-              </btn-dialog-default>
+              </elements-btn-dialog-default>
 
-              <btn-dialog-default title="現物貸借">
+              <elements-btn-dialog-default title="現物貸借">
                 <template #contents>
                   <div class="text-h6 pt-6">サービス内容</div>
                   <ul>
@@ -67,12 +67,12 @@
                   <p>往復送料・手数料等</p>
                 </template>
                 <template #actions>
-                  <btn-my-library></btn-my-library>
+                  <elements-btn-my-library></elements-btn-my-library>
                 </template>
-              </btn-dialog-default>
+              </elements-btn-dialog-default>
 
               <btn-my-library />
-            </align-elements>
+            </elements-align-elements>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -83,8 +83,8 @@
             他大学の図書館を利用するために必要な紹介状を発行します。
           </v-card-text>
           <v-card-actions class="overflow-x-auto">
-            <align-elements>
-              <btn-dialog-default title="大学図書館">
+            <elements-align-elements>
+              <elements-btn-dialog-default title="大学図書館">
                 <template #contents>
                   <div class="text-h6 pt-6">注意事項</div>
                   <p>
@@ -96,14 +96,14 @@
                   <p>蔵書検索は「CiNii Books」から行ってください。</p>
                 </template>
                 <template #actions>
-                  <btn-open-in-new
+                  <elements-btn-open-in-new
                     link="CiNii Books"
                     url="http://ci.nii.ac.jp/books/"
-                  ></btn-open-in-new>
+                  ></elements-btn-open-in-new>
                 </template>
-              </btn-dialog-default>
+              </elements-btn-dialog-default>
 
-              <btn-dialog-default title="横浜市立図書館">
+              <elements-btn-dialog-default title="横浜市立図書館">
                 <template #contents>
                   <div class="text-h6 pt-6">注意事項</div>
                   <p>
@@ -115,14 +115,14 @@
                   </p>
                 </template>
                 <template #actions>
-                  <btn-open-in-new
+                  <elements-btn-open-in-new
                     link="横浜市立図書館蔵書検索ページ"
                     url="https://opac.lib.city.yokohama.lg.jp/opac/"
-                  ></btn-open-in-new>
+                  ></elements-btn-open-in-new>
                 </template>
-              </btn-dialog-default>
+              </elements-btn-dialog-default>
 
-              <btn-dialog-default title="神奈川県立図書館">
+              <elements-btn-dialog-default title="神奈川県立図書館">
                 <template #contents>
                   <div class="text-h6 pt-6">注意事項</div>
                   <p>
@@ -131,14 +131,14 @@
                   <p>ホームページで開館日などを確認できます。</p>
                 </template>
                 <template #actions>
-                  <btn-open-in-new
+                  <elements-btn-open-in-new
                     link="神奈川県立の図書館"
                     url="https://www.klnet.pref.kanagawa.jp/"
-                  ></btn-open-in-new>
+                  ></elements-btn-open-in-new>
                 </template>
-              </btn-dialog-default>
+              </elements-btn-dialog-default>
 
-              <btn-dialog-default title="国立国会図書館">
+              <elements-btn-dialog-default title="国立国会図書館">
                 <template #contents>
                   <div class="text-h6 pt-6">注意事項</div>
                   <p>
@@ -147,13 +147,13 @@
                   <p>蔵書検索は「国立国会図書館サーチ」から行ってください。</p>
                 </template>
                 <template #actions>
-                  <btn-open-in-new
+                  <elements-btn-open-in-new
                     link="国立国会図書館サーチ"
                     url="http://iss.ndl.go.jp/"
-                  ></btn-open-in-new>
+                  ></elements-btn-open-in-new>
                 </template>
-              </btn-dialog-default>
-            </align-elements>
+              </elements-btn-dialog-default>
+            </elements-align-elements>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -168,8 +168,10 @@
             下記の共通閲覧証があれば、紹介状なしで加盟大学図書館・機関が利用できます。
           </v-card-text>
           <v-card-actions class="overflow-x-auto">
-            <align-elements>
-              <btn-dialog-default title="神奈川県内大学図書館共通閲覧証">
+            <elements-align-elements>
+              <elements-btn-dialog-default
+                title="神奈川県内大学図書館共通閲覧証"
+              >
                 <template #contents>
                   <div class="text-h6 pt-6">対象館</div>
                   <p>神奈川県図書館協会加盟の大学図書館</p>
@@ -177,14 +179,14 @@
                   <p>教員・院生・学部生</p>
                 </template>
                 <template #actions>
-                  <btn-open-in-new
+                  <elements-btn-open-in-new
                     link="神奈川県図書館協会"
                     url="http://www.kanagawa-la.jp/link/"
-                  ></btn-open-in-new>
+                  ></elements-btn-open-in-new>
                 </template>
-              </btn-dialog-default>
+              </elements-btn-dialog-default>
 
-              <btn-dialog-default title="音楽図書館協議会共通閲覧証">
+              <elements-btn-dialog-default title="音楽図書館協議会共通閲覧証">
                 <template #contents>
                   <div class="text-h6 pt-6">対象館</div>
                   <p>音楽図書館協議会加盟館</p>
@@ -192,13 +194,13 @@
                   <p>音楽学部所属の教員・院生・学部生</p>
                 </template>
                 <template #actions>
-                  <btn-open-in-new
+                  <elements-btn-open-in-new
                     link="音楽図書館協議会"
                     url="https://mlaj.org/"
-                  ></btn-open-in-new>
+                  ></elements-btn-open-in-new>
                 </template>
-              </btn-dialog-default>
-            </align-elements>
+              </elements-btn-dialog-default>
+            </elements-align-elements>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -212,10 +214,10 @@
             手続き方法、利用できるサービスについては大学によって異なりますので、必ず各館のホームページで条件を確認してください。
           </v-card-text>
           <v-card-actions class="overflow-x-auto">
-            <btn-inside
+            <elements-btn-inside
               link="コンソーシアムページへ"
               to="/consortium"
-            ></btn-inside>
+            ></elements-btn-inside>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -226,10 +228,10 @@
             先生方や学生の皆さんのご要望に応じて、図書館の効率的な使い方をご説明します。
           </v-card-text>
           <v-card-actions class="overflow-x-auto">
-            <btn-inside
+            <elements-btn-inside
               link="ツアー・ガイダンスページへ"
               to="/tour"
-            ></btn-inside>
+            ></elements-btn-inside>
           </v-card-actions>
         </v-card>
       </v-col>

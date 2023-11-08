@@ -56,7 +56,9 @@ const lightboxShow = (index: number): void => {
   <v-container>
     <v-row dense>
       <v-col cols="12">
-        <nav-breadcrumbs :items="breadcrumbs"></nav-breadcrumbs>
+        <elements-nav-breadcrumbs
+          :items="breadcrumbs"
+        ></elements-nav-breadcrumbs>
       </v-col>
       <v-col cols="12" xl="6">
         <v-card>
@@ -83,11 +85,11 @@ const lightboxShow = (index: number): void => {
             </v-col>
           </v-row>
           <v-card-actions>
-            <btn-dialog-default title="解説">
+            <elements-btn-dialog-default title="解説">
               <template #contents>
                 <p v-for="(text, k) in commentary2" :key="k">{{ text }}</p>
               </template>
-            </btn-dialog-default>
+            </elements-btn-dialog-default>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -124,7 +126,10 @@ const lightboxShow = (index: number): void => {
         </v-card>
       </v-col>
     </v-row>
-    <the-lightbox ref="lightboxComponent" :imgs="imgs"></the-lightbox>
+    <templates-the-lightbox
+      ref="lightboxComponent"
+      :imgs="imgs"
+    ></templates-the-lightbox>
   </v-container>
 </template>
 

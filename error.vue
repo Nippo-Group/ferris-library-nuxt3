@@ -4,15 +4,19 @@ const error = useError();
 
 <template>
   <v-container>
-    <text-page-title>
+    <elements-text-page-title>
       {{ error?.message }}
-    </text-page-title>
+    </elements-text-page-title>
 
-    <btn-inside link="ホームへもどる" to="/" class="mb-2"></btn-inside>
-    <btn-inside
+    <elements-btn-inside
+      link="ホームへもどる"
+      to="/"
+      class="mb-2"
+    ></elements-btn-inside>
+    <elements-btn-inside
       link="Return to home page"
       to="/english"
       class="mb-2"
-    ></btn-inside>
+    ></elements-btn-inside>
   </v-container>
 </template>

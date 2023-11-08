@@ -98,10 +98,10 @@ const mediaInformation = {
                 >
                   <card-reading-project-detail-article>
                     <v-card-text>
-                      <the-pdf-viewer
+                      <elements-pdf-viewer
                         :src="document.url"
                         :button-hidden="true"
-                      ></the-pdf-viewer>
+                      ></elements-pdf-viewer>
                       <v-btn
                         block
                         variant="text"
@@ -132,7 +132,9 @@ const mediaInformation = {
                         class="mb-4"
                         v-html="item"
                       ></div>
-                      <btn-email address="r_library@ferris.ac.jp"></btn-email>
+                      <elements-btn-email
+                        address="r_library@ferris.ac.jp"
+                      ></elements-btn-email>
                     </v-card-text>
                   </card-reading-project-detail-article>
                 </v-col>

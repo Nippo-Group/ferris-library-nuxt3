@@ -5,7 +5,7 @@ useSeoMeta({ title: title.value });
 
 <template>
   <v-container>
-    <text-page-title>{{ title }}</text-page-title>
+    <elements-text-page-title>{{ title }}</elements-text-page-title>
     <p>緑園本館・山手分室のフロアマップ、緑園本館の「今どこマップ」です</p>
 
     <v-row>

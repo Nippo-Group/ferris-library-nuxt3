@@ -28,8 +28,11 @@ const movie = [
                 >
                   <card-reading-project-detail-article>
                     <v-card-text>
-                      <the-youtube :title="item.title" :src="item.src">
-                      </the-youtube>
+                      <elements-youtube-viewer
+                        :title="item.title"
+                        :src="item.src"
+                      >
+                      </elements-youtube-viewer>
                     </v-card-text>
                   </card-reading-project-detail-article>
                 </v-col>

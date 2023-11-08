@@ -430,7 +430,7 @@ const items = [
 
 <template>
   <v-container>
-    <text-page-title>{{ title }}</text-page-title>
+    <elements-text-page-title>{{ title }}</elements-text-page-title>
     <div v-html="comment"></div>
     <v-select
       v-model="selected"

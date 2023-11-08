@@ -24,8 +24,11 @@ const period = [
 </script>
 
 <template>
-  <text-sub-title>貸出期間</text-sub-title>
-  <the-table :items-array="period" :headers="headers"></the-table>
+  <elements-text-sub-title>貸出期間</elements-text-sub-title>
+  <elements-responsive-table
+    :items-array="period"
+    :headers="headers"
+  ></elements-responsive-table>
   <v-alert type="info" class="mt-4">
     春・夏・冬季休暇中には学部生・大学院生を対象に長期貸出を行います。詳細はこのHPや掲示などでお知らせします。
   </v-alert>

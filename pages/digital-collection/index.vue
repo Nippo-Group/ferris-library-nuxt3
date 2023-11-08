@@ -135,7 +135,7 @@ const items = [
 
 <template>
   <v-container>
-    <text-page-title>{{ title }}</text-page-title>
+    <elements-text-page-title>{{ title }}</elements-text-page-title>
     <v-alert density="compact" border="start" variant="outlined" type="warning">
       当WEBサイト上にある情報や画像などは、フェリス女学院大学附属図書館が所有または管理しています。<br />
       無断転載や無断使用を禁じます。</v-alert
@@ -171,18 +171,18 @@ const items = [
             <p v-for="(text, j) in item.texts" :key="j">{{ text.p }}</p>
           </v-card-text>
           <v-card-actions>
-            <btn-inside
+            <elements-btn-inside
               v-if="item.identification"
               link="資料をみる"
               :to="'/digital-collection/' + item.identification"
               block
-            ></btn-inside>
-            <btn-open-in-new
+            ></elements-btn-inside>
+            <elements-btn-open-in-new
               v-if="item.link"
               link="資料をみる"
               :url="item.link"
               block
-            ></btn-open-in-new>
+            ></elements-btn-open-in-new>
           </v-card-actions>
         </v-card>
       </v-col>

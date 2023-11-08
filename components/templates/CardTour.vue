@@ -51,7 +51,7 @@ const { visible, inversion } = useVisible();
           </template>
         </v-card-text>
         <v-card-actions>
-          <btn-my-library></btn-my-library>
+          <elements-btn-my-library></elements-btn-my-library>
         </v-card-actions>
       </div>
     </v-expand-transition>

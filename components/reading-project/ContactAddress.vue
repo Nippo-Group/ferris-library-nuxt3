@@ -12,7 +12,9 @@ const title = "お問い合わせ";
               <p>
                 読書運動プロジェクトについてのお問い合わせは下記メールアドレスまでお願いいたします。
               </p>
-              <btn-email address="r_library@ferris.ac.jp"></btn-email>
+              <elements-btn-email
+                address="r_library@ferris.ac.jp"
+              ></elements-btn-email>
             </v-card-text>
           </card-reading-project-detail>
         </v-col>

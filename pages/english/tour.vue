@@ -52,7 +52,7 @@ const items = reactive([
 
 <template>
   <v-container>
-    <text-page-title>{{ title }}</text-page-title>
+    <elements-text-page-title>{{ title }}</elements-text-page-title>
     <v-row>
       <v-col
         v-for="(item, i) in items"

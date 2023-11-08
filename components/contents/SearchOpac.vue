@@ -64,11 +64,11 @@ const rules = ref({
               </v-text-field>
             </v-form>
             <v-btn-toggle divided density="compact">
-              <btn-open-in-new
+              <elements-btn-open-in-new
                 :link="langState === 'en' ? 'Detailed search' : '詳細検索'"
                 url="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
-              ></btn-open-in-new>
-              <btn-my-library></btn-my-library>
+              ></elements-btn-open-in-new>
+              <elements-btn-my-library></elements-btn-my-library>
             </v-btn-toggle>
           </v-card-text>
         </v-card>
@@ -77,14 +77,14 @@ const rules = ref({
         <v-card flat class="d-md-flex justify-start">
           <div>
             <v-card-text>
-              <btn-open-in-new
+              <elements-btn-open-in-new
                 :link="
                   langState === 'en'
                     ? 'Smartphone OPAC'
                     : 'スマートフォン版OPAC'
                 "
                 url="http://osirabe.net/opac.ferris/"
-              ></btn-open-in-new>
+              ></elements-btn-open-in-new>
             </v-card-text>
           </div>
           <div>

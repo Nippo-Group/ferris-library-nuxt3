@@ -5,7 +5,7 @@ useSeoMeta({ title: title.value });
 
 <template>
   <v-container>
-    <text-page-title>{{ title }}</text-page-title>
+    <elements-text-page-title>{{ title }}</elements-text-page-title>
     <v-row>
       <v-col cols="12">
         <p>図書館では、障がいのある方に以下の支援を行っています。</p>

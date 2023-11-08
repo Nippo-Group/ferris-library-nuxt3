@@ -32,7 +32,10 @@ defineProps<{
             </time>
           </v-card-text>
           <v-card-actions class="justify-center">
-            <btn-inside link="カレンダーをみる" to="/calendar"></btn-inside>
+            <elements-btn-inside
+              link="カレンダーをみる"
+              to="/calendar"
+            ></elements-btn-inside>
           </v-card-actions>
         </v-card>
       </v-col>

@@ -28,33 +28,33 @@ defineProps<{
         v-if="items.actions && items.actions.link"
         class="overflow-x-auto"
       >
-        <btn-inside
+        <elements-btn-inside
           v-if="items.actions && items.actions.link && items.actions.to"
           :link="items.actions.link"
           :to="items.actions.to"
-        ></btn-inside>
-        <btn-inside
+        ></elements-btn-inside>
+        <elements-btn-inside
           v-if="items.actions2 && items.actions2.link && items.actions2.to"
           :link="items.actions2.link"
           :to="items.actions2.to"
-        ></btn-inside>
+        ></elements-btn-inside>
       </v-card-actions>
       <v-card-actions
         v-if="items.openinnew && items.openinnew.link"
         class="overflow-x-auto"
       >
-        <btn-open-in-new
+        <elements-btn-open-in-new
           v-if="items.openinnew && items.openinnew.link && items.openinnew.url"
           :link="items.openinnew.link"
           :url="items.openinnew.url"
-        ></btn-open-in-new>
-        <btn-open-in-new
+        ></elements-btn-open-in-new>
+        <elements-btn-open-in-new
           v-if="
             items.openinnew2 && items.openinnew2.link && items.openinnew2.url
           "
           :link="items.openinnew2.link"
           :url="items.openinnew2.url"
-        ></btn-open-in-new>
+        ></elements-btn-open-in-new>
       </v-card-actions>
     </div>
     <v-divider></v-divider>

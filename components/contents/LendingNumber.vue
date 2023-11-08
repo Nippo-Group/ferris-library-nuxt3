@@ -15,8 +15,11 @@ const quantity = [
 </script>
 
 <template>
-  <text-sub-title>貸出冊数</text-sub-title>
-  <the-table :items-array="quantity" :headers="headers"></the-table>
+  <elements-text-sub-title>貸出冊数</elements-text-sub-title>
+  <elements-responsive-table
+    :items-array="quantity"
+    :headers="headers"
+  ></elements-responsive-table>
   <v-alert type="success" class="mt-4">
     参考図書、雑誌の最新号、貴重書、マイクロ資料、ビデオ、LD、DVD、CD-ROMは館内でご利用ください。
   </v-alert>

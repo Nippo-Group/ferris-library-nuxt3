@@ -5,7 +5,7 @@ useSeoMeta({ title: title.value });
 
 <template>
   <v-container>
-    <text-page-title>{{ title }}</text-page-title>
+    <elements-text-page-title>{{ title }}</elements-text-page-title>
     <p>
       図書館のキャリア支援のコーナーです。就職活動に役立つ契約データベースや図書館資料を紹介します。
     </p>
