@@ -1,0 +1,115 @@
+<script setup lang="ts">
+import imgTadoku01 from "~/assets/images/english-tadoku/tadoku-01.jpg";
+import imgTadoku02 from "~/assets/images/english-tadoku/tadoku-02.jpg";
+import imgTadoku03 from "~/assets/images/english-tadoku/tadoku-03.jpg";
+import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
+
+const { show } = useConfirmDL();
+</script>
+
+<template>
+  <v-container>
+    <v-row>
+      <v-col cols="12" md="6" lg="4">
+        <v-card>
+          <v-card-subtitle class="pt-4 pb-0">電子ブック</v-card-subtitle>
+          <v-card-title class="pt-0">EBSCO eBooks</v-card-title>
+          <v-img max-height="164" :src="imgTadoku01"></v-img>
+          <v-card-text>
+            Macmillan Readers や Magic Tree
+            Houseといった、英語多読用の電子ブック398冊が利用できます。
+          </v-card-text>
+          <v-card-actions>
+            <elements-btn-open-in-new
+              link="学内からはこちら"
+              url="http://search.ebscohost.com/login.aspx?profile=ehost&defaultdb=nlebk"
+            ></elements-btn-open-in-new>
+          </v-card-actions>
+          <v-divider></v-divider>
+          <v-card-text>
+            <v-alert density="compact" text type="success" class="mb-0">
+              学部生・大学院生・教職員は学外からも利用が可能です。
+              ※大学のアカウントでログインできます。
+            </v-alert>
+          </v-card-text>
+          <v-card-actions>
+            <elements-btn-open-in-new
+              link="学外からはこちら"
+              url="https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top.do&method=open"
+            ></elements-btn-open-in-new>
+            <v-btn
+              variant="elevated"
+              color="grey-lighten-4"
+              @click="
+                show(
+                  'アクセスガイド',
+                  '/documents/english-tadoku/EBSCOeBooks-access-guide.pdf',
+                  'PDF'
+                )
+              "
+            >
+              アクセスガイド
+              <icons-file-pdf end></icons-file-pdf>
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="6" lg="4">
+        <v-card>
+          <v-card-subtitle class="pt-4 pb-0">電子ブック</v-card-subtitle>
+          <v-card-title class="pt-0"
+            >Gale Virtual Reference Library</v-card-title
+          >
+          <v-img max-height="164" :src="imgTadoku02"></v-img>
+          <v-card-text>
+            <p>
+              俳優、ミュージシャン、アスリート、実業家、政治家などの各界の有名人についての伝記シリーズ「People
+              in the News Series」61冊を利用できます。
+            </p>
+            <p>学内からのみ利用できます。</p>
+          </v-card-text>
+          <v-card-actions>
+            <elements-btn-open-in-new
+              link="学内からはこちら"
+              url="https://go.galegroup.com/ps/i.do?p=GVRL&sw=w&u=ferris&v=2.1&subject=%E5%A4%9A%E8%AA%AD%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA%EF%BC%9A%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E3%82%92%E3%81%AB%E3%81%8E%E3%82%8F%E3%81%99%E6%9C%89%E5%90%8D%E4%BA%BA%E4%BC%9D%E8%A8%98&pg=BooksForSubject&it=static"
+            ></elements-btn-open-in-new>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="6" lg="4">
+        <v-card>
+          <v-card-subtitle class="pt-4 pb-0">書籍</v-card-subtitle>
+          <v-card-title class="pt-0">英語多読図書コーナー</v-card-title>
+          <v-card-text>
+            緑園本館4階に、英語多読図書を集めたコーナーがあります。貸出条件は一般図書と同じです。
+          </v-card-text>
+          <v-img :src="imgTadoku03" width="90%"></v-img>
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="6" lg="4">
+        <v-card>
+          <v-card-title>読書記録シート</v-card-title>
+          <v-card-text>
+            英語多読図書用の「読書記録シート」です。読んだ多読図書のタイトル、出版社、レベル、単語数、評価、感想を記録できます。
+          </v-card-text>
+          <v-card-actions>
+            <v-btn
+              variant="elevated"
+              color="grey-lighten-4"
+              @click="
+                show(
+                  '読書記録シート',
+                  '/documents/english-tadoku/reading-record-sheet.pdf',
+                  'PDF'
+                )
+              "
+            >
+              読書記録シート
+              <icons-file-pdf end></icons-file-pdf>
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
