@@ -120,7 +120,7 @@ const quantity = reactive([
 
 <template>
   <v-container>
-    <elements-text-page-title>{{ title }}</elements-text-page-title>
+    <elements-header-lv1>{{ title }}</elements-header-lv1>
     <v-row>
       <v-col cols="12" md="10" lg="8">
         <v-expansion-panels v-model="panel" variant="accordion" multiple>
@@ -136,7 +136,7 @@ const quantity = reactive([
     </v-row>
     <v-row>
       <v-col cols="12" md="10" lg="8">
-        <elements-text-sub-title>Please Note</elements-text-sub-title>
+        <elements-header-lv2>Please Note</elements-header-lv2>
         <v-alert
           v-for="(note, j) in pleaseNotes"
           :key="'note' + j"
@@ -151,8 +151,8 @@ const quantity = reactive([
     </v-row>
     <v-row>
       <v-col cols="12" md="10" lg="8">
-        <elements-text-sub-title
-          >Loan periods and checkouts limits</elements-text-sub-title
+        <elements-header-lv2
+          >Loan periods and checkouts limits</elements-header-lv2
         >
         <elements-responsive-table
           :items-array="quantity"

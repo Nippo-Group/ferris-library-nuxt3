@@ -161,8 +161,8 @@ const items = [
     variant="filled"
     label="カテゴリー"
   ></v-select>
-  <list-links-collection
+  <templates-list-links-collection
     :items="items"
     :category="selected"
-  ></list-links-collection>
+  ></templates-list-links-collection>
 </template>

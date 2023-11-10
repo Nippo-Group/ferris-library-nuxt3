@@ -51,7 +51,7 @@ const items = reactive([
 
 <template>
   <v-container>
-    <elements-text-page-title>{{ title }}</elements-text-page-title>
+    <elements-header-lv1>{{ title }}</elements-header-lv1>
     <v-row>
       <v-col v-for="(item, i) in items" :key="i" cols="12" sm="8" md="6" lg="4">
         <card-contact

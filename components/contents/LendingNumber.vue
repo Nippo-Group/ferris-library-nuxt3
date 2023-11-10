@@ -15,7 +15,7 @@ const quantity = [
 </script>
 
 <template>
-  <elements-text-sub-title>貸出冊数</elements-text-sub-title>
+  <elements-header-lv2>貸出冊数</elements-header-lv2>
   <elements-responsive-table
     :items-array="quantity"
     :headers="headers"

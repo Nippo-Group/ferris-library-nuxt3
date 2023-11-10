@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <elements-text-sub-title>サービス一覧</elements-text-sub-title>
+        <elements-header-lv2>サービス一覧</elements-header-lv2>
       </v-col>
       <v-col cols="12" md="10" lg="8" xl="6">
         <v-card height="100%">

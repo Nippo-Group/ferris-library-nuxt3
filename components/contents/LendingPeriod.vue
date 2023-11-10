@@ -24,7 +24,7 @@ const period = [
 </script>
 
 <template>
-  <elements-text-sub-title>貸出期間</elements-text-sub-title>
+  <elements-header-lv2>貸出期間</elements-header-lv2>
   <elements-responsive-table
     :items-array="period"
     :headers="headers"

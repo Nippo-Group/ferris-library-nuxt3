@@ -5,7 +5,7 @@ useSeoMeta({ title: title.value });
 
 <template>
   <v-container>
-    <elements-text-page-title>{{ title }}</elements-text-page-title>
+    <elements-header-lv1>{{ title }}</elements-header-lv1>
     <div>
       <p>
         電子図書館や、電子化された図書や雑誌など、一次情報（源情報、本文そのもの）を入手できるサイトを集めました。

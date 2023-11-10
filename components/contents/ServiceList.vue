@@ -35,7 +35,7 @@ const items = [
 </script>
 
 <template>
-  <elements-text-sub-title>サービス一覧</elements-text-sub-title>
+  <elements-header-lv2>サービス一覧</elements-header-lv2>
   <v-expansion-panels v-model="panel" variant="accordion" multiple>
     <v-expansion-panel v-for="(item, i) in items" :key="i">
       <v-expansion-panel-title>{{ item.title }}</v-expansion-panel-title>

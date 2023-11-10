@@ -99,14 +99,14 @@ const filter = (text: string): boolean => {
       </v-col>
     </v-row>
   </v-container>
-  <card-exhibition-details
+  <templates-card-exhibition-details
     ref="childRef"
     :eyecatch="eyecatch"
     :category="category"
     :title="contentTitle"
     :place-to-exhibit="placeToExhibit"
     :content="content"
-  ></card-exhibition-details>
+  ></templates-card-exhibition-details>
 </template>
 
 <style scoped>

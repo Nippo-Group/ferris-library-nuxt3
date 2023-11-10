@@ -14,7 +14,7 @@ const tab = ref(null);
         src="/documents/floor-map/floor-map-ryokuen.pdf"
       ></elements-pdf-viewer>
       <v-sheet align="center" color="grey-lighten-3" class="pa-6">
-        <elements-text-sub-title>今どこマップ</elements-text-sub-title>
+        <elements-header-lv2>今どこマップ</elements-header-lv2>
         <p>パワーポイントのファイルをダウンロードしますか？</p>
         <v-row justify="space-around" class="mt-4">
           <v-btn

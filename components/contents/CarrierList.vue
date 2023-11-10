@@ -202,29 +202,25 @@ const items3 = [
   <v-window v-model="tab">
     <v-window-item>
       <v-container>
-        <elements-text-sub-title>企業や業種を研究する</elements-text-sub-title>
+        <elements-header-lv2>企業や業種を研究する</elements-header-lv2>
         <templates-list-carrier :items="items1"></templates-list-carrier>
       </v-container>
     </v-window-item>
     <v-window-item>
       <v-container>
-        <elements-text-sub-title
-          >最新の時事情報をつかむ</elements-text-sub-title
-        >
+        <elements-header-lv2>最新の時事情報をつかむ</elements-header-lv2>
         <templates-list-carrier :items="items2"></templates-list-carrier>
       </v-container>
     </v-window-item>
     <v-window-item>
       <v-container>
-        <elements-text-sub-title
-          >職種や資格について調べる</elements-text-sub-title
-        >
+        <elements-header-lv2>職種や資格について調べる</elements-header-lv2>
         <templates-list-carrier :items="items3"></templates-list-carrier>
       </v-container>
     </v-window-item>
     <v-window-item>
       <v-container>
-        <elements-text-sub-title>OPACで関連本を集める</elements-text-sub-title>
+        <elements-header-lv2>OPACで関連本を集める</elements-header-lv2>
         <p class="mb-2">
           「就職」「キャリア」「職業」「業種」「企業」「仕事」「就活」などのキーワードで検索してみましょう。
         </p>

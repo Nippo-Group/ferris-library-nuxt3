@@ -1,5 +1,5 @@
 <template>
-  <elements-text-sub-title>注意事項</elements-text-sub-title>
+  <elements-header-lv2>注意事項</elements-header-lv2>
   <v-alert type="error">
     貸出手続きを忘れると出口のアラームが鳴ります。
   </v-alert>

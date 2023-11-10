@@ -5,7 +5,7 @@ useSeoMeta({ title: title.value });
 
 <template>
   <v-container>
-    <elements-text-page-title>{{ title }}</elements-text-page-title>
+    <elements-header-lv1>{{ title }}</elements-header-lv1>
     <v-alert density="compact" border="start" variant="outlined" type="warning">
       当WEBサイト上にある情報や画像などは、フェリス女学院大学附属図書館が所有または管理しています。<br />
       無断転載や無断使用を禁じます。</v-alert

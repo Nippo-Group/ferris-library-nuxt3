@@ -4,9 +4,9 @@ const error = useError();
 
 <template>
   <v-container>
-    <elements-text-page-title>
+    <elements-header-lv1>
       {{ error?.message }}
-    </elements-text-page-title>
+    </elements-header-lv1>
 
     <elements-btn-inside
       link="ホームへもどる"
