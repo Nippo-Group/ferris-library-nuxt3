@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import images from "@/assets/json/digital-collection/collection01.json";
-import type { ImgsObj } from "@/components/TheLightbox.vue";
-
 const title = ref("新三十六歌仙画帖");
 useSeoMeta({ title: title.value });
 
@@ -35,21 +32,6 @@ const breadcrumbs = [
     href: "/digital-collection/collection01",
   },
 ];
-
-// Lightbox用
-const lightboxComponent = ref();
-const imgs = computed(() => {
-  return images.map((value): ImgsObj => {
-    return {
-      src: value.src,
-      title: value.caption,
-      alt: value.caption,
-    };
-  });
-});
-const lightboxShow = (index: number): void => {
-  lightboxComponent.value.onShow(index);
-};
 </script>
 
 <template>
@@ -105,41 +87,10 @@ const lightboxShow = (index: number): void => {
           </p>
         </v-alert>
       </v-col>
-      <v-col
-        v-for="(image, index) in images"
-        :key="index"
-        cols="6"
-        md="3"
-        xl="2"
-      >
-        <v-card
-          elevation="0"
-          color="grey-lighten-4"
-          class="open-tinybox"
-          @click="lightboxShow(index)"
-        >
-          <v-card-title :class="{ hidden: index % 2 === 1 }">
-            <v-chip small variant="tonal" class="mr-2">{{ image.num }}</v-chip>
-            {{ image.alt }}
-          </v-card-title>
-          <v-img :src="image.src" :alt="image.alt" aspect-ratio="1" cover>
-            <template #placeholder>
-              <v-row class="fill-height ma-0" align="center" justify="center">
-                <v-progress-circular indeterminate></v-progress-circular>
-              </v-row>
-            </template>
-          </v-img>
-          <v-card-text :class="{ hidden: index % 2 === 0 }">
-            <p class="text-caption">{{ image.lr }}</p>
-            <p class="text-caption">{{ image.poem }}</p>
-          </v-card-text>
-        </v-card>
+      <v-col>
+        <contents-collection-shin-sanjurokkasen />
       </v-col>
     </v-row>
-    <templates-the-lightbox
-      ref="lightboxComponent"
-      :imgs="imgs"
-    ></templates-the-lightbox>
   </v-container>
 </template>
 

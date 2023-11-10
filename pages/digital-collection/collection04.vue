@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import images from "@/assets/json/digital-collection/collection04.json";
-import type { ImgsObj } from "@/components/TheLightbox.vue";
-
 const title = ref("Japanese Fairy Tale");
 useSeoMeta({ title: title.value });
 
@@ -32,21 +29,6 @@ const breadcrumbs = [
     href: "/digital-collection/collection04",
   },
 ];
-
-// Lightbox用
-const lightboxComponent = ref();
-const imgs = computed(() => {
-  return images.map((value): ImgsObj => {
-    return {
-      src: value.src,
-      title: value.caption,
-      alt: value.caption,
-    };
-  });
-});
-const lightboxShow = (index: number): void => {
-  lightboxComponent.value.onShow(index);
-};
 </script>
 
 <template>
@@ -76,42 +58,10 @@ const lightboxShow = (index: number): void => {
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col
-        v-for="(image, idx) in images"
-        :key="'image' + idx"
-        cols="6"
-        sm="4"
-        md="3"
-      >
-        <v-card
-          elevation="0"
-          color="grey-lighten-4"
-          height="100%"
-          @click="lightboxShow(idx)"
-        >
-          <v-card-text
-            ><v-chip small class="mr-2" variant="tonal">{{
-              image.num
-            }}</v-chip></v-card-text
-          >
-          <v-img :src="image.src" class="open-tinybox" aspect-ratio="1" cover>
-            <template #placeholder>
-              <v-row class="fill-height ma-0" align="center" justify="center">
-                <v-progress-circular indeterminate></v-progress-circular>
-              </v-row>
-            </template>
-          </v-img>
-          <v-card-text>
-            <p class="mb-0">Japanese Fairy Tale</p>
-            <p class="mb-0">{{ image.caption }}</p>
-          </v-card-text>
-        </v-card>
+      <v-col>
+        <contents-collection-japanese-fairy-tale />
       </v-col>
     </v-row>
-    <templates-the-lightbox
-      ref="lightboxComponent"
-      :imgs="imgs"
-    ></templates-the-lightbox>
   </v-container>
 </template>
 

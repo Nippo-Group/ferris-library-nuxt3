@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import images from "@/assets/json/digital-collection/collection08.json";
 import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
 
 const { show } = useConfirmDL();
@@ -30,21 +29,6 @@ const zipFile = {
   name: "一括ダウンロード",
   url: "/documents/digital-collection/collection08/henry_more.zip",
   type: "ZIP",
-};
-
-// Lightbox用
-const lightboxComponent = ref();
-const imgs = computed(() => {
-  return images.map((value) => {
-    return {
-      src: value.src,
-      title: value.caption,
-      alt: value.caption,
-    };
-  });
-});
-const lightboxShow = (index: number) => {
-  lightboxComponent.value.onShow(index);
 };
 </script>
 
@@ -95,42 +79,14 @@ const lightboxShow = (index: number) => {
           </v-container>
         </v-card>
       </v-col>
-      <v-col
-        v-for="(image, idx) in images"
-        :key="idx"
-        cols="6"
-        sm="4"
-        md="3"
-        xl="2"
-      >
-        <v-card
-          elevation="0"
-          color="grey-lighten-4"
-          height="100%"
-          @click="lightboxShow(idx)"
-        >
-          <v-img :src="image.src" class="open-tinybox" aspect-ratio="1.5" cover>
-            <template #placeholder>
-              <v-row class="fill-height ma-0" align="center" justify="center">
-                <v-progress-circular indeterminate></v-progress-circular>
-              </v-row>
-            </template>
-          </v-img>
-          <v-card-text>{{ image.caption }}</v-card-text>
-        </v-card>
+      <v-col>
+        <contents-collection-henry-more />
       </v-col>
     </v-row>
-    <templates-the-lightbox
-      ref="lightboxComponent"
-      :imgs="imgs"
-    ></templates-the-lightbox>
   </v-container>
 </template>
 
 <style scoped>
-.caption {
-  margin: 0;
-}
 .titleLogo {
   max-width: 100%;
 }
