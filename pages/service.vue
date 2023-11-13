@@ -11,7 +11,7 @@ useSeoMeta({ title: title.value });
         <contents-service-list />
       </v-col>
       <v-col cols="12" md="10" lg="8" class="text-center">
-        <btn-my-library />
+        <elements-btn-my-library />
       </v-col>
     </v-row>
     <v-row>

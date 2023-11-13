@@ -2,120 +2,6 @@
 const title = ref("Lending Service");
 useSeoMeta({ title: title.value });
 definePageMeta({ layout: "english" });
-
-const panel = ref([0, 1]);
-const items = reactive([
-  {
-    title: "Borrowing",
-    content:
-      "Bring the items you wish to borrow and your student ID or library card to the circulation desk. You can also use the automatic book-circulation machine on the second floor of the Ryokuen Library to borrow items.",
-  },
-  {
-    title: "Returns",
-    content:
-      "During library hours, bring the items you wish to return to the circulation desk. After hours, return items through the book drop. Overdue items will result in a suspension of borrowing rights for a period equal to the overdue period, up to a two week maximum. Items may be returned to either the Ryokuen or Yamate Libraries.",
-  },
-  {
-    title: "Renewals",
-    content:
-      "Items may be renewed so long as another user has not reserved them. Undergraduate students, graduate students, faculty and staff can also renew items through MyLibrary.",
-  },
-  {
-    title: "Reserving",
-    content:
-      "If an item you need has been checked out, you may reserve it. When the item you requested is returned, we will send you an email.",
-  },
-  {
-    title: "Transfer Service between Ferris Libraries",
-    content:
-      "You can arrange to have items in the Ryokuen Library transferred to the Yamate Library for pick up, and vice versa. When the item you requested arrives, we will send you an email. Transferred items will be kept for pick-up for one week.",
-  },
-  {
-    title: "Acquisition Requests",
-    content:
-      "Requests for the library to acquire items may be made at the circulation desk by undergraduate students, graduate students, faculty and staff. It usually takes between two weeks and two months for requests to be processed.",
-  },
-]);
-const pleaseNotes = reactive([
-  {
-    type: "error",
-    text: "If you try to take materials out of the library without having checked them out, they will be detected by a sensor and an alarm will sound.",
-  },
-  {
-    type: "error",
-    text: "In the event that you lose or damage library materials, please contact the library promptly.",
-  },
-  {
-    type: "error",
-    text: "Lending other people library materials that you have borrowed is prohibited, as is allowing other people to use your student ID or library card.",
-  },
-  {
-    type: "success",
-    text: "If the library does not have an item you need or if you cannot find an item that you are looking for, please contact the reference counter. The reference staff will be happy to help you.",
-  },
-  {
-    type: "success",
-    text: "Reference books, recent journals, microfilm and microfiche materials, videotapes, LDs, DVDs, CD-ROMs and DVDs are only available for use in the library.",
-  },
-  {
-    type: "info",
-    text: "Extended borrowing privileges are granted to undergraduate and graduate students over the spring, summer and winter vacation periods.",
-  },
-  {
-    type: "info",
-    text: "Certain materials may be borrowed for same-day use. There is no limit on the number of these items that may be borrowed.",
-  },
-]);
-const headersQuantity = ref([
-  "User Status",
-  "Books",
-  "Journals",
-  "Course Reserve Books",
-  "Musical Scores",
-  "CDs & Records",
-]);
-const quantity = reactive([
-  [
-    "Undergraduate students (1st, 2nd and 3rd year)",
-    "30 items / 2 weeks",
-    "30 items / 1 week",
-    "5 items / 1 week",
-    "8 items / 1 week",
-    "8 items each / 2 days",
-  ],
-  [
-    "Undergraduate students (4th year)",
-    "30 items / 30 days",
-    "30 items / 1 week",
-    "5 items / 1 week",
-    "8 items / 1 week",
-    "8 items each / 2 days",
-  ],
-  [
-    "Graduate students",
-    "30 items / 30 days",
-    "30 items / 1 week",
-    "5 items / 1 week",
-    "8 items / 1 week",
-    "8 items each / 1 week",
-  ],
-  [
-    "Faculty",
-    "60 items / Until the end of Febrary",
-    "30 items / Until the end of Febrary",
-    "0 items",
-    "30 items / Until the end of Febrary",
-    "30 items each / Until the end of Febrary",
-  ],
-  [
-    "Staff",
-    "30 items / 30 days",
-    "30 items / 1 week",
-    "0 items",
-    "8 items / 1 week",
-    "8 items each / 1 week",
-  ],
-]);
 </script>
 
 <template>
@@ -123,41 +9,20 @@ const quantity = reactive([
     <elements-header-lv1>{{ title }}</elements-header-lv1>
     <v-row>
       <v-col cols="12" md="10" lg="8">
-        <v-expansion-panels v-model="panel" variant="accordion" multiple>
-          <v-expansion-panel v-for="(item, i) in items" :key="i">
-            <v-expansion-panel-title>{{ item.title }}</v-expansion-panel-title>
-            <v-expansion-panel-text>{{ item.content }}</v-expansion-panel-text>
-          </v-expansion-panel>
-        </v-expansion-panels>
+        <contents-service-list />
       </v-col>
       <v-col cols="12" md="10" lg="8" class="text-center">
-        <elements-btn-my-library></elements-btn-my-library>
+        <elements-btn-my-library />
       </v-col>
     </v-row>
     <v-row>
       <v-col cols="12" md="10" lg="8">
-        <elements-header-lv2>Please Note</elements-header-lv2>
-        <v-alert
-          v-for="(note, j) in pleaseNotes"
-          :key="'note' + j"
-          density="compact"
-          variant="outlined"
-          :type="note.type"
-          class="mt-4"
-        >
-          {{ note.text }}
-        </v-alert>
+        <contents-lending-notes />
       </v-col>
     </v-row>
     <v-row>
       <v-col cols="12" md="10" lg="8">
-        <elements-header-lv2
-          >Loan periods and checkouts limits</elements-header-lv2
-        >
-        <elements-responsive-table
-          :items-array="quantity"
-          :headers="headersQuantity"
-        ></elements-responsive-table>
+        <contents-lending-period />
       </v-col>
     </v-row>
   </v-container>
