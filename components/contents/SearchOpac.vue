@@ -7,6 +7,31 @@ const qSearchWord = ref("");
 
 const { langState } = useLanguage();
 
+const sentence = computed(() => {
+  switch (langState.value) {
+    case "en":
+      return {
+        title: "OPAC Detailed search",
+        sp: "Smart Phone",
+        spOPAC: "Smart Phone OPAC",
+        search: "Search",
+        quickSearch: "Quick search",
+        detailedSearch: "Detailed search",
+        placeholder: "Please enter a keyword",
+      };
+    default:
+      return {
+        title: "OPAC 蔵書検索",
+        sp: "スマートフォン",
+        spOPAC: "スマートフォン版OPAC",
+        search: "検索",
+        quickSearch: "クイックサーチ",
+        detailedSearch: "詳細検索",
+        placeholder: "キーワードを入力してください",
+      };
+  }
+});
+
 const rules = ref({
   required: (value: string) => !!value || "Field is required",
 });
@@ -14,14 +39,14 @@ const rules = ref({
 
 <template>
   <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
-    <icons-library-shelves start />OPAC 蔵書検索
+    <icons-library-shelves start /> {{ sentence.title }}
   </div>
   <v-card>
     <v-tabs v-model="tab" color="primary">
       <v-tab>
-        {{ langState === "en" ? "Search" : "検索" }}
+        {{ sentence.search }}
       </v-tab>
-      <v-tab> {{ langState === "en" ? "Smartphone" : "スマートフォン" }}</v-tab>
+      <v-tab> {{ sentence.sp }}</v-tab>
     </v-tabs>
     <v-window v-model="tab">
       <v-window-item>
@@ -44,12 +69,8 @@ const rules = ref({
                 v-model="qSearchWord"
                 :rules="[rules.required]"
                 name="word"
-                :label="langState === 'en' ? 'Quick search' : 'クイックサーチ'"
-                :placeholder="
-                  langState === 'en'
-                    ? 'Please enter a keyword'
-                    : 'キーワードを入力してください'
-                "
+                :label="sentence.quickSearch"
+                :placeholder="sentence.placeholder"
                 type="text"
                 variant="outlined"
                 density="compact"
@@ -65,7 +86,7 @@ const rules = ref({
             </v-form>
             <v-btn-toggle divided density="compact">
               <elements-btn-open-in-new
-                :link="langState === 'en' ? 'Detailed search' : '詳細検索'"
+                :link="sentence.detailedSearch"
                 url="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
               ></elements-btn-open-in-new>
               <elements-btn-my-library></elements-btn-my-library>
@@ -78,11 +99,7 @@ const rules = ref({
           <div>
             <v-card-text>
               <elements-btn-open-in-new
-                :link="
-                  langState === 'en'
-                    ? 'Smartphone OPAC'
-                    : 'スマートフォン版OPAC'
-                "
+                :link="sentence.spOPAC"
                 url="http://osirabe.net/opac.ferris/"
               ></elements-btn-open-in-new>
             </v-card-text>
