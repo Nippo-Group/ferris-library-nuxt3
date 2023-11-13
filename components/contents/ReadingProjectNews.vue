@@ -15,5 +15,7 @@ const contents = computed(() => {
 </script>
 
 <template>
-  <templates-list-news :contents-list="contents"></templates-list-news>
+  <templates-card-reading-project title="News">
+    <templates-list-news :contents-list="contents"></templates-list-news>
+  </templates-card-reading-project>
 </template>

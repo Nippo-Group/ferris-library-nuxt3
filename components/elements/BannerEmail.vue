@@ -25,7 +25,7 @@ const setCopyMessage = () => {
 </script>
 
 <template>
-  <v-banner single-line>
+  <v-banner lines="one" :stacked="false">
     <icons-email-defult start size="large" color="primary" />
     {{ address }}
 

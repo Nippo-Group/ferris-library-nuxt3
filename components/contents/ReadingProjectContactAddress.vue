@@ -3,22 +3,14 @@ const title = "お問い合わせ";
 </script>
 
 <template>
-  <card-reading-project :title="title">
-    <v-container>
-      <v-row>
-        <v-col>
-          <card-reading-project-detail>
-            <v-card-text>
-              <p>
-                読書運動プロジェクトについてのお問い合わせは下記メールアドレスまでお願いいたします。
-              </p>
-              <elements-btn-email
-                address="r_library@ferris.ac.jp"
-              ></elements-btn-email>
-            </v-card-text>
-          </card-reading-project-detail>
-        </v-col>
-      </v-row>
-    </v-container>
-  </card-reading-project>
+  <templates-card-reading-project :title="title">
+    <v-card-text>
+      <p>
+        読書運動プロジェクトについてのお問い合わせは下記メールアドレスまでお願いいたします。
+      </p>
+    </v-card-text>
+    <elements-banner-email
+      address="r_library@ferris.ac.jp"
+    ></elements-banner-email>
+  </templates-card-reading-project>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const title = "活動拠点～附属図書館～";
+const title = "図書館紹介動画";
 const movie = [
   {
     src: "https://www.youtube.com/embed/HRKpRB5fZ-o",
@@ -13,34 +13,19 @@ const movie = [
 </script>
 
 <template>
-  <card-reading-project :title="title">
+  <templates-card-reading-project :title="title">
     <v-container>
-      <v-row>
-        <v-col>
-          <card-reading-project-detail sub-title="図書館紹介動画">
-            <v-container>
-              <v-row dense>
-                <v-col
-                  v-for="(item, index) in movie"
-                  :key="`video-${index}`"
-                  cols="12"
-                  md="6"
-                >
-                  <card-reading-project-detail-article>
-                    <v-card-text>
-                      <elements-youtube-viewer
-                        :title="item.title"
-                        :src="item.src"
-                      >
-                      </elements-youtube-viewer>
-                    </v-card-text>
-                  </card-reading-project-detail-article>
-                </v-col>
-              </v-row>
-            </v-container>
-          </card-reading-project-detail>
+      <v-row dense>
+        <v-col
+          v-for="(item, index) in movie"
+          :key="`video-${index}`"
+          cols="12"
+          md="6"
+        >
+          <elements-youtube-viewer :title="item.title" :src="item.src">
+          </elements-youtube-viewer>
         </v-col>
       </v-row>
     </v-container>
-  </card-reading-project>
+  </templates-card-reading-project>
 </template>
