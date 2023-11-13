@@ -9,7 +9,7 @@ definePageMeta({ layout: "english" });
     <elements-header-lv1>{{ title }}</elements-header-lv1>
     <v-row>
       <v-col cols="12" xl="8">
-        <the-calendar></the-calendar>
+        <contents-opening-calendar></contents-opening-calendar>
       </v-col>
     </v-row>
   </v-container>
