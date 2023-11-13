@@ -1,36 +1,29 @@
 <script setup lang="ts">
 import { mdiOpenInNew, mdiMagnify, mdiSend } from "@mdi/js";
-import { useLanguage } from "@/composable/language/useLanguage";
+import { useLangSwitch } from "@/composable/language/useLangSwitch";
 
 const tab = ref(null);
 const qSearchWord = ref("");
 
-const { langState } = useLanguage();
-
-const sentence = computed(() => {
-  switch (langState.value) {
-    case "en":
-      return {
-        title: "OPAC Detailed search",
-        sp: "Smart Phone",
-        spOPAC: "Smart Phone OPAC",
-        search: "Search",
-        quickSearch: "Quick search",
-        detailedSearch: "Detailed search",
-        placeholder: "Please enter a keyword",
-      };
-    default:
-      return {
-        title: "OPAC 蔵書検索",
-        sp: "スマートフォン",
-        spOPAC: "スマートフォン版OPAC",
-        search: "検索",
-        quickSearch: "クイックサーチ",
-        detailedSearch: "詳細検索",
-        placeholder: "キーワードを入力してください",
-      };
-  }
-});
+const itemsEng = {
+  title: "OPAC Detailed search",
+  sp: "Smart Phone",
+  spOPAC: "Smart Phone OPAC",
+  search: "Search",
+  quickSearch: "Quick search",
+  detailedSearch: "Detailed search",
+  placeholder: "Please enter a keyword",
+};
+const items = {
+  title: "OPAC 蔵書検索",
+  sp: "スマートフォン",
+  spOPAC: "スマートフォン版OPAC",
+  search: "検索",
+  quickSearch: "クイックサーチ",
+  detailedSearch: "詳細検索",
+  placeholder: "キーワードを入力してください",
+};
+const { contents } = useLangSwitch(items, itemsEng);
 
 const rules = ref({
   required: (value: string) => !!value || "Field is required",
@@ -39,14 +32,14 @@ const rules = ref({
 
 <template>
   <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
-    <icons-library-shelves start /> {{ sentence.title }}
+    <icons-library-shelves start /> {{ contents.title }}
   </div>
   <v-card>
     <v-tabs v-model="tab" color="primary">
       <v-tab>
-        {{ sentence.search }}
+        {{ contents.search }}
       </v-tab>
-      <v-tab> {{ sentence.sp }}</v-tab>
+      <v-tab> {{ contents.sp }}</v-tab>
     </v-tabs>
     <v-window v-model="tab">
       <v-window-item>
@@ -69,8 +62,8 @@ const rules = ref({
                 v-model="qSearchWord"
                 :rules="[rules.required]"
                 name="word"
-                :label="sentence.quickSearch"
-                :placeholder="sentence.placeholder"
+                :label="contents.quickSearch"
+                :placeholder="contents.placeholder"
                 type="text"
                 variant="outlined"
                 density="compact"
@@ -86,7 +79,7 @@ const rules = ref({
             </v-form>
             <v-btn-toggle divided density="compact">
               <elements-btn-open-in-new
-                :link="sentence.detailedSearch"
+                :link="contents.detailedSearch"
                 url="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
               ></elements-btn-open-in-new>
               <elements-btn-my-library></elements-btn-my-library>
@@ -99,7 +92,7 @@ const rules = ref({
           <div>
             <v-card-text>
               <elements-btn-open-in-new
-                :link="sentence.spOPAC"
+                :link="contents.spOPAC"
                 url="http://osirabe.net/opac.ferris/"
               ></elements-btn-open-in-new>
             </v-card-text>
