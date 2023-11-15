@@ -3,7 +3,7 @@ import { useNews } from "@/composable/news/useNews";
 import type { News } from "@/types/news";
 
 defineProps<{
-  contentsList: News[] | undefined;
+  contentsList: News[] | null;
 }>();
 
 const { newsListFilter } = useNews();

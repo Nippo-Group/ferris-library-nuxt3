@@ -12,7 +12,7 @@ const { data } = await useMicroCMSGetList<News>({
     <icons-newspaper-variant start></icons-newspaper-variant>News
   </div>
   <templates-list-news
-    :contents-list="data ? data.contents : undefined"
+    :contents-list="data ? data.contents : null"
   ></templates-list-news>
   <div class="text-center mt-5">
     <elements-btn-inside link="ニュース一覧へ" to="news"></elements-btn-inside>
