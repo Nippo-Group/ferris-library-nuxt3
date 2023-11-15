@@ -20,7 +20,7 @@ const menus = computed(() => {
 <template>
   <v-app id="inspire">
     <templates-navigation-drawer :menus="menus"></templates-navigation-drawer>
-    <templates-a-header :action="inversion">
+    <templates-a-header>
       <img
         v-if="langState === 'en'"
         src="~/assets/images/layouts/site-logo-english.png"
