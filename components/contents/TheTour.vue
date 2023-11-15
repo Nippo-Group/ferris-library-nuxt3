@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useLangSwitch } from "@/composable/language/useLangSwitch";
+
 const items = {
   title: "ツアー",
   text: "新入生が大学での学習を始めるにあたり、必要不可欠な図書館の利用方法を知ってもらうことを目的としています。R&Rや導入演習などの授業単位で実施します。専任教員・非常勤教員の方々からのお申し込みを受け付けます。",
@@ -20,12 +22,34 @@ const items = {
     },
   ],
 };
+const itemsEng = {
+  title: "Tours",
+  text: "To introduce our services and facilities to new students, the University Library offers tailor-made tours for class groups at the start of each academic year. We accept applications from faculty (including part-time lecturers) on behalf of their classes.",
+  contents: [
+    {
+      subtitle: "Implementation Period",
+      text: "April to June",
+    },
+    {
+      subtitle: "Content",
+      list: [
+        "Students are introduced to the library's services and facilities and taken on a tour of the library.",
+        "Students are taught how to use the library's OPAC, decipher search results, and find the materials that they want.",
+      ],
+    },
+    {
+      subtitle: "Applications",
+      text: 'Apply by filling out a "Tour Application Form." (MyLibrary Login) These forms are sent to faculty in mid-March.',
+    },
+  ],
+};
+const { contents } = useLangSwitch(items, itemsEng);
 </script>
 
 <template>
   <templates-card-tour
-    :title="items.title"
-    :text="items.text"
-    :contents="items.contents"
+    :title="contents.title"
+    :text="contents.text"
+    :contents="contents.contents"
   ></templates-card-tour>
 </template>

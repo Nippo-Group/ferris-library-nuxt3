@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useLangSwitch } from "@/composable/language/useLangSwitch";
+
 const items = {
   title: "ガイダンス",
   text: "卒業論文やレポートを執筆する際に必要となる、文献の探し方の習得を目的としています。<br />基礎的な文献検索の実習などをパッケージ化して、ゼミ単位・授業単位で実施します。専任教員・非常勤教員の方々からのお申し込みを受け付けます。<br />このほか学生の希望により個別のガイダンスも受け付けています。",
@@ -21,12 +23,37 @@ const items = {
     },
   ],
 };
+
+const itemsEng = {
+  title: "Guidance",
+  text: "We offer guidance workshops designed to develop and strengthen the research skills that 3rd and 4th year students need in order to find and use information sources for their graduation theses. We accept applications from faculty (including part-time lecturers) on behalf of their seminar groups.",
+  contents: [
+    {
+      subtitle: "Implementation Period",
+      text: "Weekdays in term. Tours take priority over workshops from April to May.",
+    },
+    {
+      subtitle: "Content",
+      list: [
+        "A short DVD on report writing will be screened.",
+        "Training and instruction will be given on the use of a variety of databases.",
+        "Information sources related to the research program of each seminar will be introduced.",
+      ],
+    },
+    {
+      subtitle: "Applications",
+      text: 'Apply by filling out a "Guidance Application Form" (MyLibrary Login)',
+    },
+  ],
+};
+
+const { contents } = useLangSwitch(items, itemsEng);
 </script>
 
 <template>
   <templates-card-tour
-    :title="items.title"
-    :text="items.text"
-    :contents="items.contents"
+    :title="contents.title"
+    :text="contents.text"
+    :contents="contents.contents"
   ></templates-card-tour>
 </template>
