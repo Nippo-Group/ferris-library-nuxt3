@@ -1,7 +1,21 @@
 <script setup lang="ts">
 import { mdiBookSearchOutline } from "@mdi/js";
+import { useLangSwitch } from "@/composable/language/useLangSwitch";
 
-const items = [
+type Link = {
+  name?: string;
+  href?: string;
+  openInNew?: boolean;
+  push?: string;
+  comment?: string;
+};
+type Item = {
+  subTitle: string;
+  step: number;
+  list: Link[];
+};
+
+const items: Item[] = [
   {
     subTitle: "学内の図書、雑誌、新聞を探す",
     step: 1,
@@ -78,12 +92,93 @@ const items = [
     ],
   },
 ];
+
+const itemsEng: Item[] = [
+  {
+    subTitle:
+      "Searching for Books, Journals and Newspapers in Ferris University Library",
+    step: 1,
+    list: [
+      {
+        name: "Ferris University Library OPAC",
+        href: "https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init",
+        openInNew: true,
+      },
+      {
+        name: "Newspaper list (Ryokuen Library)",
+        comment: "This is only a Japanese page",
+        push: "/newspaper",
+      },
+    ],
+  },
+  {
+    subTitle: "Searching for Journal Articles and Information",
+    step: 2,
+    list: [
+      {
+        name: "Database and eBook list",
+        push: "/database",
+        comment: "This is only a Japanese page",
+      },
+      {
+        name: "CiNii Research",
+        href: "https://cir.nii.ac.jp/",
+        comment: "operated by the National Institute of Informatics",
+        openInNew: true,
+      },
+    ],
+  },
+  {
+    subTitle: "Searching for Information at Other Libraries",
+    step: 3,
+    list: [
+      {
+        name: "CiNii Books",
+        href: "http://ci.nii.ac.jp/books/",
+        comment: "operated by the National Institute of Informatics",
+        openInNew: true,
+      },
+      {
+        name: "Webcat Plus",
+        href: "http://webcatplus.nii.ac.jp/",
+        comment: "operated by the National Institute of Informatics",
+        openInNew: true,
+      },
+      {
+        name: "National Diet Library Search",
+        href: "http://iss.ndl.go.jp/",
+        comment: "operated by the National Diet Library",
+        openInNew: true,
+      },
+    ],
+  },
+  {
+    subTitle: "External Links",
+    step: 4,
+    list: [
+      {
+        name: "Primary Sources",
+        push: "/links-collection-1",
+        comment:
+          "Links to sites containing full-text primary sources (free). This is only a Japanese page",
+      },
+      {
+        name: "Secondary Sources",
+        push: "/links-collection-2",
+        comment:
+          "Links to external sites enabling searches for secondary sources, such as the catalogs of libraries both in Japan and abroad, and portal sites for searching for books and journal articles. This is only a Japanese page",
+      },
+    ],
+  },
+];
+
+const { contents } = useLangSwitch(items, itemsEng);
 </script>
 
 <template>
   <v-container>
     <v-row>
-      <v-col v-for="(item, i) in items" :key="'item-' + i" cols="12">
+      <v-col v-for="(item, i) in contents" :key="'item-' + i" cols="12">
         <templates-card-list-btn
           :title="item.subTitle"
           :step="item.step"
