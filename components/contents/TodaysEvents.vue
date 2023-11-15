@@ -44,7 +44,7 @@ const FindEventsToday = (events: Event[]) => {
 <template>
   <templates-list-event
     :title="title"
-    :date="today"
+    :date="dateFormat(today)"
     :events-ryokuen="todaysEventsRyokuen"
     :events-yamate="todaysEventsYamate"
   ></templates-list-event>
