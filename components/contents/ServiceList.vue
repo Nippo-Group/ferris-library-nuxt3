@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { useLanguage } from "@/composable/language/useLanguage";
 import { useLangSwitch } from "@/composable/language/useLangSwitch";
 
+const { langState } = useLanguage();
 const panel = ref([0, 1]);
 
 const title = "サービス一覧";

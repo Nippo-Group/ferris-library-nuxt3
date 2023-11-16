@@ -20,7 +20,7 @@ defineProps<{
   <v-card :title="title" :prepend-icon="icon">
     <v-card-text>
       <ul class="link-list">
-        <li v-for="(item, j) in list" :key="'item' + i + j">
+        <li v-for="(item, index) in list" :key="'item' + index">
           <v-btn
             v-if="item.name"
             class="text-none"

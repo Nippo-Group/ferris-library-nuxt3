@@ -178,7 +178,7 @@ const { contents } = useLangSwitch(items, itemsEng);
 <template>
   <v-container>
     <v-row>
-      <v-col v-for="(item, i) in contents" :key="'item-' + i" cols="12">
+      <v-col v-for="(item, index) in contents" :key="'item-' + index" cols="12">
         <templates-card-list-btn
           :title="item.subTitle"
           :step="item.step"
