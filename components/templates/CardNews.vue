@@ -4,6 +4,8 @@ import type { News } from "@/types/news";
 defineProps<{
   items: News;
 }>();
+
+const dayjs = useDayjs();
 </script>
 
 <template>
@@ -17,7 +19,7 @@ defineProps<{
         {{ items.title }}
       </v-card-title>
       <v-card-subtitle>
-        {{ dateFormat(items.date) }}
+        {{ useDateFormat(dayjs(items.date)).ja.value }}
       </v-card-subtitle>
     </v-card-item>
     <div class="content-body">

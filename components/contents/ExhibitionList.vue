@@ -2,11 +2,9 @@
 import type { Exhibitions } from "@/types/exhibitions";
 
 // CMSから記事を取得
-const { data } = await useMicroCMSGetList<Exhibitions>({
-  endpoint: "exhibition",
-  queries: { limit: 100, orders: "-date" },
-});
-const contents = computed(() => data.value?.contents);
+const { contents } = useArticleExhibition({ limit: 100, orders: "-date" });
+
+const dayjs = useDayjs();
 
 // ダイアログで詳細を表示
 const eyecatch = ref<string>();
@@ -27,7 +25,7 @@ const openDitails = (item: Exhibitions) => {
 };
 
 // ソートの切り替え
-const reverseOrder = () => data.value?.contents.reverse();
+const reverseOrder = () => contents.value?.reverse();
 
 // キーワード検索
 const keyword = ref<string | undefined>();
@@ -50,7 +48,7 @@ const filter = (text: string): boolean => {
             hide-details
             single-line
             label="Keywords"
-            variant="outline"
+            clearable
           ></v-text-field>
           <v-spacer></v-spacer>
           <v-btn icon @click="reverseOrder()">
@@ -58,7 +56,7 @@ const filter = (text: string): boolean => {
           </v-btn>
         </v-toolbar> </v-col
     ></v-row>
-    <v-row v-if="data">
+    <v-row v-if="contents">
       <v-slide-y-transition group>
         <v-col
           v-for="item in contents"
@@ -87,7 +85,7 @@ const filter = (text: string): boolean => {
               {{ item.title }}
             </v-card-title>
             <v-card-subtitle v-if="item.date" class="pb-2">
-              {{ dateFormat(item.date) }}
+              {{ useDateFormat(dayjs(item.date)).ja.value }}
             </v-card-subtitle>
           </v-card>
         </v-col>

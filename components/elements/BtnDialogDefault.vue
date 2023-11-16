@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useVisible } from "@/composable/utilities/useVisible";
-
 defineProps<{
   title: string;
 }>();

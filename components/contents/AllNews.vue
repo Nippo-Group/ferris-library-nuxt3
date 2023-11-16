@@ -1,19 +1,6 @@
 <script setup lang="ts">
-import { usePagination } from "@/composable/utilities/usePagination";
-import type { News } from "@/types/news";
+const { contents } = useArticleNews({ limit: 100, orders: "-date" });
 
-const { data } = await useMicroCMSGetList<News>({
-  endpoint: "news",
-  queries: { limit: 100, orders: "-date" },
-});
-
-const contents = computed(() => {
-  if (data) {
-    return data.value?.contents;
-  } else {
-    return undefined;
-  }
-});
 const contentsLength = computed(() => {
   return contents.value ? contents.value.length : 0;
 });

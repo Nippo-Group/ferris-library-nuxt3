@@ -3,7 +3,7 @@ import { useNews } from "@/composable/news/useNews";
 import type { News } from "@/types/news";
 
 defineProps<{
-  contentsList: News[] | null;
+  contentsList: News[] | undefined | null;
 }>();
 
 const { newsListFilter } = useNews();
@@ -21,8 +21,11 @@ const { newsListFilter } = useNews();
         </templates-list-news-item>
       </template>
     </v-list>
-    <v-card-text v-else>
+    <v-card-text v-else-if="contentsList === undefined">
       <p>現在ニュースはありません</p>
+    </v-card-text>
+    <v-card-text v-else>
+      <p>ニュースの取得に失敗しました</p>
     </v-card-text>
   </v-card>
 </template>

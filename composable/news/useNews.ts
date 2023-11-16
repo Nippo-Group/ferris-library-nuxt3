@@ -1,5 +1,4 @@
 import type { News } from "@/types/news";
-import { useReservation } from "@/composable/utilities/useReservation";
 
 export const useNews = () => {
   const { isReservation } = useReservation();

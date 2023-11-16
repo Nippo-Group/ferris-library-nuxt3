@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useLanguage } from "@/composable/language/useLanguage";
-import { useVisible } from "@/composable/utilities/useVisible";
 
 type Content = {
   subtitle: String;
@@ -29,7 +28,7 @@ const { visible, inversion } = useVisible();
         langState === "en" ? "Show more" : "詳細を見る"
       }}</v-btn>
       <v-spacer></v-spacer>
-      <v-btn :icon="iconChevron(visible)"> </v-btn>
+      <v-btn :icon="useChevronIcon(visible)"> </v-btn>
     </v-card-actions>
     <v-expand-transition>
       <div v-show="visible">

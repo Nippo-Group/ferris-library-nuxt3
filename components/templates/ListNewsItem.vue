@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useVisible } from "@/composable/utilities/useVisible";
-import { useReservation } from "@/composable/utilities/useReservation";
 import type { News } from "@/types/news";
 
 defineProps<{
@@ -20,7 +18,7 @@ const { isReservation } = useReservation();
       {{ contents.title }}
     </v-list-item-title>
     <v-list-item-subtitle>
-      {{ dateFormat(contents.date) }}
+      {{ useDateFormat(contents.date).ja.value }}
     </v-list-item-subtitle>
     <template #append>
       <icons-arrow-right-circle
