@@ -1,17 +1,19 @@
 <script setup lang="ts">
 const { contents } = useArticleNews({ limit: 100, orders: "-date" });
 
+const { page, pageLength, itemStart, itemEnd, setContentSize } =
+  usePagination();
+
 const contentsLength = computed(() => {
   return contents.value ? contents.value.length : 0;
 });
 
-const pageBreak = 10;
-const { page, pageLength, itemEnd, itemStart } = computed(() => {
-  return usePagination(contentsLength.value, pageBreak);
-}).value;
-
 const displayList = computed(() => {
   return contents.value?.slice(itemStart.value, itemEnd.value);
+});
+
+watchEffect(() => {
+  setContentSize(contentsLength.value);
 });
 </script>
 
