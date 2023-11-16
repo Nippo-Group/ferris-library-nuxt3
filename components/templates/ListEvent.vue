@@ -1,15 +1,14 @@
 <script setup lang="ts">
-type Event = {
-  name: string;
-  start: string;
-  end?: string;
-};
-defineProps<{
+import type { Dayjs } from "dayjs";
+
+const props = defineProps<{
   title: string;
-  date: string;
-  eventsRyokuen: Event[];
-  eventsYamate: Event[];
+  date: Dayjs;
+  eventsRyokuen: string[];
+  eventsYamate: string[];
 }>();
+
+const { ja, simple } = useDateFormat(props.date);
 </script>
 
 <template>
@@ -27,8 +26,8 @@ defineProps<{
               <icons-calendar-multiselect start size="small" />
               {{ title }}
             </div>
-            <time :datetime="dateFormatSimple(date)">
-              {{ dateFormat(date) }}
+            <time :datetime="simple">
+              {{ ja }}
             </time>
           </v-card-text>
           <v-card-actions class="justify-center">

@@ -2,12 +2,7 @@
 import ryokuen from "@/assets/json/calendar-ryokuen.json";
 import yamate from "@/assets/json/calendar-yamate.json";
 import common from "@/assets/json/calendar-common.json";
-
-type Event = {
-  name: string;
-  start: string;
-  end?: string;
-};
+import type { Event, Events } from "@/types/events";
 
 const title = "本日の開館時間";
 
@@ -17,22 +12,21 @@ const today = dayjs();
 const eventsRyokuen = ryokuen.concat(common);
 const eventsYamate = yamate.concat(common);
 
-const todaysEventsRyokuen = computed(() => {
-  return FindEventsToday(eventsRyokuen);
+const todaysEventsRyokuen = computed<string[]>(() => {
+  return findEventsToday(eventsRyokuen);
 });
-const todaysEventsYamate = computed(() => {
-  return FindEventsToday(eventsYamate);
+const todaysEventsYamate = computed<string[]>(() => {
+  return findEventsToday(eventsYamate);
 });
 
-const FindEventsToday = (events: Event[]) => {
+const findEventsToday = (events: Events) => {
   const todayEvents: string[] = [];
 
   events.forEach((value: Event) => {
-    const start = new Date(value.start);
-    start.setHours(0, 0, 0);
-    const end =
-      value.end !== undefined ? new Date(value.end) : new Date(value.start);
-    end.setHours(23, 59, 59);
+    const start = dayjs(value.start);
+    start.startOf("day");
+    const end = value.end !== undefined ? dayjs(value.end) : dayjs(value.start);
+    end.endOf("day");
     if (today > start && today < end) {
       todayEvents.push(value.name);
     }
@@ -44,7 +38,7 @@ const FindEventsToday = (events: Event[]) => {
 <template>
   <templates-list-event
     :title="title"
-    :date="dateFormat(today)"
+    :date="today"
     :events-ryokuen="todaysEventsRyokuen"
     :events-yamate="todaysEventsYamate"
   ></templates-list-event>
