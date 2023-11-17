@@ -1,29 +1,20 @@
 <script setup lang="ts">
 import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
-import type { Available, Category, Language } from "@/types/ebook";
+import type { Link, Document } from "@/types/ebook";
 
 const { show } = useConfirmDL();
 
-type Link = {
-  name: string;
-  url: string;
-};
-type Document = {
-  name: string;
-  url: string;
-  type: string;
-};
 defineProps<{
   name: string;
-  languages: Language[];
-  categories: Category[];
-  available: Available[];
+  languages: string[];
+  categories: string[];
+  available: string[];
   body: string;
-  access: string;
-  logout: boolean;
-  attention: string;
-  links: Link[];
-  documents: Document[];
+  access?: string;
+  logout?: boolean;
+  attention?: string;
+  links?: Link[];
+  documents?: Document[];
 }>();
 </script>
 
