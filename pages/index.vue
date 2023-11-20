@@ -5,7 +5,6 @@ const { data } = await useMicroCMSGetList<News>({
   endpoint: "news",
   queries: { limit: 6, orders: "-date" },
 });
-console.log(data);
 </script>
 
 <template>
