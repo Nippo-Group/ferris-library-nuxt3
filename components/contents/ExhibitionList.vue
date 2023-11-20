@@ -2,7 +2,10 @@
 import type { Exhibitions } from "@/types/exhibitions";
 
 // CMSから記事を取得
-const { contents } = useArticleExhibition({ limit: 100, orders: "-date" });
+const { data } = await useMicroCMSGetList<Exhibitions>({
+  endpoint: "exhibition",
+  queries: { limit: 100, orders: "-date" },
+});
 
 const dayjs = useDayjs();
 
@@ -25,7 +28,7 @@ const openDitails = (item: Exhibitions) => {
 };
 
 // ソートの切り替え
-const reverseOrder = () => contents.value?.reverse();
+const reverseOrder = () => data.value?.contents.reverse();
 
 // キーワード検索
 const keyword = ref<string | undefined>();
@@ -56,10 +59,10 @@ const filter = (text: string): boolean => {
           </v-btn>
         </v-toolbar> </v-col
     ></v-row>
-    <v-row v-if="contents">
+    <v-row v-if="data?.contents">
       <v-slide-y-transition group>
         <v-col
-          v-for="item in contents"
+          v-for="item in data?.contents"
           v-show="filter(item.title + item.content)"
           :key="item.id"
           cols="12"

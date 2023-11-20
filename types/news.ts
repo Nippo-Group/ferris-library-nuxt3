@@ -1,3 +1,5 @@
+import type { MicroCMSListContent } from "microcms-js-sdk";
+
 type Actions = {
   fieldId: string;
   link: string;
@@ -17,7 +19,7 @@ export type News = {
   revisedAt: string;
   title: string;
   date: string;
-  contents: string;
+  contents: MicroCMSListContent;
   actions?: Actions;
   actions2?: Actions;
   openinnew?: Openinnew;
