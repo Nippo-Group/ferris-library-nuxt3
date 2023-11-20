@@ -11,7 +11,7 @@ const { newsListFilter } = useNews();
 
 <template>
   <v-card>
-    <v-list v-if="contentsList" lines="two">
+    <v-list lines="two">
       <template
         v-for="(contents, index) in newsListFilter(contentsList)"
         :key="contents.id"
@@ -21,6 +21,6 @@ const { newsListFilter } = useNews();
         </templates-list-news-item>
       </template>
     </v-list>
-    <v-card-text v-else> 現在、記事はありません。 </v-card-text>
+    <v-card-text v-if="!contentsList"> 現在、記事はありません。 </v-card-text>
   </v-card>
 </template>
