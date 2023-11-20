@@ -16,7 +16,7 @@
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@types/node": "^20",
     "dayjs-nuxt": "^2.1.9",
-    "eslint": "^8.53.0",
+    "eslint": "^8.54.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-vuetify": "^2.1.0",
     "husky": "^8.0.3",
@@ -26,7 +26,7 @@
     "sass": "^1.69.5",
     "typescript": "^5.2.2",
     "vite-plugin-vuetify": "^1.0.2",
-    "vuetify": "^3.4.1"
+    "vuetify": "^3.4.2"
   },
   "dependencies": {
     "@fullcalendar/core": "^6.1.9",
@@ -36,7 +36,7 @@
     "@fullcalendar/timegrid": "^6.1.9",
     "@fullcalendar/vue3": "^6.1.9",
     "@pinia/nuxt": "^0.5.1",
-    "caniuse-lite": "^1.0.30001562",
+    "caniuse-lite": "^1.0.30001563",
     "nuxt-microcms-module": "^3.0.2",
     "pinia": "^2.1.7",
     "vue-easy-lightbox": "^1.16.0"
