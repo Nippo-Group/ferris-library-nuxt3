@@ -1,17 +1,15 @@
 <script setup lang="ts">
 import type { News } from "@/types/news";
-
-const { data } = await useMicroCMSGetList<News>({
-  endpoint: "news",
-  queries: { limit: 6, orders: "-date" },
-});
+defineProps<{
+  contents: News[] | undefined;
+}>();
 </script>
 
 <template>
   <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
     <icons-newspaper-variant start></icons-newspaper-variant>News
   </div>
-  <templates-list-news :contents-list="data?.contents"></templates-list-news>
+  <templates-list-news :contents-list="contents"></templates-list-news>
   <div class="text-center mt-5">
     <elements-btn-inside link="ニュース一覧へ" to="news"></elements-btn-inside>
   </div>
