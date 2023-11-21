@@ -1,14 +1,5 @@
 <script setup lang="ts">
-import type { News } from "@/types/news";
-
-const { data } = await useMicroCMSGetList<News>({
-  endpoint: "news",
-  queries: { limit: 100, orders: "-date" },
-});
-
-const contents = computed(() => {
-  return data.value?.contents;
-});
+const { contents } = useArticleNews({ limit: 100, orders: "-date" });
 
 const { page, pageLength, itemStart, itemEnd, setContentSize } =
   usePagination();

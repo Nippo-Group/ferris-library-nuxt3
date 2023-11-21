@@ -6,7 +6,7 @@ type PlaceToExhibit = {
   placeToExhibit: string;
 };
 
-export type Exhibitions = {
+export type Exhibition = {
   id: string;
   createdAt: string;
   updatedAt: string;

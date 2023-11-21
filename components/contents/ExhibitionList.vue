@@ -1,11 +1,8 @@
 <script setup lang="ts">
-import type { Exhibitions } from "@/types/exhibitions";
+import type { Exhibition } from "@/types/exhibitions";
 
 // CMSから記事を取得
-const { data } = await useMicroCMSGetList<Exhibitions>({
-  endpoint: "exhibition",
-  queries: { limit: 100, orders: "-date" },
-});
+const { data } = useArticleExhibitions({ limit: 100, orders: "-date" });
 
 const dayjs = useDayjs();
 
@@ -16,7 +13,7 @@ const contentTitle = ref<string>("");
 const placeToExhibit = ref<string>();
 const content = ref<string>("");
 const childRef = ref();
-const openDitails = (item: Exhibitions) => {
+const openDitails = (item: Exhibition) => {
   eyecatch.value = item.eyecatch ? item.eyecatch.url : undefined;
   category.value = item.category ? item.category.name : undefined;
   contentTitle.value = item.title;

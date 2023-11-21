@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import type { News } from "@/types/news";
-defineProps<{
-  contents: News[] | undefined;
-}>();
+const { contents } = useArticleNews({ limit: 6, orders: "-date" });
 </script>
 
 <template>
