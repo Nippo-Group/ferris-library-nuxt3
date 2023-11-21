@@ -67,11 +67,11 @@
                   <p>往復送料・手数料等</p>
                 </template>
                 <template #actions>
-                  <elements-btn-my-library></elements-btn-my-library>
+                  <elements-btn-my-library />
                 </template>
               </elements-btn-dialog-default>
 
-              <btn-my-library />
+              <elements-btn-my-library />
             </elements-align-elements>
           </v-card-actions>
         </v-card>
