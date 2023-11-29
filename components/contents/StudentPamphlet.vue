@@ -10,14 +10,14 @@ const tab = ref(null);
 
   <v-window v-model="tab">
     <v-window-item>
-      <elements-pdf-viewer
+      <templates-pdf-viewer
         src="/documents/pamphlet/pamphlet_ryokuen.pdf"
-      ></elements-pdf-viewer>
+      ></templates-pdf-viewer>
     </v-window-item>
     <v-window-item>
-      <elements-pdf-viewer
+      <templates-pdf-viewer
         src="/documents/pamphlet/pamphlet_yamate.pdf"
-      ></elements-pdf-viewer>
+      ></templates-pdf-viewer>
     </v-window-item>
   </v-window>
 </template>

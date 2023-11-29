@@ -38,10 +38,11 @@ const { show } = useConfirmDL();
           sm="6"
           md="3"
         >
-          <elements-pdf-viewer
+          <templates-pdf-viewer
             :src="document.url"
-            :button-hidden="true"
-          ></elements-pdf-viewer>
+            button-hidden
+            pagination-hidden
+          ></templates-pdf-viewer>
           <v-btn
             block
             variant="text"

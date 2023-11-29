@@ -10,9 +10,9 @@ const tab = ref(null);
 
   <v-window v-model="tab">
     <v-window-item>
-      <elements-pdf-viewer
+      <templates-pdf-viewer
         src="/documents/floor-map/floor-map-ryokuen.pdf"
-      ></elements-pdf-viewer>
+      ></templates-pdf-viewer>
       <v-sheet align="center" color="grey-lighten-3" class="pa-6">
         <elements-header-lv2>今どこマップ</elements-header-lv2>
         <p>パワーポイントのファイルをダウンロードしますか？</p>
@@ -28,9 +28,9 @@ const tab = ref(null);
       </v-sheet>
     </v-window-item>
     <v-window-item>
-      <elements-pdf-viewer
+      <templates-pdf-viewer
         src="/documents/floor-map/floor-map-yamate.pdf"
-      ></elements-pdf-viewer>
+      ></templates-pdf-viewer>
     </v-window-item>
   </v-window>
 </template>

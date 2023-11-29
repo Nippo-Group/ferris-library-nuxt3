@@ -1,6 +1,6 @@
 {
   "name": "ferris-university-library",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -36,6 +36,7 @@
     "@fullcalendar/timegrid": "^6.1.9",
     "@fullcalendar/vue3": "^6.1.9",
     "@pinia/nuxt": "^0.5.1",
+    "@tato30/vue-pdf": "^1.8.1",
     "caniuse-lite": "^1.0.30001563",
     "nuxt-microcms-module": "^3.0.2",
     "pinia": "^2.1.7",
