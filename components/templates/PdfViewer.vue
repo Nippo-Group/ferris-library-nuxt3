@@ -33,7 +33,14 @@ const fileName = computed(() => {
       </v-col>
       <v-col :cols="12">
         <v-sheet color="grey-lighten-5" class="pa-1">
-          <VuePDF :pdf="pdf" :page="page" fit-parent />
+          <VuePDF :pdf="pdf" :page="page" fit-parent>
+            <div>
+              <v-progress-linear
+                indeterminate
+                color="primary"
+              ></v-progress-linear>
+            </div>
+          </VuePDF>
         </v-sheet>
       </v-col>
       <v-col :cols="12" class="text-center">
