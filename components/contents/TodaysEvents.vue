@@ -24,10 +24,8 @@ const findEventsToday = (events: Events) => {
 
   events.forEach((value: Event) => {
     const start = dayjs(value.start);
-    start.startOf("day");
     const end = value.end !== undefined ? dayjs(value.end) : dayjs(value.start);
-    end.endOf("day");
-    if (today > start && today < end) {
+    if (today > start.startOf("day") && today < end.endOf("day")) {
       todayEvents.push(value.name);
     }
   });
