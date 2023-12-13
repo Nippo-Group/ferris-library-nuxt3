@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import type { File } from "@/types/file";
+
 const panelOpen = ref([0, 1]);
 
-const files = [
+const files: File[] = [
   {
     name: "国立国会図書館 視覚障害者等用データ送信サービス 利用案内",
     url: "/documents/supports/national-diet-library.docx",
@@ -12,7 +14,10 @@ const files = [
 
 <template>
   <v-expansion-panels v-model="panelOpen" multiple>
-    <v-expansion-panel title="図書館スタッフによる支援">
+    <v-expansion-panel>
+      <v-expansion-panel-title class="text-h6">
+        図書館スタッフによる支援
+      </v-expansion-panel-title>
       <v-expansion-panel-text>
         <div class="text-h6 pt-3">代行検索</div>
         <p>
@@ -41,7 +46,10 @@ const files = [
         <templates-list-file :items="files"> </templates-list-file>
       </v-expansion-panel-text>
     </v-expansion-panel>
-    <v-expansion-panel title="施設設備">
+    <v-expansion-panel>
+      <v-expansion-panel-title class="text-h6">
+        施設設備
+      </v-expansion-panel-title>
       <v-expansion-panel-text>
         <div class="text-h6 pt-3">拡大書架ガイド</div>
         <p>全ての書棚に拡大文字の書架ガイドを貼付しています。</p>
