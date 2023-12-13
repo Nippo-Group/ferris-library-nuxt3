@@ -16,7 +16,7 @@ useSeoMeta({ title: title.value });
     </v-row>
     <v-row>
       <v-col cols="12" md="10" lg="8" xl="6">
-        <v-alert density="compact" type="info">
+        <v-alert density="compact" type="success">
           上記以外にもサポートが必要でしたら、図書館スタッフまでお申し出ください。できる限りご要望にお応えします。
         </v-alert>
       </v-col>

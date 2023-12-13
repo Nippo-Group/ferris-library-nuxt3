@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useLangSwitch } from "@/composable/language/useLangSwitch";
+import type { AlertType } from "@/types/alert";
 
 const title = "貸出期間";
 const headers = ["対象", "図書", "学科推奨図書", "雑誌／楽譜", "CD/レコード"];
@@ -24,9 +25,13 @@ const items = [
     "当年度1月末まで",
   ],
 ];
-const alerts = [
+type Alert = {
+  type: AlertType;
+  text: string;
+};
+const alerts: Alert[] = [
   {
-    type: "info",
+    type: "success",
     text: "春・夏・冬季休暇中には学部生・大学院生を対象に長期貸出を行います。詳細はこのHPや掲示などでお知らせします。",
   },
 ];

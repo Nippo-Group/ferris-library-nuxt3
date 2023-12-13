@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { AlertType } from "@/types/alert";
+
 const selected = ref();
 const items = [
   "卒業生・修了生",
@@ -10,7 +12,7 @@ const items = [
 ];
 type Service = {
   title?: string;
-  type: "info" | "success" | "warning" | "error";
+  type: AlertType;
   notes: string;
 };
 type Pdf = {
@@ -40,7 +42,7 @@ const itemsContents: ItemsContents[] = [
       },
       {
         title: "複写取り寄せ",
-        type: "error",
+        type: "warning",
         notes: "直接ご来館の上、複写してください。",
       },
     ],
@@ -61,7 +63,7 @@ const itemsContents: ItemsContents[] = [
       },
       {
         title: "複写取り寄せ",
-        type: "error",
+        type: "warning",
         notes: "直接ご来館の上、複写してください。",
       },
     ],
@@ -81,7 +83,7 @@ const itemsContents: ItemsContents[] = [
       },
       {
         title: "貸出",
-        type: "error",
+        type: "warning",
         notes: "館外貸出はできません。図書館間貸出をご利用ください。",
       },
       {
@@ -109,7 +111,7 @@ const itemsContents: ItemsContents[] = [
       },
       {
         title: "貸出",
-        type: "error",
+        type: "warning",
         notes: "館外貸出はできません。図書館間貸出をご利用ください。",
       },
     ],
@@ -125,7 +127,7 @@ const itemsContents: ItemsContents[] = [
       },
       {
         title: "貸出",
-        type: "error",
+        type: "warning",
         notes: "館外貸出はできません。図書館間貸出をご利用ください。",
       },
     ],
@@ -148,7 +150,7 @@ const itemsContents: ItemsContents[] = [
       },
       {
         title: "貸出",
-        type: "error",
+        type: "warning",
         notes: "館外貸出はできません。",
       },
     ],
@@ -187,7 +189,10 @@ const itemsContents: ItemsContents[] = [
           </v-alert>
         </div>
       </v-card-text>
-      <templates-list-file :items="content.pdfs"></templates-list-file>
+      <templates-list-file
+        v-if="content.pdfs"
+        :items="content.pdfs"
+      ></templates-list-file>
     </v-card>
   </template>
 </template>

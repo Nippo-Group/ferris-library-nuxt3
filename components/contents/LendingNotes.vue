@@ -1,14 +1,20 @@
 <script setup lang="ts">
 import { useLangSwitch } from "@/composable/language/useLangSwitch";
+import type { AlertType } from "@/types/alert";
 
 const title = "注意事項";
-const items = [
+
+type Alert = {
+  type: AlertType;
+  text: string;
+};
+const items: Alert[] = [
   {
-    type: "error",
+    type: "warning",
     text: "貸出手続きを忘れると出口のアラームが鳴ります。",
   },
   {
-    type: "error",
+    type: "warning",
     text: "資料を破損・紛失したときは速やかにお知らせください。",
   },
   {
@@ -22,17 +28,17 @@ const items = [
 ];
 
 const titleEng = "Please Note";
-const itemsEng = [
+const itemsEng: Alert[] = [
   {
-    type: "error",
+    type: "warning",
     text: "If you try to take materials out of the library without having checked them out, they will be detected by a sensor and an alarm will sound.",
   },
   {
-    type: "error",
+    type: "warning",
     text: "In the event that you lose or damage library materials, please contact the library promptly.",
   },
   {
-    type: "error",
+    type: "warning",
     text: "Lending other people library materials that you have borrowed is prohibited, as is allowing other people to use your student ID or library card.",
   },
   {
@@ -44,11 +50,11 @@ const itemsEng = [
     text: "Reference books, recent journals, microfilm and microfiche materials, videotapes, LDs, DVDs, CD-ROMs and DVDs are only available for use in the library.",
   },
   {
-    type: "info",
+    type: "success",
     text: "Extended borrowing privileges are granted to undergraduate and graduate students over the spring, summer and winter vacation periods.",
   },
   {
-    type: "info",
+    type: "success",
     text: "Certain materials may be borrowed for same-day use. There is no limit on the number of these items that may be borrowed.",
   },
 ];
