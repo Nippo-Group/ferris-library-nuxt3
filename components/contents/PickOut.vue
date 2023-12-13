@@ -19,7 +19,7 @@ const pickOut = [
     image: imgExhibition,
   },
   {
-    name: "データベース・電子ブック",
+    name: ["データベース", "・電子ブック"],
     to: "/database",
     text: "図書館で契約しているデータベースや電子ブックを検索することができます",
     image: imgDatabase,
@@ -50,7 +50,7 @@ const pickOut = [
     >
       <v-card
         variant="outlined"
-        color="rgba(0, 0, 0, 0.4)"
+        color="rgba(0, 0, 0, 0.1)"
         :to="item.to"
         hover
         class="ma-1"
@@ -63,10 +63,19 @@ const pickOut = [
           class="align-end"
           gradient="to bottom, rgba(255,255,255,.2), rgba(255,255,255,1)"
         >
-          <v-card-title class="text-black">{{ item.name }}</v-card-title>
+          <v-card-title class="text-black wrap-text">
+            <elements-newline-text :item="item.name"></elements-newline-text>
+          </v-card-title>
         </v-img>
         <v-card-text class="text-black">{{ item.text }}</v-card-text>
       </v-card>
     </v-slide-group-item>
   </v-slide-group>
 </template>
+
+<style scoped>
+.wrap-text {
+  word-break: break-all;
+  white-space: normal;
+}
+</style>
