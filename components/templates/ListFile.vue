@@ -1,16 +1,9 @@
 <script setup lang="ts">
 import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
+import type { File } from "@/types/file";
 
 const confirmDLShow = useConfirmDL().show;
 
-type File = {
-  name: string;
-  url?: string;
-  type?: "PDF" | "Word" | "Excel" | "Other";
-  note?: string;
-  target?: string;
-  date?: string;
-};
 defineProps<{
   items: File[];
 }>();
