@@ -1,5 +1,11 @@
 <script setup lang="ts">
-const items = [
+import type { File } from "@/types/file";
+
+type Item = {
+  category: string;
+  contents: File[];
+};
+const items: Item[] = [
   {
     category: "音楽資料の探し方",
     contents: [
@@ -27,6 +33,48 @@ const items = [
         name: "CiNiiの使い方",
         date: "2022年8月",
         url: "/documents/how-to-find/how-to-use-cinii.pdf",
+        type: "PDF",
+      },
+      {
+        target: "学部生向け",
+        name: "JapanKnowledge Libの使い方",
+        date: "2023年5月",
+        url: "/documents/how-to-find/how-to-use-japan-knowledge.pdf",
+        type: "PDF",
+      },
+      {
+        target: "学部生向け",
+        name: "朝日新聞クロスサーチの使い方",
+        date: "2023年5月",
+        url: "/documents/how-to-find/how-to-use-asahi-xserch.pdf",
+        type: "PDF",
+      },
+      {
+        target: "学部生向け",
+        name: "日本文学Web図書館の使い方",
+        date: "2023年5月",
+        url: "/documents/how-to-find/how-to-use-japanese-literature-web.pdf",
+        type: "PDF",
+      },
+      {
+        target: "学部生向け",
+        name: "Gale Literatureの使い方",
+        date: "2023年5月",
+        url: "/documents/how-to-find/how-to-use-gale-literature.pdf",
+        type: "PDF",
+      },
+      {
+        target: "学部生向け",
+        name: "JSTORの使い方",
+        date: "2023年5月",
+        url: "/documents/how-to-find/how-to-use-jstor.pdf",
+        type: "PDF",
+      },
+      {
+        target: "学部生向け",
+        name: "ProQuestの使い方",
+        date: "2023年5月",
+        url: "/documents/how-to-find/how-to-use-pro-quest.pdf",
         type: "PDF",
       },
     ],
