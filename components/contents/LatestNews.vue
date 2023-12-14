@@ -8,6 +8,6 @@ const { contents } = useArticleNews({ limit: 6, orders: "-date" });
   </div>
   <templates-list-news :contents-list="contents"></templates-list-news>
   <div class="text-center mt-5">
-    <elements-btn-inside link="ニュース一覧へ" to="news"></elements-btn-inside>
+    <elements-btn-inside link="ニュース一覧へ" to="news" />
   </div>
 </template>
