@@ -35,9 +35,7 @@ const OptionsCategory = ref<Category[]>([
       絞り込み検索
     </v-btn>
   </v-toolbar>
-  <p>
-    検索条件：{{ [available, language, keyword].concat(categories).join(" ") }}
-  </p>
+  <p>検索条件：{{ [language, keyword].concat(categories).join(" ") }}</p>
 
   <v-dialog
     v-model="visible"
@@ -47,12 +45,14 @@ const OptionsCategory = ref<Category[]>([
     <v-card>
       <v-card-text>
         <v-row dense>
+          <!--
           <v-col cols="12">
             <v-radio-group v-model="available" inline>
               <v-radio label="学内からの利用" value="学内"></v-radio>
               <v-radio label="学外からの利用" value="学外"></v-radio>
             </v-radio-group>
           </v-col>
+          -->
           <v-col cols="12" sm="3">
             <v-select
               v-model.lazy="language"

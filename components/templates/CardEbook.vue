@@ -48,12 +48,12 @@ defineProps<{
           </v-card-text>
           <v-divider></v-divider>
           <v-card-text v-if="access">
-            <p class="my-0">
+            <!--<p class="my-0">
               利用可能場所：
               <span v-for="(place, p) in available" :key="'ava' + p">
                 {{ place }}
               </span>
-            </p>
+            </p>-->
             <p class="my-0">
               同時アクセス数：{{ access }}
               <span v-if="logout" class="text-orange ml-2">
@@ -63,19 +63,21 @@ defineProps<{
             </p>
             <span v-if="attention">※{{ attention }}</span>
           </v-card-text>
-          <v-card-actions class="overflow-x-auto">
+          <v-card-actions>
             <elements-align-elements>
               <elements-btn-open-in-new
                 v-for="(link, k) in links"
                 :key="'link' + k"
                 :link="link.name"
                 :url="link.url"
+                class="ma-0"
               ></elements-btn-open-in-new>
               <template v-if="documents">
                 <v-btn
                   v-for="(file, n) in documents"
                   :key="'file' + n"
                   variant="elevated"
+                  class="ma-0"
                   @click="show(file.name, file.url, file.type)"
                 >
                   {{ file.name }}
@@ -102,5 +104,9 @@ defineProps<{
 }
 .explanation::v-deep(p) {
   margin-bottom: 0.5em;
+}
+.explanation::v-deep(ul),
+.explanation::v-deep(ol) {
+  padding-left: 1.5em;
 }
 </style>
