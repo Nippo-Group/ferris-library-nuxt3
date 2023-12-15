@@ -61,7 +61,12 @@ const open = ref([]);
 
 <template>
   <v-navigation-drawer v-model="visible" :width="320">
-    <v-list v-model:opened="open">
+    <v-list
+      v-model:opened="open"
+      active-color="primary"
+      nav
+      open-strategy="single"
+    >
       <template v-for="menu in menus" :key="menu.id">
         <v-list-item
           v-if="menu.push"
