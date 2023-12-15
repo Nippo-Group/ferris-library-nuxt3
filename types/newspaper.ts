@@ -9,11 +9,7 @@ export type Newspaper = {
   note: string;
 };
 
-export type Newspapers = Newspaper[];
-
-export type NewspapersItem = {
+export type NewspaperCat = {
   category: string;
-  newspapers: Newspapers;
+  newspapers: Newspaper[];
 };
-
-export type NewspapersItems = NewspapersItem[];

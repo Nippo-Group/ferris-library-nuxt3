@@ -1,16 +1,15 @@
 <script setup lang="ts">
-import type { Newspapers } from "@/types/newspaper";
+import type { Newspaper } from "@/types/newspaper";
 
-type State = {
-  items: Newspapers;
-};
-const props = defineProps<State>();
+defineProps<{
+  items: Newspaper[];
+}>();
 </script>
 
 <template>
   <v-expansion-panels variant="accordion" multiple>
     <v-expansion-panel
-      v-for="(newspaper, index) in props.items"
+      v-for="(newspaper, index) in items"
       :key="'newspaper' + index"
     >
       <v-expansion-panel-title>
@@ -25,7 +24,12 @@ const props = defineProps<State>();
       </v-expansion-panel-title>
       <v-expansion-panel-text>
         <templates-list-newspaper-item
-          :items="newspaper"
+          :country="newspaper.country"
+          :publisher="newspaper.publisher"
+          :cycle="newspaper.cycle"
+          :retention-period="newspaper.retentionPeriod"
+          :location="newspaper.location"
+          :note="newspaper.note"
         ></templates-list-newspaper-item>
       </v-expansion-panel-text>
     </v-expansion-panel>

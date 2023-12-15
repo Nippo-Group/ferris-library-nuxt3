@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { NewspapersItems } from "@/types/newspaper";
+import type { NewspaperCat } from "@/types/newspaper";
 
 const updateDate = "2022年4月現在";
 const tab = ref(null);
-const items: NewspapersItems = [
+const items: NewspaperCat[] = [
   {
     category: "日本語（全国紙・地方紙）",
     newspapers: [
