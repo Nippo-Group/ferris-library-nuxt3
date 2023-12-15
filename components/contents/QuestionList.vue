@@ -69,14 +69,8 @@ const faqList = ref([
         </div>
       </v-expansion-panel-title>
       <v-expansion-panel-text>
-        <div class="faq-content pt-2" v-html="faq.answer"></div>
+        <elements-html-text-area :data="faq.answer" />
       </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>
 </template>
-
-<style scoped>
-.faq-content::v-deep(p) {
-  margin: 0;
-}
-</style>

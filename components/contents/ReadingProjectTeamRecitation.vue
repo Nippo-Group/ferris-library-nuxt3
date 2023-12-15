@@ -14,7 +14,9 @@ const movie = {
 
 <template>
   <templates-card-reading-project :title="name">
-    <v-card-text> <div v-html="content"></div></v-card-text>
+    <v-card-text>
+      <elements-html-text-area :data="content" />
+    </v-card-text>
     <v-container>
       <v-row dense>
         <v-col

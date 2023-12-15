@@ -21,7 +21,7 @@ const { visible, inversion } = useVisible();
   <v-card>
     <v-card-title> {{ title }} </v-card-title>
     <v-card-text>
-      <div v-html="props.text"></div>
+      <elements-html-text-area :data="text" />
     </v-card-text>
     <v-card-actions @click="inversion">
       <v-btn color="primary" variant="text">{{
@@ -42,7 +42,7 @@ const { visible, inversion } = useVisible();
               {{ content.subtitle }}
             </div>
             <p v-show="content.text">{{ content.text }}</p>
-            <ul v-show="content.list">
+            <ul v-show="content.list" class="list">
               <li v-for="(listItem, k) in content.list" :key="'listItem' + k">
                 {{ listItem }}
               </li>
@@ -56,3 +56,9 @@ const { visible, inversion } = useVisible();
     </v-expand-transition>
   </v-card>
 </template>
+
+<style scoped>
+.list {
+  padding-left: 1.5em;
+}
+</style>

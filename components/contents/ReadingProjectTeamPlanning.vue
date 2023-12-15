@@ -11,7 +11,7 @@ const images = [imgPlanning01, imgPlanning02];
 <template>
   <templates-card-reading-project :title="name">
     <v-card-text>
-      <div v-html="content"></div>
+      <elements-html-text-area :data="content" />
     </v-card-text>
     <v-container>
       <v-row dense>

@@ -40,7 +40,8 @@ defineExpose({
         </v-list-item>
         <v-divider></v-divider>
         <v-list-item class="mt-8">
-          <div v-html="content"></div>
+          <elements-html-text-area :data="content" />
+          v-if="service.notes"
         </v-list-item>
       </v-card-text>
       <v-divider></v-divider>

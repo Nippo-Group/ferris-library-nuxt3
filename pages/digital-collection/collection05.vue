@@ -35,7 +35,7 @@ const breadcrumbs = [
             <img :src="titleLogo" :alt="title" class="titleLogo" />
           </v-card-title>
           <v-card-text>
-            <div v-html="commentary1"></div>
+            <elements-html-text-area :data="commentary1" />
           </v-card-text>
           <v-divider></v-divider>
           <v-card-text>

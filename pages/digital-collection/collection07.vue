@@ -40,11 +40,11 @@ const breadcrumbs = [
             <v-row>
               <v-col cols="12" sm="8">
                 <v-card-text>
-                  <div v-html="commentary1"></div>
+                  <elements-html-text-area :data="commentary1" />
                 </v-card-text>
                 <v-card-text>
                   <p>参考文献</p>
-                  <div v-html="commentary2"></div>
+                  <elements-html-text-area :data="commentary2" />
                 </v-card-text>
               </v-col>
               <v-col cols="12" sm="4">

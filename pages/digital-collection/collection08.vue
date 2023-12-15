@@ -49,12 +49,12 @@ const zipFile = {
                   <img :src="titleLogo" :alt="title" class="titleLogo" />
                 </v-card-title>
                 <v-card-text>
-                  <div v-html="commentary1"></div>
+                  <elements-html-text-area :data="commentary1" />
                 </v-card-text>
                 <v-card-actions>
                   <elements-btn-dialog-default title="解説">
                     <template #contents>
-                      <div v-html="commentary2"></div>
+                      <elements-html-text-area :data="commentary2" />
                     </template>
                   </elements-btn-dialog-default>
                   <v-btn

@@ -44,7 +44,7 @@ defineProps<{
         </v-col>
         <v-col cols="12" sm="8">
           <v-card-text>
-            <div class="explanation" v-html="body"></div>
+            <elements-html-text-area :data="body" />
           </v-card-text>
           <v-divider></v-divider>
           <v-card-text v-if="access">
@@ -98,15 +98,5 @@ defineProps<{
 .wrap-text {
   word-break: break-all;
   white-space: normal;
-}
-.explanation::v-deep(caption) {
-  text-align: left;
-}
-.explanation::v-deep(p) {
-  margin-bottom: 0.5em;
-}
-.explanation::v-deep(ul),
-.explanation::v-deep(ol) {
-  padding-left: 1.5em;
 }
 </style>

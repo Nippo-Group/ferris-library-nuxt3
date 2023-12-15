@@ -79,7 +79,7 @@ const itemsContents: ItemsContents[] = [
         title: "来館 館内複写",
         type: "success",
         notes:
-          "<strong>所属の大学図書館発行の紹介状</strong>と学生証・身分証明書をお持ちください。また、事前に所属の図書館を通じて来館日と利用資料をお知らせください。",
+          "<p><strong>所属の大学図書館発行の紹介状</strong>と学生証・身分証明書をお持ちください。また、事前に所属の図書館を通じて来館日と利用資料をお知らせください。</p>",
       },
       {
         title: "貸出",
@@ -107,7 +107,7 @@ const itemsContents: ItemsContents[] = [
         title: "来館 館内複写",
         type: "success",
         notes:
-          "学生は<strong>大学院女子学生</strong>、<strong>学部女子学生</strong>に限ります。共通閲覧証と学生証・身分証明書をお持ちの上、直接ご来館ください。定期試験期間のため、1月、7月を除きます。",
+          "<p>学生は<strong>大学院女子学生</strong>、<strong>学部女子学生</strong>に限ります。共通閲覧証と学生証・身分証明書をお持ちの上、直接ご来館ください。定期試験期間のため、1月、7月を除きます。</p>",
       },
       {
         title: "貸出",
@@ -123,7 +123,7 @@ const itemsContents: ItemsContents[] = [
         title: "来館 館内複写",
         type: "success",
         notes:
-          "学生は<strong>大学院女子学生</strong>、<strong>学部女子学生</strong>に限ります。学生証・身分証明書をお持ちの上、直接ご来館ください。定期試験期間のため1月、7月を除きます。",
+          "<p>学生は<strong>大学院女子学生</strong>、<strong>学部女子学生</strong>に限ります。学生証・身分証明書をお持ちの上、直接ご来館ください。定期試験期間のため1月、7月を除きます。</p>",
       },
       {
         title: "貸出",
@@ -185,7 +185,10 @@ const itemsContents: ItemsContents[] = [
             <div v-if="service.title" class="text-h6">
               {{ service.title }}
             </div>
-            <div v-if="service.notes" v-html="service.notes"></div>
+            <elements-html-text-area
+              v-if="service.notes"
+              :data="service.notes"
+            />
           </v-alert>
         </div>
       </v-card-text>

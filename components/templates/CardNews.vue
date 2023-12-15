@@ -24,7 +24,7 @@ const dayjs = useDayjs();
     </v-card-item>
     <div class="content-body">
       <v-card-text class="news-contents">
-        <div v-html="items.contents"></div>
+        <elements-html-text-area :data="items.contents" />
       </v-card-text>
       <v-card-actions
         v-if="items.actions && items.actions.link"
@@ -78,64 +78,5 @@ const dayjs = useDayjs();
 .content-body {
   max-height: 80vh;
   overflow-y: scroll;
-}
-.news-contents::v-deep(h1) {
-  display: none;
-}
-.news-contents::v-deep(h2) {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 2rem;
-}
-.news-contents::v-deep(h3) {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-.news-contents::v-deep(h4) {
-  font-size: 1.125rem;
-  margin-top: 1rem;
-}
-.news-contents::v-deep(h5) {
-  font-size: 1rem;
-  margin-top: 1rem;
-}
-.news-contents::v-deep(h6) {
-  font-size: 0.875rem;
-  margin-top: 1rem;
-}
-.news-contents::v-deep(img) {
-  max-width: 100%;
-  height: auto;
-}
-.news-contents::v-deep(p) {
-  margin-bottom: 1em;
-}
-.news-contents::v-deep(table) {
-  display: block;
-  border-spacing: 0;
-  overflow-x: scroll;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-}
-.news-contents::v-deep(th),
-.news-contents::v-deep(td) {
-  border: solid 1px #ddd;
-  padding: 10px 5px;
-}
-.news-contents::v-deep(th) {
-  background-color: #eee;
-}
-.news-contents::v-deep(dl),
-.news-contents::v-deep(ul),
-.news-contents::v-deep(ol) {
-  padding-left: 1em;
-  margin-bottom: 1em;
-}
-.news-contents::v-deep(dt) {
-  font-weight: bold;
-}
-.news-contents::v-deep(dd) {
-  padding-left: 1em;
 }
 </style>
