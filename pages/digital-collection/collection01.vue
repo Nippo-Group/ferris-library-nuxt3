@@ -56,7 +56,9 @@ const breadcrumbs = [
                   />
                 </v-card-title>
                 <v-card-text>
-                  <p v-for="(text, i) in commentary" :key="i">{{ text }}</p>
+                  <p v-for="(text, i) in commentary" :key="i" class="mb-4">
+                    {{ text }}
+                  </p>
                 </v-card-text>
               </v-col>
               <v-col cols="12" sm="4">

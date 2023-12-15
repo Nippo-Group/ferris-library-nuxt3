@@ -50,7 +50,9 @@ const breadcrumbs = [
           <v-row>
             <v-col cols="12" sm="8">
               <v-card-text>
-                <p v-for="(text, i) in commentary" :key="i">{{ text }}</p>
+                <p v-for="(text, i) in commentary" :key="i" class="mb-4">
+                  {{ text }}
+                </p>
               </v-card-text>
             </v-col>
             <v-col cols="12" sm="4">
@@ -69,7 +71,9 @@ const breadcrumbs = [
           <v-card-actions>
             <elements-btn-dialog-default title="解説">
               <template #contents>
-                <p v-for="(text, k) in commentary2" :key="k">{{ text }}</p>
+                <p v-for="(text, k) in commentary2" :key="k" class="mb-4">
+                  {{ text }}
+                </p>
               </template>
             </elements-btn-dialog-default>
           </v-card-actions>
