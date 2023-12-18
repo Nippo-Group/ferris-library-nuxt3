@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useDrawer } from "@/composable/utilities/useDrawer";
+import { useNavigationDrawer } from "@/composable/layout/useNavigationDrawer";
 
-const { inversion } = useDrawer();
+const { inversion } = useNavigationDrawer();
 </script>
 
 <template>
