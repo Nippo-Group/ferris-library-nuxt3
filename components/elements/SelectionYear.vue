@@ -1,0 +1,30 @@
+<script setup lang="ts">
+export type Item = {
+  label: string;
+  value: string;
+};
+const props = defineProps<{
+  items: Item[];
+  modelValue?: string;
+}>();
+const emit = defineEmits(["update:modelValue"]);
+
+const value = computed({
+  get() {
+    return props.modelValue;
+  },
+  set(value) {
+    emit("update:modelValue", value);
+  },
+});
+</script>
+
+<template>
+  <div class="d-flex align-center flex-column bg-grey-lighten-4 pa-1">
+    <v-btn-toggle v-model="value" divided color="primary" density="compact">
+      <v-btn v-for="item in items" :key="item.value" :value="item.value">
+        {{ item.label }}
+      </v-btn>
+    </v-btn-toggle>
+  </div>
+</template>
