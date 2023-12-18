@@ -68,6 +68,4 @@ const breakpointSmall = computed((): boolean => {
 .list_item_inner_header {
   color: grey;
 }
-.list_item_inner_body {
-}
 </style>
