@@ -23,7 +23,7 @@ const items = [
         rounded="xl"
         density="compact"
       >
-        <template v-slot:prepend>
+        <template #prepend>
           <icons-check-marked />
         </template>
       </v-list-item>
