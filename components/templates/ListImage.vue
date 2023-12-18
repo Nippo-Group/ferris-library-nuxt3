@@ -38,14 +38,18 @@ const lightboxShow = (index: number): void => {
       >
         <templates-card-image
           :src="image.src"
-          :alt="image.alt"
+          :alt="image.alt || ''"
           height="100%"
           @click="lightboxShow(index)"
         >
           <template v-if="image.prepend || image.num" #prepend>
-            <v-chip v-if="image.num" small variant="tonal" class="mr-2">{{
-              image.num
-            }}</v-chip>
+            <v-chip
+              v-if="image.num"
+              size="small"
+              variant="tonal"
+              class="mr-2"
+              >{{ image.num }}</v-chip
+            >
             {{ image.prepend }}
           </template>
 
