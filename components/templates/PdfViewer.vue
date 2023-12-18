@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { VuePDF, usePDF } from "@tato30/vue-pdf";
-import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
 
 type State = {
   src: string;

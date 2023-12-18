@@ -2,7 +2,6 @@
 import imgTadoku01 from "~/assets/images/english-tadoku/tadoku-01.jpg";
 import imgTadoku02 from "~/assets/images/english-tadoku/tadoku-02.jpg";
 import imgTadoku03 from "~/assets/images/english-tadoku/tadoku-03.jpg";
-import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
 
 const { show } = useConfirmDL();
 </script>
@@ -27,7 +26,7 @@ const { show } = useConfirmDL();
           </v-card-actions>
           <v-divider></v-divider>
           <v-card-text>
-            <v-alert density="compact" text type="success" class="mb-0">
+            <v-alert density="compact" type="success" class="mb-0">
               学部生・大学院生・教職員は学外からも利用が可能です。
               ※大学のアカウントでログインできます。
             </v-alert>

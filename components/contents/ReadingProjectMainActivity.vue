@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
-
 const title = "主な活動";
 const mainActivity = [
   "本の展示",

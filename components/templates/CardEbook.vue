@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
 import type { Link, Document } from "@/types/ebook";
 
 const { show } = useConfirmDL();
