@@ -1,21 +1,15 @@
 <script setup lang="ts">
-import { useNews } from "@/composable/news/useNews";
 import type { News } from "@/types/news";
 
 defineProps<{
   contentsList: News[] | undefined;
 }>();
-
-const { newsListFilter } = useNews();
 </script>
 
 <template>
   <v-card>
     <v-list lines="two">
-      <template
-        v-for="(contents, index) in newsListFilter(contentsList)"
-        :key="contents.id"
-      >
+      <template v-for="(contents, index) in contentsList" :key="contents.id">
         <v-divider v-show="index > 0"></v-divider>
         <templates-list-news-item :contents="contents">
         </templates-list-news-item>

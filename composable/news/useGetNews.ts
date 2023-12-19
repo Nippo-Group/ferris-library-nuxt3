@@ -1,28 +1,32 @@
 import type { News } from "@/types/news";
 
-type Queries = {
+export type Queries = {
   orders?: string;
   limit?: number;
   ids?: string;
 };
 
-export const useArticleNews = (queries: Queries) => {
+export const useGetNews = (queries: Queries) => {
+  const { mode } = useDisplayMode();
+  const { isReservation } = useReservation();
+
   const { data, error } = useMicroCMSGetList<News>({
     endpoint: "news",
     queries,
   });
 
   const contents = computed<News[] | undefined>(() => {
-    if (data) {
+    if (mode.value === "private") {
       return data.value?.contents;
     } else {
-      return undefined;
+      return data.value?.contents.filter((news) => {
+        return !isReservation(news.date);
+      });
     }
   });
 
   return {
-    data,
-    error,
     contents,
+    error,
   };
 };

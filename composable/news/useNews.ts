@@ -1,22 +1,50 @@
+import { useGetNews } from "@/composable/news/useGetNews";
 import type { News } from "@/types/news";
+import type { Queries } from "@/composable/news/useGetNews";
 
-export const useNews = () => {
-  const { isReservation } = useReservation();
-  const mode = useRoute().query.mode ?? "public";
+export const useNews = (queries: Queries) => {
+  const { contents, error } = useGetNews(queries);
 
-  const newsListFilter = (list: News[] | undefined) => {
-    if (mode === "private") {
-      return list;
-    } else if (list) {
-      return list.filter((element) => {
-        return !isReservation(element.date);
-      });
-    } else {
-      return undefined;
-    }
+  const newsList = ref<News[] | undefined>();
+  type FilterFunc = (news: News) => boolean;
+  const filterFuncs = ref<FilterFunc[]>([]);
+
+  const newsListSize = computed<number>(() => {
+    return newsList.value ? newsList.value.length : 0;
+  });
+
+  const { getfiscalYear } = useFiscalYear();
+  const years = computed<string[] | undefined>(() => {
+    const arr = contents.value?.map((news) => {
+      return getfiscalYear(news.date);
+    });
+    const set = new Set(arr);
+    return [...set];
+  });
+
+  const setFilterFuncs = (funcs: FilterFunc[]) => {
+    filterFuncs.value = funcs;
   };
 
+  watchEffect(() => {
+    let arr = contents.value;
+    if (filterFuncs.value) {
+      arr = arr?.filter((value) => {
+        const judges: boolean[] = [];
+        for (const func of filterFuncs.value) {
+          judges.push(func(value));
+        }
+        return judges.every((judg) => judg === true);
+      });
+    }
+    newsList.value = arr;
+  });
+
   return {
-    newsListFilter,
+    newsList,
+    newsListSize,
+    years,
+    error,
+    setFilterFuncs,
   };
 };
