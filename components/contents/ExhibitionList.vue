@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import { useExhibitions } from "@/composable/exhibition/useExhibitions";
 import type { Exhibition } from "@/types/exhibitions";
 
-// CMSから記事を取得
-const { data } = useArticleExhibitions({ limit: 100, orders: "-date" });
+const { exhibitionList, years, reverse } = useExhibitions({
+  limit: 100,
+  orders: "-date",
+});
 
 const dayjs = useDayjs();
 
@@ -24,24 +27,52 @@ const openDitails = (item: Exhibition) => {
   childRef.value.show();
 };
 
-// ソートの切り替え
-const reverseOrder = () => data.value?.contents.reverse();
-
-// キーワード検索
+// 検索
+const { getfiscalYear } = useFiscalYear();
 const keyword = ref<string | undefined>();
-const filter = (text: string): boolean => {
+const filter = (text: string, date: string): boolean => {
+  const flag: boolean[] = [];
+
   if (keyword.value) {
-    return text.includes(keyword.value);
+    flag.push(text.includes(keyword.value));
   } else {
-    return true;
+    flag.push(true);
   }
+
+  if (yearValue.value === "all") {
+    flag.push(true);
+  } else {
+    flag.push(getfiscalYear(date) === yearValue.value);
+  }
+
+  return flag.every((value) => value === true);
 };
+
+const { yearValue, yearItems, setYearItems } = useSelectionYear();
+const yearsObj = computed(() => {
+  const arr = [];
+  if (years.value) {
+    for (const year of years.value) {
+      arr.push({ label: `${year}年度`, value: year });
+    }
+  }
+  return arr;
+});
+watch(years, () => {
+  setYearItems(yearsObj.value);
+});
 </script>
 
 <template>
-  <v-container
-    ><v-row
-      ><v-col cols="12">
+  <v-container>
+    <v-row dense>
+      <v-col cols="12">
+        <elements-selection-year
+          v-model="yearValue"
+          :items="yearItems"
+        ></elements-selection-year>
+      </v-col>
+      <v-col cols="12">
         <v-toolbar :border="true" color="white" density="compact" rounded>
           <v-text-field
             v-model="keyword"
@@ -51,16 +82,17 @@ const filter = (text: string): boolean => {
             clearable
           ></v-text-field>
           <v-spacer></v-spacer>
-          <v-btn icon @click="reverseOrder()">
+          <v-btn icon @click="reverse">
             <icons-sort-defult />
           </v-btn>
-        </v-toolbar> </v-col
-    ></v-row>
-    <v-row v-if="data?.contents">
+        </v-toolbar>
+      </v-col>
+    </v-row>
+    <v-row v-if="exhibitionList">
       <v-slide-y-transition group>
         <v-col
-          v-for="item in data?.contents"
-          v-show="filter(item.title + item.content)"
+          v-for="item in exhibitionList"
+          v-show="filter(item.title + item.content, item.date)"
           :key="item.id"
           cols="12"
           sm="6"

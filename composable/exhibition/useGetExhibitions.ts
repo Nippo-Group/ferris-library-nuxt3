@@ -1,27 +1,31 @@
 import type { Exhibition } from "@/types/exhibitions";
 
-type Queries = {
+export type Queries = {
   orders?: string;
   limit?: number;
   ids?: string;
 };
 
-export const useArticleExhibitions = (queries: Queries) => {
+export const useGetExhibitions = (queries: Queries) => {
+  const { mode } = useDisplayMode();
+  const { isReservation } = useReservation();
+
   const { data, error } = useMicroCMSGetList<Exhibition>({
     endpoint: "exhibition",
     queries,
   });
 
   const contents = computed<Exhibition[] | undefined>(() => {
-    if (data) {
+    if (mode.value === "private") {
       return data.value?.contents;
     } else {
-      return undefined;
+      return data.value?.contents.filter((article) => {
+        return !isReservation(article.date);
+      });
     }
   });
 
   return {
-    data,
     error,
     contents,
   };

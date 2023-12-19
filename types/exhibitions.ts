@@ -13,7 +13,7 @@ export type Exhibition = {
   publishedAt: string;
   revisedAt: string;
   title: string;
-  date?: string;
+  date: string;
   eyecatch?: MicroCMSImage;
   placeToExhibit?: PlaceToExhibit;
   content?: string;
