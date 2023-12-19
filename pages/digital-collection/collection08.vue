@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useConfirmDL } from "@/composable/utilities/useConfirmDL";
-
 const { show } = useConfirmDL();
 
 const title = ref("Henry More, The Apology of Dr. Henry More");
