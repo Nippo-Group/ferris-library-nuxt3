@@ -2,35 +2,30 @@
 import { useNews } from "@/composable/news/useNews";
 import type { News } from "@/types/news";
 
+// ニュース一覧の取得
 const { newsList, newsListSize, years, setFilterFuncs } = useNews({
   limit: 100,
   orders: "-date",
 });
 
-const { page, pageLength, itemStart, itemEnd, setContentSize } =
-  usePagination();
+// ニュース一覧をページネーションの設定にあわせてスライス
 const displayList = computed(() => {
   return newsList.value?.slice(itemStart.value, itemEnd.value);
 });
-watch(newsListSize, () => {
-  setContentSize(newsListSize.value);
-});
 
+// ページネーション機能
+const { page, pageLength, itemStart, itemEnd, setContentSize } =
+  usePagination();
+
+// 年度別絞り込み機能
 const { yearValue, yearItems, setYearItems } = useSelectionYear();
-const yearsObj = computed(() => {
-  const arr = [];
-  if (years.value) {
-    for (const year of years.value) {
-      arr.push({ label: `${year}年度`, value: year });
-    }
-  }
-  return arr;
-});
-watch(years, () => {
-  setYearItems(yearsObj.value);
-});
-
 const { getfiscalYear } = useFiscalYear();
+
+// ウォッチャー
+watchEffect(() => {
+  setContentSize(newsListSize.value);
+  setYearItems(years.value);
+});
 watch(yearValue, () => {
   const func = (news: News) => {
     if (yearValue.value === "all") {
@@ -40,7 +35,6 @@ watch(yearValue, () => {
     }
   };
   setFilterFuncs([func]);
-  page.value = 1;
 });
 </script>
 
@@ -50,9 +44,5 @@ watch(yearValue, () => {
     :items="yearItems"
   ></elements-selection-year>
   <templates-list-news :contents-list="displayList"></templates-list-news>
-  <v-pagination
-    v-if="displayList"
-    v-model="page"
-    :length="pageLength"
-  ></v-pagination>
+  <v-pagination v-model="page" :length="pageLength"></v-pagination>
 </template>

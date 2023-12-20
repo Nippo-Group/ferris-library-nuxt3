@@ -7,8 +7,6 @@ const { exhibitionList, years, reverse } = useExhibitions({
   orders: "-date",
 });
 
-const dayjs = useDayjs();
-
 // ダイアログで詳細を表示
 const eyecatch = ref<string>();
 const category = ref<string>();
@@ -49,17 +47,8 @@ const filter = (text: string, date: string): boolean => {
 };
 
 const { yearValue, yearItems, setYearItems } = useSelectionYear();
-const yearsObj = computed(() => {
-  const arr = [];
-  if (years.value) {
-    for (const year of years.value) {
-      arr.push({ label: `${year}年度`, value: year });
-    }
-  }
-  return arr;
-});
-watch(years, () => {
-  setYearItems(yearsObj.value);
+watchEffect(() => {
+  setYearItems(years.value);
 });
 </script>
 
@@ -100,26 +89,10 @@ watch(years, () => {
           lg="3"
           xl="2"
         >
-          <v-card height="100%" @click="openDitails(item)">
-            <v-img
-              :src="item.eyecatch ? item.eyecatch.url : ''"
-              height="160px"
-              class="eyecatch"
-              cover
-            >
-              <v-card-text>
-                <v-chip v-if="item.category" color="primary">
-                  {{ item.category.name }}
-                </v-chip>
-              </v-card-text>
-            </v-img>
-            <v-card-title class="wrap-text">
-              {{ item.title }}
-            </v-card-title>
-            <v-card-subtitle v-if="item.date" class="pb-2">
-              {{ useDateFormat(dayjs(item.date)).ja.value }}
-            </v-card-subtitle>
-          </v-card>
+          <templates-card-exhibition-list
+            :item="item"
+            @click="openDitails(item)"
+          ></templates-card-exhibition-list>
         </v-col>
       </v-slide-y-transition>
     </v-row>
@@ -140,17 +113,6 @@ watch(years, () => {
 </template>
 
 <style scoped>
-.wrap-text {
-  word-break: break-all;
-  white-space: normal;
-}
-.v-card:hover .eyecatch {
-  transition: filter 0.4s ease-in-out;
-  filter: grayscale(60%);
-}
-.eyecatch {
-  filter: grayscale(0%);
-}
 .v-move {
   transition: transform 1s;
 }

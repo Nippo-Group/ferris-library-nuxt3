@@ -35,7 +35,13 @@ const sp = computed(() => {
       v-if="!sp"
       class="d-flex align-center flex-column bg-grey-lighten-4 pa-1"
     >
-      <v-btn-toggle v-model="value" divided color="primary" density="compact">
+      <v-btn-toggle
+        v-model="value"
+        divided
+        color="primary"
+        density="compact"
+        mandatory
+      >
         <v-btn v-for="item in items" :key="item.value" :value="item.value">
           {{ item.label }}
         </v-btn>

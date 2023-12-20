@@ -1,17 +1,24 @@
 import type { Item } from "@/components/elements/SelectionYear.vue";
 
 export const useSelectionYear = () => {
-  const init = ref("all");
-  const yearValue = ref<string>(init.value);
-  const yearItems = ref<Item[]>([
-    {
-      label: "すべて",
-      value: init.value,
-    },
-  ]);
+  const initValue: string = "all";
+  const initItem: Item = {
+    label: "すべて",
+    value: initValue,
+  };
 
-  const setYearItems = (list: Item[]) => {
-    yearItems.value = yearItems.value.concat(list);
+  const yearValue = ref<string>(initValue);
+  const yearItems = ref<Item[]>([initItem]);
+
+  const setYearItems = (list?: string[]) => {
+    yearItems.value = [];
+    yearItems.value.push(initItem);
+
+    if (list) {
+      for (const item of list) {
+        yearItems.value.push({ label: `${item}年度`, value: item });
+      }
+    }
   };
 
   return {
