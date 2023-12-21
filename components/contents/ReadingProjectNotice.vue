@@ -34,7 +34,9 @@ const mediaInformation = {
       <template v-for="(media, index) in mediaInformation.actions" :key="index">
         <v-divider v-show="index > 0"></v-divider>
         <v-list-item :href="media.url" target="_blank">
-          <v-list-item-title>{{ media.title }}</v-list-item-title>
+          <v-list-item-title class="wrap-text">{{
+            media.title
+          }}</v-list-item-title>
           <v-list-item-subtitle>{{ media.source }}</v-list-item-subtitle>
           <template #append>
             <icons-open-in-new />
@@ -44,3 +46,10 @@ const mediaInformation = {
     </v-list>
   </templates-card-reading-project>
 </template>
+
+<style scoped>
+.wrap-text {
+  word-break: break-all;
+  white-space: normal;
+}
+</style>

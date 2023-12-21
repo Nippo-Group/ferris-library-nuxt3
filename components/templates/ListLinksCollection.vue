@@ -28,7 +28,7 @@ const props = defineProps<State>();
           <v-chip class="mr-2" color="primary" variant="tonal">
             {{ item.overseas ? "海外" : "国内" }}
           </v-chip>
-          {{ item.name }}
+          <span class="wrap-text">{{ item.name }}</span>
           <icons-open-in-new end size="x-small" />
         </v-card-title>
         <v-card-subtitle v-show="item.author">
@@ -41,3 +41,10 @@ const props = defineProps<State>();
     </v-col>
   </v-row>
 </template>
+
+<style scoped>
+.wrap-text {
+  word-break: break-all;
+  white-space: normal;
+}
+</style>

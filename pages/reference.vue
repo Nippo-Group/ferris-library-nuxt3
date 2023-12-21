@@ -7,10 +7,6 @@ useSeoMeta({ title: title.value });
   <v-container>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
 
-    <v-row>
-      <v-col cols="12">
-        <contents-reference-list />
-      </v-col>
-    </v-row>
+    <contents-reference-list />
   </v-container>
 </template>

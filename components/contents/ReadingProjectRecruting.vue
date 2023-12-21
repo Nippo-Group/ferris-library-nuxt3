@@ -19,10 +19,10 @@ const items = [
       <v-list-item
         v-for="(item, index) in items"
         :key="index"
-        :title="item"
         rounded="xl"
         density="compact"
       >
+        <v-list-item-title class="wrap-text">{{ item }}</v-list-item-title>
         <template #prepend>
           <icons-check-marked />
         </template>
@@ -36,3 +36,10 @@ const items = [
     ></elements-banner-email>
   </templates-card-reading-project>
 </template>
+
+<style scoped>
+.wrap-text {
+  word-break: break-all;
+  white-space: normal;
+}
+</style>
