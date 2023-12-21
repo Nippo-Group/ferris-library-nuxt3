@@ -18,11 +18,12 @@ const value = computed({
   },
 });
 
-const root = ref<HTMLDivElement>();
-const width = computed(() => root.value?.offsetWidth);
+const root = ref<HTMLElement>();
+const { width } = useEventResize(root);
+
 const sp = computed(() => {
   if (width.value) {
-    return width.value < 550;
+    return width.value < 500;
   } else {
     return true;
   }
