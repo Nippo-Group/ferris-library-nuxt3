@@ -21,33 +21,24 @@ const fileName = computed(() => {
 </script>
 
 <template>
-  <v-container>
-    <v-row dense>
-      <v-col :cols="12">
-        <v-pagination
-          v-if="pages > 1 && !paginationHidden"
-          v-model="page"
-          :length="pages"
-        ></v-pagination>
-      </v-col>
-      <v-col :cols="12">
-        <v-sheet color="grey-lighten-5" class="pa-1">
-          <VuePDF :pdf="pdf" :page="page" fit-parent>
-            <div>
-              <v-progress-linear
-                indeterminate
-                color="primary"
-              ></v-progress-linear>
-            </div>
-          </VuePDF>
-        </v-sheet>
-      </v-col>
-      <v-col :cols="12" class="text-center">
-        <v-btn v-if="!buttonHidden" @click="show(fileName, props.src, 'PDF')">
-          ファイルをひらく
-          <icons-file-pdf end />
-        </v-btn>
-      </v-col>
-    </v-row>
-  </v-container>
+  <div class="d-flex flex-column ga-2">
+    <v-pagination
+      v-if="pages > 1 && !paginationHidden"
+      v-model="page"
+      :length="pages"
+    ></v-pagination>
+    <v-sheet color="grey-lighten-5" class="pa-1">
+      <VuePDF :pdf="pdf" :page="page" fit-parent>
+        <div>
+          <v-progress-linear indeterminate color="primary"></v-progress-linear>
+        </div>
+      </VuePDF>
+    </v-sheet>
+    <div class="text-center pa-1">
+      <v-btn v-if="!buttonHidden" @click="show(fileName, props.src, 'PDF')">
+        ファイルをひらく
+        <icons-file-pdf end />
+      </v-btn>
+    </div>
+  </div>
 </template>

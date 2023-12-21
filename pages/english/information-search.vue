@@ -8,9 +8,7 @@ definePageMeta({ layout: "english" });
   <v-container>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
     <v-row>
-      <v-col cols="12" lg="8" xl="6">
-        <contents-information-search-links />
-      </v-col>
+      <contents-information-search-links />
     </v-row>
   </v-container>
 </template>

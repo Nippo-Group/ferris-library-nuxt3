@@ -10,9 +10,7 @@ useSeoMeta({ title: title.value });
       <v-col cols="12" xl="8">
         <contents-ebook-toolbar />
       </v-col>
-      <v-col cols="12" xl="8">
-        <contents-ebook-list />
-      </v-col>
     </v-row>
+    <contents-ebook-list />
   </v-container>
 </template>

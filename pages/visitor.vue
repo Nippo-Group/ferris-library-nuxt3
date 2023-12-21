@@ -10,7 +10,9 @@ useSeoMeta({ title: title.value });
       <v-col cols="12" md="10" lg="8" xl="6">
         <contents-visitor-news />
       </v-col>
-      <v-col cols="12" md="10" lg="8" xl="6" class="mt-2">
+    </v-row>
+    <v-row>
+      <v-col cols="12" md="10" lg="8" xl="6">
         <contents-visitor-list />
       </v-col>
     </v-row>

@@ -13,9 +13,13 @@ useSeoMeta({ title: title.value });
         </p>
         <p class="mt-4">最新の情報は各館のホームページなどでご確認ください。</p>
       </v-col>
+    </v-row>
+    <v-row>
       <v-col cols="12" lg="10" xl="6">
         <contents-consortium-list />
       </v-col>
+    </v-row>
+    <v-row>
       <v-col cols="12" lg="10" xl="6">
         <contents-consortium-notes />
       </v-col>
