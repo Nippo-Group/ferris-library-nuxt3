@@ -1,17 +1,5 @@
 <script setup lang="ts">
-import {
-  mdiHome,
-  mdiLibrary,
-  mdiInformation,
-  mdiTextBoxSearchOutline,
-  mdiNewspaperVariantOutline,
-  mdiBookOpenVariant,
-  mdiConnection,
-  mdiTranslate,
-  mdiOpenInNew,
-} from "@mdi/js";
 import { useNavigationDrawer } from "@/composable/layout/useNavigationDrawer";
-
 const { visible } = useNavigationDrawer();
 
 type Submenu = {
@@ -30,64 +18,43 @@ type Menu = {
 defineProps<{
   menus: Menu[];
 }>();
-
-const menusIcons = (name: string) => {
-  switch (name) {
-    case "home":
-      return mdiHome;
-    case "facility":
-      return mdiLibrary;
-    case "service":
-      return mdiInformation;
-    case "retrieval":
-      return mdiTextBoxSearchOutline;
-    case "news":
-      return mdiNewspaperVariantOutline;
-    case "topics":
-      return mdiBookOpenVariant;
-    case "links":
-      return mdiConnection;
-    case "englishPage":
-      return mdiTranslate;
-    case "japanesePage":
-      return mdiTranslate;
-    default:
-      return null;
-  }
-};
-
 const open = ref([]);
 </script>
 
 <template>
-  <v-navigation-drawer v-model="visible" :width="320">
+  <v-navigation-drawer
+    v-model="visible"
+    :width="320"
+    mobile-breakpoint="md"
+    tag="nav"
+  >
     <v-list v-model:opened="open" color="primary" nav open-strategy="single">
       <template v-for="menu in menus" :key="menu.id">
-        <v-list-item
-          v-if="menu.push"
-          :to="menu.push"
-          :prepend-icon="menusIcons(menu.id)"
-          :title="menu.category"
-        >
+        <v-list-item v-if="menu.push" :to="menu.push" :title="menu.category">
+          <template #prepend>
+            <elements-nav-icon :name="menu.id" />
+          </template>
         </v-list-item>
-        <v-list-group
-          v-else
-          :value="menu.id"
-          :prepend-icon="menusIcons(menu.id)"
-        >
+        <v-list-group v-else :value="menu.id">
           <template #activator="{ props }">
-            <v-list-item v-bind="props" :title="menu.category"></v-list-item>
+            <v-list-item v-bind="props" :title="menu.category">
+              <template #prepend>
+                <elements-nav-icon :name="menu.id" />
+              </template>
+            </v-list-item>
           </template>
           <v-list-item
             v-for="content in menu.contents"
             :key="content.id"
             :title="content.title"
-            :to="content.push ? content.push : null"
-            :href="content.href ? content.href : null"
+            :to="content.push ? content.push : undefined"
+            :href="content.href ? content.href : undefined"
             :target="content.href ? '_blank' : '_self'"
             link
-            :append-icon="content.href ? mdiOpenInNew : null"
           >
+            <template #append>
+              <icons-open-in-new v-if="content.href" />
+            </template>
           </v-list-item>
         </v-list-group>
       </template>

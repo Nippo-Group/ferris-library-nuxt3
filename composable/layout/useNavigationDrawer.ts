@@ -1,5 +1,5 @@
 export const useNavigationDrawer = () => {
-  const visible = useState<boolean>("visible", () => true);
+  const visible = useState<boolean | null>("visible", () => null);
 
   const show = () => (visible.value = true);
   const dismiss = () => (visible.value = false);
