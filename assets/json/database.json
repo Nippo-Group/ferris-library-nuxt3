@@ -1,5 +1,24 @@
 [
   {
+    "name": "America’s Historical Imprints, Series I: Evans, 1639-1800",
+    "languages": ["外国語"],
+    "body": "<p>17～18世紀にアメリカで出版された、書籍、パンフレット、ブロードサイドなど約37,000件の印刷物を収録するデジタルコレクションです。</p><p>英語のほかドイツ語、フランス語、インディアンの言語であるアルゴンキン語などの資料も含まれています。</p><p>アメリカ研究だけでなく、英語を中心としたヨーロッパ諸言語の文献、黒人や先住民 、移民らマイノリティの問題、ポスター等の図象研究等、様々な研究テーマの参考になります。</p><p>「NII-REO」で歴史資料を横断検索するには「横断検索」ボタンを押してください。</p>",
+    "access": "無制限",
+    "logout": false,
+    "links": [
+      {
+        "name": "アクセス",
+        "url": "https://reo.nii.ac.jp/hss/evans_searchdetail"
+      },
+      {
+        "name": "横断検索",
+        "url": "https://reo.nii.ac.jp/hss/"
+      }
+    ],
+    "categories": ["社会科学"],
+    "available": ["学内"]
+  },
+  {
     "name": "Archives of Sexuality and Gender：LGBTQ History and Culture Since1940　PARTⅠ・PARTⅡ",
     "languages": ["外国語"],
     "body": "<p>セクシュアリティとジェンダーに関する歴史資料（1940年以降）を収録した、フルテキスト検索できるデジタルアーカイブです。以下のコンテンツが利用できます。</p><p><b>■LGBTQ History and Culture Since1940 PARTⅠ</b><br>性的マイノリティの権利拡張に先導的役割を果たした団体の文書や裁判記録、関連する新聞・雑誌記事のほか、女性の権利拡張に関する資料も多数収録されています。</p><p><b>■LGBTQ History and Culture Since1940 PARTⅡ</b><br>LGBTQコミュニティのうち過小評価されてきた集団や団体にも注目し、その団体の刊行物、手稿、書簡、ポスターなどが収録されています。</p><p>＜特長＞</p><ul><li>PARTⅠでは各国政府の政策形成過程を、PARTⅡではLGBTQの文化と行動主義の発展を見ることができます。</li><li>性的マイノリティ、ジェンダーの歴史研究に役立つとともに、社会学、政治学、心理学、教育学、文化など様々な研究テーマの参考になります。</li></ul>",
