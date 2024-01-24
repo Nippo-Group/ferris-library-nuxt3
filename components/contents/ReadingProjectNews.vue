@@ -2,7 +2,7 @@
 import { useNews } from "@/composable/news/useNews";
 
 const { newsList } = useNews({
-  ids: "zt10lnwef,tzndu8jahabw,rne-f461pg",
+  ids: "2nqt2bwmsqd,zt10lnwef,tzndu8jahabw,rne-f461pg",
 });
 </script>
 
