@@ -156,7 +156,9 @@ const items = [
             </v-avatar>
           </div>
           <v-card-text>
-            <p v-for="(text, j) in item.texts" :key="j">{{ text.p }}</p>
+            <p v-for="(text, j) in item.texts" :key="j" class="sentence">
+              {{ text.p }}
+            </p>
           </v-card-text>
           <v-card-actions>
             <elements-btn-inside
@@ -191,5 +193,8 @@ const items = [
 }
 .overflow {
   max-height: 120px;
+}
+.sentence {
+  margin-bottom: 1em;
 }
 </style>
