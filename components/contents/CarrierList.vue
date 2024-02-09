@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import imgCarrier01 from "~/assets/images/carrier/carrier-01.gif";
 import imgCarrier02 from "~/assets/images/carrier/carrier-02.gif";
+import type { Item, ItemHeading } from "@/types/carrier";
 
 const tab = ref(null);
-const items1 = [
+
+const items1: (Item | ItemHeading)[] = [
   {
     name: "JapanKnowledge Lib",
     type: "データベース",
@@ -47,7 +49,7 @@ const items1 = [
     ],
   },
 ];
-const items2 = [
+const items2: (Item | ItemHeading)[] = [
   {
     name: "データベース",
     heading: true,
@@ -96,7 +98,7 @@ const items2 = [
     ],
   },
   {
-    name: "ヨミダス歴史館",
+    name: "ヨミダス",
     type: "データベース",
     logout: true,
     content:
@@ -105,7 +107,7 @@ const items2 = [
     links: [
       {
         name: "アクセス",
-        url: "https://database.yomiuri.co.jp/rekishikan/",
+        url: "https://yomidas.yomiuri.co.jp/",
       },
     ],
   },
@@ -179,7 +181,7 @@ const items2 = [
     access: "緑園本館2階雑誌コーナー",
   },
 ];
-const items3 = [
+const items3: (Item | ItemHeading)[] = [
   {
     name: "「なるにはbooks」シリーズ",
     type: "図書",

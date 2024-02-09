@@ -447,16 +447,12 @@
   {
     "name": "The Making of Modern World",
     "languages": ["外国語"],
-    "body": "<p>15世紀後半から20世紀前半までの経済学、社会思想史など人文・社会科学関係の書籍・雑誌記事（主に英語文献）を収録したデータベース。</p><p>◇プラットフォーム<br>&#9312;Gale：MOMW全コレクションをまとめて検索・閲覧できます（詳細検索からコレクションを指定することもできます）。<br>&#9313;NII-REO：MOW-Ⅰ、MOW-Ⅱを検索・閲覧できます。</p><p>＜特長＞</p><ul><li>政治経済、産業から科学技術史、文学史、女性史など多様なテーマに役立つ。</li><li>The Making of Modern World（MOMW）は以下のコレクションから成り立っています。</li></ul><ol><li>MOMW-Ⅰ【収録期間】1450～1850年（書籍61,000点以上、定期刊行物455点）</li><li>MOMW-Ⅱ【収録期間】1851～1914年（書籍5,300巻以上）</li><li>MOMW-Ⅲ【収録期間】1890～1945年（書籍約5,000巻）</li></ol>",
+    "body": "<p>15世紀後半から20世紀前半までの経済学、社会思想史など人文・社会科学関係の書籍・雑誌記事（主に英語文献）を収録したデータベース。</p><p>＜特長＞</p><ul><li>政治経済、産業から科学技術史、文学史、女性史など多様なテーマに役立つ。</li><li>The Making of Modern World（MOMW）は以下のコレクションから成り立っています。</li></ul><ol><li>MOMW-Ⅰ【収録期間】1450～1850年（書籍61,000点以上、定期刊行物455点）</li><li>MOMW-Ⅱ【収録期間】1851～1914年（書籍5,300巻以上）</li><li>MOMW-Ⅲ【収録期間】1890～1945年（書籍約5,000巻）</li></ol>",
     "access": "無制限",
     "logout": false,
     "links": [
       {
-        "name": "Gale",
-        "url": "https://link.gale.com/apps/MOME?u=ferris"
-      },
-      {
-        "name": "NII-REO",
+        "name": "アクセス",
         "url": "https://reo.nii.ac.jp/hss/"
       }
     ],
@@ -1081,7 +1077,7 @@
     "available": ["学内"]
   },
   {
-    "name": "ヨミダス歴史館",
+    "name": "ヨミダス（旧ヨミダス歴史館）",
     "languages": ["日本語"],
     "body": "<p>1874年の創刊号～の読売新聞と、1989年9月以降のTHE DAILY YOMIURI(英字新聞)、2013年4月からのTHE JAPAN NEWS(英字新聞)、随時更新される「現代人名録」が利用できます。</p>",
     "access": "1",
@@ -1089,7 +1085,7 @@
     "links": [
       {
         "name": "アクセス",
-        "url": "https://database.yomiuri.co.jp/rekishikan/"
+        "url": "https://yomidas.yomiuri.co.jp/"
       }
     ],
     "categories": ["新聞記事"],

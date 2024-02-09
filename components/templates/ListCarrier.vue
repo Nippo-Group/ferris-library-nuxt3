@@ -1,21 +1,9 @@
 <script setup lang="ts">
-type Link = {
-  name: string;
-  url: string;
-};
-type Item = {
-  name: string;
-  type: "データベース" | "雑誌" | "図書";
-  logout: boolean;
-  content: string;
-  access: string;
-  links?: Link[];
-  heading?: boolean;
-};
-type State = {
-  items: Item[];
-};
-const props = defineProps<State>();
+import type { Item, ItemHeading } from "@/types/carrier";
+
+const props = defineProps<{
+  items: (Item | ItemHeading)[];
+}>();
 </script>
 
 <template>
