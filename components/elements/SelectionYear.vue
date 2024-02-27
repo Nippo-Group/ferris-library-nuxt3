@@ -28,6 +28,12 @@ const sp = computed(() => {
     return true;
   }
 });
+
+// 選択肢の件数を絞り込む関数
+// *図書館からの要望で選択肢は「すべて」+3年度分とする
+const limit = (list: Item[]) => {
+  return list.slice(0, 4);
+};
 </script>
 
 <template>
@@ -43,7 +49,11 @@ const sp = computed(() => {
         density="compact"
         mandatory
       >
-        <v-btn v-for="item in items" :key="item.value" :value="item.value">
+        <v-btn
+          v-for="item in limit(items)"
+          :key="item.value"
+          :value="item.value"
+        >
           {{ item.label }}
         </v-btn>
       </v-btn-toggle>
