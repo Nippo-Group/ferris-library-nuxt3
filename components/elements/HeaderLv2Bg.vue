@@ -7,7 +7,7 @@ defineProps<{
 
 <template>
   <v-card rounded="0" color="red-lighten-3 text-white">
-    <v-card-title tag="h2" class="text-h5">
+    <v-card-title tag="h2">
       {{ title }}
     </v-card-title>
     <v-card-text v-if="lead" class="text-justify text-grey-darken-3">
