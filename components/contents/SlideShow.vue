@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useDisplay } from "vuetify";
-
 import mainVisual01 from "~/assets/images/main-visual/main-visual-01.jpg";
 import mainVisual02 from "~/assets/images/main-visual/main-visual-02.jpg";
 import mainVisual03 from "~/assets/images/main-visual/main-visual-03.jpg";
@@ -20,24 +18,6 @@ const items = [
   mainVisual07,
   mainVisual08,
 ];
-
-const carouselHeight = computed(() => {
-  const breakpoint = useDisplay().name.value;
-  switch (breakpoint) {
-    case "xs":
-      return 240;
-    case "sm":
-      return 280;
-    case "md":
-      return 340;
-    case "lg":
-      return 360;
-    case "xl":
-      return 380;
-    default:
-      return 340;
-  }
-});
 </script>
 
 <template>
@@ -45,8 +25,8 @@ const carouselHeight = computed(() => {
     cycle
     hide-delimiter-background
     show-arrows="hover"
-    :height="carouselHeight"
     color="white"
+    :height="280"
   >
     <v-carousel-item v-for="(item, i) in items" :key="i" :src="item" cover>
     </v-carousel-item>
