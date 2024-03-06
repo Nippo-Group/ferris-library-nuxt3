@@ -8,15 +8,48 @@ import mainVisual06 from "~/assets/images/main-visual/main-visual-06.jpg";
 import mainVisual07 from "~/assets/images/main-visual/main-visual-07.jpg";
 import mainVisual08 from "~/assets/images/main-visual/main-visual-08.jpg";
 
+import mainVisual01Small from "~/assets/images/main-visual/main-visual-01-small.jpg";
+import mainVisual02Small from "~/assets/images/main-visual/main-visual-02-small.jpg";
+import mainVisual03Small from "~/assets/images/main-visual/main-visual-03-small.jpg";
+import mainVisual04Small from "~/assets/images/main-visual/main-visual-04-small.jpg";
+import mainVisual05Small from "~/assets/images/main-visual/main-visual-05-small.jpg";
+import mainVisual06Small from "~/assets/images/main-visual/main-visual-06-small.jpg";
+import mainVisual07Small from "~/assets/images/main-visual/main-visual-07-small.jpg";
+import mainVisual08Small from "~/assets/images/main-visual/main-visual-08-small.jpg";
+
 const items = [
-  mainVisual01,
-  mainVisual02,
-  mainVisual03,
-  mainVisual04,
-  mainVisual05,
-  mainVisual06,
-  mainVisual07,
-  mainVisual08,
+  {
+    src: mainVisual01,
+    lazy: mainVisual01Small,
+  },
+  {
+    src: mainVisual02,
+    lazy: mainVisual02Small,
+  },
+  {
+    src: mainVisual03,
+    lazy: mainVisual03Small,
+  },
+  {
+    src: mainVisual04,
+    lazy: mainVisual04Small,
+  },
+  {
+    src: mainVisual05,
+    lazy: mainVisual05Small,
+  },
+  {
+    src: mainVisual06,
+    lazy: mainVisual06Small,
+  },
+  {
+    src: mainVisual07,
+    lazy: mainVisual07Small,
+  },
+  {
+    src: mainVisual08,
+    lazy: mainVisual08Small,
+  },
 ];
 </script>
 
@@ -28,7 +61,13 @@ const items = [
     color="white"
     :height="280"
   >
-    <v-carousel-item v-for="(item, i) in items" :key="i" :src="item" cover>
+    <v-carousel-item
+      v-for="(item, i) in items"
+      :key="i"
+      :src="item.src"
+      :lazy-src="item.lazy"
+      cover
+    >
     </v-carousel-item>
   </v-carousel>
 </template>
