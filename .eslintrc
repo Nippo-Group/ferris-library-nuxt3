@@ -3,9 +3,10 @@
     "eslint:recommended",
     "@nuxtjs/eslint-config-typescript",
     "prettier",
-    "plugin:vuetify/base"
+    "plugin:vuetify/base",
+    "plugin:nuxt/recommended",
   ],
   "rules": {
-    "no-console": "off"
-  }
+    "no-console": "off",
+  },
 }
