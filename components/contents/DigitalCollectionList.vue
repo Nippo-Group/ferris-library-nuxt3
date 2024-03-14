@@ -133,7 +133,7 @@ const items = [
 <template>
   <v-container>
     <v-row>
-      <v-col v-for="(item, i) in items" :key="i" cols="12" md="6" lg="4" xl="3">
+      <v-col v-for="(item, i) in items" :key="i" cols="12" md="6">
         <v-card height="100%" class="d-flex flex-column">
           <div class="d-flex justify-space-between ma-2">
             <div>

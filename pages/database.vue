@@ -7,7 +7,7 @@ useSeoMeta({ title: title.value });
   <v-container>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
     <v-row>
-      <v-col cols="12" xl="8">
+      <v-col cols="12">
         <contents-ebook-toolbar />
       </v-col>
     </v-row>

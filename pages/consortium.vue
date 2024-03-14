@@ -7,7 +7,7 @@ useSeoMeta({ title: title.value });
   <v-container>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
     <v-row>
-      <v-col cols="12" lg="10" xl="6">
+      <v-col cols="12">
         <p>
           横浜市内大学図書館コンソーシアムは、「横浜市内大学間学術・教育交流協議会」の会員校によって、学生の教育機会の多様化を図ること、相互に各図書館の特性を生かしつつ協力し、交流を深め、教育・研究活動の推進を図ることを目的として結成されました。
         </p>
@@ -15,12 +15,12 @@ useSeoMeta({ title: title.value });
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" lg="10" xl="6">
+      <v-col cols="12">
         <contents-consortium-list />
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" lg="10" xl="6">
+      <v-col cols="12">
         <contents-consortium-notes />
       </v-col>
     </v-row>

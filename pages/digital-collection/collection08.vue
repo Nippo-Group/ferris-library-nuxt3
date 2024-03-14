@@ -38,7 +38,7 @@ const zipFile = {
           :items="breadcrumbs"
         ></elements-nav-breadcrumbs>
       </v-col>
-      <v-col cols="12" xl="6">
+      <v-col cols="12">
         <v-card>
           <v-container>
             <v-row>

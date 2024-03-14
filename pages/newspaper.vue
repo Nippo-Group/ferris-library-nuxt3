@@ -6,10 +6,10 @@ useSeoMeta({ title: title.value });
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" lg="10" xl="8">
+      <v-col cols="12">
         <elements-header-lv1>{{ title }}</elements-header-lv1>
       </v-col>
-      <v-col cols="12" lg="10" xl="8">
+      <v-col cols="12">
         <contents-newspaper-list />
       </v-col>
     </v-row>

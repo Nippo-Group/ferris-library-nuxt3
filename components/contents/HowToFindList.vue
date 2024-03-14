@@ -150,7 +150,7 @@ const items: Item[] = [
 
 <template>
   <v-row v-for="(item, i) in items" :key="i">
-    <v-col cols="12" lg="8" lx="6">
+    <v-col cols="12">
       <v-card>
         <v-card-title>{{ item.category }}</v-card-title>
         <templates-list-file :items="item.contents"></templates-list-file>

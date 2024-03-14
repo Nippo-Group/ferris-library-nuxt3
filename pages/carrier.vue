@@ -10,7 +10,7 @@ useSeoMeta({ title: title.value });
       図書館のキャリア支援のコーナーです。就職活動に役立つ契約データベースや図書館資料を紹介します。
     </p>
     <v-row>
-      <v-col cols="12" xl="8">
+      <v-col cols="12">
         <contents-carrier-list />
       </v-col>
     </v-row>

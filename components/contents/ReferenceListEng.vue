@@ -83,7 +83,6 @@ const items = [
         :key="'content' + j"
         cols="12"
         lg="6"
-        xl="3"
       >
         <v-card
           height="100%"

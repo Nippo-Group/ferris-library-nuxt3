@@ -8,10 +8,10 @@ definePageMeta({ layout: "english" });
   <v-container>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
     <v-row>
-      <v-col cols="12" sm="8" md="6" lg="4">
+      <v-col cols="12" lg="6">
         <contents-contact-ryokuen />
       </v-col>
-      <v-col cols="12" sm="8" md="6" lg="4">
+      <v-col cols="12" lg="6">
         <contents-contact-yamate />
       </v-col>
     </v-row>

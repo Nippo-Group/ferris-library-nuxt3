@@ -9,7 +9,7 @@ const { show } = useConfirmDL();
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" md="6" lg="4">
+      <v-col cols="12" lg="6">
         <v-card>
           <v-card-subtitle class="pt-4 pb-0">電子ブック</v-card-subtitle>
           <v-card-title class="pt-0">EBSCO eBooks</v-card-title>
@@ -53,7 +53,7 @@ const { show } = useConfirmDL();
           </v-card-actions>
         </v-card>
       </v-col>
-      <v-col cols="12" md="6" lg="4">
+      <v-col cols="12" lg="6">
         <v-card>
           <v-card-subtitle class="pt-4 pb-0">電子ブック</v-card-subtitle>
           <v-card-title class="pt-0"
@@ -75,7 +75,7 @@ const { show } = useConfirmDL();
           </v-card-actions>
         </v-card>
       </v-col>
-      <v-col cols="12" md="6" lg="4">
+      <v-col cols="12" lg="6">
         <v-card>
           <v-card-subtitle class="pt-4 pb-0">書籍</v-card-subtitle>
           <v-card-title class="pt-0">英語多読図書コーナー</v-card-title>
@@ -85,7 +85,7 @@ const { show } = useConfirmDL();
           <v-img :src="imgTadoku03" width="90%"></v-img>
         </v-card>
       </v-col>
-      <v-col cols="12" md="6" lg="4">
+      <v-col cols="12" lg="6">
         <v-card>
           <v-card-title>読書記録シート</v-card-title>
           <v-card-text>

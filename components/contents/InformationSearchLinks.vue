@@ -177,40 +177,35 @@ const { active, next, prev } = useVisibleSevral();
 </script>
 
 <template>
-  <v-col cols="12" lg="8" xl="6">
-    <v-expansion-panels v-model="active">
-      <v-expansion-panel
-        v-for="(item, index) in contents"
-        :key="'item-' + index"
-      >
-        <v-expansion-panel-title>
-          <div class="d-flex align-center ga-3">
-            <v-avatar
-              size="36"
-              :color="active === item.step - 1 ? 'primary' : 'grey'"
+  <v-expansion-panels v-model="active">
+    <v-expansion-panel v-for="(item, index) in contents" :key="'item-' + index">
+      <v-expansion-panel-title>
+        <div class="d-flex align-center ga-3">
+          <v-avatar
+            size="36"
+            :color="active === item.step - 1 ? 'primary' : 'grey'"
+          >
+            {{ item.step }}
+          </v-avatar>
+          <p class="text-h6">
+            {{ item.subTitle }}
+          </p>
+        </div>
+      </v-expansion-panel-title>
+      <v-expansion-panel-text>
+        <div class="d-flex flex-column ga-4">
+          <templates-list-btn :list="item.list"></templates-list-btn>
+          <v-divider></v-divider>
+          <div class="d-flex justify-space-between">
+            <v-btn variant="text" :disabled="active === 0" @click="prev"
+              >Prev</v-btn
             >
-              {{ item.step }}
-            </v-avatar>
-            <p class="text-h6">
-              {{ item.subTitle }}
-            </p>
+            <v-btn variant="text" :disabled="active === 3" @click="next"
+              >Next</v-btn
+            >
           </div>
-        </v-expansion-panel-title>
-        <v-expansion-panel-text>
-          <div class="d-flex flex-column ga-4">
-            <templates-list-btn :list="item.list"></templates-list-btn>
-            <v-divider></v-divider>
-            <div class="d-flex justify-space-between">
-              <v-btn variant="text" :disabled="active === 0" @click="prev"
-                >Prev</v-btn
-              >
-              <v-btn variant="text" :disabled="active === 3" @click="next"
-                >Next</v-btn
-              >
-            </div>
-          </div>
-        </v-expansion-panel-text>
-      </v-expansion-panel>
-    </v-expansion-panels>
-  </v-col>
+        </div>
+      </v-expansion-panel-text>
+    </v-expansion-panel>
+  </v-expansion-panels>
 </template>

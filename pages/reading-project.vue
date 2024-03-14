@@ -15,7 +15,7 @@ const activityIntroduction =
   <v-sheet color="grey-lighten-3">
     <v-container>
       <v-row>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <elements-header-lv1-bg
             :title="['読書運動', 'プロジェクト']"
             :image="titleImage"
@@ -23,13 +23,13 @@ const activityIntroduction =
         </v-col>
       </v-row>
       <v-row>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <elements-header-lv2-bg
             title="「読書運動プロジェクト」とは？"
             :lead="isWhat"
           ></elements-header-lv2-bg>
         </v-col>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <contents-reading-project-main-activity />
         </v-col>
         <v-col cols="12" lg="6">
@@ -38,12 +38,12 @@ const activityIntroduction =
         <v-col cols="12" lg="6">
           <contents-reading-project-notice />
         </v-col>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <contents-reading-project-news />
         </v-col>
       </v-row>
       <v-row>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <elements-header-lv2-bg
             title="活動紹介"
             :lead="activityIntroduction"
@@ -57,20 +57,20 @@ const activityIntroduction =
         </v-col>
       </v-row>
       <v-row>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <elements-header-lv2-bg
             title="活動拠点～附属図書館～"
           ></elements-header-lv2-bg>
         </v-col>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <contents-reading-project-activity-base />
         </v-col>
       </v-row>
       <v-row>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <elements-header-lv2-bg title="お問い合わせ"></elements-header-lv2-bg>
         </v-col>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <contents-reading-project-contact-address />
         </v-col>
       </v-row>

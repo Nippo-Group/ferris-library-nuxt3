@@ -7,7 +7,7 @@ useSeoMeta({ title: title.value });
   <v-container>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
     <v-row>
-      <v-col cols="12" md="10" lg="8" xl="9" class="recommend-info">
+      <v-col cols="12" class="recommend-info">
         <p>
           各学科の専任教員が「〇〇学科の学生なら読んでおいてほしい本」として選定された図書です。
         </p>
