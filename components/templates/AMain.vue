@@ -5,12 +5,10 @@ const { loading } = useLoading();
 
 <template>
   <v-main>
-    <v-skeleton-loader
-      :loading="loading"
-      max-width="800"
-      type="image, subtitle, sentences"
-    >
-      <slot />
-    </v-skeleton-loader>
+    <v-sheet max-width="960">
+      <v-skeleton-loader :loading="loading" type="image, subtitle, sentences">
+        <slot />
+      </v-skeleton-loader>
+    </v-sheet>
   </v-main>
 </template>
