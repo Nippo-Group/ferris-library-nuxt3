@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const title = ref("Lending Service");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description:
+    "Information about the library's service list, number of books checked out, and loan periods.",
+});
 definePageMeta({ layout: "english" });
 </script>
 

@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const title = ref("Calendar");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description:
+    "A calendar informing you of the opening date and time of the library.",
+});
 definePageMeta({ layout: "english" });
 </script>
 

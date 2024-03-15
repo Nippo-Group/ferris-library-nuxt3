@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const title = ref("Reference Service");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description: "Information about services to support your research.",
+});
 definePageMeta({ layout: "english" });
 </script>
 

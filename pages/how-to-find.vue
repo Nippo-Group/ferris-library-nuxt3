@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const title = ref("資料の探し方");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description: "資料探しのヒントとなる書類をまとめています。",
+});
 </script>
 
 <template>

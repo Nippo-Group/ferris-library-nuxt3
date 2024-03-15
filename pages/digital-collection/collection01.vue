@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const title = ref("新三十六歌仙画帖");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description:
+    "本画帖の「新三十六歌仙」は後鳥羽院 (1180-1239) が撰んだといわれる歌仙を描き、表に絵色紙、裏に詞色紙を貼付しています。「新三十六歌仙」は「三十六歌仙」との対比の上で重要な作品であり、また後鳥羽院の問題、鎌倉歌人の後代の受容など、多くの研究課題を有した作品です。",
+});
 
 const titleLogo = "/images/digital-collection/collection01/title-logo.gif";
 const topImage = "/images/digital-collection/collection01/01.jpg";

@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const title = ref("Contact / Access");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description: "Access to the library and contact information.",
+});
 definePageMeta({ layout: "english" });
 </script>
 

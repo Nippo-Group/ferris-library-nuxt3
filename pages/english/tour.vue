@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const title = ref("Tour and Guidance Workshops");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description:
+    "Tour for new students, guidance on literature search for graduation thesis and report writing.",
+});
 definePageMeta({ layout: "english" });
 </script>
 

@@ -2,7 +2,11 @@
 const { show } = useConfirmDL();
 
 const title = ref("Henry More, The Apology of Dr. Henry More");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description:
+    "ヘンリー・モアは17世紀イギリスの哲学者・神学者です。この著『ヘンリー・モア博士の弁明』は、彼のプラトン派思想――人の誕生以前の魂の存在を信じる、など――や広教派信仰が批判された際の弁明の書であり、1660年代前半のモアの思想をまとめたものです。EEBO（Early English Books Online）未収録のその全文をPDF化して世界初公開。",
+});
 
 const titleLogo = "/images/digital-collection/collection08/title-logo.png";
 const topImage = "/images/digital-collection/collection08/eyecatching.png";

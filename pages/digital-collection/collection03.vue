@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const title = ref("大和物語");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description:
+    "『大和物語』は平安前期に成立したとされる歌物語です。本学所蔵の書物は「奈良絵本」といわれる挿絵付きの筆写本で、表紙裏は金泥で塗られ、草花が金で描かれた料紙に、墨の濃淡も鮮やかに、流れるような文字が書き綴られた美麗なものです。",
+});
 
 const titleLogo = "/images/digital-collection/collection03/title-logo.gif";
 const topImage = "/images/digital-collection/collection03/00.jpg";

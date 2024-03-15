@@ -1,6 +1,11 @@
 <script setup lang="ts">
-const title = ref("学科推奨図書");
-useSeoMeta({ title: title.value });
+const title = "学科推奨図書";
+const description =
+  "各学科の専任教員が「〇〇学科の学生なら読んでおいてほしい本」として選定された図書です。専門分野、履修科目に関わらず、所属学科における基本知識として読むことが期待されています。";
+useSeoMeta({
+  title,
+  description,
+});
 </script>
 
 <template>

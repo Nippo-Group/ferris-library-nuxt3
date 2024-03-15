@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const title = ref("竹取物語");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description:
+    "本学所蔵の「奈良絵本 竹取物語」は、近世宝永年間製作の、上・中・下三冊合わせて２４枚の絵を有するきわめて美麗な本です。",
+});
 
 const titleLogo = "/images/digital-collection/collection02/title-logo.gif";
 const topImage = "/images/digital-collection/collection02/00.jpg";

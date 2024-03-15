@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const title = ref("横浜絵葉書（手彩色）");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description:
+    "本学所蔵の『横浜絵葉書（手彩色）』は、明治から大正時代における、横浜市内の名所の数々を描いたもので、国内外から横浜を訪れた多くの人々が買い求めました。現在は関東大震災や戦災で失われた横浜の景観や市民の暮らしを知る上で、貴重な歴史資料となっています。",
+});
 
 const titleLogo = "/images/digital-collection/collection07/title-logo.png";
 const topImage =

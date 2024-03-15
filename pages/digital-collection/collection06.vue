@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const title = ref("コルデコットの絵本");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description:
+    "英国ヴィクトリア朝後期に活躍した絵本作家、ランドルフ・コールデコットの絵本16点の表紙の画像を掲載しています。",
+});
 
 const titleLogo = "/images/digital-collection/collection06/title-logo.jpg";
 const commentary1 =

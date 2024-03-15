@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const title = ref("貸出サービス");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description:
+    "図書館のサービス一覧・貸出冊数・貸出期間などについてご案内しています。",
+});
 </script>
 
 <template>

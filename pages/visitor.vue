@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const title = ref("学外の方へ");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description: "学外の方のご利用についてケースごとにご案内いたします。",
+});
 </script>
 
 <template>

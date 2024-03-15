@@ -1,5 +1,8 @@
 <script setup lang="ts">
 definePageMeta({ layout: "english" });
+useSeoMeta({
+  description: "This is the official website of the Ferris University Library.",
+});
 </script>
 
 <template>

@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const title = ref("学生向けパンフレット");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description: "在学生対象の図書館利用案内パンフレットを掲載しています。",
+});
 </script>
 
 <template>

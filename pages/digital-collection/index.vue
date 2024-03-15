@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const title = ref("電子コレクション");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description: "図書館が所有または管理している資料を閲覧することができます。",
+});
 </script>
 
 <template>
