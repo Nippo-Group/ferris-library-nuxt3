@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import imgTadoku01 from "~/assets/images/english-tadoku/tadoku-01.jpg";
 import imgTadoku02 from "~/assets/images/english-tadoku/tadoku-02.jpg";
-import imgTadoku03 from "~/assets/images/english-tadoku/tadoku-03.jpg";
+import imgTadoku0301 from "~/assets/images/english-tadoku/tadoku-03-01.png";
+import imgTadoku0302 from "~/assets/images/english-tadoku/tadoku-03-02.png";
+import imgTadoku0303 from "~/assets/images/english-tadoku/tadoku-03-03.png";
+import imgTadoku0304 from "~/assets/images/english-tadoku/tadoku-03-04.png";
 
 const { show } = useConfirmDL();
 </script>
@@ -77,12 +80,61 @@ const { show } = useConfirmDL();
       </v-col>
       <v-col cols="12" lg="6">
         <v-card>
-          <v-card-subtitle class="pt-4 pb-0">書籍</v-card-subtitle>
-          <v-card-title class="pt-0">英語多読図書コーナー</v-card-title>
+          <v-card-subtitle class="pt-4 pb-0">電子ブック</v-card-subtitle>
+          <v-card-title class="pt-0">Maruzen eBook Library</v-card-title>
+          <div class="d-flex ga-4 px-4">
+            <v-img :src="imgTadoku0301" alt="" />
+            <v-img :src="imgTadoku0302" alt="" />
+            <v-img :src="imgTadoku0303" alt="" />
+            <v-img :src="imgTadoku0304" alt="" />
+          </div>
           <v-card-text>
-            緑園本館4階に、英語多読図書を集めたコーナーがあります。貸出条件は一般図書と同じです。
+            3シリーズ146冊が利用できます。書籍はレベル別に分類されています。
           </v-card-text>
-          <v-img :src="imgTadoku03" width="90%"></v-img>
+          <v-list density="compact">
+            <v-list-item>
+              <template #prepend>
+                <icons-book-search></icons-book-search>
+              </template>
+              Page Turners 50巻</v-list-item
+            >
+            <v-list-item>
+              <template #prepend>
+                <icons-book-search></icons-book-search>
+              </template>
+              Foundations Reading Library 42巻</v-list-item
+            >
+            <v-list-item>
+              <template #prepend>
+                <icons-book-search></icons-book-search>
+              </template>
+              e-future graded comic readers 54冊</v-list-item
+            >
+          </v-list>
+          <v-card-actions>
+            <elements-btn-open-in-new
+              link="学内からはこちら"
+              url="https://elib.maruzen.co.jp/elib/html/BookList/"
+            ></elements-btn-open-in-new>
+          </v-card-actions>
+          <v-card-text>
+            学部生・大学院生・教職員は学内から利用が可能です。<br />※大学のアカウントでログインできます。
+          </v-card-text>
+          <v-card-actions>
+            <elements-btn-open-in-new
+              link="学外からはこちら"
+              url="https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open"
+            ></elements-btn-open-in-new>
+          </v-card-actions>
+          <v-card-actions>
+            <v-tooltip text="準備中" location="top">
+              <template #activator="{ props }">
+                <v-btn v-bind="props" color="grey-lighten-4" variant="elevated"
+                  >「レベル別」アクセスガイド</v-btn
+                >
+              </template>
+            </v-tooltip>
+          </v-card-actions>
         </v-card>
       </v-col>
       <v-col cols="12" lg="6">
