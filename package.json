@@ -1,6 +1,6 @@
 {
   "name": "ferris-university-library",
-  "version": "3.1.5",
+  "version": "3.23.26",
   "private": true,
   "scripts": {
     "build": "nuxt build",
