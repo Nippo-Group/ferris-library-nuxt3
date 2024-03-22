@@ -3,7 +3,7 @@
     <v-col cols="12">
       <elements-header-lv2>サービス一覧</elements-header-lv2>
     </v-col>
-    <v-col cols="12" md="10" lg="8" xl="6">
+    <v-col cols="12">
       <v-card height="100%">
         <v-card-title> 事項調査 </v-card-title>
         <v-card-text>
@@ -11,7 +11,7 @@
         </v-card-text>
       </v-card>
     </v-col>
-    <v-col cols="12" md="10" lg="8" xl="6">
+    <v-col cols="12">
       <v-card height="100%">
         <v-card-title> 所蔵調査 </v-card-title>
         <v-card-text>
@@ -75,7 +75,7 @@
         </v-card-actions>
       </v-card>
     </v-col>
-    <v-col cols="12" md="10" lg="8" xl="6">
+    <v-col cols="12">
       <v-card height="100%">
         <v-card-title> 紹介状 </v-card-title>
         <v-card-text>
@@ -156,7 +156,7 @@
         </v-card-actions>
       </v-card>
     </v-col>
-    <v-col cols="12" md="10" lg="8" xl="6">
+    <v-col cols="12">
       <v-card height="100%">
         <v-card-title> 共通閲覧証 </v-card-title>
         <v-card-text>
@@ -201,7 +201,7 @@
         </v-card-actions>
       </v-card>
     </v-col>
-    <v-col cols="12" md="10" lg="8" xl="6">
+    <v-col cols="12">
       <v-card height="100%">
         <v-card-title>
           横浜市内コンソーシアム加盟大学の図書館を利用する
@@ -218,7 +218,7 @@
         </v-card-actions>
       </v-card>
     </v-col>
-    <v-col cols="12" md="10" lg="8" xl="6">
+    <v-col cols="12">
       <v-card height="100%">
         <v-card-title> ツアー・ガイダンス </v-card-title>
         <v-card-text>

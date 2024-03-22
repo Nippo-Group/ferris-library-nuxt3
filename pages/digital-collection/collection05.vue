@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const title = ref("ビアトリクス・ポターの絵本");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description:
+    "当サイト上では、全作品の表紙を見ることができます。最初の作品は、世界中で親しまれているThe Tale of Peter Rabbit (『ピーターラビットのおはなし』)です。",
+});
 
 const titleLogo = "/images/digital-collection/collection05/title-logo.gif";
 const commentary1 =

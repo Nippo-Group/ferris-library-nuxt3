@@ -1,31 +1,35 @@
 <script setup lang="ts">
 const title = ref("貸出サービス");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description:
+    "図書館のサービス一覧・貸出冊数・貸出期間などについてご案内しています。",
+});
 </script>
 
 <template>
   <v-container>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
     <v-row>
-      <v-col cols="12" md="10" lg="8">
+      <v-col cols="12">
         <contents-service-list />
       </v-col>
-      <v-col cols="12" md="10" lg="8" class="text-center">
+      <v-col cols="12" class="text-center">
         <elements-btn-my-library />
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" md="10" lg="8">
+      <v-col cols="12">
         <contents-lending-number />
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" md="10" lg="8">
+      <v-col cols="12">
         <contents-lending-period />
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" md="10" lg="8">
+      <v-col cols="12">
         <contents-lending-notes />
       </v-col>
     </v-row>

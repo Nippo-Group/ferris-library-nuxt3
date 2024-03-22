@@ -83,23 +83,23 @@ const items: Item[] = [
     category: "図書館アドバイス会配付資料",
     contents: [
       {
-        target: "学部生向け",
-        name: "かしこい図書館の使い方ちょっとアドバイス会（レポート準備編）",
-        date: "2022年6月2日実施",
-        url: "/documents/how-to-find/report-advice.pdf",
-        type: "PDF",
-      },
-      {
         target: "留学生向け",
         name: "かしこい図書館の使い方ちょっとアドバイス会",
-        date: "2022年5月11日実施",
+        date: "2023年10月実施",
         url: "/documents/how-to-find/advice-for-international-students.pdf",
         type: "PDF",
       },
       {
         target: "学部生向け",
+        name: "かしこい図書館の使い方ちょっとアドバイス会（レポート準備編）",
+        date: "2023年6月実施",
+        url: "/documents/how-to-find/report-advice.pdf",
+        type: "PDF",
+      },
+      {
+        target: "学部生向け",
         name: "かしこい図書館の使い方ちょっとアドバイス会（卒論準備編）",
-        date: "2022年7月5日日実施",
+        date: "2023年7月実施",
         url: "/documents/how-to-find/graduation-thesis-advice.pdf",
         type: "PDF",
       },
@@ -109,37 +109,44 @@ const items: Item[] = [
     category: "参考：文献検索のレッスン資料",
     contents: [
       {
-        target: "3～4年生向け",
-        name: "英語英米文学科専門ゼミ（アメリカ文学）説明資料",
-        date: "2022年4月実施",
-        url: "/documents/how-to-find/english-literature-seminar-american.pdf",
+        target: "1～2年生向け",
+        name: "アカデミック・ライティング入門 説明資料",
+        date: "2023年6月実施",
+        url: "/documents/how-to-find/academic-writing.pdf",
         type: "PDF",
       },
       {
         target: "3～4年生向け",
         name: "英語英米文学科専門ゼミ（日英語比較・異文化コミュニケーション）説明資料",
-        date: "2022年6月実施",
-        url: "/documents/how-to-find/english-literature-seminar-comparison.pdf",
+        date: "2023年10月実施",
+        url: "/documents/how-to-find/english-literature-seminar-american.pdf",
+        type: "PDF",
+      },
+      {
+        target: "1～2年生向け",
+        name: "日本語日本文学プレ専門ゼミ（日本語教育）説明資料",
+        date: "2023年6月実施",
+        url: "/documents/how-to-find/japanese-literature-seminar-education.pdf",
         type: "PDF",
       },
       {
         target: "3～4年生向け",
         name: "コミュニケーション学科専門ゼミ（心理学）説明資料",
-        date: "2022年6月実施",
+        date: "2023年6月実施",
         url: "/documents/how-to-find/communication-seminar-psychology.pdf",
         type: "PDF",
       },
       {
-        target: "3～4年生向け",
-        name: "国際交流学科専門演習（ヨーロッパ史）説明資料",
-        date: "2022年5月実施",
-        url: "/documents/how-to-find/international-exchange-semina-european.pdf",
+        target: "1～2年生向け",
+        name: "国際交流学科基礎演習（フランス史・国際関係）説明資料",
+        date: "2023年10月実施",
+        url: "/documents/how-to-find/international-exchange-semina-france.pdf",
         type: "PDF",
       },
       {
         target: "3～4年生向け",
-        name: "国際交流学科専門演習（中国研究）説明資料",
-        date: "2022年6月実施",
+        name: "国際交流学科専門演習（中国文化）説明資料",
+        date: "2023年11月実施",
         url: "/documents/how-to-find/international-exchange-seminar-chinese.pdf",
         type: "PDF",
       },
@@ -150,7 +157,7 @@ const items: Item[] = [
 
 <template>
   <v-row v-for="(item, i) in items" :key="i">
-    <v-col cols="12" lg="8" lx="6">
+    <v-col cols="12">
       <v-card>
         <v-card-title>{{ item.category }}</v-card-title>
         <templates-list-file :items="item.contents"></templates-list-file>

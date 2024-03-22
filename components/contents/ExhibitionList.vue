@@ -84,9 +84,8 @@ watchEffect(() => {
           v-show="filter(item.title + item.content, item.date)"
           :key="item.id"
           cols="12"
-          sm="6"
-          md="4"
-          lg="3"
+          md="6"
+          lg="4"
         >
           <templates-card-exhibition-list
             :item="item"
@@ -96,7 +95,7 @@ watchEffect(() => {
       </v-slide-y-transition>
     </v-row>
     <v-row v-else>
-      <v-col cols="12" sm="6" md="4" lg="3">
+      <v-col cols="12" md="6" lg="4">
         <v-card title="情報がありません"></v-card>
       </v-col>
     </v-row>

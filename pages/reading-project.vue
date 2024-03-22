@@ -1,21 +1,23 @@
 <script setup lang="ts">
 import titleImage from "~/assets/images/reading-project/reading-project-title.png";
 
-const title = ref("読書運動プロジェクト");
-useSeoMeta({ title: title.value });
+const title = "読書運動プロジェクト";
+const description =
+  "読書運動プロジェクト（通称：読プロ）は、「本が好き」「図書館が好き」な学生が集まって、教職員と一緒に活動している公認団体です。学生が主体となり、読書の魅力を届ける様々な活動を展開中です。";
+useSeoMeta({
+  title,
+  description,
+});
 
 const isWhat =
   "本学の読書運動プロジェクトは、1998年にシアトル市で始まり、シカゴ市で2001年以降大きな成果を収め全米各地に広まった《One Book, One Community.》にヒントを得たものです。この取組みは、選定された図書の読書を通じてコミュニティの意識を育むOneBook, One Chicagoとしてシカゴ公共図書館で現在も続いています。本学では2002年度から始まり、図書館を拠点として「読書」を個人的な経験だけでなく他者と共有・発信する活動を支援しています。";
-
-const activityIntroduction =
-  "読書運動プロジェクト（通称：読プロ）は、「本が好き」「図書館が好き」な学生が集まって、教職員と一緒に活動している公認団体です。学生が主体となり、読書の魅力を届ける様々な活動を展開中です。";
 </script>
 
 <template>
   <v-sheet color="grey-lighten-3">
     <v-container>
       <v-row>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <elements-header-lv1-bg
             :title="['読書運動', 'プロジェクト']"
             :image="titleImage"
@@ -23,13 +25,13 @@ const activityIntroduction =
         </v-col>
       </v-row>
       <v-row>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <elements-header-lv2-bg
             title="「読書運動プロジェクト」とは？"
             :lead="isWhat"
           ></elements-header-lv2-bg>
         </v-col>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <contents-reading-project-main-activity />
         </v-col>
         <v-col cols="12" lg="6">
@@ -38,15 +40,15 @@ const activityIntroduction =
         <v-col cols="12" lg="6">
           <contents-reading-project-notice />
         </v-col>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <contents-reading-project-news />
         </v-col>
       </v-row>
       <v-row>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <elements-header-lv2-bg
             title="活動紹介"
-            :lead="activityIntroduction"
+            :lead="description"
           ></elements-header-lv2-bg>
         </v-col>
         <v-col cols="12" md="6">
@@ -57,20 +59,20 @@ const activityIntroduction =
         </v-col>
       </v-row>
       <v-row>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <elements-header-lv2-bg
             title="活動拠点～附属図書館～"
           ></elements-header-lv2-bg>
         </v-col>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <contents-reading-project-activity-base />
         </v-col>
       </v-row>
       <v-row>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <elements-header-lv2-bg title="お問い合わせ"></elements-header-lv2-bg>
         </v-col>
-        <v-col cols="12" xl="8">
+        <v-col cols="12">
           <contents-reading-project-contact-address />
         </v-col>
       </v-row>

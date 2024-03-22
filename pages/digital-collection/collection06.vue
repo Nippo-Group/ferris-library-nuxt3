@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const title = ref("コルデコットの絵本");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description:
+    "英国ヴィクトリア朝後期に活躍した絵本作家、ランドルフ・コールデコットの絵本16点の表紙の画像を掲載しています。",
+});
 
 const titleLogo = "/images/digital-collection/collection06/title-logo.jpg";
 const commentary1 =
@@ -27,7 +31,7 @@ const breadcrumbs = [
           :items="breadcrumbs"
         ></elements-nav-breadcrumbs>
       </v-col>
-      <v-col cols="12" xl="6">
+      <v-col cols="12">
         <v-card>
           <v-card-title>
             <img :src="titleLogo" :alt="title" class="titleLogo" />

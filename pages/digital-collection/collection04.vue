@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const title = ref("Japanese Fairy Tale");
-useSeoMeta({ title: title.value });
+useSeoMeta({
+  title: title.value,
+  description:
+    "明治時代に作られた縮緬本（ちりめんぼん）とよばれるシリーズ『Japanese Fairy Tale』をデジタル化しました。",
+});
 
 const titleLogo = "/images/digital-collection/collection04/title-logo.gif";
 const commentary = [

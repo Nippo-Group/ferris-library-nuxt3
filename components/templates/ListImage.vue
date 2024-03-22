@@ -33,8 +33,8 @@ const lightboxShow = (index: number): void => {
         v-for="(image, index) in images"
         :key="index"
         cols="6"
-        md="3"
-        lg="2"
+        md="4"
+        lg="3"
       >
         <templates-card-image
           :src="image.src"

@@ -1,6 +1,11 @@
 <script setup lang="ts">
-const title = ref("二次情報リンク集");
-useSeoMeta({ title: title.value });
+const title = "二次情報リンク集";
+const description =
+  "国内外の図書館の所蔵情報、図書や雑誌（論文）のタイトル・著者といった書誌情報など、一次情報にアクセスするための二次情報を入手できるサイトを集めました。";
+useSeoMeta({
+  title,
+  description,
+});
 </script>
 
 <template>
@@ -8,7 +13,7 @@ useSeoMeta({ title: title.value });
     <elements-header-lv1>{{ title }}</elements-header-lv1>
     <div>
       <p>
-        国内外の図書館の所蔵情報、図書や雑誌（論文）のタイトル・著者といった書誌情報など、一次情報にアクセスするための二次情報を入手できるサイトを集めました。
+        {{ description }}
       </p>
     </div>
     <contents-links-collection2-list />
