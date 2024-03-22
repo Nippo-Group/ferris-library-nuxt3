@@ -99,7 +99,7 @@ const items: Item[] = [
       {
         target: "学部生向け",
         name: "かしこい図書館の使い方ちょっとアドバイス会（卒論準備編）",
-        date: "2023年7月日実施",
+        date: "2023年7月実施",
         url: "/documents/how-to-find/graduation-thesis-advice.pdf",
         type: "PDF",
       },
@@ -117,7 +117,7 @@ const items: Item[] = [
       },
       {
         target: "3～4年生向け",
-        name: "英語英米文学科専門ゼミ（アメリカ文学）説明資料",
+        name: "英語英米文学科専門ゼミ（日英語比較・異文化コミュニケーション）説明資料",
         date: "2023年10月実施",
         url: "/documents/how-to-find/english-literature-seminar-american.pdf",
         type: "PDF",

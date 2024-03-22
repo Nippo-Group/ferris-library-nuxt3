@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import imgTadoku01 from "~/assets/images/english-tadoku/tadoku-01.jpg";
-import imgTadoku02 from "~/assets/images/english-tadoku/tadoku-02.jpg";
-import imgTadoku0301 from "~/assets/images/english-tadoku/tadoku-03-01.png";
-import imgTadoku0302 from "~/assets/images/english-tadoku/tadoku-03-02.png";
-import imgTadoku0303 from "~/assets/images/english-tadoku/tadoku-03-03.png";
-import imgTadoku0304 from "~/assets/images/english-tadoku/tadoku-03-04.png";
+import imgTadokuEBSCO from "~/assets/images/english-tadoku/tadoku-EBSCO.jpg";
+import imgTadokuGVRL from "~/assets/images/english-tadoku/tadoku-GVRL.jpg";
+import imgTadokuMaruzen01 from "~/assets/images/english-tadoku/tadoku-maruzen-01.png";
+import imgTadokuMaruzen02 from "~/assets/images/english-tadoku/tadoku-maruzen-02.png";
+import imgTadokuMaruzen03 from "~/assets/images/english-tadoku/tadoku-maruzen-03.png";
+import imgTadokuMaruzen04 from "~/assets/images/english-tadoku/tadoku-maruzen-04.png";
+import imgTadokuCorner from "~/assets/images/english-tadoku/tadoku-corner.jpg";
 
 const { show } = useConfirmDL();
 </script>
@@ -16,7 +17,7 @@ const { show } = useConfirmDL();
         <v-card>
           <v-card-subtitle class="pt-4 pb-0">電子ブック</v-card-subtitle>
           <v-card-title class="pt-0">EBSCO eBooks</v-card-title>
-          <v-img max-height="164" :src="imgTadoku01"></v-img>
+          <v-img max-height="164" :src="imgTadokuEBSCO"></v-img>
           <v-card-text>
             Macmillan Readers や Magic Tree
             Houseといった、英語多読用の電子ブック398冊が利用できます。
@@ -30,7 +31,7 @@ const { show } = useConfirmDL();
           <v-divider></v-divider>
           <v-card-text>
             <v-alert density="compact" type="success" class="mb-0">
-              学部生・大学院生・教職員は学外からも利用が可能です。
+              学部生・大学院生・教職員は学外からも利用が可能です。<br />
               ※大学のアカウントでログインできます。
             </v-alert>
           </v-card-text>
@@ -62,7 +63,7 @@ const { show } = useConfirmDL();
           <v-card-title class="pt-0"
             >Gale Virtual Reference Library</v-card-title
           >
-          <v-img max-height="164" :src="imgTadoku02"></v-img>
+          <v-img max-height="164" :src="imgTadokuGVRL"></v-img>
           <v-card-text>
             <p>
               俳優、ミュージシャン、アスリート、実業家、政治家などの各界の有名人についての伝記シリーズ「People
@@ -83,31 +84,25 @@ const { show } = useConfirmDL();
           <v-card-subtitle class="pt-4 pb-0">電子ブック</v-card-subtitle>
           <v-card-title class="pt-0">Maruzen eBook Library</v-card-title>
           <div class="d-flex ga-4 px-4">
-            <v-img :src="imgTadoku0301" alt="" />
-            <v-img :src="imgTadoku0302" alt="" />
-            <v-img :src="imgTadoku0303" alt="" />
-            <v-img :src="imgTadoku0304" alt="" />
+            <v-img :src="imgTadokuMaruzen01" alt="" />
+            <v-img :src="imgTadokuMaruzen02" alt="" />
+            <v-img :src="imgTadokuMaruzen03" alt="" />
+            <v-img :src="imgTadokuMaruzen04" alt="" />
           </div>
           <v-card-text>
             3シリーズ146冊が利用できます。書籍はレベル別に分類されています。
           </v-card-text>
           <v-list density="compact">
             <v-list-item>
-              <template #prepend>
-                <icons-book-search></icons-book-search>
-              </template>
+              <icons-circle-small></icons-circle-small>
               Page Turners 50巻</v-list-item
             >
             <v-list-item>
-              <template #prepend>
-                <icons-book-search></icons-book-search>
-              </template>
+              <icons-circle-small></icons-circle-small>
               Foundations Reading Library 42巻</v-list-item
             >
             <v-list-item>
-              <template #prepend>
-                <icons-book-search></icons-book-search>
-              </template>
+              <icons-circle-small></icons-circle-small>
               e-future graded comic readers 54冊</v-list-item
             >
           </v-list>
@@ -118,8 +113,11 @@ const { show } = useConfirmDL();
             ></elements-btn-open-in-new>
           </v-card-actions>
           <v-card-text>
-            学部生・大学院生・教職員は学内から利用が可能です。<br />※大学のアカウントでログインできます。
+            <v-alert density="compact" type="success" class="mb-0">
+              学部生・大学院生・教職員は学内から利用が可能です。<br />※大学のアカウントでログインできます。
+            </v-alert>
           </v-card-text>
+          <v-divider></v-divider>
           <v-card-actions>
             <elements-btn-open-in-new
               link="学外からはこちら"
@@ -135,6 +133,17 @@ const { show } = useConfirmDL();
               </template>
             </v-tooltip>
           </v-card-actions>
+        </v-card>
+      </v-col>
+      <v-col cols="12" lg="6">
+        <v-card>
+          <v-card-subtitle class="pt-4 pb-0">書籍</v-card-subtitle>
+          <v-card-title class="pt-0">英語多読図書コーナー</v-card-title>
+          <v-card-text>
+            緑園本館4階に、英語多読図書を集めたコーナーがあります。貸出条件は一般図書と同じです。
+            学部生・大学院生・教職員は学内から利用が可能です。<br />※大学のアカウントでログインできます。
+            <v-img :src="imgTadokuCorner"></v-img>
+          </v-card-text>
         </v-card>
       </v-col>
       <v-col cols="12" lg="6">
