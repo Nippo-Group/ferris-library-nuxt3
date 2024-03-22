@@ -140,9 +140,10 @@ const { show } = useConfirmDL();
           <v-card-subtitle class="pt-4 pb-0">書籍</v-card-subtitle>
           <v-card-title class="pt-0">英語多読図書コーナー</v-card-title>
           <v-card-text>
-            緑園本館4階に、英語多読図書を集めたコーナーがあります。貸出条件は一般図書と同じです。
-            学部生・大学院生・教職員は学内から利用が可能です。<br />※大学のアカウントでログインできます。
-            <v-img :src="imgTadokuCorner"></v-img>
+            <p>
+              緑園本館4階に、英語多読図書を集めたコーナーがあります。貸出条件は一般図書と同じです。
+            </p>
+            <v-img :src="imgTadokuCorner" class="mt-4"></v-img>
           </v-card-text>
         </v-card>
       </v-col>
