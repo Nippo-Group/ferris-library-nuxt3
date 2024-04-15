@@ -125,13 +125,20 @@ const { show } = useConfirmDL();
             ></elements-btn-open-in-new>
           </v-card-actions>
           <v-card-actions>
-            <v-tooltip text="準備中" location="top">
-              <template #activator="{ props }">
-                <v-btn v-bind="props" color="grey-lighten-4" variant="elevated"
-                  >「レベル別」アクセスガイド</v-btn
-                >
-              </template>
-            </v-tooltip>
+            <v-btn
+              variant="elevated"
+              color="grey-lighten-4"
+              @click="
+                show(
+                  '「レベル別」アクセスガイド',
+                  '/documents/english-tadoku/maruzeu-ebook-library.pdf',
+                  'PDF'
+                )
+              "
+            >
+            「レベル別」アクセスガイド
+              <icons-file-pdf end></icons-file-pdf>
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>

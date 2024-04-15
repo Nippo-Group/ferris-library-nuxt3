@@ -57,12 +57,6 @@ const items: Item[] = [
         openInNew: true,
       },
       {
-        name: "Webcat Plus",
-        href: "http://webcatplus.nii.ac.jp/",
-        comment: "国立情報学研究所",
-        openInNew: true,
-      },
-      {
         name: "国立国会図書館サーチ",
         href: "http://iss.ndl.go.jp/",
         comment: "国立国会図書館",

@@ -24,22 +24,6 @@ const items = [
     text: "国内の大学図書館等の蔵書（所蔵している図書、雑誌、その他の資料）を検索できる",
   },
   {
-    name: "Webcat Plus",
-    url: "http://webcatplus.nii.ac.jp/",
-    category: "各種図書館が所蔵している資料を探す",
-    overseas: false,
-    author: "国立情報学研究所 (NII)",
-    text: "自然言語(思いついたことば)で検索できる",
-  },
-  {
-    name: "NDL ONLINE",
-    url: "http://opac.ndl.go.jp/",
-    category: "各種図書館が所蔵している資料を探す",
-    overseas: false,
-    author: "国立国会図書館 (NDL)",
-    text: "国立国会図書館の所蔵資料及び国立国会図書館で利用可能なデジタルコンテンツを検索、各種の申し込みができる",
-  },
-  {
     name: "国立国会図書館サーチ",
     url: "https://iss.ndl.go.jp/",
     category: "各種図書館が所蔵している資料を探す",
@@ -57,7 +41,7 @@ const items = [
   },
   {
     name: "横浜市立図書館所蔵検索ページ",
-    url: "http://opac.lib.city.yokohama.lg.jp/opac/",
+    url: "https://opac.lib.city.yokohama.lg.jp/winj/opac/top.do?lang=ja",
     category: "各種図書館が所蔵している資料を探す",
     overseas: false,
     author: "横浜市立図書館",
@@ -65,11 +49,11 @@ const items = [
   },
   {
     name: "Explore the British Library",
-    url: "http://explore.bl.uk/",
+    url: "https://bll01.primo.exlibrisgroup.com/discovery/search?vid=44BL_INST:BLL01&lang=en",
     category: "各種図書館が所蔵している資料を探す",
     overseas: true,
     author: "British Library (BL)",
-    text: "英国図書館(BL)の蔵書を検索し、所属図書館を通じてDocument Supply Centre (BLDSC)に複写・貸借依頼をすることができる",
+    text: "英国図書館（BL）のコレクション検索",
   },
   {
     name: "Library Hub Discover",
@@ -96,12 +80,12 @@ const items = [
     text: "日本の学術機関リポジトリに蓄積された学術情報を横断的に検索できる",
   },
   {
-    name: "NDL ONLINE",
+    name: "国立国会図書館サーチ",
     url: "http://opac.ndl.go.jp/",
     category: "雑誌（論文）、図書の情報を探す",
     overseas: false,
     author: "国立国会図書館 (NDL)",
-    text: "一般雑誌、学術雑誌、紀要など、国内で刊行された雑誌に収録されている記事、論文の著者名、タイトル、掲載誌名、刊行年（月・日）、ページ等の情報が検索できる。レポート・論文の参考文献収集に必須のデータベース",
+    text: "国立国会図書館をはじめ、全国の公共図書館、公文書館、美術館や学術研究機関等が提供する資料、デジタルコンテンツを統合的に検索できる",
   },
   {
     name: "国文学論文目録データベース",

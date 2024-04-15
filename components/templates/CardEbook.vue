@@ -46,14 +46,14 @@ defineProps<{
             <elements-html-text-area :data="body" />
           </v-card-text>
           <v-divider></v-divider>
-          <v-card-text v-if="access">
+          <v-card-text v-if="access || attention">
             <!--<p class="my-0">
               利用可能場所：
               <span v-for="(place, p) in available" :key="'ava' + p">
                 {{ place }}
               </span>
             </p>-->
-            <p class="my-0">
+            <p v-if="access" class="my-0">
               同時アクセス数：{{ access }}
               <span v-if="logout" class="text-orange ml-2">
                 <icons-alert-circle siza="small" />
@@ -62,7 +62,7 @@ defineProps<{
             </p>
             <span v-if="attention">※{{ attention }}</span>
           </v-card-text>
-          <v-card-actions>
+          <v-card-actions v-if="links || documents">
             <elements-align-elements>
               <elements-btn-open-in-new
                 v-for="(link, k) in links"
