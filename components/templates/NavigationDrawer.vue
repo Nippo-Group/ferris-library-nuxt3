@@ -5,6 +5,7 @@ const { visible } = useNavigationDrawer();
 type Submenu = {
   title: string;
   id: string;
+  subtitle?: string;
   push?: string;
   href?: string;
 };
@@ -47,8 +48,9 @@ const open = ref([]);
             v-for="content in menu.contents"
             :key="content.id"
             :title="content.title"
-            :to="content.push ? content.push : undefined"
-            :href="content.href ? content.href : undefined"
+            :subtitle="content.subtitle || undefined"
+            :to="content.push || undefined"
+            :href="content.href || undefined"
             :target="content.href ? '_blank' : '_self'"
             link
           >
