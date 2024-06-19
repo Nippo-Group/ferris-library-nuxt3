@@ -651,7 +651,7 @@
   {
     "name": "ProQuest Ebook Central（旧ebrary）",
     "languages": ["外国語"],
-    "body": "<p>ProQuestが提供する電子ブックです。1847年～1899年に出版された航海と旅行に関する世界中の資料を英語で出版したシリーズ「Hakluyt（ハクルート） Society first series」 100巻（78巻欠）と「second series」1-51巻（24巻、25巻欠）、音楽理論研究書、日本国憲法と平和主義に関する資料ほか、あわせて217点が利用可能です。</p>",
+    "body": "<p>ProQuestが提供する電子ブックです。1847年～1899年に出版された航海と旅行に関する世界中の資料を英語で出版したシリーズ「Hakluyt（ハクルート） Society first series」 100巻（78巻欠）と「second series」1-51巻（24巻、25巻欠）、音楽理論研究書、日本国憲法と平和主義に関する資料ほか、あわせて217点が利用可能です。</p><p>本学で所蔵していない電子ブックも試読（５分間）が可能です。図書館へ購入のリクエストもできます。</p>",
     "access": "1",
     "logout": false,
     "attention": "同一ブックに対して・他のブックは閲覧可",
@@ -659,6 +659,13 @@
       {
         "name": "アクセス",
         "url": "https://ebookcentral.proquest.com/lib/ferrisjp-ebooks"
+      }
+    ],
+    "documents": [
+      {
+        "name": "マニュアル「試読から購入リクエストまで」",
+        "url": "/documents/database/proquest-ebook-central-manual.pdf",
+        "type": "PDF"
       }
     ],
     "categories": ["電子ブック", "社会科学", "音楽", "判例・法令・議会資料"],
