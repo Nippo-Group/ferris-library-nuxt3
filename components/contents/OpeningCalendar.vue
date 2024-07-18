@@ -42,21 +42,25 @@ const locationLabel = computed(() => {
   }
 });
 
+// 英語ページの場合は閉館・閉室を変換する関数
+const renameClosed = (eventName: string): string => {
+  if (langState.value === "ja") return eventName;
+
+  if (eventName === "閉館" || eventName === "閉室") {
+    return "Closed";
+  } else {
+    return eventName;
+  }
+};
+
 // イベントをフォーマットする
 const eventFormat = (events: BeforeFormatEvent[]): Event[] => {
   const arr = [];
   for (const event of events) {
     const color = eventColors[eventNames.indexOf(event.name)];
 
-    let nameSubstitution = false;
-    if (
-      langState.value === "en" &&
-      (event.name === "閉館" || event.name === "閉室")
-    ) {
-      nameSubstitution = true;
-    }
     arr.push({
-      title: nameSubstitution ? "Closed" : event.name,
+      title: renameClosed(event.name),
       color,
       start: event.start,
       end: event.end ? `${event.end} 24:00:00` : undefined,
