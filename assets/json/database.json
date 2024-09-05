@@ -64,7 +64,7 @@
     "available": ["学内"]
   },
   {
-    "name": "The Chicago Manual of Style Online（17th edition）",
+    "name": "The Chicago Manual of Style Online（18th edition）",
     "languages": ["外国語"],
     "body": "<p>文献リストにおいて、引用・参考文献の情報(書誌情報)を記述する際のスタイル。人文系(歴史学・語学等)でよく用いられるスタイルです。</p>",
     "access": "無制限",
@@ -72,11 +72,11 @@
     "links": [
       {
         "name": "アクセス",
-        "url": "http://www.chicagomanualofstyle.org/book/ed17/frontmatter/toc.html"
+        "url": "https://www.chicagomanualofstyle.org/book/ed18/frontmatter/toc.html"
       },
       {
-        "name": "16th edition",
-        "url": "http://www.chicagomanualofstyle.org/16/contents.html"
+        "name": "17th edition",
+        "url": "https://www.chicagomanualofstyle.org/book/ed17/frontmatter/toc.html"
       }
     ],
     "categories": ["電子ブック", "参考・辞書事典類"],
@@ -1020,7 +1020,7 @@
     "links": [
       {
         "name": "アクセス",
-        "url": "https://www.db-month.biglobe.ne.jp/ferris/"
+        "url": "https://t21ipau.nikkei.co.jp/ipauth/auth/auth?sid=1"
       }
     ],
     "categories": ["新聞記事"],

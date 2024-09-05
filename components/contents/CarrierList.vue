@@ -44,7 +44,7 @@ const items1: (Item | ItemHeading)[] = [
     links: [
       {
         name: "アクセス",
-        url: "https://www.db-month.biglobe.ne.jp/ferris/",
+        url: "https://t21ipau.nikkei.co.jp/ipauth/auth/auth?sid=1",
       },
     ],
   },
