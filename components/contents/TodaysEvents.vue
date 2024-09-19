@@ -39,5 +39,5 @@ const findEventsToday = (events: Events) => {
     :date="today"
     :events-ryokuen="todaysEventsRyokuen"
     :events-yamate="todaysEventsYamate"
-  ></templates-list-event>
+  />
 </template>

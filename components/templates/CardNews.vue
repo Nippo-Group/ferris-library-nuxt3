@@ -12,7 +12,7 @@ const dayjs = useDayjs();
   <v-card tag="article">
     <v-card-item>
       <p class="text-primary mb-4">
-        <icons-newspaper-variant></icons-newspaper-variant>
+        <icons-newspaper-variant />
         News
       </p>
       <v-card-title tag="h1" class="card-title">
@@ -34,12 +34,12 @@ const dayjs = useDayjs();
           v-if="items.actions && items.actions.link && items.actions.to"
           :link="items.actions.link"
           :to="items.actions.to"
-        ></elements-btn-inside>
+        />
         <elements-btn-inside
           v-if="items.actions2 && items.actions2.link && items.actions2.to"
           :link="items.actions2.link"
           :to="items.actions2.to"
-        ></elements-btn-inside>
+        />
       </v-card-actions>
       <v-card-actions
         v-if="items.openinnew && items.openinnew.link"
@@ -49,17 +49,17 @@ const dayjs = useDayjs();
           v-if="items.openinnew && items.openinnew.link && items.openinnew.url"
           :link="items.openinnew.link"
           :url="items.openinnew.url"
-        ></elements-btn-open-in-new>
+        />
         <elements-btn-open-in-new
           v-if="
             items.openinnew2 && items.openinnew2.link && items.openinnew2.url
           "
           :link="items.openinnew2.link"
           :url="items.openinnew2.url"
-        ></elements-btn-open-in-new>
+        />
       </v-card-actions>
     </div>
-    <v-divider></v-divider>
+    <v-divider />
     <v-card-actions class="justify-end">
       <v-btn variant="text" @click="$emit('dialogClose')">Close</v-btn>
     </v-card-actions>

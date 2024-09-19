@@ -43,7 +43,7 @@ const files: File[] = [
         <p class="mb-2">
           国立国会図書館が製作した視覚障害者等用のDAISYデータ等と、図書館等が製作し国立国会図書館が収集した視覚障害者等用データを、インターネット経由で提供します。このサービスが受けられるのは「図書館の障害者サービスにおける著作権法第37条第3項に基づく著作物の複製等に関するガイドライン」に定められた、視覚障害その他の理由で通常の印刷物の読書が困難な方です。
         </p>
-        <templates-list-file :items="files"> </templates-list-file>
+        <templates-list-file :items="files"/>
       </v-expansion-panel-text>
     </v-expansion-panel>
     <v-expansion-panel>

@@ -13,7 +13,7 @@ const tab = ref(null);
       <client-only>
         <templates-pdf-viewer
           src="/documents/floor-map/floor-map-ryokuen.pdf"
-        ></templates-pdf-viewer>
+        />
       </client-only>
       <v-sheet align="center" color="grey-lighten-3" class="pa-6 mt-2">
         <elements-header-lv2>今どこマップ</elements-header-lv2>
@@ -33,7 +33,7 @@ const tab = ref(null);
       <client-only>
         <templates-pdf-viewer
           src="/documents/floor-map/floor-map-yamate.pdf"
-        ></templates-pdf-viewer>
+        />
       </client-only>
     </v-window-item>
   </v-window>

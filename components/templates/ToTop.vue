@@ -22,7 +22,7 @@ const toTop = () => {
       icon
       @click="toTop"
     >
-      <icons-align-top size="large"></icons-align-top>
+      <icons-align-top size="large"/>
     </v-btn>
   </transition>
 </template>

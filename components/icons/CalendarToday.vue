@@ -3,5 +3,5 @@ import { mdiCalendarToday } from "@mdi/js";
 </script>
 
 <template>
-  <v-icon :icon="mdiCalendarToday"></v-icon>
+  <v-icon :icon="mdiCalendarToday"/>
 </template>

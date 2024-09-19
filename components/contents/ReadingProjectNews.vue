@@ -8,6 +8,6 @@ const { newsList } = useNews({
 
 <template>
   <templates-card-reading-project title="News">
-    <templates-list-news :contents-list="newsList"></templates-list-news>
+    <templates-list-news :contents-list="newsList"/>
   </templates-card-reading-project>
 </template>

@@ -3,5 +3,5 @@ import { mdiChevronLeft } from "@mdi/js";
 </script>
 
 <template>
-  <v-icon :icon="mdiChevronLeft"></v-icon>
+  <v-icon :icon="mdiChevronLeft"/>
 </template>

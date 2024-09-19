@@ -55,5 +55,5 @@ const { contents } = useLangSwitch(items, itemsEng);
     :title="contents.title"
     :text="contents.text"
     :contents="contents.contents"
-  ></templates-card-tour>
+  />
 </template>

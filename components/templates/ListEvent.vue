@@ -34,7 +34,7 @@ const { ja, simple } = useDateFormat(props.date);
             <elements-btn-inside
               link="カレンダーをみる"
               to="/calendar"
-            ></elements-btn-inside>
+            />
           </v-card-actions>
         </v-card>
       </v-col>

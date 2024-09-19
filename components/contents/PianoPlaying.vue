@@ -8,5 +8,5 @@ import imgLearningCommons02 from "~/assets/images/learning-commons/learning-comm
     :img="imgLearningCommons02"
     title="ピアノの弾ける図書館"
     height="200px"
-  ></templates-card-banner>
+  />
 </template>

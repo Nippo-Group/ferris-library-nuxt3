@@ -20,7 +20,7 @@ defineProps<{
       >
         <template v-for="(text, index) in title" :key="index">
           {{ text }}
-          <wbr />
+          <wbr >
         </template>
       </v-card-title>
     </v-img>

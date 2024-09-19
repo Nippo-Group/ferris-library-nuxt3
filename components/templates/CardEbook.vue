@@ -45,7 +45,7 @@ defineProps<{
           <v-card-text>
             <elements-html-text-area :data="body" />
           </v-card-text>
-          <v-divider></v-divider>
+          <v-divider/>
           <v-card-text v-if="access || attention">
             <!--<p class="my-0">
               利用可能場所：
@@ -70,7 +70,7 @@ defineProps<{
                 :link="link.name"
                 :url="link.url"
                 class="ma-0"
-              ></elements-btn-open-in-new>
+              />
               <template v-if="documents">
                 <v-btn
                   v-for="(file, n) in documents"

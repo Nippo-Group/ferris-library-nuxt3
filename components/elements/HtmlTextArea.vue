@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="text" v-html="data"></div>
+  <div class="text" v-html="data"/>
 </template>
 
 <style scoped>

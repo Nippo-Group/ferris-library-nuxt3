@@ -6,9 +6,9 @@ const { newsList } = useNews({ limit: 6, orders: "-date" });
 
 <template>
   <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
-    <icons-newspaper-variant start></icons-newspaper-variant>News
+    <icons-newspaper-variant start/>News
   </div>
-  <templates-list-news :contents-list="newsList"></templates-list-news>
+  <templates-list-news :contents-list="newsList"/>
   <div class="text-center mt-5">
     <elements-btn-inside link="ニュース一覧へ" to="news" />
   </div>

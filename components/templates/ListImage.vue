@@ -64,5 +64,5 @@ const lightboxShow = (index: number): void => {
   <templates-the-lightbox
     ref="lightboxComponent"
     :imgs="imgs"
-  ></templates-the-lightbox>
+  />
 </template>

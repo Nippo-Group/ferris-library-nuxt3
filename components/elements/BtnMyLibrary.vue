@@ -5,5 +5,5 @@ const url =
 </script>
 
 <template>
-  <elements-btn-open-in-new :link="name" :url="url"></elements-btn-open-in-new>
+  <elements-btn-open-in-new :link="name" :url="url"/>
 </template>

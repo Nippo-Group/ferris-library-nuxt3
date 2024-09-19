@@ -42,7 +42,7 @@ const props = defineProps<{
               :key="'link' + j"
               :link="link.name"
               :url="link.url"
-            ></elements-btn-open-in-new>
+            />
           </v-card-actions>
         </div>
       </v-card>

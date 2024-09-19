@@ -123,7 +123,7 @@ const items: Item[] = [
           <v-card-text v-if="item.note">
             {{ item.note }}
           </v-card-text>
-          <templates-list-file :items="item.files"></templates-list-file>
+          <templates-list-file :items="item.files"/>
         </v-card>
       </v-col>
     </v-row>

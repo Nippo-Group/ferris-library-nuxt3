@@ -35,7 +35,7 @@
                 <p>コピー代金・送料・手数料等</p>
               </template>
               <template #actions>
-                <elements-btn-my-library></elements-btn-my-library>
+                <elements-btn-my-library/>
               </template>
             </elements-btn-dialog-default>
 
@@ -98,7 +98,7 @@
                 <elements-btn-open-in-new
                   link="CiNii Books"
                   url="http://ci.nii.ac.jp/books/"
-                ></elements-btn-open-in-new>
+                />
               </template>
             </elements-btn-dialog-default>
 
@@ -117,7 +117,7 @@
                 <elements-btn-open-in-new
                   link="横浜市立図書館蔵書検索ページ"
                   url="https://opac.lib.city.yokohama.lg.jp/opac/"
-                ></elements-btn-open-in-new>
+                />
               </template>
             </elements-btn-dialog-default>
 
@@ -133,7 +133,7 @@
                 <elements-btn-open-in-new
                   link="神奈川県立の図書館"
                   url="https://www.klnet.pref.kanagawa.jp/"
-                ></elements-btn-open-in-new>
+                />
               </template>
             </elements-btn-dialog-default>
 
@@ -149,7 +149,7 @@
                 <elements-btn-open-in-new
                   link="国立国会図書館サーチ"
                   url="http://iss.ndl.go.jp/"
-                ></elements-btn-open-in-new>
+                />
               </template>
             </elements-btn-dialog-default>
           </elements-align-elements>
@@ -179,7 +179,7 @@
                 <elements-btn-open-in-new
                   link="神奈川県図書館協会"
                   url="http://www.kanagawa-la.jp/link/"
-                ></elements-btn-open-in-new>
+                />
               </template>
             </elements-btn-dialog-default>
 
@@ -194,7 +194,7 @@
                 <elements-btn-open-in-new
                   link="音楽図書館協議会"
                   url="https://mlaj.org/"
-                ></elements-btn-open-in-new>
+                />
               </template>
             </elements-btn-dialog-default>
           </elements-align-elements>
@@ -207,14 +207,14 @@
           横浜市内コンソーシアム加盟大学の図書館を利用する
         </v-card-title>
         <v-card-text>
-          横浜市内大学図書館コンソーシアムの加盟館は、原則として学生証又は大学発行の身分証明書を提示して手続きすることで、紹介状なしで館内利用ができます。<br />
+          横浜市内大学図書館コンソーシアムの加盟館は、原則として学生証又は大学発行の身分証明書を提示して手続きすることで、紹介状なしで館内利用ができます。<br >
           手続き方法、利用できるサービスについては大学によって異なりますので、必ず各館のホームページで条件を確認してください。
         </v-card-text>
         <v-card-actions class="overflow-x-auto">
           <elements-btn-inside
             link="コンソーシアムページへ"
             to="/consortium"
-          ></elements-btn-inside>
+          />
         </v-card-actions>
       </v-card>
     </v-col>
@@ -228,7 +228,7 @@
           <elements-btn-inside
             link="ツアー・ガイダンスページへ"
             to="/tour"
-          ></elements-btn-inside>
+          />
         </v-card-actions>
       </v-card>
     </v-col>

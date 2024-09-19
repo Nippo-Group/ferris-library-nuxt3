@@ -3,5 +3,5 @@ import { mdiDownload } from "@mdi/js";
 </script>
 
 <template>
-  <v-icon :icon="mdiDownload"></v-icon>
+  <v-icon :icon="mdiDownload"/>
 </template>

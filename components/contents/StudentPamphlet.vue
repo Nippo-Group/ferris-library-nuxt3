@@ -13,14 +13,14 @@ const tab = ref(null);
       <client-only>
         <templates-pdf-viewer
           src="/documents/pamphlet/pamphlet_ryokuen.pdf"
-        ></templates-pdf-viewer>
+        />
       </client-only>
     </v-window-item>
     <v-window-item>
       <client-only>
         <templates-pdf-viewer
           src="/documents/pamphlet/pamphlet_yamate.pdf"
-        ></templates-pdf-viewer>
+        />
       </client-only>
     </v-window-item>
   </v-window>

@@ -49,7 +49,7 @@ const items = [
       <v-col v-for="(item, i) in items" :key="i" cols="12" lg="6">
         <v-card>
           <v-card-title>{{ item.category }}</v-card-title>
-          <templates-list-file :items="item.contents"></templates-list-file>
+          <templates-list-file :items="item.contents"/>
         </v-card>
       </v-col>
     </v-row>

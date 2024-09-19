@@ -12,16 +12,6 @@ const props = defineProps<State>();
 const visibleRef = ref(false);
 const indexRef = ref(0);
 
-const onPrev = (oldIndex: number, newIndex: number) => {
-  console.log("when next btn click ----");
-  console.log("oldIndex of imgs:", oldIndex);
-  console.log("newIndex of imgs:", newIndex);
-};
-const onNext = (oldIndex: number, newIndex: number) => {
-  console.log("when next btn click ----");
-  console.log("oldIndex of imgs:", oldIndex);
-  console.log("newIndex of imgs:", newIndex);
-};
 const onHide = () => (visibleRef.value = false);
 const onShow = (index: number): void => {
   indexRef.value = index;
@@ -41,8 +31,6 @@ defineExpose({
       :loop="true"
       class="vue-easy-lightbox"
       @hide="onHide"
-      @on-prev="onPrev"
-      @on-next="onNext"
     />
   </client-only>
 </template>

@@ -20,7 +20,7 @@ const menus = computed(() => {
 
 <template>
   <v-app id="inspire">
-    <templates-navigation-drawer :menus="menus"></templates-navigation-drawer>
+    <templates-navigation-drawer :menus="menus"/>
     <templates-a-header>
       <img
         v-if="langState === 'en'"
@@ -29,7 +29,7 @@ const menus = computed(() => {
         width="120"
         height="34"
         alt="Ferris University Library"
-      />
+      >
       <img
         v-if="langState === 'ja'"
         src="~/assets/images/layouts/site-logo.png"
@@ -37,13 +37,13 @@ const menus = computed(() => {
         width="200"
         height="65"
         alt="フェリス女学院大学附属図書館"
-      />
+      >
     </templates-a-header>
     <templates-a-main>
       <slot />
     </templates-a-main>
-    <templates-a-footer :copyright="copyright"></templates-a-footer>
-    <templates-to-top></templates-to-top>
-    <templates-confirm-download></templates-confirm-download>
+    <templates-a-footer :copyright="copyright"/>
+    <templates-to-top/>
+    <templates-confirm-download/>
   </v-app>
 </template>

@@ -27,7 +27,7 @@ const { ebooks, length, lengthAll } = useEbookList();
           :attention="item.attention"
           :links="item.links"
           :documents="item.documents"
-        ></templates-card-ebook>
+        />
       </v-col>
     </v-slide-x-transition>
   </v-row>

@@ -301,7 +301,7 @@ const items: NewspaperCat[] = [
         <v-card-text>
           <templates-list-newspaper
             :items="item.newspapers"
-          ></templates-list-newspaper>
+          />
         </v-card-text>
       </v-card>
     </v-window-item>

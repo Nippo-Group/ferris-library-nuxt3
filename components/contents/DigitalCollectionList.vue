@@ -152,8 +152,7 @@ const items = [
               rounded="0"
               color="grey-lighten-2"
               size="150"
-            >
-            </v-avatar>
+            />
           </div>
           <v-card-text>
             <p v-for="(text, j) in item.texts" :key="j" class="sentence">
@@ -166,13 +165,13 @@ const items = [
               link="資料をみる"
               :to="'/digital-collection/' + item.identification"
               block
-            ></elements-btn-inside>
+            />
             <elements-btn-open-in-new
               v-if="item.link"
               link="資料をみる"
               :url="item.link"
               block
-            ></elements-btn-open-in-new>
+            />
           </v-card-actions>
         </v-card>
       </v-col>

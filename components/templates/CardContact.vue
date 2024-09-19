@@ -64,7 +64,7 @@ const accessIcon = (type: string): string | undefined => {
         <v-list-item-title>{{ props.fax }}</v-list-item-title>
         <v-list-item-subtitle>Fax</v-list-item-subtitle>
       </v-list-item>
-      <v-divider inset></v-divider>
+      <v-divider inset/>
       <v-list-item
         v-if="props.eMali"
         :href="'mailto:' + props.eMali"
@@ -73,7 +73,7 @@ const accessIcon = (type: string): string | undefined => {
         <v-list-item-title>{{ props.eMali }}</v-list-item-title>
         <v-list-item-subtitle>Organization</v-list-item-subtitle>
       </v-list-item>
-      <v-divider inset></v-divider>
+      <v-divider inset/>
       <v-list-item
         :href="props.googleMap || undefined"
         target="_blank"
@@ -86,13 +86,13 @@ const accessIcon = (type: string): string | undefined => {
           props.address
         }}</v-list-item-title>
         <template v-if="props.googleMap" #append>
-          <icons-open-in-new></icons-open-in-new>
+          <icons-open-in-new/>
         </template>
       </v-list-item>
-      <v-divider inset></v-divider>
+      <v-divider inset/>
       <v-list-item v-for="(access, i) in props.accesses" :key="i">
         <template #prepend>
-          <v-icon color="primary" :icon="accessIcon(access.icon)"></v-icon>
+          <v-icon color="primary" :icon="accessIcon(access.icon)"/>
         </template>
         <v-list-item-subtitle>
           {{ access.transportation }}

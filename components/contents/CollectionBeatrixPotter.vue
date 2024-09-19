@@ -18,5 +18,5 @@ const images = computed(() => {
 <template>
   <templates-list-image-set-of-three
     :images="images"
-  ></templates-list-image-set-of-three>
+  />
 </template>

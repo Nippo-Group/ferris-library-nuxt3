@@ -18,7 +18,7 @@ defineProps<{
     >
       <v-card-title class="text-white">
         {{ title }}
-        <icons-open-in-new></icons-open-in-new>
+        <icons-open-in-new/>
       </v-card-title>
     </v-img>
   </v-card>
