@@ -29,12 +29,18 @@ export default defineNuxtConfig({
       "timezone", // import 'dayjs/plugin/timezone'
     ], // Your Day.js plugin
   },
+  devtools: { enabled: true },
   hooks: {
     "vite:extendConfig": (config) => {
       config.plugins!.push(vuetify());
     },
   },
-  modules: ["@pinia/nuxt", "nuxt-microcms-module", "dayjs-nuxt"],
+  modules: [
+    "@pinia/nuxt",
+    "nuxt-microcms-module",
+    "dayjs-nuxt",
+    "@nuxt/eslint",
+  ],
   microCMS: {
     serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
     apiKey: process.env.MICROCMS_API_KEY,

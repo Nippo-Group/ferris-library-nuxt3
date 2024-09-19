@@ -8,12 +8,14 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "lint": "eslint .",
+    "format": "eslint --fix . ",
     "prepare": "husky install",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "@mdi/js": "^7.4.47",
+    "@nuxt/eslint": "^0.5.7",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@types/node": "^22.5.5",
     "dayjs-nuxt": "^2.1.11",
