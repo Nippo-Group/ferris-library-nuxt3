@@ -5,6 +5,8 @@ defineProps<{
   items: News;
 }>();
 
+defineEmits(["dialogClose"]);
+
 const dayjs = useDayjs();
 </script>
 
