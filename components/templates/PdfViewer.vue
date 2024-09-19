@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { VuePDF, usePDF } from "@tato30/vue-pdf";
+// import { VuePDF, usePDF } from "@tato30/vue-pdf";
 
 type State = {
   src: string;
@@ -11,7 +11,7 @@ type State = {
 const props = defineProps<State>();
 
 const page = ref(1);
-const { pdf, pages } = usePDF(props.src);
+// const { pdf, pages } = usePDF(props.src);
 
 const { show } = useConfirmDL();
 
@@ -28,11 +28,11 @@ const fileName = computed(() => {
       :length="pages"
     ></v-pagination>
     <v-sheet color="grey-lighten-5" class="pa-1">
-      <VuePDF :pdf="pdf" :page="page" fit-parent>
+      <!--       <VuePDF :pdf="pdf" :page="page" fit-parent>
         <div>
           <v-progress-linear indeterminate color="primary"></v-progress-linear>
         </div>
-      </VuePDF>
+      </VuePDF> -->
     </v-sheet>
     <div class="text-center pa-1">
       <v-btn v-if="!buttonHidden" @click="show(fileName, props.src, 'PDF')">
