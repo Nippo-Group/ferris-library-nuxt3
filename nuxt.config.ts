@@ -46,6 +46,8 @@ export default defineNuxtConfig({
     apiKey: process.env.MICROCMS_API_KEY,
     target: "all",
   },
+  pages: true,
+  ssr: false,
   vite: {
     ssr: {
       noExternal: ["vuetify"],
