@@ -13,6 +13,7 @@ export default withNuxt(
     rules: {
       "vue/require-v-for-key": "error",
       "vue/no-use-v-if-with-v-for": "error",
+      "vue/no-v-html": "off",
     },
   }
 );
