@@ -1,4 +1,4 @@
-import { DefaultsInstance } from "vuetify/lib/framework.mjs";
+import type { DefaultsInstance } from "vuetify";
 
 export const defaults: DefaultsInstance = {
   VAppBar: {
