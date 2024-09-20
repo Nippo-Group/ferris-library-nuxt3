@@ -30,6 +30,11 @@ export default defineNuxtConfig({
     ], // Your Day.js plugin
   },
   devtools: { enabled: true },
+  eslint: {
+    config: {
+      stylistic: true, // フォーマットを有効化
+    },
+  },
   hooks: {
     "vite:extendConfig": (config) => {
       config.plugins!.push(vuetify());

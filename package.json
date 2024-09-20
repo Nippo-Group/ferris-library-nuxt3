@@ -16,13 +16,9 @@
   "devDependencies": {
     "@mdi/js": "^7.4.47",
     "@nuxt/eslint": "^0.5.7",
-    "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@types/node": "^22.5.5",
     "dayjs-nuxt": "^2.1.11",
     "eslint": "^9.10.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-nuxt": "^4.0.0",
-    "eslint-plugin-vuetify": "^2.2.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "nuxt": "^3.13.2",
