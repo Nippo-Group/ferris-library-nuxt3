@@ -188,8 +188,8 @@ const { active, next, prev } = useVisibleSevral();
       </v-expansion-panel-title>
       <v-expansion-panel-text>
         <div class="d-flex flex-column ga-4">
-          <templates-list-btn :list="item.list"></templates-list-btn>
-          <v-divider></v-divider>
+          <templates-list-btn :list="item.list"/>
+          <v-divider/>
           <div class="d-flex justify-space-between">
             <v-btn variant="text" :disabled="active === 0" @click="prev"
               >Prev</v-btn

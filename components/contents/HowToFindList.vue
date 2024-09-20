@@ -160,7 +160,7 @@ const items: Item[] = [
     <v-col cols="12">
       <v-card>
         <v-card-title>{{ item.category }}</v-card-title>
-        <templates-list-file :items="item.contents"></templates-list-file>
+        <templates-list-file :items="item.contents"/>
       </v-card>
     </v-col>
   </v-row>

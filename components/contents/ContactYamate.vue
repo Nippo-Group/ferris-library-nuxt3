@@ -50,5 +50,5 @@ const { contents } = useLangSwitch(items, itemsEng);
     :google-map="contents.googleMap"
     :image="contents.image"
     :tel="contents.tel"
-  ></templates-card-contact>
+  />
 </template>

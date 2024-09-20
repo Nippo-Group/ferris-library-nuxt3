@@ -38,14 +38,14 @@ defineExpose({
           </template>
           展示場所 ‐ {{ placeToExhibit }}
         </v-list-item>
-        <v-divider></v-divider>
+        <v-divider/>
         <v-list-item class="mt-8">
           <elements-html-text-area :data="content" />
         </v-list-item>
       </v-card-text>
-      <v-divider></v-divider>
+      <v-divider/>
       <v-card-actions>
-        <v-spacer></v-spacer>
+        <v-spacer/>
         <v-btn color="grey-darken-1" variant="text" @click="dismiss">
           Close
         </v-btn>

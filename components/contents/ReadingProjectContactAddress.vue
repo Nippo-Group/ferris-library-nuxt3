@@ -11,6 +11,6 @@ const title = "お問い合わせ";
     </v-card-text>
     <elements-banner-email
       address="r_library@ferris.ac.jp"
-    ></elements-banner-email>
+    />
   </templates-card-reading-project>
 </template>

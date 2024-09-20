@@ -164,7 +164,7 @@ const itemsContents: ItemsContents[] = [
     :items="items"
     variant="filled"
     label="選択してください"
-  ></v-select>
+  />
   <template v-for="(content, index) in itemsContents">
     <v-card
       v-if="selected == content.name"
@@ -195,7 +195,7 @@ const itemsContents: ItemsContents[] = [
       <templates-list-file
         v-if="content.pdfs"
         :items="content.pdfs"
-      ></templates-list-file>
+      />
     </v-card>
   </template>
 </template>

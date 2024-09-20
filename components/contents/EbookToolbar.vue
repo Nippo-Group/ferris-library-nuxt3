@@ -28,8 +28,8 @@ const OptionsCategory = ref<Category[]>([
       hide-details
       clearable
       class="mr-2"
-    ></v-text-field>
-    <v-spacer></v-spacer>
+    />
+    <v-spacer/>
     <v-btn variant="outlined" @click="show">
       <icons-search-defult />
       絞り込み検索
@@ -60,7 +60,7 @@ const OptionsCategory = ref<Category[]>([
               label="言語"
               variant="solo"
               clearable
-            ></v-select>
+            />
           </v-col>
           <v-col cols="12" sm="9">
             <v-select
@@ -71,7 +71,7 @@ const OptionsCategory = ref<Category[]>([
               multiple
               variant="solo"
               clearable
-            ></v-select>
+            />
           </v-col>
         </v-row>
       </v-card-text>
@@ -100,7 +100,7 @@ const OptionsCategory = ref<Category[]>([
                 8/1発信）
               </li>
             </ul>
-            <v-divider></v-divider>
+            <v-divider/>
             <p>2021.4.20追記</p>
             <ul>
               <li>
@@ -116,7 +116,7 @@ const OptionsCategory = ref<Category[]>([
                 FerrisPassport（【図書館】フェリス生限定「日本文学Web図書館」が学外から利用できます！4/14発信）
               </li>
             </ul>
-            <v-divider></v-divider>
+            <v-divider/>
             <p>2021.4.1</p>
             <ul>
               <li>

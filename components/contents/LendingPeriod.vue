@@ -99,7 +99,7 @@ const { contents } = useLangSwitch(
   <elements-responsive-table
     :items-array="contents.items"
     :headers="contents.headers"
-  ></elements-responsive-table>
+  />
   <v-alert
     v-for="(alert, index) in contents.alerts"
     :key="index"

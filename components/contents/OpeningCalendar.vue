@@ -112,8 +112,10 @@ const events = computed(() => {
 // Fullcalendarコンポーネントよりメソッドの取得
 const fullCalendarRef = ref();
 const fullcalendarApi = computed(() => {
-  if (fullCalendarRef) {
+  if (fullCalendarRef.value) {
     return fullCalendarRef.value.getApi();
+  } else {
+    return undefined;
   }
 });
 
@@ -180,7 +182,7 @@ onMounted(() => {
         </v-btn>
       </template>
     </v-tooltip>
-    <v-spacer></v-spacer>
+    <v-spacer />
     <v-tooltip text="Today" location="top">
       <template #activator="{ props }">
         <v-btn v-bind="props" icon @click="fullcalendarApi.today()">

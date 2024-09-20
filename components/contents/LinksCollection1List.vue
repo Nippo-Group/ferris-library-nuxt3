@@ -429,9 +429,9 @@ const items = [
     :items="categories"
     variant="filled"
     label="カテゴリー"
-  ></v-select>
+  />
   <templates-list-links-collection
     :items="items"
     :category="selected"
-  ></templates-list-links-collection>
+  />
 </template>

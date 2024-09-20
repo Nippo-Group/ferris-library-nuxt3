@@ -39,14 +39,14 @@ const breadcrumbs = [
       <v-col cols="12">
         <elements-nav-breadcrumbs
           :items="breadcrumbs"
-        ></elements-nav-breadcrumbs>
+        />
       </v-col>
       <v-col cols="12" xl="6">
         <v-card>
           <v-row>
             <v-col cols="12" sm="8">
               <v-card-title>
-                <img :src="titleLogo" :alt="title" class="titleLogo" />
+                <img :src="titleLogo" :alt="title" class="titleLogo" >
               </v-card-title>
               <v-card-text>
                 <p v-for="(text, i) in commentary" :key="i" class="mb-4">
@@ -65,7 +65,7 @@ const breadcrumbs = [
             </v-col>
             <v-col cols="12" sm="4">
               <v-card-text>
-                <v-img :src="topImage" cover class="bg-grey-lighten-3"></v-img>
+                <v-img :src="topImage" cover class="bg-grey-lighten-3"/>
               </v-card-text>
             </v-col>
           </v-row>

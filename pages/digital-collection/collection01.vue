@@ -44,7 +44,7 @@ const breadcrumbs = [
       <v-col cols="12">
         <elements-nav-breadcrumbs
           :items="breadcrumbs"
-        ></elements-nav-breadcrumbs>
+        />
       </v-col>
       <v-col cols="12">
         <v-card class="d-md-flex flex-no-wrap justify-space-between">
@@ -72,7 +72,7 @@ const breadcrumbs = [
                     :src="topImage"
                     cover
                     class="bg-grey-lighten-3"
-                  ></v-img>
+                  />
                   <p
                     v-for="(caption, j) in topImageCaptions"
                     :key="j"

@@ -30,7 +30,7 @@ defineProps<{
           :retention-period="newspaper.retentionPeriod"
           :location="newspaper.location"
           :note="newspaper.note"
-        ></templates-list-newspaper-item>
+        />
       </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>

@@ -3,5 +3,5 @@ import { mdiEmail } from "@mdi/js";
 </script>
 
 <template>
-  <v-icon :icon="mdiEmail"></v-icon>
+  <v-icon :icon="mdiEmail"/>
 </template>

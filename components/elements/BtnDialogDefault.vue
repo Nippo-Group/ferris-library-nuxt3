@@ -20,7 +20,7 @@ const { visible, show, dismiss } = useVisible();
           <slot name="contents">ダイアログカードの内容</slot>
         </v-card-text>
         <v-card-actions class="px-4">
-          <slot name="actions"></slot>
+          <slot name="actions"/>
         </v-card-actions>
         <v-card-actions class="justify-end">
           <v-btn variant="tonal" @click="dismiss">Close</v-btn>

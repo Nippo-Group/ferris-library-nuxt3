@@ -29,12 +29,12 @@ const breadcrumbs = [
       <v-col cols="12">
         <elements-nav-breadcrumbs
           :items="breadcrumbs"
-        ></elements-nav-breadcrumbs>
+        />
       </v-col>
       <v-col cols="12">
         <v-card>
           <v-card-title>
-            <img :src="titleLogo" :alt="title" class="titleLogo" />
+            <img :src="titleLogo" :alt="title" class="titleLogo" >
           </v-card-title>
           <v-card-text>
             <elements-html-text-area :data="commentary1" />

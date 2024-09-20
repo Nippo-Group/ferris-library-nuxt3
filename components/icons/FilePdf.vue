@@ -3,5 +3,5 @@ import { mdiFilePdfBox } from "@mdi/js";
 </script>
 
 <template>
-  <v-icon :icon="mdiFilePdfBox"></v-icon>
+  <v-icon :icon="mdiFilePdfBox"/>
 </template>

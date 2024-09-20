@@ -64,7 +64,7 @@ const pickOut = [
           gradient="to bottom, rgba(255,255,255,.2), rgba(255,255,255,1)"
         >
           <v-card-title class="text-black wrap-text">
-            <elements-newline-text :item="item.name"></elements-newline-text>
+            <elements-newline-text :item="item.name"/>
           </v-card-title>
         </v-img>
         <v-card-text class="text-black">{{ item.text }}</v-card-text>

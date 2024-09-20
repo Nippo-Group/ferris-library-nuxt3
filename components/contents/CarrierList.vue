@@ -205,19 +205,19 @@ const items3: (Item | ItemHeading)[] = [
     <v-window-item>
       <v-container>
         <elements-header-lv2>企業や業種を研究する</elements-header-lv2>
-        <templates-list-carrier :items="items1"></templates-list-carrier>
+        <templates-list-carrier :items="items1" />
       </v-container>
     </v-window-item>
     <v-window-item>
       <v-container>
         <elements-header-lv2>最新の時事情報をつかむ</elements-header-lv2>
-        <templates-list-carrier :items="items2"></templates-list-carrier>
+        <templates-list-carrier :items="items2" />
       </v-container>
     </v-window-item>
     <v-window-item>
       <v-container>
         <elements-header-lv2>職種や資格について調べる</elements-header-lv2>
-        <templates-list-carrier :items="items3"></templates-list-carrier>
+        <templates-list-carrier :items="items3" />
       </v-container>
     </v-window-item>
     <v-window-item>
@@ -226,14 +226,14 @@ const items3: (Item | ItemHeading)[] = [
         <p class="mb-2">
           「就職」「キャリア」「職業」「業種」「企業」「仕事」「就活」などのキーワードで検索してみましょう。
         </p>
-        <elements-btn-my-library></elements-btn-my-library>
+        <elements-btn-my-library />
         <v-timeline density="compact" side="end">
           <v-timeline-item size="small">
-            <v-img :src="imgCarrier01" width="65vw" aspect-ratio="4/3"></v-img>
+            <v-img :src="imgCarrier01" width="65vw" aspect-ratio="4/3" />
             <p class="text-caption">部分一致検索にキーワードを入れて検索</p>
           </v-timeline-item>
           <v-timeline-item size="small">
-            <v-img :src="imgCarrier02" width="65vw" aspect-ratio="4/3"></v-img>
+            <v-img :src="imgCarrier02" width="65vw" aspect-ratio="4/3" />
             <p class="text-caption">情報がヒット</p>
           </v-timeline-item>
         </v-timeline>

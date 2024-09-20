@@ -25,7 +25,7 @@ const movie = {
           cols="12"
           sm="6"
         >
-          <v-img :src="image"></v-img>
+          <v-img :src="image"/>
         </v-col>
       </v-row>
     </v-container>
@@ -33,7 +33,7 @@ const movie = {
       <elements-youtube-viewer
         :title="movie.title"
         :src="movie.src"
-      ></elements-youtube-viewer>
+      />
     </v-card-text>
   </templates-card-reading-project>
 </template>

@@ -3,5 +3,5 @@ import { mdiFileDocumentMultipleOutline } from "@mdi/js";
 </script>
 
 <template>
-  <v-icon :icon="mdiFileDocumentMultipleOutline"></v-icon>
+  <v-icon :icon="mdiFileDocumentMultipleOutline"/>
 </template>

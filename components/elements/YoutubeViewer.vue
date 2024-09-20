@@ -22,7 +22,7 @@ const youtubeIframeAttributes = {
       v-bind="youtubeIframeAttributes"
       class="youtube-frame"
       :src="src"
-    ></iframe>
+    />
     <div class="text-subtitle-1 text-center">
       {{ title }}
     </div>

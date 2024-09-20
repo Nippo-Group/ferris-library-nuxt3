@@ -32,7 +32,7 @@ const mediaInformation = {
   <templates-card-reading-project :title="mediaInformation.title">
     <v-list v-if="mediaInformation.actions" lines="two">
       <template v-for="(media, index) in mediaInformation.actions" :key="index">
-        <v-divider v-show="index > 0"></v-divider>
+        <v-divider v-show="index > 0"/>
         <v-list-item :href="media.url" target="_blank">
           <v-list-item-title class="wrap-text">{{
             media.title

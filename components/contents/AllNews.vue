@@ -42,7 +42,7 @@ watch(yearValue, () => {
   <elements-selection-year
     v-model="yearValue"
     :items="yearItems"
-  ></elements-selection-year>
-  <templates-list-news :contents-list="displayList"></templates-list-news>
-  <v-pagination v-model="page" :length="pageLength"></v-pagination>
+  />
+  <templates-list-news :contents-list="displayList"/>
+  <v-pagination v-model="page" :length="pageLength"/>
 </template>

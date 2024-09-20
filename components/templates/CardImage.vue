@@ -8,17 +8,17 @@ defineProps<{
 <template>
   <v-card elevation="0" color="grey-lighten-4">
     <v-card-text v-if="$slots.prepend">
-      <slot name="prepend"></slot>
+      <slot name="prepend"/>
     </v-card-text>
     <v-img :src="src" :alt="alt" aspect-ratio="1">
       <template #placeholder>
         <v-row class="fill-height ma-0" align="center" justify="center">
-          <v-progress-circular indeterminate></v-progress-circular>
+          <v-progress-circular indeterminate/>
         </v-row>
       </template>
     </v-img>
     <v-card-text v-if="$slots.append">
-      <slot name="append"></slot>
+      <slot name="append"/>
     </v-card-text>
   </v-card>
 </template>

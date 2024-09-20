@@ -67,7 +67,7 @@ const items = [
         :title="item.name"
       >
         <template #append>
-          <icons-open-in-new v-if="item.url"></icons-open-in-new>
+          <icons-open-in-new v-if="item.url"/>
         </template>
       </v-list-item>
     </v-list>

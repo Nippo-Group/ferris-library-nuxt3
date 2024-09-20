@@ -22,8 +22,7 @@ const movie = [
           cols="12"
           md="6"
         >
-          <elements-youtube-viewer :title="item.title" :src="item.src">
-          </elements-youtube-viewer>
+          <elements-youtube-viewer :title="item.title" :src="item.src"/>
         </v-col>
       </v-row>
     </v-container>

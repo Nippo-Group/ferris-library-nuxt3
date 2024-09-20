@@ -2,8 +2,8 @@
 import { useLanguage } from "@/composable/language/useLanguage";
 
 type Content = {
-  subtitle: String;
-  text?: String;
+  subtitle: string;
+  text?: string;
   list?: string[];
 };
 type Item = {
@@ -27,12 +27,12 @@ const { visible, inversion } = useVisible();
       <v-btn color="primary" variant="text">{{
         langState === "en" ? "Show more" : "詳細を見る"
       }}</v-btn>
-      <v-spacer></v-spacer>
-      <v-btn :icon="useChevronIcon(visible)"> </v-btn>
+      <v-spacer/>
+      <v-btn :icon="useChevronIcon(visible)"/>
     </v-card-actions>
     <v-expand-transition>
       <div v-show="visible">
-        <v-divider></v-divider>
+        <v-divider/>
         <v-card-text>
           <template
             v-for="(content, index) in props.contents"
@@ -50,7 +50,7 @@ const { visible, inversion } = useVisible();
           </template>
         </v-card-text>
         <v-card-actions>
-          <elements-btn-my-library></elements-btn-my-library>
+          <elements-btn-my-library/>
         </v-card-actions>
       </div>
     </v-expand-transition>

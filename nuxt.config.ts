@@ -29,17 +29,30 @@ export default defineNuxtConfig({
       "timezone", // import 'dayjs/plugin/timezone'
     ], // Your Day.js plugin
   },
+  devtools: { enabled: true },
+  eslint: {
+    config: {
+      stylistic: true, // フォーマットを有効化
+    },
+  },
   hooks: {
     "vite:extendConfig": (config) => {
       config.plugins!.push(vuetify());
     },
   },
-  modules: ["@pinia/nuxt", "nuxt-microcms-module", "dayjs-nuxt"],
+  modules: [
+    "@pinia/nuxt",
+    "nuxt-microcms-module",
+    "dayjs-nuxt",
+    "@nuxt/eslint",
+  ],
   microCMS: {
     serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
     apiKey: process.env.MICROCMS_API_KEY,
     target: "all",
   },
+  pages: true,
+  ssr: false,
   vite: {
     ssr: {
       noExternal: ["vuetify"],

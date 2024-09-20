@@ -39,5 +39,5 @@ const menusIcons = computed(() => {
 </script>
 
 <template>
-  <component :is="menusIcons"></component>
+  <component :is="menusIcons"/>
 </template>

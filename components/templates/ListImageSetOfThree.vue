@@ -46,8 +46,7 @@ const lightboxShow = (index: number): void => {
             :src="image.src"
             :alt="image.alt"
             @click="lightboxShow(index)"
-          >
-          </templates-card-image>
+          />
         </v-col>
       </template>
     </v-row>
@@ -56,5 +55,5 @@ const lightboxShow = (index: number): void => {
   <templates-the-lightbox
     ref="lightboxComponent"
     :imgs="imgs"
-  ></templates-the-lightbox>
+  />
 </template>

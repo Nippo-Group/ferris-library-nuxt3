@@ -8,5 +8,5 @@ import imgLearningCommons01 from "~/assets/images/learning-commons/learning-comm
     :img="imgLearningCommons01"
     title="ラーニングコモンズの紹介"
     height="200px"
-  ></templates-card-banner>
+  />
 </template>

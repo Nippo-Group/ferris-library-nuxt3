@@ -71,7 +71,7 @@ const images = computed(() => {
         <v-list-subheader v-if="item.type === 'subheader'">{{
           item.title
         }}</v-list-subheader>
-        <v-divider v-else-if="item.type === 'divider'"></v-divider>
+        <v-divider v-else-if="item.type === 'divider'"/>
         <v-list-item
           v-else
           link
@@ -97,7 +97,7 @@ const images = computed(() => {
       </p>
     </v-card-text>
   </v-card>
-  <templates-list-image v-if="images" :images="images"></templates-list-image>
+  <templates-list-image v-if="images" :images="images"/>
 </template>
 
 <style scoped>

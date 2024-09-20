@@ -17,7 +17,7 @@ const { show } = useConfirmDL();
         <v-card>
           <v-card-subtitle class="pt-4 pb-0">電子ブック</v-card-subtitle>
           <v-card-title class="pt-0">EBSCO eBooks</v-card-title>
-          <v-img max-height="164" :src="imgTadokuEBSCO"></v-img>
+          <v-img max-height="164" :src="imgTadokuEBSCO"/>
           <v-card-text>
             Macmillan Readers や Magic Tree
             Houseといった、英語多読用の電子ブック398冊が利用できます。
@@ -26,12 +26,12 @@ const { show } = useConfirmDL();
             <elements-btn-open-in-new
               link="学内からはこちら"
               url="http://search.ebscohost.com/login.aspx?profile=ehost&defaultdb=nlebk"
-            ></elements-btn-open-in-new>
+            />
           </v-card-actions>
-          <v-divider></v-divider>
+          <v-divider/>
           <v-card-text>
             <v-alert density="compact" type="success" class="mb-0">
-              学部生・大学院生・教職員は学外からも利用が可能です。<br />
+              学部生・大学院生・教職員は学外からも利用が可能です。<br >
               ※大学のアカウントでログインできます。
             </v-alert>
           </v-card-text>
@@ -39,7 +39,7 @@ const { show } = useConfirmDL();
             <elements-btn-open-in-new
               link="学外からはこちら"
               url="https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top.do&method=open"
-            ></elements-btn-open-in-new>
+            />
             <v-btn
               variant="elevated"
               color="grey-lighten-4"
@@ -52,7 +52,7 @@ const { show } = useConfirmDL();
               "
             >
               アクセスガイド
-              <icons-file-pdf end></icons-file-pdf>
+              <icons-file-pdf end/>
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -63,7 +63,7 @@ const { show } = useConfirmDL();
           <v-card-title class="pt-0"
             >Gale Virtual Reference Library</v-card-title
           >
-          <v-img max-height="164" :src="imgTadokuGVRL"></v-img>
+          <v-img max-height="164" :src="imgTadokuGVRL"/>
           <v-card-text>
             <p>
               俳優、ミュージシャン、アスリート、実業家、政治家などの各界の有名人についての伝記シリーズ「People
@@ -75,7 +75,7 @@ const { show } = useConfirmDL();
             <elements-btn-open-in-new
               link="学内からはこちら"
               url="https://go.galegroup.com/ps/i.do?p=GVRL&sw=w&u=ferris&v=2.1&subject=%E5%A4%9A%E8%AA%AD%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA%EF%BC%9A%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E3%82%92%E3%81%AB%E3%81%8E%E3%82%8F%E3%81%99%E6%9C%89%E5%90%8D%E4%BA%BA%E4%BC%9D%E8%A8%98&pg=BooksForSubject&it=static"
-            ></elements-btn-open-in-new>
+            />
           </v-card-actions>
         </v-card>
       </v-col>
@@ -94,15 +94,15 @@ const { show } = useConfirmDL();
           </v-card-text>
           <v-list density="compact">
             <v-list-item>
-              <icons-circle-small></icons-circle-small>
+              <icons-circle-small/>
               Page Turners 50巻</v-list-item
             >
             <v-list-item>
-              <icons-circle-small></icons-circle-small>
+              <icons-circle-small/>
               Foundations Reading Library 42巻</v-list-item
             >
             <v-list-item>
-              <icons-circle-small></icons-circle-small>
+              <icons-circle-small/>
               e-future graded comic readers 54冊</v-list-item
             >
           </v-list>
@@ -110,19 +110,19 @@ const { show } = useConfirmDL();
             <elements-btn-open-in-new
               link="学内からはこちら"
               url="https://elib.maruzen.co.jp/elib/html/BookList/"
-            ></elements-btn-open-in-new>
+            />
           </v-card-actions>
           <v-card-text>
             <v-alert density="compact" type="success" class="mb-0">
-              学部生・大学院生・教職員は学内から利用が可能です。<br />※大学のアカウントでログインできます。
+              学部生・大学院生・教職員は学内から利用が可能です。<br >※大学のアカウントでログインできます。
             </v-alert>
           </v-card-text>
-          <v-divider></v-divider>
+          <v-divider/>
           <v-card-actions>
             <elements-btn-open-in-new
               link="学外からはこちら"
               url="https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open"
-            ></elements-btn-open-in-new>
+            />
           </v-card-actions>
           <v-card-actions>
             <v-btn
@@ -137,7 +137,7 @@ const { show } = useConfirmDL();
               "
             >
             「レベル別」アクセスガイド
-              <icons-file-pdf end></icons-file-pdf>
+              <icons-file-pdf end/>
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -150,7 +150,7 @@ const { show } = useConfirmDL();
             <p>
               緑園本館4階に、英語多読図書を集めたコーナーがあります。貸出条件は一般図書と同じです。
             </p>
-            <v-img :src="imgTadokuCorner" class="mt-4"></v-img>
+            <v-img :src="imgTadokuCorner" class="mt-4"/>
           </v-card-text>
         </v-card>
       </v-col>
@@ -173,7 +173,7 @@ const { show } = useConfirmDL();
               "
             >
               読書記録シート
-              <icons-file-pdf end></icons-file-pdf>
+              <icons-file-pdf end/>
             </v-btn>
           </v-card-actions>
         </v-card>

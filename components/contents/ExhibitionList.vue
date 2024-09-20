@@ -59,7 +59,7 @@ watchEffect(() => {
         <elements-selection-year
           v-model="yearValue"
           :items="yearItems"
-        ></elements-selection-year>
+        />
       </v-col>
       <v-col cols="12">
         <v-toolbar :border="true" color="white" density="compact" rounded>
@@ -69,8 +69,8 @@ watchEffect(() => {
             single-line
             label="Keywords"
             clearable
-          ></v-text-field>
-          <v-spacer></v-spacer>
+          />
+          <v-spacer/>
           <v-btn icon @click="reverse">
             <icons-sort-defult />
           </v-btn>
@@ -90,13 +90,13 @@ watchEffect(() => {
           <templates-card-exhibition-list
             :item="item"
             @click="openDitails(item)"
-          ></templates-card-exhibition-list>
+          />
         </v-col>
       </v-slide-y-transition>
     </v-row>
     <v-row v-else>
       <v-col cols="12" md="6" lg="4">
-        <v-card title="情報がありません"></v-card>
+        <v-card title="情報がありません"/>
       </v-col>
     </v-row>
   </v-container>
@@ -107,7 +107,7 @@ watchEffect(() => {
     :title="contentTitle"
     :place-to-exhibit="placeToExhibit"
     :content="content"
-  ></templates-card-exhibition-details>
+  />
 </template>
 
 <style scoped>

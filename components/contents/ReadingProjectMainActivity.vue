@@ -41,7 +41,7 @@ const { show } = useConfirmDL();
               :src="document.url"
               button-hidden
               pagination-hidden
-            ></templates-pdf-viewer>
+            />
           </client-only>
           <v-btn
             block

@@ -67,8 +67,7 @@ const items = [
       :src="item.src"
       :lazy-src="item.lazy"
       cover
-    >
-    </v-carousel-item>
+    />
   </v-carousel>
 </template>
 

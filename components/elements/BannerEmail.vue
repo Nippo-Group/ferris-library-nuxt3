@@ -37,7 +37,7 @@ const setCopyMessage = () => {
           variant="text"
           @click="copyToClipboard(address)"
         >
-          <icons-content-copy> </icons-content-copy>
+          <icons-content-copy/>
         </v-btn>
       </template>
     </v-tooltip>

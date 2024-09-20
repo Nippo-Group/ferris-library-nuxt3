@@ -26,7 +26,7 @@ defineProps<{
         variant="tonal"
       >
         {{ item.name }}
-        <v-icon v-show="item.openInNew" end :icon="mdiOpenInNew"></v-icon>
+        <v-icon v-show="item.openInNew" end :icon="mdiOpenInNew"/>
       </v-btn>
       <p class="text-grey">{{ item.comment }}</p>
     </li>

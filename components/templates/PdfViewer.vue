@@ -26,11 +26,11 @@ const fileName = computed(() => {
       v-if="pages > 1 && !paginationHidden"
       v-model="page"
       :length="pages"
-    ></v-pagination>
+    />
     <v-sheet color="grey-lighten-5" class="pa-1">
       <VuePDF :pdf="pdf" :page="page" fit-parent>
         <div>
-          <v-progress-linear indeterminate color="primary"></v-progress-linear>
+          <v-progress-linear indeterminate color="primary" />
         </div>
       </VuePDF>
     </v-sheet>

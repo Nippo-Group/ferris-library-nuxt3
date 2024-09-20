@@ -3,5 +3,5 @@ import { mdiClose } from "@mdi/js";
 </script>
 
 <template>
-  <v-icon :icon="mdiClose"></v-icon>
+  <v-icon :icon="mdiClose"/>
 </template>

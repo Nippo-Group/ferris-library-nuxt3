@@ -12,11 +12,11 @@ const error = useError();
       link="ホームへもどる"
       to="/"
       class="mb-2"
-    ></elements-btn-inside>
+    />
     <elements-btn-inside
       link="Return to home page"
       to="/english"
       class="mb-2"
-    ></elements-btn-inside>
+    />
   </v-container>
 </template>

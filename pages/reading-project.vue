@@ -21,7 +21,7 @@ const isWhat =
           <elements-header-lv1-bg
             :title="['読書運動', 'プロジェクト']"
             :image="titleImage"
-          ></elements-header-lv1-bg>
+          />
         </v-col>
       </v-row>
       <v-row>
@@ -29,7 +29,7 @@ const isWhat =
           <elements-header-lv2-bg
             title="「読書運動プロジェクト」とは？"
             :lead="isWhat"
-          ></elements-header-lv2-bg>
+          />
         </v-col>
         <v-col cols="12">
           <contents-reading-project-main-activity />
@@ -49,7 +49,7 @@ const isWhat =
           <elements-header-lv2-bg
             title="活動紹介"
             :lead="description"
-          ></elements-header-lv2-bg>
+          />
         </v-col>
         <v-col cols="12" md="6">
           <contents-reading-project-team-planning />
@@ -62,7 +62,7 @@ const isWhat =
         <v-col cols="12">
           <elements-header-lv2-bg
             title="活動拠点～附属図書館～"
-          ></elements-header-lv2-bg>
+          />
         </v-col>
         <v-col cols="12">
           <contents-reading-project-activity-base />
@@ -70,7 +70,7 @@ const isWhat =
       </v-row>
       <v-row>
         <v-col cols="12">
-          <elements-header-lv2-bg title="お問い合わせ"></elements-header-lv2-bg>
+          <elements-header-lv2-bg title="お問い合わせ"/>
         </v-col>
         <v-col cols="12">
           <contents-reading-project-contact-address />

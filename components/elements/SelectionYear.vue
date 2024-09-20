@@ -66,6 +66,6 @@ const limit = (list: Item[]) => {
       item-value="value"
       :items="items"
       variant="outlined"
-    ></v-select>
+    />
   </div>
 </template>

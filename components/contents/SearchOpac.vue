@@ -51,12 +51,12 @@ const rules = ref({
               method="POST"
               target="_blank"
             >
-              <input type="hidden" name="module" value="search" />
-              <input type="hidden" name="path" value="switch" />
-              <input type="hidden" name="method" value="search" />
-              <input type="hidden" name="quick" value="true" />
-              <input type="hidden" name="prefix" value="/search" />
-              <input type="hidden" name="page" value="/search" />
+              <input type="hidden" name="module" value="search" >
+              <input type="hidden" name="path" value="switch" >
+              <input type="hidden" name="method" value="search" >
+              <input type="hidden" name="quick" value="true" >
+              <input type="hidden" name="prefix" value="/search" >
+              <input type="hidden" name="page" value="/search" >
               <v-text-field
                 id="QSearch"
                 v-model="qSearchWord"
@@ -73,7 +73,7 @@ const rules = ref({
                 maxlength="128"
               >
                 <template #append>
-                  <v-btn type="submit" :icon="mdiSend" variant="text"></v-btn>
+                  <v-btn type="submit" :icon="mdiSend" variant="text"/>
                 </template>
               </v-text-field>
             </v-form>
@@ -81,8 +81,8 @@ const rules = ref({
               <elements-btn-open-in-new
                 :link="contents.detailedSearch"
                 url="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
-              ></elements-btn-open-in-new>
-              <elements-btn-my-library></elements-btn-my-library>
+              />
+              <elements-btn-my-library/>
             </v-btn-toggle>
           </v-card-text>
         </v-card>
@@ -94,11 +94,11 @@ const rules = ref({
               <elements-btn-open-in-new
                 :link="contents.spOPAC"
                 url="http://osirabe.net/opac.ferris/"
-              ></elements-btn-open-in-new>
+              />
             </v-card-text>
           </div>
           <div>
-            <img src="@/assets/images/opac/qr.gif" />
+            <img src="@/assets/images/opac/qr.gif" >
           </div>
         </v-card>
       </v-window-item>

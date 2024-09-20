@@ -3,5 +3,5 @@ import { mdiChatQuestion } from "@mdi/js";
 </script>
 
 <template>
-  <v-icon :icon="mdiChatQuestion"></v-icon>
+  <v-icon :icon="mdiChatQuestion"/>
 </template>
