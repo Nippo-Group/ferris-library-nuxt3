@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const title = ref("フロアマップ");
-useSeoMeta({ title: title.value, description: "図書館のフロアマップです。" });
+const title = ref('フロアマップ')
+useSeoMeta({ title: title.value, description: '図書館のフロアマップです。' })
 </script>
 
 <template>

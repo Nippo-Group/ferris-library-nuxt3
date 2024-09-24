@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiBookOpenVariant } from "@mdi/js";
+import { mdiBookOpenVariant } from '@mdi/js'
 </script>
 
 <template>

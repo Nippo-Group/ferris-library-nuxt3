@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiCircleSmall } from "@mdi/js";
+import { mdiCircleSmall } from '@mdi/js'
 </script>
 
 <template>

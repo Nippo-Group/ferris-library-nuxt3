@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const title = "一次情報リンク集";
-const description =
-  "電子図書館や、電子化された図書や雑誌など、一次情報（源情報、本文そのもの）を入手できるサイトを集めました。";
+const title = '一次情報リンク集'
+const description
+  = '電子図書館や、電子化された図書や雑誌など、一次情報（源情報、本文そのもの）を入手できるサイトを集めました。'
 useSeoMeta({
   title,
   description,
-});
+})
 </script>
 
 <template>

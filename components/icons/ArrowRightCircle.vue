@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiArrowRightCircleOutline } from "@mdi/js";
+import { mdiArrowRightCircleOutline } from '@mdi/js'
 </script>
 
 <template>

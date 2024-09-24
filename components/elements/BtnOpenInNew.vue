@@ -8,7 +8,7 @@ const props = defineProps({
     type: String,
     required: true,
   },
-});
+})
 </script>
 
 <template>
@@ -20,7 +20,7 @@ const props = defineProps({
     variant="elevated"
   >
     {{ props.link }}
-    <icons-open-in-new end/>
+    <icons-open-in-new end />
   </v-btn>
 </template>
 

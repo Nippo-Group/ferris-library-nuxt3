@@ -1,36 +1,42 @@
 <script setup lang="ts">
-import type { Link, Document } from "@/types/ebook";
+import type { Link, Document } from '@/types/ebook'
 
-const { show } = useConfirmDL();
+const { show } = useConfirmDL()
 
 defineProps<{
-  name: string;
-  languages: string[];
-  categories: string[];
-  available: string[];
-  body: string;
-  access?: string;
-  logout?: boolean;
-  attention?: string;
-  links?: Link[];
-  documents?: Document[];
-}>();
+  name: string
+  languages: string[]
+  categories: string[]
+  available: string[]
+  body: string
+  access?: string
+  logout?: boolean
+  attention?: string
+  links?: Link[]
+  documents?: Document[]
+}>()
 </script>
 
 <template>
   <v-card>
     <v-container>
       <v-row dense>
-        <v-col cols="12" sm="4">
-          <v-card-title class="wrap-text">{{ name }}</v-card-title>
+        <v-col
+          cols="12"
+          sm="4"
+        >
+          <v-card-title class="wrap-text">
+            {{ name }}
+          </v-card-title>
           <v-card-text>
             <v-chip
               v-for="(language, m) in languages"
               :key="'lang' + m"
               color="secondary"
               class="mb-1 mr-1"
-              >{{ language }}</v-chip
             >
+              {{ language }}
+            </v-chip>
             <v-chip
               v-for="(cat, j) in categories"
               :key="'cat' + j"
@@ -41,21 +47,30 @@ defineProps<{
             </v-chip>
           </v-card-text>
         </v-col>
-        <v-col cols="12" sm="8">
+        <v-col
+          cols="12"
+          sm="8"
+        >
           <v-card-text>
             <elements-html-text-area :data="body" />
           </v-card-text>
-          <v-divider/>
+          <v-divider />
           <v-card-text v-if="access || attention">
-            <!--<p class="my-0">
+            <!-- <p class="my-0">
               利用可能場所：
               <span v-for="(place, p) in available" :key="'ava' + p">
                 {{ place }}
               </span>
-            </p>-->
-            <p v-if="access" class="my-0">
+            </p> -->
+            <p
+              v-if="access"
+              class="my-0"
+            >
               同時アクセス数：{{ access }}
-              <span v-if="logout" class="text-orange ml-2">
+              <span
+                v-if="logout"
+                class="text-orange ml-2"
+              >
                 <icons-alert-circle siza="small" />
                 利用後は必ずログアウトしてください
               </span>
@@ -80,9 +95,21 @@ defineProps<{
                   @click="show(file.name, file.url, file.type)"
                 >
                   {{ file.name }}
-                  <icons-file-pdf v-if="file.type == 'PDF'" dark end />
-                  <icons-file-excel v-else-if="file.type == 'Excel'" dark end />
-                  <icons-file-document v-else dark end />
+                  <icons-file-pdf
+                    v-if="file.type == 'PDF'"
+                    dark
+                    end
+                  />
+                  <icons-file-excel
+                    v-else-if="file.type == 'Excel'"
+                    dark
+                    end
+                  />
+                  <icons-file-document
+                    v-else
+                    dark
+                    end
+                  />
                 </v-btn>
               </template>
             </elements-align-elements>

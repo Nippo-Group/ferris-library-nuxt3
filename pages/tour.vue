@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const title = ref("ツアー・ガイダンス");
+const title = ref('ツアー・ガイダンス')
 useSeoMeta({
   title: title.value,
   description:
-    "新入生向けのツアーと卒業論文やレポート執筆のための文献検索ガイダンスについてのご紹介です。",
-});
+    '新入生向けのツアーと卒業論文やレポート執筆のための文献検索ガイダンスについてのご紹介です。',
+})
 </script>
 
 <template>

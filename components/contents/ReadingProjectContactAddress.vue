@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const title = "お問い合わせ";
+const title = 'お問い合わせ'
 </script>
 
 <template>

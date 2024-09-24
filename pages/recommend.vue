@@ -1,18 +1,21 @@
 <script setup lang="ts">
-const title = "学科推奨図書";
-const description =
-  "各学科の専任教員が「〇〇学科の学生なら読んでおいてほしい本」として選定された図書です。専門分野、履修科目に関わらず、所属学科における基本知識として読むことが期待されています。";
+const title = '学科推奨図書'
+const description
+  = '各学科の専任教員が「〇〇学科の学生なら読んでおいてほしい本」として選定された図書です。専門分野、履修科目に関わらず、所属学科における基本知識として読むことが期待されています。'
 useSeoMeta({
   title,
   description,
-});
+})
 </script>
 
 <template>
   <v-container>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
     <v-row>
-      <v-col cols="12" class="recommend-info">
+      <v-col
+        cols="12"
+        class="recommend-info"
+      >
         <p>
           各学科の専任教員が「〇〇学科の学生なら読んでおいてほしい本」として選定された図書です。
         </p>
@@ -20,10 +23,21 @@ useSeoMeta({
           専門分野、履修科目に関わらず、所属学科における基本知識として読むことが期待されています。
         </p>
         <p>
-          <v-chip class="mr-2" variant="tonal">配架場所</v-chip
-          >緑園本館2階（図書館エリア／メディアカウンター向かい）
+          <v-chip
+            class="mr-2"
+            variant="tonal"
+          >
+            配架場所
+          </v-chip>緑園本館2階（図書館エリア／メディアカウンター向かい）
         </p>
-        <p><v-chip class="mr-2" variant="tonal">貸出期間</v-chip>2週間</p>
+        <p>
+          <v-chip
+            class="mr-2"
+            variant="tonal"
+          >
+            貸出期間
+          </v-chip>2週間
+        </p>
         <p>＊所属学科以外の「学科推奨図書」も借りられます。</p>
       </v-col>
     </v-row>

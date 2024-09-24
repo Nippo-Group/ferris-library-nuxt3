@@ -1,10 +1,10 @@
 export const useLoading = () => {
-  const loading = ref<boolean>(true);
+  const loading = ref<boolean>(true)
   onMounted(() => {
-    loading.value = false;
-  });
+    loading.value = false
+  })
 
   return {
     loading,
-  };
-};
+  }
+}

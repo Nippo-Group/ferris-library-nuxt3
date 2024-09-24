@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiBookSearch } from "@mdi/js";
+import { mdiBookSearch } from '@mdi/js'
 </script>
 
 <template>

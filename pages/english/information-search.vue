@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const title = ref("Information search");
+const title = ref('Information search')
 useSeoMeta({
   title: title.value,
-  description: "Information Retrieval Flowchart",
-});
-definePageMeta({ layout: "english" });
+  description: 'Information Retrieval Flowchart',
+})
+definePageMeta({ layout: 'english' })
 </script>
 
 <template>

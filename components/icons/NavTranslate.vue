@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiTranslate } from "@mdi/js";
+import { mdiTranslate } from '@mdi/js'
 </script>
 
 <template>

@@ -1,33 +1,33 @@
 <script setup lang="ts">
-import { mdiOpenInNew, mdiMagnify, mdiSend } from "@mdi/js";
-import { useLangSwitch } from "@/composable/language/useLangSwitch";
+import { mdiOpenInNew, mdiMagnify, mdiSend } from '@mdi/js'
+import { useLangSwitch } from '@/composable/language/useLangSwitch'
 
-const tab = ref(null);
-const qSearchWord = ref("");
+const tab = ref(null)
+const qSearchWord = ref('')
 
 const itemsEng = {
-  title: "OPAC Detailed search",
-  sp: "Smart Phone",
-  spOPAC: "Smart Phone OPAC",
-  search: "Search",
-  quickSearch: "Quick search",
-  detailedSearch: "Detailed search",
-  placeholder: "Please enter a keyword",
-};
+  title: 'OPAC Detailed search',
+  sp: 'Smart Phone',
+  spOPAC: 'Smart Phone OPAC',
+  search: 'Search',
+  quickSearch: 'Quick search',
+  detailedSearch: 'Detailed search',
+  placeholder: 'Please enter a keyword',
+}
 const items = {
-  title: "OPAC 蔵書検索",
-  sp: "スマートフォン",
-  spOPAC: "スマートフォン版OPAC",
-  search: "検索",
-  quickSearch: "クイックサーチ",
-  detailedSearch: "詳細検索",
-  placeholder: "キーワードを入力してください",
-};
-const { contents } = useLangSwitch(items, itemsEng);
+  title: 'OPAC 蔵書検索',
+  sp: 'スマートフォン',
+  spOPAC: 'スマートフォン版OPAC',
+  search: '検索',
+  quickSearch: 'クイックサーチ',
+  detailedSearch: '詳細検索',
+  placeholder: 'キーワードを入力してください',
+}
+const { contents } = useLangSwitch(items, itemsEng)
 
 const rules = ref({
-  required: (value: string) => !!value || "Field is required",
-});
+  required: (value: string) => !!value || 'Field is required',
+})
 </script>
 
 <template>
@@ -35,7 +35,10 @@ const rules = ref({
     <icons-library-shelves start /> {{ contents.title }}
   </div>
   <v-card>
-    <v-tabs v-model="tab" color="primary">
+    <v-tabs
+      v-model="tab"
+      color="primary"
+    >
       <v-tab>
         {{ contents.search }}
       </v-tab>
@@ -51,12 +54,36 @@ const rules = ref({
               method="POST"
               target="_blank"
             >
-              <input type="hidden" name="module" value="search" >
-              <input type="hidden" name="path" value="switch" >
-              <input type="hidden" name="method" value="search" >
-              <input type="hidden" name="quick" value="true" >
-              <input type="hidden" name="prefix" value="/search" >
-              <input type="hidden" name="page" value="/search" >
+              <input
+                type="hidden"
+                name="module"
+                value="search"
+              >
+              <input
+                type="hidden"
+                name="path"
+                value="switch"
+              >
+              <input
+                type="hidden"
+                name="method"
+                value="search"
+              >
+              <input
+                type="hidden"
+                name="quick"
+                value="true"
+              >
+              <input
+                type="hidden"
+                name="prefix"
+                value="/search"
+              >
+              <input
+                type="hidden"
+                name="page"
+                value="/search"
+              >
               <v-text-field
                 id="QSearch"
                 v-model="qSearchWord"
@@ -73,22 +100,32 @@ const rules = ref({
                 maxlength="128"
               >
                 <template #append>
-                  <v-btn type="submit" :icon="mdiSend" variant="text"/>
+                  <v-btn
+                    type="submit"
+                    :icon="mdiSend"
+                    variant="text"
+                  />
                 </template>
               </v-text-field>
             </v-form>
-            <v-btn-toggle divided density="compact">
+            <v-btn-toggle
+              divided
+              density="compact"
+            >
               <elements-btn-open-in-new
                 :link="contents.detailedSearch"
                 url="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
               />
-              <elements-btn-my-library/>
+              <elements-btn-my-library />
             </v-btn-toggle>
           </v-card-text>
         </v-card>
       </v-window-item>
       <v-window-item>
-        <v-card flat class="d-md-flex justify-start">
+        <v-card
+          flat
+          class="d-md-flex justify-start"
+        >
           <div>
             <v-card-text>
               <elements-btn-open-in-new
@@ -98,7 +135,7 @@ const rules = ref({
             </v-card-text>
           </div>
           <div>
-            <img src="@/assets/images/opac/qr.gif" >
+            <img src="@/assets/images/opac/qr.gif">
           </div>
         </v-card>
       </v-window-item>

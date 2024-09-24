@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiMagnify } from "@mdi/js";
+import { mdiMagnify } from '@mdi/js'
 </script>
 
 <template>

@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import type { News } from "@/types/news";
+import type { News } from '@/types/news'
 
 defineProps<{
-  items: News;
-}>();
+  items: News
+}>()
 
-defineEmits(["dialogClose"]);
+defineEmits(['dialogClose'])
 
-const dayjs = useDayjs();
+const dayjs = useDayjs()
 </script>
 
 <template>
@@ -17,7 +17,10 @@ const dayjs = useDayjs();
         <icons-newspaper-variant />
         News
       </p>
-      <v-card-title tag="h1" class="card-title">
+      <v-card-title
+        tag="h1"
+        class="card-title"
+      >
         {{ items.title }}
       </v-card-title>
       <v-card-subtitle>
@@ -63,7 +66,12 @@ const dayjs = useDayjs();
     </div>
     <v-divider />
     <v-card-actions class="justify-end">
-      <v-btn variant="text" @click="$emit('dialogClose')">Close</v-btn>
+      <v-btn
+        variant="text"
+        @click="$emit('dialogClose')"
+      >
+        Close
+      </v-btn>
     </v-card-actions>
   </v-card>
 </template>

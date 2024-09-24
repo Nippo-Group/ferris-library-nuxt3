@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import { useLanguage } from "@/composable/language/useLanguage";
+import { useLanguage } from '@/composable/language/useLanguage'
 
-import menusJapanese from "@/assets/json/menu.json";
-import menusEnglish from "@/assets/json/menu-english.json";
+import menusJapanese from '@/assets/json/menu.json'
+import menusEnglish from '@/assets/json/menu-english.json'
 
-const { langState } = useLanguage();
+const { langState } = useLanguage()
 
-const copyright = "Ferris University Library";
+const copyright = 'Ferris University Library'
 
 const menus = computed(() => {
   switch (langState.value) {
-    case "en":
-      return menusEnglish;
+    case 'en':
+      return menusEnglish
     default:
-      return menusJapanese;
+      return menusJapanese
   }
-});
+})
 </script>
 
 <template>
   <v-app id="inspire">
-    <templates-navigation-drawer :menus="menus"/>
+    <templates-navigation-drawer :menus="menus" />
     <templates-a-header>
       <img
         v-if="langState === 'en'"
@@ -42,8 +42,8 @@ const menus = computed(() => {
     <templates-a-main>
       <slot />
     </templates-a-main>
-    <templates-a-footer :copyright="copyright"/>
-    <templates-to-top/>
-    <templates-confirm-download/>
+    <templates-a-footer :copyright="copyright" />
+    <templates-to-top />
+    <templates-confirm-download />
   </v-app>
 </template>

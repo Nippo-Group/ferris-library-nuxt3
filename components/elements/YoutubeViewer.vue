@@ -1,19 +1,19 @@
 <script setup lang="ts">
 type State = {
-  title: string;
-  src: string;
-};
-defineProps<State>();
+  title: string
+  src: string
+}
+defineProps<State>()
 
 const youtubeIframeAttributes = {
   width: 560,
   height: 315,
-  title: "YouTube video player",
+  title: 'YouTube video player',
   frameborder: 0,
   allow:
-    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+    'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture',
   allowfullscreen: true,
-};
+}
 </script>
 
 <template>

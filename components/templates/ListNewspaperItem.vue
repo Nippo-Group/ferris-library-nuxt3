@@ -1,12 +1,12 @@
 <script setup lang="ts">
 defineProps<{
-  country?: string;
-  publisher?: string;
-  cycle?: string;
-  retentionPeriod?: string;
-  location?: string;
-  note?: string;
-}>();
+  country?: string
+  publisher?: string
+  cycle?: string
+  retentionPeriod?: string
+  location?: string
+  note?: string
+}>()
 </script>
 
 <template>

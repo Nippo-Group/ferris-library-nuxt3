@@ -1,12 +1,15 @@
 <script setup lang="ts">
-import { useEbookList } from "@/composable/ebooks/useEbookList";
+import { useEbookList } from '@/composable/ebooks/useEbookList'
 
-const { ebooks, length, lengthAll } = useEbookList();
+const { ebooks, length, lengthAll } = useEbookList()
 </script>
 
 <template>
   <v-row dense>
-    <v-col cols="12" xl="8">
+    <v-col
+      cols="12"
+      xl="8"
+    >
       <p>
         <span v-if="!length"> 該当する項目はみつかりませんでした </span>
         <span v-else>{{ length }}/{{ lengthAll }}件の項目を表示しています</span>
@@ -15,7 +18,12 @@ const { ebooks, length, lengthAll } = useEbookList();
   </v-row>
   <v-row>
     <v-slide-x-transition group>
-      <v-col v-for="(item, i) in ebooks" :key="i" cols="12" xl="8">
+      <v-col
+        v-for="(item, i) in ebooks"
+        :key="i"
+        cols="12"
+        xl="8"
+      >
         <templates-card-ebook
           :name="item.name"
           :languages="item.languages"

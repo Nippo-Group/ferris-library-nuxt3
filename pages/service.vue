@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const title = ref("貸出サービス");
+const title = ref('貸出サービス')
 useSeoMeta({
   title: title.value,
   description:
-    "図書館のサービス一覧・貸出冊数・貸出期間などについてご案内しています。",
-});
+    '図書館のサービス一覧・貸出冊数・貸出期間などについてご案内しています。',
+})
 </script>
 
 <template>
@@ -14,7 +14,10 @@ useSeoMeta({
       <v-col cols="12">
         <contents-service-list />
       </v-col>
-      <v-col cols="12" class="text-center">
+      <v-col
+        cols="12"
+        class="text-center"
+      >
         <elements-btn-my-library />
       </v-col>
     </v-row>

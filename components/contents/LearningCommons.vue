@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import imgLearningCommons01 from "~/assets/images/learning-commons/learning-commons-01.jpg";
+import imgLearningCommons01 from '~/assets/images/learning-commons/learning-commons-01.jpg'
 </script>
 
 <template>

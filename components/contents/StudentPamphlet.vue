@@ -1,9 +1,13 @@
 <script setup lang="ts">
-const tab = ref(null);
+const tab = ref(null)
 </script>
 
 <template>
-  <v-tabs v-model="tab" color="primary" grow>
+  <v-tabs
+    v-model="tab"
+    color="primary"
+    grow
+  >
     <v-tab>緑園本館</v-tab>
     <v-tab>山手分室</v-tab>
   </v-tabs>

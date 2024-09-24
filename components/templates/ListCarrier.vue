@@ -1,18 +1,26 @@
 <script setup lang="ts">
-import type { Item, ItemHeading } from "@/types/carrier";
+import type { Item, ItemHeading } from '@/types/carrier'
 
 const props = defineProps<{
-  items: (Item | ItemHeading)[];
-}>();
+  items: (Item | ItemHeading)[]
+}>()
 </script>
 
 <template>
   <v-row dense>
-    <v-col v-for="(item, i) in props.items" :key="'item' + i" cols="12" xl="8">
-      <v-card v-if="item.heading" color="grey-lighten-4" flat>
+    <v-col
+      v-for="(item, i) in props.items"
+      :key="'item' + i"
+      cols="12"
+      xl="8"
+    >
+      <v-card
+        v-if="item.heading"
+        color="grey-lighten-4"
+        flat
+      >
         <v-card-text>
-          <span class="font-weight-bold">{{ item.name }}</span
-          ><span class="ml-4">{{ item.content }}</span>
+          <span class="font-weight-bold">{{ item.name }}</span><span class="ml-4">{{ item.content }}</span>
         </v-card-text>
       </v-card>
       <v-card v-else>
@@ -24,7 +32,10 @@ const props = defineProps<{
         </v-card-subtitle>
         <v-card-text>
           {{ item.content }}
-          <p v-if="item.logout" class="mb-0">
+          <p
+            v-if="item.logout"
+            class="mb-0"
+          >
             <span class="text-orange ml-2">
               <icons-alert-circle />
               利用後は必ずログアウトしてください
@@ -33,8 +44,12 @@ const props = defineProps<{
         </v-card-text>
         <div class="d-flex">
           <v-card-text>
-            <v-chip variant="tonal" class="mr-2">アクセス</v-chip
-            >{{ item.access }}
+            <v-chip
+              variant="tonal"
+              class="mr-2"
+            >
+              アクセス
+            </v-chip>{{ item.access }}
           </v-card-text>
           <v-card-actions v-if="item.links">
             <elements-btn-open-in-new

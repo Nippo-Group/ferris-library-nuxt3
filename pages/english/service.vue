@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const title = ref("Lending Service");
+const title = ref('Lending Service')
 useSeoMeta({
   title: title.value,
   description:
-    "Information about the library's service list, number of books checked out, and loan periods.",
-});
-definePageMeta({ layout: "english" });
+    'Information about the library\'s service list, number of books checked out, and loan periods.',
+})
+definePageMeta({ layout: 'english' })
 </script>
 
 <template>
@@ -15,7 +15,10 @@ definePageMeta({ layout: "english" });
       <v-col cols="12">
         <contents-service-list />
       </v-col>
-      <v-col cols="12" class="text-center">
+      <v-col
+        cols="12"
+        class="text-center"
+      >
         <elements-btn-my-library />
       </v-col>
     </v-row>

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 defineProps<{
-  title: string[];
-  image: string;
-}>();
+  title: string[]
+  image: string
+}>()
 </script>
 
 <template>
@@ -18,9 +18,12 @@ defineProps<{
         tag="h1"
         class="v-heading text-h5 text-sm-h4 page-title pt-8 mb-4"
       >
-        <template v-for="(text, index) in title" :key="index">
+        <template
+          v-for="(text, index) in title"
+          :key="index"
+        >
           {{ text }}
-          <wbr >
+          <wbr>
         </template>
       </v-card-title>
     </v-img>

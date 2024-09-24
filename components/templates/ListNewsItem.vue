@@ -1,20 +1,24 @@
 <script setup lang="ts">
-import type { News } from "@/types/news";
+import type { News } from '@/types/news'
 
 defineProps<{
-  contents: News;
-}>();
+  contents: News
+}>()
 
-const { visible, dismiss, show } = useVisible();
-const { isReservation } = useReservation();
+const { visible, dismiss, show } = useVisible()
+const { isReservation } = useReservation()
 </script>
 
 <template>
-  <v-list-item link @click="show">
+  <v-list-item
+    link
+    @click="show"
+  >
     <v-list-item-title class="wrap-text">
-      <span v-show="isReservation(contents.date)" class="text-red-lighten-2"
-        >予約投稿：</span
-      >
+      <span
+        v-show="isReservation(contents.date)"
+        class="text-red-lighten-2"
+      >予約投稿：</span>
       {{ contents.title }}
     </v-list-item-title>
     <v-list-item-subtitle>
@@ -26,7 +30,11 @@ const { isReservation } = useReservation();
       />
     </template>
   </v-list-item>
-  <v-dialog v-model="visible" scrollable max-width="600">
+  <v-dialog
+    v-model="visible"
+    scrollable
+    max-width="600"
+  >
     <templates-card-news
       :items="contents"
       @dialog-close="dismiss"

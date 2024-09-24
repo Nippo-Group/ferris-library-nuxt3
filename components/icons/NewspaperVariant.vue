@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiNewspaperVariantOutline } from "@mdi/js";
+import { mdiNewspaperVariantOutline } from '@mdi/js'
 </script>
 
 <template>

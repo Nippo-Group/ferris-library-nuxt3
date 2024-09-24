@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiCheckboxMarkedCircleOutline } from "@mdi/js";
+import { mdiCheckboxMarkedCircleOutline } from '@mdi/js'
 </script>
 
 <template>

@@ -1,44 +1,44 @@
-import { useGetNews } from "@/composable/news/useGetNews";
-import type { News } from "@/types/news";
-import type { Queries } from "@/composable/news/useGetNews";
+import { useGetNews } from '@/composable/news/useGetNews'
+import type { News } from '@/types/news'
+import type { Queries } from '@/composable/news/useGetNews'
 
 export const useNews = (queries: Queries) => {
-  const { contents, error } = useGetNews(queries);
+  const { contents, error } = useGetNews(queries)
 
-  const newsList = ref<News[] | undefined>();
-  type FilterFunc = (news: News) => boolean;
-  const filterFuncs = ref<FilterFunc[]>([]);
+  const newsList = ref<News[] | undefined>()
+  type FilterFunc = (news: News) => boolean
+  const filterFuncs = ref<FilterFunc[]>([])
 
   const newsListSize = computed<number>(() => {
-    return newsList.value ? newsList.value.length : 0;
-  });
+    return newsList.value ? newsList.value.length : 0
+  })
 
-  const { getfiscalYear } = useFiscalYear();
+  const { getfiscalYear } = useFiscalYear()
   const years = computed<string[] | undefined>(() => {
     const arr = contents.value?.map((news) => {
-      return getfiscalYear(news.date);
-    });
-    const set = new Set(arr);
-    return [...set];
-  });
+      return getfiscalYear(news.date)
+    })
+    const set = new Set(arr)
+    return [...set]
+  })
 
   const setFilterFuncs = (funcs: FilterFunc[]) => {
-    filterFuncs.value = funcs;
-  };
+    filterFuncs.value = funcs
+  }
 
   watchEffect(() => {
-    let arr = contents.value;
+    let arr = contents.value
     if (filterFuncs.value) {
       arr = arr?.filter((value) => {
-        const judges: boolean[] = [];
+        const judges: boolean[] = []
         for (const func of filterFuncs.value) {
-          judges.push(func(value));
+          judges.push(func(value))
         }
-        return judges.every((judg) => judg === true);
-      });
+        return judges.every(judg => judg === true)
+      })
     }
-    newsList.value = arr;
-  });
+    newsList.value = arr
+  })
 
   return {
     newsList,
@@ -46,5 +46,5 @@ export const useNews = (queries: Queries) => {
     years,
     error,
     setFilterFuncs,
-  };
-};
+  }
+}

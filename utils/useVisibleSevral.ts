@@ -1,19 +1,19 @@
 export const useVisibleSevral = (max?: number) => {
-  const active = ref(0);
+  const active = ref(0)
   const next = () => {
     if (!max || active.value < max) {
-      active.value++;
+      active.value++
     }
-  };
+  }
   const prev = () => {
     if (active.value > 0) {
-      active.value--;
+      active.value--
     }
-  };
+  }
 
   return {
     active,
     next,
     prev,
-  };
-};
+  }
+}

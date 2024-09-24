@@ -1,7 +1,7 @@
-import { createVuetify } from "vuetify";
-import { aliases, mdi } from "vuetify/iconsets/mdi-svg";
-import { MAIN_THEME, mainTheme, mainDarkTheme } from "@/helpers/themes";
-import { defaults } from "@/helpers/defaults";
+import { createVuetify } from 'vuetify'
+import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
+import { MAIN_THEME, mainTheme, mainDarkTheme } from '@/helpers/themes'
+import { defaults } from '@/helpers/defaults'
 // import * as components from "vuetify/components";
 // import * as directives from "vuetify/directives";
 
@@ -10,11 +10,11 @@ export default defineNuxtPlugin((nuxtApp) => {
     ssr: true,
     defaults,
     display: {
-      mobileBreakpoint: "sm",
+      mobileBreakpoint: 'sm',
     },
     // add icons
     icons: {
-      defaultSet: "mdi",
+      defaultSet: 'mdi',
       aliases,
       sets: {
         mdi,
@@ -29,13 +29,13 @@ export default defineNuxtPlugin((nuxtApp) => {
       },
       // primary-darken-9 primary-lighten-9 までできるようにする
       variations: {
-        colors: ["primary", "secondary", "accent"],
+        colors: ['primary', 'secondary', 'accent'],
         lighten: 9,
         darken: 9,
       },
     },
-  });
+  })
 
   // Vue.js で Vuetify を使用する
-  nuxtApp.vueApp.use(vuetify);
-});
+  nuxtApp.vueApp.use(vuetify)
+})

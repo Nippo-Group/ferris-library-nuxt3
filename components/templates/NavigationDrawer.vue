@@ -1,25 +1,26 @@
 <script setup lang="ts">
-import { useNavigationDrawer } from "@/composable/layout/useNavigationDrawer";
-const { visible } = useNavigationDrawer();
+import { useNavigationDrawer } from '@/composable/layout/useNavigationDrawer'
+
+const { visible } = useNavigationDrawer()
 
 type Submenu = {
-  title: string;
-  id: string;
-  subtitle?: string;
-  push?: string;
-  href?: string;
-};
+  title: string
+  id: string
+  subtitle?: string
+  push?: string
+  href?: string
+}
 type Menu = {
-  category: string;
-  id: string;
-  icon?: string;
-  push?: string;
-  contents?: Submenu[];
-};
+  category: string
+  id: string
+  icon?: string
+  push?: string
+  contents?: Submenu[]
+}
 defineProps<{
-  menus: Menu[];
-}>();
-const open = ref([]);
+  menus: Menu[]
+}>()
+const open = ref([])
 </script>
 
 <template>
@@ -29,16 +30,34 @@ const open = ref([]);
     mobile-breakpoint="md"
     tag="nav"
   >
-    <v-list v-model:opened="open" color="primary" nav open-strategy="single">
-      <template v-for="menu in menus" :key="menu.id">
-        <v-list-item v-if="menu.push" :to="menu.push" :title="menu.category">
+    <v-list
+      v-model:opened="open"
+      color="primary"
+      nav
+      open-strategy="single"
+    >
+      <template
+        v-for="menu in menus"
+        :key="menu.id"
+      >
+        <v-list-item
+          v-if="menu.push"
+          :to="menu.push"
+          :title="menu.category"
+        >
           <template #prepend>
             <elements-nav-icon :name="menu.id" />
           </template>
         </v-list-item>
-        <v-list-group v-else :value="menu.id">
+        <v-list-group
+          v-else
+          :value="menu.id"
+        >
           <template #activator="{ props }">
-            <v-list-item v-bind="props" :title="menu.category">
+            <v-list-item
+              v-bind="props"
+              :title="menu.category"
+            >
               <template #prepend>
                 <elements-nav-icon :name="menu.id" />
               </template>

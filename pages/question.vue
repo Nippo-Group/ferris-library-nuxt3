@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const title = ref("よくある質問 Q&A");
+const title = ref('よくある質問 Q&A')
 useSeoMeta({
   title: title.value,
-  description: "ご利用にあたりよくあるご質問をまとめました。",
-});
+  description: 'ご利用にあたりよくあるご質問をまとめました。',
+})
 </script>
 
 <template>

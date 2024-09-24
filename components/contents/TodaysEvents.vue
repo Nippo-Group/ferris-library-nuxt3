@@ -1,36 +1,36 @@
 <script setup lang="ts">
-import ryokuen from "@/assets/json/calendar-ryokuen.json";
-import yamate from "@/assets/json/calendar-yamate.json";
-import common from "@/assets/json/calendar-common.json";
-import type { Event, Events } from "@/types/events";
+import ryokuen from '@/assets/json/calendar-ryokuen.json'
+import yamate from '@/assets/json/calendar-yamate.json'
+import common from '@/assets/json/calendar-common.json'
+import type { Event, Events } from '@/types/events'
 
-const title = "本日の開館時間";
+const title = '本日の開館時間'
 
-const dayjs = useDayjs();
-const today = dayjs();
+const dayjs = useDayjs()
+const today = dayjs()
 
-const eventsRyokuen = ryokuen.concat(common);
-const eventsYamate = yamate.concat(common);
+const eventsRyokuen = ryokuen.concat(common)
+const eventsYamate = yamate.concat(common)
 
 const todaysEventsRyokuen = computed<string[]>(() => {
-  return findEventsToday(eventsRyokuen);
-});
+  return findEventsToday(eventsRyokuen)
+})
 const todaysEventsYamate = computed<string[]>(() => {
-  return findEventsToday(eventsYamate);
-});
+  return findEventsToday(eventsYamate)
+})
 
 const findEventsToday = (events: Events) => {
-  const todayEvents: string[] = [];
+  const todayEvents: string[] = []
 
   events.forEach((value: Event) => {
-    const start = dayjs(value.start);
-    const end = value.end !== undefined ? dayjs(value.end) : dayjs(value.start);
-    if (today > start.startOf("day") && today < end.endOf("day")) {
-      todayEvents.push(value.name);
+    const start = dayjs(value.start)
+    const end = value.end !== undefined ? dayjs(value.end) : dayjs(value.start)
+    if (today > start.startOf('day') && today < end.endOf('day')) {
+      todayEvents.push(value.name)
     }
-  });
-  return todayEvents;
-};
+  })
+  return todayEvents
+}
 </script>
 
 <template>
