@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const title = ref("障がいのある方への支援");
+const title = ref('障がいのある方への支援')
 useSeoMeta({
   title: title.value,
-  description: "障がいのある方にへの支援内容をご案内いたします。",
-});
+  description: '障がいのある方にへの支援内容をご案内いたします。',
+})
 </script>
 
 <template>
@@ -19,7 +19,10 @@ useSeoMeta({
     </v-row>
     <v-row>
       <v-col cols="12">
-        <v-alert density="compact" type="success">
+        <v-alert
+          density="compact"
+          type="success"
+        >
           上記以外にもサポートが必要でしたら、図書館スタッフまでお申し出ください。できる限りご要望にお応えします。
         </v-alert>
       </v-col>

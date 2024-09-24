@@ -21,7 +21,9 @@
           <elements-align-elements>
             <elements-btn-dialog-default title="文献複写">
               <template #contents>
-                <div class="text-h6">サービス内容</div>
+                <div class="text-h6">
+                  サービス内容
+                </div>
                 <ul>
                   <li>当館にない文献のコピーを取り寄せることができます。</li>
                   <li>
@@ -29,19 +31,25 @@
                     にログインのうえ入手できます）にご記入の上、レファレンスカウンターにお申し込みください。大学院生・教員はMyLibraryからも申し込みができます。
                   </li>
                 </ul>
-                <div class="text-h6 pt-6">所要期間</div>
+                <div class="text-h6 pt-6">
+                  所要期間
+                </div>
                 <p>4日～</p>
-                <div class="text-h6 pt-6">費用</div>
+                <div class="text-h6 pt-6">
+                  費用
+                </div>
                 <p>コピー代金・送料・手数料等</p>
               </template>
               <template #actions>
-                <elements-btn-my-library/>
+                <elements-btn-my-library />
               </template>
             </elements-btn-dialog-default>
 
             <elements-btn-dialog-default title="現物貸借">
               <template #contents>
-                <div class="text-h6 pt-6">サービス内容</div>
+                <div class="text-h6 pt-6">
+                  サービス内容
+                </div>
                 <ul>
                   <li>
                     当館にない図書を学外の図書館から一定期間借りることができます。
@@ -60,9 +68,13 @@
                     所蔵館の規定や資料の劣化等により取り寄せができない場合もあります。
                   </li>
                 </ul>
-                <div class="text-h6 pt-6">所要期間</div>
+                <div class="text-h6 pt-6">
+                  所要期間
+                </div>
                 <p>4日～</p>
-                <div class="text-h6 pt-6">費用</div>
+                <div class="text-h6 pt-6">
+                  費用
+                </div>
                 <p>往復送料・手数料等</p>
               </template>
               <template #actions>
@@ -85,7 +97,9 @@
           <elements-align-elements>
             <elements-btn-dialog-default title="大学図書館">
               <template #contents>
-                <div class="text-h6 pt-6">注意事項</div>
+                <div class="text-h6 pt-6">
+                  注意事項
+                </div>
                 <p>
                   当館からの問い合わせと紹介状が必要です。カウンターに希望の利用日と資料名をお知らせください。資料を借りることはできませんが、館内で閲覧したりコピーしたりすることができます。
                 </p>
@@ -104,7 +118,9 @@
 
             <elements-btn-dialog-default title="横浜市立図書館">
               <template #contents>
-                <div class="text-h6 pt-6">注意事項</div>
+                <div class="text-h6 pt-6">
+                  注意事項
+                </div>
                 <p>
                   自由に利用することができます。図書館カードを作れば、資料を借りることもできますのでお勧めします。
                 </p>
@@ -123,7 +139,9 @@
 
             <elements-btn-dialog-default title="神奈川県立図書館">
               <template #contents>
-                <div class="text-h6 pt-6">注意事項</div>
+                <div class="text-h6 pt-6">
+                  注意事項
+                </div>
                 <p>
                   自由に利用することができます。図書館カードを作れば、資料を借りることもできますのでお勧めします。
                 </p>
@@ -139,7 +157,9 @@
 
             <elements-btn-dialog-default title="国立国会図書館">
               <template #contents>
-                <div class="text-h6 pt-6">注意事項</div>
+                <div class="text-h6 pt-6">
+                  注意事項
+                </div>
                 <p>
                   自由に利用できますが、閉架式なので直接書架を見ることはできません。利用したい資料を申し出て出納してもらうので、事前に希望の資料を調べてから訪問してください。また、個人への貸出は行っていません。
                 </p>
@@ -170,9 +190,13 @@
           <elements-align-elements>
             <elements-btn-dialog-default title="神奈川県内大学図書館共通閲覧証">
               <template #contents>
-                <div class="text-h6 pt-6">対象館</div>
+                <div class="text-h6 pt-6">
+                  対象館
+                </div>
                 <p>神奈川県図書館協会加盟の大学図書館</p>
-                <div class="text-h6 pt-6">対象者</div>
+                <div class="text-h6 pt-6">
+                  対象者
+                </div>
                 <p>教員・院生・学部生</p>
               </template>
               <template #actions>
@@ -185,9 +209,13 @@
 
             <elements-btn-dialog-default title="音楽図書館協議会共通閲覧証">
               <template #contents>
-                <div class="text-h6 pt-6">対象館</div>
+                <div class="text-h6 pt-6">
+                  対象館
+                </div>
                 <p>音楽図書館協議会加盟館</p>
-                <div class="text-h6 pt-6">対象者</div>
+                <div class="text-h6 pt-6">
+                  対象者
+                </div>
                 <p>音楽学部所属の教員・院生・学部生</p>
               </template>
               <template #actions>
@@ -207,7 +235,7 @@
           横浜市内コンソーシアム加盟大学の図書館を利用する
         </v-card-title>
         <v-card-text>
-          横浜市内大学図書館コンソーシアムの加盟館は、原則として学生証又は大学発行の身分証明書を提示して手続きすることで、紹介状なしで館内利用ができます。<br >
+          横浜市内大学図書館コンソーシアムの加盟館は、原則として学生証又は大学発行の身分証明書を提示して手続きすることで、紹介状なしで館内利用ができます。<br>
           手続き方法、利用できるサービスについては大学によって異なりますので、必ず各館のホームページで条件を確認してください。
         </v-card-text>
         <v-card-actions class="overflow-x-auto">

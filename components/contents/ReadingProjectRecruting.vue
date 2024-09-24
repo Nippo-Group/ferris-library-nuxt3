@@ -1,18 +1,18 @@
 <script setup lang="ts">
-const title = "《学内のみなさまへ》学生メンバー募集中！";
+const title = '《学内のみなさまへ》学生メンバー募集中！'
 const items = [
-  "本が好き",
-  "イラストを描くのが好き",
-  "イベントが好き、企画してみたい",
-  "大学生だからこそできる活動がしたい",
-  "人前で話すのは苦手だが、克服したい",
-];
+  '本が好き',
+  'イラストを描くのが好き',
+  'イベントが好き、企画してみたい',
+  '大学生だからこそできる活動がしたい',
+  '人前で話すのは苦手だが、克服したい',
+]
 </script>
 
 <template>
   <templates-card-reading-project :title="title">
     <v-card-text>
-      図書館や本の魅力を学内外の様々な人に伝える活動を、一緒にしてみませんか？<br >学年不問で、いつからでも参加できます。
+      図書館や本の魅力を学内外の様々な人に伝える活動を、一緒にしてみませんか？<br>学年不問で、いつからでも参加できます。
     </v-card-text>
     <v-list>
       <v-list-subheader>【こんな人におすすめ！】</v-list-subheader>
@@ -22,7 +22,9 @@ const items = [
         rounded="xl"
         density="compact"
       >
-        <v-list-item-title class="wrap-text">{{ item }}</v-list-item-title>
+        <v-list-item-title class="wrap-text">
+          {{ item }}
+        </v-list-item-title>
         <template #prepend>
           <icons-check-marked />
         </template>

@@ -1,25 +1,25 @@
 <script setup lang="ts">
 export type ImgsObj = {
-  src: string;
-  title?: string;
-  alt?: string;
-};
+  src: string
+  title?: string
+  alt?: string
+}
 type State = {
-  imgs: string | string[] | ImgsObj[];
-};
-const props = defineProps<State>();
+  imgs: string | string[] | ImgsObj[]
+}
+const props = defineProps<State>()
 
-const visibleRef = ref(false);
-const indexRef = ref(0);
+const visibleRef = ref(false)
+const indexRef = ref(0)
 
-const onHide = () => (visibleRef.value = false);
+const onHide = () => (visibleRef.value = false)
 const onShow = (index: number): void => {
-  indexRef.value = index;
-  visibleRef.value = true;
-};
+  indexRef.value = index
+  visibleRef.value = true
+}
 defineExpose({
   onShow,
-});
+})
 </script>
 
 <template>

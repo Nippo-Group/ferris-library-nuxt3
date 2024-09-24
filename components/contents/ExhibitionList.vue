@@ -1,55 +1,57 @@
 <script setup lang="ts">
-import { useExhibitions } from "@/composable/exhibition/useExhibitions";
-import type { Exhibition } from "@/types/exhibitions";
+import { useExhibitions } from '@/composable/exhibition/useExhibitions'
+import type { Exhibition } from '@/types/exhibitions'
 
 const { exhibitionList, years, reverse } = useExhibitions({
   limit: 100,
-  orders: "-date",
-});
+  orders: '-date',
+})
 
 // ダイアログで詳細を表示
-const eyecatch = ref<string>();
-const category = ref<string>();
-const contentTitle = ref<string>("");
-const placeToExhibit = ref<string>();
-const content = ref<string>("");
-const childRef = ref();
+const eyecatch = ref<string>()
+const category = ref<string>()
+const contentTitle = ref<string>('')
+const placeToExhibit = ref<string>()
+const content = ref<string>('')
+const childRef = ref()
 const openDitails = (item: Exhibition) => {
-  eyecatch.value = item.eyecatch ? item.eyecatch.url : undefined;
-  category.value = item.category ? item.category.name : undefined;
-  contentTitle.value = item.title;
+  eyecatch.value = item.eyecatch ? item.eyecatch.url : undefined
+  category.value = item.category ? item.category.name : undefined
+  contentTitle.value = item.title
   placeToExhibit.value = item.placeToExhibit
     ? item.placeToExhibit.placeToExhibit
-    : undefined;
-  content.value = item.content ? item.content : "読み込みエラー";
-  childRef.value.show();
-};
+    : undefined
+  content.value = item.content ? item.content : '読み込みエラー'
+  childRef.value.show()
+}
 
 // 検索
-const { getfiscalYear } = useFiscalYear();
-const keyword = ref<string | undefined>();
+const { getfiscalYear } = useFiscalYear()
+const keyword = ref<string | undefined>()
 const filter = (text: string, date: string): boolean => {
-  const flag: boolean[] = [];
+  const flag: boolean[] = []
 
   if (keyword.value) {
-    flag.push(text.includes(keyword.value));
-  } else {
-    flag.push(true);
+    flag.push(text.includes(keyword.value))
+  }
+  else {
+    flag.push(true)
   }
 
-  if (yearValue.value === "all") {
-    flag.push(true);
-  } else {
-    flag.push(getfiscalYear(date) === yearValue.value);
+  if (yearValue.value === 'all') {
+    flag.push(true)
+  }
+  else {
+    flag.push(getfiscalYear(date) === yearValue.value)
   }
 
-  return flag.every((value) => value === true);
-};
+  return flag.every(value => value === true)
+}
 
-const { yearValue, yearItems, setYearItems } = useSelectionYear();
+const { yearValue, yearItems, setYearItems } = useSelectionYear()
 watchEffect(() => {
-  setYearItems(years.value);
-});
+  setYearItems(years.value)
+})
 </script>
 
 <template>
@@ -62,7 +64,12 @@ watchEffect(() => {
         />
       </v-col>
       <v-col cols="12">
-        <v-toolbar :border="true" color="white" density="compact" rounded>
+        <v-toolbar
+          :border="true"
+          color="white"
+          density="compact"
+          rounded
+        >
           <v-text-field
             v-model="keyword"
             hide-details
@@ -70,8 +77,11 @@ watchEffect(() => {
             label="Keywords"
             clearable
           />
-          <v-spacer/>
-          <v-btn icon @click="reverse">
+          <v-spacer />
+          <v-btn
+            icon
+            @click="reverse"
+          >
             <icons-sort-defult />
           </v-btn>
         </v-toolbar>
@@ -95,8 +105,12 @@ watchEffect(() => {
       </v-slide-y-transition>
     </v-row>
     <v-row v-else>
-      <v-col cols="12" md="6" lg="4">
-        <v-card title="情報がありません"/>
+      <v-col
+        cols="12"
+        md="6"
+        lg="4"
+      >
+        <v-card title="情報がありません" />
       </v-col>
     </v-row>
   </v-container>

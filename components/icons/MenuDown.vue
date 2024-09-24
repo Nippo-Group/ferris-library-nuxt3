@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiMenuDown } from "@mdi/js";
+import { mdiMenuDown } from '@mdi/js'
 </script>
 
 <template>

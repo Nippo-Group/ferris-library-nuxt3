@@ -1,5 +1,8 @@
 <template>
-  <v-alert density="compact" type="success">
+  <v-alert
+    density="compact"
+    type="success"
+  >
     <div class="d-flex flex-column ga-4">
       <section>
         <p>
@@ -7,14 +10,18 @@
         </p>
       </section>
       <section>
-        <div class="text-h6">１．所蔵情報の提供</div>
+        <div class="text-h6">
+          １．所蔵情報の提供
+        </div>
         <p>
           各大学図書館ホームページから、オンライン蔵書検索OPAC（Online Public
           Access Catalog）によって、所蔵情報を検索することができます。
         </p>
       </section>
       <section>
-        <div class="text-h6">２．図書館の館内利用</div>
+        <div class="text-h6">
+          ２．図書館の館内利用
+        </div>
         <p>
           原則として、学生証又は大学発行の身分証明書を提示し、手続きすることで、館内利用ができます。
         </p>

@@ -1,40 +1,52 @@
 <script setup lang="ts">
-import { useDisplay } from "vuetify";
+import { useDisplay } from 'vuetify'
 
-type Items = string[] | number[];
+type Items = string[] | number[]
 type State = {
-  itemsArray: Items[];
-  headers: string[];
-};
-defineProps<State>();
+  itemsArray: Items[]
+  headers: string[]
+}
+defineProps<State>()
 
 const breakpoint = computed((): string => {
-  return useDisplay().name.value;
-});
+  return useDisplay().name.value
+})
 const breakpointSmall = computed((): boolean => {
-  const array: string[] = ["xs", "sm"];
-  return array.includes(breakpoint.value);
-});
+  const array: string[] = ['xs', 'sm']
+  return array.includes(breakpoint.value)
+})
 </script>
 
 <template>
   <v-table v-if="!breakpointSmall">
     <thead>
       <tr>
-        <th v-for="(headerItem, headerIndex) in headers" :key="headerIndex">
+        <th
+          v-for="(headerItem, headerIndex) in headers"
+          :key="headerIndex"
+        >
           {{ headerItem }}
         </th>
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(items, itemsIndex) in itemsArray" :key="`row-${itemsIndex}`">
-        <td v-for="(item, index) in items" :key="`${itemsIndex}-${index}`">
+      <tr
+        v-for="(items, itemsIndex) in itemsArray"
+        :key="`row-${itemsIndex}`"
+      >
+        <td
+          v-for="(item, index) in items"
+          :key="`${itemsIndex}-${index}`"
+        >
           {{ item }}
         </td>
       </tr>
     </tbody>
   </v-table>
-  <ul v-else class="list">
+  <ul
+    v-else
+    class="list"
+  >
     <li
       v-for="(items, itemsIndex) in itemsArray"
       :key="`row-${itemsIndex}`"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiLibrary } from "@mdi/js";
+import { mdiLibrary } from '@mdi/js'
 </script>
 
 <template>

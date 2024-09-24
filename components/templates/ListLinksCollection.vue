@@ -1,17 +1,17 @@
 <script setup lang="ts">
 type Item = {
-  name: string;
-  url: string;
-  category: string;
-  overseas: boolean;
-  author: string;
-  text: string;
-};
+  name: string
+  url: string
+  category: string
+  overseas: boolean
+  author: string
+  text: string
+}
 type State = {
-  items: Item[];
-  category: string;
-};
-const props = defineProps<State>();
+  items: Item[]
+  category: string
+}
+const props = defineProps<State>()
 </script>
 
 <template>
@@ -23,13 +23,23 @@ const props = defineProps<State>();
       cols="12"
       lg="6"
     >
-      <v-card :href="item.url" target="_blank">
+      <v-card
+        :href="item.url"
+        target="_blank"
+      >
         <v-card-title>
-          <v-chip class="mr-2" color="primary" variant="tonal">
+          <v-chip
+            class="mr-2"
+            color="primary"
+            variant="tonal"
+          >
             {{ item.overseas ? "海外" : "国内" }}
           </v-chip>
           <span class="wrap-text">{{ item.name }}</span>
-          <icons-open-in-new end size="x-small" />
+          <icons-open-in-new
+            end
+            size="x-small"
+          />
         </v-card-title>
         <v-card-subtitle v-show="item.author">
           {{ item.author }}

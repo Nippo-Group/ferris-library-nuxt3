@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const title = ref("各種申込書");
-useSeoMeta({ title: title.value });
+const title = ref('各種申込書')
+useSeoMeta({ title: title.value })
 </script>
 
 <template>

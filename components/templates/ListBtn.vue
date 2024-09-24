@@ -1,21 +1,24 @@
 <script setup lang="ts">
-import { mdiOpenInNew } from "@mdi/js";
+import { mdiOpenInNew } from '@mdi/js'
 
 type List = {
-  name?: string;
-  href?: string;
-  push?: string;
-  openInNew?: boolean;
-  comment?: string;
-};
+  name?: string
+  href?: string
+  push?: string
+  openInNew?: boolean
+  comment?: string
+}
 defineProps<{
-  list: List[];
-}>();
+  list: List[]
+}>()
 </script>
 
 <template>
   <ul class="link-list">
-    <li v-for="(item, index) in list" :key="'item' + index">
+    <li
+      v-for="(item, index) in list"
+      :key="'item' + index"
+    >
       <v-btn
         v-if="item.name"
         class="text-none"
@@ -26,9 +29,15 @@ defineProps<{
         variant="tonal"
       >
         {{ item.name }}
-        <v-icon v-show="item.openInNew" end :icon="mdiOpenInNew"/>
+        <v-icon
+          v-show="item.openInNew"
+          end
+          :icon="mdiOpenInNew"
+        />
       </v-btn>
-      <p class="text-grey">{{ item.comment }}</p>
+      <p class="text-grey">
+        {{ item.comment }}
+      </p>
     </li>
   </ul>
 </template>

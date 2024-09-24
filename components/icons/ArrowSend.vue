@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiSend } from "@mdi/js";
+import { mdiSend } from '@mdi/js'
 </script>
 
 <template>

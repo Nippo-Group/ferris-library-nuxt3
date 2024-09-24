@@ -1,15 +1,15 @@
 <script setup lang="ts">
-const fab = ref(false);
+const fab = ref(false)
 
 const onScroll = () => {
-  if (typeof window === "undefined") return;
-  const top = window.scrollY || 0;
-  fab.value = top > 500;
-};
+  if (typeof window === 'undefined') return
+  const top = window.scrollY || 0
+  fab.value = top > 500
+}
 
 const toTop = () => {
-  window.scroll({ top: 0, behavior: "smooth" });
-};
+  window.scroll({ top: 0, behavior: 'smooth' })
+}
 </script>
 
 <template>
@@ -22,7 +22,7 @@ const toTop = () => {
       icon
       @click="toTop"
     >
-      <icons-align-top size="large"/>
+      <icons-align-top size="large" />
     </v-btn>
   </transition>
 </template>

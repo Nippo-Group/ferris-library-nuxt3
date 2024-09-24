@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import json from "@/assets/json/digital-collection/collection05.json";
+import json from '@/assets/json/digital-collection/collection05.json'
 
 const images = computed(() => {
   return json.map((value) => {
@@ -10,9 +10,9 @@ const images = computed(() => {
       alt: value.caption,
       text: value.text,
       cover: value.cover,
-    };
-  });
-});
+    }
+  })
+})
 </script>
 
 <template>

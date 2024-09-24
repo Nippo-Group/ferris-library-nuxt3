@@ -1,13 +1,17 @@
 <script setup lang="ts">
 defineProps<{
-  title: string;
-}>();
+  title: string
+}>()
 
-const { visible, show, dismiss } = useVisible();
+const { visible, show, dismiss } = useVisible()
 </script>
 
 <template>
-  <v-btn color="primary-lighten-1" variant="elevated" @click="show">
+  <v-btn
+    color="primary-lighten-1"
+    variant="elevated"
+    @click="show"
+  >
     {{ title }}
     <v-dialog
       v-model="visible"
@@ -15,15 +19,24 @@ const { visible, show, dismiss } = useVisible();
       max-width="600"
     >
       <v-card>
-        <v-card-title class="mt-8 text-h5"> {{ title }} </v-card-title>
+        <v-card-title class="mt-8 text-h5">
+          {{ title }}
+        </v-card-title>
         <v-card-text class="card-text">
-          <slot name="contents">ダイアログカードの内容</slot>
+          <slot name="contents">
+            ダイアログカードの内容
+          </slot>
         </v-card-text>
         <v-card-actions class="px-4">
-          <slot name="actions"/>
+          <slot name="actions" />
         </v-card-actions>
         <v-card-actions class="justify-end">
-          <v-btn variant="tonal" @click="dismiss">Close</v-btn>
+          <v-btn
+            variant="tonal"
+            @click="dismiss"
+          >
+            Close
+          </v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>

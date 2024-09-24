@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiInformation } from "@mdi/js";
+import { mdiInformation } from '@mdi/js'
 </script>
 
 <template>

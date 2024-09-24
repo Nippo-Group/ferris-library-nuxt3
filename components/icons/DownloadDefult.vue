@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { mdiDownload } from "@mdi/js";
+import { mdiDownload } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiDownload"/>
+  <v-icon :icon="mdiDownload" />
 </template>

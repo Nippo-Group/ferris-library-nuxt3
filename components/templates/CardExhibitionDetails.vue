@@ -1,21 +1,25 @@
 <script setup lang="ts">
 type Props = {
-  title: string;
-  content: string;
-  eyecatch?: string;
-  category?: string;
-  placeToExhibit?: string;
-};
-defineProps<Props>();
+  title: string
+  content: string
+  eyecatch?: string
+  category?: string
+  placeToExhibit?: string
+}
+defineProps<Props>()
 
-const { visible, show, dismiss } = useVisible();
+const { visible, show, dismiss } = useVisible()
 defineExpose({
   show,
-});
+})
 </script>
 
 <template>
-  <v-dialog v-model="visible" scrollable max-width="800px">
+  <v-dialog
+    v-model="visible"
+    scrollable
+    max-width="800px"
+  >
     <v-card>
       <v-img
         :src="eyecatch || undefined"
@@ -25,12 +29,16 @@ defineExpose({
         cover
       >
         <v-card-title>
-          <v-chip v-if="category" color="primary" class="mr-4">
+          <v-chip
+            v-if="category"
+            color="primary"
+            class="mr-4"
+          >
             {{ category }}
           </v-chip>
           {{ title }}
-        </v-card-title></v-img
-      >
+        </v-card-title>
+      </v-img>
       <v-card-text class="content-body">
         <v-list-item v-if="placeToExhibit">
           <template #prepend>
@@ -38,15 +46,19 @@ defineExpose({
           </template>
           展示場所 ‐ {{ placeToExhibit }}
         </v-list-item>
-        <v-divider/>
+        <v-divider />
         <v-list-item class="mt-8">
           <elements-html-text-area :data="content" />
         </v-list-item>
       </v-card-text>
-      <v-divider/>
+      <v-divider />
       <v-card-actions>
-        <v-spacer/>
-        <v-btn color="grey-darken-1" variant="text" @click="dismiss">
+        <v-spacer />
+        <v-btn
+          color="grey-darken-1"
+          variant="text"
+          @click="dismiss"
+        >
           Close
         </v-btn>
       </v-card-actions>

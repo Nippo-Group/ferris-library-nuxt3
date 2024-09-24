@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiGestureTap } from "@mdi/js";
+import { mdiGestureTap } from '@mdi/js'
 </script>
 
 <template>

@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import mainVisual01 from "~/assets/images/main-visual/main-visual-01.jpg";
-import mainVisual02 from "~/assets/images/main-visual/main-visual-02.jpg";
-import mainVisual03 from "~/assets/images/main-visual/main-visual-03.jpg";
-import mainVisual04 from "~/assets/images/main-visual/main-visual-04.jpg";
-import mainVisual05 from "~/assets/images/main-visual/main-visual-05.jpg";
-import mainVisual06 from "~/assets/images/main-visual/main-visual-06.jpg";
-import mainVisual07 from "~/assets/images/main-visual/main-visual-07.jpg";
-import mainVisual08 from "~/assets/images/main-visual/main-visual-08.jpg";
+import mainVisual01 from '~/assets/images/main-visual/main-visual-01.jpg'
+import mainVisual02 from '~/assets/images/main-visual/main-visual-02.jpg'
+import mainVisual03 from '~/assets/images/main-visual/main-visual-03.jpg'
+import mainVisual04 from '~/assets/images/main-visual/main-visual-04.jpg'
+import mainVisual05 from '~/assets/images/main-visual/main-visual-05.jpg'
+import mainVisual06 from '~/assets/images/main-visual/main-visual-06.jpg'
+import mainVisual07 from '~/assets/images/main-visual/main-visual-07.jpg'
+import mainVisual08 from '~/assets/images/main-visual/main-visual-08.jpg'
 
-import mainVisual01Small from "~/assets/images/main-visual/main-visual-01-small.jpg";
-import mainVisual02Small from "~/assets/images/main-visual/main-visual-02-small.jpg";
-import mainVisual03Small from "~/assets/images/main-visual/main-visual-03-small.jpg";
-import mainVisual04Small from "~/assets/images/main-visual/main-visual-04-small.jpg";
-import mainVisual05Small from "~/assets/images/main-visual/main-visual-05-small.jpg";
-import mainVisual06Small from "~/assets/images/main-visual/main-visual-06-small.jpg";
-import mainVisual07Small from "~/assets/images/main-visual/main-visual-07-small.jpg";
-import mainVisual08Small from "~/assets/images/main-visual/main-visual-08-small.jpg";
+import mainVisual01Small from '~/assets/images/main-visual/main-visual-01-small.jpg'
+import mainVisual02Small from '~/assets/images/main-visual/main-visual-02-small.jpg'
+import mainVisual03Small from '~/assets/images/main-visual/main-visual-03-small.jpg'
+import mainVisual04Small from '~/assets/images/main-visual/main-visual-04-small.jpg'
+import mainVisual05Small from '~/assets/images/main-visual/main-visual-05-small.jpg'
+import mainVisual06Small from '~/assets/images/main-visual/main-visual-06-small.jpg'
+import mainVisual07Small from '~/assets/images/main-visual/main-visual-07-small.jpg'
+import mainVisual08Small from '~/assets/images/main-visual/main-visual-08-small.jpg'
 
 const items = [
   {
@@ -50,7 +50,7 @@ const items = [
     src: mainVisual08,
     lazy: mainVisual08Small,
   },
-];
+]
 </script>
 
 <template>

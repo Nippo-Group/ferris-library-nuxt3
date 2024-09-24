@@ -6,34 +6,34 @@ import {
   mdiMapMarker,
   mdiTrain,
   mdiTrainCarPassengerVariant,
-} from "@mdi/js";
+} from '@mdi/js'
 
 type Access = {
-  transportation: string;
-  root: string;
-  icon: string;
-};
+  transportation: string
+  root: string
+  icon: string
+}
 type State = {
-  name: string;
-  image: string;
-  addressNumber?: string;
-  address?: string;
-  googleMap?: string;
-  tel?: string;
-  fax?: string;
-  eMali?: string;
-  accesses?: Access[];
-};
-const props = defineProps<State>();
+  name: string
+  image: string
+  addressNumber?: string
+  address?: string
+  googleMap?: string
+  tel?: string
+  fax?: string
+  eMali?: string
+  accesses?: Access[]
+}
+const props = defineProps<State>()
 
 const accessIcon = (type: string): string | undefined => {
   switch (type) {
-    case "train":
-      return mdiTrain;
-    case "car":
-      return mdiTrainCarPassengerVariant;
+    case 'train':
+      return mdiTrain
+    case 'car':
+      return mdiTrainCarPassengerVariant
   }
-};
+}
 </script>
 
 <template>
@@ -60,11 +60,14 @@ const accessIcon = (type: string): string | undefined => {
         <v-list-item-title>{{ props.tel }}</v-list-item-title>
         <v-list-item-subtitle>Phone</v-list-item-subtitle>
       </v-list-item>
-      <v-list-item v-if="props.fax" :prepend-icon="mdiFax">
+      <v-list-item
+        v-if="props.fax"
+        :prepend-icon="mdiFax"
+      >
         <v-list-item-title>{{ props.fax }}</v-list-item-title>
         <v-list-item-subtitle>Fax</v-list-item-subtitle>
       </v-list-item>
-      <v-divider inset/>
+      <v-divider inset />
       <v-list-item
         v-if="props.eMali"
         :href="'mailto:' + props.eMali"
@@ -73,7 +76,7 @@ const accessIcon = (type: string): string | undefined => {
         <v-list-item-title>{{ props.eMali }}</v-list-item-title>
         <v-list-item-subtitle>Organization</v-list-item-subtitle>
       </v-list-item>
-      <v-divider inset/>
+      <v-divider inset />
       <v-list-item
         :href="props.googleMap || undefined"
         target="_blank"
@@ -82,24 +85,40 @@ const accessIcon = (type: string): string | undefined => {
         <v-list-item-subtitle v-if="props.addressNumber">
           〒{{ props.addressNumber }}
         </v-list-item-subtitle>
-        <v-list-item-title v-if="props.address" class="wrap-text">{{
-          props.address
-        }}</v-list-item-title>
-        <template v-if="props.googleMap" #append>
-          <icons-open-in-new/>
+        <v-list-item-title
+          v-if="props.address"
+          class="wrap-text"
+        >
+          {{
+            props.address
+          }}
+        </v-list-item-title>
+        <template
+          v-if="props.googleMap"
+          #append
+        >
+          <icons-open-in-new />
         </template>
       </v-list-item>
-      <v-divider inset/>
-      <v-list-item v-for="(access, i) in props.accesses" :key="i">
+      <v-divider inset />
+      <v-list-item
+        v-for="(access, i) in props.accesses"
+        :key="i"
+      >
         <template #prepend>
-          <v-icon color="primary" :icon="accessIcon(access.icon)"/>
+          <v-icon
+            color="primary"
+            :icon="accessIcon(access.icon)"
+          />
         </template>
         <v-list-item-subtitle>
           {{ access.transportation }}
         </v-list-item-subtitle>
-        <v-list-item-title class="wrap-text">{{
-          access.root
-        }}</v-list-item-title>
+        <v-list-item-title class="wrap-text">
+          {{
+            access.root
+          }}
+        </v-list-item-title>
       </v-list-item>
     </v-list>
   </v-card>

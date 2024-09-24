@@ -1,14 +1,18 @@
 <script setup lang="ts">
 defineProps<{
-  href: string;
-  img: string;
-  title: string;
-  height: string;
-}>();
+  href: string
+  img: string
+  title: string
+  height: string
+}>()
 </script>
 
 <template>
-  <v-card :href="href" target="_blank" dark>
+  <v-card
+    :href="href"
+    target="_blank"
+    dark
+  >
     <v-img
       :src="img"
       class="align-end"
@@ -18,7 +22,7 @@ defineProps<{
     >
       <v-card-title class="text-white">
         {{ title }}
-        <icons-open-in-new/>
+        <icons-open-in-new />
       </v-card-title>
     </v-img>
   </v-card>

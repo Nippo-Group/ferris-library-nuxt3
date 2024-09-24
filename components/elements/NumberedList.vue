@@ -1,12 +1,15 @@
 <script setup lang="ts">
 defineProps<{
-  items: string[];
-}>();
+  items: string[]
+}>()
 </script>
 
 <template>
   <ol class="list">
-    <li v-for="(item, index) in items" :key="index">
+    <li
+      v-for="(item, index) in items"
+      :key="index"
+    >
       {{ item }}
     </li>
   </ol>

@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import type { Newspaper } from "@/types/newspaper";
+import type { Newspaper } from '@/types/newspaper'
 
 defineProps<{
-  items: Newspaper[];
-}>();
+  items: Newspaper[]
+}>()
 </script>
 
 <template>
-  <v-expansion-panels variant="accordion" multiple>
+  <v-expansion-panels
+    variant="accordion"
+    multiple
+  >
     <v-expansion-panel
       v-for="(newspaper, index) in items"
       :key="'newspaper' + index"
@@ -17,7 +20,10 @@ defineProps<{
           <icons-newspaper-variant start />
           {{ newspaper.title }}
         </span>
-        <span v-else class="newspaper-sub-title">
+        <span
+          v-else
+          class="newspaper-sub-title"
+        >
           <icons-menu-right start />
           {{ newspaper.subTitle }}
         </span>

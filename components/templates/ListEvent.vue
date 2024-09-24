@@ -1,20 +1,26 @@
 <script setup lang="ts">
-import type { Dayjs } from "dayjs";
+import type { Dayjs } from 'dayjs'
 
 const props = defineProps<{
-  title: string;
-  date: Dayjs;
-  eventsRyokuen: string[];
-  eventsYamate: string[];
-}>();
+  title: string
+  date: Dayjs
+  eventsRyokuen: string[]
+  eventsYamate: string[]
+}>()
 
-const { ja, simple } = useDateFormat(props.date);
+const { ja, simple } = useDateFormat(props.date)
 </script>
 
 <template>
   <v-container class="bg-grey-lighten-3">
-    <v-row justify="center" dense>
-      <v-col cols="12" md="4">
+    <v-row
+      justify="center"
+      dense
+    >
+      <v-col
+        cols="12"
+        md="4"
+      >
         <v-card
           height="100%"
           color="rgba(255, 255, 255, 0.8)"
@@ -23,7 +29,10 @@ const { ja, simple } = useDateFormat(props.date);
         >
           <v-card-text class="text-center pb-0">
             <div class="text-h6">
-              <icons-calendar-multiselect start size="small" />
+              <icons-calendar-multiselect
+                start
+                size="small"
+              />
               {{ title }}
             </div>
             <time :datetime="simple">
@@ -38,7 +47,11 @@ const { ja, simple } = useDateFormat(props.date);
           </v-card-actions>
         </v-card>
       </v-col>
-      <v-col cols="12" sm="6" md="4">
+      <v-col
+        cols="12"
+        sm="6"
+        md="4"
+      >
         <v-card
           height="100%"
           color="rgba(255, 255, 255, 0.8)"
@@ -46,7 +59,9 @@ const { ja, simple } = useDateFormat(props.date);
           variant="flat"
         >
           <v-card-text class="text-center">
-            <p class="text-h6 mb-0">緑園本館</p>
+            <p class="text-h6 mb-0">
+              緑園本館
+            </p>
             <ul class="events">
               <li
                 v-for="(item, i) in eventsRyokuen"
@@ -59,7 +74,11 @@ const { ja, simple } = useDateFormat(props.date);
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="12" sm="6" md="4">
+      <v-col
+        cols="12"
+        sm="6"
+        md="4"
+      >
         <v-card
           height="100%"
           color="rgba(255, 255, 255, 0.8)"
@@ -67,7 +86,9 @@ const { ja, simple } = useDateFormat(props.date);
           variant="flat"
         >
           <v-card-text class="text-center">
-            <p class="text-h6 mb-0">山手分室</p>
+            <p class="text-h6 mb-0">
+              山手分室
+            </p>
             <ul class="events">
               <li
                 v-for="(item, i) in eventsYamate"

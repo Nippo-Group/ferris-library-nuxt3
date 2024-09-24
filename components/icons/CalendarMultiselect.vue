@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiCalendarMultiselect } from "@mdi/js";
+import { mdiCalendarMultiselect } from '@mdi/js'
 </script>
 
 <template>

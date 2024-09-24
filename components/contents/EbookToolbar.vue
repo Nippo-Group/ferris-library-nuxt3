@@ -1,27 +1,30 @@
 <script setup lang="ts">
-import { useEbookList } from "@/composable/ebooks/useEbookList";
-import type { Category, Language } from "@/types/ebook";
+import { useEbookList } from '@/composable/ebooks/useEbookList'
+import type { Category, Language } from '@/types/ebook'
 
-const { keyword, language, categories, available } = useEbookList();
-const { visible, show, dismiss } = useVisible();
+const { keyword, language, categories, available } = useEbookList()
+const { visible, show, dismiss } = useVisible()
 
-const OptionsLanguage = ref<Language[]>(["日本語", "外国語"]);
+const OptionsLanguage = ref<Language[]>(['日本語', '外国語'])
 const OptionsCategory = ref<Category[]>([
-  "電子ブック",
-  "総合",
-  "参考・辞書事典類",
-  "新聞記事",
-  "英米文学",
-  "日本文学",
-  "言語学",
-  "社会科学",
-  "音楽",
-  "判例・法令・議会資料",
-]);
+  '電子ブック',
+  '総合',
+  '参考・辞書事典類',
+  '新聞記事',
+  '英米文学',
+  '日本文学',
+  '言語学',
+  '社会科学',
+  '音楽',
+  '判例・法令・議会資料',
+])
 </script>
 
 <template>
-  <v-toolbar dense flat>
+  <v-toolbar
+    dense
+    flat
+  >
     <v-text-field
       v-model="keyword"
       label="キーワード検索"
@@ -29,8 +32,11 @@ const OptionsCategory = ref<Category[]>([
       clearable
       class="mr-2"
     />
-    <v-spacer/>
-    <v-btn variant="outlined" @click="show">
+    <v-spacer />
+    <v-btn
+      variant="outlined"
+      @click="show"
+    >
       <icons-search-defult />
       絞り込み検索
     </v-btn>
@@ -53,7 +59,10 @@ const OptionsCategory = ref<Category[]>([
             </v-radio-group>
           </v-col>
           -->
-          <v-col cols="12" sm="3">
+          <v-col
+            cols="12"
+            sm="3"
+          >
             <v-select
               v-model.lazy="language"
               :items="OptionsLanguage"
@@ -62,7 +71,10 @@ const OptionsCategory = ref<Category[]>([
               clearable
             />
           </v-col>
-          <v-col cols="12" sm="9">
+          <v-col
+            cols="12"
+            sm="9"
+          >
             <v-select
               v-model.lazy="categories"
               :items="OptionsCategory"
@@ -91,7 +103,11 @@ const OptionsCategory = ref<Category[]>([
         <p>
           期間限定のデータベースはフェリス生限定のサービスです。ID、パスワードは各サービスごとに確認してください。
         </p>
-        <v-card height="200" class="overflow-auto" variant="outlined">
+        <v-card
+          height="200"
+          class="overflow-auto"
+          variant="outlined"
+        >
           <v-card-text>
             <p>2021.8.1追記</p>
             <ul>
@@ -100,7 +116,7 @@ const OptionsCategory = ref<Category[]>([
                 8/1発信）
               </li>
             </ul>
-            <v-divider/>
+            <v-divider />
             <p>2021.4.20追記</p>
             <ul>
               <li>
@@ -116,7 +132,7 @@ const OptionsCategory = ref<Category[]>([
                 FerrisPassport（【図書館】フェリス生限定「日本文学Web図書館」が学外から利用できます！4/14発信）
               </li>
             </ul>
-            <v-divider/>
+            <v-divider />
             <p>2021.4.1</p>
             <ul>
               <li>
@@ -132,7 +148,12 @@ const OptionsCategory = ref<Category[]>([
         </v-card>
       </v-card-text>
       <v-card-actions class="justify-end">
-        <v-btn variant="text" @click="dismiss"> Close </v-btn>
+        <v-btn
+          variant="text"
+          @click="dismiss"
+        >
+          Close
+        </v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>

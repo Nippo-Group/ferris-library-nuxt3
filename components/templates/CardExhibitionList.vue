@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import type { Exhibition } from "@/types/exhibitions";
-defineProps<{
-  item: Exhibition;
-}>();
+import type { Exhibition } from '@/types/exhibitions'
 
-const dayjs = useDayjs();
+defineProps<{
+  item: Exhibition
+}>()
+
+const dayjs = useDayjs()
 </script>
 
 <template>
@@ -16,7 +17,10 @@ const dayjs = useDayjs();
       cover
     >
       <v-card-text>
-        <v-chip v-if="item.category" color="primary">
+        <v-chip
+          v-if="item.category"
+          color="primary"
+        >
           {{ item.category.name }}
         </v-chip>
       </v-card-text>
@@ -24,7 +28,10 @@ const dayjs = useDayjs();
     <v-card-title class="wrap-text">
       {{ item.title }}
     </v-card-title>
-    <v-card-subtitle v-if="item.date" class="pb-2">
+    <v-card-subtitle
+      v-if="item.date"
+      class="pb-2"
+    >
       {{ useDateFormat(dayjs(item.date)).ja.value }}
     </v-card-subtitle>
   </v-card>

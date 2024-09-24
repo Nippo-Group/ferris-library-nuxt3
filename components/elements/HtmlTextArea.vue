@@ -1,11 +1,14 @@
 <script setup lang="ts">
 defineProps<{
-  data: unknown;
-}>();
+  data: unknown
+}>()
 </script>
 
 <template>
-  <div class="text" v-html="data"/>
+  <div
+    class="text"
+    v-html="data"
+  />
 </template>
 
 <style scoped>
