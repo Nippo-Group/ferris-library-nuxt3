@@ -1,5 +1,6 @@
+import type { Lang } from '@/types/lang'
+
 export const useLanguage = () => {
-  type Lang = 'ja' | 'en'
   const state = useState<Lang>('lang:state')
 
   const setLang = (lang: Lang) => {
