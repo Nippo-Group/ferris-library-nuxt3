@@ -16,13 +16,22 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     },
   },
-
   build: {
     transpile: ['vuetify'],
   },
-
   css: ['@/assets/css/main.scss'],
-
+  devtools: { enabled: true },
+  hooks: {
+    'vite:extendConfig': (config) => {
+      config.plugins!.push(vuetify())
+    },
+  },
+  modules: [
+    '@pinia/nuxt',
+    'nuxt-microcms-module',
+    'dayjs-nuxt',
+    '@nuxt/eslint',
+  ],
   dayjs: {
     locales: ['en', 'ja'],
     defaultLocale: 'ja',
@@ -32,41 +41,18 @@ export default defineNuxtConfig({
       'timezone', // import 'dayjs/plugin/timezone'
     ], // Your Day.js plugin
   },
-
-  devtools: { enabled: true },
-
   eslint: {
     config: {
-      stylistic: {
-        indent: 2,
-        quotes: 'single',
-        semi: false,
-      },
+      stylistic: true,
     },
   },
-
-  hooks: {
-    'vite:extendConfig': (config) => {
-      config.plugins!.push(vuetify())
-    },
-  },
-
-  modules: [
-    '@pinia/nuxt',
-    'nuxt-microcms-module',
-    'dayjs-nuxt',
-    '@nuxt/eslint',
-  ],
-
   microCMS: {
     serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
     apiKey: process.env.MICROCMS_API_KEY,
     target: 'all',
   },
-
   pages: true,
   ssr: false,
-
   vite: {
     ssr: {
       noExternal: ['vuetify'],
@@ -75,6 +61,5 @@ export default defineNuxtConfig({
       'process.env.DEBUG': false,
     },
   },
-
   compatibilityDate: '2024-09-24',
 })
