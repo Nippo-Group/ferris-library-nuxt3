@@ -3,7 +3,7 @@ import type { AlertType } from '@/types/alert'
 
 const selected = ref()
 const items = [
-  '卒業生・修了生',
+  '卒業生（大学・中高）・修了生',
   '定年退職教職員',
   '他大学所属の教員、学生の方',
   '神奈川県内大学図書館共通閲覧証をお持ちの方',
@@ -27,7 +27,7 @@ type ItemsContents = {
 }
 const itemsContents: ItemsContents[] = [
   {
-    name: '卒業生・修了生',
+    name: '卒業生（大学・中高）・修了生',
     service: [
       {
         title: '来館 館内複写',
@@ -39,6 +39,11 @@ const itemsContents: ItemsContents[] = [
         type: 'success',
         notes:
           'カウンターでライブラリーカードの発行手続きをしてください。貸出冊数・期間については貸出サービスをご覧ください。',
+      },
+      {
+        title: 'ライブラリーカード発行',
+        type: 'warning',
+        notes: '<p>確認のため「卒業証明書」※を1部ご提出ください。</p><p>※大学卒業生は大学緑園キャンパス総務課又は山手8号館事務室へ、中高卒業生は中高事務室へお申込みください。<br />取得方法はこちら <a href="https://www.ferris.ac.jp/students-visitor/procedure/graduate/#students-procedure" target="_blank">大学</a> <a href="https://www.ferris.ed.jp/news/index.php?c=topics_view&pk=1618383802" target="_blank">中高</a></p>',
       },
       {
         title: '複写取り寄せ',
