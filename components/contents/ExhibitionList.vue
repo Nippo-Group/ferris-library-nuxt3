@@ -94,7 +94,7 @@ watchEffect(() => {
           v-show="filter(item.title + item.content, item.date)"
           :key="item.id"
           cols="12"
-          md="6"
+          sm="6"
           lg="4"
         >
           <templates-card-exhibition-list

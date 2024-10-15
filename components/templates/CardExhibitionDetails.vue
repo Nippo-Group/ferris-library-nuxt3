@@ -28,7 +28,7 @@ defineExpose({
         gradient="to bottom, rgba(0,0,0,.2), rgba(0,0,0,.9)"
         cover
       >
-        <v-card-title>
+        <v-card-title class="wrap-text">
           <v-chip
             v-if="category"
             color="primary"
@@ -67,6 +67,10 @@ defineExpose({
 </template>
 
 <style scoped>
+.wrap-text {
+  word-break: break-all;
+  white-space: normal;
+}
 .content-body {
   height: 1000px;
   max-height: 100%;
