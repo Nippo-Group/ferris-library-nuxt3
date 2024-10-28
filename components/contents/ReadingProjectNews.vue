@@ -1,8 +1,16 @@
 <script setup lang="ts">
 import { useNews } from '@/composable/news/useNews'
 
+const newsIds = [
+  '3-h0zb9femhn',
+  '2nqt2bwmsqd',
+  'zt10lnwef',
+  'tzndu8jahabw',
+  'rne-f461pg',
+]
+
 const { newsList } = useNews({
-  ids: '2nqt2bwmsqd,zt10lnwef,tzndu8jahabw,rne-f461pg',
+  ids: newsIds.join(','),
 })
 </script>
 
