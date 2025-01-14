@@ -35,7 +35,7 @@
     "@fullcalendar/list": "^6.1.15",
     "@fullcalendar/timegrid": "^6.1.15",
     "@fullcalendar/vue3": "^6.1.15",
-    "@tato30/vue-pdf": "^1.11.1",
+    "@tato30/vue-pdf": "^1.11.3",
     "caniuse-lite": "^1.0.30001660",
     "nuxt-microcms-module": "^3.0.2",
     "vue-easy-lightbox": "^1.19.0"
