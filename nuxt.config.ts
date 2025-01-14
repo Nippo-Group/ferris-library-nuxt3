@@ -2,7 +2,16 @@ import vuetify from 'vite-plugin-vuetify'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  app: {
+
+  modules: [
+    '@pinia/nuxt',
+    'nuxt-microcms-module',
+    'dayjs-nuxt',
+    '@nuxt/eslint',
+  ],
+  ssr: false,
+  pages: true,
+  devtools: { enabled: true }, app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       title: undefined,
@@ -16,22 +25,24 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     },
   },
+  css: ['@/assets/css/main.scss'],
   build: {
     transpile: ['vuetify'],
   },
-  css: ['@/assets/css/main.scss'],
-  devtools: { enabled: true },
+  compatibilityDate: '2024-09-24',
+  vite: {
+    ssr: {
+      noExternal: ['vuetify'],
+    },
+    define: {
+      'process.env.DEBUG': false,
+    },
+  },
   hooks: {
     'vite:extendConfig': (config) => {
       config.plugins!.push(vuetify())
     },
   },
-  modules: [
-    '@pinia/nuxt',
-    'nuxt-microcms-module',
-    'dayjs-nuxt',
-    '@nuxt/eslint',
-  ],
   dayjs: {
     locales: ['en', 'ja'],
     defaultLocale: 'ja',
@@ -51,15 +62,4 @@ export default defineNuxtConfig({
     apiKey: process.env.MICROCMS_API_KEY,
     target: 'all',
   },
-  pages: true,
-  ssr: false,
-  vite: {
-    ssr: {
-      noExternal: ['vuetify'],
-    },
-    define: {
-      'process.env.DEBUG': false,
-    },
-  },
-  compatibilityDate: '2024-09-24',
 })
