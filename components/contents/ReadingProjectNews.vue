@@ -2,6 +2,7 @@
 import { useNews } from '@/composable/news/useNews'
 
 const newsIds = [
+  'bp922vzsag',
   '3-h0zb9femhn',
   '2nqt2bwmsqd',
   'zt10lnwef',
