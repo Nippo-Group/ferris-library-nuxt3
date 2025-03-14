@@ -4,7 +4,7 @@ export type Link = {
 }
 export type Item = {
   name: string
-  type: 'データベース' | '雑誌' | '図書'
+  type: 'データベース' | '雑誌' | '図書' | '電子ブック'
   logout: boolean
   content: string
   access: string

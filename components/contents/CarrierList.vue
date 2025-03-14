@@ -190,6 +190,20 @@ const items3: (Item | ItemHeading)[] = [
       '専門家の視点からその仕事の魅力を紹介する職業ガイドブックシリーズです。',
     access: '緑園図書館3階 請求記号（背ラベルの番号）：366.29||N53',
   },
+  {
+    name: 'LibrariE',
+    type: '電子ブック',
+    logout: false,
+    content:
+      'スマートフォンから、いつでもどこでもアクセスできます。「キャリア支援」の特集ページがあります。',
+    access: 'https://web.d-library.jp/ferris/g0101/top/',
+    links: [
+      {
+        name: 'アクセス',
+        url: 'http://japanknowledge.com/library/',
+      },
+    ],
+  },
 ]
 </script>
 
