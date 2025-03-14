@@ -56,12 +56,6 @@ defineProps<{
           </v-card-text>
           <v-divider />
           <v-card-text v-if="access || attention">
-            <!-- <p class="my-0">
-              利用可能場所：
-              <span v-for="(place, p) in available" :key="'ava' + p">
-                {{ place }}
-              </span>
-            </p> -->
             <p
               v-if="access"
               class="my-0"
@@ -77,7 +71,10 @@ defineProps<{
             </p>
             <span v-if="attention">※{{ attention }}</span>
           </v-card-text>
-          <v-card-actions v-if="links || documents">
+          <v-card-actions
+            v-if="links || documents"
+            class="overflow-y-auto"
+          >
             <elements-align-elements>
               <elements-btn-open-in-new
                 v-for="(link, k) in links"

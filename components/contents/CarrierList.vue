@@ -200,7 +200,7 @@ const items3: (Item | ItemHeading)[] = [
     links: [
       {
         name: 'アクセス',
-        url: 'http://japanknowledge.com/library/',
+        url: 'https://web.d-library.jp/ferris/g0101/top/',
       },
     ],
   },
