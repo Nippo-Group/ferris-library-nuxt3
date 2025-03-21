@@ -1,4 +1,4 @@
-import type { Img } from '@/components/elements/ImgGroup.vue'
+import type { Img } from '@/components/elements/ImgDialog.vue'
 
 export type Link = {
   name: string
