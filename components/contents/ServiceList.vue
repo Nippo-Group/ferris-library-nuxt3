@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useLanguage } from '@/composable/language/useLanguage'
-import { useLangSwitch } from '@/composable/language/useLangSwitch'
+import { useLanguage } from '@/composables/language/useLanguage'
+import { useLangSwitch } from '@/composables/language/useLangSwitch'
 
 const { langState } = useLanguage()
 const panel = ref([0, 1])

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLoading } from '@/composable/layout/useLoading'
+import { useLoading } from '@/composables/layout/useLoading'
 
 const { loading } = useLoading()
 </script>

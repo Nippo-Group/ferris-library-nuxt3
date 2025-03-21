@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useEbookList } from '@/composable/ebooks/useEbookList'
+import { useEbookList } from '@/composables/ebooks/useEbookList'
 
 const { ebooks, length, lengthAll } = useEbookList()
 </script>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useEbookList } from '@/composable/ebooks/useEbookList'
+import { useEbookList } from '@/composables/ebooks/useEbookList'
 import type { Category, Language } from '@/types/ebook'
 
 const { keyword, language, categories, available } = useEbookList()

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useExhibitions } from '@/composable/exhibition/useExhibitions'
+import { useExhibitions } from '@/composables/exhibition/useExhibitions'
 import type { Exhibition } from '@/types/exhibitions'
 
 const { exhibitionList, years, reverse } = useExhibitions({

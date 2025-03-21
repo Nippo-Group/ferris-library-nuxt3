@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useNavigationDrawer } from '@/composable/layout/useNavigationDrawer'
+import { useNavigationDrawer } from '@/composables/layout/useNavigationDrawer'
 
 const { inversion } = useNavigationDrawer()
 </script>

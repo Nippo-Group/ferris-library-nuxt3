@@ -1,6 +1,6 @@
-import { useGetNews } from '@/composable/news/useGetNews'
+import { useGetNews } from '@/composables/news/useGetNews'
 import type { News } from '@/types/news'
-import type { Queries } from '@/composable/news/useGetNews'
+import type { Queries } from '@/composables/news/useGetNews'
 
 export const useNews = (queries: Queries) => {
   const { contents, error } = useGetNews(queries)

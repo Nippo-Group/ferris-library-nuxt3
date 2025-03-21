@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useNews } from '@/composable/news/useNews'
+import { useNews } from '@/composables/news/useNews'
 
 const newsIds = [
   'bp922vzsag',

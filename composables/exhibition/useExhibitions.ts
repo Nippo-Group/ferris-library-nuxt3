@@ -1,6 +1,6 @@
-import { useGetExhibitions } from '@/composable/exhibition/useGetExhibitions'
+import { useGetExhibitions } from '@/composables/exhibition/useGetExhibitions'
 import type { Exhibition } from '@/types/exhibitions'
-import type { Queries } from '@/composable/exhibition/useGetExhibitions'
+import type { Queries } from '@/composables/exhibition/useGetExhibitions'
 
 export const useExhibitions = (queries: Queries) => {
   const { contents, error } = useGetExhibitions(queries)

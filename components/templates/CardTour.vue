@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLanguage } from '@/composable/language/useLanguage'
+import { useLanguage } from '@/composables/language/useLanguage'
 
 type Content = {
   subtitle: string

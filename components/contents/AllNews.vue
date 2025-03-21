@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useNews } from '@/composable/news/useNews'
+import { useNews } from '@/composables/news/useNews'
 import type { News } from '@/types/news'
 
 // ニュース一覧の取得

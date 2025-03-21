@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLangSwitch } from '@/composable/language/useLangSwitch'
+import { useLangSwitch } from '@/composables/language/useLangSwitch'
 import imgYamate from '~/assets/images/contact/contact-yamate.jpg'
 
 const itemsEng = {
