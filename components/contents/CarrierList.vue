@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import imgCarrier01 from '~/assets/images/carrier/carrier-01.gif'
-import imgCarrier02 from '~/assets/images/carrier/carrier-02.gif'
+import imgCarrier01 from '@/assets/images/carrier/carrier-01.gif'
+import imgCarrier02 from '@/assets/images/carrier/carrier-02.gif'
+import imgLibrariELogin from '@/assets/images/carrier/librariE-login.png'
+import imgLibrariEQr from '@/assets/images/carrier/librariE-qr.png'
+import imgLibrariECarrier from '@/assets/images/carrier/librariE-carrier.png'
 import type { Item, ItemHeading } from '@/types/carrier'
 
 const tab = ref(null)
@@ -201,6 +204,29 @@ const items3: (Item | ItemHeading)[] = [
       {
         name: 'アクセス',
         url: 'https://web.d-library.jp/ferris/g0101/top/',
+      },
+    ],
+    imgs: [
+      {
+        src: imgLibrariELogin,
+        width: '600',
+        height: '267',
+        alt: 'LibrariE ログイン方法',
+        caption: 'ログイン方法',
+      },
+      {
+        src: imgLibrariECarrier,
+        width: '569',
+        height: '363',
+        alt: 'LibrariE キャリア支援',
+        caption: 'キャリア支援',
+      },
+      {
+        src: imgLibrariEQr,
+        width: '92',
+        height: '92',
+        alt: 'LibrariE QRコード',
+        caption: 'QRコード',
       },
     ],
   },

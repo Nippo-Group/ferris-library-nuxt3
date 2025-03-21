@@ -32,6 +32,10 @@ const props = defineProps<{
         </v-card-subtitle>
         <v-card-text>
           {{ item.content }}
+          <elements-img-group
+            v-if="item.imgs"
+            :imgs="item.imgs"
+          />
           <p
             v-if="item.logout"
             class="mb-0"
