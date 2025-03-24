@@ -5,12 +5,12 @@ const { inversion } = useNavigationDrawer()
 </script>
 
 <template>
-  <v-app-bar>
+  <VAppBar>
     <template #prepend>
-      <v-app-bar-naVIcon @click.stop="inversion" />
+      <VAppBarNavIcon @click.stop="inversion" />
     </template>
-    <v-app-bar-title>
+    <VAppBarTitle>
       <slot />
-    </v-app-bar-title>
-  </v-app-bar>
+    </VAppBarTitle>
+  </VAppBar>
 </template>

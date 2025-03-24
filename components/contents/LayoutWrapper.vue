@@ -19,7 +19,7 @@ const menus = computed(() => {
 </script>
 
 <template>
-  <v-app id="inspire">
+  <VApp id="inspire">
     <templates-navigation-drawer :menus="menus" />
     <templates-a-header>
       <img
@@ -45,5 +45,5 @@ const menus = computed(() => {
     <templates-a-footer :copyright="copyright" />
     <templates-to-top />
     <templates-confirm-download />
-  </v-app>
+  </VApp>
 </template>
