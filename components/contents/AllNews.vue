@@ -40,7 +40,7 @@ watch(yearValue, () => {
 </script>
 
 <template>
-  <elements-selection-year
+  <PartsSelectionYear
     v-model="yearValue"
     :items="yearItems"
   />

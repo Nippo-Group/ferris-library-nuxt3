@@ -58,7 +58,7 @@ watchEffect(() => {
   <VContainer>
     <VRow dense>
       <VCol cols="12">
-        <elements-selection-year
+        <PartsSelectionYear
           v-model="yearValue"
           :items="yearItems"
         />
