@@ -35,15 +35,15 @@ const rules = ref({
     <icons-library-shelves start /> {{ contents.title }}
   </div>
   <VCard>
-    <v-tabs
+    <VTabs
       v-model="tab"
       color="primary"
     >
-      <v-tab>
+      <VTab>
         {{ contents.search }}
-      </v-tab>
-      <v-tab> {{ contents.sp }}</v-tab>
-    </v-tabs>
+      </VTab>
+      <VTab> {{ contents.sp }}</VTab>
+    </VTabs>
     <v-window v-model="tab">
       <v-window-item>
         <VCard flat>

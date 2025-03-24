@@ -10,7 +10,7 @@ defineProps<{
 </script>
 
 <template>
-  <v-table>
+  <VTable>
     <tbody>
       <tr v-if="country">
         <th>発行国</th>
@@ -39,5 +39,5 @@ defineProps<{
         </td>
       </tr>
     </tbody>
-  </v-table>
+  </VTable>
 </template>

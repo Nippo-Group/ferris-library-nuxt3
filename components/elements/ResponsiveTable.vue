@@ -18,7 +18,7 @@ const breakpointSmall = computed((): boolean => {
 </script>
 
 <template>
-  <v-table v-if="!breakpointSmall">
+  <VTable v-if="!breakpointSmall">
     <thead>
       <tr>
         <th
@@ -42,7 +42,7 @@ const breakpointSmall = computed((): boolean => {
         </td>
       </tr>
     </tbody>
-  </v-table>
+  </VTable>
   <ul
     v-else
     class="list"

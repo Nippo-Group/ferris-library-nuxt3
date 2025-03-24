@@ -234,12 +234,12 @@ const items3: (Item | ItemHeading)[] = [
 </script>
 
 <template>
-  <v-tabs v-model="tab">
-    <v-tab>企業や業種を研究する</v-tab>
-    <v-tab>最新の時事情報をつかむ</v-tab>
-    <v-tab>職種や資格について調べる</v-tab>
-    <v-tab>OPACで関連本を集める</v-tab>
-  </v-tabs>
+  <VTabs v-model="tab">
+    <VTab>企業や業種を研究する</VTab>
+    <VTab>最新の時事情報をつかむ</VTab>
+    <VTab>職種や資格について調べる</VTab>
+    <VTab>OPACで関連本を集める</VTab>
+  </VTabs>
 
   <v-window v-model="tab">
     <v-window-item>

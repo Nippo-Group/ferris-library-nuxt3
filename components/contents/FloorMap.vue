@@ -3,14 +3,14 @@ const tab = ref(null)
 </script>
 
 <template>
-  <v-tabs
+  <VTabs
     v-model="tab"
     color="primary"
     grow
   >
-    <v-tab>緑園本館</v-tab>
-    <v-tab>山手分室</v-tab>
-  </v-tabs>
+    <VTab>緑園本館</VTab>
+    <VTab>山手分室</VTab>
+  </VTabs>
 
   <v-window v-model="tab">
     <v-window-item>

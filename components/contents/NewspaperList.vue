@@ -289,14 +289,14 @@ const items: NewspaperCat[] = [
   <p class="update-date">
     {{ updateDate }}
   </p>
-  <v-tabs v-model="tab">
-    <v-tab
+  <VTabs v-model="tab">
+    <VTab
       v-for="(item, index) in items"
       :key="'tab' + index"
     >
       {{ item.category }}
-    </v-tab>
-  </v-tabs>
+    </VTab>
+  </VTabs>
   <v-window v-model="tab">
     <v-window-item
       v-for="(item, index2) in items"
