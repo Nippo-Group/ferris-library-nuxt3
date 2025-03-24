@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <v-card>
+  <VCard>
     <v-list
       v-if="contentsList"
       lines="two"
@@ -20,8 +20,8 @@ defineProps<{
         <templates-list-news-item :contents="contents" />
       </template>
     </v-list>
-    <v-card-text v-else>
+    <VCardText v-else>
       現在、記事はありません。
-    </v-card-text>
-  </v-card>
+    </VCardText>
+  </VCard>
 </template>

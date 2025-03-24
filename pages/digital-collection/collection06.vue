@@ -32,18 +32,18 @@ const breadcrumbs = [
         />
       </VCol>
       <VCol cols="12">
-        <v-card>
-          <v-card-title>
+        <VCard>
+          <VCardTitle>
             <img
               :src="titleLogo"
               :alt="title"
               class="titleLogo"
             >
-          </v-card-title>
-          <v-card-text>
+          </VCardTitle>
+          <VCardText>
             <elements-html-text-area :data="commentary1" />
-          </v-card-text>
-        </v-card>
+          </VCardText>
+        </VCard>
       </VCol>
       <VCol>
         <contents-collection-caldecotts />

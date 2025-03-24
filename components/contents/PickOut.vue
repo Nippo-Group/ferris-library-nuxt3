@@ -51,7 +51,7 @@ const pickOut = [
       v-for="(item, index) in pickOut"
       :key="'pickout-' + index"
     >
-      <v-card
+      <VCard
         variant="outlined"
         color="rgba(0, 0, 0, 0.1)"
         :to="item.to"
@@ -66,14 +66,14 @@ const pickOut = [
           class="align-end"
           gradient="to bottom, rgba(255,255,255,.2), rgba(255,255,255,1)"
         >
-          <v-card-title class="text-black wrap-text">
+          <VCardTitle class="text-black wrap-text">
             <elements-newline-text :item="item.name" />
-          </v-card-title>
+          </VCardTitle>
         </v-img>
-        <v-card-text class="text-black">
+        <VCardText class="text-black">
           {{ item.text }}
-        </v-card-text>
-      </v-card>
+        </VCardText>
+      </VCard>
     </v-slide-group-item>
   </v-slide-group>
 </template>

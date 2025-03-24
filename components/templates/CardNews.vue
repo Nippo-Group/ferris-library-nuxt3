@@ -11,27 +11,27 @@ const dayjs = useDayjs()
 </script>
 
 <template>
-  <v-card tag="article">
-    <v-card-item>
+  <VCard tag="article">
+    <VCardItem>
       <p class="text-primary mb-4">
         <icons-newspaper-variant />
         News
       </p>
-      <v-card-title
+      <VCardTitle
         tag="h1"
         class="card-title"
       >
         {{ items.title }}
-      </v-card-title>
-      <v-card-subtitle>
+      </VCardTitle>
+      <VCardSubtitle>
         {{ useDateFormat(dayjs(items.date)).ja.value }}
-      </v-card-subtitle>
-    </v-card-item>
+      </VCardSubtitle>
+    </VCardItem>
     <div class="content-body">
-      <v-card-text class="news-contents">
+      <VCardText class="news-contents">
         <elements-html-text-area :data="items.contents" />
-      </v-card-text>
-      <v-card-actions
+      </VCardText>
+      <VCardActions
         v-if="items.actions && items.actions.link"
         class="overflow-x-auto"
       >
@@ -45,8 +45,8 @@ const dayjs = useDayjs()
           :link="items.actions2.link"
           :to="items.actions2.to"
         />
-      </v-card-actions>
-      <v-card-actions
+      </VCardActions>
+      <VCardActions
         v-if="items.openinnew && items.openinnew.link"
         class="overflow-x-auto"
       >
@@ -62,18 +62,18 @@ const dayjs = useDayjs()
           :link="items.openinnew2.link"
           :url="items.openinnew2.url"
         />
-      </v-card-actions>
+      </VCardActions>
     </div>
     <v-divider />
-    <v-card-actions class="justify-end">
+    <VCardActions class="justify-end">
       <v-btn
         variant="text"
         @click="$emit('dialogClose')"
       >
         Close
       </v-btn>
-    </v-card-actions>
-  </v-card>
+    </VCardActions>
+  </VCard>
 </template>
 
 <style scoped>

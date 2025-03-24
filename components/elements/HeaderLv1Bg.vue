@@ -6,7 +6,7 @@ defineProps<{
 </script>
 
 <template>
-  <v-card rounded="0">
+  <VCard rounded="0">
     <v-img
       :src="image"
       class="text-white align-center"
@@ -14,7 +14,7 @@ defineProps<{
       height="180px"
       cover
     >
-      <v-card-title
+      <VCardTitle
         tag="h1"
         class="v-heading text-h5 text-sm-h4 page-title pt-8 mb-4"
       >
@@ -25,7 +25,7 @@ defineProps<{
           {{ text }}
           <wbr>
         </template>
-      </v-card-title>
+      </VCardTitle>
     </v-img>
-  </v-card>
+  </VCard>
 </template>

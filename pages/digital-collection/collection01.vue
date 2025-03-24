@@ -47,22 +47,22 @@ const breadcrumbs = [
         />
       </VCol>
       <VCol cols="12">
-        <v-card class="d-md-flex flex-no-wrap justify-space-between">
+        <VCard class="d-md-flex flex-no-wrap justify-space-between">
           <VContainer>
             <VRow>
               <VCol
                 cols="12"
                 sm="8"
               >
-                <v-card-title>
+                <VCardTitle>
                   <v-img
                     :src="titleLogo"
                     :alt="title"
                     class="titleLogo"
                     max-width="322"
                   />
-                </v-card-title>
-                <v-card-text>
+                </VCardTitle>
+                <VCardText>
                   <p
                     v-for="(text, i) in commentary"
                     :key="i"
@@ -70,13 +70,13 @@ const breadcrumbs = [
                   >
                     {{ text }}
                   </p>
-                </v-card-text>
+                </VCardText>
               </VCol>
               <VCol
                 cols="12"
                 sm="4"
               >
-                <v-card-text>
+                <VCardText>
                   <v-img
                     :max-width="220"
                     :src="topImage"
@@ -90,11 +90,11 @@ const breadcrumbs = [
                   >
                     {{ caption }}
                   </p>
-                </v-card-text>
+                </VCardText>
               </VCol>
             </VRow>
           </VContainer>
-        </v-card>
+        </VCard>
       </VCol>
       <VCol cols="12">
         <v-alert

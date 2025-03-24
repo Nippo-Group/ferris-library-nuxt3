@@ -14,9 +14,9 @@ const movie = {
 
 <template>
   <templates-card-reading-project :title="name">
-    <v-card-text>
+    <VCardText>
       <elements-html-text-area :data="content" />
-    </v-card-text>
+    </VCardText>
     <VContainer>
       <VRow dense>
         <VCol
@@ -29,11 +29,11 @@ const movie = {
         </VCol>
       </VRow>
     </VContainer>
-    <v-card-text v-if="movie">
+    <VCardText v-if="movie">
       <elements-youtube-viewer
         :title="movie.title"
         :src="movie.src"
       />
-    </v-card-text>
+    </VCardText>
   </templates-card-reading-project>
 </template>

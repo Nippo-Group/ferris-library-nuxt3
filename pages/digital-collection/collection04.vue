@@ -44,15 +44,15 @@ const breadcrumbs = [
         />
       </VCol>
       <VCol cols="12">
-        <v-card>
-          <v-card-title>
+        <VCard>
+          <VCardTitle>
             <img
               :src="titleLogo"
               :alt="title"
               class="titleLogo"
             >
-          </v-card-title>
-          <v-card-text>
+          </VCardTitle>
+          <VCardText>
             <p
               v-for="(text, i) in commentary"
               :key="'text1' + i"
@@ -60,8 +60,8 @@ const breadcrumbs = [
             >
               {{ text }}
             </p>
-          </v-card-text>
-          <v-card-text>
+          </VCardText>
+          <VCardText>
             <p
               v-for="(caption, j) in commentary2"
               :key="'text2' + j"
@@ -69,8 +69,8 @@ const breadcrumbs = [
             >
               {{ caption }}
             </p>
-          </v-card-text>
-        </v-card>
+          </VCardText>
+        </VCard>
       </VCol>
       <VCol>
         <contents-collection-japanese-fairy-tale />

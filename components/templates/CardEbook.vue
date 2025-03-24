@@ -18,17 +18,17 @@ defineProps<{
 </script>
 
 <template>
-  <v-card>
+  <VCard>
     <VContainer>
       <VRow dense>
         <VCol
           cols="12"
           sm="4"
         >
-          <v-card-title class="wrap-text">
+          <VCardTitle class="wrap-text">
             {{ name }}
-          </v-card-title>
-          <v-card-text>
+          </VCardTitle>
+          <VCardText>
             <v-chip
               v-for="(language, m) in languages"
               :key="'lang' + m"
@@ -45,17 +45,17 @@ defineProps<{
             >
               {{ cat }}
             </v-chip>
-          </v-card-text>
+          </VCardText>
         </VCol>
         <VCol
           cols="12"
           sm="8"
         >
-          <v-card-text>
+          <VCardText>
             <elements-html-text-area :data="body" />
-          </v-card-text>
+          </VCardText>
           <v-divider />
-          <v-card-text v-if="access || attention">
+          <VCardText v-if="access || attention">
             <p
               v-if="access"
               class="my-0"
@@ -70,8 +70,8 @@ defineProps<{
               </span>
             </p>
             <span v-if="attention">※{{ attention }}</span>
-          </v-card-text>
-          <v-card-actions
+          </VCardText>
+          <VCardActions
             v-if="links || documents"
             class="overflow-y-auto"
           >
@@ -110,11 +110,11 @@ defineProps<{
                 </v-btn>
               </template>
             </ContainersStack>
-          </v-card-actions>
+          </VCardActions>
         </VCol>
       </VRow>
     </VContainer>
-  </v-card>
+  </VCard>
 </template>
 
 <style scoped>

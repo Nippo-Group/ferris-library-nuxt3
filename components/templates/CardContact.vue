@@ -37,7 +37,7 @@ const accessIcon = (type: string): string | undefined => {
 </script>
 
 <template>
-  <v-card>
+  <VCard>
     <v-img
       :src="props.image"
       height="200px"
@@ -45,11 +45,11 @@ const accessIcon = (type: string): string | undefined => {
       class="align-end"
       cover
     >
-      <v-card-title class="text-white">
+      <VCardTitle class="text-white">
         <div class="text-h5">
           {{ props.name }}
         </div>
-      </v-card-title>
+      </VCardTitle>
     </v-img>
     <v-list lines="two">
       <v-list-item
@@ -121,7 +121,7 @@ const accessIcon = (type: string): string | undefined => {
         </v-list-item-title>
       </v-list-item>
     </v-list>
-  </v-card>
+  </VCard>
 </template>
 
 <style scoped>

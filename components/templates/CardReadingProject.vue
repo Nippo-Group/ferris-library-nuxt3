@@ -6,15 +6,15 @@ defineProps<State>()
 </script>
 
 <template>
-  <v-card height="100%">
-    <v-card-title
+  <VCard height="100%">
+    <VCardTitle
       v-if="title"
       class="text-red-lighten-3"
     >
       {{ title }}
-    </v-card-title>
+    </VCardTitle>
     <slot />
-  </v-card>
+  </VCard>
 </template>
 
 <style scoped>

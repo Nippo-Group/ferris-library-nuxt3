@@ -34,7 +34,7 @@ const rules = ref({
   <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
     <icons-library-shelves start /> {{ contents.title }}
   </div>
-  <v-card>
+  <VCard>
     <v-tabs
       v-model="tab"
       color="primary"
@@ -46,8 +46,8 @@ const rules = ref({
     </v-tabs>
     <v-window v-model="tab">
       <v-window-item>
-        <v-card flat>
-          <v-card-text>
+        <VCard flat>
+          <VCardText>
             <v-form
               name="QSearch"
               action="https://www2.library.ferris.ac.jp/gate"
@@ -118,27 +118,27 @@ const rules = ref({
               />
               <elements-btn-my-library />
             </v-btn-toggle>
-          </v-card-text>
-        </v-card>
+          </VCardText>
+        </VCard>
       </v-window-item>
       <v-window-item>
-        <v-card
+        <VCard
           flat
           class="d-md-flex justify-start"
         >
           <div>
-            <v-card-text>
+            <VCardText>
               <elements-btn-open-in-new
                 :link="contents.spOPAC"
                 url="http://osirabe.net/opac.ferris/"
               />
-            </v-card-text>
+            </VCardText>
           </div>
           <div>
             <img src="@/assets/images/opac/qr.gif">
           </div>
-        </v-card>
+        </VCard>
       </v-window-item>
     </v-window>
-  </v-card>
+  </VCard>
 </template>

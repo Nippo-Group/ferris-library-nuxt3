@@ -171,13 +171,13 @@ const itemsContents: ItemsContents[] = [
     label="選択してください"
   />
   <template v-for="(content, index) in itemsContents">
-    <v-card
+    <VCard
       v-if="selected == content.name"
       :key="index"
       transition="scroll-x-transition"
     >
-      <v-card-title>{{ content.name }}</v-card-title>
-      <v-card-text>
+      <VCardTitle>{{ content.name }}</VCardTitle>
+      <VCardText>
         <div class="alerts-wrapper">
           <v-alert
             v-for="(service, index2) in content.service"
@@ -199,12 +199,12 @@ const itemsContents: ItemsContents[] = [
             />
           </v-alert>
         </div>
-      </v-card-text>
+      </VCardText>
       <templates-list-file
         v-if="content.pdfs"
         :items="content.pdfs"
       />
-    </v-card>
+    </VCard>
   </template>
 </template>
 

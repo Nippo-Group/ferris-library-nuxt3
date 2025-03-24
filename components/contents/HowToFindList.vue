@@ -161,10 +161,10 @@ const items: Item[] = [
     :key="i"
   >
     <VCol cols="12">
-      <v-card>
-        <v-card-title>{{ item.category }}</v-card-title>
+      <VCard>
+        <VCardTitle>{{ item.category }}</VCardTitle>
         <templates-list-file :items="item.contents" />
-      </v-card>
+      </VCard>
     </VCol>
   </VRow>
 </template>

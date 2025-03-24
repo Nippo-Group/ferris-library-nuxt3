@@ -302,16 +302,16 @@ const items: NewspaperCat[] = [
       v-for="(item, index2) in items"
       :key="'item' + index2"
     >
-      <v-card>
-        <v-card-title>
+      <VCard>
+        <VCardTitle>
           {{ item.category }}
-        </v-card-title>
-        <v-card-text>
+        </VCardTitle>
+        <VCardText>
           <templates-list-newspaper
             :items="item.newspapers"
           />
-        </v-card-text>
-      </v-card>
+        </VCardText>
+      </VCard>
     </v-window-item>
   </v-window>
 </template>

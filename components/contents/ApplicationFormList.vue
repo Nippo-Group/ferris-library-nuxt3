@@ -115,8 +115,8 @@ const items: Item[] = [
         :key="index"
         cols="12"
       >
-        <v-card>
-          <v-card-title>
+        <VCard>
+          <VCardTitle>
             {{ item.name }}
             <v-chip
               color="primary"
@@ -124,12 +124,12 @@ const items: Item[] = [
             >
               {{ item.target }}
             </v-chip>
-          </v-card-title>
-          <v-card-text v-if="item.note">
+          </VCardTitle>
+          <VCardText v-if="item.note">
             {{ item.note }}
-          </v-card-text>
+          </VCardText>
           <templates-list-file :items="item.files" />
-        </v-card>
+        </VCard>
       </VCol>
     </VRow>
   </VContainer>

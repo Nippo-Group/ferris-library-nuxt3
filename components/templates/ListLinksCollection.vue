@@ -23,11 +23,11 @@ const props = defineProps<State>()
       cols="12"
       lg="6"
     >
-      <v-card
+      <VCard
         :href="item.url"
         target="_blank"
       >
-        <v-card-title>
+        <VCardTitle>
           <v-chip
             class="mr-2"
             color="primary"
@@ -40,14 +40,14 @@ const props = defineProps<State>()
             end
             size="x-small"
           />
-        </v-card-title>
-        <v-card-subtitle v-show="item.author">
+        </VCardTitle>
+        <VCardSubtitle v-show="item.author">
           {{ item.author }}
-        </v-card-subtitle>
-        <v-card-text>
+        </VCardSubtitle>
+        <VCardText>
           {{ item.text }}
-        </v-card-text>
-      </v-card>
+        </VCardText>
+      </VCard>
     </VCol>
   </VRow>
 </template>

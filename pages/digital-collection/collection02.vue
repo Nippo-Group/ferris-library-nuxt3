@@ -47,20 +47,20 @@ const breadcrumbs = [
         />
       </VCol>
       <VCol cols="12">
-        <v-card>
-          <v-card-title>
+        <VCard>
+          <VCardTitle>
             <img
               :src="titleLogo"
               :alt="title"
               class="titleLogo"
             >
-          </v-card-title>
+          </VCardTitle>
           <VRow>
             <VCol
               cols="12"
               sm="8"
             >
-              <v-card-text>
+              <VCardText>
                 <p
                   v-for="(text, i) in commentary"
                   :key="i"
@@ -68,13 +68,13 @@ const breadcrumbs = [
                 >
                   {{ text }}
                 </p>
-              </v-card-text>
+              </VCardText>
             </VCol>
             <VCol
               cols="12"
               sm="4"
             >
-              <v-card-text>
+              <VCardText>
                 <v-img
                   :src="topImage"
                   cover
@@ -87,10 +87,10 @@ const breadcrumbs = [
                 >
                   {{ caption }}
                 </p>
-              </v-card-text>
+              </VCardText>
             </VCol>
           </VRow>
-          <v-card-actions>
+          <VCardActions>
             <elements-btn-dialog-default title="解説">
               <template #contents>
                 <p
@@ -102,8 +102,8 @@ const breadcrumbs = [
                 </p>
               </template>
             </elements-btn-dialog-default>
-          </v-card-actions>
-        </v-card>
+          </VCardActions>
+        </VCard>
       </VCol>
       <VCol>
         <contents-collection-taketori-monogatari />

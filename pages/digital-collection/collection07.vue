@@ -36,43 +36,43 @@ const breadcrumbs = [
         />
       </VCol>
       <VCol cols="12">
-        <v-card>
-          <v-card-title>
+        <VCard>
+          <VCardTitle>
             <img
               :src="titleLogo"
               :alt="title"
               class="titleLogo"
             >
-          </v-card-title>
+          </VCardTitle>
           <VContainer>
             <VRow>
               <VCol
                 cols="12"
                 sm="8"
               >
-                <v-card-text>
+                <VCardText>
                   <elements-html-text-area :data="commentary1" />
-                </v-card-text>
-                <v-card-text>
+                </VCardText>
+                <VCardText>
                   <p>参考文献</p>
                   <elements-html-text-area :data="commentary2" />
-                </v-card-text>
+                </VCardText>
               </VCol>
               <VCol
                 cols="12"
                 sm="4"
               >
-                <v-card-text>
+                <VCardText>
                   <v-img
                     :src="topImage"
                     cover
                     class="bg-grey-lighten-3"
                   />
-                </v-card-text>
+                </VCardText>
               </VCol>
             </VRow>
           </VContainer>
-        </v-card>
+        </VCard>
       </VCol>
     </VRow>
     <VRow if="images">

@@ -110,7 +110,7 @@ watchEffect(() => {
         md="6"
         lg="4"
       >
-        <v-card title="情報がありません" />
+        <VCard title="情報がありません" />
       </VCol>
     </VRow>
   </VContainer>

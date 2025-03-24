@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <v-card
+  <VCard
     :href="href"
     target="_blank"
     dark
@@ -20,10 +20,10 @@ defineProps<{
       :height="height"
       cover
     >
-      <v-card-title class="text-white">
+      <VCardTitle class="text-white">
         {{ title }}
         <icons-open-in-new />
-      </v-card-title>
+      </VCardTitle>
     </v-img>
-  </v-card>
+  </VCard>
 </template>

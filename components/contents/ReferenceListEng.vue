@@ -89,20 +89,20 @@ const items = [
         cols="12"
         lg="6"
       >
-        <v-card
+        <VCard
           height="100%"
           :href="content.link ? content.link : null"
           :target="content.link ? '_blank' : '_self'"
           :link="content.link ? true : false"
         >
-          <v-card-title>
+          <VCardTitle>
             {{ content.subtitle }}
             <icons-open-in-new v-if="content.link" />
-          </v-card-title>
-          <v-card-text>
+          </VCardTitle>
+          <VCardText>
             {{ content.text }}
-          </v-card-text>
-        </v-card>
+          </VCardText>
+        </VCard>
       </VCol>
     </VRow>
   </template>

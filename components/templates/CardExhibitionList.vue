@@ -9,32 +9,32 @@ const dayjs = useDayjs()
 </script>
 
 <template>
-  <v-card height="100%">
+  <VCard height="100%">
     <v-img
       :src="item.eyecatch ? item.eyecatch.url : ''"
       height="160px"
       class="eyecatch"
       cover
     >
-      <v-card-text>
+      <VCardText>
         <v-chip
           v-if="item.category"
           color="primary"
         >
           {{ item.category.name }}
         </v-chip>
-      </v-card-text>
+      </VCardText>
     </v-img>
-    <v-card-title class="wrap-text">
+    <VCardTitle class="wrap-text">
       {{ item.title }}
-    </v-card-title>
-    <v-card-subtitle
+    </VCardTitle>
+    <VCardSubtitle
       v-if="item.date"
       class="pb-2"
     >
       {{ useDateFormat(dayjs(item.date)).ja.value }}
-    </v-card-subtitle>
-  </v-card>
+    </VCardSubtitle>
+  </VCard>
 </template>
 
 <style scoped>
@@ -42,7 +42,7 @@ const dayjs = useDayjs()
   word-break: break-all;
   white-space: normal;
 }
-.v-card:hover .eyecatch {
+.VCard:hover .eyecatch {
   transition: filter 0.4s ease-in-out;
   filter: grayscale(60%);
 }

@@ -15,7 +15,7 @@ const { visible, show, dismiss } = useVisible()
 </script>
 
 <template>
-  <v-card
+  <VCard
     link
     @click="show()"
   >
@@ -27,13 +27,13 @@ const { visible, show, dismiss } = useVisible()
     <p class="text-center text-grey-darken-2">
       {{ caption }}
     </p>
-  </v-card>
+  </VCard>
   <v-dialog
     v-model="visible"
     @click="dismiss"
   >
     <div class="d-flex justify-center">
-      <v-card>
+      <VCard>
         <v-toolbar
           density="compact"
           color="white"
@@ -58,7 +58,7 @@ const { visible, show, dismiss } = useVisible()
           :alt
           @click.stop
         />
-      </v-card>
+      </VCard>
     </div>
   </v-dialog>
 </template>

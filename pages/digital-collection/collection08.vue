@@ -43,24 +43,24 @@ const zipFile = {
         />
       </VCol>
       <VCol cols="12">
-        <v-card>
+        <VCard>
           <VContainer>
             <VRow>
               <VCol
                 cols="12"
                 sm="8"
               >
-                <v-card-title>
+                <VCardTitle>
                   <img
                     :src="titleLogo"
                     :alt="title"
                     class="titleLogo"
                   >
-                </v-card-title>
-                <v-card-text>
+                </VCardTitle>
+                <VCardText>
                   <elements-html-text-area :data="commentary1" />
-                </v-card-text>
-                <v-card-actions>
+                </VCardText>
+                <VCardActions>
                   <elements-btn-dialog-default title="解説">
                     <template #contents>
                       <elements-html-text-area :data="commentary2" />
@@ -73,23 +73,23 @@ const zipFile = {
                     一括ダウンロード
                     <icons-download-defult />
                   </v-btn>
-                </v-card-actions>
+                </VCardActions>
               </VCol>
               <VCol
                 cols="12"
                 sm="4"
               >
-                <v-card-text>
+                <VCardText>
                   <v-img
                     :src="topImage"
                     cover
                     class="bg-grey-lighten-3"
                   />
-                </v-card-text>
+                </VCardText>
               </VCol>
             </VRow>
           </VContainer>
-        </v-card>
+        </VCard>
       </VCol>
       <VCol>
         <contents-collection-henry-more />

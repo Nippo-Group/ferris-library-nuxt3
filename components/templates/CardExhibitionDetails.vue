@@ -20,7 +20,7 @@ defineExpose({
     scrollable
     max-width="800px"
   >
-    <v-card>
+    <VCard>
       <v-img
         :src="eyecatch || undefined"
         height="160px"
@@ -28,7 +28,7 @@ defineExpose({
         gradient="to bottom, rgba(0,0,0,.2), rgba(0,0,0,.9)"
         cover
       >
-        <v-card-title class="wrap-text">
+        <VCardTitle class="wrap-text">
           <v-chip
             v-if="category"
             color="primary"
@@ -37,9 +37,9 @@ defineExpose({
             {{ category }}
           </v-chip>
           {{ title }}
-        </v-card-title>
+        </VCardTitle>
       </v-img>
-      <v-card-text class="content-body">
+      <VCardText class="content-body">
         <v-list-item v-if="placeToExhibit">
           <template #prepend>
             <icons-map-marker />
@@ -50,9 +50,9 @@ defineExpose({
         <v-list-item class="mt-8">
           <elements-html-text-area :data="content" />
         </v-list-item>
-      </v-card-text>
+      </VCardText>
       <v-divider />
-      <v-card-actions>
+      <VCardActions>
         <VSpacer />
         <v-btn
           color="grey-darken-1"
@@ -61,8 +61,8 @@ defineExpose({
         >
           Close
         </v-btn>
-      </v-card-actions>
-    </v-card>
+      </VCardActions>
+    </VCard>
   </v-dialog>
 </template>
 

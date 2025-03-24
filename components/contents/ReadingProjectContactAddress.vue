@@ -4,11 +4,11 @@ const title = 'お問い合わせ'
 
 <template>
   <templates-card-reading-project :title="title">
-    <v-card-text>
+    <VCardText>
       <p>
         読書運動プロジェクトについてのお問い合わせは下記メールアドレスまでお願いいたします。
       </p>
-    </v-card-text>
+    </VCardText>
     <elements-banner-email
       address="r_library@ferris.ac.jp"
     />

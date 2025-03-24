@@ -6,20 +6,20 @@ defineProps<{
 </script>
 
 <template>
-  <v-card
+  <VCard
     rounded="0"
     color="red-lighten-3 text-white"
   >
-    <v-card-title tag="h2">
+    <VCardTitle tag="h2">
       {{ title }}
-    </v-card-title>
-    <v-card-text
+    </VCardTitle>
+    <VCardText
       v-if="lead"
       class="text-justify text-grey-darken-3"
     >
       <div class="text-white">
         {{ lead }}
       </div>
-    </v-card-text>
-  </v-card>
+    </VCardText>
+  </VCard>
 </template>

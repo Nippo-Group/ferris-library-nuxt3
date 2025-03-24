@@ -6,13 +6,13 @@ defineProps<{
 </script>
 
 <template>
-  <v-card
+  <VCard
     elevation="0"
     color="grey-lighten-4"
   >
-    <v-card-text v-if="$slots.prepend">
+    <VCardText v-if="$slots.prepend">
       <slot name="prepend" />
-    </v-card-text>
+    </VCardText>
     <v-img
       :src="src"
       :alt="alt"
@@ -28,8 +28,8 @@ defineProps<{
         </VRow>
       </template>
     </v-img>
-    <v-card-text v-if="$slots.append">
+    <VCardText v-if="$slots.append">
       <slot name="append" />
-    </v-card-text>
-  </v-card>
+    </VCardText>
+  </VCard>
 </template>

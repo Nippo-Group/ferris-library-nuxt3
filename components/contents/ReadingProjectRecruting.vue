@@ -11,9 +11,9 @@ const items = [
 
 <template>
   <templates-card-reading-project :title="title">
-    <v-card-text>
+    <VCardText>
       図書館や本の魅力を学内外の様々な人に伝える活動を、一緒にしてみませんか？<br>学年不問で、いつからでも参加できます。
-    </v-card-text>
+    </VCardText>
     <v-list>
       <v-list-subheader>【こんな人におすすめ！】</v-list-subheader>
       <v-list-item
@@ -30,9 +30,9 @@ const items = [
         </template>
       </v-list-item>
     </v-list>
-    <v-card-text>
+    <VCardText>
       参加希望の方、もっと詳しく活動について知りたい方は、図書館カウンターもしくは下記メールアドレスまでお問い合わせください。
-    </v-card-text>
+    </VCardText>
     <elements-banner-email
       address="r_library@ferris.ac.jp"
     />

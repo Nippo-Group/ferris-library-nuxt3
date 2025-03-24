@@ -37,20 +37,20 @@ const lightboxShow = (index: number): void => {
           v-if="image.cover"
           cols="12"
         >
-          <v-card
+          <VCard
             elevation="0"
             class="mt-4"
           >
-            <v-card-title>
+            <VCardTitle>
               {{ image.title }}
-            </v-card-title>
-            <v-card-text>
+            </VCardTitle>
+            <VCardText>
               <p>{{ image.text }}</p>
               <p v-if="image.num">
                 請求番号： {{ image.num }}
               </p>
-            </v-card-text>
-          </v-card>
+            </VCardText>
+          </VCard>
         </VCol>
         <VCol cols="4">
           <templates-card-image

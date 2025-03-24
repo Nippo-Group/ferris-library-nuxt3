@@ -55,8 +55,8 @@ const items = [
 </script>
 
 <template>
-  <v-card>
-    <v-card-title> 大学名一覧（50音順） </v-card-title>
+  <VCard>
+    <VCardTitle> 大学名一覧（50音順） </VCardTitle>
     <v-list>
       <v-list-item
         v-for="(item, index) in items"
@@ -71,5 +71,5 @@ const items = [
         </template>
       </v-list-item>
     </v-list>
-  </v-card>
+  </VCard>
 </template>

@@ -18,27 +18,27 @@ const { visible, show, dismiss } = useVisible()
       transition="dialog-top-transition"
       max-width="600"
     >
-      <v-card>
-        <v-card-title class="mt-8 text-h5">
+      <VCard>
+        <VCardTitle class="mt-8 text-h5">
           {{ title }}
-        </v-card-title>
-        <v-card-text class="card-text">
+        </VCardTitle>
+        <VCardText class="card-text">
           <slot name="contents">
             ダイアログカードの内容
           </slot>
-        </v-card-text>
-        <v-card-actions class="px-4">
+        </VCardText>
+        <VCardActions class="px-4">
           <slot name="actions" />
-        </v-card-actions>
-        <v-card-actions class="justify-end">
+        </VCardActions>
+        <VCardActions class="justify-end">
           <v-btn
             variant="tonal"
             @click="dismiss"
           >
             Close
           </v-btn>
-        </v-card-actions>
-      </v-card>
+        </VCardActions>
+      </VCard>
     </v-dialog>
   </v-btn>
 </template>

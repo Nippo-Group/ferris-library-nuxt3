@@ -18,12 +18,12 @@ const { visible, inversion } = useVisible()
 </script>
 
 <template>
-  <v-card>
-    <v-card-title> {{ title }} </v-card-title>
-    <v-card-text>
+  <VCard>
+    <VCardTitle> {{ title }} </VCardTitle>
+    <VCardText>
       <elements-html-text-area :data="text" />
-    </v-card-text>
-    <v-card-actions @click="inversion">
+    </VCardText>
+    <VCardActions @click="inversion">
       <v-btn
         color="primary"
         variant="text"
@@ -34,11 +34,11 @@ const { visible, inversion } = useVisible()
       </v-btn>
       <VSpacer />
       <v-btn :icon="useChevronIcon(visible)" />
-    </v-card-actions>
+    </VCardActions>
     <v-expand-transition>
       <div v-show="visible">
         <v-divider />
-        <v-card-text>
+        <VCardText>
           <template
             v-for="(content, index) in props.contents"
             :key="'content-' + index"
@@ -64,13 +64,13 @@ const { visible, inversion } = useVisible()
               </li>
             </ul>
           </template>
-        </v-card-text>
-        <v-card-actions>
+        </VCardText>
+        <VCardActions>
           <elements-btn-my-library />
-        </v-card-actions>
+        </VCardActions>
       </div>
     </v-expand-transition>
-  </v-card>
+  </VCard>
 </template>
 
 <style scoped>

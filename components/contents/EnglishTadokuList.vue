@@ -17,29 +17,29 @@ const { show } = useConfirmDL()
         cols="12"
         lg="6"
       >
-        <v-card>
-          <v-card-subtitle class="pt-4 pb-0">
+        <VCard>
+          <VCardSubtitle class="pt-4 pb-0">
             電子ブック
-          </v-card-subtitle>
-          <v-card-title class="pt-0">
+          </VCardSubtitle>
+          <VCardTitle class="pt-0">
             EBSCO eBooks
-          </v-card-title>
+          </VCardTitle>
           <v-img
             max-height="164"
             :src="imgTadokuEBSCO"
           />
-          <v-card-text>
+          <VCardText>
             Macmillan Readers や Magic Tree
             Houseといった、英語多読用の電子ブック398冊が利用できます。
-          </v-card-text>
-          <v-card-actions>
+          </VCardText>
+          <VCardActions>
             <elements-btn-open-in-new
               link="学内からはこちら"
               url="http://search.ebscohost.com/login.aspx?profile=ehost&defaultdb=nlebk"
             />
-          </v-card-actions>
+          </VCardActions>
           <v-divider />
-          <v-card-text>
+          <VCardText>
             <v-alert
               density="compact"
               type="success"
@@ -48,8 +48,8 @@ const { show } = useConfirmDL()
               学部生・大学院生・教職員は学外からも利用が可能です。<br>
               ※大学のアカウントでログインできます。
             </v-alert>
-          </v-card-text>
-          <v-card-actions>
+          </VCardText>
+          <VCardActions>
             <elements-btn-open-in-new
               link="学外からはこちら"
               url="https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top.do&method=open"
@@ -68,50 +68,50 @@ const { show } = useConfirmDL()
               アクセスガイド
               <icons-file-pdf end />
             </v-btn>
-          </v-card-actions>
-        </v-card>
+          </VCardActions>
+        </VCard>
       </VCol>
       <VCol
         cols="12"
         lg="6"
       >
-        <v-card>
-          <v-card-subtitle class="pt-4 pb-0">
+        <VCard>
+          <VCardSubtitle class="pt-4 pb-0">
             電子ブック
-          </v-card-subtitle>
-          <v-card-title class="pt-0">
+          </VCardSubtitle>
+          <VCardTitle class="pt-0">
             Gale Virtual Reference Library
-          </v-card-title>
+          </VCardTitle>
           <v-img
             max-height="164"
             :src="imgTadokuGVRL"
           />
-          <v-card-text>
+          <VCardText>
             <p>
               俳優、ミュージシャン、アスリート、実業家、政治家などの各界の有名人についての伝記シリーズ「People
               in the News Series」61冊を利用できます。
             </p>
             <p>学内からのみ利用できます。</p>
-          </v-card-text>
-          <v-card-actions>
+          </VCardText>
+          <VCardActions>
             <elements-btn-open-in-new
               link="学内からはこちら"
               url="https://go.galegroup.com/ps/i.do?p=GVRL&sw=w&u=ferris&v=2.1&subject=%E5%A4%9A%E8%AA%AD%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA%EF%BC%9A%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E3%82%92%E3%81%AB%E3%81%8E%E3%82%8F%E3%81%99%E6%9C%89%E5%90%8D%E4%BA%BA%E4%BC%9D%E8%A8%98&pg=BooksForSubject&it=static"
             />
-          </v-card-actions>
-        </v-card>
+          </VCardActions>
+        </VCard>
       </VCol>
       <VCol
         cols="12"
         lg="6"
       >
-        <v-card>
-          <v-card-subtitle class="pt-4 pb-0">
+        <VCard>
+          <VCardSubtitle class="pt-4 pb-0">
             電子ブック
-          </v-card-subtitle>
-          <v-card-title class="pt-0">
+          </VCardSubtitle>
+          <VCardTitle class="pt-0">
             Maruzen eBook Library
-          </v-card-title>
+          </VCardTitle>
           <div class="d-flex ga-4 px-4">
             <v-img
               :src="imgTadokuMaruzen01"
@@ -130,9 +130,9 @@ const { show } = useConfirmDL()
               alt=""
             />
           </div>
-          <v-card-text>
+          <VCardText>
             3シリーズ146冊が利用できます。書籍はレベル別に分類されています。
-          </v-card-text>
+          </VCardText>
           <v-list density="compact">
             <v-list-item>
               <icons-circle-small />
@@ -147,13 +147,13 @@ const { show } = useConfirmDL()
               e-future graded comic readers 54冊
             </v-list-item>
           </v-list>
-          <v-card-actions>
+          <VCardActions>
             <elements-btn-open-in-new
               link="学内からはこちら"
               url="https://elib.maruzen.co.jp/elib/html/BookList/"
             />
-          </v-card-actions>
-          <v-card-text>
+          </VCardActions>
+          <VCardText>
             <v-alert
               density="compact"
               type="success"
@@ -161,15 +161,15 @@ const { show } = useConfirmDL()
             >
               学部生・大学院生・教職員は学内から利用が可能です。<br>※大学のアカウントでログインできます。
             </v-alert>
-          </v-card-text>
+          </VCardText>
           <v-divider />
-          <v-card-actions>
+          <VCardActions>
             <elements-btn-open-in-new
               link="学外からはこちら"
               url="https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open"
             />
-          </v-card-actions>
-          <v-card-actions>
+          </VCardActions>
+          <VCardActions>
             <v-btn
               variant="elevated"
               color="grey-lighten-4"
@@ -184,21 +184,21 @@ const { show } = useConfirmDL()
               「レベル別」アクセスガイド
               <icons-file-pdf end />
             </v-btn>
-          </v-card-actions>
-        </v-card>
+          </VCardActions>
+        </VCard>
       </VCol>
       <VCol
         cols="12"
         lg="6"
       >
-        <v-card>
-          <v-card-subtitle class="pt-4 pb-0">
+        <VCard>
+          <VCardSubtitle class="pt-4 pb-0">
             書籍
-          </v-card-subtitle>
-          <v-card-title class="pt-0">
+          </VCardSubtitle>
+          <VCardTitle class="pt-0">
             英語多読図書コーナー
-          </v-card-title>
-          <v-card-text>
+          </VCardTitle>
+          <VCardText>
             <p>
               緑園本館4階に、英語多読図書を集めたコーナーがあります。貸出条件は一般図書と同じです。
             </p>
@@ -206,19 +206,19 @@ const { show } = useConfirmDL()
               :src="imgTadokuCorner"
               class="mt-4"
             />
-          </v-card-text>
-        </v-card>
+          </VCardText>
+        </VCard>
       </VCol>
       <VCol
         cols="12"
         lg="6"
       >
-        <v-card>
-          <v-card-title>読書記録シート</v-card-title>
-          <v-card-text>
+        <VCard>
+          <VCardTitle>読書記録シート</VCardTitle>
+          <VCardText>
             英語多読図書用の「読書記録シート」です。読んだ多読図書のタイトル、出版社、レベル、単語数、評価、感想を記録できます。
-          </v-card-text>
-          <v-card-actions>
+          </VCardText>
+          <VCardActions>
             <v-btn
               variant="elevated"
               color="grey-lighten-4"
@@ -233,8 +233,8 @@ const { show } = useConfirmDL()
               読書記録シート
               <icons-file-pdf end />
             </v-btn>
-          </v-card-actions>
-        </v-card>
+          </VCardActions>
+        </VCard>
       </VCol>
     </VRow>
   </VContainer>

@@ -4,20 +4,20 @@
       <elements-header-lv2>サービス一覧</elements-header-lv2>
     </VCol>
     <VCol cols="12">
-      <v-card height="100%">
-        <v-card-title> 事項調査 </v-card-title>
-        <v-card-text>
+      <VCard height="100%">
+        <VCardTitle> 事項調査 </VCardTitle>
+        <VCardText>
           調べものをしていてどの資料を見れば良いのか分からないとき、資料の探し方や、テーマにあったデータベース、検索ツールなどをご紹介します。学部生はMyLibraryからも調査の依頼ができます。
-        </v-card-text>
-      </v-card>
+        </VCardText>
+      </VCard>
     </VCol>
     <VCol cols="12">
-      <v-card height="100%">
-        <v-card-title> 所蔵調査 </v-card-title>
-        <v-card-text>
+      <VCard height="100%">
+        <VCardTitle> 所蔵調査 </VCardTitle>
+        <VCardText>
           ご希望の資料が当図書館にない時、他の図書館や資料館の所蔵調査をいたします。学部生はMyLibraryにログインして調査の依頼ができます。
-        </v-card-text>
-        <v-card-actions class="overflow-x-auto">
+        </VCardText>
+        <VCardActions class="overflow-x-auto">
           <ContainersStack>
             <elements-btn-dialog-default title="文献複写">
               <template #contents>
@@ -84,16 +84,16 @@
 
             <elements-btn-my-library />
           </ContainersStack>
-        </v-card-actions>
-      </v-card>
+        </VCardActions>
+      </VCard>
     </VCol>
     <VCol cols="12">
-      <v-card height="100%">
-        <v-card-title> 紹介状 </v-card-title>
-        <v-card-text>
+      <VCard height="100%">
+        <VCardTitle> 紹介状 </VCardTitle>
+        <VCardText>
           他大学の図書館を利用するために必要な紹介状を発行します。
-        </v-card-text>
-        <v-card-actions class="overflow-x-auto">
+        </VCardText>
+        <VCardActions class="overflow-x-auto">
           <ContainersStack>
             <elements-btn-dialog-default title="大学図書館">
               <template #contents>
@@ -173,20 +173,20 @@
               </template>
             </elements-btn-dialog-default>
           </ContainersStack>
-        </v-card-actions>
-      </v-card>
+        </VCardActions>
+      </VCard>
     </VCol>
     <VCol cols="12">
-      <v-card height="100%">
-        <v-card-title> 共通閲覧証 </v-card-title>
-        <v-card-text>
+      <VCard height="100%">
+        <VCardTitle> 共通閲覧証 </VCardTitle>
+        <VCardText>
           紹介状なしで他大学の図書館を利用できる共通閲覧証を発行します。
-        </v-card-text>
+        </VCardText>
         <v-divider />
-        <v-card-text>
+        <VCardText>
           下記の共通閲覧証があれば、紹介状なしで加盟大学図書館・機関が利用できます。
-        </v-card-text>
-        <v-card-actions class="overflow-x-auto">
+        </VCardText>
+        <VCardActions class="overflow-x-auto">
           <ContainersStack>
             <elements-btn-dialog-default title="神奈川県内大学図書館共通閲覧証">
               <template #contents>
@@ -226,39 +226,39 @@
               </template>
             </elements-btn-dialog-default>
           </ContainersStack>
-        </v-card-actions>
-      </v-card>
+        </VCardActions>
+      </VCard>
     </VCol>
     <VCol cols="12">
-      <v-card height="100%">
-        <v-card-title>
+      <VCard height="100%">
+        <VCardTitle>
           横浜市内コンソーシアム加盟大学の図書館を利用する
-        </v-card-title>
-        <v-card-text>
+        </VCardTitle>
+        <VCardText>
           横浜市内大学図書館コンソーシアムの加盟館は、原則として学生証又は大学発行の身分証明書を提示して手続きすることで、紹介状なしで館内利用ができます。<br>
           手続き方法、利用できるサービスについては大学によって異なりますので、必ず各館のホームページで条件を確認してください。
-        </v-card-text>
-        <v-card-actions class="overflow-x-auto">
+        </VCardText>
+        <VCardActions class="overflow-x-auto">
           <elements-btn-inside
             link="コンソーシアムページへ"
             to="/consortium"
           />
-        </v-card-actions>
-      </v-card>
+        </VCardActions>
+      </VCard>
     </VCol>
     <VCol cols="12">
-      <v-card height="100%">
-        <v-card-title> ツアー・ガイダンス </v-card-title>
-        <v-card-text>
+      <VCard height="100%">
+        <VCardTitle> ツアー・ガイダンス </VCardTitle>
+        <VCardText>
           先生方や学生の皆さんのご要望に応じて、図書館の効率的な使い方をご説明します。
-        </v-card-text>
-        <v-card-actions class="overflow-x-auto">
+        </VCardText>
+        <VCardActions class="overflow-x-auto">
           <elements-btn-inside
             link="ツアー・ガイダンスページへ"
             to="/tour"
           />
-        </v-card-actions>
-      </v-card>
+        </VCardActions>
+      </VCard>
     </VCol>
   </VRow>
 </template>

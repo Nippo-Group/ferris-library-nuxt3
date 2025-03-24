@@ -14,23 +14,23 @@ const props = defineProps<{
       cols="12"
       xl="8"
     >
-      <v-card
+      <VCard
         v-if="item.heading"
         color="grey-lighten-4"
         flat
       >
-        <v-card-text>
+        <VCardText>
           <span class="font-weight-bold">{{ item.name }}</span><span class="ml-4">{{ item.content }}</span>
-        </v-card-text>
-      </v-card>
-      <v-card v-else>
-        <v-card-title>
+        </VCardText>
+      </VCard>
+      <VCard v-else>
+        <VCardTitle>
           {{ item.name }}
-        </v-card-title>
-        <v-card-subtitle>
+        </VCardTitle>
+        <VCardSubtitle>
           {{ item.type }}
-        </v-card-subtitle>
-        <v-card-text>
+        </VCardSubtitle>
+        <VCardText>
           {{ item.content }}
           <elements-img-group
             v-if="item.imgs"
@@ -45,26 +45,26 @@ const props = defineProps<{
               利用後は必ずログアウトしてください
             </span>
           </p>
-        </v-card-text>
+        </VCardText>
         <div class="d-flex">
-          <v-card-text>
+          <VCardText>
             <v-chip
               variant="tonal"
               class="mr-2"
             >
               アクセス
             </v-chip>{{ item.access }}
-          </v-card-text>
-          <v-card-actions v-if="item.links">
+          </VCardText>
+          <VCardActions v-if="item.links">
             <elements-btn-open-in-new
               v-for="(link, j) in item.links"
               :key="'link' + j"
               :link="link.name"
               :url="link.url"
             />
-          </v-card-actions>
+          </VCardActions>
         </div>
-      </v-card>
+      </VCard>
     </VCol>
   </VRow>
 </template>

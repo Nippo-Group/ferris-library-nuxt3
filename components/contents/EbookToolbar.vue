@@ -48,8 +48,8 @@ const OptionsCategory = ref<Category[]>([
     transition="dialog-bottom-transition"
     max-width="800"
   >
-    <v-card>
-      <v-card-text>
+    <VCard>
+      <VCardText>
         <VRow dense>
           <!--
           <VCol cols="12">
@@ -86,14 +86,14 @@ const OptionsCategory = ref<Category[]>([
             />
           </VCol>
         </VRow>
-      </v-card-text>
-      <v-card-text v-if="available === '学内'">
+      </VCardText>
+      <VCardText v-if="available === '学内'">
         <p>検索やプリントアウトは無料です。</p>
         <p>
           OPAC端末から利用する場合、一部ダウンロードができない場合があります。
         </p>
-      </v-card-text>
-      <v-card-text v-else>
+      </VCardText>
+      <VCardText v-else>
         <p>
           通常、本学のデータベースは学外からのアクセスはできませんが、オンライン授業に対応するため一部のデータベースはフェリス生限定で学外からもアクセス可能としました。
         </p>
@@ -103,12 +103,12 @@ const OptionsCategory = ref<Category[]>([
         <p>
           期間限定のデータベースはフェリス生限定のサービスです。ID、パスワードは各サービスごとに確認してください。
         </p>
-        <v-card
+        <VCard
           height="200"
           class="overflow-auto"
           variant="outlined"
         >
-          <v-card-text>
+          <VCardText>
             <p>2021.8.1追記</p>
             <ul>
               <li>
@@ -144,17 +144,17 @@ const OptionsCategory = ref<Category[]>([
                 OYA-bunko」が学外から利用できます！4/1発信）
               </li>
             </ul>
-          </v-card-text>
-        </v-card>
-      </v-card-text>
-      <v-card-actions class="justify-end">
+          </VCardText>
+        </VCard>
+      </VCardText>
+      <VCardActions class="justify-end">
         <v-btn
           variant="text"
           @click="dismiss"
         >
           Close
         </v-btn>
-      </v-card-actions>
-    </v-card>
+      </VCardActions>
+    </VCard>
   </v-dialog>
 </template>

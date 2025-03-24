@@ -45,20 +45,20 @@ const breadcrumbs = [
         cols="12"
         xl="6"
       >
-        <v-card>
+        <VCard>
           <VRow>
             <VCol
               cols="12"
               sm="8"
             >
-              <v-card-title>
+              <VCardTitle>
                 <img
                   :src="titleLogo"
                   :alt="title"
                   class="titleLogo"
                 >
-              </v-card-title>
-              <v-card-text>
+              </VCardTitle>
+              <VCardText>
                 <p
                   v-for="(text, i) in commentary"
                   :key="i"
@@ -66,8 +66,8 @@ const breadcrumbs = [
                 >
                   {{ text }}
                 </p>
-              </v-card-text>
-              <v-card-text>
+              </VCardText>
+              <VCardText>
                 <p
                   v-for="(caption, j) in topImageCaptions"
                   :key="j"
@@ -75,22 +75,22 @@ const breadcrumbs = [
                 >
                   {{ caption }}
                 </p>
-              </v-card-text>
+              </VCardText>
             </VCol>
             <VCol
               cols="12"
               sm="4"
             >
-              <v-card-text>
+              <VCardText>
                 <v-img
                   :src="topImage"
                   cover
                   class="bg-grey-lighten-3"
                 />
-              </v-card-text>
+              </VCardText>
             </VCol>
           </VRow>
-        </v-card>
+        </VCard>
       </VCol>
       <VCol>
         <contents-collection-yamato-monogatari />

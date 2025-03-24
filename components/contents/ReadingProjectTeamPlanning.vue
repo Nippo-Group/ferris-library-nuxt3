@@ -10,9 +10,9 @@ const images = [imgPlanning01, imgPlanning02]
 
 <template>
   <templates-card-reading-project :title="name">
-    <v-card-text>
+    <VCardText>
       <elements-html-text-area :data="content" />
-    </v-card-text>
+    </VCardText>
     <VContainer>
       <VRow dense>
         <VCol

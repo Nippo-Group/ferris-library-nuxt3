@@ -139,30 +139,30 @@ const items = [
         cols="12"
         md="6"
       >
-        <v-card
+        <VCard
           height="100%"
           class="d-flex flex-column"
         >
           <div class="d-flex justify-space-between ma-2">
             <div>
-              <v-card-subtitle class="mb-4 pl-0">
+              <VCardSubtitle class="mb-4 pl-0">
                 {{
                   item.kind
                 }}
-              </v-card-subtitle>
-              <v-card-title class="text-h5 mb-1 wrap-text pl-0">
+              </VCardSubtitle>
+              <VCardTitle class="text-h5 mb-1 wrap-text pl-0">
                 {{
                   item.title
                 }}
-              </v-card-title>
-              <v-card-subtitle
+              </VCardTitle>
+              <VCardSubtitle
                 v-if="item.subtitle"
                 class="pl-0 wrap-text"
               >
                 {{
                   item.subtitle
                 }}
-              </v-card-subtitle>
+              </VCardSubtitle>
             </div>
             <v-avatar
               :image="item.image"
@@ -171,7 +171,7 @@ const items = [
               size="150"
             />
           </div>
-          <v-card-text>
+          <VCardText>
             <p
               v-for="(text, j) in item.texts"
               :key="j"
@@ -179,8 +179,8 @@ const items = [
             >
               {{ text.p }}
             </p>
-          </v-card-text>
-          <v-card-actions>
+          </VCardText>
+          <VCardActions>
             <elements-btn-inside
               v-if="item.identification"
               link="資料をみる"
@@ -193,8 +193,8 @@ const items = [
               :url="item.link"
               block
             />
-          </v-card-actions>
-        </v-card>
+          </VCardActions>
+        </VCard>
       </VCol>
     </VRow>
   </VContainer>
@@ -205,7 +205,7 @@ const items = [
   word-break: break-all;
   white-space: normal;
 }
-.v-card--reveal {
+.VCard--reveal {
   bottom: 0;
   opacity: 1 !important;
   position: absolute;

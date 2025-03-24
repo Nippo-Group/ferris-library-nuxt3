@@ -65,7 +65,7 @@ const images = computed(() => {
 </script>
 
 <template>
-  <v-card>
+  <VCard>
     <v-list line="two">
       <template
         v-for="(item, i) in list"
@@ -91,7 +91,7 @@ const images = computed(() => {
         </v-list-item>
       </template>
     </v-list>
-    <v-card-text>
+    <VCardText>
       <p class="notes">
         <span>※1</span>
         98枚目にフェリス女学院（当時の名称「フェリス和英女学校」）が写っています。
@@ -100,8 +100,8 @@ const images = computed(() => {
         <span>※2</span>
         撮影地が明記されていない絵葉書については、文献や法人のウェブサイトなどを調査し、判明したものは補記しました。
       </p>
-    </v-card-text>
-  </v-card>
+    </VCardText>
+  </VCard>
   <templates-list-image
     v-if="images"
     :images="images"
