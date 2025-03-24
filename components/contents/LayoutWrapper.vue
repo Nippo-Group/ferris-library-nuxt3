@@ -20,8 +20,8 @@ const menus = computed(() => {
 
 <template>
   <VApp id="inspire">
-    <templates-navigation-drawer :menus="menus" />
-    <templates-a-header>
+    <SectionsNavigationDrawer :menus="menus" />
+    <SectionsHeader>
       <img
         v-if="langState === 'en'"
         src="~/assets/images/layouts/site-logo-english.png"
@@ -38,12 +38,12 @@ const menus = computed(() => {
         height="65"
         alt="フェリス女学院大学附属図書館"
       >
-    </templates-a-header>
-    <templates-a-main>
+    </SectionsHeader>
+    <SectionsMain>
       <slot />
-    </templates-a-main>
-    <templates-a-footer :copyright="copyright" />
-    <templates-to-top />
+    </SectionsMain>
+    <SectionsFooter :copyright="copyright" />
+    <SectionsToTop />
     <templates-confirm-download />
   </VApp>
 </template>
