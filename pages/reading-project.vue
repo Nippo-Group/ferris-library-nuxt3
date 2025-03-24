@@ -18,7 +18,7 @@ const isWhat
     <VContainer>
       <VRow>
         <VCol cols="12">
-          <PartsHeaderLv1-bg
+          <SectionsRPHeaderLv1
             :title="['読書運動', 'プロジェクト']"
             :image="titleImage"
           />
@@ -26,7 +26,7 @@ const isWhat
       </VRow>
       <VRow>
         <VCol cols="12">
-          <PartsHeaderLv2-bg
+          <SectionsRPHeaderLv2
             title="「読書運動プロジェクト」とは？"
             :lead="isWhat"
           />
@@ -52,7 +52,7 @@ const isWhat
       </VRow>
       <VRow>
         <VCol cols="12">
-          <PartsHeaderLv2-bg
+          <SectionsRPHeaderLv2
             title="活動紹介"
             :lead="description"
           />
@@ -72,7 +72,7 @@ const isWhat
       </VRow>
       <VRow>
         <VCol cols="12">
-          <PartsHeaderLv2-bg
+          <SectionsRPHeaderLv2
             title="活動拠点～附属図書館～"
           />
         </VCol>
@@ -82,7 +82,7 @@ const isWhat
       </VRow>
       <VRow>
         <VCol cols="12">
-          <PartsHeaderLv2-bg title="お問い合わせ" />
+          <SectionsRPHeaderLv2 title="お問い合わせ" />
         </VCol>
         <VCol cols="12">
           <contents-reading-project-contact-address />
