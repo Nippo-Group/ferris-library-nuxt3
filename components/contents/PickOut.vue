@@ -67,7 +67,7 @@ const pickOut = [
           gradient="to bottom, rgba(255,255,255,.2), rgba(255,255,255,1)"
         >
           <VCardTitle class="text-black wrap-text">
-            <elements-newline-text :item="item.name" />
+            <PartsNewlineText :item="item.name" />
           </VCardTitle>
         </VImg>
         <VCardText class="text-black">
