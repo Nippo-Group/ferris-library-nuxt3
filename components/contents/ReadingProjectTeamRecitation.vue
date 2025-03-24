@@ -30,7 +30,7 @@ const movie = {
       </VRow>
     </VContainer>
     <VCardText v-if="movie">
-      <elements-youtube-viewer
+      <TemplatesYoutubeViewer
         :title="movie.title"
         :src="movie.src"
       />

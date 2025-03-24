@@ -22,7 +22,7 @@ const movie = [
           cols="12"
           md="6"
         >
-          <elements-youtube-viewer
+          <TemplatesYoutubeViewer
             :title="item.title"
             :src="item.src"
           />
