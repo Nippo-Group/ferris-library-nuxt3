@@ -14,22 +14,22 @@ const items = [
     <VCardText>
       図書館や本の魅力を学内外の様々な人に伝える活動を、一緒にしてみませんか？<br>学年不問で、いつからでも参加できます。
     </VCardText>
-    <v-list>
-      <v-list-subheader>【こんな人におすすめ！】</v-list-subheader>
-      <v-list-item
+    <VList>
+      <VListSubheader>【こんな人におすすめ！】</VListSubheader>
+      <VListItem
         v-for="(item, index) in items"
         :key="index"
         rounded="xl"
         density="compact"
       >
-        <v-list-item-title class="wrap-text">
+        <VListItemTitle class="wrap-text">
           {{ item }}
-        </v-list-item-title>
+        </VListItemTitle>
         <template #prepend>
           <icons-check-marked />
         </template>
-      </v-list-item>
-    </v-list>
+      </VListItem>
+    </VList>
     <VCardText>
       参加希望の方、もっと詳しく活動について知りたい方は、図書館カウンターもしくは下記メールアドレスまでお問い合わせください。
     </VCardText>

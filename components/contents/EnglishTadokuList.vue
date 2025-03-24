@@ -133,20 +133,20 @@ const { show } = useConfirmDL()
           <VCardText>
             3シリーズ146冊が利用できます。書籍はレベル別に分類されています。
           </VCardText>
-          <v-list density="compact">
-            <v-list-item>
+          <VList density="compact">
+            <VListItem>
               <icons-circle-small />
               Page Turners 50巻
-            </v-list-item>
-            <v-list-item>
+            </VListItem>
+            <VListItem>
               <icons-circle-small />
               Foundations Reading Library 42巻
-            </v-list-item>
-            <v-list-item>
+            </VListItem>
+            <VListItem>
               <icons-circle-small />
               e-future graded comic readers 54冊
-            </v-list-item>
-          </v-list>
+            </VListItem>
+          </VList>
           <VCardActions>
             <elements-btn-open-in-new
               link="学内からはこちら"

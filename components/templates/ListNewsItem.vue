@@ -10,26 +10,26 @@ const { isReservation } = useReservation()
 </script>
 
 <template>
-  <v-list-item
+  <VListItem
     link
     @click="show"
   >
-    <v-list-item-title class="wrap-text">
+    <VListItemTitle class="wrap-text">
       <span
         v-show="isReservation(contents.date)"
         class="text-red-lighten-2"
       >予約投稿：</span>
       {{ contents.title }}
-    </v-list-item-title>
-    <v-list-item-subtitle>
+    </VListItemTitle>
+    <VListItemSubtitle>
       {{ useDateFormat(contents.date).ja.value }}
-    </v-list-item-subtitle>
+    </VListItemSubtitle>
     <template #append>
       <icons-arrow-right-circle
         class="text-gray-lighten-1"
       />
     </template>
-  </v-list-item>
+  </VListItem>
   <v-dialog
     v-model="visible"
     scrollable

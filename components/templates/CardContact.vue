@@ -51,57 +51,57 @@ const accessIcon = (type: string): string | undefined => {
         </div>
       </VCardTitle>
     </VImg>
-    <v-list lines="two">
-      <v-list-item
+    <VList lines="two">
+      <VListItem
         v-if="props.tel"
         :href="'tel:' + props.tel"
         :prepend-icon="mdiPhone"
       >
-        <v-list-item-title>{{ props.tel }}</v-list-item-title>
-        <v-list-item-subtitle>Phone</v-list-item-subtitle>
-      </v-list-item>
-      <v-list-item
+        <VListItemTitle>{{ props.tel }}</VListItemTitle>
+        <VListItemSubtitle>Phone</VListItemSubtitle>
+      </VListItem>
+      <VListItem
         v-if="props.fax"
         :prepend-icon="mdiFax"
       >
-        <v-list-item-title>{{ props.fax }}</v-list-item-title>
-        <v-list-item-subtitle>Fax</v-list-item-subtitle>
-      </v-list-item>
+        <VListItemTitle>{{ props.fax }}</VListItemTitle>
+        <VListItemSubtitle>Fax</VListItemSubtitle>
+      </VListItem>
       <VDivider inset />
-      <v-list-item
+      <VListItem
         v-if="props.eMali"
         :href="'mailto:' + props.eMali"
         :prepend-icon="mdiEmail"
       >
-        <v-list-item-title>{{ props.eMali }}</v-list-item-title>
-        <v-list-item-subtitle>Organization</v-list-item-subtitle>
-      </v-list-item>
+        <VListItemTitle>{{ props.eMali }}</VListItemTitle>
+        <VListItemSubtitle>Organization</VListItemSubtitle>
+      </VListItem>
       <VDivider inset />
-      <v-list-item
+      <VListItem
         :href="props.googleMap || undefined"
         target="_blank"
         :prepend-icon="mdiMapMarker"
       >
-        <v-list-item-subtitle v-if="props.addressNumber">
+        <VListItemSubtitle v-if="props.addressNumber">
           〒{{ props.addressNumber }}
-        </v-list-item-subtitle>
-        <v-list-item-title
+        </VListItemSubtitle>
+        <VListItemTitle
           v-if="props.address"
           class="wrap-text"
         >
           {{
             props.address
           }}
-        </v-list-item-title>
+        </VListItemTitle>
         <template
           v-if="props.googleMap"
           #append
         >
           <icons-open-in-new />
         </template>
-      </v-list-item>
+      </VListItem>
       <VDivider inset />
-      <v-list-item
+      <VListItem
         v-for="(access, i) in props.accesses"
         :key="i"
       >
@@ -111,16 +111,16 @@ const accessIcon = (type: string): string | undefined => {
             :icon="accessIcon(access.icon)"
           />
         </template>
-        <v-list-item-subtitle>
+        <VListItemSubtitle>
           {{ access.transportation }}
-        </v-list-item-subtitle>
-        <v-list-item-title class="wrap-text">
+        </VListItemSubtitle>
+        <VListItemTitle class="wrap-text">
           {{
             access.root
           }}
-        </v-list-item-title>
-      </v-list-item>
-    </v-list>
+        </VListItemTitle>
+      </VListItem>
+    </VList>
   </VCard>
 </template>
 

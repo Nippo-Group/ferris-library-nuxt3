@@ -30,7 +30,7 @@ const open = ref([])
     mobile-breakpoint="md"
     tag="nav"
   >
-    <v-list
+    <VList
       v-model:opened="open"
       color="primary"
       nav
@@ -40,7 +40,7 @@ const open = ref([])
         v-for="menu in menus"
         :key="menu.id"
       >
-        <v-list-item
+        <VListItem
           v-if="menu.push"
           :to="menu.push"
           :title="menu.category"
@@ -48,22 +48,22 @@ const open = ref([])
           <template #prepend>
             <elements-naVIcon :name="menu.id" />
           </template>
-        </v-list-item>
-        <v-list-group
+        </VListItem>
+        <VListGroup
           v-else
           :value="menu.id"
         >
           <template #activator="{ props }">
-            <v-list-item
+            <VListItem
               v-bind="props"
               :title="menu.category"
             >
               <template #prepend>
                 <elements-naVIcon :name="menu.id" />
               </template>
-            </v-list-item>
+            </VListItem>
           </template>
-          <v-list-item
+          <VListItem
             v-for="content in menu.contents"
             :key="content.id"
             :title="content.title"
@@ -76,10 +76,10 @@ const open = ref([])
             <template #append>
               <icons-open-in-new v-if="content.href" />
             </template>
-          </v-list-item>
-        </v-list-group>
+          </VListItem>
+        </VListGroup>
       </template>
-    </v-list>
+    </VList>
   </v-navigation-drawer>
 </template>
 

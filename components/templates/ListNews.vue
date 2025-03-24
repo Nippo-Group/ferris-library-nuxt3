@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <VCard>
-    <v-list
+    <VList
       v-if="contentsList"
       lines="two"
     >
@@ -19,7 +19,7 @@ defineProps<{
         <VDivider v-show="index > 0" />
         <templates-list-news-item :contents="contents" />
       </template>
-    </v-list>
+    </VList>
     <VCardText v-else>
       現在、記事はありません。
     </VCardText>

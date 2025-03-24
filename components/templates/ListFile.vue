@@ -9,12 +9,12 @@ defineProps<{
 </script>
 
 <template>
-  <v-list>
+  <VList>
     <template
       v-for="(item, index) in items"
       :key="index"
     >
-      <v-list-item
+      <VListItem
         v-if="item.url && item.type"
         link
         @click="confirmDLShow(item.name, item.url, item.type)"
@@ -34,10 +34,10 @@ defineProps<{
             {{ item.date }}
           </VChip>
         </div>
-        <v-list-item-title class="wrap-text">
+        <VListItemTitle class="wrap-text">
           {{ item.name }}
-        </v-list-item-title>
-        <v-list-item-subtitle>{{ item.note }}</v-list-item-subtitle>
+        </VListItemTitle>
+        <VListItemSubtitle>{{ item.note }}</VListItemSubtitle>
         <template #append>
           <icons-file-pdf v-if="item.type === 'PDF'" />
           <icons-file-word v-else-if="item.type === 'Word'" />
@@ -46,16 +46,16 @@ defineProps<{
           />
           <icons-file-document v-else />
         </template>
-      </v-list-item>
+      </VListItem>
 
-      <v-list-item v-else>
-        <v-list-item-title class="wrap-text">
+      <VListItem v-else>
+        <VListItemTitle class="wrap-text">
           {{ item.name }}
-        </v-list-item-title>
-        <v-list-item-subtitle>{{ item.note }}</v-list-item-subtitle>
-      </v-list-item>
+        </VListItemTitle>
+        <VListItemSubtitle>{{ item.note }}</VListItemSubtitle>
+      </VListItem>
     </template>
-  </v-list>
+  </VList>
 </template>
 
 <style scoped>

@@ -40,16 +40,16 @@ defineExpose({
         </VCardTitle>
       </VImg>
       <VCardText class="content-body">
-        <v-list-item v-if="placeToExhibit">
+        <VListItem v-if="placeToExhibit">
           <template #prepend>
             <icons-map-marker />
           </template>
           展示場所 ‐ {{ placeToExhibit }}
-        </v-list-item>
+        </VListItem>
         <VDivider />
-        <v-list-item class="mt-8">
+        <VListItem class="mt-8">
           <elements-html-text-area :data="content" />
-        </v-list-item>
+        </VListItem>
       </VCardText>
       <VDivider />
       <VCardActions>

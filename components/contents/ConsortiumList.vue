@@ -57,8 +57,8 @@ const items = [
 <template>
   <VCard>
     <VCardTitle> 大学名一覧（50音順） </VCardTitle>
-    <v-list>
-      <v-list-item
+    <VList>
+      <VListItem
         v-for="(item, index) in items"
         :key="index"
         :link="Boolean(item.url)"
@@ -69,7 +69,7 @@ const items = [
         <template #append>
           <icons-open-in-new v-if="item.url" />
         </template>
-      </v-list-item>
-    </v-list>
+      </VListItem>
+    </VList>
   </VCard>
 </template>

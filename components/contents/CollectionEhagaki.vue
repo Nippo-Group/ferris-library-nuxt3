@@ -66,31 +66,31 @@ const images = computed(() => {
 
 <template>
   <VCard>
-    <v-list line="two">
+    <VList line="two">
       <template
         v-for="(item, i) in list"
         :key="`group-${i}`"
       >
-        <v-list-subheader v-if="item.type === 'subheader'">
+        <VListSubheader v-if="item.type === 'subheader'">
           {{
             item.title
           }}
-        </v-list-subheader>
+        </VListSubheader>
         <VDivider v-else-if="item.type === 'divider'" />
-        <v-list-item
+        <VListItem
           v-else
           link
           :prepend-avatar="item.avatar"
           @click="gallery(item.group)"
         >
-          <v-list-item-title class="wrap-text">
+          <VListItemTitle class="wrap-text">
             {{ item.title }}
             <sup>{{ item.notes }}</sup>
-          </v-list-item-title>
-          <v-list-item-subtitle> {{ item.quantity }}枚 </v-list-item-subtitle>
-        </v-list-item>
+          </VListItemTitle>
+          <VListItemSubtitle> {{ item.quantity }}枚 </VListItemSubtitle>
+        </VListItem>
       </template>
-    </v-list>
+    </VList>
     <VCardText>
       <p class="notes">
         <span>※1</span>

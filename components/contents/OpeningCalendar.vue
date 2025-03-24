@@ -163,18 +163,18 @@ onMounted(() => {
           <icons-menu-down end />
         </v-btn>
       </template>
-      <v-list>
-        <v-list-item link>
-          <v-list-item-title @click="selectLocation = 'ryokuen'">
+      <VList>
+        <VListItem link>
+          <VListItemTitle @click="selectLocation = 'ryokuen'">
             {{ locationLabel.ryokuen }}
-          </v-list-item-title>
-        </v-list-item>
-        <v-list-item link>
-          <v-list-item-title @click="selectLocation = 'yamate'">
+          </VListItemTitle>
+        </VListItem>
+        <VListItem link>
+          <VListItemTitle @click="selectLocation = 'yamate'">
             {{ locationLabel.yamate }}
-          </v-list-item-title>
-        </v-list-item>
-      </v-list>
+          </VListItemTitle>
+        </VListItem>
+      </VList>
     </v-menu>
     <VTooltip
       text="Previous"

@@ -30,7 +30,7 @@ const mediaInformation = {
 
 <template>
   <templates-card-reading-project :title="mediaInformation.title">
-    <v-list
+    <VList
       v-if="mediaInformation.actions"
       lines="two"
     >
@@ -39,22 +39,22 @@ const mediaInformation = {
         :key="index"
       >
         <VDivider v-show="index > 0" />
-        <v-list-item
+        <VListItem
           :href="media.url"
           target="_blank"
         >
-          <v-list-item-title class="wrap-text">
+          <VListItemTitle class="wrap-text">
             {{
               media.title
             }}
-          </v-list-item-title>
-          <v-list-item-subtitle>{{ media.source }}</v-list-item-subtitle>
+          </VListItemTitle>
+          <VListItemSubtitle>{{ media.source }}</VListItemSubtitle>
           <template #append>
             <icons-open-in-new />
           </template>
-        </v-list-item>
+        </VListItem>
       </template>
-    </v-list>
+    </VList>
   </templates-card-reading-project>
 </template>
 
