@@ -37,7 +37,7 @@ const breadcrumbs = [
   <VContainer>
     <VRow>
       <VCol cols="12">
-        <elements-naVBreadcrumbs
+        <PartsNavBreadcrumbs
           :items="breadcrumbs"
         />
       </VCol>

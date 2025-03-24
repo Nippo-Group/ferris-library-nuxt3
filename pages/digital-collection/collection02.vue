@@ -42,7 +42,7 @@ const breadcrumbs = [
   <VContainer>
     <VRow dense>
       <VCol cols="12">
-        <elements-naVBreadcrumbs
+        <PartsNavBreadcrumbs
           :items="breadcrumbs"
         />
       </VCol>
