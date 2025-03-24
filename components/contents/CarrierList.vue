@@ -267,11 +267,11 @@ const items3: (Item | ItemHeading)[] = [
           「就職」「キャリア」「職業」「業種」「企業」「仕事」「就活」などのキーワードで検索してみましょう。
         </p>
         <elements-btn-my-library />
-        <v-timeline
+        <VTimeline
           density="compact"
           side="end"
         >
-          <v-timeline-item size="small">
+          <VTimelineItem size="small">
             <VImg
               :src="imgCarrier01"
               width="65vw"
@@ -280,8 +280,8 @@ const items3: (Item | ItemHeading)[] = [
             <p class="text-caption">
               部分一致検索にキーワードを入れて検索
             </p>
-          </v-timeline-item>
-          <v-timeline-item size="small">
+          </VTimelineItem>
+          <VTimelineItem size="small">
             <VImg
               :src="imgCarrier02"
               width="65vw"
@@ -290,8 +290,8 @@ const items3: (Item | ItemHeading)[] = [
             <p class="text-caption">
               情報がヒット
             </p>
-          </v-timeline-item>
-        </v-timeline>
+          </VTimelineItem>
+        </VTimeline>
       </VContainer>
     </VWindowItem>
   </VWindow>
