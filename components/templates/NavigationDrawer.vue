@@ -46,7 +46,7 @@ const open = ref([])
           :title="menu.category"
         >
           <template #prepend>
-            <elements-naVIcon :name="menu.id" />
+            <elements-nav-icon :name="menu.id" />
           </template>
         </VListItem>
         <VListGroup
@@ -59,7 +59,7 @@ const open = ref([])
               :title="menu.category"
             >
               <template #prepend>
-                <elements-naVIcon :name="menu.id" />
+                <elements-nav-icon :name="menu.id" />
               </template>
             </VListItem>
           </template>
