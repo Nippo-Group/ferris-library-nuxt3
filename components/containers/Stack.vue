@@ -1,5 +1,5 @@
 <script setup lang="ts">
-withDefaults(defineProps<{ gap: 0 | 1 | 2 | 3 | 4 }>(), { gap: 2 })
+withDefaults(defineProps<{ gap?: 0 | 1 | 2 | 3 | 4 }>(), { gap: 2 })
 
 const gapMap = {
   0: 'ga-0',
