@@ -152,7 +152,7 @@ onMounted(() => {
 
 <template>
   <VToolbar density="compact">
-    <v-menu>
+    <VMenu>
       <template #activator="{ props }">
         <VBtn
           v-bind="props"
@@ -175,7 +175,7 @@ onMounted(() => {
           </VListItemTitle>
         </VListItem>
       </VList>
-    </v-menu>
+    </VMenu>
     <VTooltip
       text="Previous"
       location="top"

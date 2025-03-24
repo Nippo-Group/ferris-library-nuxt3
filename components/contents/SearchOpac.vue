@@ -48,7 +48,7 @@ const rules = ref({
       <VWindowItem>
         <VCard flat>
           <VCardText>
-            <v-form
+            <VForm
               name="QSearch"
               action="https://www2.library.ferris.ac.jp/gate"
               method="POST"
@@ -84,7 +84,7 @@ const rules = ref({
                 name="page"
                 value="/search"
               >
-              <v-text-field
+              <VTextField
                 id="QSearch"
                 v-model="qSearchWord"
                 :rules="[rules.required]"
@@ -106,8 +106,8 @@ const rules = ref({
                     variant="text"
                   />
                 </template>
-              </v-text-field>
-            </v-form>
+              </VTextField>
+            </VForm>
             <VBtnToggle
               divided
               density="compact"

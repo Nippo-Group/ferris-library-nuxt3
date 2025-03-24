@@ -13,7 +13,7 @@ const { visible, show, dismiss } = useVisible()
     @click="show"
   >
     {{ title }}
-    <v-dialog
+    <VDialog
       v-model="visible"
       transition="dialog-top-transition"
       max-width="600"
@@ -39,7 +39,7 @@ const { visible, show, dismiss } = useVisible()
           </VBtn>
         </VCardActions>
       </VCard>
-    </v-dialog>
+    </VDialog>
   </VBtn>
 </template>
 

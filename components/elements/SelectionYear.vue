@@ -59,7 +59,7 @@ const limit = (list: Item[]) => {
         </VBtn>
       </VBtnToggle>
     </div>
-    <v-select
+    <VSelect
       v-else
       v-model="value"
       label="年度"

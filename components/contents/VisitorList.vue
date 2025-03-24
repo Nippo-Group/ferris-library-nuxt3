@@ -164,7 +164,7 @@ const itemsContents: ItemsContents[] = [
 </script>
 
 <template>
-  <v-select
+  <VSelect
     v-model="selected"
     :items="items"
     variant="filled"

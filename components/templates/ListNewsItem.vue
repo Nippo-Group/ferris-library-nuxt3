@@ -30,7 +30,7 @@ const { isReservation } = useReservation()
       />
     </template>
   </VListItem>
-  <v-dialog
+  <VDialog
     v-model="visible"
     scrollable
     max-width="600"
@@ -39,7 +39,7 @@ const { isReservation } = useReservation()
       :items="contents"
       @dialog-close="dismiss"
     />
-  </v-dialog>
+  </VDialog>
 </template>
 
 <style scoped>

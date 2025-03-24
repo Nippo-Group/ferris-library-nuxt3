@@ -24,7 +24,7 @@ defineProps<{
           align="center"
           justify="center"
         >
-          <v-progress-circular indeterminate />
+          <VProgressCircular indeterminate />
         </VRow>
       </template>
     </VImg>

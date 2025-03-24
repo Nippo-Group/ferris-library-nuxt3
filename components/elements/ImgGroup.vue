@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <v-item-group>
+  <VItemGroup>
     <VContainer>
       <VRow>
         <VCol
@@ -16,7 +16,7 @@ defineProps<{
           cols="6"
           md="4"
         >
-          <v-item>
+          <VItem>
             <elements-img-dialog
               :src="img.src"
               :width="img.width"
@@ -24,9 +24,9 @@ defineProps<{
               :alt="img.alt"
               :caption="img.caption"
             />
-          </v-item>
+          </VItem>
         </VCol>
       </VRow>
     </VContainer>
-  </v-item-group>
+  </VItemGroup>
 </template>

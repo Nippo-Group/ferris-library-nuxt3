@@ -54,21 +54,21 @@ const items = [
 </script>
 
 <template>
-  <v-carousel
+  <VCarousel
     cycle
     hide-delimiter-background
     show-arrows="hover"
     color="white"
     :height="280"
   >
-    <v-carousel-item
+    <VCarouselItem
       v-for="(item, i) in items"
       :key="i"
       :src="item.src"
       :lazy-src="item.lazy"
       cover
     />
-  </v-carousel>
+  </VCarousel>
 </template>
 
 <style scoped>

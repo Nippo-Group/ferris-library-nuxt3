@@ -25,7 +25,7 @@ const OptionsCategory = ref<Category[]>([
     dense
     flat
   >
-    <v-text-field
+    <VTextField
       v-model="keyword"
       label="キーワード検索"
       hide-details
@@ -43,7 +43,7 @@ const OptionsCategory = ref<Category[]>([
   </VToolbar>
   <p>検索条件：{{ [language, keyword].concat(categories).join(" ") }}</p>
 
-  <v-dialog
+  <VDialog
     v-model="visible"
     transition="dialog-bottom-transition"
     max-width="800"
@@ -53,17 +53,17 @@ const OptionsCategory = ref<Category[]>([
         <VRow dense>
           <!--
           <VCol cols="12">
-            <v-radio-group v-model="available" inline>
-              <v-radio label="学内からの利用" value="学内"></v-radio>
-              <v-radio label="学外からの利用" value="学外"></v-radio>
-            </v-radio-group>
+            <VRadioGroup v-model="available" inline>
+              <VRadio label="学内からの利用" value="学内"></VRadio>
+              <VRadio label="学外からの利用" value="学外"></VRadio>
+            </VRadioGroup>
           </VCol>
           -->
           <VCol
             cols="12"
             sm="3"
           >
-            <v-select
+            <VSelect
               v-model.lazy="language"
               :items="OptionsLanguage"
               label="言語"
@@ -75,7 +75,7 @@ const OptionsCategory = ref<Category[]>([
             cols="12"
             sm="9"
           >
-            <v-select
+            <VSelect
               v-model.lazy="categories"
               :items="OptionsCategory"
               label="カテゴリー"
@@ -156,5 +156,5 @@ const OptionsCategory = ref<Category[]>([
         </VBtn>
       </VCardActions>
     </VCard>
-  </v-dialog>
+  </VDialog>
 </template>

@@ -3,7 +3,7 @@ const { visible, fileName, fileType, fileUrl, dismiss } = useConfirmDL()
 </script>
 
 <template>
-  <v-snackbar
+  <VSnackbar
     v-model="visible"
     multi-line
   >
@@ -27,5 +27,5 @@ const { visible, fileName, fileType, fileUrl, dismiss } = useConfirmDL()
         <icons-close-defult />
       </VBtn>
     </template>
-  </v-snackbar>
+  </VSnackbar>
 </template>

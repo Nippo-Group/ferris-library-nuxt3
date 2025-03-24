@@ -15,7 +15,7 @@ defineExpose({
 </script>
 
 <template>
-  <v-dialog
+  <VDialog
     v-model="visible"
     scrollable
     max-width="800px"
@@ -63,7 +63,7 @@ defineExpose({
         </VBtn>
       </VCardActions>
     </VCard>
-  </v-dialog>
+  </VDialog>
 </template>
 
 <style scoped>

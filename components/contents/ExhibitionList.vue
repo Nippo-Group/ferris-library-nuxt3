@@ -70,7 +70,7 @@ watchEffect(() => {
           density="compact"
           rounded
         >
-          <v-text-field
+          <VTextField
             v-model="keyword"
             hide-details
             single-line

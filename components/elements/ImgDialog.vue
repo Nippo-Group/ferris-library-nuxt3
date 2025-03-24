@@ -28,7 +28,7 @@ const { visible, show, dismiss } = useVisible()
       {{ caption }}
     </p>
   </VCard>
-  <v-dialog
+  <VDialog
     v-model="visible"
     @click="dismiss"
   >
@@ -60,5 +60,5 @@ const { visible, show, dismiss } = useVisible()
         />
       </VCard>
     </div>
-  </v-dialog>
+  </VDialog>
 </template>

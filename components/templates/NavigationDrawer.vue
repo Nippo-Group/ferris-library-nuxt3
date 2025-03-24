@@ -24,7 +24,7 @@ const open = ref([])
 </script>
 
 <template>
-  <v-navigation-drawer
+  <VNavigationDrawer
     v-model="visible"
     :width="320"
     mobile-breakpoint="md"
@@ -80,7 +80,7 @@ const open = ref([])
         </VListGroup>
       </template>
     </VList>
-  </v-navigation-drawer>
+  </VNavigationDrawer>
 </template>
 
 <style scoped>

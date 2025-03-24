@@ -424,7 +424,7 @@ const items = [
 </script>
 
 <template>
-  <v-select
+  <VSelect
     v-model="selected"
     :items="categories"
     variant="filled"

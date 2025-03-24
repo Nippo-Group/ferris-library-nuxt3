@@ -37,7 +37,7 @@ const fileName = computed(() => {
         fit-parent
       >
         <div>
-          <v-progress-linear
+          <VProgressLinear
             indeterminate
             color="primary"
           />

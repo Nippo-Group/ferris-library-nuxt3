@@ -25,7 +25,7 @@ const setCopyMessage = () => {
 </script>
 
 <template>
-  <v-banner
+  <VBanner
     lines="one"
     :stacked="false"
   >
@@ -51,5 +51,5 @@ const setCopyMessage = () => {
         </VBtn>
       </template>
     </VTooltip>
-  </v-banner>
+  </VBanner>
 </template>
