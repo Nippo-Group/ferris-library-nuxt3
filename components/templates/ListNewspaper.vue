@@ -7,15 +7,15 @@ defineProps<{
 </script>
 
 <template>
-  <v-expansion-panels
+  <VExpansionPanels
     variant="accordion"
     multiple
   >
-    <v-expansion-panel
+    <VExpansionPanel
       v-for="(newspaper, index) in items"
       :key="'newspaper' + index"
     >
-      <v-expansion-panel-title>
+      <VExpansionPanelTitle>
         <span v-if="!newspaper.subTitle">
           <icons-newspaper-variant start />
           {{ newspaper.title }}
@@ -27,8 +27,8 @@ defineProps<{
           <icons-menu-right start />
           {{ newspaper.subTitle }}
         </span>
-      </v-expansion-panel-title>
-      <v-expansion-panel-text>
+      </VExpansionPanelTitle>
+      <VExpansionPanelText>
         <templates-list-newspaper-item
           :country="newspaper.country"
           :publisher="newspaper.publisher"
@@ -37,9 +37,9 @@ defineProps<{
           :location="newspaper.location"
           :note="newspaper.note"
         />
-      </v-expansion-panel-text>
-    </v-expansion-panel>
-  </v-expansion-panels>
+      </VExpansionPanelText>
+    </VExpansionPanel>
+  </VExpansionPanels>
 </template>
 
 <style scoped>

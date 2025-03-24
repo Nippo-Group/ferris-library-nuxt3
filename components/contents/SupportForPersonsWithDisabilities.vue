@@ -13,15 +13,15 @@ const files: File[] = [
 </script>
 
 <template>
-  <v-expansion-panels
+  <VExpansionPanels
     v-model="panelOpen"
     multiple
   >
-    <v-expansion-panel>
-      <v-expansion-panel-title class="text-h6">
+    <VExpansionPanel>
+      <VExpansionPanelTitle class="text-h6">
         図書館スタッフによる支援
-      </v-expansion-panel-title>
-      <v-expansion-panel-text>
+      </VExpansionPanelTitle>
+      <VExpansionPanelText>
         <div class="text-h6 pt-3">
           代行検索
         </div>
@@ -57,13 +57,13 @@ const files: File[] = [
           国立国会図書館が製作した視覚障害者等用のDAISYデータ等と、図書館等が製作し国立国会図書館が収集した視覚障害者等用データを、インターネット経由で提供します。このサービスが受けられるのは「図書館の障害者サービスにおける著作権法第37条第3項に基づく著作物の複製等に関するガイドライン」に定められた、視覚障害その他の理由で通常の印刷物の読書が困難な方です。
         </p>
         <templates-list-file :items="files" />
-      </v-expansion-panel-text>
-    </v-expansion-panel>
-    <v-expansion-panel>
-      <v-expansion-panel-title class="text-h6">
+      </VExpansionPanelText>
+    </VExpansionPanel>
+    <VExpansionPanel>
+      <VExpansionPanelTitle class="text-h6">
         施設設備
-      </v-expansion-panel-title>
-      <v-expansion-panel-text>
+      </VExpansionPanelTitle>
+      <VExpansionPanelText>
         <div class="text-h6 pt-3">
           拡大書架ガイド
         </div>
@@ -92,7 +92,7 @@ const files: File[] = [
         <p>
           エレベーター内のボタンに、点字を貼付しています。階段の手すりに、フロアを示す点字を貼付しています。
         </p>
-      </v-expansion-panel-text>
-    </v-expansion-panel>
-  </v-expansion-panels>
+      </VExpansionPanelText>
+    </VExpansionPanel>
+  </VExpansionPanels>
 </template>

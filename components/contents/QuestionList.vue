@@ -56,15 +56,15 @@ const faqList = ref([
 </script>
 
 <template>
-  <v-expansion-panels
+  <VExpansionPanels
     v-model="panel"
     multiple
   >
-    <v-expansion-panel
+    <VExpansionPanel
       v-for="(faq, index) in faqList"
       :key="index"
     >
-      <v-expansion-panel-title>
+      <VExpansionPanelTitle>
         <div class="d-flex align-center gap-4">
           <div class="pr-4">
             <icons-faq-question
@@ -76,10 +76,10 @@ const faqList = ref([
             {{ faq.question }}
           </div>
         </div>
-      </v-expansion-panel-title>
-      <v-expansion-panel-text>
+      </VExpansionPanelTitle>
+      <VExpansionPanelText>
         <elements-html-text-area :data="faq.answer" />
-      </v-expansion-panel-text>
-    </v-expansion-panel>
-  </v-expansion-panels>
+      </VExpansionPanelText>
+    </VExpansionPanel>
+  </VExpansionPanels>
 </template>

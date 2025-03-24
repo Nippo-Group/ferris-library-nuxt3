@@ -171,12 +171,12 @@ const { active, next, prev } = useVisibleSevral()
 </script>
 
 <template>
-  <v-expansion-panels v-model="active">
-    <v-expansion-panel
+  <VExpansionPanels v-model="active">
+    <VExpansionPanel
       v-for="(item, index) in contents"
       :key="'item-' + index"
     >
-      <v-expansion-panel-title>
+      <VExpansionPanelTitle>
         <div class="d-flex align-center ga-3">
           <VAvatar
             size="36"
@@ -188,8 +188,8 @@ const { active, next, prev } = useVisibleSevral()
             {{ item.subTitle }}
           </p>
         </div>
-      </v-expansion-panel-title>
-      <v-expansion-panel-text>
+      </VExpansionPanelTitle>
+      <VExpansionPanelText>
         <div class="d-flex flex-column ga-4">
           <templates-list-btn :list="item.list" />
           <VDivider />
@@ -210,7 +210,7 @@ const { active, next, prev } = useVisibleSevral()
             </VBtn>
           </div>
         </div>
-      </v-expansion-panel-text>
-    </v-expansion-panel>
-  </v-expansion-panels>
+      </VExpansionPanelText>
+    </VExpansionPanel>
+  </VExpansionPanels>
 </template>

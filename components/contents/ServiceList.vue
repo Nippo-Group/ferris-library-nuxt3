@@ -81,19 +81,19 @@ const { contents } = useLangSwitch(
 
 <template>
   <elements-header-lv2>{{ contents.title }}</elements-header-lv2>
-  <v-expansion-panels
+  <VExpansionPanels
     v-model="panel"
     variant="accordion"
     multiple
   >
-    <v-expansion-panel
+    <VExpansionPanel
       v-for="(item, i) in contents.items"
       :key="i"
     >
-      <v-expansion-panel-title>{{ item.title }}</v-expansion-panel-title>
-      <v-expansion-panel-text>{{ item.content }}</v-expansion-panel-text>
-    </v-expansion-panel>
-  </v-expansion-panels>
+      <VExpansionPanelTitle>{{ item.title }}</VExpansionPanelTitle>
+      <VExpansionPanelText>{{ item.content }}</VExpansionPanelText>
+    </VExpansionPanel>
+  </VExpansionPanels>
   <VAlert
     v-if="langState === 'ja'"
     type="warning"
