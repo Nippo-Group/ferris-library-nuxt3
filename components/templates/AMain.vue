@@ -5,7 +5,7 @@ const { loading } = useLoading()
 </script>
 
 <template>
-  <v-main>
+  <VMain>
     <VSheet max-width="960">
       <VSkeletonLoader
         :loading="loading"
@@ -14,5 +14,5 @@ const { loading } = useLoading()
         <slot />
       </VSkeletonLoader>
     </VSheet>
-  </v-main>
+  </VMain>
 </template>

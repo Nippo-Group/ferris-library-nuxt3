@@ -35,7 +35,7 @@ const { visible, inversion } = useVisible()
       <VSpacer />
       <VBtn :icon="useChevronIcon(visible)" />
     </VCardActions>
-    <v-expand-transition>
+    <VExpandTransition>
       <div v-show="visible">
         <VDivider />
         <VCardText>
@@ -69,7 +69,7 @@ const { visible, inversion } = useVisible()
           <elements-btn-my-library />
         </VCardActions>
       </div>
-    </v-expand-transition>
+    </VExpandTransition>
   </VCard>
 </template>
 

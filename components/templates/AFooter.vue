@@ -8,7 +8,7 @@ const period = new Date().getFullYear()
 </script>
 
 <template>
-  <v-footer color="primary">
+  <VFooter color="primary">
     <VCol
       class="bg-primary text-center text-white"
       cols="12"
@@ -16,5 +16,5 @@ const period = new Date().getFullYear()
       {{ period }} -
       <strong>{{ copyright }}</strong>
     </VCol>
-  </v-footer>
+  </VFooter>
 </template>
