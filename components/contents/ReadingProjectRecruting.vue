@@ -33,7 +33,7 @@ const items = [
     <VCardText>
       参加希望の方、もっと詳しく活動について知りたい方は、図書館カウンターもしくは下記メールアドレスまでお問い合わせください。
     </VCardText>
-    <elements-banner-email
+    <TemplatesBannerEmail
       address="r_library@ferris.ac.jp"
     />
   </templates-card-reading-project>

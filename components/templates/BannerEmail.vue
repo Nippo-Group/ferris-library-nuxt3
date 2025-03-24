@@ -1,8 +1,7 @@
 <script setup lang="ts">
-type State = {
+defineProps<{
   address: string
-}
-defineProps<State>()
+}>()
 
 const copyMessage = ref<string>('copy')
 const repeat = ref<number>()

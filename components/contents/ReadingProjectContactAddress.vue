@@ -9,7 +9,7 @@ const title = 'お問い合わせ'
         読書運動プロジェクトについてのお問い合わせは下記メールアドレスまでお願いいたします。
       </p>
     </VCardText>
-    <elements-banner-email
+    <TemplatesBannerEmail
       address="r_library@ferris.ac.jp"
     />
   </templates-card-reading-project>
