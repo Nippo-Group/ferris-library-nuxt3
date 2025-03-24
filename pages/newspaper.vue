@@ -7,14 +7,14 @@ useSeoMeta({
 </script>
 
 <template>
-  <v-container>
-    <v-row>
-      <v-col cols="12">
+  <VContainer>
+    <VRow>
+      <VCol cols="12">
         <elements-header-lv1>{{ title }}</elements-header-lv1>
-      </v-col>
-      <v-col cols="12">
+      </VCol>
+      <VCol cols="12">
         <contents-newspaper-list />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>

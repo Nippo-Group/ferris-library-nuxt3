@@ -8,9 +8,9 @@ defineProps<{
 
 <template>
   <v-item-group>
-    <v-container>
-      <v-row>
-        <v-col
+    <VContainer>
+      <VRow>
+        <VCol
           v-for="(img, i) in imgs"
           :key="i"
           cols="6"
@@ -25,8 +25,8 @@ defineProps<{
               :caption="img.caption"
             />
           </v-item>
-        </v-col>
-      </v-row>
-    </v-container>
+        </VCol>
+      </VRow>
+    </VContainer>
   </v-item-group>
 </template>

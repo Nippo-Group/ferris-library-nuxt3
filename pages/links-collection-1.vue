@@ -9,7 +9,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <v-container>
+  <VContainer>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
     <div>
       <p>
@@ -20,5 +20,5 @@ useSeoMeta({
       </p>
     </div>
     <contents-links-collection1-list />
-  </v-container>
+  </VContainer>
 </template>

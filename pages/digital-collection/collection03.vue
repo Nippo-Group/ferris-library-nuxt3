@@ -34,20 +34,20 @@ const breadcrumbs = [
 </script>
 
 <template>
-  <v-container>
-    <v-row>
-      <v-col cols="12">
+  <VContainer>
+    <VRow>
+      <VCol cols="12">
         <elements-nav-breadcrumbs
           :items="breadcrumbs"
         />
-      </v-col>
-      <v-col
+      </VCol>
+      <VCol
         cols="12"
         xl="6"
       >
         <v-card>
-          <v-row>
-            <v-col
+          <VRow>
+            <VCol
               cols="12"
               sm="8"
             >
@@ -76,8 +76,8 @@ const breadcrumbs = [
                   {{ caption }}
                 </p>
               </v-card-text>
-            </v-col>
-            <v-col
+            </VCol>
+            <VCol
               cols="12"
               sm="4"
             >
@@ -88,15 +88,15 @@ const breadcrumbs = [
                   class="bg-grey-lighten-3"
                 />
               </v-card-text>
-            </v-col>
-          </v-row>
+            </VCol>
+          </VRow>
         </v-card>
-      </v-col>
-      <v-col>
+      </VCol>
+      <VCol>
         <contents-collection-yamato-monogatari />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>
 
 <style scoped>

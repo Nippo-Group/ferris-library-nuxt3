@@ -204,7 +204,7 @@ onMounted(() => {
         </v-btn>
       </template>
     </v-tooltip>
-    <v-spacer />
+    <VSpacer />
     <v-tooltip
       text="Today"
       location="top"

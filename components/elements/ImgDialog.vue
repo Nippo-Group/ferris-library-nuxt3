@@ -41,7 +41,7 @@ const { visible, show, dismiss } = useVisible()
           <v-toolbar-title v-if="caption">
             {{ caption }}
           </v-toolbar-title>
-          <v-spacer />
+          <VSpacer />
           <v-btn
             icon
             color="black"

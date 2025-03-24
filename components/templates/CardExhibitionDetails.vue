@@ -53,7 +53,7 @@ defineExpose({
       </v-card-text>
       <v-divider />
       <v-card-actions>
-        <v-spacer />
+        <VSpacer />
         <v-btn
           color="grey-darken-1"
           variant="text"

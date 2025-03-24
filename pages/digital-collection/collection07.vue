@@ -28,14 +28,14 @@ const breadcrumbs = [
 </script>
 
 <template>
-  <v-container>
-    <v-row dense>
-      <v-col cols="12">
+  <VContainer>
+    <VRow dense>
+      <VCol cols="12">
         <elements-nav-breadcrumbs
           :items="breadcrumbs"
         />
-      </v-col>
-      <v-col cols="12">
+      </VCol>
+      <VCol cols="12">
         <v-card>
           <v-card-title>
             <img
@@ -44,9 +44,9 @@ const breadcrumbs = [
               class="titleLogo"
             >
           </v-card-title>
-          <v-container>
-            <v-row>
-              <v-col
+          <VContainer>
+            <VRow>
+              <VCol
                 cols="12"
                 sm="8"
               >
@@ -57,8 +57,8 @@ const breadcrumbs = [
                   <p>参考文献</p>
                   <elements-html-text-area :data="commentary2" />
                 </v-card-text>
-              </v-col>
-              <v-col
+              </VCol>
+              <VCol
                 cols="12"
                 sm="4"
               >
@@ -69,18 +69,18 @@ const breadcrumbs = [
                     class="bg-grey-lighten-3"
                   />
                 </v-card-text>
-              </v-col>
-            </v-row>
-          </v-container>
+              </VCol>
+            </VRow>
+          </VContainer>
         </v-card>
-      </v-col>
-    </v-row>
-    <v-row if="images">
-      <v-col>
+      </VCol>
+    </VRow>
+    <VRow if="images">
+      <VCol>
         <contents-collection-ehagaki />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>
 
 <style scoped>

@@ -8,33 +8,33 @@ useSeoMeta({
 </script>
 
 <template>
-  <v-container>
+  <VContainer>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
-    <v-row>
-      <v-col cols="12">
+    <VRow>
+      <VCol cols="12">
         <contents-service-list />
-      </v-col>
-      <v-col
+      </VCol>
+      <VCol
         cols="12"
         class="text-center"
       >
         <elements-btn-my-library />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12">
+      </VCol>
+    </VRow>
+    <VRow>
+      <VCol cols="12">
         <contents-lending-number />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12">
+      </VCol>
+    </VRow>
+    <VRow>
+      <VCol cols="12">
         <contents-lending-period />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12">
+      </VCol>
+    </VRow>
+    <VRow>
+      <VCol cols="12">
         <contents-lending-notes />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>

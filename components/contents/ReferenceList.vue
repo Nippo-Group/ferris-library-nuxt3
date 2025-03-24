@@ -1,17 +1,17 @@
 <template>
-  <v-row>
-    <v-col cols="12">
+  <VRow>
+    <VCol cols="12">
       <elements-header-lv2>サービス一覧</elements-header-lv2>
-    </v-col>
-    <v-col cols="12">
+    </VCol>
+    <VCol cols="12">
       <v-card height="100%">
         <v-card-title> 事項調査 </v-card-title>
         <v-card-text>
           調べものをしていてどの資料を見れば良いのか分からないとき、資料の探し方や、テーマにあったデータベース、検索ツールなどをご紹介します。学部生はMyLibraryからも調査の依頼ができます。
         </v-card-text>
       </v-card>
-    </v-col>
-    <v-col cols="12">
+    </VCol>
+    <VCol cols="12">
       <v-card height="100%">
         <v-card-title> 所蔵調査 </v-card-title>
         <v-card-text>
@@ -86,8 +86,8 @@
           </ContainersStack>
         </v-card-actions>
       </v-card>
-    </v-col>
-    <v-col cols="12">
+    </VCol>
+    <VCol cols="12">
       <v-card height="100%">
         <v-card-title> 紹介状 </v-card-title>
         <v-card-text>
@@ -175,8 +175,8 @@
           </ContainersStack>
         </v-card-actions>
       </v-card>
-    </v-col>
-    <v-col cols="12">
+    </VCol>
+    <VCol cols="12">
       <v-card height="100%">
         <v-card-title> 共通閲覧証 </v-card-title>
         <v-card-text>
@@ -228,8 +228,8 @@
           </ContainersStack>
         </v-card-actions>
       </v-card>
-    </v-col>
-    <v-col cols="12">
+    </VCol>
+    <VCol cols="12">
       <v-card height="100%">
         <v-card-title>
           横浜市内コンソーシアム加盟大学の図書館を利用する
@@ -245,8 +245,8 @@
           />
         </v-card-actions>
       </v-card>
-    </v-col>
-    <v-col cols="12">
+    </VCol>
+    <VCol cols="12">
       <v-card height="100%">
         <v-card-title> ツアー・ガイダンス </v-card-title>
         <v-card-text>
@@ -259,6 +259,6 @@
           />
         </v-card-actions>
       </v-card>
-    </v-col>
-  </v-row>
+    </VCol>
+  </VRow>
 </template>

@@ -14,9 +14,9 @@ const movie = [
 
 <template>
   <templates-card-reading-project :title="title">
-    <v-container>
-      <v-row dense>
-        <v-col
+    <VContainer>
+      <VRow dense>
+        <VCol
           v-for="(item, index) in movie"
           :key="`video-${index}`"
           cols="12"
@@ -26,8 +26,8 @@ const movie = [
             :title="item.title"
             :src="item.src"
           />
-        </v-col>
-      </v-row>
-    </v-container>
+        </VCol>
+      </VRow>
+    </VContainer>
   </templates-card-reading-project>
 </template>

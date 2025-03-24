@@ -19,13 +19,13 @@ defineProps<{
       aspect-ratio="1"
     >
       <template #placeholder>
-        <v-row
+        <VRow
           class="fill-height ma-0"
           align="center"
           justify="center"
         >
           <v-progress-circular indeterminate />
-        </v-row>
+        </VRow>
       </template>
     </v-img>
     <v-card-text v-if="$slots.append">

@@ -9,12 +9,12 @@ const period = new Date().getFullYear()
 
 <template>
   <v-footer color="primary">
-    <v-col
+    <VCol
       class="bg-primary text-center text-white"
       cols="12"
     >
       {{ period }} -
       <strong>{{ copyright }}</strong>
-    </v-col>
+    </VCol>
   </v-footer>
 </template>

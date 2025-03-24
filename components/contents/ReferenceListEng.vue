@@ -82,8 +82,8 @@ const items = [
         item.title
       }}
     </elements-header-lv2>
-    <v-row>
-      <v-col
+    <VRow>
+      <VCol
         v-for="(content, j) in item.contents"
         :key="'content' + j"
         cols="12"
@@ -103,7 +103,7 @@ const items = [
             {{ content.text }}
           </v-card-text>
         </v-card>
-      </v-col>
-    </v-row>
+      </VCol>
+    </VRow>
   </template>
 </template>

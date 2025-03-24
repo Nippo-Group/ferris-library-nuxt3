@@ -9,15 +9,15 @@ useSeoMeta({
 </script>
 
 <template>
-  <v-container>
+  <VContainer>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
     <p>
       {{ description }}
     </p>
-    <v-row>
-      <v-col cols="12">
+    <VRow>
+      <VCol cols="12">
         <contents-carrier-list />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>

@@ -9,10 +9,10 @@ useSeoMeta({
 </script>
 
 <template>
-  <v-container>
+  <VContainer>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
-    <v-row>
-      <v-col
+    <VRow>
+      <VCol
         cols="12"
         class="recommend-info"
       >
@@ -39,14 +39,14 @@ useSeoMeta({
           </v-chip>2週間
         </p>
         <p>＊所属学科以外の「学科推奨図書」も借りられます。</p>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12">
+      </VCol>
+    </VRow>
+    <VRow>
+      <VCol cols="12">
         <contents-recommend-list />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>
 
 <style scoped lang="scss">

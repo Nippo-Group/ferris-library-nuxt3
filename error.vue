@@ -3,7 +3,7 @@ const error = useError()
 </script>
 
 <template>
-  <v-container>
+  <VContainer>
     <elements-header-lv1>
       {{ error?.message }}
     </elements-header-lv1>
@@ -18,5 +18,5 @@ const error = useError()
       to="/english"
       class="mb-2"
     />
-  </v-container>
+  </VContainer>
 </template>

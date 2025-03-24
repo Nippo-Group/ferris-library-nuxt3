@@ -24,15 +24,15 @@ const { show } = useConfirmDL()
 
 <template>
   <templates-card-reading-project :title="title">
-    <v-container>
-      <v-row dense>
-        <v-col
+    <VContainer>
+      <VRow dense>
+        <VCol
           cols="12"
           md="6"
         >
           <elements-numbered-list :items="mainActivity" />
-        </v-col>
-        <v-col
+        </VCol>
+        <VCol
           v-for="(document, index) in documents"
           :key="`document${index}`"
           cols="12"
@@ -54,8 +54,8 @@ const { show } = useConfirmDL()
             {{ document.name }}
             <icons-file-pdf end />
           </v-btn>
-        </v-col>
-      </v-row>
-    </v-container>
+        </VCol>
+      </VRow>
+    </VContainer>
   </templates-card-reading-project>
 </template>

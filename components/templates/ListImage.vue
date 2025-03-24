@@ -27,9 +27,9 @@ const lightboxShow = (index: number): void => {
 </script>
 
 <template>
-  <v-container>
-    <v-row dense>
-      <v-col
+  <VContainer>
+    <VRow dense>
+      <VCol
         v-for="(image, index) in images"
         :key="index"
         cols="6"
@@ -64,9 +64,9 @@ const lightboxShow = (index: number): void => {
             {{ image.append }}
           </template>
         </templates-card-image>
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 
   <templates-the-lightbox
     ref="lightboxComponent"

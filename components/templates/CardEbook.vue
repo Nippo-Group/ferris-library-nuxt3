@@ -19,9 +19,9 @@ defineProps<{
 
 <template>
   <v-card>
-    <v-container>
-      <v-row dense>
-        <v-col
+    <VContainer>
+      <VRow dense>
+        <VCol
           cols="12"
           sm="4"
         >
@@ -46,8 +46,8 @@ defineProps<{
               {{ cat }}
             </v-chip>
           </v-card-text>
-        </v-col>
-        <v-col
+        </VCol>
+        <VCol
           cols="12"
           sm="8"
         >
@@ -111,9 +111,9 @@ defineProps<{
               </template>
             </ContainersStack>
           </v-card-actions>
-        </v-col>
-      </v-row>
-    </v-container>
+        </VCol>
+      </VRow>
+    </VContainer>
   </v-card>
 </template>
 

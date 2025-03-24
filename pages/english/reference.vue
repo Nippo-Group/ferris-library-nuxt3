@@ -8,13 +8,13 @@ definePageMeta({ layout: 'english' })
 </script>
 
 <template>
-  <v-container>
+  <VContainer>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
 
-    <v-row>
-      <v-col cols="12">
+    <VRow>
+      <VCol cols="12">
         <contents-reference-list-eng />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>

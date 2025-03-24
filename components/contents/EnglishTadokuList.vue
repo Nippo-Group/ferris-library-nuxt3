@@ -11,9 +11,9 @@ const { show } = useConfirmDL()
 </script>
 
 <template>
-  <v-container>
-    <v-row>
-      <v-col
+  <VContainer>
+    <VRow>
+      <VCol
         cols="12"
         lg="6"
       >
@@ -70,8 +70,8 @@ const { show } = useConfirmDL()
             </v-btn>
           </v-card-actions>
         </v-card>
-      </v-col>
-      <v-col
+      </VCol>
+      <VCol
         cols="12"
         lg="6"
       >
@@ -100,8 +100,8 @@ const { show } = useConfirmDL()
             />
           </v-card-actions>
         </v-card>
-      </v-col>
-      <v-col
+      </VCol>
+      <VCol
         cols="12"
         lg="6"
       >
@@ -186,8 +186,8 @@ const { show } = useConfirmDL()
             </v-btn>
           </v-card-actions>
         </v-card>
-      </v-col>
-      <v-col
+      </VCol>
+      <VCol
         cols="12"
         lg="6"
       >
@@ -208,8 +208,8 @@ const { show } = useConfirmDL()
             />
           </v-card-text>
         </v-card>
-      </v-col>
-      <v-col
+      </VCol>
+      <VCol
         cols="12"
         lg="6"
       >
@@ -235,7 +235,7 @@ const { show } = useConfirmDL()
             </v-btn>
           </v-card-actions>
         </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>

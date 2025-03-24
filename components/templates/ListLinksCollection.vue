@@ -15,8 +15,8 @@ const props = defineProps<State>()
 </script>
 
 <template>
-  <v-row>
-    <v-col
+  <VRow>
+    <VCol
       v-for="(item, index) in props.items"
       v-show="item.category === props.category"
       :key="index"
@@ -48,8 +48,8 @@ const props = defineProps<State>()
           {{ item.text }}
         </v-card-text>
       </v-card>
-    </v-col>
-  </v-row>
+    </VCol>
+  </VRow>
 </template>
 
 <style scoped>

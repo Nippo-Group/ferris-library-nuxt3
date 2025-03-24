@@ -7,25 +7,25 @@ useSeoMeta({
 </script>
 
 <template>
-  <v-container>
+  <VContainer>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
-    <v-row>
-      <v-col cols="12">
+    <VRow>
+      <VCol cols="12">
         <p>図書館では、障がいのある方に以下の支援を行っています。</p>
-      </v-col>
-      <v-col cols="12">
+      </VCol>
+      <VCol cols="12">
         <contents-support-for-persons-with-disabilities />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12">
+      </VCol>
+    </VRow>
+    <VRow>
+      <VCol cols="12">
         <v-alert
           density="compact"
           type="success"
         >
           上記以外にもサポートが必要でしたら、図書館スタッフまでお申し出ください。できる限りご要望にお応えします。
         </v-alert>
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>

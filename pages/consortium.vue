@@ -9,27 +9,27 @@ useSeoMeta({
 </script>
 
 <template>
-  <v-container>
+  <VContainer>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
-    <v-row>
-      <v-col cols="12">
+    <VRow>
+      <VCol cols="12">
         <p>
           {{ description }}
         </p>
         <p class="mt-4">
           最新の情報は各館のホームページなどでご確認ください。
         </p>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12">
+      </VCol>
+    </VRow>
+    <VRow>
+      <VCol cols="12">
         <contents-consortium-list />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12">
+      </VCol>
+    </VRow>
+    <VRow>
+      <VCol cols="12">
         <contents-consortium-notes />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>

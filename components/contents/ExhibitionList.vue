@@ -55,15 +55,15 @@ watchEffect(() => {
 </script>
 
 <template>
-  <v-container>
-    <v-row dense>
-      <v-col cols="12">
+  <VContainer>
+    <VRow dense>
+      <VCol cols="12">
         <elements-selection-year
           v-model="yearValue"
           :items="yearItems"
         />
-      </v-col>
-      <v-col cols="12">
+      </VCol>
+      <VCol cols="12">
         <v-toolbar
           :border="true"
           color="white"
@@ -77,7 +77,7 @@ watchEffect(() => {
             label="Keywords"
             clearable
           />
-          <v-spacer />
+          <VSpacer />
           <v-btn
             icon
             @click="reverse"
@@ -85,11 +85,11 @@ watchEffect(() => {
             <icons-sort-defult />
           </v-btn>
         </v-toolbar>
-      </v-col>
-    </v-row>
-    <v-row v-if="exhibitionList">
+      </VCol>
+    </VRow>
+    <VRow v-if="exhibitionList">
       <v-slide-y-transition group>
-        <v-col
+        <VCol
           v-for="item in exhibitionList"
           v-show="filter(item.title + item.content, item.date)"
           :key="item.id"
@@ -101,19 +101,19 @@ watchEffect(() => {
             :item="item"
             @click="openDitails(item)"
           />
-        </v-col>
+        </VCol>
       </v-slide-y-transition>
-    </v-row>
-    <v-row v-else>
-      <v-col
+    </VRow>
+    <VRow v-else>
+      <VCol
         cols="12"
         md="6"
         lg="4"
       >
         <v-card title="情報がありません" />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
   <templates-card-exhibition-details
     ref="childRef"
     :eyecatch="eyecatch"

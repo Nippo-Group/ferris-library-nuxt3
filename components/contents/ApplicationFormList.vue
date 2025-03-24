@@ -108,9 +108,9 @@ const items: Item[] = [
 </script>
 
 <template>
-  <v-container>
-    <v-row>
-      <v-col
+  <VContainer>
+    <VRow>
+      <VCol
         v-for="(item, index) in items"
         :key="index"
         cols="12"
@@ -130,7 +130,7 @@ const items: Item[] = [
           </v-card-text>
           <templates-list-file :items="item.files" />
         </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>

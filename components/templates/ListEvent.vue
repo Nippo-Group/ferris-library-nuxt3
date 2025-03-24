@@ -12,12 +12,12 @@ const { ja, simple } = useDateFormat(props.date)
 </script>
 
 <template>
-  <v-container class="bg-grey-lighten-3">
-    <v-row
+  <VContainer class="bg-grey-lighten-3">
+    <VRow
       justify="center"
       dense
     >
-      <v-col
+      <VCol
         cols="12"
         md="4"
       >
@@ -46,8 +46,8 @@ const { ja, simple } = useDateFormat(props.date)
             />
           </v-card-actions>
         </v-card>
-      </v-col>
-      <v-col
+      </VCol>
+      <VCol
         cols="12"
         sm="6"
         md="4"
@@ -73,8 +73,8 @@ const { ja, simple } = useDateFormat(props.date)
             </ul>
           </v-card-text>
         </v-card>
-      </v-col>
-      <v-col
+      </VCol>
+      <VCol
         cols="12"
         sm="6"
         md="4"
@@ -100,9 +100,9 @@ const { ja, simple } = useDateFormat(props.date)
             </ul>
           </v-card-text>
         </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>
 
 <style scoped>

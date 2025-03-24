@@ -156,15 +156,15 @@ const items: Item[] = [
 </script>
 
 <template>
-  <v-row
+  <VRow
     v-for="(item, i) in items"
     :key="i"
   >
-    <v-col cols="12">
+    <VCol cols="12">
       <v-card>
         <v-card-title>{{ item.category }}</v-card-title>
         <templates-list-file :items="item.contents" />
       </v-card>
-    </v-col>
-  </v-row>
+    </VCol>
+  </VRow>
 </template>

@@ -8,10 +8,10 @@ definePageMeta({ layout: 'english' })
 </script>
 
 <template>
-  <v-container>
+  <VContainer>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
-    <v-row>
+    <VRow>
       <contents-information-search-links />
-    </v-row>
-  </v-container>
+    </VRow>
+  </VContainer>
 </template>

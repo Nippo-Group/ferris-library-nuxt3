@@ -8,21 +8,21 @@ definePageMeta({ layout: 'english' })
 </script>
 
 <template>
-  <v-container>
+  <VContainer>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
-    <v-row>
-      <v-col
+    <VRow>
+      <VCol
         cols="12"
         lg="6"
       >
         <contents-contact-ryokuen />
-      </v-col>
-      <v-col
+      </VCol>
+      <VCol
         cols="12"
         lg="6"
       >
         <contents-contact-yamate />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>

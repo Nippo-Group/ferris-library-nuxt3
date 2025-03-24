@@ -8,21 +8,21 @@ useSeoMeta({
 </script>
 
 <template>
-  <v-container>
+  <VContainer>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
-    <v-row dense>
-      <v-col
+    <VRow dense>
+      <VCol
         cols="12"
         md="6"
       >
         <contents-learning-commons />
-      </v-col>
-      <v-col
+      </VCol>
+      <VCol
         cols="12"
         md="6"
       >
         <contents-piano-playing />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>

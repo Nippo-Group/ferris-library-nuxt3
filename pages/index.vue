@@ -1,40 +1,40 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col
+  <VContainer>
+    <VRow>
+      <VCol
         cols="12"
         tag="section"
       >
         <contents-slide-show />
-      </v-col>
-      <v-col
+      </VCol>
+      <VCol
         cols="12"
         tag="section"
       >
         <contents-todays-events />
-      </v-col>
-      <v-col
+      </VCol>
+      <VCol
         cols="12"
         tag="section"
       >
         <contents-pick-out />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col
+      </VCol>
+    </VRow>
+    <VRow>
+      <VCol
         cols="12"
         lg="6"
         tag="section"
       >
         <contents-latest-news />
-      </v-col>
-      <v-col
+      </VCol>
+      <VCol
         cols="12"
         lg="6"
         tag="section"
       >
         <contents-search-opac />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>

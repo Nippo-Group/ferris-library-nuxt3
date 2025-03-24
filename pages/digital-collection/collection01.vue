@@ -39,18 +39,18 @@ const breadcrumbs = [
 </script>
 
 <template>
-  <v-container>
-    <v-row dense>
-      <v-col cols="12">
+  <VContainer>
+    <VRow dense>
+      <VCol cols="12">
         <elements-nav-breadcrumbs
           :items="breadcrumbs"
         />
-      </v-col>
-      <v-col cols="12">
+      </VCol>
+      <VCol cols="12">
         <v-card class="d-md-flex flex-no-wrap justify-space-between">
-          <v-container>
-            <v-row>
-              <v-col
+          <VContainer>
+            <VRow>
+              <VCol
                 cols="12"
                 sm="8"
               >
@@ -71,8 +71,8 @@ const breadcrumbs = [
                     {{ text }}
                   </p>
                 </v-card-text>
-              </v-col>
-              <v-col
+              </VCol>
+              <VCol
                 cols="12"
                 sm="4"
               >
@@ -91,12 +91,12 @@ const breadcrumbs = [
                     {{ caption }}
                   </p>
                 </v-card-text>
-              </v-col>
-            </v-row>
-          </v-container>
+              </VCol>
+            </VRow>
+          </VContainer>
         </v-card>
-      </v-col>
-      <v-col cols="12">
+      </VCol>
+      <VCol cols="12">
         <v-alert
           variant="outlined"
           type="success"
@@ -109,12 +109,12 @@ const breadcrumbs = [
             {{ text }}
           </p>
         </v-alert>
-      </v-col>
-      <v-col>
+      </VCol>
+      <VCol>
         <contents-collection-shin-sanjurokkasen />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>
 
 <style scoped>

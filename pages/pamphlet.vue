@@ -7,13 +7,13 @@ useSeoMeta({
 </script>
 
 <template>
-  <v-container>
+  <VContainer>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
     <p>在学生対象のパンフレットです</p>
-    <v-row>
-      <v-col cols="12">
+    <VRow>
+      <VCol cols="12">
         <contents-student-pamphlet />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>

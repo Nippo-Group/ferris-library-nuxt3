@@ -5,8 +5,8 @@ const { ebooks, length, lengthAll } = useEbookList()
 </script>
 
 <template>
-  <v-row dense>
-    <v-col
+  <VRow dense>
+    <VCol
       cols="12"
       xl="8"
     >
@@ -14,11 +14,11 @@ const { ebooks, length, lengthAll } = useEbookList()
         <span v-if="!length"> 該当する項目はみつかりませんでした </span>
         <span v-else>{{ length }}/{{ lengthAll }}件の項目を表示しています</span>
       </p>
-    </v-col>
-  </v-row>
-  <v-row>
+    </VCol>
+  </VRow>
+  <VRow>
     <v-slide-x-transition group>
-      <v-col
+      <VCol
         v-for="(item, i) in ebooks"
         :key="i"
         cols="12"
@@ -36,9 +36,9 @@ const { ebooks, length, lengthAll } = useEbookList()
           :links="item.links"
           :documents="item.documents"
         />
-      </v-col>
+      </VCol>
     </v-slide-x-transition>
-  </v-row>
+  </VRow>
 </template>
 
 <style scoped>

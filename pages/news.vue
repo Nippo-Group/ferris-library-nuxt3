@@ -4,12 +4,12 @@ useSeoMeta({ title: title.value, description: '図書館のニュース一覧で
 </script>
 
 <template>
-  <v-container>
+  <VContainer>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
-    <v-row>
-      <v-col cols="12">
+    <VRow>
+      <VCol cols="12">
         <contents-all-news />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>

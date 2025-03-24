@@ -13,17 +13,17 @@ const images = [imgPlanning01, imgPlanning02]
     <v-card-text>
       <elements-html-text-area :data="content" />
     </v-card-text>
-    <v-container>
-      <v-row dense>
-        <v-col
+    <VContainer>
+      <VRow dense>
+        <VCol
           v-for="(image, imgIndex) in images"
           :key="imgIndex"
           cols="12"
           sm="6"
         >
           <v-img :src="image" />
-        </v-col>
-      </v-row>
-    </v-container>
+        </VCol>
+      </VRow>
+    </VContainer>
   </templates-card-reading-project>
 </template>

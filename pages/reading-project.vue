@@ -15,80 +15,80 @@ const isWhat
 
 <template>
   <v-sheet color="grey-lighten-3">
-    <v-container>
-      <v-row>
-        <v-col cols="12">
+    <VContainer>
+      <VRow>
+        <VCol cols="12">
           <elements-header-lv1-bg
             :title="['読書運動', 'プロジェクト']"
             :image="titleImage"
           />
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12">
+        </VCol>
+      </VRow>
+      <VRow>
+        <VCol cols="12">
           <elements-header-lv2-bg
             title="「読書運動プロジェクト」とは？"
             :lead="isWhat"
           />
-        </v-col>
-        <v-col cols="12">
+        </VCol>
+        <VCol cols="12">
           <contents-reading-project-main-activity />
-        </v-col>
-        <v-col
+        </VCol>
+        <VCol
           cols="12"
           lg="6"
         >
           <contents-reading-project-recruting />
-        </v-col>
-        <v-col
+        </VCol>
+        <VCol
           cols="12"
           lg="6"
         >
           <contents-reading-project-notice />
-        </v-col>
-        <v-col cols="12">
+        </VCol>
+        <VCol cols="12">
           <contents-reading-project-news />
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12">
+        </VCol>
+      </VRow>
+      <VRow>
+        <VCol cols="12">
           <elements-header-lv2-bg
             title="活動紹介"
             :lead="description"
           />
-        </v-col>
-        <v-col
+        </VCol>
+        <VCol
           cols="12"
           md="6"
         >
           <contents-reading-project-team-planning />
-        </v-col>
-        <v-col
+        </VCol>
+        <VCol
           cols="12"
           md="6"
         >
           <contents-reading-project-team-recitation />
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12">
+        </VCol>
+      </VRow>
+      <VRow>
+        <VCol cols="12">
           <elements-header-lv2-bg
             title="活動拠点～附属図書館～"
           />
-        </v-col>
-        <v-col cols="12">
+        </VCol>
+        <VCol cols="12">
           <contents-reading-project-activity-base />
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12">
+        </VCol>
+      </VRow>
+      <VRow>
+        <VCol cols="12">
           <elements-header-lv2-bg title="お問い合わせ" />
-        </v-col>
-        <v-col cols="12">
+        </VCol>
+        <VCol cols="12">
           <contents-reading-project-contact-address />
-        </v-col>
-      </v-row>
-    </v-container>
+        </VCol>
+      </VRow>
+    </VContainer>
   </v-sheet>
 </template>
 

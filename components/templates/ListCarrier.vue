@@ -7,8 +7,8 @@ const props = defineProps<{
 </script>
 
 <template>
-  <v-row dense>
-    <v-col
+  <VRow dense>
+    <VCol
       v-for="(item, i) in props.items"
       :key="'item' + i"
       cols="12"
@@ -65,6 +65,6 @@ const props = defineProps<{
           </v-card-actions>
         </div>
       </v-card>
-    </v-col>
-  </v-row>
+    </VCol>
+  </VRow>
 </template>

@@ -26,14 +26,14 @@ const breadcrumbs = [
 </script>
 
 <template>
-  <v-container>
-    <v-row dense>
-      <v-col cols="12">
+  <VContainer>
+    <VRow dense>
+      <VCol cols="12">
         <elements-nav-breadcrumbs
           :items="breadcrumbs"
         />
-      </v-col>
-      <v-col cols="12">
+      </VCol>
+      <VCol cols="12">
         <v-card>
           <v-card-title>
             <img
@@ -50,12 +50,12 @@ const breadcrumbs = [
             {{ commentary2 }}
           </v-card-text>
         </v-card>
-      </v-col>
-      <v-col>
+      </VCol>
+      <VCol>
         <contents-collection-beatrix-potter />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>
 
 <style scoped>

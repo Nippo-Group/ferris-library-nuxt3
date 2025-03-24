@@ -8,13 +8,13 @@ useSeoMeta({
 </script>
 
 <template>
-  <v-container>
+  <VContainer>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
-    <v-row>
-      <v-col cols="12">
+    <VRow>
+      <VCol cols="12">
         <contents-ebook-toolbar />
-      </v-col>
-    </v-row>
+      </VCol>
+    </VRow>
     <contents-ebook-list />
-  </v-container>
+  </VContainer>
 </template>

@@ -26,7 +26,7 @@ const tab = ref(null)
       >
         <elements-header-lv2>今どこマップ</elements-header-lv2>
         <p>パワーポイントのファイルをダウンロードしますか？</p>
-        <v-row
+        <VRow
           justify="space-around"
           class="mt-4"
         >
@@ -37,7 +37,7 @@ const tab = ref(null)
             ダウンロード
             <icons-download-defult />
           </v-btn>
-        </v-row>
+        </VRow>
       </v-sheet>
     </v-window-item>
     <v-window-item>

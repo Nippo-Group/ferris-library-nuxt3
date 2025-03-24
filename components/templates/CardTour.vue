@@ -32,7 +32,7 @@ const { visible, inversion } = useVisible()
           langState === "en" ? "Show more" : "詳細を見る"
         }}
       </v-btn>
-      <v-spacer />
+      <VSpacer />
       <v-btn :icon="useChevronIcon(visible)" />
     </v-card-actions>
     <v-expand-transition>

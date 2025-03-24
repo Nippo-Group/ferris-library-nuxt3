@@ -131,9 +131,9 @@ const items = [
 </script>
 
 <template>
-  <v-container>
-    <v-row>
-      <v-col
+  <VContainer>
+    <VRow>
+      <VCol
         v-for="(item, i) in items"
         :key="i"
         cols="12"
@@ -195,9 +195,9 @@ const items = [
             />
           </v-card-actions>
         </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>
 
 <style scoped>

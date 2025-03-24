@@ -39,14 +39,14 @@ const breadcrumbs = [
 </script>
 
 <template>
-  <v-container>
-    <v-row dense>
-      <v-col cols="12">
+  <VContainer>
+    <VRow dense>
+      <VCol cols="12">
         <elements-nav-breadcrumbs
           :items="breadcrumbs"
         />
-      </v-col>
-      <v-col cols="12">
+      </VCol>
+      <VCol cols="12">
         <v-card>
           <v-card-title>
             <img
@@ -55,8 +55,8 @@ const breadcrumbs = [
               class="titleLogo"
             >
           </v-card-title>
-          <v-row>
-            <v-col
+          <VRow>
+            <VCol
               cols="12"
               sm="8"
             >
@@ -69,8 +69,8 @@ const breadcrumbs = [
                   {{ text }}
                 </p>
               </v-card-text>
-            </v-col>
-            <v-col
+            </VCol>
+            <VCol
               cols="12"
               sm="4"
             >
@@ -88,8 +88,8 @@ const breadcrumbs = [
                   {{ caption }}
                 </p>
               </v-card-text>
-            </v-col>
-          </v-row>
+            </VCol>
+          </VRow>
           <v-card-actions>
             <elements-btn-dialog-default title="解説">
               <template #contents>
@@ -104,12 +104,12 @@ const breadcrumbs = [
             </elements-btn-dialog-default>
           </v-card-actions>
         </v-card>
-      </v-col>
-      <v-col>
+      </VCol>
+      <VCol>
         <contents-collection-taketori-monogatari />
-      </v-col>
-    </v-row>
-  </v-container>
+      </VCol>
+    </VRow>
+  </VContainer>
 </template>
 
 <style scoped>
