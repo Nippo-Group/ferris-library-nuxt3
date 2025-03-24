@@ -16,7 +16,7 @@ const quantity = [
 
 <template>
   <PartsTitleLv2>貸出冊数</PartsTitleLv2>
-  <elements-responsive-table
+  <TemplatesResponsiveTable
     :items-array="quantity"
     :headers="headers"
   />
