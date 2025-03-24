@@ -19,7 +19,7 @@
         </VCardText>
         <VCardActions class="overflow-x-auto">
           <ContainersStack>
-            <elements-btn-dialog-default title="文献複写">
+            <TemplatesDialogDefault title="文献複写">
               <template #contents>
                 <div class="text-h6">
                   サービス内容
@@ -43,9 +43,9 @@
               <template #actions>
                 <elements-btn-my-library />
               </template>
-            </elements-btn-dialog-default>
+            </TemplatesDialogDefault>
 
-            <elements-btn-dialog-default title="現物貸借">
+            <TemplatesDialogDefault title="現物貸借">
               <template #contents>
                 <div class="text-h6 pt-6">
                   サービス内容
@@ -80,7 +80,7 @@
               <template #actions>
                 <elements-btn-my-library />
               </template>
-            </elements-btn-dialog-default>
+            </TemplatesDialogDefault>
 
             <elements-btn-my-library />
           </ContainersStack>
@@ -95,7 +95,7 @@
         </VCardText>
         <VCardActions class="overflow-x-auto">
           <ContainersStack>
-            <elements-btn-dialog-default title="大学図書館">
+            <TemplatesDialogDefault title="大学図書館">
               <template #contents>
                 <div class="text-h6 pt-6">
                   注意事項
@@ -114,9 +114,9 @@
                   url="http://ci.nii.ac.jp/books/"
                 />
               </template>
-            </elements-btn-dialog-default>
+            </TemplatesDialogDefault>
 
-            <elements-btn-dialog-default title="横浜市立図書館">
+            <TemplatesDialogDefault title="横浜市立図書館">
               <template #contents>
                 <div class="text-h6 pt-6">
                   注意事項
@@ -135,9 +135,9 @@
                   url="https://opac.lib.city.yokohama.lg.jp/opac/"
                 />
               </template>
-            </elements-btn-dialog-default>
+            </TemplatesDialogDefault>
 
-            <elements-btn-dialog-default title="神奈川県立図書館">
+            <TemplatesDialogDefault title="神奈川県立図書館">
               <template #contents>
                 <div class="text-h6 pt-6">
                   注意事項
@@ -153,9 +153,9 @@
                   url="https://www.klnet.pref.kanagawa.jp/"
                 />
               </template>
-            </elements-btn-dialog-default>
+            </TemplatesDialogDefault>
 
-            <elements-btn-dialog-default title="国立国会図書館">
+            <TemplatesDialogDefault title="国立国会図書館">
               <template #contents>
                 <div class="text-h6 pt-6">
                   注意事項
@@ -171,7 +171,7 @@
                   url="http://iss.ndl.go.jp/"
                 />
               </template>
-            </elements-btn-dialog-default>
+            </TemplatesDialogDefault>
           </ContainersStack>
         </VCardActions>
       </VCard>
@@ -188,7 +188,7 @@
         </VCardText>
         <VCardActions class="overflow-x-auto">
           <ContainersStack>
-            <elements-btn-dialog-default title="神奈川県内大学図書館共通閲覧証">
+            <TemplatesDialogDefault title="神奈川県内大学図書館共通閲覧証">
               <template #contents>
                 <div class="text-h6 pt-6">
                   対象館
@@ -205,9 +205,9 @@
                   url="http://www.kanagawa-la.jp/link/"
                 />
               </template>
-            </elements-btn-dialog-default>
+            </TemplatesDialogDefault>
 
-            <elements-btn-dialog-default title="音楽図書館協議会共通閲覧証">
+            <TemplatesDialogDefault title="音楽図書館協議会共通閲覧証">
               <template #contents>
                 <div class="text-h6 pt-6">
                   対象館
@@ -224,7 +224,7 @@
                   url="https://mlaj.org/"
                 />
               </template>
-            </elements-btn-dialog-default>
+            </TemplatesDialogDefault>
           </ContainersStack>
         </VCardActions>
       </VCard>

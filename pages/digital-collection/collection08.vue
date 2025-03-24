@@ -61,11 +61,11 @@ const zipFile = {
                   <elements-html-text-area :data="commentary1" />
                 </VCardText>
                 <VCardActions>
-                  <elements-btn-dialog-default title="解説">
+                  <TemplatesDialogDefault title="解説">
                     <template #contents>
                       <elements-html-text-area :data="commentary2" />
                     </template>
-                  </elements-btn-dialog-default>
+                  </TemplatesDialogDefault>
                   <VBtn
                     variant="elevated"
                     @click="show(zipFile.name, zipFile.url, zipFile.type)"

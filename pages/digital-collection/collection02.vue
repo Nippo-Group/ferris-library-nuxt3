@@ -91,7 +91,7 @@ const breadcrumbs = [
             </VCol>
           </VRow>
           <VCardActions>
-            <elements-btn-dialog-default title="解説">
+            <TemplatesDialogDefault title="解説">
               <template #contents>
                 <p
                   v-for="(text, k) in commentary2"
@@ -101,7 +101,7 @@ const breadcrumbs = [
                   {{ text }}
                 </p>
               </template>
-            </elements-btn-dialog-default>
+            </TemplatesDialogDefault>
           </VCardActions>
         </VCard>
       </VCol>
