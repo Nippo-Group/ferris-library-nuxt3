@@ -10,7 +10,7 @@ const { visible, fileName, fileType, fileUrl, dismiss } = useConfirmDL()
     {{ fileType }}ファイルを開きますか？<br>
     {{ fileName }}
     <template #actions>
-      <v-btn
+      <VBtn
         class="mx-3"
         :href="fileUrl"
         target="_blank"
@@ -19,13 +19,13 @@ const { visible, fileName, fileType, fileUrl, dismiss } = useConfirmDL()
         <icons-download-defult end>
           mdi-download
         </icons-download-defult>
-      </v-btn>
-      <v-btn
+      </VBtn>
+      <VBtn
         icon
         @click="dismiss"
       >
         <icons-close-defult />
-      </v-btn>
+      </VBtn>
     </template>
   </v-snackbar>
 </template>

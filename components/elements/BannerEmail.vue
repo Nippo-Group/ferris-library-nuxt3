@@ -41,14 +41,14 @@ const setCopyMessage = () => {
       location="top"
     >
       <template #activator="{ props }">
-        <v-btn
+        <VBtn
           icon
           v-bind="props"
           variant="text"
           @click="copyToClipboard(address)"
         >
           <icons-content-copy />
-        </v-btn>
+        </VBtn>
       </template>
     </VTooltip>
   </v-banner>

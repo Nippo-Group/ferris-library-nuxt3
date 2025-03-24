@@ -7,7 +7,7 @@ const { visible, show, dismiss } = useVisible()
 </script>
 
 <template>
-  <v-btn
+  <VBtn
     color="primary-lighten-1"
     variant="elevated"
     @click="show"
@@ -31,16 +31,16 @@ const { visible, show, dismiss } = useVisible()
           <slot name="actions" />
         </VCardActions>
         <VCardActions class="justify-end">
-          <v-btn
+          <VBtn
             variant="tonal"
             @click="dismiss"
           >
             Close
-          </v-btn>
+          </VBtn>
         </VCardActions>
       </VCard>
     </v-dialog>
-  </v-btn>
+  </VBtn>
 </template>
 
 <style scoped>

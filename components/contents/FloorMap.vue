@@ -30,13 +30,13 @@ const tab = ref(null)
           justify="space-around"
           class="mt-4"
         >
-          <v-btn
+          <VBtn
             href="/documents/floor-map/floor-map_3d.ppsx"
             download="floor-map_3d.ppsx"
           >
             ダウンロード
             <icons-download-defult />
-          </v-btn>
+          </VBtn>
         </VRow>
       </VSheet>
     </VWindowItem>

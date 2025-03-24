@@ -45,13 +45,13 @@ const fileName = computed(() => {
       </VuePDF>
     </VSheet>
     <div class="text-center pa-1">
-      <v-btn
+      <VBtn
         v-if="!buttonHidden"
         @click="show(fileName, props.src, 'PDF')"
       >
         ファイルをひらく
         <icons-file-pdf end />
-      </v-btn>
+      </VBtn>
     </div>
   </div>
 </template>

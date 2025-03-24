@@ -7,11 +7,11 @@ defineProps<Props>()
 </script>
 
 <template>
-  <v-btn
+  <VBtn
     color="primary"
     variant="outlined"
     :to="to"
   >
     {{ link }}
-  </v-btn>
+  </VBtn>
 </template>

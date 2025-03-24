@@ -154,14 +154,14 @@ onMounted(() => {
   <v-toolbar density="compact">
     <v-menu>
       <template #activator="{ props }">
-        <v-btn
+        <VBtn
           v-bind="props"
           color="primary"
           variant="elevated"
         >
           {{ locationLabel[selectLocation] }}
           <icons-menu-down end />
-        </v-btn>
+        </VBtn>
       </template>
       <VList>
         <VListItem link>
@@ -181,13 +181,13 @@ onMounted(() => {
       location="top"
     >
       <template #activator="{ props }">
-        <v-btn
+        <VBtn
           v-bind="props"
           icon
           @click="fullcalendarApi.prev()"
         >
           <icons-chevron-left />
-        </v-btn>
+        </VBtn>
       </template>
     </VTooltip>
     <VTooltip
@@ -195,13 +195,13 @@ onMounted(() => {
       location="top"
     >
       <template #activator="{ props }">
-        <v-btn
+        <VBtn
           v-bind="props"
           icon
           @click="fullcalendarApi.next()"
         >
           <icons-chevron-right />
-        </v-btn>
+        </VBtn>
       </template>
     </VTooltip>
     <VSpacer />
@@ -210,13 +210,13 @@ onMounted(() => {
       location="top"
     >
       <template #activator="{ props }">
-        <v-btn
+        <VBtn
           v-bind="props"
           icon
           @click="fullcalendarApi.today()"
         >
           <icons-calendar-today />
-        </v-btn>
+        </VBtn>
       </template>
     </VTooltip>
   </v-toolbar>

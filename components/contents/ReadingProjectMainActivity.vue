@@ -46,14 +46,14 @@ const { show } = useConfirmDL()
               pagination-hidden
             />
           </client-only>
-          <v-btn
+          <VBtn
             block
             variant="text"
             @click="show(document.name, document.url, document.type)"
           >
             {{ document.name }}
             <icons-file-pdf end />
-          </v-btn>
+          </VBtn>
         </VCol>
       </VRow>
     </VContainer>

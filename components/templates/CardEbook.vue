@@ -84,7 +84,7 @@ defineProps<{
                 class="ma-0"
               />
               <template v-if="documents">
-                <v-btn
+                <VBtn
                   v-for="(file, n) in documents"
                   :key="'file' + n"
                   variant="elevated"
@@ -107,7 +107,7 @@ defineProps<{
                     dark
                     end
                   />
-                </v-btn>
+                </VBtn>
               </template>
             </ContainersStack>
           </VCardActions>

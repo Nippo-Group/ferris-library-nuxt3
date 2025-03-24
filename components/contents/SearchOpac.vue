@@ -100,7 +100,7 @@ const rules = ref({
                 maxlength="128"
               >
                 <template #append>
-                  <v-btn
+                  <VBtn
                     type="submit"
                     :icon="mdiSend"
                     variant="text"
@@ -108,7 +108,7 @@ const rules = ref({
                 </template>
               </v-text-field>
             </v-form>
-            <v-btn-toggle
+            <VBtnToggle
               divided
               density="compact"
             >
@@ -117,7 +117,7 @@ const rules = ref({
                 url="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
               />
               <elements-btn-my-library />
-            </v-btn-toggle>
+            </VBtnToggle>
           </VCardText>
         </VCard>
       </VWindowItem>

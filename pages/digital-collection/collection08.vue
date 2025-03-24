@@ -66,13 +66,13 @@ const zipFile = {
                       <elements-html-text-area :data="commentary2" />
                     </template>
                   </elements-btn-dialog-default>
-                  <v-btn
+                  <VBtn
                     variant="elevated"
                     @click="show(zipFile.name, zipFile.url, zipFile.type)"
                   >
                     一括ダウンロード
                     <icons-download-defult />
-                  </v-btn>
+                  </VBtn>
                 </VCardActions>
               </VCol>
               <VCol

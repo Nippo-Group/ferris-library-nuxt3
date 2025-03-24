@@ -33,13 +33,13 @@ const OptionsCategory = ref<Category[]>([
       class="mr-2"
     />
     <VSpacer />
-    <v-btn
+    <VBtn
       variant="outlined"
       @click="show"
     >
       <icons-search-defult />
       絞り込み検索
-    </v-btn>
+    </VBtn>
   </v-toolbar>
   <p>検索条件：{{ [language, keyword].concat(categories).join(" ") }}</p>
 
@@ -148,12 +148,12 @@ const OptionsCategory = ref<Category[]>([
         </VCard>
       </VCardText>
       <VCardActions class="justify-end">
-        <v-btn
+        <VBtn
           variant="text"
           @click="dismiss"
         >
           Close
-        </v-btn>
+        </VBtn>
       </VCardActions>
     </VCard>
   </v-dialog>

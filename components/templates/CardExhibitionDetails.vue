@@ -54,13 +54,13 @@ defineExpose({
       <VDivider />
       <VCardActions>
         <VSpacer />
-        <v-btn
+        <VBtn
           color="grey-darken-1"
           variant="text"
           @click="dismiss"
         >
           Close
-        </v-btn>
+        </VBtn>
       </VCardActions>
     </VCard>
   </v-dialog>

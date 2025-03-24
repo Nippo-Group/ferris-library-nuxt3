@@ -66,12 +66,12 @@ const dayjs = useDayjs()
     </div>
     <VDivider />
     <VCardActions class="justify-end">
-      <v-btn
+      <VBtn
         variant="text"
         @click="$emit('dialogClose')"
       >
         Close
-      </v-btn>
+      </VBtn>
     </VCardActions>
   </VCard>
 </template>

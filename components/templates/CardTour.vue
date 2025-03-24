@@ -24,16 +24,16 @@ const { visible, inversion } = useVisible()
       <elements-html-text-area :data="text" />
     </VCardText>
     <VCardActions @click="inversion">
-      <v-btn
+      <VBtn
         color="primary"
         variant="text"
       >
         {{
           langState === "en" ? "Show more" : "詳細を見る"
         }}
-      </v-btn>
+      </VBtn>
       <VSpacer />
-      <v-btn :icon="useChevronIcon(visible)" />
+      <VBtn :icon="useChevronIcon(visible)" />
     </VCardActions>
     <v-expand-transition>
       <div v-show="visible">

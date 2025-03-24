@@ -14,7 +14,7 @@ const toTop = () => {
 
 <template>
   <transition name="fade">
-    <v-btn
+    <VBtn
       v-show="fab"
       v-scroll="onScroll"
       class="el_btnToTop"
@@ -23,7 +23,7 @@ const toTop = () => {
       @click="toTop"
     >
       <icons-align-top size="large" />
-    </v-btn>
+    </VBtn>
   </transition>
 </template>
 

@@ -78,12 +78,12 @@ watchEffect(() => {
             clearable
           />
           <VSpacer />
-          <v-btn
+          <VBtn
             icon
             @click="reverse"
           >
             <icons-sort-defult />
-          </v-btn>
+          </VBtn>
         </v-toolbar>
       </VCol>
     </VRow>

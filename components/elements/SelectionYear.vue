@@ -43,21 +43,21 @@ const limit = (list: Item[]) => {
       v-if="!sp"
       class="d-flex align-center flex-column bg-grey-lighten-4 pa-1"
     >
-      <v-btn-toggle
+      <VBtnToggle
         v-model="value"
         divided
         color="primary"
         density="compact"
         mandatory
       >
-        <v-btn
+        <VBtn
           v-for="item in limit(items)"
           :key="item.value"
           :value="item.value"
         >
           {{ item.label }}
-        </v-btn>
-      </v-btn-toggle>
+        </VBtn>
+      </VBtnToggle>
     </div>
     <v-select
       v-else

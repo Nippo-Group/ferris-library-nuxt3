@@ -54,7 +54,7 @@ const { show } = useConfirmDL()
               link="学外からはこちら"
               url="https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top.do&method=open"
             />
-            <v-btn
+            <VBtn
               variant="elevated"
               color="grey-lighten-4"
               @click="
@@ -67,7 +67,7 @@ const { show } = useConfirmDL()
             >
               アクセスガイド
               <icons-file-pdf end />
-            </v-btn>
+            </VBtn>
           </VCardActions>
         </VCard>
       </VCol>
@@ -170,7 +170,7 @@ const { show } = useConfirmDL()
             />
           </VCardActions>
           <VCardActions>
-            <v-btn
+            <VBtn
               variant="elevated"
               color="grey-lighten-4"
               @click="
@@ -183,7 +183,7 @@ const { show } = useConfirmDL()
             >
               「レベル別」アクセスガイド
               <icons-file-pdf end />
-            </v-btn>
+            </VBtn>
           </VCardActions>
         </VCard>
       </VCol>
@@ -219,7 +219,7 @@ const { show } = useConfirmDL()
             英語多読図書用の「読書記録シート」です。読んだ多読図書のタイトル、出版社、レベル、単語数、評価、感想を記録できます。
           </VCardText>
           <VCardActions>
-            <v-btn
+            <VBtn
               variant="elevated"
               color="grey-lighten-4"
               @click="
@@ -232,7 +232,7 @@ const { show } = useConfirmDL()
             >
               読書記録シート
               <icons-file-pdf end />
-            </v-btn>
+            </VBtn>
           </VCardActions>
         </VCard>
       </VCol>

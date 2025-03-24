@@ -42,14 +42,14 @@ const { visible, show, dismiss } = useVisible()
             {{ caption }}
           </v-toolbar-title>
           <VSpacer />
-          <v-btn
+          <VBtn
             icon
             color="black"
             density="compact"
             @click="dismiss"
           >
             <icons-close-defult />
-          </v-btn>
+          </VBtn>
         </v-toolbar>
         <VImg
           :src

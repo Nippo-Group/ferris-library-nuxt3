@@ -19,7 +19,7 @@ defineProps<{
       v-for="(item, index) in list"
       :key="'item' + index"
     >
-      <v-btn
+      <VBtn
         v-if="item.name"
         class="text-none"
         color="primary"
@@ -34,7 +34,7 @@ defineProps<{
           end
           :icon="mdiOpenInNew"
         />
-      </v-btn>
+      </VBtn>
       <p class="text-grey">
         {{ item.comment }}
       </p>

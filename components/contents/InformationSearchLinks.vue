@@ -194,20 +194,20 @@ const { active, next, prev } = useVisibleSevral()
           <templates-list-btn :list="item.list" />
           <VDivider />
           <div class="d-flex justify-space-between">
-            <v-btn
+            <VBtn
               variant="text"
               :disabled="active === 0"
               @click="prev"
             >
               Prev
-            </v-btn>
-            <v-btn
+            </VBtn>
+            <VBtn
               variant="text"
               :disabled="active === 3"
               @click="next"
             >
               Next
-            </v-btn>
+            </VBtn>
           </div>
         </div>
       </v-expansion-panel-text>
