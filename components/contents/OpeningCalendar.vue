@@ -151,7 +151,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-toolbar density="compact">
+  <VToolbar density="compact">
     <v-menu>
       <template #activator="{ props }">
         <VBtn
@@ -219,7 +219,7 @@ onMounted(() => {
         </VBtn>
       </template>
     </VTooltip>
-  </v-toolbar>
+  </VToolbar>
   <VSheet class="mt-4">
     <FullCalendar
       v-if="flag"

@@ -64,7 +64,7 @@ watchEffect(() => {
         />
       </VCol>
       <VCol cols="12">
-        <v-toolbar
+        <VToolbar
           :border="true"
           color="white"
           density="compact"
@@ -84,11 +84,11 @@ watchEffect(() => {
           >
             <icons-sort-defult />
           </VBtn>
-        </v-toolbar>
+        </VToolbar>
       </VCol>
     </VRow>
     <VRow v-if="exhibitionList">
-      <v-slide-y-transition group>
+      <VSlideYTransition group>
         <VCol
           v-for="item in exhibitionList"
           v-show="filter(item.title + item.content, item.date)"
@@ -102,7 +102,7 @@ watchEffect(() => {
             @click="openDitails(item)"
           />
         </VCol>
-      </v-slide-y-transition>
+      </VSlideYTransition>
     </VRow>
     <VRow v-else>
       <VCol

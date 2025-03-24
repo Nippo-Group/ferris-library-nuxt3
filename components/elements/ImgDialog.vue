@@ -34,13 +34,13 @@ const { visible, show, dismiss } = useVisible()
   >
     <div class="d-flex justify-center">
       <VCard>
-        <v-toolbar
+        <VToolbar
           density="compact"
           color="white"
         >
-          <v-toolbar-title v-if="caption">
+          <VToolbarTitle v-if="caption">
             {{ caption }}
-          </v-toolbar-title>
+          </VToolbarTitle>
           <VSpacer />
           <VBtn
             icon
@@ -50,7 +50,7 @@ const { visible, show, dismiss } = useVisible()
           >
             <icons-close-defult />
           </VBtn>
-        </v-toolbar>
+        </VToolbar>
         <VImg
           :src
           :width

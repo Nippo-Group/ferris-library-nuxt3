@@ -21,7 +21,7 @@ const OptionsCategory = ref<Category[]>([
 </script>
 
 <template>
-  <v-toolbar
+  <VToolbar
     dense
     flat
   >
@@ -40,7 +40,7 @@ const OptionsCategory = ref<Category[]>([
       <icons-search-defult />
       絞り込み検索
     </VBtn>
-  </v-toolbar>
+  </VToolbar>
   <p>検索条件：{{ [language, keyword].concat(categories).join(" ") }}</p>
 
   <v-dialog

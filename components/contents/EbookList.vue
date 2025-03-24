@@ -17,7 +17,7 @@ const { ebooks, length, lengthAll } = useEbookList()
     </VCol>
   </VRow>
   <VRow>
-    <v-slide-x-transition group>
+    <VSlideXTransition group>
       <VCol
         v-for="(item, i) in ebooks"
         :key="i"
@@ -37,7 +37,7 @@ const { ebooks, length, lengthAll } = useEbookList()
           :documents="item.documents"
         />
       </VCol>
-    </v-slide-x-transition>
+    </VSlideXTransition>
   </VRow>
 </template>
 

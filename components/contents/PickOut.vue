@@ -43,11 +43,11 @@ const pickOut = [
   <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
     <icons-gesture-tap start />Pick Out
   </div>
-  <v-slide-group
+  <VSlideGroup
     multiple
     show-arrows
   >
-    <v-slide-group-item
+    <VSlideGroupItem
       v-for="(item, index) in pickOut"
       :key="'pickout-' + index"
     >
@@ -74,8 +74,8 @@ const pickOut = [
           {{ item.text }}
         </VCardText>
       </VCard>
-    </v-slide-group-item>
-  </v-slide-group>
+    </VSlideGroupItem>
+  </VSlideGroup>
 </template>
 
 <style scoped>
