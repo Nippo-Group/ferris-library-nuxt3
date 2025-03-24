@@ -21,7 +21,7 @@ const images = [imgPlanning01, imgPlanning02]
           cols="12"
           sm="6"
         >
-          <v-img :src="image" />
+          <VImg :src="image" />
         </VCol>
       </VRow>
     </VContainer>

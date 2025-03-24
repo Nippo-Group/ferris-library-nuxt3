@@ -7,7 +7,7 @@ const { inversion } = useNavigationDrawer()
 <template>
   <v-app-bar>
     <template #prepend>
-      <v-app-bar-nav-icon @click.stop="inversion" />
+      <v-app-bar-naVIcon @click.stop="inversion" />
     </template>
     <v-app-bar-title>
       <slot />

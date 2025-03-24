@@ -25,7 +25,7 @@ const movie = {
           cols="12"
           sm="6"
         >
-          <v-img :src="image" />
+          <VImg :src="image" />
         </VCol>
       </VRow>
     </VContainer>

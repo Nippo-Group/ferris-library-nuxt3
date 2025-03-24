@@ -3,5 +3,5 @@ import { mdiFormatVerticalAlignTop } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon>{{ mdiFormatVerticalAlignTop }}</v-icon>
+  <VIcon>{{ mdiFormatVerticalAlignTop }}</VIcon>
 </template>

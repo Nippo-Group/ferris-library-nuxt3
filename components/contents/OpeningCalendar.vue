@@ -176,7 +176,7 @@ onMounted(() => {
         </v-list-item>
       </v-list>
     </v-menu>
-    <v-tooltip
+    <VTooltip
       text="Previous"
       location="top"
     >
@@ -189,8 +189,8 @@ onMounted(() => {
           <icons-chevron-left />
         </v-btn>
       </template>
-    </v-tooltip>
-    <v-tooltip
+    </VTooltip>
+    <VTooltip
       text="Next"
       location="top"
     >
@@ -203,9 +203,9 @@ onMounted(() => {
           <icons-chevron-right />
         </v-btn>
       </template>
-    </v-tooltip>
+    </VTooltip>
     <VSpacer />
-    <v-tooltip
+    <VTooltip
       text="Today"
       location="top"
     >
@@ -218,9 +218,9 @@ onMounted(() => {
           <icons-calendar-today />
         </v-btn>
       </template>
-    </v-tooltip>
+    </VTooltip>
   </v-toolbar>
-  <v-sheet class="mt-4">
+  <VSheet class="mt-4">
     <FullCalendar
       v-if="flag"
       ref="fullCalendarRef"
@@ -229,14 +229,14 @@ onMounted(() => {
       <template #eventContent="arg">
         <b class="pa-1">
           {{ arg.event.title }}
-          <v-tooltip
+          <VTooltip
             activator="parent"
             location="top"
           >
             {{ arg.event.title }}
-          </v-tooltip>
+          </VTooltip>
         </b>
       </template>
     </FullCalendar>
-  </v-sheet>
+  </VSheet>
 </template>

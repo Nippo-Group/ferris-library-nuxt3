@@ -46,7 +46,7 @@ const open = ref([])
           :title="menu.category"
         >
           <template #prepend>
-            <elements-nav-icon :name="menu.id" />
+            <elements-naVIcon :name="menu.id" />
           </template>
         </v-list-item>
         <v-list-group
@@ -59,7 +59,7 @@ const open = ref([])
               :title="menu.category"
             >
               <template #prepend>
-                <elements-nav-icon :name="menu.id" />
+                <elements-naVIcon :name="menu.id" />
               </template>
             </v-list-item>
           </template>

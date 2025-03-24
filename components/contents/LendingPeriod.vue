@@ -100,12 +100,12 @@ const { contents } = useLangSwitch(
     :items-array="contents.items"
     :headers="contents.headers"
   />
-  <v-alert
+  <VAlert
     v-for="(alert, index) in contents.alerts"
     :key="index"
     :type="alert.type"
     class="mt-4"
   >
     {{ alert.text }}
-  </v-alert>
+  </VAlert>
 </template>

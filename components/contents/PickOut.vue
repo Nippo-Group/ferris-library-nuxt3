@@ -59,7 +59,7 @@ const pickOut = [
         class="ma-1"
         width="240"
       >
-        <v-img
+        <VImg
           :src="item.image"
           height="160px"
           cover
@@ -69,7 +69,7 @@ const pickOut = [
           <VCardTitle class="text-black wrap-text">
             <elements-newline-text :item="item.name" />
           </VCardTitle>
-        </v-img>
+        </VImg>
         <VCardText class="text-black">
           {{ item.text }}
         </VCardText>

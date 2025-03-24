@@ -67,7 +67,7 @@ const { contents } = useLangSwitch(
 
 <template>
   <elements-header-lv2>{{ contents.title }}</elements-header-lv2>
-  <v-alert
+  <VAlert
     v-for="(note, j) in contents.items"
     :key="'note' + j"
     density="compact"
@@ -76,5 +76,5 @@ const { contents } = useLangSwitch(
     class="mt-4"
   >
     {{ note.text }}
-  </v-alert>
+  </VAlert>
 </template>

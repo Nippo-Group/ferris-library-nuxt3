@@ -272,7 +272,7 @@ const items3: (Item | ItemHeading)[] = [
           side="end"
         >
           <v-timeline-item size="small">
-            <v-img
+            <VImg
               :src="imgCarrier01"
               width="65vw"
               aspect-ratio="4/3"
@@ -282,7 +282,7 @@ const items3: (Item | ItemHeading)[] = [
             </p>
           </v-timeline-item>
           <v-timeline-item size="small">
-            <v-img
+            <VImg
               :src="imgCarrier02"
               width="65vw"
               aspect-ratio="4/3"

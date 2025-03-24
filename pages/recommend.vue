@@ -23,20 +23,20 @@ useSeoMeta({
           専門分野、履修科目に関わらず、所属学科における基本知識として読むことが期待されています。
         </p>
         <p>
-          <v-chip
+          <VChip
             class="mr-2"
             variant="tonal"
           >
             配架場所
-          </v-chip>緑園本館2階（図書館エリア／メディアカウンター向かい）
+          </VChip>緑園本館2階（図書館エリア／メディアカウンター向かい）
         </p>
         <p>
-          <v-chip
+          <VChip
             class="mr-2"
             variant="tonal"
           >
             貸出期間
-          </v-chip>2週間
+          </VChip>2週間
         </p>
         <p>＊所属学科以外の「学科推奨図書」も借りられます。</p>
       </VCol>

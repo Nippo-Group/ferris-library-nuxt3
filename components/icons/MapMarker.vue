@@ -3,5 +3,5 @@ import { mdiMapMarker } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiMapMarker" />
+  <VIcon :icon="mdiMapMarker" />
 </template>

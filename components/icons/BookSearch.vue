@@ -3,5 +3,5 @@ import { mdiBookSearch } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiBookSearch" />
+  <VIcon :icon="mdiBookSearch" />
 </template>

@@ -36,7 +36,7 @@ const setCopyMessage = () => {
     />
     {{ address }}
 
-    <v-tooltip
+    <VTooltip
       :text="copyMessage"
       location="top"
     >
@@ -50,6 +50,6 @@ const setCopyMessage = () => {
           <icons-content-copy />
         </v-btn>
       </template>
-    </v-tooltip>
+    </VTooltip>
   </v-banner>
 </template>

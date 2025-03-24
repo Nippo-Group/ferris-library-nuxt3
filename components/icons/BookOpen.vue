@@ -3,5 +3,5 @@ import { mdiBookOpenVariant } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiBookOpenVariant" />
+  <VIcon :icon="mdiBookOpenVariant" />
 </template>

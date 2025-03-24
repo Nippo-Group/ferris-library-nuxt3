@@ -182,7 +182,7 @@
         <VCardText>
           紹介状なしで他大学の図書館を利用できる共通閲覧証を発行します。
         </VCardText>
-        <v-divider />
+        <VDivider />
         <VCardText>
           下記の共通閲覧証があれば、紹介状なしで加盟大学図書館・機関が利用できます。
         </VCardText>

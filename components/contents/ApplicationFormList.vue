@@ -118,12 +118,12 @@ const items: Item[] = [
         <VCard>
           <VCardTitle>
             {{ item.name }}
-            <v-chip
+            <VChip
               color="primary"
               variant="tonal"
             >
               {{ item.target }}
-            </v-chip>
+            </VChip>
           </VCardTitle>
           <VCardText v-if="item.note">
             {{ item.note }}

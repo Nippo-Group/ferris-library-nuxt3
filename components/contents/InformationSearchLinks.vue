@@ -178,12 +178,12 @@ const { active, next, prev } = useVisibleSevral()
     >
       <v-expansion-panel-title>
         <div class="d-flex align-center ga-3">
-          <v-avatar
+          <VAvatar
             size="36"
             :color="active === item.step - 1 ? 'primary' : 'grey'"
           >
             {{ item.step }}
-          </v-avatar>
+          </VAvatar>
           <p class="text-h6">
             {{ item.subTitle }}
           </p>
@@ -192,7 +192,7 @@ const { active, next, prev } = useVisibleSevral()
       <v-expansion-panel-text>
         <div class="d-flex flex-column ga-4">
           <templates-list-btn :list="item.list" />
-          <v-divider />
+          <VDivider />
           <div class="d-flex justify-space-between">
             <v-btn
               variant="text"

@@ -164,7 +164,7 @@ const items = [
                 }}
               </VCardSubtitle>
             </div>
-            <v-avatar
+            <VAvatar
               :image="item.image"
               rounded="0"
               color="grey-lighten-2"

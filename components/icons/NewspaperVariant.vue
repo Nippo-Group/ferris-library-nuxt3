@@ -3,5 +3,5 @@ import { mdiNewspaperVariantOutline } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiNewspaperVariantOutline" />
+  <VIcon :icon="mdiNewspaperVariantOutline" />
 </template>

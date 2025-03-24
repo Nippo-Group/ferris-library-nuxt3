@@ -38,7 +38,7 @@ const mediaInformation = {
         v-for="(media, index) in mediaInformation.actions"
         :key="index"
       >
-        <v-divider v-show="index > 0" />
+        <VDivider v-show="index > 0" />
         <v-list-item
           :href="media.url"
           target="_blank"

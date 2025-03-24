@@ -3,5 +3,5 @@ import { mdiMenuRight } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiMenuRight" />
+  <VIcon :icon="mdiMenuRight" />
 </template>

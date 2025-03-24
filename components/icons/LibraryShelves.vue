@@ -3,5 +3,5 @@ import { mdiLibraryShelves } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon>{{ mdiLibraryShelves }}</v-icon>
+  <VIcon>{{ mdiLibraryShelves }}</VIcon>
 </template>

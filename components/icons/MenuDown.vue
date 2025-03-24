@@ -3,5 +3,5 @@ import { mdiMenuDown } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiMenuDown" />
+  <VIcon :icon="mdiMenuDown" />
 </template>

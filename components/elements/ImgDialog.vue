@@ -19,7 +19,7 @@ const { visible, show, dismiss } = useVisible()
     link
     @click="show()"
   >
-    <v-img
+    <VImg
       :src
       class="bg-grey-lighten-5"
       height="150"
@@ -51,7 +51,7 @@ const { visible, show, dismiss } = useVisible()
             <icons-close-defult />
           </v-btn>
         </v-toolbar>
-        <v-img
+        <VImg
           :src
           :width
           :height

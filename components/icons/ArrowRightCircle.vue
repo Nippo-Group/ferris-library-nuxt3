@@ -3,5 +3,5 @@ import { mdiArrowRightCircleOutline } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiArrowRightCircleOutline" />
+  <VIcon :icon="mdiArrowRightCircleOutline" />
 </template>

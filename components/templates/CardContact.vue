@@ -38,7 +38,7 @@ const accessIcon = (type: string): string | undefined => {
 
 <template>
   <VCard>
-    <v-img
+    <VImg
       :src="props.image"
       height="200px"
       gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
@@ -50,7 +50,7 @@ const accessIcon = (type: string): string | undefined => {
           {{ props.name }}
         </div>
       </VCardTitle>
-    </v-img>
+    </VImg>
     <v-list lines="two">
       <v-list-item
         v-if="props.tel"
@@ -67,7 +67,7 @@ const accessIcon = (type: string): string | undefined => {
         <v-list-item-title>{{ props.fax }}</v-list-item-title>
         <v-list-item-subtitle>Fax</v-list-item-subtitle>
       </v-list-item>
-      <v-divider inset />
+      <VDivider inset />
       <v-list-item
         v-if="props.eMali"
         :href="'mailto:' + props.eMali"
@@ -76,7 +76,7 @@ const accessIcon = (type: string): string | undefined => {
         <v-list-item-title>{{ props.eMali }}</v-list-item-title>
         <v-list-item-subtitle>Organization</v-list-item-subtitle>
       </v-list-item>
-      <v-divider inset />
+      <VDivider inset />
       <v-list-item
         :href="props.googleMap || undefined"
         target="_blank"
@@ -100,13 +100,13 @@ const accessIcon = (type: string): string | undefined => {
           <icons-open-in-new />
         </template>
       </v-list-item>
-      <v-divider inset />
+      <VDivider inset />
       <v-list-item
         v-for="(access, i) in props.accesses"
         :key="i"
       >
         <template #prepend>
-          <v-icon
+          <VIcon
             color="primary"
             :icon="accessIcon(access.icon)"
           />

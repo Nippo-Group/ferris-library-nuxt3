@@ -3,5 +3,5 @@ import { mdiMagnify } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiMagnify" />
+  <VIcon :icon="mdiMagnify" />
 </template>

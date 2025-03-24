@@ -29,7 +29,7 @@ defineProps<{
         variant="tonal"
       >
         {{ item.name }}
-        <v-icon
+        <VIcon
           v-show="item.openInNew"
           end
           :icon="mdiOpenInNew"

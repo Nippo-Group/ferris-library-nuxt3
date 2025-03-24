@@ -3,5 +3,5 @@ import { mdiSort } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiSort" />
+  <VIcon :icon="mdiSort" />
 </template>

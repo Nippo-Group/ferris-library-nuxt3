@@ -16,7 +16,7 @@ defineProps<{
         v-for="(contents, index) in contentsList"
         :key="contents.id"
       >
-        <v-divider v-show="index > 0" />
+        <VDivider v-show="index > 0" />
         <templates-list-news-item :contents="contents" />
       </template>
     </v-list>

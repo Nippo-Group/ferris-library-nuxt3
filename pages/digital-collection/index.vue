@@ -9,7 +9,7 @@ useSeoMeta({
 <template>
   <VContainer>
     <elements-header-lv1>{{ title }}</elements-header-lv1>
-    <v-alert
+    <VAlert
       density="compact"
       border="start"
       variant="outlined"
@@ -17,7 +17,7 @@ useSeoMeta({
     >
       当WEBサイト上にある情報や画像などは、フェリス女学院大学附属図書館が所有または管理しています。<br>
       無断転載や無断使用を禁じます。
-    </v-alert>
+    </VAlert>
     <VRow>
       <VCol>
         <contents-digital-collection-list />

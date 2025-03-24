@@ -20,19 +20,19 @@ defineProps<{
         @click="confirmDLShow(item.name, item.url, item.type)"
       >
         <div class="mb-2">
-          <v-chip
+          <VChip
             v-if="item.target"
             color="primary-lighten-2"
             class="mr-1"
           >
             {{ item.target }}
-          </v-chip>
-          <v-chip
+          </VChip>
+          <VChip
             v-if="item.date"
             variant="outlined"
           >
             {{ item.date }}
-          </v-chip>
+          </VChip>
         </div>
         <v-list-item-title class="wrap-text">
           {{ item.name }}

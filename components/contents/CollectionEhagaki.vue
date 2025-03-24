@@ -76,7 +76,7 @@ const images = computed(() => {
             item.title
           }}
         </v-list-subheader>
-        <v-divider v-else-if="item.type === 'divider'" />
+        <VDivider v-else-if="item.type === 'divider'" />
         <v-list-item
           v-else
           link

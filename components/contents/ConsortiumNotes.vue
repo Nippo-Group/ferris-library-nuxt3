@@ -1,5 +1,5 @@
 <template>
-  <v-alert
+  <VAlert
     density="compact"
     type="success"
   >
@@ -32,5 +32,5 @@
         </p>
       </section>
     </div>
-  </v-alert>
+  </VAlert>
 </template>

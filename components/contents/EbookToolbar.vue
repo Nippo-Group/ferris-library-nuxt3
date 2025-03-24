@@ -116,7 +116,7 @@ const OptionsCategory = ref<Category[]>([
                 8/1発信）
               </li>
             </ul>
-            <v-divider />
+            <VDivider />
             <p>2021.4.20追記</p>
             <ul>
               <li>
@@ -132,7 +132,7 @@ const OptionsCategory = ref<Category[]>([
                 FerrisPassport（【図書館】フェリス生限定「日本文学Web図書館」が学外から利用できます！4/14発信）
               </li>
             </ul>
-            <v-divider />
+            <VDivider />
             <p>2021.4.1</p>
             <ul>
               <li>

@@ -38,7 +38,7 @@ const zipFile = {
   <VContainer>
     <VRow dense>
       <VCol cols="12">
-        <elements-nav-breadcrumbs
+        <elements-naVBreadcrumbs
           :items="breadcrumbs"
         />
       </VCol>
@@ -80,7 +80,7 @@ const zipFile = {
                 sm="4"
               >
                 <VCardText>
-                  <v-img
+                  <VImg
                     :src="topImage"
                     cover
                     class="bg-grey-lighten-3"

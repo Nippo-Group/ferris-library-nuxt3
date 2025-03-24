@@ -29,7 +29,7 @@ const breadcrumbs = [
   <VContainer>
     <VRow dense>
       <VCol cols="12">
-        <elements-nav-breadcrumbs
+        <elements-naVBreadcrumbs
           :items="breadcrumbs"
         />
       </VCol>
@@ -45,7 +45,7 @@ const breadcrumbs = [
           <VCardText>
             <elements-html-text-area :data="commentary1" />
           </VCardText>
-          <v-divider />
+          <VDivider />
           <VCardText>
             {{ commentary2 }}
           </VCardText>

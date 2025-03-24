@@ -48,12 +48,12 @@ const props = defineProps<{
         </VCardText>
         <div class="d-flex">
           <VCardText>
-            <v-chip
+            <VChip
               variant="tonal"
               class="mr-2"
             >
               アクセス
-            </v-chip>{{ item.access }}
+            </VChip>{{ item.access }}
           </VCardText>
           <VCardActions v-if="item.links">
             <elements-btn-open-in-new

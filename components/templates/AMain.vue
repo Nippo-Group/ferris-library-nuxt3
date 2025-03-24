@@ -6,13 +6,13 @@ const { loading } = useLoading()
 
 <template>
   <v-main>
-    <v-sheet max-width="960">
+    <VSheet max-width="960">
       <v-skeleton-loader
         :loading="loading"
         type="image, subtitle, sentences"
       >
         <slot />
       </v-skeleton-loader>
-    </v-sheet>
+    </VSheet>
   </v-main>
 </template>

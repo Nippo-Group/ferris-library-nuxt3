@@ -13,7 +13,7 @@ defineProps<{
     <VCardText v-if="$slots.prepend">
       <slot name="prepend" />
     </VCardText>
-    <v-img
+    <VImg
       :src="src"
       :alt="alt"
       aspect-ratio="1"
@@ -27,7 +27,7 @@ defineProps<{
           <v-progress-circular indeterminate />
         </VRow>
       </template>
-    </v-img>
+    </VImg>
     <VCardText v-if="$slots.append">
       <slot name="append" />
     </VCardText>

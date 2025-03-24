@@ -29,22 +29,22 @@ defineProps<{
             {{ name }}
           </VCardTitle>
           <VCardText>
-            <v-chip
+            <VChip
               v-for="(language, m) in languages"
               :key="'lang' + m"
               color="secondary"
               class="mb-1 mr-1"
             >
               {{ language }}
-            </v-chip>
-            <v-chip
+            </VChip>
+            <VChip
               v-for="(cat, j) in categories"
               :key="'cat' + j"
               color="blue-lighten-1"
               class="mb-1 mr-1"
             >
               {{ cat }}
-            </v-chip>
+            </VChip>
           </VCardText>
         </VCol>
         <VCol
@@ -54,7 +54,7 @@ defineProps<{
           <VCardText>
             <elements-html-text-area :data="body" />
           </VCardText>
-          <v-divider />
+          <VDivider />
           <VCardText v-if="access || attention">
             <p
               v-if="access"

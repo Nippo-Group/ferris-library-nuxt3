@@ -13,7 +13,7 @@ defineProps<{
     target="_blank"
     dark
   >
-    <v-img
+    <VImg
       :src="img"
       class="align-end"
       gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
@@ -24,6 +24,6 @@ defineProps<{
         {{ title }}
         <icons-open-in-new />
       </VCardTitle>
-    </v-img>
+    </VImg>
   </VCard>
 </template>

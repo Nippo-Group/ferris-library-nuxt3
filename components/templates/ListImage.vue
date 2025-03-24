@@ -46,14 +46,14 @@ const lightboxShow = (index: number): void => {
             v-if="image.prepend || image.num"
             #prepend
           >
-            <v-chip
+            <VChip
               v-if="image.num"
               size="small"
               variant="tonal"
               class="mr-2"
             >
               {{ image.num }}
-            </v-chip>
+            </VChip>
             {{ image.prepend }}
           </template>
 

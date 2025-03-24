@@ -3,5 +3,5 @@ import { mdiTextBoxSearchOutline } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiTextBoxSearchOutline" />
+  <VIcon :icon="mdiTextBoxSearchOutline" />
 </template>

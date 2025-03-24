@@ -37,7 +37,7 @@ const { visible, inversion } = useVisible()
     </VCardActions>
     <v-expand-transition>
       <div v-show="visible">
-        <v-divider />
+        <VDivider />
         <VCardText>
           <template
             v-for="(content, index) in props.contents"

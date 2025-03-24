@@ -3,5 +3,5 @@ import { mdiLibrary } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiLibrary" />
+  <VIcon :icon="mdiLibrary" />
 </template>

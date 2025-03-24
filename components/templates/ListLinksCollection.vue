@@ -28,13 +28,13 @@ const props = defineProps<State>()
         target="_blank"
       >
         <VCardTitle>
-          <v-chip
+          <VChip
             class="mr-2"
             color="primary"
             variant="tonal"
           >
             {{ item.overseas ? "海外" : "国内" }}
-          </v-chip>
+          </VChip>
           <span class="wrap-text">{{ item.name }}</span>
           <icons-open-in-new
             end

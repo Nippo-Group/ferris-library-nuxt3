@@ -94,11 +94,11 @@ const { contents } = useLangSwitch(
       <v-expansion-panel-text>{{ item.content }}</v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>
-  <v-alert
+  <VAlert
     v-if="langState === 'ja'"
     type="warning"
     class="mt-4"
   >
     教育実習・海外研修等で返却日までに図書館に来館できない場合は、<strong>必ず事前に延長（更新）手続きをしてください</strong>。学部生・大学院生はMyLibraryでも延長できます。更新してもなお期限内に返却できない場合は申し出て下さい（事後は認めません）。なお、返却は郵送や宅配便でも受け付けます。（着払い不可）
-  </v-alert>
+  </VAlert>
 </template>

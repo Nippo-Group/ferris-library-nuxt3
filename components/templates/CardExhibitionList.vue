@@ -10,21 +10,21 @@ const dayjs = useDayjs()
 
 <template>
   <VCard height="100%">
-    <v-img
+    <VImg
       :src="item.eyecatch ? item.eyecatch.url : ''"
       height="160px"
       class="eyecatch"
       cover
     >
       <VCardText>
-        <v-chip
+        <VChip
           v-if="item.category"
           color="primary"
         >
           {{ item.category.name }}
-        </v-chip>
+        </VChip>
       </VCardText>
-    </v-img>
+    </VImg>
     <VCardTitle class="wrap-text">
       {{ item.title }}
     </VCardTitle>

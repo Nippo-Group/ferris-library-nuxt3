@@ -19,12 +19,12 @@ useSeoMeta({
     </VRow>
     <VRow>
       <VCol cols="12">
-        <v-alert
+        <VAlert
           density="compact"
           type="success"
         >
           上記以外にもサポートが必要でしたら、図書館スタッフまでお申し出ください。できる限りご要望にお応えします。
-        </v-alert>
+        </VAlert>
       </VCol>
     </VRow>
   </VContainer>

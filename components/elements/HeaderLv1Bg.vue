@@ -7,7 +7,7 @@ defineProps<{
 
 <template>
   <VCard rounded="0">
-    <v-img
+    <VImg
       :src="image"
       class="text-white align-center"
       gradient="to bottom, rgba(0,0,0,.2), rgba(0,0,0,.7)"
@@ -26,6 +26,6 @@ defineProps<{
           <wbr>
         </template>
       </VCardTitle>
-    </v-img>
+    </VImg>
   </VCard>
 </template>

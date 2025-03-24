@@ -3,5 +3,5 @@ import { mdiFileWordOutline } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiFileWordOutline" />
+  <VIcon :icon="mdiFileWordOutline" />
 </template>

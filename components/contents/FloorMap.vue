@@ -19,7 +19,7 @@ const tab = ref(null)
           src="/documents/floor-map/floor-map-ryokuen.pdf"
         />
       </client-only>
-      <v-sheet
+      <VSheet
         align="center"
         color="grey-lighten-3"
         class="pa-6 mt-2"
@@ -38,7 +38,7 @@ const tab = ref(null)
             <icons-download-defult />
           </v-btn>
         </VRow>
-      </v-sheet>
+      </VSheet>
     </v-window-item>
     <v-window-item>
       <client-only>

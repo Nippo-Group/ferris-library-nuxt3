@@ -11,7 +11,7 @@ defineProps<Items>()
 </script>
 
 <template>
-  <v-breadcrumbs
+  <VBreadcrumbs
     :items="items"
     color="primary"
     class="ml-0"
@@ -19,5 +19,5 @@ defineProps<Items>()
     <template #divider>
       <icons-chevron-right />
     </template>
-  </v-breadcrumbs>
+  </VBreadcrumbs>
 </template>

@@ -3,5 +3,5 @@ import { mdiCalendarMultiselect } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiCalendarMultiselect" />
+  <VIcon :icon="mdiCalendarMultiselect" />
 </template>

@@ -179,7 +179,7 @@ const itemsContents: ItemsContents[] = [
       <VCardTitle>{{ content.name }}</VCardTitle>
       <VCardText>
         <div class="alerts-wrapper">
-          <v-alert
+          <VAlert
             v-for="(service, index2) in content.service"
             :key="index + '-' + index2"
             variant="outlined"
@@ -197,7 +197,7 @@ const itemsContents: ItemsContents[] = [
               v-if="service.notes"
               :data="service.notes"
             />
-          </v-alert>
+          </VAlert>
         </div>
       </VCardText>
       <templates-list-file

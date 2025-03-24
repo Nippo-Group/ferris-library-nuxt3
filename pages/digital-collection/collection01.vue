@@ -42,7 +42,7 @@ const breadcrumbs = [
   <VContainer>
     <VRow dense>
       <VCol cols="12">
-        <elements-nav-breadcrumbs
+        <elements-naVBreadcrumbs
           :items="breadcrumbs"
         />
       </VCol>
@@ -55,7 +55,7 @@ const breadcrumbs = [
                 sm="8"
               >
                 <VCardTitle>
-                  <v-img
+                  <VImg
                     :src="titleLogo"
                     :alt="title"
                     class="titleLogo"
@@ -77,7 +77,7 @@ const breadcrumbs = [
                 sm="4"
               >
                 <VCardText>
-                  <v-img
+                  <VImg
                     :max-width="220"
                     :src="topImage"
                     cover
@@ -97,7 +97,7 @@ const breadcrumbs = [
         </VCard>
       </VCol>
       <VCol cols="12">
-        <v-alert
+        <VAlert
           variant="outlined"
           type="success"
         >
@@ -108,7 +108,7 @@ const breadcrumbs = [
           >
             {{ text }}
           </p>
-        </v-alert>
+        </VAlert>
       </VCol>
       <VCol>
         <contents-collection-shin-sanjurokkasen />

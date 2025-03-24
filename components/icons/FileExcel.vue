@@ -3,5 +3,5 @@ import { mdiFileExcelOutline } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiFileExcelOutline" />
+  <VIcon :icon="mdiFileExcelOutline" />
 </template>

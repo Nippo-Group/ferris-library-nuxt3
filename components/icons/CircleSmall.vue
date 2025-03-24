@@ -3,5 +3,5 @@ import { mdiCircleSmall } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiCircleSmall" />
+  <VIcon :icon="mdiCircleSmall" />
 </template>

@@ -20,10 +20,10 @@ const quantity = [
     :items-array="quantity"
     :headers="headers"
   />
-  <v-alert
+  <VAlert
     type="success"
     class="mt-4"
   >
     参考図書、雑誌の最新号、貴重書、マイクロ資料、ビデオ、LD、DVD、CD-ROMは館内でご利用ください。
-  </v-alert>
+  </VAlert>
 </template>

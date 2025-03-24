@@ -24,7 +24,7 @@ const { show } = useConfirmDL()
           <VCardTitle class="pt-0">
             EBSCO eBooks
           </VCardTitle>
-          <v-img
+          <VImg
             max-height="164"
             :src="imgTadokuEBSCO"
           />
@@ -38,16 +38,16 @@ const { show } = useConfirmDL()
               url="http://search.ebscohost.com/login.aspx?profile=ehost&defaultdb=nlebk"
             />
           </VCardActions>
-          <v-divider />
+          <VDivider />
           <VCardText>
-            <v-alert
+            <VAlert
               density="compact"
               type="success"
               class="mb-0"
             >
               学部生・大学院生・教職員は学外からも利用が可能です。<br>
               ※大学のアカウントでログインできます。
-            </v-alert>
+            </VAlert>
           </VCardText>
           <VCardActions>
             <elements-btn-open-in-new
@@ -82,7 +82,7 @@ const { show } = useConfirmDL()
           <VCardTitle class="pt-0">
             Gale Virtual Reference Library
           </VCardTitle>
-          <v-img
+          <VImg
             max-height="164"
             :src="imgTadokuGVRL"
           />
@@ -113,19 +113,19 @@ const { show } = useConfirmDL()
             Maruzen eBook Library
           </VCardTitle>
           <div class="d-flex ga-4 px-4">
-            <v-img
+            <VImg
               :src="imgTadokuMaruzen01"
               alt=""
             />
-            <v-img
+            <VImg
               :src="imgTadokuMaruzen02"
               alt=""
             />
-            <v-img
+            <VImg
               :src="imgTadokuMaruzen03"
               alt=""
             />
-            <v-img
+            <VImg
               :src="imgTadokuMaruzen04"
               alt=""
             />
@@ -154,15 +154,15 @@ const { show } = useConfirmDL()
             />
           </VCardActions>
           <VCardText>
-            <v-alert
+            <VAlert
               density="compact"
               type="success"
               class="mb-0"
             >
               学部生・大学院生・教職員は学内から利用が可能です。<br>※大学のアカウントでログインできます。
-            </v-alert>
+            </VAlert>
           </VCardText>
-          <v-divider />
+          <VDivider />
           <VCardActions>
             <elements-btn-open-in-new
               link="学外からはこちら"
@@ -202,7 +202,7 @@ const { show } = useConfirmDL()
             <p>
               緑園本館4階に、英語多読図書を集めたコーナーがあります。貸出条件は一般図書と同じです。
             </p>
-            <v-img
+            <VImg
               :src="imgTadokuCorner"
               class="mt-4"
             />

@@ -21,7 +21,7 @@ defineExpose({
     max-width="800px"
   >
     <VCard>
-      <v-img
+      <VImg
         :src="eyecatch || undefined"
         height="160px"
         class="text-white align-end"
@@ -29,16 +29,16 @@ defineExpose({
         cover
       >
         <VCardTitle class="wrap-text">
-          <v-chip
+          <VChip
             v-if="category"
             color="primary"
             class="mr-4"
           >
             {{ category }}
-          </v-chip>
+          </VChip>
           {{ title }}
         </VCardTitle>
-      </v-img>
+      </VImg>
       <VCardText class="content-body">
         <v-list-item v-if="placeToExhibit">
           <template #prepend>
@@ -46,12 +46,12 @@ defineExpose({
           </template>
           展示場所 ‐ {{ placeToExhibit }}
         </v-list-item>
-        <v-divider />
+        <VDivider />
         <v-list-item class="mt-8">
           <elements-html-text-area :data="content" />
         </v-list-item>
       </VCardText>
-      <v-divider />
+      <VDivider />
       <VCardActions>
         <VSpacer />
         <v-btn

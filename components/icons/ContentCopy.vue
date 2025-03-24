@@ -3,5 +3,5 @@ import { mdiContentCopy } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon :icon="mdiContentCopy" />
+  <VIcon :icon="mdiContentCopy" />
 </template>

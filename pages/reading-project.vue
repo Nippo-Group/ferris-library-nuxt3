@@ -14,7 +14,7 @@ const isWhat
 </script>
 
 <template>
-  <v-sheet color="grey-lighten-3">
+  <VSheet color="grey-lighten-3">
     <VContainer>
       <VRow>
         <VCol cols="12">
@@ -89,7 +89,7 @@ const isWhat
         </VCol>
       </VRow>
     </VContainer>
-  </v-sheet>
+  </VSheet>
 </template>
 
 <style scoped>

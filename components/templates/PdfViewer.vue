@@ -22,12 +22,12 @@ const fileName = computed(() => {
 
 <template>
   <div class="d-flex flex-column ga-2">
-    <v-pagination
+    <VPagination
       v-if="pages > 1 && !paginationHidden"
       v-model="page"
       :length="pages"
     />
-    <v-sheet
+    <VSheet
       color="grey-lighten-5"
       class="pa-1"
     >
@@ -43,7 +43,7 @@ const fileName = computed(() => {
           />
         </div>
       </VuePDF>
-    </v-sheet>
+    </VSheet>
     <div class="text-center pa-1">
       <v-btn
         v-if="!buttonHidden"

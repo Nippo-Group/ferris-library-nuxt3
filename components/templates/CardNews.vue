@@ -64,7 +64,7 @@ const dayjs = useDayjs()
         />
       </VCardActions>
     </div>
-    <v-divider />
+    <VDivider />
     <VCardActions class="justify-end">
       <v-btn
         variant="text"

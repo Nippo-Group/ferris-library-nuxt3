@@ -3,5 +3,5 @@ import { mdiSend } from '@mdi/js'
 </script>
 
 <template>
-  <v-icon>{{ mdiSend }}</v-icon>
+  <VIcon>{{ mdiSend }}</VIcon>
 </template>
