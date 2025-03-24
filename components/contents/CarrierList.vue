@@ -266,7 +266,7 @@ const items3: (Item | ItemHeading)[] = [
         <p class="mb-2">
           「就職」「キャリア」「職業」「業種」「企業」「仕事」「就活」などのキーワードで検索してみましょう。
         </p>
-        <elements-btn-my-library />
+        <PartsBtnMyLibrary />
         <VTimeline
           density="compact"
           side="end"

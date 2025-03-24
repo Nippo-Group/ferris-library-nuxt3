@@ -76,7 +76,7 @@ defineProps<{
             class="overflow-y-auto"
           >
             <ContainersStack>
-              <elements-btn-open-in-new
+              <PartsBtnOpenInNew
                 v-for="(link, k) in links"
                 :key="'link' + k"
                 :link="link.name"

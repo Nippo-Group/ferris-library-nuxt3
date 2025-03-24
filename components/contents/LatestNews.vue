@@ -10,7 +10,7 @@ const { newsList } = useNews({ limit: 6, orders: '-date' })
   </div>
   <templates-list-news :contents-list="newsList" />
   <div class="text-center mt-5">
-    <elements-btn-inside
+    <PartsBtnInside
       link="ニュース一覧へ"
       to="news"
     />

@@ -41,7 +41,7 @@
                 <p>コピー代金・送料・手数料等</p>
               </template>
               <template #actions>
-                <elements-btn-my-library />
+                <PartsBtnMyLibrary />
               </template>
             </TemplatesDialogDefault>
 
@@ -78,11 +78,11 @@
                 <p>往復送料・手数料等</p>
               </template>
               <template #actions>
-                <elements-btn-my-library />
+                <PartsBtnMyLibrary />
               </template>
             </TemplatesDialogDefault>
 
-            <elements-btn-my-library />
+            <PartsBtnMyLibrary />
           </ContainersStack>
         </VCardActions>
       </VCard>
@@ -109,7 +109,7 @@
                 <p>蔵書検索は「CiNii Books」から行ってください。</p>
               </template>
               <template #actions>
-                <elements-btn-open-in-new
+                <PartsBtnOpenInNew
                   link="CiNii Books"
                   url="http://ci.nii.ac.jp/books/"
                 />
@@ -130,7 +130,7 @@
                 </p>
               </template>
               <template #actions>
-                <elements-btn-open-in-new
+                <PartsBtnOpenInNew
                   link="横浜市立図書館蔵書検索ページ"
                   url="https://opac.lib.city.yokohama.lg.jp/opac/"
                 />
@@ -148,7 +148,7 @@
                 <p>ホームページで開館日などを確認できます。</p>
               </template>
               <template #actions>
-                <elements-btn-open-in-new
+                <PartsBtnOpenInNew
                   link="神奈川県立の図書館"
                   url="https://www.klnet.pref.kanagawa.jp/"
                 />
@@ -166,7 +166,7 @@
                 <p>蔵書検索は「国立国会図書館サーチ」から行ってください。</p>
               </template>
               <template #actions>
-                <elements-btn-open-in-new
+                <PartsBtnOpenInNew
                   link="国立国会図書館サーチ"
                   url="http://iss.ndl.go.jp/"
                 />
@@ -200,7 +200,7 @@
                 <p>教員・院生・学部生</p>
               </template>
               <template #actions>
-                <elements-btn-open-in-new
+                <PartsBtnOpenInNew
                   link="神奈川県図書館協会"
                   url="http://www.kanagawa-la.jp/link/"
                 />
@@ -219,7 +219,7 @@
                 <p>音楽学部所属の教員・院生・学部生</p>
               </template>
               <template #actions>
-                <elements-btn-open-in-new
+                <PartsBtnOpenInNew
                   link="音楽図書館協議会"
                   url="https://mlaj.org/"
                 />
@@ -239,7 +239,7 @@
           手続き方法、利用できるサービスについては大学によって異なりますので、必ず各館のホームページで条件を確認してください。
         </VCardText>
         <VCardActions class="overflow-x-auto">
-          <elements-btn-inside
+          <PartsBtnInside
             link="コンソーシアムページへ"
             to="/consortium"
           />
@@ -253,7 +253,7 @@
           先生方や学生の皆さんのご要望に応じて、図書館の効率的な使い方をご説明します。
         </VCardText>
         <VCardActions class="overflow-x-auto">
-          <elements-btn-inside
+          <PartsBtnInside
             link="ツアー・ガイダンスページへ"
             to="/tour"
           />

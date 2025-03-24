@@ -33,7 +33,7 @@ const { show } = useConfirmDL()
             Houseといった、英語多読用の電子ブック398冊が利用できます。
           </VCardText>
           <VCardActions>
-            <elements-btn-open-in-new
+            <PartsBtnOpenInNew
               link="学内からはこちら"
               url="http://search.ebscohost.com/login.aspx?profile=ehost&defaultdb=nlebk"
             />
@@ -50,7 +50,7 @@ const { show } = useConfirmDL()
             </VAlert>
           </VCardText>
           <VCardActions>
-            <elements-btn-open-in-new
+            <PartsBtnOpenInNew
               link="学外からはこちら"
               url="https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top.do&method=open"
             />
@@ -94,7 +94,7 @@ const { show } = useConfirmDL()
             <p>学内からのみ利用できます。</p>
           </VCardText>
           <VCardActions>
-            <elements-btn-open-in-new
+            <PartsBtnOpenInNew
               link="学内からはこちら"
               url="https://go.galegroup.com/ps/i.do?p=GVRL&sw=w&u=ferris&v=2.1&subject=%E5%A4%9A%E8%AA%AD%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA%EF%BC%9A%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E3%82%92%E3%81%AB%E3%81%8E%E3%82%8F%E3%81%99%E6%9C%89%E5%90%8D%E4%BA%BA%E4%BC%9D%E8%A8%98&pg=BooksForSubject&it=static"
             />
@@ -148,7 +148,7 @@ const { show } = useConfirmDL()
             </VListItem>
           </VList>
           <VCardActions>
-            <elements-btn-open-in-new
+            <PartsBtnOpenInNew
               link="学内からはこちら"
               url="https://elib.maruzen.co.jp/elib/html/BookList/"
             />
@@ -164,7 +164,7 @@ const { show } = useConfirmDL()
           </VCardText>
           <VDivider />
           <VCardActions>
-            <elements-btn-open-in-new
+            <PartsBtnOpenInNew
               link="学外からはこちら"
               url="https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open"
             />

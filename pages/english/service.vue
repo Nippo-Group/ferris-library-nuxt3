@@ -19,7 +19,7 @@ definePageMeta({ layout: 'english' })
         cols="12"
         class="text-center"
       >
-        <elements-btn-my-library />
+        <PartsBtnMyLibrary />
       </VCol>
     </VRow>
     <VRow>

@@ -5,7 +5,7 @@ const url
 </script>
 
 <template>
-  <elements-btn-open-in-new
+  <PartsBtnOpenInNew
     :link="name"
     :url="url"
   />

@@ -181,13 +181,13 @@ const items = [
             </p>
           </VCardText>
           <VCardActions>
-            <elements-btn-inside
+            <PartsBtnInside
               v-if="item.identification"
               link="資料をみる"
               :to="'/digital-collection/' + item.identification"
               block
             />
-            <elements-btn-open-in-new
+            <PartsBtnOpenInNew
               v-if="item.link"
               link="資料をみる"
               :url="item.link"

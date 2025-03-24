@@ -112,11 +112,11 @@ const rules = ref({
               divided
               density="compact"
             >
-              <elements-btn-open-in-new
+              <PartsBtnOpenInNew
                 :link="contents.detailedSearch"
                 url="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
               />
-              <elements-btn-my-library />
+              <PartsBtnMyLibrary />
             </VBtnToggle>
           </VCardText>
         </VCard>
@@ -128,7 +128,7 @@ const rules = ref({
         >
           <div>
             <VCardText>
-              <elements-btn-open-in-new
+              <PartsBtnOpenInNew
                 :link="contents.spOPAC"
                 url="http://osirabe.net/opac.ferris/"
               />

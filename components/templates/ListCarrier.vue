@@ -56,7 +56,7 @@ const props = defineProps<{
             </VChip>{{ item.access }}
           </VCardText>
           <VCardActions v-if="item.links">
-            <elements-btn-open-in-new
+            <PartsBtnOpenInNew
               v-for="(link, j) in item.links"
               :key="'link' + j"
               :link="link.name"

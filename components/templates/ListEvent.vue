@@ -40,7 +40,7 @@ const { ja, simple } = useDateFormat(props.date)
             </time>
           </VCardText>
           <VCardActions class="justify-center">
-            <elements-btn-inside
+            <PartsBtnInside
               link="カレンダーをみる"
               to="/calendar"
             />

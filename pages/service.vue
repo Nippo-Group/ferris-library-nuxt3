@@ -18,7 +18,7 @@ useSeoMeta({
         cols="12"
         class="text-center"
       >
-        <elements-btn-my-library />
+        <PartsBtnMyLibrary />
       </VCol>
     </VRow>
     <VRow>

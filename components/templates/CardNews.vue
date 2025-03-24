@@ -35,12 +35,12 @@ const dayjs = useDayjs()
         v-if="items.actions && items.actions.link"
         class="overflow-x-auto"
       >
-        <elements-btn-inside
+        <PartsBtnInside
           v-if="items.actions && items.actions.link && items.actions.to"
           :link="items.actions.link"
           :to="items.actions.to"
         />
-        <elements-btn-inside
+        <PartsBtnInside
           v-if="items.actions2 && items.actions2.link && items.actions2.to"
           :link="items.actions2.link"
           :to="items.actions2.to"
@@ -50,12 +50,12 @@ const dayjs = useDayjs()
         v-if="items.openinnew && items.openinnew.link"
         class="overflow-x-auto"
       >
-        <elements-btn-open-in-new
+        <PartsBtnOpenInNew
           v-if="items.openinnew && items.openinnew.link && items.openinnew.url"
           :link="items.openinnew.link"
           :url="items.openinnew.url"
         />
-        <elements-btn-open-in-new
+        <PartsBtnOpenInNew
           v-if="
             items.openinnew2 && items.openinnew2.link && items.openinnew2.url
           "
