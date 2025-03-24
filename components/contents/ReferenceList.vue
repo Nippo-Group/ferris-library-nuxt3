@@ -18,7 +18,7 @@
           ご希望の資料が当図書館にない時、他の図書館や資料館の所蔵調査をいたします。学部生はMyLibraryにログインして調査の依頼ができます。
         </v-card-text>
         <v-card-actions class="overflow-x-auto">
-          <elements-align-elements>
+          <ContainersStack>
             <elements-btn-dialog-default title="文献複写">
               <template #contents>
                 <div class="text-h6">
@@ -83,7 +83,7 @@
             </elements-btn-dialog-default>
 
             <elements-btn-my-library />
-          </elements-align-elements>
+          </ContainersStack>
         </v-card-actions>
       </v-card>
     </v-col>
@@ -94,7 +94,7 @@
           他大学の図書館を利用するために必要な紹介状を発行します。
         </v-card-text>
         <v-card-actions class="overflow-x-auto">
-          <elements-align-elements>
+          <ContainersStack>
             <elements-btn-dialog-default title="大学図書館">
               <template #contents>
                 <div class="text-h6 pt-6">
@@ -172,7 +172,7 @@
                 />
               </template>
             </elements-btn-dialog-default>
-          </elements-align-elements>
+          </ContainersStack>
         </v-card-actions>
       </v-card>
     </v-col>
@@ -187,7 +187,7 @@
           下記の共通閲覧証があれば、紹介状なしで加盟大学図書館・機関が利用できます。
         </v-card-text>
         <v-card-actions class="overflow-x-auto">
-          <elements-align-elements>
+          <ContainersStack>
             <elements-btn-dialog-default title="神奈川県内大学図書館共通閲覧証">
               <template #contents>
                 <div class="text-h6 pt-6">
@@ -225,7 +225,7 @@
                 />
               </template>
             </elements-btn-dialog-default>
-          </elements-align-elements>
+          </ContainersStack>
         </v-card-actions>
       </v-card>
     </v-col>

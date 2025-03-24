@@ -75,7 +75,7 @@ defineProps<{
             v-if="links || documents"
             class="overflow-y-auto"
           >
-            <elements-align-elements>
+            <ContainersStack>
               <elements-btn-open-in-new
                 v-for="(link, k) in links"
                 :key="'link' + k"
@@ -109,7 +109,7 @@ defineProps<{
                   />
                 </v-btn>
               </template>
-            </elements-align-elements>
+            </ContainersStack>
           </v-card-actions>
         </v-col>
       </v-row>
