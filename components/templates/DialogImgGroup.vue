@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Img } from '@/components/elements/ImgDialog.vue'
+import type { Img } from '@/components/templates/DialogImg.vue'
 
 defineProps<{
   imgs: Img[] }
@@ -17,7 +17,7 @@ defineProps<{
           md="4"
         >
           <VItem>
-            <elements-img-dialog
+            <TemplatesDialogImg
               :src="img.src"
               :width="img.width"
               :height="img.height"

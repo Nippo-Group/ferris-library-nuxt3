@@ -32,7 +32,7 @@ const props = defineProps<{
         </VCardSubtitle>
         <VCardText>
           {{ item.content }}
-          <elements-img-group
+          <TemplatesDialogImgGroup
             v-if="item.imgs"
             :imgs="item.imgs"
           />
