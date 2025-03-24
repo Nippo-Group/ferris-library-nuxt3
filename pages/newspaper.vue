@@ -10,7 +10,7 @@ useSeoMeta({
   <VContainer>
     <VRow>
       <VCol cols="12">
-        <PartsHeaderLv1>{{ title }}</PartsHeaderLv1>
+        <PartsTitlePage>{{ title }}</PartsTitlePage>
       </VCol>
       <VCol cols="12">
         <contents-newspaper-list />

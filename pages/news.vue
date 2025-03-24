@@ -5,7 +5,7 @@ useSeoMeta({ title: title.value, description: '図書館のニュース一覧で
 
 <template>
   <VContainer>
-    <PartsHeaderLv1>{{ title }}</PartsHeaderLv1>
+    <PartsTitlePage>{{ title }}</PartsTitlePage>
     <VRow>
       <VCol cols="12">
         <contents-all-news />

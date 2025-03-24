@@ -10,7 +10,7 @@ definePageMeta({ layout: 'english' })
 
 <template>
   <VContainer>
-    <PartsHeaderLv1>{{ title }}</PartsHeaderLv1>
+    <PartsTitlePage>{{ title }}</PartsTitlePage>
     <VRow>
       <VCol
         cols="12"

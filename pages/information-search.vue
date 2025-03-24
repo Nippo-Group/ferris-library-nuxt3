@@ -8,7 +8,7 @@ useSeoMeta({
 
 <template>
   <VContainer>
-    <PartsHeaderLv1>{{ title }}</PartsHeaderLv1>
+    <PartsTitlePage>{{ title }}</PartsTitlePage>
     <VRow>
       <VCol cols="12">
         <contents-information-search-links />

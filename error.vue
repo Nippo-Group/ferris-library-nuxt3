@@ -4,9 +4,9 @@ const error = useError()
 
 <template>
   <VContainer>
-    <PartsHeaderLv1>
+    <PartsTitlePage>
       {{ error?.message }}
-    </PartsHeaderLv1>
+    </PartsTitlePage>
 
     <elements-btn-inside
       link="ホームへもどる"

@@ -10,7 +10,7 @@ useSeoMeta({
 
 <template>
   <VContainer>
-    <PartsHeaderLv1>{{ title }}</PartsHeaderLv1>
+    <PartsTitlePage>{{ title }}</PartsTitlePage>
     <div>
       <p>
         {{ description }}

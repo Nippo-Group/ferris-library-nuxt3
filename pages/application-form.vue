@@ -5,7 +5,7 @@ useSeoMeta({ title: title.value })
 
 <template>
   <VContainer>
-    <PartsHeaderLv1>{{ title }}</PartsHeaderLv1>
+    <PartsTitlePage>{{ title }}</PartsTitlePage>
     <VRow>
       <VCol cols="12">
         <contents-application-form-list />

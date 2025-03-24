@@ -77,11 +77,11 @@ const items = [
     v-for="(item, i) in items"
     :key="'item-' + i"
   >
-    <PartsHeaderLv2 v-if="item.title">
+    <PartsTitleLv2 v-if="item.title">
       {{
         item.title
       }}
-    </PartsHeaderLv2>
+    </PartsTitleLv2>
     <VRow>
       <VCol
         v-for="(content, j) in item.contents"

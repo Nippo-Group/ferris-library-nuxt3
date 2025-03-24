@@ -244,25 +244,25 @@ const items3: (Item | ItemHeading)[] = [
   <VWindow v-model="tab">
     <VWindowItem>
       <VContainer>
-        <PartsHeaderLv2>企業や業種を研究する</PartsHeaderLv2>
+        <PartsTitleLv2>企業や業種を研究する</PartsTitleLv2>
         <templates-list-carrier :items="items1" />
       </VContainer>
     </VWindowItem>
     <VWindowItem>
       <VContainer>
-        <PartsHeaderLv2>最新の時事情報をつかむ</PartsHeaderLv2>
+        <PartsTitleLv2>最新の時事情報をつかむ</PartsTitleLv2>
         <templates-list-carrier :items="items2" />
       </VContainer>
     </VWindowItem>
     <VWindowItem>
       <VContainer>
-        <PartsHeaderLv2>職種や資格について調べる</PartsHeaderLv2>
+        <PartsTitleLv2>職種や資格について調べる</PartsTitleLv2>
         <templates-list-carrier :items="items3" />
       </VContainer>
     </VWindowItem>
     <VWindowItem>
       <VContainer>
-        <PartsHeaderLv2>OPACで関連本を集める</PartsHeaderLv2>
+        <PartsTitleLv2>OPACで関連本を集める</PartsTitleLv2>
         <p class="mb-2">
           「就職」「キャリア」「職業」「業種」「企業」「仕事」「就活」などのキーワードで検索してみましょう。
         </p>
