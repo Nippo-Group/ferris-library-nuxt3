@@ -30,7 +30,7 @@ const { show } = useConfirmDL()
           cols="12"
           md="6"
         >
-          <elements-numbered-list :items="mainActivity" />
+          <PartsNumberedList :items="mainActivity" />
         </VCol>
         <VCol
           v-for="(document, index) in documents"
