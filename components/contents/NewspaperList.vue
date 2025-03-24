@@ -297,8 +297,8 @@ const items: NewspaperCat[] = [
       {{ item.category }}
     </VTab>
   </VTabs>
-  <v-window v-model="tab">
-    <v-window-item
+  <VWindow v-model="tab">
+    <VWindowItem
       v-for="(item, index2) in items"
       :key="'item' + index2"
     >
@@ -312,8 +312,8 @@ const items: NewspaperCat[] = [
           />
         </VCardText>
       </VCard>
-    </v-window-item>
-  </v-window>
+    </VWindowItem>
+  </VWindow>
 </template>
 
 <style scoped>

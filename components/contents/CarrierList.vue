@@ -241,26 +241,26 @@ const items3: (Item | ItemHeading)[] = [
     <VTab>OPACで関連本を集める</VTab>
   </VTabs>
 
-  <v-window v-model="tab">
-    <v-window-item>
+  <VWindow v-model="tab">
+    <VWindowItem>
       <VContainer>
         <elements-header-lv2>企業や業種を研究する</elements-header-lv2>
         <templates-list-carrier :items="items1" />
       </VContainer>
-    </v-window-item>
-    <v-window-item>
+    </VWindowItem>
+    <VWindowItem>
       <VContainer>
         <elements-header-lv2>最新の時事情報をつかむ</elements-header-lv2>
         <templates-list-carrier :items="items2" />
       </VContainer>
-    </v-window-item>
-    <v-window-item>
+    </VWindowItem>
+    <VWindowItem>
       <VContainer>
         <elements-header-lv2>職種や資格について調べる</elements-header-lv2>
         <templates-list-carrier :items="items3" />
       </VContainer>
-    </v-window-item>
-    <v-window-item>
+    </VWindowItem>
+    <VWindowItem>
       <VContainer>
         <elements-header-lv2>OPACで関連本を集める</elements-header-lv2>
         <p class="mb-2">
@@ -293,6 +293,6 @@ const items3: (Item | ItemHeading)[] = [
           </v-timeline-item>
         </v-timeline>
       </VContainer>
-    </v-window-item>
-  </v-window>
+    </VWindowItem>
+  </VWindow>
 </template>

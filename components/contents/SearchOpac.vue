@@ -44,8 +44,8 @@ const rules = ref({
       </VTab>
       <VTab> {{ contents.sp }}</VTab>
     </VTabs>
-    <v-window v-model="tab">
-      <v-window-item>
+    <VWindow v-model="tab">
+      <VWindowItem>
         <VCard flat>
           <VCardText>
             <v-form
@@ -120,8 +120,8 @@ const rules = ref({
             </v-btn-toggle>
           </VCardText>
         </VCard>
-      </v-window-item>
-      <v-window-item>
+      </VWindowItem>
+      <VWindowItem>
         <VCard
           flat
           class="d-md-flex justify-start"
@@ -138,7 +138,7 @@ const rules = ref({
             <img src="@/assets/images/opac/qr.gif">
           </div>
         </VCard>
-      </v-window-item>
-    </v-window>
+      </VWindowItem>
+    </VWindow>
   </VCard>
 </template>

@@ -12,8 +12,8 @@ const tab = ref(null)
     <VTab>山手分室</VTab>
   </VTabs>
 
-  <v-window v-model="tab">
-    <v-window-item>
+  <VWindow v-model="tab">
+    <VWindowItem>
       <client-only>
         <templates-pdf-viewer
           src="/documents/floor-map/floor-map-ryokuen.pdf"
@@ -39,13 +39,13 @@ const tab = ref(null)
           </v-btn>
         </VRow>
       </VSheet>
-    </v-window-item>
-    <v-window-item>
+    </VWindowItem>
+    <VWindowItem>
       <client-only>
         <templates-pdf-viewer
           src="/documents/floor-map/floor-map-yamate.pdf"
         />
       </client-only>
-    </v-window-item>
-  </v-window>
+    </VWindowItem>
+  </VWindow>
 </template>
