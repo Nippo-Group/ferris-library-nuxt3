@@ -35,7 +35,7 @@ defineProps<{
       <tr v-if="note">
         <th>収録データベース・備考</th>
         <td class="pt-4">
-          <elements-html-text-area :data="note" />
+          <PartsHtmlTextArea :data="note" />
         </td>
       </tr>
     </tbody>

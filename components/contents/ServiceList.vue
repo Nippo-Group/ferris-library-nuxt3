@@ -80,7 +80,7 @@ const { contents } = useLangSwitch(
 </script>
 
 <template>
-  <elements-header-lv2>{{ contents.title }}</elements-header-lv2>
+  <PartsHeaderLv2>{{ contents.title }}</PartsHeaderLv2>
   <VExpansionPanels
     v-model="panel"
     variant="accordion"

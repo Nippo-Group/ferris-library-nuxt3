@@ -48,7 +48,7 @@ defineExpose({
         </VListItem>
         <VDivider />
         <VListItem class="mt-8">
-          <elements-html-text-area :data="content" />
+          <PartsHtmlTextArea :data="content" />
         </VListItem>
       </VCardText>
       <VDivider />

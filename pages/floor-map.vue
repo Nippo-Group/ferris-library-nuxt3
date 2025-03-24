@@ -5,7 +5,7 @@ useSeoMeta({ title: title.value, description: '図書館のフロアマップで
 
 <template>
   <VContainer>
-    <elements-header-lv1>{{ title }}</elements-header-lv1>
+    <PartsHeaderLv1>{{ title }}</PartsHeaderLv1>
     <p>緑園本館・山手分室のフロアマップ、緑園本館の「今どこマップ」です</p>
 
     <VRow>

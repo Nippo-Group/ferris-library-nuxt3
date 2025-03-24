@@ -21,7 +21,7 @@ const { visible, inversion } = useVisible()
   <VCard>
     <VCardTitle> {{ title }} </VCardTitle>
     <VCardText>
-      <elements-html-text-area :data="text" />
+      <PartsHtmlTextArea :data="text" />
     </VCardText>
     <VCardActions @click="inversion">
       <VBtn

@@ -43,7 +43,7 @@ const breadcrumbs = [
             >
           </VCardTitle>
           <VCardText>
-            <elements-html-text-area :data="commentary1" />
+            <PartsHtmlTextArea :data="commentary1" />
           </VCardText>
           <VDivider />
           <VCardText>

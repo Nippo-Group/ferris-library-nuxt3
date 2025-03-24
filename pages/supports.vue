@@ -8,7 +8,7 @@ useSeoMeta({
 
 <template>
   <VContainer>
-    <elements-header-lv1>{{ title }}</elements-header-lv1>
+    <PartsHeaderLv1>{{ title }}</PartsHeaderLv1>
     <VRow>
       <VCol cols="12">
         <p>図書館では、障がいのある方に以下の支援を行っています。</p>

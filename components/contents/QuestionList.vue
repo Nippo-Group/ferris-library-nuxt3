@@ -78,7 +78,7 @@ const faqList = ref([
         </div>
       </VExpansionPanelTitle>
       <VExpansionPanelText>
-        <elements-html-text-area :data="faq.answer" />
+        <PartsHtmlTextArea :data="faq.answer" />
       </VExpansionPanelText>
     </VExpansionPanel>
   </VExpansionPanels>

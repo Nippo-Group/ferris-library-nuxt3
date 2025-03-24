@@ -66,7 +66,7 @@ const { contents } = useLangSwitch(
 </script>
 
 <template>
-  <elements-header-lv2>{{ contents.title }}</elements-header-lv2>
+  <PartsHeaderLv2>{{ contents.title }}</PartsHeaderLv2>
   <VAlert
     v-for="(note, j) in contents.items"
     :key="'note' + j"

@@ -24,7 +24,7 @@ const tab = ref(null)
         color="grey-lighten-3"
         class="pa-6 mt-2"
       >
-        <elements-header-lv2>今どこマップ</elements-header-lv2>
+        <PartsHeaderLv2>今どこマップ</PartsHeaderLv2>
         <p>パワーポイントのファイルをダウンロードしますか？</p>
         <VRow
           justify="space-around"

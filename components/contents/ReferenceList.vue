@@ -1,7 +1,7 @@
 <template>
   <VRow>
     <VCol cols="12">
-      <elements-header-lv2>サービス一覧</elements-header-lv2>
+      <PartsHeaderLv2>サービス一覧</PartsHeaderLv2>
     </VCol>
     <VCol cols="12">
       <VCard height="100%">

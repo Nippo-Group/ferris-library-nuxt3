@@ -58,12 +58,12 @@ const zipFile = {
                   >
                 </VCardTitle>
                 <VCardText>
-                  <elements-html-text-area :data="commentary1" />
+                  <PartsHtmlTextArea :data="commentary1" />
                 </VCardText>
                 <VCardActions>
                   <TemplatesDialogDefault title="解説">
                     <template #contents>
-                      <elements-html-text-area :data="commentary2" />
+                      <PartsHtmlTextArea :data="commentary2" />
                     </template>
                   </TemplatesDialogDefault>
                   <VBtn

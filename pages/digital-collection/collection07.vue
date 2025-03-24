@@ -51,11 +51,11 @@ const breadcrumbs = [
                 sm="8"
               >
                 <VCardText>
-                  <elements-html-text-area :data="commentary1" />
+                  <PartsHtmlTextArea :data="commentary1" />
                 </VCardText>
                 <VCardText>
                   <p>参考文献</p>
-                  <elements-html-text-area :data="commentary2" />
+                  <PartsHtmlTextArea :data="commentary2" />
                 </VCardText>
               </VCol>
               <VCol

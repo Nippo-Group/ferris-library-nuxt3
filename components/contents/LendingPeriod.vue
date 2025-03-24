@@ -95,7 +95,7 @@ const { contents } = useLangSwitch(
 </script>
 
 <template>
-  <elements-header-lv2>{{ contents.title }}</elements-header-lv2>
+  <PartsHeaderLv2>{{ contents.title }}</PartsHeaderLv2>
   <elements-responsive-table
     :items-array="contents.items"
     :headers="contents.headers"

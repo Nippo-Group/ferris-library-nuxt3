@@ -29,7 +29,7 @@ const dayjs = useDayjs()
     </VCardItem>
     <div class="content-body">
       <VCardText class="news-contents">
-        <elements-html-text-area :data="items.contents" />
+        <PartsHtmlTextArea :data="items.contents" />
       </VCardText>
       <VCardActions
         v-if="items.actions && items.actions.link"

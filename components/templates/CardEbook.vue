@@ -52,7 +52,7 @@ defineProps<{
           sm="8"
         >
           <VCardText>
-            <elements-html-text-area :data="body" />
+            <PartsHtmlTextArea :data="body" />
           </VCardText>
           <VDivider />
           <VCardText v-if="access || attention">

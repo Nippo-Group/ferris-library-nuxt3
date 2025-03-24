@@ -8,7 +8,7 @@ useSeoMeta({
 
 <template>
   <VContainer>
-    <elements-header-lv1>{{ title }}</elements-header-lv1>
+    <PartsHeaderLv1>{{ title }}</PartsHeaderLv1>
     <p>在学生対象のパンフレットです</p>
     <VRow>
       <VCol cols="12">

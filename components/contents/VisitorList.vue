@@ -193,7 +193,7 @@ const itemsContents: ItemsContents[] = [
             >
               {{ service.title }}
             </div>
-            <elements-html-text-area
+            <PartsHtmlTextArea
               v-if="service.notes"
               :data="service.notes"
             />

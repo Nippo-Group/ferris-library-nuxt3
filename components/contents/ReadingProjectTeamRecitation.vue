@@ -15,7 +15,7 @@ const movie = {
 <template>
   <templates-card-reading-project :title="name">
     <VCardText>
-      <elements-html-text-area :data="content" />
+      <PartsHtmlTextArea :data="content" />
     </VCardText>
     <VContainer>
       <VRow dense>
