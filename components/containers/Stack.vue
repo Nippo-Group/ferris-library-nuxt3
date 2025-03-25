@@ -1,5 +1,8 @@
 <script setup lang="ts">
-withDefaults(defineProps<{ gap?: 0 | 1 | 2 | 3 | 4 }>(), { gap: 2 })
+withDefaults(defineProps<{
+  gap?: Gap
+  direction?: Direction
+}>(), { gap: 2 })
 
 const gapMap = {
   0: 'ga-0',
@@ -8,12 +11,23 @@ const gapMap = {
   3: 'ga-3',
   4: 'ga-4',
 }
+
+type Gap = keyof typeof gapMap
+
+const directionMap = {
+  row: 'flex-row',
+  col: 'flex-column',
+  rowReverse: 'flex-row-reverse',
+  colReverse: 'flex-column-reverse',
+}
+
+type Direction = keyof typeof directionMap
 </script>
 
 <template>
   <div
     class="d-flex flex-wrap"
-    :class="gapMap[gap]"
+    :class="[gapMap[gap], direction ? directionMap[direction] : undefined]"
   >
     <slot />
   </div>

@@ -1,15 +1,21 @@
-<script setup lang="ts">
+import { useNews } from '@/composables/news/useNews'
+
 import type { AlertType } from '@/types/alert'
 
-const selected = ref()
-const items = [
+export const { newsList } = useNews({ ids: 'a7oeej8j623' })
+
+export const items = [
   '卒業生（大学・中高）・修了生',
   '定年退職教職員',
   '他大学所属の教員、学生の方',
   '神奈川県内大学図書館共通閲覧証をお持ちの方',
   '横浜市内大学図書館コンソーシアム参加大学所属の方',
   '一般の方',
-]
+  '館内複写、マイクロフィルム利用時の注意事項',
+] as const
+
+export type Items = typeof items[number]
+
 type Service = {
   title?: string
   type: AlertType
@@ -21,11 +27,12 @@ type Pdf = {
   type: 'PDF'
 }
 type ItemsContents = {
-  name: string
+  name: Items
   service: Service[]
   pdfs?: Pdf[]
 }
-const itemsContents: ItemsContents[] = [
+
+export const itemsContents: ItemsContents[] = [
   {
     name: '卒業生（大学・中高）・修了生',
     service: [
@@ -160,58 +167,19 @@ const itemsContents: ItemsContents[] = [
       },
     ],
   },
+  {
+    name: '館内複写、マイクロフィルム利用時の注意事項',
+    service: [
+      {
+        title: '図書館資料のコピーについて',
+        type: 'success',
+        notes: '緑園本館は4階の現金式コピー機を利用してください。<br />複写申込書に記載、提出してください。<br />領収書は発行できませんのでご了承ください。<br />あらかじめ小銭をご用意ください。<br />コピー単価は（モノクロ＠￥10・カラー＠￥50）です。',
+      },
+      {
+        title: 'マイクロフィルムの利用について',
+        type: 'success',
+        notes: 'カウンターで手続が必要です（保存状態により利用できない場合があります）。<br />プリント料金は大学証紙購入による支払となります。<br />あらかじめ小銭をご用意ください。<br />プリント単価は（モノクロ＠￥10・カラー＠￥50）です。',
+      },
+    ],
+  },
 ]
-</script>
-
-<template>
-  <VSelect
-    v-model="selected"
-    :items="items"
-    variant="filled"
-    label="選択してください"
-  />
-  <template v-for="(content, index) in itemsContents">
-    <VCard
-      v-if="selected == content.name"
-      :key="index"
-      transition="scroll-x-transition"
-    >
-      <VCardTitle>{{ content.name }}</VCardTitle>
-      <VCardText>
-        <div class="alerts-wrapper">
-          <VAlert
-            v-for="(service, index2) in content.service"
-            :key="index + '-' + index2"
-            variant="outlined"
-            :type="service.type"
-            prominent
-            :border="false"
-          >
-            <div
-              v-if="service.title"
-              class="text-h6"
-            >
-              {{ service.title }}
-            </div>
-            <PartsHtmlTextArea
-              v-if="service.notes"
-              :data="service.notes"
-            />
-          </VAlert>
-        </div>
-      </VCardText>
-      <templates-list-file
-        v-if="content.pdfs"
-        :items="content.pdfs"
-      />
-    </VCard>
-  </template>
-</template>
-
-<style scoped>
-.alerts-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-</style>
