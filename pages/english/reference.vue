@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const title = ref('Reference Service')
+const title = 'Reference Service'
 useSeoMeta({
-  title: title.value,
+  title,
   description: 'Information about services to support your research.',
 })
 definePageMeta({ layout: 'english' })
@@ -9,8 +9,13 @@ definePageMeta({ layout: 'english' })
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
-
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
     <VRow>
       <VCol cols="12">
         <contents-reference-list-eng />

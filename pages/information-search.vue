@@ -1,14 +1,20 @@
 <script setup lang="ts">
-const title = ref('情報検索')
+const title = '情報検索'
 useSeoMeta({
-  title: title.value,
+  title,
   description: '情報検索のためのフローチャートをご紹介しています。',
 })
 </script>
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
     <VRow>
       <VCol cols="12">
         <contents-information-search-links />

@@ -1,14 +1,24 @@
 <script setup lang="ts">
-const title = ref('資料の探し方')
+const title = '資料の探し方'
 useSeoMeta({
-  title: title.value,
+  title,
   description: '資料探しのヒントとなる書類をまとめています。',
 })
 </script>
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
-    <contents-how-to-find-list />
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
+    <VRow>
+      <VCol>
+        <contents-how-to-find-list />
+      </VCol>
+    </VRow>
   </VContainer>
 </template>

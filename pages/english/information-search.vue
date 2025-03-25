@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const title = ref('Information search')
+const title = 'Information search'
 useSeoMeta({
-  title: title.value,
+  title,
   description: 'Information Retrieval Flowchart',
 })
 definePageMeta({ layout: 'english' })
@@ -9,7 +9,13 @@ definePageMeta({ layout: 'english' })
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
     <VRow>
       <contents-information-search-links />
     </VRow>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const title = ref('貸出サービス')
+const title = '貸出サービス'
 useSeoMeta({
-  title: title.value,
+  title,
   description:
     '図書館のサービス一覧・貸出冊数・貸出期間などについてご案内しています。',
 })
@@ -9,7 +9,13 @@ useSeoMeta({
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
     <VRow>
       <VCol cols="12">
         <contents-service-list />

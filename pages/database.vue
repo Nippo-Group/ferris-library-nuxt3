@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const title = ref('データベース・電子ブック')
+const title = 'データベース・電子ブック'
 useSeoMeta({
-  title: title.value,
+  title,
   description:
     '図書館で契約しているデータベースや電子ブックと利用方法を紹介しています。',
 })
@@ -9,7 +9,13 @@ useSeoMeta({
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
     <VRow>
       <VCol cols="12">
         <contents-ebook-toolbar />

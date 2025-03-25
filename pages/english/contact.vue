@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const title = ref('Contact / Access')
+const title = 'Contact / Access'
 useSeoMeta({
-  title: title.value,
+  title,
   description: 'Access to the library and contact information.',
 })
 definePageMeta({ layout: 'english' })
@@ -9,7 +9,13 @@ definePageMeta({ layout: 'english' })
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
     <VRow>
       <VCol
         cols="12"

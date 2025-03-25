@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const title = ref('Tour and Guidance Workshops')
+const title = 'Tour and Guidance Workshops'
 useSeoMeta({
-  title: title.value,
+  title,
   description:
     'Tour for new students, guidance on literature search for graduation thesis and report writing.',
 })
@@ -10,7 +10,13 @@ definePageMeta({ layout: 'english' })
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
     <VRow>
       <VCol
         cols="12"

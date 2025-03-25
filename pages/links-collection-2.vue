@@ -10,12 +10,18 @@ useSeoMeta({
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
-    <div>
-      <p>
-        {{ description }}
-      </p>
-    </div>
-    <contents-links-collection2-list />
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+          :description
+        />
+      </VCol>
+    </VRow>
+    <VRow>
+      <VCol>
+        <contents-links-collection2-list />
+      </VCol>
+    </VRow>
   </VContainer>
 </template>

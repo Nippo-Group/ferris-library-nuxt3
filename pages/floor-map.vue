@@ -1,13 +1,19 @@
 <script setup lang="ts">
-const title = ref('フロアマップ')
-useSeoMeta({ title: title.value, description: '図書館のフロアマップです。' })
+const title = 'フロアマップ'
+const description = '緑園本館・山手分室のフロアマップ、緑園本館の「今どこマップ」です'
+useSeoMeta({ title, description })
 </script>
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
-    <p>緑園本館・山手分室のフロアマップ、緑園本館の「今どこマップ」です</p>
-
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+          :description
+        />
+      </VCol>
+    </VRow>
     <VRow>
       <VCol cols="12">
         <contents-floor-map />

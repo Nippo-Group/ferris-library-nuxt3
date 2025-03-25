@@ -1,14 +1,20 @@
 <script setup lang="ts">
-const title = ref('開館カレンダー・開館時間')
+const title = '開館カレンダー・開館時間'
 useSeoMeta({
-  title: title.value,
+  title,
   description: '開館日時をお知らせするカレンダーです。',
 })
 </script>
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
     <VRow>
       <VCol cols="12">
         <contents-opening-calendar />

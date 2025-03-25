@@ -10,10 +10,14 @@ useSeoMeta({
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
-    <p>
-      {{ description }}
-    </p>
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+          :description
+        />
+      </VCol>
+    </VRow>
     <VRow>
       <VCol col="12">
         <contents-english-tadoku-list />

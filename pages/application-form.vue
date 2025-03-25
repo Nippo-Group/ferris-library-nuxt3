@@ -1,11 +1,17 @@
 <script setup lang="ts">
-const title = ref('各種申込書')
-useSeoMeta({ title: title.value })
+const title = '各種申込書'
+useSeoMeta({ title })
 </script>
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
     <VRow>
       <VCol cols="12">
         <contents-application-form-list />

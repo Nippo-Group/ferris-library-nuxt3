@@ -10,15 +10,24 @@ useSeoMeta({
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
-    <div>
-      <p>
-        {{ description }}
-      </p>
-      <p>
-        なお、当館所蔵の電子化された一次資料は「FAIRフェリス女学院大学学術機関リポジトリ」並びに「電子コレクション」に収録しています。
-      </p>
-    </div>
-    <contents-links-collection1-list />
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        >
+          <p>
+            {{ description }}
+          </p>
+          <p>
+            なお、当館所蔵の電子化された一次資料は「FAIRフェリス女学院大学学術機関リポジトリ」並びに「電子コレクション」に収録しています。
+          </p>
+        </SectionsPageHeader>
+      </VCol>
+    </VRow>
+    <VRow>
+      <VCol>
+        <contents-links-collection1-list />
+      </VCol>
+    </VRow>
   </VContainer>
 </template>

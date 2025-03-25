@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const title = ref('ツアー・ガイダンス')
+const title = 'ツアー・ガイダンス'
 useSeoMeta({
-  title: title.value,
+  title,
   description:
     '新入生向けのツアーと卒業論文やレポート執筆のための文献検索ガイダンスについてのご紹介です。',
 })
@@ -9,7 +9,13 @@ useSeoMeta({
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
     <VRow>
       <VCol cols="12">
         <contents-the-tour />

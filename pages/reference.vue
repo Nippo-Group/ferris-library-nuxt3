@@ -1,15 +1,24 @@
 <script setup lang="ts">
-const title = ref('レファレンスサービス')
+const title = 'レファレンスサービス'
 useSeoMeta({
-  title: title.value,
+  title,
   description: '調べ物をサポートするサービスについてのご案内です。',
 })
 </script>
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
-
-    <contents-reference-list />
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
+    <VRow>
+      <VCol>
+        <contents-reference-list />
+      </VCol>
+    </VRow>
   </VContainer>
 </template>

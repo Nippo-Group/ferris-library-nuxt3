@@ -1,14 +1,20 @@
 <script setup lang="ts">
-const title = ref('学生向けパンフレット')
+const title = '学生向けパンフレット'
 useSeoMeta({
-  title: title.value,
+  title,
   description: '在学生対象の図書館利用案内パンフレットを掲載しています。',
 })
 </script>
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
     <p>在学生対象のパンフレットです</p>
     <VRow>
       <VCol cols="12">

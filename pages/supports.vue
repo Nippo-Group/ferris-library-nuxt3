@@ -1,18 +1,23 @@
 <script setup lang="ts">
-const title = ref('障がいのある方への支援')
+const title = '障がいのある方への支援'
 useSeoMeta({
-  title: title.value,
+  title,
   description: '障がいのある方にへの支援内容をご案内いたします。',
 })
 </script>
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
     <VRow>
-      <VCol cols="12">
-        <p>図書館では、障がいのある方に以下の支援を行っています。</p>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        >
+          <p>図書館では、障がいのある方に以下の支援を行っています。</p>
+        </SectionsPageHeader>
       </VCol>
+    </VRow>
+    <VRow>
       <VCol cols="12">
         <contents-support-for-persons-with-disabilities />
       </VCol>

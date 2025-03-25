@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const title = ref('Calendar')
+const title = 'Calendar'
 useSeoMeta({
-  title: title.value,
+  title,
   description:
     'A calendar informing you of the opening date and time of the library.',
 })
@@ -10,7 +10,13 @@ definePageMeta({ layout: 'english' })
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
     <VRow>
       <VCol cols="12">
         <contents-opening-calendar />

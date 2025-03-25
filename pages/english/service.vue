@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const title = ref('Lending Service')
+const title = 'Lending Service'
 useSeoMeta({
-  title: title.value,
+  title,
   description:
     'Information about the library\'s service list, number of books checked out, and loan periods.',
 })
@@ -10,7 +10,13 @@ definePageMeta({ layout: 'english' })
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
     <VRow>
       <VCol cols="12">
         <contents-service-list />

@@ -1,14 +1,20 @@
 <script setup lang="ts">
-const title = ref('よくある質問 Q&A')
+const title = 'よくある質問 Q&A'
 useSeoMeta({
-  title: title.value,
+  title,
   description: 'ご利用にあたりよくあるご質問をまとめました。',
 })
 </script>
 
 <template>
   <VContainer>
-    <PartsTitlePage>{{ title }}</PartsTitlePage>
+    <VRow>
+      <VCol>
+        <SectionsPageHeader
+          :title
+        />
+      </VCol>
+    </VRow>
     <VRow>
       <VCol cols="12">
         <contents-question-list />
