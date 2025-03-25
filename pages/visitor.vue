@@ -39,10 +39,12 @@ const { selected } = useSelected<Items>()
           label="選択してください"
           menu
         />
-        <template v-for="(content, index) in itemsContents">
+        <template
+          v-for="(content, index) in itemsContents"
+          :key="index"
+        >
           <VCard
             v-if="selected == content.name"
-            :key="index"
             transition="scroll-x-transition"
           >
             <VCardTitle>{{ content.name }}</VCardTitle>
@@ -75,6 +77,27 @@ const { selected } = useSelected<Items>()
             />
           </VCard>
         </template>
+      </VCol>
+      <VCol
+        v-if="selected"
+        transition="scroll-x-transition"
+        cols="12"
+      >
+        <VCard
+          title="館内複写、マイクロフィルム利用時の注意事項"
+          variant="tonal"
+        >
+          <VCardSubtitle>図書館資料のコピーについて</VCardSubtitle>
+          <VCardText>
+            緑園本館は4階の現金式コピー機を利用してください。<br>複写申込書に記載、提出してください。<br>領収書は発行できませんのでご了承ください。<br>あらかじめ小銭をご用意ください。<br>コピー単価は（モノクロ＠￥10・カラー＠￥50）です。
+          </VCardText>
+          <VCardSubtitle class="mt-4">
+            図書館資料のコピーについて
+          </VCardSubtitle>
+          <VCardText>
+            カウンターで手続が必要です（保存状態により利用できない場合があります）。<br>プリント料金は大学証紙購入による支払となります。<br>あらかじめ小銭をご用意ください。<br>プリント単価は（モノクロ＠￥10・カラー＠￥50）です。
+          </VCardText>
+        </VCard>
       </VCol>
     </VRow>
   </VContainer>
