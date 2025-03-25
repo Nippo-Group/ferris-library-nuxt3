@@ -48,7 +48,7 @@
   },
   {
     "category": "Information search",
-    "id": "informationSearch",
+    "id": "retrieval",
     "push": "/english/information-search"
   },
   {

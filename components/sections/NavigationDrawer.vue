@@ -74,7 +74,7 @@ const open = ref([])
             link
           >
             <template #append>
-              <icons-open-in-new v-if="content.href" />
+              <IconsOpenInNew v-if="content.href" />
             </template>
           </VListItem>
         </VListGroup>
