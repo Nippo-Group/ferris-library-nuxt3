@@ -1,4 +1,3 @@
-<script setup lang="ts">
 import type { File } from '@/types/file'
 
 type Item = {
@@ -7,7 +6,7 @@ type Item = {
   note?: string
   files: File[]
 }
-const items: Item[] = [
+export const items: Item[] = [
   {
     name: 'リクエスト',
     target: '学部生・大学院生',
@@ -105,32 +104,3 @@ const items: Item[] = [
     ],
   },
 ]
-</script>
-
-<template>
-  <VContainer>
-    <VRow>
-      <VCol
-        v-for="(item, index) in items"
-        :key="index"
-        cols="12"
-      >
-        <VCard>
-          <VCardTitle>
-            {{ item.name }}
-            <VChip
-              color="primary"
-              variant="tonal"
-            >
-              {{ item.target }}
-            </VChip>
-          </VCardTitle>
-          <VCardText v-if="item.note">
-            {{ item.note }}
-          </VCardText>
-          <templates-list-file :items="item.files" />
-        </VCard>
-      </VCol>
-    </VRow>
-  </VContainer>
-</template>

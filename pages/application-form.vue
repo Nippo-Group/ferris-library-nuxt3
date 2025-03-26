@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { items } from '@/contents/applicationForm'
+
 const title = '各種申込書'
 useSeoMeta({ title })
 </script>
@@ -13,8 +15,26 @@ useSeoMeta({ title })
       </VCol>
     </VRow>
     <VRow>
-      <VCol cols="12">
-        <contents-application-form-list />
+      <VCol
+        v-for="(item, index) in items"
+        :key="index"
+        cols="12"
+      >
+        <VCard>
+          <VCardTitle>
+            {{ item.name }}
+            <VChip
+              color="primary"
+              variant="tonal"
+            >
+              {{ item.target }}
+            </VChip>
+          </VCardTitle>
+          <VCardText v-if="item.note">
+            {{ item.note }}
+          </VCardText>
+          <TemplatesListFile :items="item.files" />
+        </VCard>
       </VCol>
     </VRow>
   </VContainer>
