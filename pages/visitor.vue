@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { Items } from '@/contents/visitor'
-import { newsList, items, itemsContents } from '@/contents/visitor'
+import { newsList, items, itemsContents, aboutCopy } from '@/contents/visitor'
 import { useSelected } from '@/composables/common/useSelected'
+import { convertedMarkdown } from '@/utils/convertedMarkdown'
 
 const title = '学外の方へ'
 useSeoMeta({
@@ -83,19 +84,20 @@ const { selected } = useSelected<Items>()
         transition="scroll-x-transition"
         cols="12"
       >
+        <!-- 館内複写、マイクロフィルム利用時の注意事項 -->
         <VCard
-          title="館内複写、マイクロフィルム利用時の注意事項"
+          :title="aboutCopy.title"
           variant="tonal"
         >
-          <VCardSubtitle>図書館資料のコピーについて</VCardSubtitle>
+          <VCardSubtitle>{{ aboutCopy.article[0].title }}</VCardSubtitle>
           <VCardText>
-            緑園本館は4階の現金式コピー機を利用してください。<br>複写申込書に記載、提出してください。<br>領収書は発行できませんのでご了承ください。<br>あらかじめ小銭をご用意ください。<br>コピー単価は（モノクロ＠￥10・カラー＠￥50）です。
+            <PartsHtmlTextArea :data="convertedMarkdown(aboutCopy.article[0].text)" />
           </VCardText>
           <VCardSubtitle class="mt-4">
-            図書館資料のコピーについて
+            {{ aboutCopy.article[1].title }}
           </VCardSubtitle>
           <VCardText>
-            カウンターで手続が必要です（保存状態により利用できない場合があります）。<br>プリント料金は大学証紙購入による支払となります。<br>あらかじめ小銭をご用意ください。<br>プリント単価は（モノクロ＠￥10・カラー＠￥50）です。
+            <PartsHtmlTextArea :data="convertedMarkdown(aboutCopy.article[1].text)" />
           </VCardText>
         </VCard>
       </VCol>
