@@ -1,14 +1,39 @@
-<script setup lang="ts">
-import imgCarrier01 from '@/assets/images/carrier/carrier-01.gif'
-import imgCarrier02 from '@/assets/images/carrier/carrier-02.gif'
 import imgLibrariELogin from '@/assets/images/carrier/librariE-login.png'
 import imgLibrariEQr from '@/assets/images/carrier/librariE-qr.png'
 import imgLibrariECarrier from '@/assets/images/carrier/librariE-carrier.png'
-import type { Item, ItemHeading } from '@/types/carrier'
+import type { Img } from '@/components/templates/DialogImg.vue'
 
-const tab = ref(null)
+export const categories = [
+  '企業や業種を研究する',
+  '最新の時事情報をつかむ',
+  '職種や資格について調べる',
+  'OPACで関連本を集める',
+] as const
 
-const items1: (Item | ItemHeading)[] = [
+export type Categories = typeof categories[number]
+
+export type Link = {
+  name: string
+  url: string
+}
+
+export type Item = {
+  name: string
+  type: 'データベース' | '雑誌' | '図書' | '電子ブック'
+  logout: boolean
+  content: string
+  access: string
+  links?: Link[]
+  heading?: boolean
+  imgs?: Img[]
+}
+export type ItemHeading = {
+  name: string
+  heading: true
+  content: string
+}
+
+export const items1: (Item | ItemHeading)[] = [
   {
     name: 'JapanKnowledge Lib',
     type: 'データベース',
@@ -52,7 +77,7 @@ const items1: (Item | ItemHeading)[] = [
     ],
   },
 ]
-const items2: (Item | ItemHeading)[] = [
+export const items2: (Item | ItemHeading)[] = [
   {
     name: 'データベース',
     heading: true,
@@ -184,7 +209,7 @@ const items2: (Item | ItemHeading)[] = [
     access: '緑園本館2階雑誌コーナー',
   },
 ]
-const items3: (Item | ItemHeading)[] = [
+export const items3: (Item | ItemHeading)[] = [
   {
     name: '「なるにはbooks」シリーズ',
     type: '図書',
@@ -231,68 +256,3 @@ const items3: (Item | ItemHeading)[] = [
     ],
   },
 ]
-</script>
-
-<template>
-  <VTabs v-model="tab">
-    <VTab>企業や業種を研究する</VTab>
-    <VTab>最新の時事情報をつかむ</VTab>
-    <VTab>職種や資格について調べる</VTab>
-    <VTab>OPACで関連本を集める</VTab>
-  </VTabs>
-
-  <VWindow v-model="tab">
-    <VWindowItem>
-      <VContainer>
-        <PartsTitleLv2>企業や業種を研究する</PartsTitleLv2>
-        <templates-list-carrier :items="items1" />
-      </VContainer>
-    </VWindowItem>
-    <VWindowItem>
-      <VContainer>
-        <PartsTitleLv2>最新の時事情報をつかむ</PartsTitleLv2>
-        <templates-list-carrier :items="items2" />
-      </VContainer>
-    </VWindowItem>
-    <VWindowItem>
-      <VContainer>
-        <PartsTitleLv2>職種や資格について調べる</PartsTitleLv2>
-        <templates-list-carrier :items="items3" />
-      </VContainer>
-    </VWindowItem>
-    <VWindowItem>
-      <VContainer>
-        <PartsTitleLv2>OPACで関連本を集める</PartsTitleLv2>
-        <p class="mb-2">
-          「就職」「キャリア」「職業」「業種」「企業」「仕事」「就活」などのキーワードで検索してみましょう。
-        </p>
-        <PartsBtnMyLibrary />
-        <VTimeline
-          density="compact"
-          side="end"
-        >
-          <VTimelineItem size="small">
-            <VImg
-              :src="imgCarrier01"
-              width="65vw"
-              aspect-ratio="4/3"
-            />
-            <p class="text-caption">
-              部分一致検索にキーワードを入れて検索
-            </p>
-          </VTimelineItem>
-          <VTimelineItem size="small">
-            <VImg
-              :src="imgCarrier02"
-              width="65vw"
-              aspect-ratio="4/3"
-            />
-            <p class="text-caption">
-              情報がヒット
-            </p>
-          </VTimelineItem>
-        </VTimeline>
-      </VContainer>
-    </VWindowItem>
-  </VWindow>
-</template>
