@@ -17,6 +17,7 @@
     "@mdi/js": "^7.4.47",
     "@nuxt/eslint": "^0.7.5",
     "@pinia/nuxt": "^0.9.0",
+    "@types/markdown-it": "^14.1.2",
     "@types/node": "^22.10.6",
     "dayjs-nuxt": "^2.1.11",
     "eslint": "^9.18.0",
@@ -37,6 +38,7 @@
     "@fullcalendar/vue3": "^6.1.15",
     "@tato30/vue-pdf": "^1.11.3",
     "caniuse-lite": "^1.0.30001660",
+    "markdown-it": "^14.1.0",
     "nuxt-microcms-module": "^3.0.2",
     "vue-easy-lightbox": "^1.19.0"
   },
