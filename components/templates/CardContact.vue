@@ -13,7 +13,7 @@ type Access = {
   root: string
   icon: string
 }
-type State = {
+export type CardContactProps = {
   name: string
   image: string
   addressNumber?: string
@@ -24,7 +24,7 @@ type State = {
   eMali?: string
   accesses?: Access[]
 }
-const props = defineProps<State>()
+const props = defineProps<CardContactProps>()
 
 const accessIcon = (type: string): string | undefined => {
   switch (type) {
