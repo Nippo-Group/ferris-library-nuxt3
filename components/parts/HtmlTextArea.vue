@@ -1,13 +1,14 @@
 <script setup lang="ts">
 defineProps<{
-  data: unknown
+  data?: string
+  markdown?: string
 }>()
 </script>
 
 <template>
   <div
     class="text"
-    v-html="data"
+    v-html="data || convertedMarkdown(markdown || '')"
   />
 </template>
 

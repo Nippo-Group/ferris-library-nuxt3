@@ -97,7 +97,7 @@ const { selected } = useSelected<Items>()
             {{ aboutCopy.article[1].title }}
           </VCardSubtitle>
           <VCardText>
-            <PartsHtmlTextArea :data="convertedMarkdown(aboutCopy.article[1].text)" />
+            <PartsHtmlTextArea :markdown="aboutCopy.article[1].text" />
           </VCardText>
         </VCard>
       </VCol>
