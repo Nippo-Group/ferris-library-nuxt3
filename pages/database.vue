@@ -40,7 +40,7 @@ const { visible, show, dismiss } = useVisible()
             variant="outlined"
             @click="show"
           >
-            <icons-search-defult />
+            <IconsSearchDefult />
             絞り込み検索
           </VBtn>
         </VToolbar>
@@ -116,7 +116,7 @@ const { visible, show, dismiss } = useVisible()
           cols="12"
           xl="8"
         >
-          <templates-card-ebook
+          <TemplatesCardEbook
             :name="item.name"
             :languages="item.languages"
             :categories="item.categories"

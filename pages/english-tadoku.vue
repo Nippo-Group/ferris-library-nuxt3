@@ -85,7 +85,7 @@ const { show } = useConfirmDL()
                     "
                   >
                     アクセスガイド
-                    <icons-file-pdf end />
+                    <IconsFilePdf end />
                   </VBtn>
                 </VCardActions>
               </VCard>
@@ -201,7 +201,7 @@ const { show } = useConfirmDL()
                     "
                   >
                     「レベル別」アクセスガイド
-                    <icons-file-pdf end />
+                    <IconsFilePdf end />
                   </VBtn>
                 </VCardActions>
               </VCard>
@@ -250,7 +250,7 @@ const { show } = useConfirmDL()
                     "
                   >
                     読書記録シート
-                    <icons-file-pdf end />
+                    <IconsFilePdf end />
                   </VBtn>
                 </VCardActions>
               </VCard>
