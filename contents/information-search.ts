@@ -1,6 +1,3 @@
-<script setup lang="ts">
-import { useLangSwitch } from '@/composables/language/useLangSwitch'
-
 type Link = {
   name?: string
   href?: string
@@ -8,13 +5,13 @@ type Link = {
   push?: string
   comment?: string
 }
-type Item = {
-  subTitle: string
-  step: number
-  list: Link[]
-}
+  type Item = {
+    subTitle: string
+    step: number
+    list: Link[]
+  }
 
-const items: Item[] = [
+export const items: Item[] = [
   {
     subTitle: '学内の図書、雑誌、新聞を探す',
     step: 1,
@@ -80,16 +77,16 @@ const items: Item[] = [
         name: '二次情報',
         push: '/links-collection-2',
         comment:
-          '国内外の図書館の所蔵情報、図書や雑誌（論文）の書誌情報など、一次情報にアクセスするための二次情報を入手できる外部のサイト集',
+            '国内外の図書館の所蔵情報、図書や雑誌（論文）の書誌情報など、一次情報にアクセスするための二次情報を入手できる外部のサイト集',
       },
     ],
   },
 ]
 
-const itemsEng: Item[] = [
+export const itemsEng: Item[] = [
   {
     subTitle:
-      'Searching for Books, Journals and Newspapers in Ferris University Library',
+        'Searching for Books, Journals and Newspapers in Ferris University Library',
     step: 1,
     list: [
       {
@@ -153,64 +150,14 @@ const itemsEng: Item[] = [
         name: 'Primary Sources',
         push: '/links-collection-1',
         comment:
-          'Links to sites containing full-text primary sources (free). This is only a Japanese page',
+            'Links to sites containing full-text primary sources (free). This is only a Japanese page',
       },
       {
         name: 'Secondary Sources',
         push: '/links-collection-2',
         comment:
-          'Links to external sites enabling searches for secondary sources, such as the catalogs of libraries both in Japan and abroad, and portal sites for searching for books and journal articles. This is only a Japanese page',
+            'Links to external sites enabling searches for secondary sources, such as the catalogs of libraries both in Japan and abroad, and portal sites for searching for books and journal articles. This is only a Japanese page',
       },
     ],
   },
 ]
-
-const { contents } = useLangSwitch(items, itemsEng)
-
-const { active, next, prev } = useVisibleSevral()
-</script>
-
-<template>
-  <VExpansionPanels v-model="active">
-    <VExpansionPanel
-      v-for="(item, index) in contents"
-      :key="'item-' + index"
-    >
-      <VExpansionPanelTitle>
-        <div class="d-flex align-center ga-3">
-          <VAvatar
-            size="36"
-            :color="active === item.step - 1 ? 'primary' : 'grey'"
-          >
-            {{ item.step }}
-          </VAvatar>
-          <p class="text-h6">
-            {{ item.subTitle }}
-          </p>
-        </div>
-      </VExpansionPanelTitle>
-      <VExpansionPanelText>
-        <div class="d-flex flex-column ga-4">
-          <templates-list-btn :list="item.list" />
-          <VDivider />
-          <div class="d-flex justify-space-between">
-            <VBtn
-              variant="text"
-              :disabled="active === 0"
-              @click="prev"
-            >
-              Prev
-            </VBtn>
-            <VBtn
-              variant="text"
-              :disabled="active === 3"
-              @click="next"
-            >
-              Next
-            </VBtn>
-          </div>
-        </div>
-      </VExpansionPanelText>
-    </VExpansionPanel>
-  </VExpansionPanels>
-</template>
