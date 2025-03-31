@@ -160,7 +160,7 @@ onMounted(() => {
           variant="elevated"
         >
           {{ locationLabel[selectLocation] }}
-          <icons-menu-down end />
+          <IconsMenuDown end />
         </VBtn>
       </template>
       <VList>
@@ -186,7 +186,7 @@ onMounted(() => {
           icon
           @click="fullcalendarApi.prev()"
         >
-          <icons-chevron-left />
+          <IconsChevronLeft />
         </VBtn>
       </template>
     </VTooltip>
@@ -200,7 +200,7 @@ onMounted(() => {
           icon
           @click="fullcalendarApi.next()"
         >
-          <icons-chevron-right />
+          <IconsChevronRight />
         </VBtn>
       </template>
     </VTooltip>
@@ -215,7 +215,7 @@ onMounted(() => {
           icon
           @click="fullcalendarApi.today()"
         >
-          <icons-calendar-today />
+          <IconsCalendarToday />
         </VBtn>
       </template>
     </VTooltip>

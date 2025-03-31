@@ -19,7 +19,7 @@ definePageMeta({ layout: 'english' })
     </VRow>
     <VRow>
       <VCol cols="12">
-        <contents-opening-calendar />
+        <SectionsOpeningCalendar />
       </VCol>
     </VRow>
   </VContainer>
