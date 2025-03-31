@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { items } from '@/contents/how-to-find'
+
 const title = '資料の探し方'
 useSeoMeta({
   title,
@@ -17,7 +19,17 @@ useSeoMeta({
     </VRow>
     <VRow>
       <VCol>
-        <contents-how-to-find-list />
+        <VRow
+          v-for="(item, i) in items"
+          :key="i"
+        >
+          <VCol cols="12">
+            <VCard>
+              <VCardTitle>{{ item.category }}</VCardTitle>
+              <templates-list-file :items="item.contents" />
+            </VCard>
+          </VCol>
+        </VRow>
       </VCol>
     </VRow>
   </VContainer>

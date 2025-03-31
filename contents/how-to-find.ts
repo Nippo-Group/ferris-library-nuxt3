@@ -1,11 +1,10 @@
-<script setup lang="ts">
 import type { File } from '@/types/file'
 
 type Item = {
   category: string
   contents: File[]
 }
-const items: Item[] = [
+export const items: Item[] = [
   {
     category: '音楽資料の探し方',
     contents: [
@@ -153,18 +152,3 @@ const items: Item[] = [
     ],
   },
 ]
-</script>
-
-<template>
-  <VRow
-    v-for="(item, i) in items"
-    :key="i"
-  >
-    <VCol cols="12">
-      <VCard>
-        <VCardTitle>{{ item.category }}</VCardTitle>
-        <templates-list-file :items="item.contents" />
-      </VCard>
-    </VCol>
-  </VRow>
-</template>
