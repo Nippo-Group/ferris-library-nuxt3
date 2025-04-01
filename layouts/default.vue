@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { SectionsLayoutWrapper } from '#build/components'
 import { useLanguage } from '@/composables/language/useLanguage'
 
 useLanguage().setLang('ja')
@@ -15,7 +16,7 @@ useHead({
 </script>
 
 <template>
-  <contents-layout-wrapper>
+  <SectionsLayoutWrapper>
     <slot />
-  </contents-layout-wrapper>
+  </SectionsLayoutWrapper>
 </template>
