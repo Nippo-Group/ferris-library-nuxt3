@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLanguage } from '@/composables/language/useLanguage'
+import { useLanguage } from '@/composables/common/useLanguage'
 
 useLanguage().setLang('en')
 

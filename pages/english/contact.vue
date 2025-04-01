@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ryokuen, yamate } from '@/contents/contact'
+import { ryokuenEng as ryokuen, yamateEng as yamate } from '@/contents/contact'
 
 const title = 'Contact / Access'
 useSeoMeta({

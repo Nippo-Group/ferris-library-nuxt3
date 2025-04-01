@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { mdiOpenInNew, mdiMagnify, mdiSend } from '@mdi/js'
-import { useLangSwitch } from '@/composables/language/useLangSwitch'
+import { useLanguage } from '@/composables/common/useLanguage'
 
 const tab = ref(null)
 const qSearchWord = ref('')
@@ -23,7 +23,15 @@ const items = {
   detailedSearch: '詳細検索',
   placeholder: 'キーワードを入力してください',
 }
-const { contents } = useLangSwitch(items, itemsEng)
+
+const itemsMap = {
+  ja: items,
+  en: itemsEng,
+}
+
+const { langState } = useLanguage()
+
+const contents = itemsMap[langState.value]
 
 const rules = ref({
   required: (value: string) => !!value || 'Field is required',

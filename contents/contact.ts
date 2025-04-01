@@ -1,10 +1,9 @@
 import type { CardContactProps } from '@/components/templates/CardContact.vue'
 
-import { useLangSwitch } from '@/composables/language/useLangSwitch'
 import imgRyokuen from '@/assets/images/contact/contact-ryokuen.jpg'
 import imgYamate from '~/assets/images/contact/contact-yamate.jpg'
 
-const ryokuenItemsEng: CardContactProps = {
+export const ryokuenEng: CardContactProps = {
   name: 'Ryokuen Library',
   addressNumber: '245-8651',
   address: '4-5-3 Ryokuen, Izumi-ku, Yokohama, 245-8651 Japan',
@@ -26,7 +25,7 @@ const ryokuenItemsEng: CardContactProps = {
     },
   ],
 }
-const ryokuenItems: CardContactProps = {
+export const ryokuen: CardContactProps = {
   name: '緑園本館',
   addressNumber: '245-8651',
   address: '横浜市泉区緑園4-5-3',
@@ -49,9 +48,7 @@ const ryokuenItems: CardContactProps = {
   ],
 }
 
-export const { contents: ryokuen } = useLangSwitch<CardContactProps>(ryokuenItems, ryokuenItemsEng)
-
-const yamateItemsEng: CardContactProps = {
+export const yamateEng: CardContactProps = {
   name: 'Yamate Library',
   addressNumber: '231-8651',
   address: '37 Yamate-cho, Naka-ku, Yokohama, 231-8651 Japan',
@@ -68,7 +65,7 @@ const yamateItemsEng: CardContactProps = {
     },
   ],
 }
-const yamateItems: CardContactProps = {
+export const yamate: CardContactProps = {
   name: '山手分室',
   addressNumber: '231-8651',
   address: '横浜市中区山手町37',
@@ -85,5 +82,3 @@ const yamateItems: CardContactProps = {
     },
   ],
 }
-
-export const { contents: yamate } = useLangSwitch<CardContactProps>(yamateItems, yamateItemsEng)
