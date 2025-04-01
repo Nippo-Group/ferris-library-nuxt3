@@ -1,9 +1,9 @@
 <script setup lang="ts">
-type Image = {
+export type Image = {
   src: string
   title: string
   alt: string
-  cover: string
+  cover: boolean
   text?: string
   num?: string
 }

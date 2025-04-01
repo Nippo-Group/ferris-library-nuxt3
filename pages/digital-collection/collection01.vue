@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import json from '@/assets/json/digital-collection/collection01.json'
+
 const title = ref('新三十六歌仙画帖')
 useSeoMeta({
   title: title.value,
@@ -36,6 +38,19 @@ const breadcrumbs = [
     href: '/digital-collection/collection01',
   },
 ]
+
+const images = computed(() => {
+  return json.map((value) => {
+    return {
+      src: value.src,
+      title: value.caption,
+      alt: value.caption,
+      num: value.num,
+      prepend: value.alt,
+      append: value.lr + '　' + value.poem,
+    }
+  })
+})
 </script>
 
 <template>
@@ -111,7 +126,7 @@ const breadcrumbs = [
         </VAlert>
       </VCol>
       <VCol>
-        <contents-collection-shin-sanjurokkasen />
+        <TemplatesListImage :images="images" />
       </VCol>
     </VRow>
   </VContainer>

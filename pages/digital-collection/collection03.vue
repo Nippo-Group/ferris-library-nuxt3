@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import json from '@/assets/json/digital-collection/collection03.json'
+
 const title = ref('大和物語')
 useSeoMeta({
   title: title.value,
@@ -31,6 +33,17 @@ const breadcrumbs = [
     href: '/digital-collection/collection03',
   },
 ]
+
+const images = computed(() => {
+  return json.map((value) => {
+    return {
+      src: value.src,
+      title: value.caption,
+      alt: value.caption,
+      append: value.caption,
+    }
+  })
+})
 </script>
 
 <template>
@@ -93,7 +106,7 @@ const breadcrumbs = [
         </VCard>
       </VCol>
       <VCol>
-        <contents-collection-yamato-monogatari />
+        <TemplatesListImage :images="images" />
       </VCol>
     </VRow>
   </VContainer>

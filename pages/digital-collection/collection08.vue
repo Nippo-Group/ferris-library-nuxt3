@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import json from '@/assets/json/digital-collection/collection08.json'
+
 const { show } = useConfirmDL()
 
 const title = ref('Henry More, The Apology of Dr. Henry More')
@@ -32,6 +34,17 @@ const zipFile = {
   url: '/documents/digital-collection/collection08/henry_more.zip',
   type: 'ZIP',
 }
+
+const images = computed(() => {
+  return json.map((value) => {
+    return {
+      src: value.src,
+      title: value.caption,
+      alt: value.caption,
+      append: value.caption,
+    }
+  })
+})
 </script>
 
 <template>
@@ -92,7 +105,7 @@ const zipFile = {
         </VCard>
       </VCol>
       <VCol>
-        <contents-collection-henry-more />
+        <TemplatesListImage :images="images" />
       </VCol>
     </VRow>
   </VContainer>

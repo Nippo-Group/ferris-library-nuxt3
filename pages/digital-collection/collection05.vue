@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import json from '@/assets/json/digital-collection/collection05.json'
+
 const title = ref('ビアトリクス・ポターの絵本')
 useSeoMeta({
   title: title.value,
@@ -23,6 +25,19 @@ const breadcrumbs = [
     href: '/digital-collection/collection05',
   },
 ]
+
+const images = computed(() => {
+  return json.map((value) => {
+    return {
+      num: value.num,
+      src: value.src,
+      title: value.caption,
+      alt: value.caption,
+      text: value.text,
+      cover: value.cover,
+    }
+  })
+})
 </script>
 
 <template>
@@ -52,7 +67,9 @@ const breadcrumbs = [
         </VCard>
       </VCol>
       <VCol>
-        <contents-collection-beatrix-potter />
+        <TemplatesListImageSetOfThree
+          :images="images"
+        />
       </VCol>
     </VRow>
   </VContainer>
