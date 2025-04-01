@@ -1,11 +1,10 @@
-<script setup lang="ts">
 import imgReadingProject from '~/assets/images/pickout/home-pickout-reading-project.png'
 import imgExhibition from '~/assets/images/pickout/home-pickout-exhibition.png'
 import imgDatabase from '~/assets/images/pickout/home-pickout-database.png'
 import imgDigitalCollection from '~/assets/images/pickout/home-pickout-digital-collection.png'
 import imgReference from '~/assets/images/pickout/home-pickout-reference.png'
 
-const pickOut = [
+export const pickOut = [
   {
     name: '読書運動プロジェクト',
     to: '/reading-project',
@@ -37,50 +36,3 @@ const pickOut = [
     image: imgReference,
   },
 ]
-</script>
-
-<template>
-  <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
-    <icons-gesture-tap start />Pick Out
-  </div>
-  <VSlideGroup
-    multiple
-    show-arrows
-  >
-    <VSlideGroupItem
-      v-for="(item, index) in pickOut"
-      :key="'pickout-' + index"
-    >
-      <VCard
-        variant="outlined"
-        color="rgba(0, 0, 0, 0.1)"
-        :to="item.to"
-        hover
-        class="ma-1"
-        width="240"
-      >
-        <VImg
-          :src="item.image"
-          height="160px"
-          cover
-          class="align-end"
-          gradient="to bottom, rgba(255,255,255,.2), rgba(255,255,255,1)"
-        >
-          <VCardTitle class="text-black wrap-text">
-            <PartsNewlineText :item="item.name" />
-          </VCardTitle>
-        </VImg>
-        <VCardText class="text-black">
-          {{ item.text }}
-        </VCardText>
-      </VCard>
-    </VSlideGroupItem>
-  </VSlideGroup>
-</template>
-
-<style scoped>
-.wrap-text {
-  word-break: break-all;
-  white-space: normal;
-}
-</style>

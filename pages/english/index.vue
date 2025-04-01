@@ -12,12 +12,12 @@ useSeoMeta({
         cols="12"
         tag="section"
       >
-        <contents-slide-show />
+        <SectionsSlideShow />
       </VCol>
     </VRow>
     <VRow>
       <VCol cols="12">
-        <contents-search-opac />
+        <SectionsSearchOpac />
       </VCol>
     </VRow>
   </VContainer>
