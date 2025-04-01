@@ -1,5 +1,6 @@
-<script setup lang="ts">
-const categories = [
+import type { Item } from '@/components/templates/ListLinksCollection.vue'
+
+export const categories = [
   '電子図書館 (Digital Library) ／ 電子化された資料とリンク集',
   '新聞／ニュース',
   '書評／書評紙・誌',
@@ -8,10 +9,8 @@ const categories = [
   '法律',
   '辞書／事典／翻訳（無料サイト）',
 ]
-const selected = ref(
-  '電子図書館 (Digital Library) ／ 電子化された資料とリンク集',
-)
-const items = [
+
+export const items: Item[] = [
   {
     name: '国立国会図書館デジタルコレクション',
     url: 'http://dl.ndl.go.jp/',
@@ -421,17 +420,3 @@ const items = [
     text: '最新の英語ニュースで多用されるキーワードを、用例とともに掲載',
   },
 ]
-</script>
-
-<template>
-  <VSelect
-    v-model="selected"
-    :items="categories"
-    variant="filled"
-    label="カテゴリー"
-  />
-  <templates-list-links-collection
-    :items="items"
-    :category="selected"
-  />
-</template>

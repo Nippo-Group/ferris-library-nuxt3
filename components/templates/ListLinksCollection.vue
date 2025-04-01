@@ -1,5 +1,5 @@
 <script setup lang="ts">
-type Item = {
+export type Item = {
   name: string
   url: string
   category: string
@@ -9,7 +9,7 @@ type Item = {
 }
 type State = {
   items: Item[]
-  category: string
+  category: string | undefined
 }
 const props = defineProps<State>()
 </script>

@@ -1,12 +1,13 @@
-<script setup lang="ts">
-const categories = [
+import type { Item } from '@/components/templates/ListLinksCollection.vue'
+
+export const categories = [
   '各種図書館が所蔵している資料を探す',
   '雑誌（論文）、図書の情報を探す',
   '出版情報',
   '研究者、研究活動情報',
 ]
-const selected = ref('各種図書館が所蔵している資料を探す')
-const items = [
+
+export const items: Item[] = [
   {
     name: 'CiNii Research',
     url: 'https://cir.nii.ac.jp/',
@@ -136,17 +137,3 @@ const items = [
     text: '文部科学省および日本学術振興会が交付する科学研究費補助金により行われた研究の当初採択時のデータ（採択課題）と研究成果の概要（研究実績報告，研究成果概要）を収録',
   },
 ]
-</script>
-
-<template>
-  <VSelect
-    v-model="selected"
-    :items="categories"
-    variant="filled"
-    label="カテゴリー"
-  />
-  <templates-list-links-collection
-    :items="items"
-    :category="selected"
-  />
-</template>

@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { categories, items } from '@/contents/links-collection1'
+import { useSelected } from '@/composables/common/useSelected'
+
 const title = '一次情報リンク集'
 const description
   = '電子図書館や、電子化された図書や雑誌など、一次情報（源情報、本文そのもの）を入手できるサイトを集めました。'
@@ -6,6 +9,8 @@ useSeoMeta({
   title,
   description,
 })
+
+const { selected } = useSelected<string>('電子図書館 (Digital Library) ／ 電子化された資料とリンク集')
 </script>
 
 <template>
@@ -26,7 +31,16 @@ useSeoMeta({
     </VRow>
     <VRow>
       <VCol>
-        <contents-links-collection1-list />
+        <VSelect
+          v-model="selected"
+          :items="categories"
+          variant="filled"
+          label="カテゴリー"
+        />
+        <TemplatesListLinksCollection
+          :items="items"
+          :category="selected"
+        />
       </VCol>
     </VRow>
   </VContainer>
