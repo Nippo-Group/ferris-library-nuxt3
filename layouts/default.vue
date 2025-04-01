@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { SectionsLayoutWrapper } from '#build/components'
 import { useLanguage } from '@/composables/language/useLanguage'
 
 useLanguage().setLang('ja')
