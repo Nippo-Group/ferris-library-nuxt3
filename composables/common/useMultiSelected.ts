@@ -1,5 +1,5 @@
-export const useMultiSelected = (init?: string[]) => {
-  const selectedList = ref<string[]>(init || [])
+export const useMultiSelected = <T>(init?: T[]) => {
+  const selectedList = ref<T[]>(init || [])
 
   return {
     selectedList,
