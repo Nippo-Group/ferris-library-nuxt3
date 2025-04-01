@@ -1,5 +1,4 @@
-<script setup lang="ts">
-const items = [
+export const itemsEng = [
   {
     title: '',
     contents: [
@@ -55,12 +54,12 @@ const items = [
     contents: [
       {
         subtitle:
-          'Kanagawa Region University Library Cooperation Organization (KULC) (Faculty, graduate and undergraduate students only)',
+            'Kanagawa Region University Library Cooperation Organization (KULC) (Faculty, graduate and undergraduate students only)',
         text: 'You can use the libraries of participating universities by showing your Common Library Card. Applications may be made at the reference counter.',
       },
       {
         subtitle:
-          'Music Library Association of Japan (College of Music faculty, graduate and undergraduate students only)',
+            'Music Library Association of Japan (College of Music faculty, graduate and undergraduate students only)',
         text: 'You can use the libraries of participating universities by showing your Common Library Card. Applications may be made at the reference counter.',
       },
       {
@@ -70,40 +69,3 @@ const items = [
     ],
   },
 ]
-</script>
-
-<template>
-  <template
-    v-for="(item, i) in items"
-    :key="'item-' + i"
-  >
-    <PartsTitleLv2 v-if="item.title">
-      {{
-        item.title
-      }}
-    </PartsTitleLv2>
-    <VRow>
-      <VCol
-        v-for="(content, j) in item.contents"
-        :key="'content' + j"
-        cols="12"
-        lg="6"
-      >
-        <VCard
-          height="100%"
-          :href="content.link ? content.link : null"
-          :target="content.link ? '_blank' : '_self'"
-          :link="content.link ? true : false"
-        >
-          <VCardTitle>
-            {{ content.subtitle }}
-            <icons-open-in-new v-if="content.link" />
-          </VCardTitle>
-          <VCardText>
-            {{ content.text }}
-          </VCardText>
-        </VCard>
-      </VCol>
-    </VRow>
-  </template>
-</template>
