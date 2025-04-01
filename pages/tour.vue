@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { tours, guidance } from '@/contents/tour'
+
 const title = 'ツアー・ガイダンス'
 useSeoMeta({
   title,
@@ -18,10 +20,18 @@ useSeoMeta({
     </VRow>
     <VRow>
       <VCol cols="12">
-        <contents-the-tour />
+        <templates-card-tour
+          :title="tours.title"
+          :text="tours.text"
+          :contents="tours.contents"
+        />
       </VCol>
       <VCol cols="12">
-        <contents-the-guidance />
+        <templates-card-tour
+          :title="guidance.title"
+          :text="guidance.text"
+          :contents="guidance.contents"
+        />
       </VCol>
     </VRow>
   </VContainer>
