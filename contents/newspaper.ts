@@ -1,9 +1,8 @@
-<script setup lang="ts">
 import type { NewspaperCat } from '@/types/newspaper'
 
-const updateDate = '2022年4月現在'
-const tab = ref(null)
-const items: NewspaperCat[] = [
+export const updateDate = '2022年4月現在'
+
+export const items: NewspaperCat[] = [
   {
     category: '日本語（全国紙・地方紙）',
     newspapers: [
@@ -283,42 +282,3 @@ const items: NewspaperCat[] = [
     ],
   },
 ]
-</script>
-
-<template>
-  <p class="update-date">
-    {{ updateDate }}
-  </p>
-  <VTabs v-model="tab">
-    <VTab
-      v-for="(item, index) in items"
-      :key="'tab' + index"
-    >
-      {{ item.category }}
-    </VTab>
-  </VTabs>
-  <VWindow v-model="tab">
-    <VWindowItem
-      v-for="(item, index2) in items"
-      :key="'item' + index2"
-    >
-      <VCard>
-        <VCardTitle>
-          {{ item.category }}
-        </VCardTitle>
-        <VCardText>
-          <templates-list-newspaper
-            :items="item.newspapers"
-          />
-        </VCardText>
-      </VCard>
-    </VWindowItem>
-  </VWindow>
-</template>
-
-<style scoped>
-.update-date {
-  text-align: right;
-  color: grey;
-}
-</style>
