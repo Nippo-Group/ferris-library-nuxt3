@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import imgLearningCommons01 from '~/assets/images/learning-commons/learning-commons-01.jpg'
+import imgLearningCommons02 from '~/assets/images/learning-commons/learning-commons-02.jpg'
+
 const title = 'ラーニングコモンズ'
 useSeoMeta({
   title,
@@ -21,13 +24,23 @@ useSeoMeta({
         cols="12"
         md="6"
       >
-        <contents-learning-commons />
+        <TemplatesCardBanner
+          href="https://www.ferris.ac.jp/information/library/learningcommons.html"
+          :img="imgLearningCommons01"
+          title="ラーニングコモンズの紹介"
+          height="200px"
+        />
       </VCol>
       <VCol
         cols="12"
         md="6"
       >
-        <contents-piano-playing />
+        <TemplatesCardBanner
+          href="https://magazine.ferris.ac.jp/20210202/7203/"
+          :img="imgLearningCommons02"
+          title="ピアノの弾ける図書館"
+          height="200px"
+        />
       </VCol>
     </VRow>
   </VContainer>
