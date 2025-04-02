@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useLanguage, useVisible } from '@/composables/common'
+import { openShutIcon } from '@/utils'
 
 type Content = {
   subtitle: string
@@ -33,7 +34,7 @@ const { visible, inversion } = useVisible()
         }}
       </VBtn>
       <VSpacer />
-      <VBtn :icon="useChevronIcon(visible)" />
+      <VBtn :icon="openShutIcon(visible)" />
     </VCardActions>
     <VExpandTransition>
       <div v-show="visible">
