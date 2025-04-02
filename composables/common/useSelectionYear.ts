@@ -1,4 +1,4 @@
-import type { Item } from '@/components/elements/SelectionYear.vue'
+import type { Item } from '@/components/parts/SelectionYear.vue'
 
 export const useSelectionYear = () => {
   const initValue: string = 'all'
