@@ -2,7 +2,7 @@
 import type { Items } from '@/contents/visitor'
 import { newsList, items, itemsContents, aboutCopy } from '@/contents/visitor'
 import { useSelected } from '@/composables/common/useSelected'
-import { convertedMarkdown } from '@/utils/convertedMarkdown'
+import { converterMarkdown } from '@/utils'
 
 const title = '学外の方へ'
 useSeoMeta({
@@ -91,7 +91,7 @@ const { selected } = useSelected<Items>()
         >
           <VCardSubtitle>{{ aboutCopy.article[0].title }}</VCardSubtitle>
           <VCardText>
-            <PartsHtmlTextArea :data="convertedMarkdown(aboutCopy.article[0].text)" />
+            <PartsHtmlTextArea :data="converterMarkdown(aboutCopy.article[0].text)" />
           </VCardText>
           <VCardSubtitle class="mt-4">
             {{ aboutCopy.article[1].title }}

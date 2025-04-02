@@ -8,7 +8,7 @@ defineProps<{
 <template>
   <div
     class="text"
-    v-html="data || convertedMarkdown(markdown || '')"
+    v-html="data || converterMarkdown(markdown || '')"
   />
 </template>
 
