@@ -1,4 +1,5 @@
 import type { News } from '@/types/news'
+import { useDisplayMode } from '@/composables/common'
 
 export type Queries = {
   orders?: string

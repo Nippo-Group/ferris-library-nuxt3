@@ -1,4 +1,5 @@
 import type { Exhibition } from '@/types/exhibitions'
+import { useDisplayMode } from '@/composables/common'
 
 export type Queries = {
   orders?: string
