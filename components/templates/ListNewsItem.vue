@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { News } from '@/types/news'
-import { dateFormat } from '@/utils'
+import { dateFormat, isFuture } from '@/utils'
 import { useVisible } from '@/composables/common'
 
 defineProps<{
@@ -8,7 +8,6 @@ defineProps<{
 }>()
 
 const { visible, dismiss, show } = useVisible()
-const { isReservation } = useReservation()
 </script>
 
 <template>
@@ -18,7 +17,7 @@ const { isReservation } = useReservation()
   >
     <VListItemTitle class="wrap-text">
       <span
-        v-show="isReservation(contents.date)"
+        v-show="isFuture(contents.date)"
         class="text-red-lighten-2"
       >予約投稿：</span>
       {{ contents.title }}

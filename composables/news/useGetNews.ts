@@ -1,5 +1,6 @@
 import type { News } from '@/types/news'
 import { useDisplayMode } from '@/composables/common'
+import { isFuture } from '@/utils'
 
 export type Queries = {
   orders?: string
@@ -9,7 +10,6 @@ export type Queries = {
 
 export const useGetNews = (queries: Queries) => {
   const { mode } = useDisplayMode()
-  const { isReservation } = useReservation()
 
   const { data, error } = useMicroCMSGetList<News>({
     endpoint: 'news',
@@ -22,7 +22,7 @@ export const useGetNews = (queries: Queries) => {
     }
     else {
       return data.value?.contents.filter((news) => {
-        return !isReservation(news.date)
+        return !isFuture(news.date)
       })
     }
   })
