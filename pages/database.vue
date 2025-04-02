@@ -101,7 +101,6 @@ const { visible, show, dismiss } = useVisible()
     <VRow dense>
       <VCol
         cols="12"
-        xl="8"
       >
         <p>
           <span v-if="!length"> 該当する項目はみつかりませんでした </span>
@@ -115,7 +114,6 @@ const { visible, show, dismiss } = useVisible()
           v-for="(item, i) in ebooks"
           :key="i"
           cols="12"
-          xl="8"
         >
           <TemplatesCardEbook
             :name="item.name"

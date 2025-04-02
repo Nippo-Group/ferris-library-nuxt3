@@ -1,5 +1,26 @@
 <script setup lang="ts">
-import type { Item, ItemHeading } from '@/types/carrier'
+import type { Img } from '@/components/templates/DialogImg.vue'
+
+export type Link = {
+  name: string
+  url: string
+}
+
+export type Item = {
+  name: string
+  type: 'データベース' | '雑誌' | '図書' | '電子ブック'
+  logout: boolean
+  content: string
+  access: string
+  links?: Link[]
+  heading?: boolean
+  imgs?: Img[]
+}
+export type ItemHeading = {
+  name: string
+  heading: true
+  content: string
+}
 
 const props = defineProps<{
   items: (Item | ItemHeading)[]
@@ -12,7 +33,6 @@ const props = defineProps<{
       v-for="(item, i) in props.items"
       :key="'item' + i"
       cols="12"
-      xl="8"
     >
       <VCard
         v-if="item.heading"

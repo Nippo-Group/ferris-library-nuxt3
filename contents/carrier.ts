@@ -1,7 +1,8 @@
+import type { Item, ItemHeading } from '@/components/templates/ListCarrier.vue'
+
 import imgLibrariELogin from '@/assets/images/carrier/librariE-login.png'
 import imgLibrariEQr from '@/assets/images/carrier/librariE-qr.png'
 import imgLibrariECarrier from '@/assets/images/carrier/librariE-carrier.png'
-import type { Img } from '@/components/templates/DialogImg.vue'
 
 export const categories = [
   '企業や業種を研究する',
@@ -11,27 +12,6 @@ export const categories = [
 ] as const
 
 export type Categories = typeof categories[number]
-
-export type Link = {
-  name: string
-  url: string
-}
-
-export type Item = {
-  name: string
-  type: 'データベース' | '雑誌' | '図書' | '電子ブック'
-  logout: boolean
-  content: string
-  access: string
-  links?: Link[]
-  heading?: boolean
-  imgs?: Img[]
-}
-export type ItemHeading = {
-  name: string
-  heading: true
-  content: string
-}
 
 export const items1: (Item | ItemHeading)[] = [
   {
