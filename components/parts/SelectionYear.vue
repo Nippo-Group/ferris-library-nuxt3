@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useElementSize } from '@/composables/common'
+
 export type Item = {
   label: string
   value: string
@@ -19,7 +21,7 @@ const value = computed({
 })
 
 const root = ref<HTMLElement>()
-const { width } = useEventResize(root)
+const { width } = useElementSize(root)
 
 const sp = computed(() => {
   if (width.value) {

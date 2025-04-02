@@ -1,5 +1,6 @@
 export * from './useConfirmDL'
 export * from './useDisplayMode'
+export * from './useElementSize'
 export * from './useLanguage'
 export * from './useMultiSelected'
 export * from './useSelected'
