@@ -1,6 +1,8 @@
-import { useGetExhibitions } from '@/composables/exhibition/useGetExhibitions'
 import type { Exhibition } from '@/types/exhibitions'
 import type { Queries } from '@/composables/exhibition/useGetExhibitions'
+
+import { useGetExhibitions } from '@/composables/exhibition/useGetExhibitions'
+import { getFiscalYear } from '@/utils'
 
 export const useExhibitions = (queries: Queries) => {
   const { contents, error } = useGetExhibitions(queries)
@@ -13,10 +15,9 @@ export const useExhibitions = (queries: Queries) => {
     return exhibitionList.value ? exhibitionList.value.length : 0
   })
 
-  const { getfiscalYear } = useFiscalYear()
   const years = computed<string[] | undefined>(() => {
     const arr = contents.value?.map((news) => {
-      return getfiscalYear(news.date)
+      return getFiscalYear(news.date)
     })
     const set = new Set(arr)
     return [...set]

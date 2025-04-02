@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { useNews } from '@/composables/news/useNews'
 import type { News } from '@/types/news'
+import { useNews } from '@/composables/news/useNews'
+import { getFiscalYear } from '@/utils'
 
 const title = 'News'
 useSeoMeta({ title, description: '図書館のニュース一覧です。' })
@@ -22,7 +23,6 @@ const { page, pageLength, itemStart, itemEnd, setContentSize }
 
 // 年度別絞り込み機能
 const { yearValue, yearItems, setYearItems } = useSelectionYear()
-const { getfiscalYear } = useFiscalYear()
 
 // ウォッチャー
 watchEffect(() => {
@@ -35,7 +35,7 @@ watch(yearValue, () => {
       return true
     }
     else {
-      return getfiscalYear(news.date) === yearValue.value
+      return getFiscalYear(news.date) === yearValue.value
     }
   }
   setFilterFuncs([func])

@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { useExhibitions } from '@/composables/exhibition/useExhibitions'
 import type { Exhibition } from '@/types/exhibitions'
+import { useExhibitions } from '@/composables/exhibition/useExhibitions'
+import { getFiscalYear } from '@/utils'
 
 const title = '企画展示'
 useSeoMeta({
@@ -32,7 +33,6 @@ const openDitails = (item: Exhibition) => {
 }
 
 // 検索
-const { getfiscalYear } = useFiscalYear()
 const keyword = ref<string | undefined>()
 const filter = (text: string, date: string): boolean => {
   const flag: boolean[] = []
@@ -48,7 +48,7 @@ const filter = (text: string, date: string): boolean => {
     flag.push(true)
   }
   else {
-    flag.push(getfiscalYear(date) === yearValue.value)
+    flag.push(getFiscalYear(date) === yearValue.value)
   }
 
   return flag.every(value => value === true)

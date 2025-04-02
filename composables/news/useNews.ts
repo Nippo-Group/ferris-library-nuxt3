@@ -1,6 +1,8 @@
-import { useGetNews } from '@/composables/news/useGetNews'
 import type { News } from '@/types/news'
 import type { Queries } from '@/composables/news/useGetNews'
+
+import { useGetNews } from '@/composables/news/useGetNews'
+import { getFiscalYear } from '@/utils'
 
 export const useNews = (queries: Queries) => {
   const { contents, error } = useGetNews(queries)
@@ -13,10 +15,9 @@ export const useNews = (queries: Queries) => {
     return newsList.value ? newsList.value.length : 0
   })
 
-  const { getfiscalYear } = useFiscalYear()
   const years = computed<string[] | undefined>(() => {
     const arr = contents.value?.map((news) => {
-      return getfiscalYear(news.date)
+      return getFiscalYear(news.date)
     })
     const set = new Set(arr)
     return [...set]
