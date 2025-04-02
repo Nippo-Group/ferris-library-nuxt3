@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { News } from '@/types/news'
 import { dateFormat } from '@/utils'
+import { useVisible } from '@/composables/common'
 
 defineProps<{
   contents: News

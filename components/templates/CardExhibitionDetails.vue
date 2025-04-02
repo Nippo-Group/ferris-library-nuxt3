@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useVisible } from '@/composables/common'
+
 type Props = {
   title: string
   content: string

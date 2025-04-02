@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useVisible } from '@/composables/common'
 import { useEbookList } from '@/composables/ebooks/useEbookList'
 import { optionsCategory, optionsLanguage, toolbarText } from '@/contents/database'
 

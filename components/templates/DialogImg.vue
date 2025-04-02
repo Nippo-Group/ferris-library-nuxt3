@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useVisible } from '@/composables/common/useVisible'
+import { useVisible } from '@/composables/common'
 
 export type Img = {
   src: string
