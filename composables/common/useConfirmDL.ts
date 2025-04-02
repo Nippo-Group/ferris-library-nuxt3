@@ -1,3 +1,7 @@
+/**
+ * ファイルを開く・ダウンロードする際に確認メッセージを表示する
+ * @returns
+ */
 export const useConfirmDL = () => {
   const visible = useState<boolean>()
   const fileName = useState<string>()

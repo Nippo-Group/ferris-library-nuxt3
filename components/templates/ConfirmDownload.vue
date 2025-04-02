@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useConfirmDL } from '@/composables/common/useConfirmDL'
+
 const { visible, fileName, fileType, fileUrl, dismiss } = useConfirmDL()
 </script>
 

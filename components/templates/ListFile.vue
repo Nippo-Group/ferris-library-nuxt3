@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { File } from '@/types/file'
+import { useConfirmDL } from '@/composables/common/useConfirmDL'
 
 const confirmDLShow = useConfirmDL().show
 
