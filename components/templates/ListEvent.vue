@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import type { Dayjs } from 'dayjs'
+import { dateFormat } from '@/utils'
 
-const props = defineProps<{
+defineProps<{
   title: string
   date: Dayjs
   eventsRyokuen: string[]
   eventsYamate: string[]
 }>()
-
-const { ja, simple } = useDateFormat(props.date)
 </script>
 
 <template>
@@ -35,8 +34,8 @@ const { ja, simple } = useDateFormat(props.date)
               />
               {{ title }}
             </div>
-            <time :datetime="simple">
-              {{ ja }}
+            <time :datetime="dateFormat(date, 'simple')">
+              {{ dateFormat(date, 'ja') }}
             </time>
           </VCardText>
           <VCardActions class="justify-center">

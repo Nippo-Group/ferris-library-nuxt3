@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import type { Exhibition } from '@/types/exhibitions'
+import { dateFormat } from '@/utils'
 
 defineProps<{
   item: Exhibition
 }>()
-
-const dayjs = useDayjs()
 </script>
 
 <template>
@@ -32,7 +31,7 @@ const dayjs = useDayjs()
       v-if="item.date"
       class="pb-2"
     >
-      {{ useDateFormat(dayjs(item.date)).ja.value }}
+      {{ dateFormat(item.date, 'ja') }}
     </VCardSubtitle>
   </VCard>
 </template>

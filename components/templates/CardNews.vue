@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import type { News } from '@/types/news'
+import { dateFormat } from '@/utils'
 
 defineProps<{
   items: News
 }>()
 
 defineEmits(['dialogClose'])
-
-const dayjs = useDayjs()
 </script>
 
 <template>
@@ -24,12 +23,12 @@ const dayjs = useDayjs()
         {{ items.title }}
       </VCardTitle>
       <VCardSubtitle>
-        {{ useDateFormat(dayjs(items.date)).ja.value }}
+        {{ dateFormat(items.date, 'ja') }}
       </VCardSubtitle>
     </VCardItem>
     <div class="content-body">
       <VCardText class="news-contents">
-        <PartsHtmlTextArea :data="items.contents" />
+        <PartsHtmlTextArea :data="items.contents.toString()" />
       </VCardText>
       <VCardActions
         v-if="items.actions && items.actions.link"

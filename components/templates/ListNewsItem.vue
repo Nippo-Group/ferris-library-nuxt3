@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { News } from '@/types/news'
+import { dateFormat } from '@/utils'
 
 defineProps<{
   contents: News
@@ -22,7 +23,7 @@ const { isReservation } = useReservation()
       {{ contents.title }}
     </VListItemTitle>
     <VListItemSubtitle>
-      {{ useDateFormat(contents.date).ja.value }}
+      {{ dateFormat(contents.date, 'ja') }}
     </VListItemSubtitle>
     <template #append>
       <icons-arrow-right-circle
