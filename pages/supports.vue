@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { File } from '@/types/file'
-import { useMultiSelected } from '@/composables/common/useMultiSelected'
+import { useMultiSelected } from '@/composables/common/'
 
 const title = '障がいのある方への支援'
 useSeoMeta({

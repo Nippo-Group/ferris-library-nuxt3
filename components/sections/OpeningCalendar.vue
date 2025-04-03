@@ -7,7 +7,7 @@ import ryokuen from '@/assets/json/calendar-ryokuen.json'
 import yamate from '@/assets/json/calendar-yamate.json'
 import common from '@/assets/json/calendar-common.json'
 
-import { useLanguage } from '@/composables/common/useLanguage'
+import { useLanguage } from '@/composables/common/'
 
 type BeforeFormatEvent = {
   name: string

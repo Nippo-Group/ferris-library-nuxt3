@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { serviceEng, periodHeadersEng, periodItemsEng, notesEng } from '@/contents/service'
-import { useMultiSelected } from '@/composables/common/useMultiSelected'
+import { useMultiSelected } from '@/composables/common/'
 
 const title = 'Lending Service'
 useSeoMeta({

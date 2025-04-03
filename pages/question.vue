@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { faqList } from '@/contents/question'
-import { useMultiSelected } from '@/composables/common/useMultiSelected'
+import { useMultiSelected } from '@/composables/common/'
 
 const title = 'よくある質問 Q&A'
 useSeoMeta({

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import json from '@/assets/json/digital-collection/collection08.json'
-import { useConfirmDL } from '@/composables/common/useConfirmDL'
+import { useConfirmDL } from '@/composables/common/'
 
 const { show } = useConfirmDL()
 

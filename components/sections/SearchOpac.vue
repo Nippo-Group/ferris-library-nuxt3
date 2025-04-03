@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { mdiOpenInNew, mdiMagnify, mdiSend } from '@mdi/js'
-import { useLanguage } from '@/composables/common/useLanguage'
+import { useLanguage } from '@/composables/common/'
 
 const tab = ref(null)
 const qSearchWord = ref('')

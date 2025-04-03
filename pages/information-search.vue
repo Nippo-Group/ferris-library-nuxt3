@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useStepper } from '@/composables/common/useStepper'
+import { useStepper } from '@/composables/common/'
 import { items } from '@/contents/information-search'
 
 const title = '情報検索'

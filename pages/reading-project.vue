@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useNews } from '@/composables/news/useNews'
-import { useConfirmDL } from '@/composables/common/useConfirmDL'
+import { useConfirmDL } from '@/composables/common/'
 import titleImage from '@/assets/images/reading-project/reading-project-title.png'
 import {
   isWhat,

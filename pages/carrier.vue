@@ -3,7 +3,7 @@ import type { Categories } from '@/contents/carrier'
 import { categories, items1, items2, items3 } from '@/contents/carrier'
 import imgCarrier01 from '@/assets/images/carrier/carrier-01.gif'
 import imgCarrier02 from '@/assets/images/carrier/carrier-02.gif'
-import { useSelected } from '@/composables/common/useSelected'
+import { useSelected } from '@/composables/common/'
 
 const title = 'キャリア支援'
 const description

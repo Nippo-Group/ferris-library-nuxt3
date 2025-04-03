@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLanguage } from '@/composables/common/useLanguage'
+import { useLanguage } from '@/composables/common/'
 
 import menusJapanese from '@/assets/json/menu.json'
 import menusEnglish from '@/assets/json/menu-english.json'

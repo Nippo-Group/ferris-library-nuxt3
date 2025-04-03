@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Items } from '@/contents/visitor'
 import { newsList, items, itemsContents, aboutCopy } from '@/contents/visitor'
-import { useSelected } from '@/composables/common/useSelected'
+import { useSelected } from '@/composables/common/'
 import { converterMarkdown } from '@/utils'
 
 const title = '学外の方へ'

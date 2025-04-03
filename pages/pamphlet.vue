@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useSelected } from '@/composables/common/useSelected'
+import { useSelected } from '@/composables/common/'
 
 const title = '学生向けパンフレット'
 useSeoMeta({

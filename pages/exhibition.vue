@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Exhibition } from '@/types/exhibitions'
+import { useSelectionYear } from '@/composables/common'
 import { useExhibitions } from '@/composables/exhibition/useExhibitions'
 import { getFiscalYear } from '@/utils'
 

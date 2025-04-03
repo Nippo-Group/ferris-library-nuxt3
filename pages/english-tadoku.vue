@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useConfirmDL } from '@/composables/common/useConfirmDL'
+import { useConfirmDL } from '@/composables/common/'
 
 import imgTadokuEBSCO from '~/assets/images/english-tadoku/tadoku-EBSCO.jpg'
 import imgTadokuGVRL from '~/assets/images/english-tadoku/tadoku-GVRL.jpg'

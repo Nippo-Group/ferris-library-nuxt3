@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useSelected } from '@/composables/common/useSelected'
+import { useSelected } from '@/composables/common/'
 
 const title = 'フロアマップ'
 const description = '緑園本館・山手分室のフロアマップ、緑園本館の「今どこマップ」です'

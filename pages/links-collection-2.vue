@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { categories, items } from '@/contents/links-collection2'
-import { useSelected } from '@/composables/common/useSelected'
+import { useSelected } from '@/composables/common/'
 
 const title = '二次情報リンク集'
 const description

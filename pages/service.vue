@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { service, numHeaders, numQuantity, periodHeaders, periodItems, notes } from '@/contents/service'
-import { useMultiSelected } from '@/composables/common/useMultiSelected'
+import { useMultiSelected } from '@/composables/common/'
 
 const title = '貸出サービス'
 useSeoMeta({

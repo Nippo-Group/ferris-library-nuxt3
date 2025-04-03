@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { updateDate, items } from '@/contents/newspaper'
-import { useSelected } from '@/composables/common/useSelected'
+import { useSelected } from '@/composables/common/'
 
 const title = '緑園本館所蔵新聞リスト'
 useSeoMeta({
