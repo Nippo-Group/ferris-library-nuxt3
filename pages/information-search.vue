@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useStepper } from '@/composables/common/useStepper'
 import { items } from '@/contents/information-search'
 
 const title = '情報検索'
@@ -7,7 +8,7 @@ useSeoMeta({
   description: '情報検索のためのフローチャートをご紹介しています。',
 })
 
-const { active, next, prev } = useVisibleSevral()
+const { active, next, prev } = useStepper(3)
 </script>
 
 <template>

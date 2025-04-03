@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useStepper } from '@/composables/common/useStepper'
 import { itemsEng } from '@/contents/information-search'
 
 const title = 'Information search'
@@ -8,7 +9,7 @@ useSeoMeta({
 })
 definePageMeta({ layout: 'english' })
 
-const { active, next, prev } = useVisibleSevral()
+const { active, next, prev } = useStepper(3)
 </script>
 
 <template>
