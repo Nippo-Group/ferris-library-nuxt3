@@ -2,11 +2,13 @@
   {
     "category": "ホーム",
     "id": "home",
+    "icon": "home",
     "push": "/"
   },
   {
     "category": "施設について",
     "id": "facility",
+    "icon": "library",
     "contents": [
       {
         "title": "アクセス・問い合わせ",
@@ -38,6 +40,7 @@
   {
     "category": "利用案内",
     "id": "service",
+    "icon": "info",
     "contents": [
       {
         "title": "貸出サービス",
@@ -89,6 +92,7 @@
   {
     "category": "情報検索",
     "id": "retrieval",
+    "icon": "search",
     "contents": [
       {
         "title": "情報検索",
@@ -143,7 +147,7 @@
   {
     "category": "トピックス",
     "id": "topics",
-    "icon": "book",
+    "icon": "bookOpen",
     "contents": [
       {
         "title": "読書運動プロジェクト",
@@ -175,6 +179,7 @@
   {
     "category": "関連リンク",
     "id": "links",
+    "icon": "connection",
     "contents": [
       {
         "title": "OPAC",
@@ -207,6 +212,7 @@
   {
     "category": "English page",
     "id": "englishPage",
+    "icon": "translate",
     "push": "/english"
   }
 ]

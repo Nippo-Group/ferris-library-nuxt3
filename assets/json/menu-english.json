@@ -2,11 +2,13 @@
   {
     "category": "Home",
     "id": "home",
+    "icon": "home",
     "push": "/english"
   },
   {
     "category": "Facility",
     "id": "facility",
+    "icon": "library",
     "contents": [
       {
         "title": "Contact / Access",
@@ -23,6 +25,7 @@
   {
     "category": "Service",
     "id": "service",
+    "icon": "info",
     "contents": [
       {
         "title": "Lending Service",
@@ -49,11 +52,13 @@
   {
     "category": "Information search",
     "id": "retrieval",
+    "icon": "search",
     "push": "/english/information-search"
   },
   {
     "category": "Links",
     "id": "links",
+    "icon": "connection",
     "contents": [
       {
         "title": "OPAC",
@@ -75,6 +80,7 @@
   {
     "category": "日本語ページ",
     "id": "japanesePage",
+    "icon": "translate",
     "push": "/"
   }
 ]

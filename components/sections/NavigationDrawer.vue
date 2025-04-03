@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { useNavigationDrawer } from '@/composables/layout/useNavigationDrawer'
+import type { IconKey } from '@/utils'
+import { getIcon } from '@/utils'
 
 const { visible } = useNavigationDrawer()
 
@@ -13,7 +15,7 @@ type Submenu = {
 type Menu = {
   category: string
   id: string
-  icon?: string
+  icon: IconKey
   push?: string
   contents?: Submenu[]
 }
@@ -44,11 +46,8 @@ const open = ref([])
           v-if="menu.push"
           :to="menu.push"
           :title="menu.category"
-        >
-          <template #prepend>
-            <PartsNavIcon :name="menu.id" />
-          </template>
-        </VListItem>
+          :prepend-icon="getIcon(menu.icon)"
+        />
         <VListGroup
           v-else
           :value="menu.id"
@@ -57,11 +56,8 @@ const open = ref([])
             <VListItem
               v-bind="props"
               :title="menu.category"
-            >
-              <template #prepend>
-                <PartsNavIcon :name="menu.id" />
-              </template>
-            </VListItem>
+              :prepend-icon="getIcon(menu.icon)"
+            />
           </template>
           <VListItem
             v-for="content in menu.contents"
@@ -71,12 +67,9 @@ const open = ref([])
             :to="content.push || undefined"
             :href="content.href || undefined"
             :target="content.href ? '_blank' : '_self'"
+            :append-icon="content.href ? getIcon('openInNew') : undefined"
             link
-          >
-            <template #append>
-              <IconsOpenInNew v-if="content.href" />
-            </template>
-          </VListItem>
+          />
         </VListGroup>
       </template>
     </VList>
