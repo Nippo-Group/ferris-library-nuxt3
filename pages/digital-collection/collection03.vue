@@ -54,10 +54,7 @@ const images = computed(() => {
           :items="breadcrumbs"
         />
       </VCol>
-      <VCol
-        cols="12"
-        xl="6"
-      >
+      <VCol cols="12">
         <VCard>
           <VRow>
             <VCol
