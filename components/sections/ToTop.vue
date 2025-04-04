@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { iconMap } from '@/utils'
+
 const fab = ref(false)
 
 const onScroll = () => {
@@ -22,7 +24,10 @@ const toTop = () => {
       icon
       @click="toTop"
     >
-      <icons-align-top size="large" />
+      <VIcon
+        :icon="iconMap['alignTop']"
+        size="large"
+      />
     </VBtn>
   </transition>
 </template>

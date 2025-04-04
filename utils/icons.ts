@@ -5,6 +5,7 @@ import {
   mdiBookSearch,
   mdiCalendarMultiselect,
   mdiCalendarToday,
+  mdiChatQuestion,
   mdiCheckboxMarkedCircleOutline,
   mdiChevronDown,
   mdiChevronLeft,
@@ -37,9 +38,11 @@ import {
   mdiTextBoxSearchOutline,
   mdiTranslate,
 } from '@mdi/js'
+import type { File } from '@/types'
 
-const iconMap = {
+export const iconMap = {
   alert: mdiAlertCircleOutline,
+  alignTop: mdiFormatVerticalAlignTop,
   arrowRight: mdiArrowRightCircleOutline,
   bookOpen: mdiBookOpenVariant,
   bookSearch: mdiBookSearch,
@@ -60,7 +63,6 @@ const iconMap = {
   excel: mdiFileExcelOutline,
   pdf: mdiFilePdfBox,
   word: mdiFileWordOutline,
-  verticalAlign: mdiFormatVerticalAlignTop,
   tap: mdiGestureTap,
   home: mdiHome,
   info: mdiInformation,
@@ -72,6 +74,7 @@ const iconMap = {
   menuRight: mdiMenuRight,
   newspaper: mdiNewspaperVariantOutline,
   openInNew: mdiOpenInNew,
+  question: mdiChatQuestion,
   send: mdiSend,
   sort: mdiSort,
   search: mdiTextBoxSearchOutline,
@@ -80,13 +83,18 @@ const iconMap = {
 
 export type IconKey = keyof typeof iconMap
 
-export const getIcon = (key: IconKey) => iconMap[key]
-
 /**
  * 開閉アイコン
  * @param {boolean} flag Falseで開く（Down）、Trueで閉まる（Up）
  * @returns Icon
  */
 export const openShutIcon = (flag: boolean) => {
-  return getIcon(flag ? 'chevronUp' : 'chevronDown')
+  return iconMap[flag ? 'chevronUp' : 'chevronDown']
+}
+
+/**
+ * ファイルタイプアイコン
+ */
+export const getFileIcon = (type: File) => {
+  return iconMap[type]
 }

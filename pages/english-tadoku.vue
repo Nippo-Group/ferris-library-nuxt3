@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useConfirmDL } from '@/composables/common/'
+import { iconMap } from '@/utils'
 
 import imgTadokuEBSCO from '~/assets/images/english-tadoku/tadoku-EBSCO.jpg'
 import imgTadokuGVRL from '~/assets/images/english-tadoku/tadoku-GVRL.jpg'
@@ -87,7 +88,10 @@ const { show } = useConfirmDL()
                     "
                   >
                     アクセスガイド
-                    <IconsFilePdf end />
+                    <VIcon
+                      :icon="iconMap['pdf']"
+                      end
+                    />
                   </VBtn>
                 </VCardActions>
               </VCard>
@@ -156,15 +160,15 @@ const { show } = useConfirmDL()
                 </VCardText>
                 <VList density="compact">
                   <VListItem>
-                    <icons-circle-small />
+                    <VIcon :icon="iconMap['circle']" />
                     Page Turners 50巻
                   </VListItem>
                   <VListItem>
-                    <icons-circle-small />
+                    <VIcon :icon="iconMap['circle']" />
                     Foundations Reading Library 42巻
                   </VListItem>
                   <VListItem>
-                    <icons-circle-small />
+                    <VIcon :icon="iconMap['circle']" />
                     e-future graded comic readers 54冊
                   </VListItem>
                 </VList>
@@ -203,7 +207,10 @@ const { show } = useConfirmDL()
                     "
                   >
                     「レベル別」アクセスガイド
-                    <IconsFilePdf end />
+                    <VIcon
+                      :icon="iconMap['pdf']"
+                      end
+                    />
                   </VBtn>
                 </VCardActions>
               </VCard>
@@ -252,7 +259,10 @@ const { show } = useConfirmDL()
                     "
                   >
                     読書記録シート
-                    <IconsFilePdf end />
+                    <VIcon
+                      :icon="iconMap['pdf']"
+                      end
+                    />
                   </VBtn>
                 </VCardActions>
               </VCard>

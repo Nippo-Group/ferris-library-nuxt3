@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { mdiOpenInNew, mdiMagnify, mdiSend } from '@mdi/js'
 import { useLanguage } from '@/composables/common/'
+import { iconMap } from '@/utils'
 
 const tab = ref(null)
 const qSearchWord = ref('')
@@ -40,7 +41,10 @@ const rules = ref({
 
 <template>
   <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
-    <icons-library-shelves start /> {{ contents.title }}
+    <VIcon
+      :icon="iconMap['shelves']"
+      start
+    /> {{ contents.title }}
   </div>
   <VCard>
     <VTabs

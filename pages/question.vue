@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { faqList } from '@/contents/question'
 import { useMultiSelected } from '@/composables/common/'
+import { iconMap } from '@/utils'
 
 const title = 'よくある質問 Q&A'
 useSeoMeta({
@@ -33,7 +34,8 @@ const { selectedList } = useMultiSelected()
             <VExpansionPanelTitle>
               <div class="d-flex align-center gap-4">
                 <div class="pr-4">
-                  <icons-faq-question
+                  <VIcon
+                    :icon="iconMap['question']"
                     size="large"
                     color="primary"
                   />

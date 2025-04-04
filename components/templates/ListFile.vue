@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { File } from '@/types/file'
 import { useConfirmDL } from '@/composables/common/'
+import { iconMap } from '@/utils'
 
 const confirmDLShow = useConfirmDL().show
 
@@ -40,12 +41,22 @@ defineProps<{
         </VListItemTitle>
         <VListItemSubtitle>{{ item.note }}</VListItemSubtitle>
         <template #append>
-          <icons-file-pdf v-if="item.type === 'PDF'" />
-          <icons-file-word v-else-if="item.type === 'Word'" />
-          <icons-file-excel
-            v-else-if="item.type === 'Excel'"
+          <VIcon
+            v-if="item.type === 'PDF'"
+            :icon="iconMap['pdf']"
           />
-          <icons-file-document v-else />
+          <VIcon
+            v-else-if="item.type === 'Word'"
+            :icon="iconMap['word']"
+          />
+          <VIcon
+            v-else-if="item.type === 'Excel'"
+            :icon="iconMap['excel']"
+          />
+          <VIcon
+            v-else
+            :icon="iconMap['doc']"
+          />
         </template>
       </VListItem>
 

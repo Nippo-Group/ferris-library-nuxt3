@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { News } from '@/types/news'
-import { dateFormat } from '@/utils'
+import { dateFormat, iconMap } from '@/utils'
 
 defineProps<{
   items: News
@@ -13,7 +13,7 @@ defineEmits(['dialogClose'])
   <VCard tag="article">
     <VCardItem>
       <p class="text-primary mb-4">
-        <icons-newspaper-variant />
+        <VIcon :icon="iconMap['newspaper']" />
         News
       </p>
       <VCardTitle

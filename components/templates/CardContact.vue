@@ -7,6 +7,7 @@ import {
   mdiTrain,
   mdiTrainCarPassengerVariant,
 } from '@mdi/js'
+import { iconMap } from '@/utils'
 
 type Access = {
   transportation: string
@@ -97,7 +98,7 @@ const accessIcon = (type: string): string | undefined => {
           v-if="props.googleMap"
           #append
         >
-          <icons-open-in-new />
+          <VIcon :icon="iconMap['openInNew']" />
         </template>
       </VListItem>
       <VDivider inset />

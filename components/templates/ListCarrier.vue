@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Img } from '@/components/templates/DialogImg.vue'
+import { iconMap } from '@/utils'
 
 export type Link = {
   name: string
@@ -61,7 +62,7 @@ const props = defineProps<{
             class="mb-0"
           >
             <span class="text-orange ml-2">
-              <icons-alert-circle />
+              <VIcon :icon="iconMap['alert']" />
               利用後は必ずログアウトしてください
             </span>
           </p>

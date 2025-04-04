@@ -2,7 +2,7 @@
 import type { Exhibition } from '@/types/exhibitions'
 import { useSelectionYear } from '@/composables/common'
 import { useExhibitions } from '@/composables/exhibition/useExhibitions'
-import { getFiscalYear } from '@/utils'
+import { getFiscalYear, iconMap } from '@/utils'
 
 const title = '企画展示'
 useSeoMeta({
@@ -93,11 +93,9 @@ watchEffect(() => {
           />
           <VSpacer />
           <VBtn
-            icon
+            :icon="iconMap['sort']"
             @click="reverse"
-          >
-            <icons-sort-defult />
-          </VBtn>
+          />
         </VToolbar>
       </VCol>
     </VRow>

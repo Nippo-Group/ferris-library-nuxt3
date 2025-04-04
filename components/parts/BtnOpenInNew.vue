@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { iconMap } from '@/utils'
+
 const props = defineProps({
   link: {
     type: String,
@@ -18,9 +20,9 @@ const props = defineProps({
     class="btn-open-in-new"
     color="grey-lighten-4"
     variant="elevated"
+    :append-icon="iconMap['openInNew']"
   >
     {{ props.link }}
-    <icons-open-in-new end />
   </VBtn>
 </template>
 

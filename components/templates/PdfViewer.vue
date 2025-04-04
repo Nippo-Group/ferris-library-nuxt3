@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { VuePDF, usePDF } from '@tato30/vue-pdf'
 import { useConfirmDL } from '@/composables/common/'
+import { iconMap } from '@/utils'
 
 type State = {
   src: string
@@ -51,7 +52,10 @@ const fileName = computed(() => {
         @click="show(fileName, props.src, 'PDF')"
       >
         ファイルをひらく
-        <icons-file-pdf end />
+        <VIcon
+          :icon="iconMap['pdf']"
+          end
+        />
       </VBtn>
     </div>
   </div>

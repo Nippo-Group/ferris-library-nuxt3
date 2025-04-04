@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useNews } from '@/composables/news/useNews'
 import { pickOut } from '@/contents/index'
+import { iconMap } from '@/utils'
 
 const { newsList } = useNews({ limit: 6, orders: '-date' })
 </script>
@@ -25,7 +26,11 @@ const { newsList } = useNews({ limit: 6, orders: '-date' })
         tag="section"
       >
         <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
-          <icons-gesture-tap start />Pick Out
+          <VIcon
+            :icon="iconMap['tap']"
+            start
+          />
+          Pick Out
         </div>
         <VSlideGroup
           multiple
@@ -69,7 +74,11 @@ const { newsList } = useNews({ limit: 6, orders: '-date' })
         tag="section"
       >
         <div class="text-center text-md-left text-h5 mb-2 text-grey-darken-2">
-          <icons-newspaper-variant start />News
+          <VIcon
+            :icon="iconMap['newspaper']"
+            start
+          />
+          News
         </div>
         <templates-list-news :contents-list="newsList" />
         <div class="text-center mt-5">

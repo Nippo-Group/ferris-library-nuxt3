@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { items, note } from '@/contents/consortium'
+import { iconMap } from '@/utils'
 
 const title = '横浜市内大学図書館コンソーシアム'
 const description
@@ -39,7 +40,10 @@ useSeoMeta({
               :title="item.name"
             >
               <template #append>
-                <icons-open-in-new v-if="item.url" />
+                <VIcon
+                  v-if="item.url"
+                  :icon="iconMap['openInNew']"
+                />
               </template>
             </VListItem>
           </VList>

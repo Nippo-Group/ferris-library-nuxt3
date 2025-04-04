@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useConfirmDL } from '@/composables/common/'
+import { iconMap } from '@/utils'
 
 const { visible, fileName, fileType, fileUrl, dismiss } = useConfirmDL()
 </script>
@@ -18,15 +19,16 @@ const { visible, fileName, fileType, fileUrl, dismiss } = useConfirmDL()
         target="_blank"
       >
         はい
-        <icons-download-defult end>
-          mdi-download
-        </icons-download-defult>
+        <VIcon
+          :icon="iconMap['download']"
+          end
+        />
       </VBtn>
       <VBtn
         icon
         @click="dismiss"
       >
-        <icons-close-defult />
+        <VIcon :icon="iconMap['close']" />
       </VBtn>
     </template>
   </VSnackbar>

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { iconMap } from '@/utils'
+
 export type Item = {
   name: string
   url: string
@@ -36,7 +38,8 @@ const props = defineProps<State>()
             {{ item.overseas ? "海外" : "国内" }}
           </VChip>
           <span class="wrap-text">{{ item.name }}</span>
-          <icons-open-in-new
+          <VIcon
+            :icon="iconMap['openInNew']"
             end
             size="x-small"
           />

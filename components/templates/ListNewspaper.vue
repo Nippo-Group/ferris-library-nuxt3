@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Newspaper } from '@/types/newspaper'
+import { iconMap } from '@/utils'
 
 defineProps<{
   items: Newspaper[]
@@ -17,14 +18,20 @@ defineProps<{
     >
       <VExpansionPanelTitle>
         <span v-if="!newspaper.subTitle">
-          <icons-newspaper-variant start />
+          <VIcon
+            :icon="iconMap['newspaper']"
+            start
+          />
           {{ newspaper.title }}
         </span>
         <span
           v-else
           class="newspaper-sub-title"
         >
-          <icons-menu-right start />
+          <VIcon
+            :icon="iconMap['menuRight']"
+            start
+          />
           {{ newspaper.subTitle }}
         </span>
       </VExpansionPanelTitle>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Dayjs } from 'dayjs'
-import { dateFormat } from '@/utils'
+import { dateFormat, iconMap } from '@/utils'
 
 defineProps<{
   title: string
@@ -28,7 +28,8 @@ defineProps<{
         >
           <VCardText class="text-center pb-0">
             <div class="text-h6">
-              <icons-calendar-multiselect
+              <VIcon
+                :icon="iconMap['calendarMultiselect']"
                 start
                 size="small"
               />

@@ -2,6 +2,7 @@
 import { useVisible } from '@/composables/common'
 import { useEbookList } from '@/composables/ebooks/useEbookList'
 import { optionsCategory, optionsLanguage, toolbarText } from '@/contents/database'
+import { iconMap } from '@/utils'
 
 const title = 'データベース・電子ブック'
 useSeoMeta({
@@ -39,9 +40,9 @@ const { visible, show, dismiss } = useVisible()
           <VSpacer />
           <VBtn
             variant="outlined"
+            :prepend-icon="iconMap['search']"
             @click="show"
           >
-            <IconsSearchDefult />
             絞り込み検索
           </VBtn>
         </VToolbar>

@@ -7,6 +7,7 @@ import ryokuen from '@/assets/json/calendar-ryokuen.json'
 import yamate from '@/assets/json/calendar-yamate.json'
 import common from '@/assets/json/calendar-common.json'
 
+import { iconMap } from '@/utils'
 import { useLanguage } from '@/composables/common/'
 
 type BeforeFormatEvent = {
@@ -158,9 +159,9 @@ onMounted(() => {
           v-bind="props"
           color="primary"
           variant="elevated"
+          :prepend-icon="iconMap['menuDown']"
         >
           {{ locationLabel[selectLocation] }}
-          <IconsMenuDown end />
         </VBtn>
       </template>
       <VList>
@@ -186,7 +187,7 @@ onMounted(() => {
           icon
           @click="fullcalendarApi.prev()"
         >
-          <IconsChevronLeft />
+          <VIcon :icon="iconMap['chevronLeft']" />
         </VBtn>
       </template>
     </VTooltip>
@@ -197,11 +198,9 @@ onMounted(() => {
       <template #activator="{ props }">
         <VBtn
           v-bind="props"
-          icon
+          :icon="iconMap['chevronRight']"
           @click="fullcalendarApi.next()"
-        >
-          <IconsChevronRight />
-        </VBtn>
+        />
       </template>
     </VTooltip>
     <VSpacer />
@@ -212,11 +211,9 @@ onMounted(() => {
       <template #activator="{ props }">
         <VBtn
           v-bind="props"
-          icon
+          :icon="iconMap['calendarToday']"
           @click="fullcalendarApi.today()"
-        >
-          <IconsCalendarToday />
-        </VBtn>
+        />
       </template>
     </VTooltip>
   </VToolbar>

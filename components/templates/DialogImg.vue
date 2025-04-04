@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useVisible } from '@/composables/common'
+import { iconMap } from '@/utils'
 
 export type Img = {
   src: string
@@ -48,7 +49,7 @@ const { visible, show, dismiss } = useVisible()
             density="compact"
             @click="dismiss"
           >
-            <icons-close-defult />
+            <VIcon :icon="iconMap['close']" />
           </VBtn>
         </VToolbar>
         <VImg

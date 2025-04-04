@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useVisible } from '@/composables/common'
+import { iconMap } from '@/utils'
 
 type Props = {
   title: string
@@ -44,7 +45,7 @@ defineExpose({
       <VCardText class="content-body">
         <VListItem v-if="placeToExhibit">
           <template #prepend>
-            <icons-map-marker />
+            <VIcon :icon="iconMap['map']" />
           </template>
           展示場所 ‐ {{ placeToExhibit }}
         </VListItem>

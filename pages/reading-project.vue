@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useNews } from '@/composables/news/useNews'
 import { useConfirmDL } from '@/composables/common/'
+import { iconMap } from '@/utils'
 import titleImage from '@/assets/images/reading-project/reading-project-title.png'
 import {
   isWhat,
@@ -77,7 +78,10 @@ const { newsList } = useNews({
                     @click="show(document.name, document.url, document.type)"
                   >
                     {{ document.name }}
-                    <icons-file-pdf end />
+                    <VIcon
+                      :icon="iconMap['pdf']"
+                      end
+                    />
                   </VBtn>
                 </VCol>
               </VRow>
@@ -99,13 +103,11 @@ const { newsList } = useNews({
                 :key="index"
                 rounded="xl"
                 density="compact"
+                :prepend-icon="iconMap['checkboxMarked']"
               >
                 <VListItemTitle class="wrap-text">
                   {{ item }}
                 </VListItemTitle>
-                <template #prepend>
-                  <icons-check-marked />
-                </template>
               </VListItem>
             </VList>
             <VCardText>
@@ -141,7 +143,7 @@ const { newsList } = useNews({
                   </VListItemTitle>
                   <VListItemSubtitle>{{ media.source }}</VListItemSubtitle>
                   <template #append>
-                    <icons-open-in-new />
+                    <VIcon :icon="iconMap['openInNew']" />
                   </template>
                 </VListItem>
               </template>

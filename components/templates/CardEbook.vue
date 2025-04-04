@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Link, Document } from '@/types/ebook'
 import { useConfirmDL } from '@/composables/common/'
+import { iconMap } from '@/utils'
 
 const { show } = useConfirmDL()
 
@@ -66,7 +67,9 @@ defineProps<{
                 v-if="logout"
                 class="text-orange ml-2"
               >
-                <icons-alert-circle siza="small" />
+                <VIcon
+                  :icon="iconMap['alert']"
+                />
                 利用後は必ずログアウトしてください
               </span>
             </p>
@@ -93,18 +96,22 @@ defineProps<{
                   @click="show(file.name, file.url, file.type)"
                 >
                   {{ file.name }}
-                  <icons-file-pdf
+
+                  <VIcon
                     v-if="file.type == 'PDF'"
+                    :icon="iconMap['pdf']"
                     dark
                     end
                   />
-                  <icons-file-excel
+                  <VIcon
                     v-else-if="file.type == 'Excel'"
+                    :icon="iconMap['excel']"
                     dark
                     end
                   />
-                  <icons-file-document
+                  <VIcon
                     v-else
+                    :icon="iconMap['doc']"
                     dark
                     end
                   />

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { iconMap } from '@/utils'
+
 defineProps<{
   address: string
 }>()
@@ -28,7 +30,8 @@ const setCopyMessage = () => {
     lines="one"
     :stacked="false"
   >
-    <icons-email-defult
+    <VIcon
+      :icon="iconMap['email']"
       start
       size="large"
       color="primary"
@@ -41,13 +44,11 @@ const setCopyMessage = () => {
     >
       <template #activator="{ props }">
         <VBtn
-          icon
+          :icon="iconMap['copy']"
           v-bind="props"
           variant="text"
           @click="copyToClipboard(address)"
-        >
-          <icons-content-copy />
-        </VBtn>
+        />
       </template>
     </VTooltip>
   </VBanner>

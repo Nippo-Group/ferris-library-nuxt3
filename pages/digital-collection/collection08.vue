@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import json from '@/assets/json/digital-collection/collection08.json'
 import { useConfirmDL } from '@/composables/common/'
+import { iconMap } from '@/utils'
 
 const { show } = useConfirmDL()
 
@@ -85,7 +86,7 @@ const images = computed(() => {
                     @click="show(zipFile.name, zipFile.url, zipFile.type)"
                   >
                     一括ダウンロード
-                    <icons-download-defult />
+                    <VIcon :icon="iconMap['download']" />
                   </VBtn>
                 </VCardActions>
               </VCol>

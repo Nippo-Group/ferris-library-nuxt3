@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { News } from '@/types/news'
-import { dateFormat, isFuture } from '@/utils'
+import { dateFormat, isFuture, iconMap } from '@/utils'
 import { useVisible } from '@/composables/common'
 
 defineProps<{
@@ -26,7 +26,8 @@ const { visible, dismiss, show } = useVisible()
       {{ dateFormat(contents.date, 'ja') }}
     </VListItemSubtitle>
     <template #append>
-      <icons-arrow-right-circle
+      <VIcon
+        :icon="iconMap['arrowRight']"
         class="text-gray-lighten-1"
       />
     </template>

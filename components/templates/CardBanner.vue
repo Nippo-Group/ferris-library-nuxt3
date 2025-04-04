@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { iconMap } from '@/utils'
+
 defineProps<{
   href: string
   img: string
@@ -22,7 +24,7 @@ defineProps<{
     >
       <VCardTitle class="text-white">
         {{ title }}
-        <icons-open-in-new />
+        <VIcon :icon="iconMap['openInNew']" />
       </VCardTitle>
     </VImg>
   </VCard>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useNavigationDrawer } from '@/composables/layout/useNavigationDrawer'
 import type { IconKey } from '@/utils'
-import { getIcon } from '@/utils'
+import { iconMap } from '@/utils'
 
 const { visible } = useNavigationDrawer()
 
@@ -46,7 +46,7 @@ const open = ref([])
           v-if="menu.push"
           :to="menu.push"
           :title="menu.category"
-          :prepend-icon="getIcon(menu.icon)"
+          :prepend-icon="iconMap[menu.icon]"
         />
         <VListGroup
           v-else
@@ -56,7 +56,7 @@ const open = ref([])
             <VListItem
               v-bind="props"
               :title="menu.category"
-              :prepend-icon="getIcon(menu.icon)"
+              :prepend-icon="iconMap[menu.icon]"
             />
           </template>
           <VListItem
@@ -67,7 +67,7 @@ const open = ref([])
             :to="content.push || undefined"
             :href="content.href || undefined"
             :target="content.href ? '_blank' : '_self'"
-            :append-icon="content.href ? getIcon('openInNew') : undefined"
+            :append-icon="content.href ? iconMap['openInNew'] : undefined"
             link
           />
         </VListGroup>

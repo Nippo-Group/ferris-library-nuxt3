@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { itemsEng } from '@/contents/reference'
+import { iconMap } from '@/utils'
 
 const title = 'Reference Service'
 useSeoMeta({
@@ -44,7 +45,10 @@ definePageMeta({ layout: 'english' })
               >
                 <VCardTitle>
                   {{ content.subtitle }}
-                  <icons-open-in-new v-if="content.link" />
+                  <VIcon
+                    v-if="content.link"
+                    :icon="iconMap['openInNew']"
+                  />
                 </VCardTitle>
                 <VCardText>
                   {{ content.text }}

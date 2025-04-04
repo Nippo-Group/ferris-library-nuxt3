@@ -2,7 +2,7 @@
 import type { Items } from '@/contents/visitor'
 import { newsList, items, itemsContents, aboutCopy } from '@/contents/visitor'
 import { useSelected } from '@/composables/common/'
-import { converterMarkdown } from '@/utils'
+import { converterMarkdown, iconMap } from '@/utils'
 
 const title = '学外の方へ'
 useSeoMeta({
@@ -25,7 +25,10 @@ const { selected } = useSelected<Items>()
     <VRow>
       <VCol cols="12">
         <div class="text-h6 mb-2">
-          <IconsNewspaperVariant start />
+          <VIcon
+            :icon="iconMap['newspaper']"
+            start
+          />
           関連ニュース
           <templates-list-news :contents-list="newsList" />
         </div>
