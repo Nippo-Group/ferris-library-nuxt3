@@ -1,12 +1,4 @@
 <script setup lang="ts">
-import {
-  mdiPhone,
-  mdiFax,
-  mdiEmail,
-  mdiMapMarker,
-  mdiTrain,
-  mdiTrainCarPassengerVariant,
-} from '@mdi/js'
 import { iconMap } from '@/utils'
 
 type Access = {
@@ -30,9 +22,9 @@ const props = defineProps<CardContactProps>()
 const accessIcon = (type: string): string | undefined => {
   switch (type) {
     case 'train':
-      return mdiTrain
+      return iconMap['train']
     case 'car':
-      return mdiTrainCarPassengerVariant
+      return iconMap['bus']
   }
 }
 </script>
@@ -56,14 +48,14 @@ const accessIcon = (type: string): string | undefined => {
       <VListItem
         v-if="props.tel"
         :href="'tel:' + props.tel"
-        :prepend-icon="mdiPhone"
+        :prepend-icon="iconMap['phone']"
       >
         <VListItemTitle>{{ props.tel }}</VListItemTitle>
         <VListItemSubtitle>Phone</VListItemSubtitle>
       </VListItem>
       <VListItem
         v-if="props.fax"
-        :prepend-icon="mdiFax"
+        :prepend-icon="iconMap['fax']"
       >
         <VListItemTitle>{{ props.fax }}</VListItemTitle>
         <VListItemSubtitle>Fax</VListItemSubtitle>
@@ -72,7 +64,7 @@ const accessIcon = (type: string): string | undefined => {
       <VListItem
         v-if="props.eMali"
         :href="'mailto:' + props.eMali"
-        :prepend-icon="mdiEmail"
+        :prepend-icon="iconMap['email']"
       >
         <VListItemTitle>{{ props.eMali }}</VListItemTitle>
         <VListItemSubtitle>Organization</VListItemSubtitle>
@@ -81,7 +73,7 @@ const accessIcon = (type: string): string | undefined => {
       <VListItem
         :href="props.googleMap || undefined"
         target="_blank"
-        :prepend-icon="mdiMapMarker"
+        :prepend-icon="iconMap['map']"
       >
         <VListItemSubtitle v-if="props.addressNumber">
           〒{{ props.addressNumber }}

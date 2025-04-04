@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { mdiOpenInNew, mdiMagnify, mdiSend } from '@mdi/js'
 import { useLanguage } from '@/composables/common/'
 import { iconMap } from '@/utils'
 
@@ -106,15 +105,15 @@ const rules = ref({
                 type="text"
                 variant="outlined"
                 density="compact"
-                :prepend-inner-icon="mdiMagnify"
-                :append-inner-icon="mdiOpenInNew"
+                :prepend-inner-icon="iconMap['magnify']"
+                :append-inner-icon="iconMap['openInNew']"
                 clearable
                 maxlength="128"
               >
                 <template #append>
                   <VBtn
                     type="submit"
-                    :icon="mdiSend"
+                    :icon="iconMap['send']"
                     variant="text"
                   />
                 </template>

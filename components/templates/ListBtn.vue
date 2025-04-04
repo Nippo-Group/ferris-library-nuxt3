@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiOpenInNew } from '@mdi/js'
+import { iconMap } from '@/utils'
 
 type List = {
   name?: string
@@ -32,7 +32,7 @@ defineProps<{
         <VIcon
           v-show="item.openInNew"
           end
-          :icon="mdiOpenInNew"
+          :icon="iconMap['openInNew']"
         />
       </VBtn>
       <p class="text-grey">
