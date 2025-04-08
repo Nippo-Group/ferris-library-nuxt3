@@ -26,7 +26,7 @@ useSeoMeta({
           <VCol cols="12">
             <VCard>
               <VCardTitle>{{ item.category }}</VCardTitle>
-              <templates-list-file :items="item.contents" />
+              <TemplatesListFile :items="item.contents" />
             </VCard>
           </VCol>
         </VRow>

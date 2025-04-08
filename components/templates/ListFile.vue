@@ -8,6 +8,24 @@ const confirmDLShow = useConfirmDL().show
 defineProps<{
   items: File[]
 }>()
+
+const getIcon = (key: string) => {
+  switch (key) {
+    case 'PDF':
+      return iconMap['pdf']
+      break
+    case 'Word':
+      return iconMap['word']
+      break
+    case 'Excel':
+      return iconMap['excel']
+      break
+
+    default:
+      return iconMap['docs']
+      break
+  }
+}
 </script>
 
 <template>
@@ -42,20 +60,8 @@ defineProps<{
         <VListItemSubtitle>{{ item.note }}</VListItemSubtitle>
         <template #append>
           <VIcon
-            v-if="item.type === 'PDF'"
-            :icon="iconMap['pdf']"
-          />
-          <VIcon
-            v-else-if="item.type === 'Word'"
-            :icon="iconMap['word']"
-          />
-          <VIcon
-            v-else-if="item.type === 'Excel'"
-            :icon="iconMap['excel']"
-          />
-          <VIcon
-            v-else
-            :icon="iconMap['doc']"
+            :icon="getIcon(item.type)"
+            size="large"
           />
         </template>
       </VListItem>

@@ -54,6 +54,7 @@ const fileName = computed(() => {
         ファイルをひらく
         <VIcon
           :icon="iconMap['pdf']"
+          size="large"
           end
         />
       </VBtn>

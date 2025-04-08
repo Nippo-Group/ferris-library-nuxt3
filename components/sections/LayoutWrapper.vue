@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { useLanguage } from '@/composables/common/'
-
-import menusJapanese from '@/assets/json/menu.json'
-import menusEnglish from '@/assets/json/menu-english.json'
+import { globalNavigation, globalNavigationEng } from '@/contents/globalNavigation'
 
 const { langState } = useLanguage()
 
@@ -11,9 +9,9 @@ const copyright = 'Ferris University Library'
 const menus = computed(() => {
   switch (langState.value) {
     case 'en':
-      return menusEnglish
+      return globalNavigationEng
     default:
-      return menusJapanese
+      return globalNavigation
   }
 })
 </script>
