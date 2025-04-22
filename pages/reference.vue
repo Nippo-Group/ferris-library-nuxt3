@@ -222,25 +222,6 @@ useSeoMeta({
                   />
                 </template>
               </TemplatesDialogDefault>
-
-              <TemplatesDialogDefault title="音楽図書館協議会共通閲覧証">
-                <template #contents>
-                  <div class="text-h6 pt-6">
-                    対象館
-                  </div>
-                  <p>音楽図書館協議会加盟館</p>
-                  <div class="text-h6 pt-6">
-                    対象者
-                  </div>
-                  <p>音楽学部所属の教員・院生・学部生</p>
-                </template>
-                <template #actions>
-                  <PartsBtnOpenInNew
-                    link="音楽図書館協議会"
-                    url="https://mlaj.org/"
-                  />
-                </template>
-              </TemplatesDialogDefault>
             </ContainersStack>
           </VCardActions>
         </VCard>

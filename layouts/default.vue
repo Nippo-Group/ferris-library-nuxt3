@@ -9,7 +9,7 @@ const copyright = 'Ferris University Library'
 
 useHead({
   titleTemplate: (title) => {
-    return title ? `${title} - ${siteTitle.value}` : siteTitle.value
+    return title ? `${title} - ${siteTitle}` : siteTitle
   },
   htmlAttrs: {
     lang: 'ja',

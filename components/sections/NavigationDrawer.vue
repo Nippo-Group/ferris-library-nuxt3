@@ -12,7 +12,7 @@ type Submenu = {
   push?: string
   href?: string
 }
-type Menu = {
+export type Menu = {
   category: string
   id: string
   icon: IconKey

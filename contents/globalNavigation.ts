@@ -1,4 +1,6 @@
-export const globalNavigation = [
+import type { Menu } from '@/components/sections/NavigationDrawer.vue'
+
+export const globalNavigation: Menu[] = [
   {
     category: 'ホーム',
     id: 'home',
@@ -212,7 +214,7 @@ export const globalNavigation = [
   },
 ]
 
-export const globalNavigationEng = [
+export const globalNavigationEng: Menu[] = [
   {
     category: 'Home',
     id: 'home',
