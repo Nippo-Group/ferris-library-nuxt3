@@ -71,36 +71,4 @@ export const items: Item[] = [
       },
     ],
   },
-  {
-    name: 'ゼミ対象図書館ガイダンス',
-    target: '教員',
-    files: [
-      {
-        name: 'ガイダンス申込書（PDF版）',
-        url: '/documents/application-form/app-guidance.pdf',
-        type: 'PDF',
-      },
-      {
-        name: 'ガイダンス申込書（Word版）',
-        url: '/documents/application-form/app-guidance.docx',
-        type: 'Word',
-      },
-    ],
-  },
-  {
-    name: '新入生対象図書館ツアー',
-    target: '教員',
-    files: [
-      {
-        name: '図書館ツアー申込書（PDF版）',
-        url: '/documents/application-form/app-tours.pdf',
-        type: 'PDF',
-      },
-      {
-        name: '図書館ツアー申込書（Word版）',
-        url: '/documents/application-form/app-tours.docx',
-        type: 'Word',
-      },
-    ],
-  },
 ]

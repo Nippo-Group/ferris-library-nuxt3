@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { toursEng, guidanceEng } from '@/contents/tour'
+import { toursEng, guidanceEng } from '~/contents/guidance'
 
-const title = 'Tour and Guidance Workshops'
+const title = 'Guidance Workshops'
 useSeoMeta({
   title,
   description:
-    'Tour for new students, guidance on literature search for graduation thesis and report writing.',
+    'Guidance for new students and literature search guidance for graduation thesis and report writing are introduced.',
 })
 definePageMeta({ layout: 'english' })
 </script>

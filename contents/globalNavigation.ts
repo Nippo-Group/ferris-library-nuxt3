@@ -50,9 +50,9 @@ export const globalNavigation: Menu[] = [
         push: '/reference',
       },
       {
-        title: 'ツアー・ガイダンス',
-        id: 'tour',
-        push: '/tour',
+        title: 'ガイダンス',
+        id: 'guidance',
+        push: '/guidance',
       },
       {
         title: 'コンソーシアム',
@@ -254,9 +254,9 @@ export const globalNavigationEng: Menu[] = [
         push: '/english/reference',
       },
       {
-        title: 'Tour and Guidance',
-        id: 'tour',
-        push: '/english/tour',
+        title: 'Guidance Workshops',
+        id: 'guidance',
+        push: '/english/guidance',
       },
       {
         title: 'Various application form',

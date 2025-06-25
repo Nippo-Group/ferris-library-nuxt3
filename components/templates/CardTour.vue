@@ -66,9 +66,6 @@ const { visible, inversion } = useVisible()
             </ul>
           </template>
         </VCardText>
-        <VCardActions>
-          <PartsBtnMyLibrary />
-        </VCardActions>
       </div>
     </VExpandTransition>
   </VCard>

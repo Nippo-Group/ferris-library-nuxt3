@@ -1,5 +1,5 @@
 export const tours = {
-  title: 'ツアー',
+  title: 'ガイダンス（新入生向け）',
   text: '新入生が大学での学習を始めるにあたり、必要不可欠な図書館の利用方法を知ってもらうことを目的としています。R&Rや導入演習などの授業単位で実施します。専任教員・非常勤教員の方々からのお申し込みを受け付けます。',
   contents: [
     {
@@ -15,12 +15,12 @@ export const tours = {
     },
     {
       subtitle: '申込方法',
-      text: '毎年度3月中旬に配付する「新入生図書館ツアー申込書」（MyLibraryにログインして取得できます）にご記入の上お申し込みください。',
+      text: '毎年度4月初旬にお知らせするGoogle Formからお申込みください。',
     },
   ],
 }
 export const toursEng = {
-  title: 'Tours',
+  title: 'Guidance (For new students)',
   text: 'To introduce our services and facilities to new students, the University Library offers tailor-made tours for class groups at the start of each academic year. We accept applications from faculty (including part-time lecturers) on behalf of their classes.',
   contents: [
     {
@@ -42,7 +42,7 @@ export const toursEng = {
 }
 
 export const guidance = {
-  title: 'ガイダンス',
+  title: 'ガイダンス（授業・ゼミ向け）',
   text: '卒業論文やレポートを執筆する際に必要となる、文献の探し方の習得を目的としています。<br />基礎的な文献検索の実習などをパッケージ化して、ゼミ単位・授業単位で実施します。専任教員・非常勤教員の方々からのお申し込みを受け付けます。<br />このほか学生の希望により個別のガイダンスも受け付けています。',
   contents: [
     {
@@ -59,13 +59,13 @@ export const guidance = {
     },
     {
       subtitle: '申込方法',
-      text: '「ゼミ対象図書館ガイダンス申込書」（MyLibraryにログインして取得できます）にご記入の上お申し込みください。',
+      text: '毎年度4月初旬にお知らせするGoogle Formからお申込みください。',
     },
   ],
 }
 
 export const guidanceEng = {
-  title: 'Guidance',
+  title: 'Guidance (For classes and seminars)',
   text: 'We offer guidance workshops designed to develop and strengthen the research skills that 3rd and 4th year students need in order to find and use information sources for their graduation theses. We accept applications from faculty (including part-time lecturers) on behalf of their seminar groups.',
   contents: [
     {

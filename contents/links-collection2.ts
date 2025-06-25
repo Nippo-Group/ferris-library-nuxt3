@@ -136,4 +136,12 @@ export const items: Item[] = [
     author: '国立情報学研究所（NII）',
     text: '文部科学省および日本学術振興会が交付する科学研究費補助金により行われた研究の当初採択時のデータ（採択課題）と研究成果の概要（研究実績報告，研究成果概要）を収録',
   },
+  {
+    name: 'researchmap（リサーチマップ）',
+    url: 'https://researchmap.jp/',
+    category: '研究者、研究活動情報',
+    overseas: false,
+    author: '国立研究開発法人科学技術振興機構（JST）',
+    text: '研究者が業績を管理・発信できるようにすることを目的とした、データベース型研究者総覧',
+  },
 ]

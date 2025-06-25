@@ -397,12 +397,12 @@
     "documents": [
       {
         "name": "Arts & Science I",
-        "url": "https://www.jstor.org/titlelists/journals/as?filter=head_titles&fileFormat=xls",
+        "url": "https://www.jstor.org/titlelists/journals/as?filter=head_titles&fileFormat=xlsx",
         "type": "Excel"
       },
       {
         "name": "Arts & Science Ⅲ",
-        "url": "https://www.jstor.org/titlelists/journals/asiii?filter=head_titles&fileFormat=xls",
+        "url": "https://www.jstor.org/titlelists/journals/asiii?filter=head_titles&fileFormat=xlsx",
         "type": "Excel"
       },
       {
@@ -1249,6 +1249,10 @@
     "links": [
       {
         "name": "アクセス",
+        "url": "https://reo.nii.ac.jp/hss/hcpp18_searchdetail"
+      },
+      {
+        "name": "横断検索",
         "url": "http://reo.nii.ac.jp/hss/"
       }
     ],

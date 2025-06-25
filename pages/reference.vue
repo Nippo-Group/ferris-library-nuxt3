@@ -108,6 +108,15 @@ useSeoMeta({
           <VCardTitle> 紹介状 </VCardTitle>
           <VCardText>
             他大学の図書館を利用するために必要な紹介状を発行します。
+            <VAlert
+              type="info"
+              variant="tonal"
+              class="mt-4"
+            >
+              <p>神奈川県内、横浜市内の大学図書館については原則紹介状なしで利用できる制度があります。</p>
+              <p>下記「共通閲覧証」「横浜市内コンソーシアム加盟大学の図書館を利用する」をご覧ください。</p>
+              <p>公共図書館（横浜市立図書館・神奈川県立図書館・国立国会図書館等）は自由に訪問してください。</p>
+            </VAlert>
           </VCardText>
           <VCardActions class="overflow-x-auto">
             <ContainersStack>
@@ -148,7 +157,7 @@ useSeoMeta({
                 <template #actions>
                   <PartsBtnOpenInNew
                     link="横浜市立図書館蔵書検索ページ"
-                    url="https://opac.lib.city.yokohama.lg.jp/opac/"
+                    url="https://opac.lib.city.yokohama.lg.jp/winj/opac/top.do?lang=ja"
                   />
                 </template>
               </TemplatesDialogDefault>

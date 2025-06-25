@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { tours, guidance } from '@/contents/tour'
+import { tours, guidance } from '~/contents/guidance'
 
-const title = 'ツアー・ガイダンス'
+const title = 'ガイダンス'
 useSeoMeta({
   title,
   description:
-    '新入生向けのツアーと卒業論文やレポート執筆のための文献検索ガイダンスについてのご紹介です。',
+    '新入生向けガイダンスと卒業論文やレポート執筆のための文献検索ガイダンスについてのご紹介です。',
 })
 </script>
 
