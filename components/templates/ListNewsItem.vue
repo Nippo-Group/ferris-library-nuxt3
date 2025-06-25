@@ -8,12 +8,21 @@ defineProps<{
 }>()
 
 const { visible, dismiss, show } = useVisible()
+
+const clickAction = (url?: string): void => {
+  if (url) {
+    window.open(url, '_blank')
+  }
+  else {
+    show()
+  }
+}
 </script>
 
 <template>
   <VListItem
     link
-    @click="show"
+    @click="clickAction(contents.redirect)"
   >
     <VListItemTitle class="wrap-text">
       <span
@@ -27,7 +36,7 @@ const { visible, dismiss, show } = useVisible()
     </VListItemSubtitle>
     <template #append>
       <VIcon
-        :icon="iconMap['arrowRight']"
+        :icon="contents.redirect ? iconMap['openInNew'] :iconMap['arrowRight']"
         class="text-gray-lighten-1"
       />
     </template>
@@ -37,7 +46,7 @@ const { visible, dismiss, show } = useVisible()
     scrollable
     max-width="600"
   >
-    <templates-card-news
+    <TemplatesCardNews
       :items="contents"
       @dialog-close="dismiss"
     />

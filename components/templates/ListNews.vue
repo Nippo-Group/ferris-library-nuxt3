@@ -17,7 +17,7 @@ defineProps<{
         :key="contents.id"
       >
         <VDivider v-show="index > 0" />
-        <templates-list-news-item :contents="contents" />
+        <TemplatesListNewsItem :contents="contents" />
       </template>
     </VList>
     <VCardText v-else>

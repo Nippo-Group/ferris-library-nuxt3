@@ -24,4 +24,5 @@ export type News = {
   actions2?: Actions
   openinnew?: Openinnew
   openinnew2?: Openinnew
+  redirect?: string
 }
