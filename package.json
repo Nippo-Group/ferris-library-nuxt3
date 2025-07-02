@@ -1,6 +1,6 @@
 {
   "name": "ferris-university-library",
-  "version": "3.25.5",
+  "version": "3.25.7",
   "private": true,
   "type": "module",
   "scripts": {

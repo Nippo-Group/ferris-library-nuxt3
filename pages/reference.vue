@@ -254,14 +254,21 @@ useSeoMeta({
       </VCol>
       <VCol cols="12">
         <VCard height="100%">
-          <VCardTitle> ツアー・ガイダンス </VCardTitle>
+          <VCardTitle> ガイダンス </VCardTitle>
           <VCardText>
-            先生方や学生の皆さんのご要望に応じて、図書館の効率的な使い方をご説明します。
+            <p>先生方や学生の皆さんのご要望に応じて、図書館の効果的な使い方をご説明します。</p>
+            <VAlert
+              type="info"
+              variant="tonal"
+              class="mt-4"
+            >
+              ※学生の皆さんの申込は、カウンター又はオンラインレファレンスで受け付けています。
+            </VAlert>
           </VCardText>
           <VCardActions class="overflow-x-auto">
             <PartsBtnInside
-              link="ツアー・ガイダンスページへ"
-              to="/tour"
+              link="ガイダンスページへ"
+              to="/guidance"
             />
           </VCardActions>
         </VCard>
