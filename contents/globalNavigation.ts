@@ -126,6 +126,11 @@ export const globalNavigation: Menu[] = [
         id: 'linksCollection2',
         push: '/links-collection-2',
       },
+      {
+        title: '文献探索ガイド・リンク集',
+        id: 'searchGuide',
+        push: '/search-guide',
+      },
     ],
   },
   {
