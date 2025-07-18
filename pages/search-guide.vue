@@ -1,10 +1,14 @@
 <script setup lang="ts">
-import { items, contentsMap } from '~/contents/search-guide'
+import { items, contentsMap, type Contents } from '~/contents/search-guide'
+import { useSelected } from '~/composables/common/useSelected'
 
 const title = '文献探索ガイド・リンク集'
 useSeoMeta({
   title,
 })
+
+const initValue = 'materials-and-copyright'
+const { selected } = useSelected<Contents>(initValue)
 </script>
 
 <template>
@@ -18,16 +22,16 @@ useSeoMeta({
     </VRow>
     <VRow>
       <VCol>
-        <VTreeview
-          :items
-          item-value="id"
-          open-all
-        />
+        <VCard>
+          <VCardActions>
+            <TemplatesListSearchGuide :items />
+          </VCardActions>
+        </VCard>
       </VCol>
     </VRow>
     <VRow>
       <VCol>
-        <PartsHtmlTextArea :markdown="contentsMap['materials-and-copyright']" />
+        <PartsHtmlTextArea :markdown="contentsMap[selected || initValue]" />
       </VCol>
     </VRow>
   </VContainer>

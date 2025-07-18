@@ -1,28 +1,29 @@
-import materialsAndCopyright from '~/assets/md/search-guide/materials-and-copyright.md'
-import findLibraryMaterials from '~/assets/md/search-guide/find-library-materials.md'
-import browseShelves from '~/assets/md/search-guide/browse-shelves.md'
-import browseInternational from '~/assets/md/search-guide/browse-international.md'
-import browsePsychology from '~/assets/md/search-guide/browse-psychology.md'
-import browseCultural from '~/assets/md/search-guide/browse-cultural.md'
-import opacSearch from '~/assets/md/search-guide/opac-search.md'
-import searchTipsBasic from '~/assets/md/search-guide/search-tips-basic.md'
-import searchTipsAdvanced from '~/assets/md/search-guide/search-tips-advanced.md'
-import opacFeatures from '~/assets/md/search-guide/opac-features.md'
-import findArticles from '~/assets/md/search-guide/find-articles.md'
-import articlesInternational from '~/assets/md/search-guide/articles-international.md'
-import articlesPsychology from '~/assets/md/search-guide/articles-psychology.md'
-import articlesCultural from '~/assets/md/search-guide/articles-cultural.md'
-import findNews from '~/assets/md/search-guide/find-news.md'
-import collectWebInfo from '~/assets/md/search-guide/collect-web-info.md'
-import webInternational from '~/assets/md/search-guide/web-international.md'
-import webPsychology from '~/assets/md/search-guide/web-psychology.md'
-import webCultural from '~/assets/md/search-guide/web-cultural.md'
-import useNonLibraryMaterials from '~/assets/md/search-guide/use-non-library-materials.md'
-import searchOtherLibraries from '~/assets/md/search-guide/search-other-libraries.md'
-import ill from '~/assets/md/search-guide/ill.md'
-import visitLibrary from '~/assets/md/search-guide/visit-library.md'
-import askLibrarian from '~/assets/md/search-guide/ask-librarian.md'
-import supportMenu from '~/assets/md/search-guide/support-menu.md'
+// マークダウンファイルのインポート（`?raw`をつけることでテキストとしてインポートできる。Viteの機能）
+import materialsAndCopyright from '~/assets/md/search-guide/materials-and-copyright.md?raw'
+import findLibraryMaterials from '~/assets/md/search-guide/find-library-materials.md?raw'
+import browseShelves from '~/assets/md/search-guide/browse-shelves.md?raw'
+import browseInternational from '~/assets/md/search-guide/browse-international.md?raw'
+import browsePsychology from '~/assets/md/search-guide/browse-psychology.md?raw'
+import browseCultural from '~/assets/md/search-guide/browse-cultural.md?raw'
+import opacSearch from '~/assets/md/search-guide/opac-search.md?raw'
+import searchTipsBasic from '~/assets/md/search-guide/search-tips-basic.md?raw'
+import searchTipsAdvanced from '~/assets/md/search-guide/search-tips-advanced.md?raw'
+import opacFeatures from '~/assets/md/search-guide/opac-features.md?raw'
+import findArticles from '~/assets/md/search-guide/find-articles.md?raw'
+import articlesInternational from '~/assets/md/search-guide/articles-international.md?raw'
+import articlesPsychology from '~/assets/md/search-guide/articles-psychology.md?raw'
+import articlesCultural from '~/assets/md/search-guide/articles-cultural.md?raw'
+import findNews from '~/assets/md/search-guide/find-news.md?raw'
+import collectWebInfo from '~/assets/md/search-guide/collect-web-info.md?raw'
+import webInternational from '~/assets/md/search-guide/web-international.md?raw'
+import webPsychology from '~/assets/md/search-guide/web-psychology.md?raw'
+import webCultural from '~/assets/md/search-guide/web-cultural.md?raw'
+import useNonLibraryMaterials from '~/assets/md/search-guide/use-non-library-materials.md?raw'
+import searchOtherLibraries from '~/assets/md/search-guide/search-other-libraries.md?raw'
+import ill from '~/assets/md/search-guide/ill.md?raw'
+import visitLibrary from '~/assets/md/search-guide/visit-library.md?raw'
+import askLibrarian from '~/assets/md/search-guide/ask-librarian.md?raw'
+import supportMenu from '~/assets/md/search-guide/support-menu.md?raw'
 
 export const contentsMap = {
   'materials-and-copyright': materialsAndCopyright,
@@ -52,9 +53,9 @@ export const contentsMap = {
   'support-menu': supportMenu,
 } as const
 
-type Contents = keyof typeof contentsMap
+export type Contents = keyof typeof contentsMap
 
-type SearchGuideItem = {
+export type SearchGuideItem = {
   /** ユニークID */
   id: string
   /** タイトル */
