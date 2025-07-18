@@ -60,8 +60,6 @@ export type SearchGuideItem = {
   id: string
   /** タイトル */
   title: string
-  /** タイトルの補足説明 */
-  note?: string
   /** 対応するMDファイル */
   contents?: Contents
   /** 子要素 */
@@ -85,8 +83,7 @@ export const items: SearchGuideItem[] = [
         children: [
           {
             id: 'browse-shelves',
-            title: '直接本棚から探す',
-            note: 'ブラウジング',
+            title: '直接本棚から探す（ブラウジング）',
             contents: 'browse-shelves',
             children: [{
               id: 'browse-international',
@@ -111,22 +108,19 @@ export const items: SearchGuideItem[] = [
             children: [
               {
                 id: 'search-tips-basic',
-                title: '検索のコツ',
-                note: '初級編',
+                title: '検索のコツ（初級編）',
                 contents: 'search-tips-basic',
               },
               {
                 id: 'search-tips-advanced',
-                title: '検索のコツ',
-                note: '上級編',
+                title: '検索のコツ（上級編）',
                 contents: 'search-tips-advanced',
               },
             ],
           },
           {
             id: 'opac-features',
-            title: 'OPACの便利な機能',
-            note: 'MyLibrary',
+            title: 'OPACの便利な機能（MyLibrary）',
             contents: 'opac-features',
           },
         ],
@@ -134,8 +128,7 @@ export const items: SearchGuideItem[] = [
 
       {
         id: 'find-articles',
-        title: '雑誌記事・論文を探す',
-        note: '検索ツールを使う',
+        title: '雑誌記事・論文を探す（検索ツールを使う）',
         contents: 'find-articles',
         children: [
           {
@@ -162,8 +155,7 @@ export const items: SearchGuideItem[] = [
       },
       {
         id: 'collect-web-info',
-        title: 'Webから情報を集める',
-        note: '学会・団体サイトリンク集',
+        title: 'Webから情報を集める（学会・団体サイトリンク集）',
         contents: 'collect-web-info',
         children: [
           {
@@ -192,14 +184,12 @@ export const items: SearchGuideItem[] = [
     children: [
       {
         id: 'search-other-libraries',
-        title: 'フェリス所蔵以外の図書・雑誌を探す',
-        note: '全国版OPAC',
+        title: 'フェリス所蔵以外の図書・雑誌を探す（全国版OPAC）',
         contents: 'search-other-libraries',
       },
       {
         id: 'ill',
-        title: '文献の取寄せ',
-        note: 'ILL＝Inter Library Loan',
+        title: '文献の取寄せ（ILL＝Inter Library Loan）',
         contents: 'ill',
       },
       {

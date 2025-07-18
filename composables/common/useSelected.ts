@@ -5,5 +5,9 @@ export const useSelected = <T>(init?: T) => {
     selected.value = value
   }
 
-  return { selected, setSelected }
+  const removeSelected = (): void => {
+    selected.value = undefined
+  }
+
+  return { selected, setSelected, removeSelected }
 }
