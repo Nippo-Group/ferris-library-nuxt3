@@ -2,6 +2,8 @@
 withDefaults(defineProps<{
   gap?: Gap
   direction?: Direction
+  justify?: Justify
+  items?: Items
 }>(), { gap: 2 })
 
 const gapMap = {
@@ -22,12 +24,37 @@ const directionMap = {
 }
 
 type Direction = keyof typeof directionMap
+
+const justifyMap = {
+  start: 'justify-start',
+  center: 'justify-center',
+  end: 'justify-end',
+  between: 'justify-space-between',
+  around: 'justify-space-around',
+  evenly: 'justify-space-evenly',
+}
+
+type Justify = keyof typeof justifyMap
+
+const itemsMap = {
+  start: 'align-start',
+  center: 'align-center',
+  end: 'align-end',
+  stretch: 'align-stretch',
+}
+
+type Items = keyof typeof itemsMap
 </script>
 
 <template>
   <div
     class="d-flex flex-wrap"
-    :class="[gapMap[gap], direction ? directionMap[direction] : undefined]"
+    :class="[
+      gapMap[gap],
+      direction ? directionMap[direction] : undefined,
+      justify ? justifyMap[justify] : undefined,
+      items ? itemsMap[items] : undefined,
+    ]"
   >
     <slot />
   </div>
