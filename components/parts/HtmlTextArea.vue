@@ -19,6 +19,10 @@ defineProps<{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+.text::v-deep(h1) {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 .text::v-deep(h2) {
   margin-top: 3rem;
 }
