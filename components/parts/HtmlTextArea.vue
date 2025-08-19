@@ -1,16 +1,19 @@
 <script setup lang="ts">
 import { converterMarkdown } from '~/utils/'
 
-defineProps<{
+const props = defineProps<{
   data?: string
   markdown?: string
 }>()
+
+const html = (props.data || converterMarkdown(props.markdown || '')).replace(/<a\b/g,
+  '<a target="_blank" rel="noopener noreferrer"')
 </script>
 
 <template>
   <article
     class="text"
-    v-html="data || converterMarkdown(markdown || '')"
+    v-html="html"
   />
 </template>
 
