@@ -2,9 +2,6 @@
 import materialsAndCopyright from './materials-and-copyright.md?raw'
 import findLibraryMaterials from './find-library-materials.md?raw'
 import browseShelves from './browse-shelves.md?raw'
-import browseInternational from './browse-international.md?raw'
-import browsePsychology from './browse-psychology.md?raw'
-import browseCultural from './browse-cultural.md?raw'
 import opacSearch from './opac-search.md?raw'
 import searchTipsBasic from './search-tips-basic.md?raw'
 import searchTipsAdvanced from './search-tips-advanced.md?raw'
@@ -25,13 +22,17 @@ import visitLibrary from './visit-library.md?raw'
 import askLibrarian from './ask-librarian.md?raw'
 import supportMenu from './support-menu.md?raw'
 
+export * from './browse-international'
+export * from './browse-cultural'
+export * from './browse-psychology'
+
 export const contentsMap = {
   'materials-and-copyright': materialsAndCopyright,
   'find-library-materials': findLibraryMaterials,
   'browse-shelves': browseShelves,
-  'browse-international': browseInternational,
-  'browse-psychology': browsePsychology,
-  'browse-cultural': browseCultural,
+  'browse-international': browseShelves,
+  'browse-psychology': browseShelves,
+  'browse-cultural': browseShelves,
   'opac-search': opacSearch,
   'search-tips-basic': searchTipsBasic,
   'search-tips-advanced': searchTipsAdvanced,
@@ -85,21 +86,6 @@ export const items: SearchGuideItem[] = [
             id: 'browse-shelves',
             title: '直接本棚から探す（ブラウジング）',
             contents: 'browse-shelves',
-            children: [{
-              id: 'browse-international',
-              title: '国際社会学科向け',
-              contents: 'browse-international',
-            },
-            {
-              id: 'browse-psychology',
-              title: '心理コミュニケーション学科向け',
-              contents: 'browse-psychology',
-            },
-            {
-              id: 'browse-cultural',
-              title: '文化表現学科向け',
-              contents: 'browse-cultural',
-            }],
           },
           {
             id: 'opac-search',

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { contentsMap, browseInternational, type Shelves } from '~/contents/search-guide'
-import { departments, type Department } from '~/types'
+import { contentsMap, browseInternational, browseCultural, browsePsychology } from '~/contents/search-guide'
+import { departments, type Department, type Shelves } from '~/types'
 
 const title = '文献探索ガイド・リンク集'
 useSeoMeta({
@@ -13,8 +13,8 @@ const tab = ref<Department>(departments.international.id)
 
 const shelves: Record<Department, Shelves> = {
   international: browseInternational,
-  cultural: [],
-  psychology: [],
+  cultural: browseCultural,
+  psychology: browsePsychology,
 }
 </script>
 
@@ -63,33 +63,44 @@ const shelves: Record<Department, Shelves> = {
               <VList>
                 <VListGroup
                   v-for="shelf in shelves[department.id]"
-                  :key="shelf.shelf"
-                  :value="shelf.shelf"
+                  :key="shelf.name"
+                  :value="shelf.name"
                 >
                   <template #activator="{ props }">
                     <VListItem
                       v-bind="props"
-                      :title="shelf.shelf"
+                      :title="shelf.name"
                       :prepend-icon="iconMap['shelves']"
                     />
                   </template>
                   <VListGroup
                     v-for="category in shelf.categories"
-                    :key="category.category"
-                    :value="`${shelf.shelf}-${category.category}`"
+                    :key="category.name"
+                    :value="`${shelf.name}-${category.name}`"
                   >
                     <template #activator="{ props }">
                       <VListItem
                         v-bind="props"
-                        :title="category.category"
+                        :title="category.name"
                         :prepend-icon="iconMap['shelf']"
                       />
                     </template>
                     <VListItem
-                      v-for="item in category.items"
-                      :key="item.id"
-                      :title="`${item.id} ${item.title}`"
-                    />
+                      v-for="genre in category.genres"
+                      :key="genre.sign"
+                    >
+                      <ContainersStack
+                        items="center"
+                        :gap="2"
+                      >
+                        <VChip
+                          variant="tonal"
+                        >
+                          {{ genre.sign }}
+                        </VChip>
+                        {{ genre.name }}
+                      </ContainersStack>
+                    </VListItem>
                   </VListGroup>
                 </VListGroup>
               </VList>

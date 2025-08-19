@@ -1,2 +1,5 @@
+export * from './alert'
 export * from './common'
 export * from './department'
+export * from './lang'
+export * from './shelf'
