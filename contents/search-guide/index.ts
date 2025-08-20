@@ -143,23 +143,6 @@ export const items: SearchGuideItem[] = [
         id: 'collect-web-info',
         title: 'Webから情報を集める（学会・団体サイトリンク集）',
         contents: 'collect-web-info',
-        children: [
-          {
-            id: 'web-international',
-            title: '国際社会学科向け',
-            contents: 'web-international',
-          },
-          {
-            id: 'web-psychology',
-            title: '心理コミュニケーション学科向け',
-            contents: 'web-psychology',
-          },
-          {
-            id: 'web-cultural',
-            title: '文化表現学科向け',
-            contents: 'web-cultural',
-          },
-        ],
       },
     ],
   },
