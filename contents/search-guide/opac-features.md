@@ -8,29 +8,17 @@ OPAC・MyLibraryは、ログインして使う個人ページです。
 
 OPAC画面の右上に、「MyLibrary Login」のボタンがありますので、押します。
 
-「ユーザ認証」画面になりますので、フェリスアカウントとパスワード（フェリスパスポートと同じ）を入れて
+「ユーザ認証」画面になりますので、フェリスアカウントとパスワード（フェリスパスポートと同じ）を入れて実行を押してください。
 
 ![Image Description](/images/search-guide/sheet4-001.png)
 
-![Image Description](/images/search-guide/sheet4-002.png)
-
-![Image Description](/images/search-guide/sheet4-003.png)
-
-![Image Description](/images/search-guide/sheet4-004.png)
-
-実行を押してください。
-
-![Image Description](/images/search-guide/sheet4-005.png)
-
-![Image Description](/images/search-guide/sheet4-006.png)
-
 ## MyLibraryの画面とできること
+
+![Image Description](/images/search-guide/sheet4-002.png)
 
 ### ① 英語多読用など電子ブックの学外からの利用
 
-MyLibraryにログインした状態で、「EBSCO eBook」又は「Maruzen eBook Library」のリンクを開くと、
-
-それぞれのプラットフォームが表示され、電子ブックをオンラインで読むことができます。
+MyLibraryにログインした状態で、「EBSCO eBook」又は「Maruzen eBook Library」のリンクを開くと、それぞれのプラットフォームが表示され、電子ブックをオンラインで読むことができます。
 
 ### ② 各種申込書の表示と印刷
 
@@ -59,13 +47,11 @@ MyLibraryにログインした状態で、「EBSCO eBook」又は「Maruzen eBoo
 
 OPACでの検索条件、資料の情報を保存する機能です。
 
+1. 検索結果一覧画面から、検索条件を登録できます。
+2. 図書情報詳細画面から、資料を登録できます。
+3. 登録後、MyLibraryに表示されるようになります。
+
 ![Image Description](/images/search-guide/sheet4-007.png)
-
-検索結果一覧画面から、検索条件を登録できます。
-
-図書情報詳細画面から、資料を登録できます。
-
-登録後、MyLibraryに表示されるようになります。
 
 #### ※新着アラートメール
 
@@ -75,20 +61,18 @@ OPACでの検索条件、資料の情報を保存する機能です。
 
 ### ⑤ オンラインレファレンス
 
-オンラインでの問合せ（図書館利用や資料探索に関する質問など）、課外学修支援メニューの申込が
-
-できます。
+オンラインでの問合せ（図書館利用や資料探索に関する質問など）、課外学修支援メニューの申込ができます。
 
 ## 【リンク】
 
 フェリス女学院大学附属図書館HP
 
-https://www.library.ferris.ac.jp/
+[https://www.library.ferris.ac.jp/](https://www.library.ferris.ac.jp/)
 
 フェリス女学院大学附属図書館OPAC
 
-https://www2.library.ferris.ac.jp/top/index?method=open
+[https://www2.library.ferris.ac.jp/top/index?method=open](https://www2.library.ferris.ac.jp/top/index?method=open)
 
 フェリス女学院大学附属図書館OPAC＞MyLibrary
 
-https://www2.library.ferris.ac.jp/portal/ml/top/
+[https://www2.library.ferris.ac.jp/portal/ml/top/](https://www2.library.ferris.ac.jp/portal/ml/top/)

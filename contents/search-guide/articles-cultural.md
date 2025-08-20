@@ -2,11 +2,7 @@
 
 ![Image Description](/images/search-guide/sheet24-001.png)
 
-![Image Description](/images/search-guide/sheet24-002.png)
-
 ## CiNii Researchから探す （ アクセスフリー ）
-
-![Image Description](/images/search-guide/sheet24-003.png)
 
 （検索テーマ例）「韓国の家族関係の変化」
 
@@ -32,11 +28,7 @@
 
 ![Image Description](/images/search-guide/sheet24-004.png)
 
-![Image Description](/images/search-guide/sheet24-005.png)
-
-・ CiNii検索③：キーワード「（韓国　OR　朝鮮　OR　ソウル）　（ひとり親　OR　一人親　OR　シングル マザー　OR　母子）　関係」
-
-![Image Description](/images/search-guide/sheet24-006.png)
+### ・ CiNii検索③：キーワード「（韓国　OR　朝鮮　OR　ソウル）　（ひとり親　OR　一人親　OR　シングル マザー　OR　母子）　関係」
 
 ＞17件ヒット（2024.10.18）
 
@@ -104,10 +96,6 @@
 
 ![Image Description](/images/search-guide/sheet24-007.png)
 
-![Image Description](/images/search-guide/sheet24-008.png)
-
-![Image Description](/images/search-guide/sheet24-009.png)
-
 ※ヒット数が少ないので、関連する文献をもう少しヒットさせたい。
 
 ### ・ RILM検索：キーワード「Japanese (vocaloid OR "hatsune miku") influence」
@@ -138,11 +126,8 @@ Japan*～Japan Japanese なども含めて検索されます。
 
 ![Image Description](/images/search-guide/sheet24-010.png)
 
-![Image Description](/images/search-guide/sheet24-011.png)
-
 ＞48,2242件ヒット（2024.10.18）
 
-![Image Description](/images/search-guide/sheet24-012.png)
 
 ※ヒット数が多すぎるので、フレーズ検索を使ってみます。
 
@@ -162,21 +147,17 @@ CiNii Articlesではヒットしない文献も数多くあります。
 
 ![Image Description](/images/search-guide/sheet24-013.png)
 
-![Image Description](/images/search-guide/sheet24-014.png)
-
 （検索テ ーマ例）「古事記における火神の意味と役割」
-
-![Image Description](/images/search-guide/sheet24-015.png)
 
 ### ・ キー ワードの整理（類義語、連想語の書き出し）
 
-古 事記～古代文学、日本神話、神典、帝紀、旧辞、伊勢本、卜部本　とか
+古事記～古代文学、日本神話、神典、帝紀、旧辞、伊勢本、卜部本　とか
 
-火 神～カグツチ、迦具土、火之夜藝速男神、火之炫毘古神、火之迦具土神、火神被殺　とか
+火神～カグツチ、迦具土、火之夜藝速男神、火之炫毘古神、火之迦具土神、火神被殺　とか
 
-意 味と役割～比喩、たとえ、神産み　とか
+意味と役割～比喩、たとえ、神産み　とか
 
-※ この ツールはヒット率が低い（文献タイトルから検索）ため、検索ワードは少なめがよいと思います。
+### ※ このツールはヒット率が低い（文献タイトルから検索）ため、検索ワードは少なめがよいと思います。
 
 ### ・ 国 文学・アーカイブ学論文データベース検索：キーワード「古事記　火　神」
 
@@ -186,7 +167,7 @@ CiNii Articlesではヒットしない文献も数多くあります。
 
 ＞4 9件ヒット（2024.10.18）
 
-※ 掲 載誌の特定方法
+### ※ 掲載誌の特定方法
 
 国文学関連雑誌には似たタイトルが多く、フェリスに所蔵があるかOPACで再検索する場合、特定が難しい場合があります。
 
@@ -198,7 +179,7 @@ CiNii Articlesではヒットしない文献も数多くあります。
 
 これらを頼りに、フェリスOPACやCiNii Booksで確認することをお勧めします。
 
-※ 文化表現学科の学修テーマに参考になる他の契約データベース （ 学内利用のみ ）
+## ※ 文化表現学科の学修テーマに参考になる他の契約データベース （ 学内利用のみ ）
 
 学内ネットワーク環境から、図書館HP経由で利用します。
 
@@ -301,7 +282,7 @@ Oxford University Pressから発行されている「Oxford Handbook」（学術
 
 西洋児童文学、童話、絵本などの研究に役立ちます。
 
-※ 文化表現学科の学修テーマに参考になる他の検索ツール （ アクセスフリー ）
+## ※ 文化表現学科の学修テーマに参考になる他の検索ツール （ アクセスフリー ）
 
 ### ・ 東京都立図書館OPAC （雑誌記事検索）
 
@@ -315,7 +296,7 @@ Oxford University Pressから発行されている「Oxford Handbook」（学術
 
 また東京都立多摩図書館は「マガジンバンク」とも呼ばれ、大量の雑誌（冊子）も所蔵しています。
 
-※ 文化表現学科の学修テーマに参考になる他の検索ツール （ 他図書館訪問利用 ）
+## ※ 文化表現学科の学修テーマに参考になる他の検索ツール （ 他図書館訪問利用 ）
 
 ### ・ Web OYA-bunko （大矢壮一文庫雑誌記事検索）
 

@@ -29,7 +29,7 @@
 
 OPAC＞MyLibraryの機能に、オンラインレファレンスがあります。
 
-「OPACの便利な機能（MyLibrary）」を見る
+[「OPACの便利な機能（MyLibrary）」を見る](/search-guide/opac-features)
 
 図書館が閉まっている時間でも、ここから質問を送っておけば、次の開館日には確認し対応します。
 

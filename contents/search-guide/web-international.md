@@ -2,23 +2,7 @@
 
 ## 学会・関連団体サイト（ アクセスフリー ）
 
-《アメリカ関係》 《イギリス・フランス・ヨーロッパ関係》
-
-《アジア関係》 《中国関係》
-
-《韓国・朝鮮関係》 《国際・異文化関係》
-
-《環境・SDGｓ・資源エネルギー関係》 《法律・法学関係》
-
-《経済・経営・マーケティング関係》 《観光関係》
-
-《情報・統計・データサイエンス関係》 《キリスト教・宗教学関係》
-
-### ※学会・団体一覧（日本学術会議協力学術研究団体）
-
-[https://www.scj.go.jp/ja/group/dantai/index.html](https://www.scj.go.jp/ja/group/dantai/index.html)
-
-## 《アメリカ関係》
+### アメリカ関係
 
 アメリカ学会 [https://www.jaas.gr.jp/](https://www.jaas.gr.jp/)
 
@@ -30,7 +14,7 @@
 
 日本ラテンアメリカ学会 [http://www.ajel-jalas.jp/](http://www.ajel-jalas.jp/)
 
-## 《イギリス・フランス・ヨーロッパ関係》
+### イギリス・フランス・ヨーロッパ関係
 
 イタリア学会 [http://studiit.jp/](http://studiit.jp/)
 
@@ -44,7 +28,7 @@
 
 日仏政治学会 [https://www.societe-fr-jp-sciencespo.org/](https://www.societe-fr-jp-sciencespo.org/)
 
-## 《アジア関係》
+### アジア関係
 
 アジア教育学会 [http://jssae.jp/](http://jssae.jp/)
 
@@ -76,7 +60,7 @@
 
 北東アジア学会 [https://anears.net/](https://anears.net/)
 
-## 《中国関係》
+### 中国関係
 
 台湾史研究会 [https://sites.google.com/view/taiwanshi](https://sites.google.com/view/taiwanshi)
 
@@ -108,7 +92,7 @@
 
 日本中国友好協会 [https://www.j-cfa.com/](https://www.j-cfa.com/)
 
-## 《韓国・朝鮮関係》
+### 韓国・朝鮮関係
 
 現代韓国朝鮮学会 [http://www.ackj.org/](http://www.ackj.org/)
 
@@ -116,7 +100,7 @@
 
 朝鮮史研究会 [https://chosenshi.gr.jp/](https://chosenshi.gr.jp/)
 
-## 《国際・異文化関係》
+### 国際・異文化関係
 
 異文化間教育学会 [https://www.intercultural.jp/](https://www.intercultural.jp/)
 
@@ -138,7 +122,7 @@
 
 日本平和学会 [https://www.psaj.org/](https://www.psaj.org/)
 
-## 《環境・SDGｓ・資源エネルギー関係》
+### 環境・SDGｓ・資源エネルギー関係
 
 エネルギー・資源学会 [https://www.jser.gr.jp/](https://www.jser.gr.jp/)
 
@@ -182,7 +166,7 @@
 
 水資源・環境学会 [https://jawre.org/](https://jawre.org/)
 
-## 《法律・法学関係》
+### 法律・法学関係
 
 憲法学会 [https://kempogakkai.jp/](https://kempogakkai.jp/)
 
@@ -202,7 +186,7 @@
 
 比較憲法学会 [https://comparative-cc.blogspot.com/](https://comparative-cc.blogspot.com/)
 
-## 《経済・経営・マーケティング関係》
+### 経済・経営・マーケティング関係
 
 経営行動科学学会 [https://jaas-org.jp/](https://jaas-org.jp/)
 
@@ -254,7 +238,7 @@
 
 日本マーケティング・サイエンス学会 [http://www.jims.gr.jp/](http://www.jims.gr.jp/)
 
-## 《観光関係》
+### 観光関係
 
 観光学術学会 [https://jsts.sc/](https://jsts.sc/)
 
@@ -280,7 +264,7 @@
 
 余暇ツーリズム学会 [https://www.leisure-tourism.com/](https://www.leisure-tourism.com/)
 
-## 《情報・統計・データサイエンス関係》
+### 情報・統計・データサイエンス関係
 
 応用統計学会 [https://www.applstat.gr.jp/](https://www.applstat.gr.jp/)
 
@@ -306,7 +290,7 @@
 
 日本統計学会 [https://www.jss.gr.jp/](https://www.jss.gr.jp/)
 
-## 《キリスト教・宗教学関係》
+### キリスト教・宗教学関係
 
 キリスト教史学会 [https://shsc.jp/](https://shsc.jp/)
 
@@ -327,3 +311,9 @@
 日本佛教学会 [https://nbra.jp/](https://nbra.jp/)
 
 仏教思想学会 [http://bukkyo-gaku.org/](http://bukkyo-gaku.org/)
+
+## 学会・団体一覧（日本学術会議協力学術研究団体）
+
+### 日本学術会議協力学術研究団体
+
+[https://www.scj.go.jp/ja/group/dantai/index.html](https://www.scj.go.jp/ja/group/dantai/index.html)

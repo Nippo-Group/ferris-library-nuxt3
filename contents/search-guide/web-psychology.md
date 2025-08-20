@@ -1,20 +1,16 @@
 # Webから情報を集める（リンク集） ［心理コミュニケーション学科向け］
 
-■ 学会・関連団体サイト（ アクセスフリー ）
+## 学会・関連団体サイト（ アクセスフリー ）
 
-《心理学関係》 《国際・異文化関係》
+心理学関係 国際・異文化関係
 
-《コミュニケーション・身体表現関係》 《ジェンダー・家族関係》
+コミュニケーション・身体表現関係 ジェンダー・家族関係
 
-《日本語教育関係》 《マスメディア・ジャーナリズム関係》
+日本語教育関係 マスメディア・ジャーナリズム関係
 
-《音楽・芸術・映像文化関係》 《情報・統計・データサイエンス関係》
+音楽・芸術・映像文化関係 情報・統計・データサイエンス関係
 
-※学会・団体一覧（日本学術会議協力学術研究団体）
-
-[https://www.scj.go.jp/ja/group/dantai/index.html](https://www.scj.go.jp/ja/group/dantai/index.html)
-
-## 《心理学関係》
+### 心理学関係
 
 産業・組織心理学会 [https://www.jaiop.jp/](https://www.jaiop.jp/)
 
@@ -98,7 +94,7 @@
 
 法と心理学会 [https://jslp.jp/](https://jslp.jp/)
 
-## 《国際・異文化関係》
+### 国際・異文化関係
 
 異文化間教育学会 [https://www.intercultural.jp/](https://www.intercultural.jp/)
 
@@ -122,7 +118,7 @@
 
 日本ラテンアメリカ学会 [http://www.ajel-jalas.jp/](http://www.ajel-jalas.jp/)
 
-## 《コミュニケーション・身体表現関係》
+### コミュニケーション・身体表現関係
 
 公共コミュニケーション学会 [https://www.pras-net.org/](https://www.pras-net.org/)
 
@@ -172,7 +168,7 @@
 
 舞踊学会 [https://www.danceresearch.jp/](https://www.danceresearch.jp/)
 
-## 《ジェンダー・家族関係》
+### ジェンダー・家族関係
 
 家族問題研究学会 [https://jcfr.jp/](https://jcfr.jp/)
 
@@ -200,7 +196,7 @@
 
 比較家族史学会 [http://jscfh.org/#](http://jscfh.org/#)
 
-## 《日本語教育関係》
+### 日本語教育関係
 
 言語文化教育研究学会 [https://alce.jp/](https://alce.jp/)
 
@@ -218,7 +214,7 @@
 
 留学生教育学会 [https://jaise.site/](https://jaise.site/)
 
-## 《マスメディア・ジャーナリズム関係》
+### マスメディア・ジャーナリズム関係
 
 ACジャパン [https://www.ad-c.or.jp/](https://www.ad-c.or.jp/)
 
@@ -264,7 +260,7 @@ NHK放送文化研究所 [https://www.nhk.or.jp/bunken/](https://www.nhk.or.jp/b
 
 マスコミ倫理懇談会全国協議会 [https://www.mec-nc.net/](https://www.mec-nc.net/)
 
-## 《音楽・芸術・映像文化関係》
+### 音楽・芸術・映像文化関係
 
 アート・ドキュメンテーション学会 [http://www.jads.org/](http://www.jads.org/)
 
@@ -292,7 +288,7 @@ NHK放送文化研究所 [https://www.nhk.or.jp/bunken/](https://www.nhk.or.jp/b
 
 日本演劇学会 [https://jstr.org/](https://jstr.org/)
 
-## 《情報・統計・データサイエンス関係》
+### 情報・統計・データサイエンス関係
 
 応用統計学会 [https://www.applstat.gr.jp/](https://www.applstat.gr.jp/)
 
@@ -317,3 +313,9 @@ NHK放送文化研究所 [https://www.nhk.or.jp/bunken/](https://www.nhk.or.jp/b
 統計科学研究会 [https://sites.google.com/view/statsci-bic/home](https://sites.google.com/view/statsci-bic/home)
 
 日本統計学会 [https://www.jss.gr.jp/](https://www.jss.gr.jp/)
+
+## 学会・団体一覧（日本学術会議協力学術研究団体）
+
+### 日本学術会議協力学術研究団体
+
+[https://www.scj.go.jp/ja/group/dantai/index.html](https://www.scj.go.jp/ja/group/dantai/index.html)

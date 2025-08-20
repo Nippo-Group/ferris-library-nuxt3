@@ -1,12 +1,6 @@
-# 雑誌記事・論文を探す（検索例） ［心理コミュニケーション学科向け］
-
-![Image Description](/images/search-guide/sheet20-001.png)
-
-![Image Description](/images/search-guide/sheet20-002.png)
+# 雑誌記事・論文を探す（検索例）心理コミュニケーション学科向け
 
 ## CiNii Researchから探す （ アクセスフリー ）
-
-![Image Description](/images/search-guide/sheet20-003.png)
 
 （検索テーマ例）「学生時代のトラウマと心の回復」
 
@@ -42,7 +36,7 @@
 
 ちなみに通常複数のキーワードをスペースでつなぐ検索は「AND検索」と言い、全てのキーワードがタイトルや抄録に含まれているもののみ、検索結果に出てきます。
 
-![Image Description](/images/search-guide/sheet20-004.png)
+![Image Description](/images/search-guide/sheet20-001.png)
 
 ## 「メディカルオンライン」から探す （契約データベース： 学内利用のみ ）
 
@@ -51,6 +45,8 @@
 「メディカルオンライン」は医学、医療技術など臨床現場を中心とした雑誌記事・論文を検索するツールです。
 
 心理学関連では、臨床心理学、教育心理学、発達心理学、小児心理学などのジャンルが収録されています。
+
+![Image Description](/images/search-guide/sheet20-004.png)
 
 ### ・ メディカルオンライン検索：キーワード「若者　トラウマ」
 
@@ -77,12 +73,6 @@
 
 ＞10件ヒット（2024.10.11）
 
-![Image Description](/images/search-guide/sheet20-005.png)
-
-![Image Description](/images/search-guide/sheet20-006.png)
-
-![Image Description](/images/search-guide/sheet20-007.png)
-
 ※ヒット数が少ないので、関連する文献をもう少しヒットさせたい。
 
 ### ・ RILM検索：キーワード「Japan* game (music OR sound)」
@@ -103,18 +93,13 @@ music*～music、musical、musician なども含めて検索されます。
 
 ヒット数が思ったより少ない場合、キーワードの類義語や連想語をORでつないで検索すると、ヒット数が増えることが多いです。
 
-![Image Description](/images/search-guide/sheet20-008.png)
-
-![Image Description](/images/search-guide/sheet20-009.png)
-
-![Image Description](/images/search-guide/sheet20-010.png)
+![Image Description](/images/search-guide/sheet20-005.png)
 
 ## 「ProQuest」から探す （契約データベース： 学内利用のみ ）
 
 （検索テーマ例）「ハリウッド映画がジェンダー問題に与える影響」
 
-### ・ ProQuest検索：キーワード「Hollywood (movie OR film)
-  (impact or influen*) gender」
+### ・ ProQuest検索：キーワード「Hollywood (movie OR film)  (impact or influen*) gender」
 
 ＞203,001件ヒット（2024.10.18）
 
@@ -136,20 +121,15 @@ music*～music、musical、musician なども含めて検索されます。
 
 ＞161件ヒット（2024.10.18）
 
-![Image Description](/images/search-guide/sheet20-011.png)
-
-![Image Description](/images/search-guide/sheet20-012.png)
-
 このくらいの件数なら、検索結果リストを見ていっても苦にならないかも。
 
-![Image Description](/images/search-guide/sheet20-013.png)
+![Image Description](/images/search-guide/sheet20-008.png)
 
 ## 「JSTOR」から探す （契約データベース： 学内利用のみ ）
 
 （検索テーマ例）「ハリウッド映画がジェンダー問題に与える影響」
 
-### ・ JSTOR検索：キーワード「Hollywood (movie OR film) (impact
-  or influen*) gender」
+### ・ JSTOR検索：キーワード「Hollywood (movie OR film) (impact or influen*) gender」
 
 ＞5.888件ヒット（2024.10.18）
 
@@ -165,7 +145,7 @@ music*～music、musical、musician なども含めて検索されます。
 
 検索すると増加します。
 
-![Image Description](/images/search-guide/sheet20-014.png)
+![Image Description](/images/search-guide/sheet20-011.png)
 
 ## 「東京都立図書館OPAC」から探す （ アクセスフリー ）
 
@@ -173,11 +153,13 @@ music*～music、musical、musician なども含めて検索されます。
 
 （検索テーマ例）「音楽ジャーナリズムの歴史」
 
+![Image Description](/images/search-guide/sheet20-014.png)
+
 ### ・ 東京都立図書館OPAC雑誌記事検索：キーワード「音楽　ジャーナリズム」
 
 ＞49件ヒット（2024.10.14）＞うち東京都立オリジナル情報：11件
 
-※ 心理コミュニケーション学科の学修テーマに参考になる他の契約データベース （ 学内利用のみ ）
+## ※心理コミュニケーション学科の学修テーマに参考になる他の契約データベース （ 学内利用のみ ）
 
 学内ネットワーク環境から、図書館HP経由で利用します。
 
@@ -217,15 +199,11 @@ LGBTQなど性的マイノリティの文化、活動、歴史に関する情報
 
 ### ・ magazineplus
 
-日本で出版された雑誌記事の目録データベースです。CiNii Researchと同様に使えますが、本文閲覧は
-
-できません。CiNiiでは表示されない、雑誌各号の目次情報が掲載されています。
+日本で出版された雑誌記事の目録データベースです。CiNii Researchと同様に使えますが、本文閲覧はできません。CiNiiでは表示されない、雑誌各号の目次情報が掲載されています。
 
 ### ・ The Making of Modern World
 
-15世紀後半から20世紀前半までの経済学、社会思想史など人文・社会科学関係の書籍・雑誌記事
-
-（主に英語文献）を収録したデータベースです。
+15世紀後半から20世紀前半までの経済学、社会思想史など人文・社会科学関係の書籍・雑誌記事（主に英語文献）を収録したデータベースです。
 
 ### ・ Popular Culture in Britain and America, 1950-1975
 
@@ -233,7 +211,7 @@ LGBTQなど性的マイノリティの文化、活動、歴史に関する情報
 
 学生運動、女性解放、反戦、ファッション、若者文化などの研究に参考になります。
 
-※ 心理コミュニケーション学科の学修テーマに参考になる他の検索ツール （ アクセスフリー ）
+## ※心理コミュニケーション学科の学修テーマに参考になる他の検索ツール （ アクセスフリー ）
 
 ### ・ 川喜多記念映画文化財団雑誌検索データベース
 
@@ -247,9 +225,7 @@ LGBTQなど性的マイノリティの文化、活動、歴史に関する情報
 
 [https://www.ninjal.ac.jp/resources/search/](https://www.ninjal.ac.jp/resources/search/)
 
-国立国語研究所のサイトです。日本語語彙、方言、日本語教育、日本語学習者などに関する
-
-データや資料が掲載されています。
+国立国語研究所のサイトです。日本語語彙、方言、日本語教育、日本語学習者などに関するデータや資料が掲載されています。
 
 ### ・ 国立国語研究所学術情報リポジトリ
 

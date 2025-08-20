@@ -30,7 +30,7 @@
 
 カウンター、フェリスメールでも結構ですが、OPAC＞MyLibrary＞オンラインレファレンスからも申込できます。
 
-「OPACの便利な機能（MyLibrary）」を見る
+[「OPACの便利な機能（MyLibrary）」を見る](/search-guide/opac-features)
 
 ## 【リンク】
 

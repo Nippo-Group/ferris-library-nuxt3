@@ -1,18 +1,8 @@
 # Webから情報を集める（リンク集） ［文化表現学科向け］
 
-## ■ 学会・関連団体サイト（ アクセスフリー ）
+## 学会・関連団体サイト（ アクセスフリー ）
 
-《アメリカ・アメリカ文学関係》 《イギリス・フランス・西洋文学・英語学関係》
-
-《日本文学・国語学・言語学関係》 《歴史学・日本史関係》
-
-《ファッション・デザイン関係》 《音楽・芸術・芸能・映像文化関係》
-
-※学会・団体一覧（日本学術会議協力学術研究団体）
-
-[https://www.scj.go.jp/ja/group/dantai/index.html](https://www.scj.go.jp/ja/group/dantai/index.html)
-
-## 《アメリカ・アメリカ文学関係》
+### アメリカ・アメリカ文学関係
 
 アメリカ学会 [https://www.jaas.gr.jp/](https://www.jaas.gr.jp/)
 
@@ -30,7 +20,7 @@
 
 日本ヘミングウェイ協会 [http://hemingwayjapan.org/](http://hemingwayjapan.org/)
 
-## 《イギリス・フランス・西洋文学・英語学関係》
+### イギリス・フランス・西洋文学・英語学関係
 
 イギリス・ロマン派学会 [https://sites.google.com/site/jaeromanticism/](https://sites.google.com/site/jaeromanticism/)
 
@@ -94,7 +84,7 @@
 
 TOPへ ページ先頭へ
 
-## 《日本文学・国語学・言語学関係》
+### 日本文学・国語学・言語学関係
 
 解釈学会 [https://kaishaku.jp/](https://kaishaku.jp/)
 
@@ -162,7 +152,7 @@ TOPへ ページ先頭へ
 
 TOPへ ページ先頭へ
 
-## 《歴史学・日本史関係》
+### 歴史学・日本史関係
 
 史学研究会 [http://www.shigakukenkyukai.jp/](http://www.shigakukenkyukai.jp/)
 
@@ -172,7 +162,7 @@ TOPへ ページ先頭へ
 
 日本風俗史学会 [https://www.fuzokushi.jp/index.html](https://www.fuzokushi.jp/index.html)
 
-## 《ファッション・デザイン関係》
+### ファッション・デザイン関係
 
 日本衣服学会 [https://nippon-ifuku-gakkai.jp/](https://nippon-ifuku-gakkai.jp/)
 
@@ -194,7 +184,7 @@ TOPへ ページ先頭へ
 
 服飾文化学会 [http://www.fukushoku-bunka-gakkai.jp/](http://www.fukushoku-bunka-gakkai.jp/)
 
-## 《音楽・芸術・芸能・映像文化関係》
+### 音楽・芸術・芸能・映像文化関係
 
 アート・ドキュメンテーション学会 [http://www.jads.org/](http://www.jads.org/)
 
@@ -255,3 +245,9 @@ TOPへ ページ先頭へ
 民族藝術学会 [https://mg-gakkai.org/](https://mg-gakkai.org/)
 
 民俗芸能学会 [https://www.minzokugeino.com/outline/](https://www.minzokugeino.com/outline/)
+
+## 学会・団体一覧（日本学術会議協力学術研究団体）
+
+### 日本学術会議協力学術研究団体
+
+[https://www.scj.go.jp/ja/group/dantai/index.html](https://www.scj.go.jp/ja/group/dantai/index.html)
