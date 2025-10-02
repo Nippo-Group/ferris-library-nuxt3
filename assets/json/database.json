@@ -599,13 +599,13 @@
   {
     "name": "Oxford History of Western Music",
     "languages": ["外国語"],
-    "body": "<p>音楽学者リチャード・タルスキン氏による西洋音楽史書の全５巻の全文・注釈・参考文献を収録しています。</p>",
+    "body": "<p>音楽学者リチャード・タルスキン氏による西洋音楽史書の全5巻の全文・注釈・参考文献を収録しています。</p>",
     "access": "無制限",
     "logout": false,
     "links": [
       {
         "name": "アクセス",
-        "url": "https://www.oxfordwesternmusic.com/"
+        "url": "https://academic.oup.com/search-results?page=1&q=Oxford%20History%20of%20Western%20Music&fl_SiteID=191&SearchSourceType=1&allJournals=1"
       }
     ],
     "categories": ["電子ブック", "音楽"],
