@@ -16,10 +16,6 @@ import { useLanguage } from '@/composables/common/'
 // 言語の状態
 const { langState } = useLanguage()
 
-// それぞれのイベントを共通イベントと結合
-const eventsRyokuen = jsonRyokuen.concat(jsonCommon)
-const eventsYamate = jsonYamate.concat(jsonCommon)
-
 /*
 定数
 ------------ */
@@ -184,13 +180,14 @@ const renameClosed = (eventName: string): string => {
 演算
 ------------ */
 
-// 最終的なイベントリスト
-const events = computed<Event[]>(() => {
-  if (location.value === 'ryokuen') {
-    return eventFormat(eventsRyokuen)
-  }
-  else {
-    return eventFormat(eventsYamate)
+// イベントリスト
+const eventsMap = computed(() => {
+  const eventsRyokuen = eventFormat(jsonRyokuen.concat(jsonCommon))
+  const eventsYamate = eventFormat(jsonYamate.concat(jsonCommon))
+
+  return {
+    ryokuen: eventsRyokuen,
+    yamate: eventsYamate,
   }
 })
 </script>
@@ -245,7 +242,7 @@ const events = computed<Event[]>(() => {
         ref="calendar"
         v-model="focus"
         :type
-        :events
+        :events="eventsMap[location]"
       />
     </VSheet>
   </div>
