@@ -8,6 +8,7 @@ import jsonCommon from '@/assets/json/calendar-common.json'
 
 import { iconMap } from '@/utils'
 import { useLanguage } from '@/composables/common/'
+import type { Location, LocationRecord, LangRecord } from '@/types'
 
 /*
 モジュールの読み込み
@@ -21,7 +22,7 @@ const { langState } = useLanguage()
 ------------ */
 
 // 図書館の種類ごとの名称
-const locationLabel = {
+const locationLabel: LocationRecord<LangRecord<string>> = {
   ryokuen: {
     en: 'Ryokuen',
     ja: '緑園本館',
@@ -33,19 +34,19 @@ const locationLabel = {
 } as const
 
 // 時間帯指定の正規表現
-const regexTimeSpecification = /^\d{2}:\d{2}\s*.+\s*\d{2}:\d{2}$/
+const regexTimeSpecification = /^\d{1,2}:\d{1,2}\s*.+\s*\d{1,2}:\d{1,2}$/
 
 // イベントと色の対応表
 const eventColorsMap = {
   'default': '#5C6BC0',
   'closed': '#BDBDBD',
-  '8:50-21:00': '#42A5F5',
-  '9:00-19:00': '#FFA726',
-  '9:00-17:00': '#66BB6A',
-  '9:00-18:00': '#FFCA28',
-  '8:50-18:30': '#AB47BC',
+  '08:50-21:00': '#42A5F5',
+  '09:00-19:00': '#FFA726',
+  '09:00-17:00': '#66BB6A',
+  '09:00-18:00': '#FFCA28',
+  '08:50-18:30': '#AB47BC',
   '10:00-15:00': '#FF7043',
-  '8:50-18:00': '#D81B60',
+  '08:50-18:00': '#D81B60',
   '10:00-17:00': '#C0CA33',
 } as const
 /*
@@ -61,13 +62,10 @@ type Event = {
   timed?: boolean
 }
 
-// 図書館の種類
-type Location = 'ryokuen' | 'yamate'
-
 // カレンダーコンポーネントのタイプ
 type CalendarType = 'month' | 'category' | 'day' | '4day' | 'custom-daily' | 'custom-weekly' | 'week' | undefined
 
-type EventType = keyof typeof eventColorsMap
+type EventColorKey = keyof typeof eventColorsMap
 
 /*
 状態管理
@@ -142,7 +140,13 @@ const getEventColor = (name: string): string => {
     return eventColorsMap['closed']
   }
   else if (regexTimeSpecification.test(name)) {
-    return eventColorsMap[formatTimeRange(name) as EventType]
+    const key = formatTimeRange(name)
+    if (key && key in eventColorsMap) {
+      return eventColorsMap[key as EventColorKey]
+    }
+    else {
+      return eventColorsMap['default']
+    }
   }
   else {
     return eventColorsMap['default']
@@ -174,6 +178,18 @@ const renameClosed = (eventName: string): string => {
   else {
     return eventName
   }
+}
+
+// 日本語の場合の年月のフォーマット
+const formatYearAndMonth = (title: string): string => {
+  if (langState.value !== 'ja') return title
+
+  const regex = /^\d{1,2}月 \d{4}/
+  if (!regex.test(title)) return title
+
+  const arr = title.split(' ').reverse()
+  arr[0] = `${arr[0]}年`
+  return arr.join(' ')
 }
 
 /*
@@ -218,7 +234,7 @@ const eventsMap = computed(() => {
         </VList>
       </VMenu>
       <VToolbarTitle v-if="calendar">
-        {{ calendar.title }}
+        {{ formatYearAndMonth(calendar.title) }}
       </VToolbarTitle>
 
       <VBtn
@@ -242,6 +258,8 @@ const eventsMap = computed(() => {
         ref="calendar"
         v-model="focus"
         :type
+        :locale="langState"
+        color="primary"
         :events="eventsMap[location]"
       />
     </VSheet>
