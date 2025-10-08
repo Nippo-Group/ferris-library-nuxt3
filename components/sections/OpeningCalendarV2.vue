@@ -31,7 +31,7 @@ const locationLabel: LocationRecord<LangRecord<string>> = {
     en: 'Yamate',
     ja: '山手分室',
   },
-} as const
+}
 
 // 時間帯指定の正規表現
 const regexTimeSpecification = /^\d{1,2}:\d{1,2}\s*.+\s*\d{1,2}:\d{1,2}$/
@@ -39,7 +39,7 @@ const regexTimeSpecification = /^\d{1,2}:\d{1,2}\s*.+\s*\d{1,2}:\d{1,2}$/
 // イベントと色の対応表
 const eventColorsMap = {
   'default': '#5C6BC0',
-  'closed': '#BDBDBD',
+  'closed': '#616161',
   '08:50-21:00': '#42A5F5',
   '09:00-19:00': '#FFA726',
   '09:00-17:00': '#66BB6A',
@@ -54,7 +54,7 @@ const eventColorsMap = {
 ------------ */
 
 // イベントの形式
-type Event = {
+type CalendarEvent = {
   name: string
   start: string
   end?: string
@@ -65,7 +65,7 @@ type Event = {
 // カレンダーコンポーネントのタイプ
 type CalendarType = 'month' | 'category' | 'day' | '4day' | 'custom-daily' | 'custom-weekly' | 'week' | undefined
 
-type EventColorKey = keyof typeof eventColorsMap
+type CalendarEventColorKey = keyof typeof eventColorsMap
 
 /*
 状態管理
@@ -83,14 +83,16 @@ const focus = ref('')
 // カレンダーの種類
 const type = ref<CalendarType>('month')
 
+// 選択中のイベント
+const selectedEvent = ref<CalendarEvent | undefined>()
+// 選択中イベントのエレメント
+const selectedElement = ref()
+// 選択中イベントの詳細の開閉状態
+const selectedOpen = ref<boolean>(false)
+
 /*
 メソッド
 ------------ */
-
-// 図書館の種類をセットする
-const setLocation = (value: Location): void => {
-  location.value = value
-}
 
 // フォーカスを今日にもどす
 const setToday = (): void => {
@@ -105,6 +107,23 @@ const prev = (): void => {
 // 翌月・翌日へ
 const next = (): void => {
   calendar.value.next()
+}
+
+// イベントの詳細表示
+const showEvent = (nativeEvent: Event, { event }: { event: CalendarEvent }): void => {
+  const open = () => {
+    selectedEvent.value = event
+    selectedElement.value = nativeEvent.target
+    requestAnimationFrame(() => requestAnimationFrame(() => selectedOpen.value = true))
+  }
+  if (selectedOpen.value) {
+    selectedOpen.value = false
+    requestAnimationFrame(() => requestAnimationFrame(() => open()))
+  }
+  else {
+    open()
+  }
+  nativeEvent.stopPropagation()
 }
 
 /*
@@ -142,7 +161,7 @@ const getEventColor = (name: string): string => {
   else if (regexTimeSpecification.test(name)) {
     const key = formatTimeRange(name)
     if (key && key in eventColorsMap) {
-      return eventColorsMap[key as EventColorKey]
+      return eventColorsMap[key as CalendarEventColorKey]
     }
     else {
       return eventColorsMap['default']
@@ -154,14 +173,14 @@ const getEventColor = (name: string): string => {
 }
 
 // イベントをフォーマットする
-const eventFormat = (events: Event[]): Event[] => {
+const eventFormat = (events: CalendarEvent[]): CalendarEvent[] => {
   const arr = []
   for (const event of events) {
     arr.push({
       name: renameClosed(event.name),
       color: event.color ?? getEventColor(event.name),
       start: event.start,
-      end: event.end ? `${event.end} 24:00:00` : undefined,
+      end: event.end,
       timed: true,
     })
   }
@@ -209,34 +228,25 @@ const eventsMap = computed(() => {
 </script>
 
 <template>
-  <div>
-    <VToolbar>
-      <VMenu>
-        <template #activator="{ props }">
-          <VBtn
-            v-bind="props"
-            color="primary"
-            variant="outlined"
-            :prepend-icon="iconMap['menuDown']"
-          >
-            {{ locationLabel[location][langState] }}
-          </VBtn>
-        </template>
-        <VList>
-          <VListItem
-            :title="locationLabel.ryokuen[langState]"
-            @click="setLocation('ryokuen')"
-          />
-          <VListItem
-            :title="locationLabel.yamate[langState]"
-            @click="setLocation('yamate')"
-          />
-        </VList>
-      </VMenu>
+  <ContainersStack
+    direction="col"
+  >
+    <VTabs
+      v-model="location"
+      align-tabs="start"
+    >
+      <VTab value="ryokuen">
+        {{ locationLabel.ryokuen[langState] }}
+      </VTab>
+      <VTab value="yamate">
+        {{ locationLabel.yamate[langState] }}
+      </VTab>
+    </VTabs>
+
+    <VToolbar density="compact">
       <VToolbarTitle v-if="calendar">
         {{ formatYearAndMonth(calendar.title) }}
       </VToolbarTitle>
-
       <VBtn
         :icon="iconMap['chevronLeft']"
         @click="prev"
@@ -250,9 +260,9 @@ const eventsMap = computed(() => {
         @click="setToday"
       />
     </VToolbar>
+
     <VSheet
-      class="mt-4"
-      height="600"
+      height="700"
     >
       <VCalendar
         ref="calendar"
@@ -261,7 +271,25 @@ const eventsMap = computed(() => {
         :locale="langState"
         color="primary"
         :events="eventsMap[location]"
+        @click:event="showEvent as (nativeEvent: Event, { event }: { event: CalendarEvent }) => void"
       />
+
+      <VMenu
+        v-model="selectedOpen"
+        :activator="selectedElement"
+        :close-on-content-click="false"
+        location="bottom"
+      >
+        <VCard
+          :color="selectedEvent?.color"
+          density="compact"
+          variant="tonal"
+        >
+          <VCardText>
+            <p>{{ selectedEvent?.name }}</p>
+          </VCardText>
+        </VCard>
+      </VMenu>
     </VSheet>
-  </div>
+  </ContainersStack>
 </template>

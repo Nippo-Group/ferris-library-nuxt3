@@ -17,7 +17,7 @@ useSeoMeta({
     </VRow>
     <VRow>
       <VCol cols="12">
-        <SectionsOpeningCalendarV />
+        <SectionsOpeningCalendarV2 />
       </VCol>
     </VRow>
   </VContainer>
