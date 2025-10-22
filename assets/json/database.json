@@ -605,7 +605,7 @@
     "links": [
       {
         "name": "アクセス",
-        "url": "https://academic.oup.com/search-results?page=1&q=Oxford%20History%20of%20Western%20Music&fl_SiteID=191&SearchSourceType=1&allJournals=1"
+        "url": "https://academic.oup.com/search-results?sort=Title+-+A+to+Z&f_ContentType=Book&fl_SiteID=191&cqb=%5B%7B%22terms%22%3A%5B%7B%22filter%22%3A%22Title%22%2C%22input%22%3A%22The+Oxford+History+of+Western+Music%22%2C%22exactMatch%22%3Atrue%7D%5D%7D%5D&qb=%7B%22Title1-exact%22%3A%22The+Oxford+History+of+Western+Music%22%7D&page=1&utm_term=Customer%20Services&utm_content=brick1%2Blink1&utm_campaign=869935bmf-8699v037n-Tg-Gi-Ff-Ci-Af&utm_medium=email&utm_source=adestra&nbd_source=adestra&nbd=1617407"
       }
     ],
     "categories": ["電子ブック", "音楽"],
