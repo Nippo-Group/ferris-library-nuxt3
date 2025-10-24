@@ -3,11 +3,18 @@ export const useDisplayMode = () => {
   const mode = ref<Mode>('public')
 
   const setMode = () => {
-    const query = useRoute().query.mode
-    if (query === 'private') {
-      mode.value = 'private'
+    try {
+      const route = useRoute()
+      const query = route.query.mode
+      if (query === 'private') {
+        mode.value = 'private'
+      }
+      else {
+        mode.value = 'public'
+      }
     }
-    else {
+    catch {
+      // SSG生成時やNuxtインスタンスが利用できない場合はデフォルト値を使用
       mode.value = 'public'
     }
   }

@@ -1,8 +1,7 @@
-import { useNews } from '@/composables/news/useNews'
-
 import type { AlertType } from '@/types/alert'
 
-export const { newsList } = useNews({ ids: 'a7oeej8j623' })
+// SSG生成時はmicroCMSのデータを使用しない
+export const newsList = ref([])
 
 export const items = [
   '卒業生（大学・中高）・修了生',

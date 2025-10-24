@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     'dayjs-nuxt',
     '@nuxt/eslint',
   ],
-  ssr: false,
+  ssr: true,
   pages: true,
   devtools: { enabled: true }, app: {
     pageTransition: { name: 'page', mode: 'out-in' },

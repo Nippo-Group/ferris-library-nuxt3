@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { Items } from '@/contents/visitor'
-import { newsList, items, itemsContents, aboutCopy } from '@/contents/visitor'
+import { items, itemsContents, aboutCopy } from '@/contents/visitor'
 import { useSelected } from '@/composables/common/'
-import { converterMarkdown, iconMap } from '@/utils'
+import { converterMarkdown } from '@/utils'
 
 const title = '学外の方へ'
 useSeoMeta({
@@ -20,18 +20,6 @@ const { selected } = useSelected<Items>()
         <SectionsPageHeader
           :title
         />
-      </VCol>
-    </VRow>
-    <VRow>
-      <VCol cols="12">
-        <div class="text-h6 mb-2">
-          <VIcon
-            :icon="iconMap['newspaper']"
-            start
-          />
-          関連ニュース
-          <templates-list-news :contents-list="newsList" />
-        </div>
       </VCol>
     </VRow>
     <VRow>
