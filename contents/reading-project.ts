@@ -62,15 +62,6 @@ export const mediaInformation = {
   ],
 }
 
-export const newsIds = [
-  'bp922vzsag',
-  '3-h0zb9femhn',
-  '2nqt2bwmsqd',
-  'zt10lnwef',
-  'tzndu8jahabw',
-  'rne-f461pg',
-]
-
 export const teamPlanning = {
   name: '企画チーム',
   content: '毎年テーマを決めて読書会や本の展示を行うほか、大学祭では展示発表やワークショップを主催します。<br />本をツールとしたおもしろい企画やアイデアいっぱいの広報を展開します。',

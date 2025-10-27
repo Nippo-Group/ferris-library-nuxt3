@@ -12,7 +12,6 @@ import {
   teamPlanning,
   teamRecitation,
   movies,
-  newsIds,
 } from '@/contents/reading-project'
 
 const title = '読書運動プロジェクト'
@@ -25,6 +24,15 @@ useSeoMeta({
 
 const { show } = useConfirmDL()
 
+const newsIds = [
+  '5jh2hdztjnyk',
+  'bp922vzsag',
+  '3-h0zb9femhn',
+  '2nqt2bwmsqd',
+  'zt10lnwef',
+  'tzndu8jahabw',
+  'rne-f461pg',
+]
 const { newsList } = useNews({
   ids: newsIds.join(','),
 })
@@ -33,6 +41,7 @@ const { newsList } = useNews({
 <template>
   <VSheet color="grey-lighten-3">
     <VContainer>
+      <!-- ヘッダー -->
       <VRow>
         <VCol cols="12">
           <SectionsRPHeaderLv1
@@ -42,12 +51,15 @@ const { newsList } = useNews({
         </VCol>
       </VRow>
       <VRow>
+        <!-- リード文 -->
         <VCol cols="12">
           <SectionsRPHeaderLv2
             title="「読書運動プロジェクト」とは？"
             :lead="isWhat"
           />
         </VCol>
+
+        <!-- 主な活動 -->
         <VCol cols="12">
           <templates-card-reading-project title="主な活動">
             <VContainer>
@@ -88,6 +100,8 @@ const { newsList } = useNews({
             </VContainer>
           </templates-card-reading-project>
         </VCol>
+
+        <!-- メンバー募集 -->
         <VCol
           cols="12"
           lg="6"
@@ -118,6 +132,8 @@ const { newsList } = useNews({
             />
           </templates-card-reading-project>
         </VCol>
+
+        <!-- 掲載されました -->
         <VCol
           cols="12"
           lg="6"
@@ -150,12 +166,16 @@ const { newsList } = useNews({
             </VList>
           </templates-card-reading-project>
         </VCol>
+
+        <!-- ニュース -->
         <VCol cols="12">
           <templates-card-reading-project title="News">
             <templates-list-news :contents-list="newsList" />
           </templates-card-reading-project>
         </VCol>
       </VRow>
+
+      <!-- 活動紹介 -->
       <VRow>
         <VCol cols="12">
           <SectionsRPHeaderLv2
@@ -214,6 +234,8 @@ const { newsList } = useNews({
           </templates-card-reading-project>
         </VCol>
       </VRow>
+
+      <!-- 活動拠点 -->
       <VRow>
         <VCol cols="12">
           <SectionsRPHeaderLv2
@@ -240,6 +262,8 @@ const { newsList } = useNews({
           </templates-card-reading-project>
         </VCol>
       </VRow>
+
+      <!-- ヘッダー -->
       <VRow>
         <VCol cols="12">
           <SectionsRPHeaderLv2 title="お問い合わせ" />
