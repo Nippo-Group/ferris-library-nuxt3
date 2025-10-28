@@ -2,25 +2,33 @@ import { VuePDF, usePDF } from '@tato30/vue-pdf'
 
 declare module '#app' {
   interface NuxtApp {
-    $pdf: typeof usePDF
+    $usePDF: typeof usePDF
   }
 }
 
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
-    $pdf: typeof usePDF
+    $usePDF: typeof usePDF
   }
+}
+export interface PDFOptions {
+  src: string
+  page?: number
+  scale?: number
 }
 
 export default defineNuxtPlugin((nuxtApp) => {
-  if (import.meta.client) {
-    nuxtApp.vueApp.component('VuePDF', VuePDF)
-    nuxtApp.provide('pdf', usePDF)
+  // SSGビルド時はスキップ
+  if (import.meta.server) return
 
-    return {
-      provide: {
-        pdf: usePDF,
-      },
+  if (import.meta.client) {
+    try {
+      nuxtApp.vueApp.component('VuePDF', VuePDF)
+      nuxtApp.provide('usePDF', usePDF)
+    }
+    catch (error) {
+      // eslint-disable-next-line no-console
+      console.error('VuePDF plugin initialization failed:', error)
     }
   }
 })

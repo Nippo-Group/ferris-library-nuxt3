@@ -12,9 +12,9 @@ type Props = {
 const props = defineProps<Props>()
 
 // プラグインから usePDF を取得
-const { $pdf } = useNuxtApp()
+const { $usePDF } = useNuxtApp()
 const page = ref(1)
-const { pdf, pages } = $pdf(props.src)
+const { pdf, pages } = $usePDF(props.src)
 
 const { show } = useConfirmDL()
 
