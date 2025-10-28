@@ -5,11 +5,11 @@ type Link = {
   push?: string
   comment?: string
 }
-  type Item = {
-    subTitle: string
-    step: number
-    list: Link[]
-  }
+type Item = {
+  subTitle: string
+  step: number
+  list: Link[]
+}
 
 export const items: Item[] = [
   {
