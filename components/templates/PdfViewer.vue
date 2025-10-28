@@ -1,63 +1,66 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { VuePDF, usePDF } from '@tato30/vue-pdf'
 import { useConfirmDL } from '@/composables/common/'
 import { iconMap } from '@/utils'
 
-type State = {
+type Props = {
   src: string
   name?: string
   paginationHidden?: boolean
   buttonHidden?: boolean
 }
-const props = defineProps<State>()
+const props = defineProps<Props>()
 
+// プラグインから usePDF を取得
+const { $pdf } = useNuxtApp()
 const page = ref(1)
-const { pdf, pages } = usePDF(props.src)
+const { pdf, pages } = $pdf(props.src)
 
 const { show } = useConfirmDL()
 
 const fileName = computed(() => {
-  return props.name ? props.name : ' '
+  return props.name ?? ' '
 })
 </script>
 
 <template>
-  <div class="d-flex flex-column ga-2">
-    <VPagination
-      v-if="pages > 1 && !paginationHidden"
-      v-model="page"
-      :length="pages"
-    />
-    <VSheet
-      color="grey-lighten-5"
-      class="pa-1"
-    >
-      <VuePDF
-        :pdf="pdf"
-        :page="page"
-        fit-parent
+  <ClientOnly>
+    <div class="d-flex flex-column ga-2">
+      <VPagination
+        v-if="pages > 1 && !paginationHidden"
+        v-model="page"
+        :length="pages"
+      />
+      <VSheet
+        color="grey-lighten-5"
+        class="pa-1"
       >
-        <div>
-          <VProgressLinear
-            indeterminate
-            color="primary"
+        <VuePDF
+          :pdf="pdf"
+          :page="page"
+          fit-parent
+        >
+          <div>
+            <VProgressLinear
+              indeterminate
+              color="primary"
+            />
+          </div>
+        </VuePDF>
+      </VSheet>
+      <div class="text-center pa-1">
+        <VBtn
+          v-if="!buttonHidden"
+          @click="show(fileName, props.src, 'PDF')"
+        >
+          ファイルをひらく
+          <VIcon
+            :icon="iconMap['pdf']"
+            size="large"
+            end
           />
-        </div>
-      </VuePDF>
-    </VSheet>
-    <div class="text-center pa-1">
-      <VBtn
-        v-if="!buttonHidden"
-        @click="show(fileName, props.src, 'PDF')"
-      >
-        ファイルをひらく
-        <VIcon
-          :icon="iconMap['pdf']"
-          size="large"
-          end
-        />
-      </VBtn>
+        </VBtn>
+      </div>
     </div>
-  </div>
+  </ClientOnly>
 </template>
