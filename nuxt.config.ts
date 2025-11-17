@@ -1,10 +1,15 @@
-import vuetify from 'vite-plugin-vuetify'
+import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 
   modules: [
-    '@pinia/nuxt',
+    (_options, nuxt) => {
+      nuxt.hooks.hook('vite:extendConfig', (config) => {
+        if (config.plugins) {
+          config.plugins.push(vuetify({ autoImport: true }))
+        }
+      })
+    },
     'nuxt-microcms-module',
     'dayjs-nuxt',
     '@nuxt/eslint',
@@ -28,14 +33,12 @@ export default defineNuxtConfig({
   css: ['@/assets/css/main.scss'],
   build: {
     transpile: ['vuetify'],
-  },
-  compatibilityDate: '2024-09-24',
+  }, compatibilityDate: '2024-09-24',
   vite: {
-    ssr: {
-      noExternal: ['vuetify'],
-    },
-    define: {
-      'process.env.DEBUG': false,
+    vue: {
+      template: {
+        transformAssetUrls,
+      },
     },
   },
   hooks: {
@@ -48,9 +51,9 @@ export default defineNuxtConfig({
     defaultLocale: 'ja',
     defaultTimezone: 'Asia/Tokyo',
     plugins: [
-      'utc', // import 'dayjs/plugin/utc'
-      'timezone', // import 'dayjs/plugin/timezone'
-    ], // Your Day.js plugin
+      'utc',
+      'timezone',
+    ],
   },
   eslint: {
     config: {
@@ -60,6 +63,5 @@ export default defineNuxtConfig({
   microCMS: {
     serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
     apiKey: process.env.MICROCMS_API_KEY,
-    target: 'all',
   },
 })
