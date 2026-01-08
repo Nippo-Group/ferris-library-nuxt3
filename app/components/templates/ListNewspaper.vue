@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Newspaper } from '~/app/types/newspaper'
+import type { Newspaper } from '@/types/newspaper'
 import { iconMap } from '@/utils'
 
 defineProps<{

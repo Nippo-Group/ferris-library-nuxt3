@@ -1,4 +1,4 @@
-import type { Category, Language } from '~/app/types/ebook'
+import type { Category, Language } from '@/types/ebook'
 
 export const optionsLanguage = ref<Language[]>(['日本語', '外国語'])
 export const optionsCategory = ref<Category[]>([

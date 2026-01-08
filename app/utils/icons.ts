@@ -42,7 +42,7 @@ import {
   mdiTrain,
   mdiTranslate,
 } from '@mdi/js'
-import type { File } from '~/app/types'
+import type { File } from '@/types'
 
 export const iconMap = {
   alert: mdiAlertCircleOutline,

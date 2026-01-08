@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { News } from '~/app/types/news'
+import type { News } from '@/types/news'
 
 defineProps<{
   contentsList: News[] | undefined

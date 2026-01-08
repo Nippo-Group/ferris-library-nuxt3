@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useSelected } from '@/composables/common/'
-import type { File } from '~/app/types/file'
+import type { File } from '@/types/file'
 
 const title = '図書館利用案内'
 const description = '在学生向けの利用案内です。'

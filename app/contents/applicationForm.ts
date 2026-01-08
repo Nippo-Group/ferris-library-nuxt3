@@ -1,4 +1,4 @@
-import type { File } from '~/app/types/file'
+import type { File } from '@/types/file'
 
 type Item = {
   name: string

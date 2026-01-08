@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Exhibition } from '~/app/types/exhibitions'
+import type { Exhibition } from '@/types/exhibitions'
 import { dateFormat } from '@/utils'
 
 defineProps<{

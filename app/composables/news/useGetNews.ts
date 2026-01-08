@@ -1,4 +1,4 @@
-import type { News } from '~/app/types/news'
+import type { News } from '@/types/news'
 import { useDisplayMode } from '@/composables/common'
 import { isFuture } from '@/utils'
 

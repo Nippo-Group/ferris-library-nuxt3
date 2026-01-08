@@ -1,4 +1,4 @@
-import type { Exhibition } from '~/app/types/exhibitions'
+import type { Exhibition } from '@/types/exhibitions'
 import { useDisplayMode } from '@/composables/common'
 import { isFuture } from '@/utils'
 

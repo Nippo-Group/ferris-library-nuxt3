@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Link, Document } from '~/app/types/ebook'
+import type { Link, Document } from '@/types/ebook'
 import { useConfirmDL } from '@/composables/common/'
 import { iconMap } from '@/utils'
 

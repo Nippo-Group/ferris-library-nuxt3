@@ -1,4 +1,4 @@
-import type { Lang } from '~/app/types/lang'
+import type { Lang } from '@/types/lang'
 
 export const useLanguage = () => {
   const state = useState<Lang>('lang:state')

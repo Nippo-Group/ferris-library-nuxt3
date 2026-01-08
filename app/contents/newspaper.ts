@@ -1,4 +1,4 @@
-import type { NewspaperCat } from '~/app/types/newspaper'
+import type { NewspaperCat } from '@/types/newspaper'
 
 export const updateDate = '2022年4月現在'
 

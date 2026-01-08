@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { News } from '~/app/types/news'
+import type { News } from '@/types/news'
 import { usePagination, useSelectionYear } from '@/composables/common/'
 import { useNews } from '@/composables/news/useNews'
 import { getFiscalYear } from '@/utils'

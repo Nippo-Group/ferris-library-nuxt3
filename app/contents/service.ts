@@ -1,4 +1,4 @@
-import type { AlertType } from '~/app/types/alert'
+import type { AlertType } from '@/types/alert'
 
 type Alert = {
   type: AlertType

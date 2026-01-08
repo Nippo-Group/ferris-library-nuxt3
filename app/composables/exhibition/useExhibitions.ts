@@ -1,4 +1,4 @@
-import type { Exhibition } from '~/app/types/exhibitions'
+import type { Exhibition } from '@/types/exhibitions'
 import type { Queries } from '@/composables/exhibition/useGetExhibitions'
 
 import { useGetExhibitions } from '@/composables/exhibition/useGetExhibitions'

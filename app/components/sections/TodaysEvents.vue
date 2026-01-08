@@ -2,7 +2,7 @@
 import ryokuen from '@/assets/json/calendar-ryokuen.json'
 import yamate from '@/assets/json/calendar-yamate.json'
 import common from '@/assets/json/calendar-common.json'
-import type { Event, Events } from '~/app/types/events'
+import type { Event, Events } from '@/types/events'
 
 const title = '本日の開館時間'
 

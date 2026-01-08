@@ -1,5 +1,5 @@
 import type { MicroCMSImage, MicroCMSListContent } from 'microcms-js-sdk'
-import type { Category } from '~/app/types/category'
+import type { Category } from '@/types/category'
 
 type PlaceToExhibit = {
   fieldId: string

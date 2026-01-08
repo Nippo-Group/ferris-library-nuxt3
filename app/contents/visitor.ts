@@ -1,4 +1,4 @@
-import type { AlertType } from '~/app/types/alert'
+import type { AlertType } from '@/types/alert'
 
 // SSG生成時はmicroCMSのデータを使用しない
 export const newsList = ref([])

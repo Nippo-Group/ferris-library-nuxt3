@@ -1,5 +1,5 @@
 import items from '@/assets/json/database.json'
-import type { Available, Category, Language } from '~/app/types/ebook'
+import type { Available, Category, Language } from '@/types/ebook'
 
 export const useEbookList = () => {
   const keyword = useState<string | undefined>()

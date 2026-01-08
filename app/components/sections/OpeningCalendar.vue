@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { VCalendar } from 'vuetify/labs/VCalendar'
-
 import { ref } from 'vue'
 import jsonRyokuen from '@/assets/json/calendar-ryokuen.json'
 import jsonYamate from '@/assets/json/calendar-yamate.json'
@@ -8,7 +6,7 @@ import jsonCommon from '@/assets/json/calendar-common.json'
 
 import { iconMap } from '@/utils'
 import { useLanguage } from '@/composables/common/'
-import type { Location, LocationRecord, LangRecord } from '~/app/types'
+import type { Location, LocationRecord, LangRecord } from '@/types'
 
 /*
 モジュールの読み込み
@@ -144,11 +142,11 @@ const formatTimeRange = (input: string): string | undefined => {
 
   // 桁揃え（1桁の時間は2桁に直す）
   start = start.replace(/^(\d{1}):/, '0$1:')
-  end = end.replace(/^(\d{1}):/, '0$1:')
+  end = end?.replace(/^(\d{1}):/, '0$1:')
 
   // コロン後の分も2桁に（例: 09:5 → 09:05）
   start = start.replace(/:(\d{1})$/, ':0$1')
-  end = end.replace(/:(\d{1})$/, ':0$1')
+  end = end?.replace(/:(\d{1})$/, ':0$1')
 
   return `${start}-${end}`
 }

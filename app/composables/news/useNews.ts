@@ -1,4 +1,4 @@
-import type { News } from '~/app/types/news'
+import type { News } from '@/types/news'
 import type { Queries } from '@/composables/news/useGetNews'
 
 import { useGetNews } from '@/composables/news/useGetNews'
