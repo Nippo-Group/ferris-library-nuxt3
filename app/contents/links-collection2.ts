@@ -49,8 +49,8 @@ export const items: Item[] = [
     text: '市内地区センター蔵書検索も可能',
   },
   {
-    name: 'Explore the British Library',
-    url: 'https://bll01.primo.exlibrisgroup.com/discovery/search?vid=44BL_INST:BLL01&lang=en',
+    name: 'British Library Catalogue',
+    url: 'https://catalogue.bl.uk/nde/home?vid=44BL_MAIN:BLL01_NDE',
     category: '各種図書館が所蔵している資料を探す',
     overseas: true,
     author: 'British Library (BL)',
