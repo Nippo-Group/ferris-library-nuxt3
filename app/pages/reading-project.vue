@@ -25,6 +25,7 @@ useSeoMeta({
 const { show } = useConfirmDL()
 
 const newsIds = [
+  'f_5l518j2yx',
   '5jh2hdztjnyk',
   'bp922vzsag',
   '3-h0zb9femhn',
