@@ -115,15 +115,4 @@ export const items = [
     image: '/images/digital-collection/collection08/eyecatching.png',
     identification: 'collection08',
   },
-  {
-    kind: '紀要',
-    title: 'FAIR',
-    subtitle: 'フェリス女学院大学学術機関リポジトリ',
-    texts: [
-      {
-        p: '本学の教育研究活動の成果のアーカイブです。今後も随時更新される予定です。',
-      },
-    ],
-    link: 'https://ferris.repo.nii.ac.jp/',
-  },
 ]
