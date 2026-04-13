@@ -67,7 +67,7 @@ const { newsList } = useNews({
               <VRow dense>
                 <VCol
                   cols="12"
-                  md="6"
+                  md="7"
                 >
                   <PartsNumberedList :items="mainActivity" />
                 </VCol>
@@ -75,8 +75,7 @@ const { newsList } = useNews({
                   v-for="(document, index) in documents"
                   :key="`document${index}`"
                   cols="12"
-                  sm="6"
-                  md="3"
+                  md="5"
                 >
                   <client-only>
                     <templates-pdf-viewer

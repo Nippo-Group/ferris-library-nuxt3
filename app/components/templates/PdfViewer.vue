@@ -32,7 +32,7 @@ const fileName = computed(() => {
         :length="pages"
       />
       <VSheet
-        color="grey-lighten-5"
+        color="grey-lighten-5 d-flex justify-center align-center"
         class="pa-1"
       >
         <VuePDF

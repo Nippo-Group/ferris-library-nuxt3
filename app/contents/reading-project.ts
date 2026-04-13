@@ -15,11 +15,6 @@ export const mainActivity = [
 ]
 export const documents = [
   {
-    name: '活動報告書',
-    url: '/documents/reading-project/activity-report2020-2021.pdf',
-    type: 'PDF',
-  },
-  {
     name: 'リーフレット',
     url: '/documents/reading-project/activity-introduction-leaflet.pdf',
     type: 'PDF',
