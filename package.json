@@ -9,7 +9,10 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "format": "eslint --fix . "
+    "format": "eslint --fix . ",
+    "typecheck": "nuxt typecheck",
+    "clean": "rm -rf .nuxt .output",
+    "analyze": "nuxt build --analyze"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
