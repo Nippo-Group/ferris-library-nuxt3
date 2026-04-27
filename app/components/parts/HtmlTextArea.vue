@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { converterMarkdown } from '@/utils'
+
 defineProps<{
   data?: string
   markdown?: string

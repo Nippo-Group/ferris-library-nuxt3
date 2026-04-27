@@ -1,4 +1,13 @@
-export const items = [
+type DigitalCollectionItem = {
+  kind: string
+  title: string
+  texts: { p: string }[]
+  image: string
+  identification: string
+  subtitle?: string
+}
+
+export const items: DigitalCollectionItem[] = [
   {
     kind: '貴重資料',
     title: '新三十六歌仙画帖',

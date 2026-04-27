@@ -33,6 +33,7 @@
     "@typescript-eslint/parser": "^8.59.0",
     "eslint": "^9.18.0",
     "eslint-plugin-vue": "^10.9.0",
+    "microcms-js-sdk": "^3.4.0",
     "nuxt": "^4.2.0",
     "sass-embedded": "^1.93.3",
     "vite-plugin-vuetify": "^2.0.4",

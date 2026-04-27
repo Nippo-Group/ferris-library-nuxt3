@@ -80,16 +80,17 @@ const { selected } = useSelected<Items>()
           :title="aboutCopy.title"
           variant="tonal"
         >
-          <VCardSubtitle>{{ aboutCopy.article[0].title }}</VCardSubtitle>
-          <VCardText>
-            <PartsHtmlTextArea :data="converterMarkdown(aboutCopy.article[0].text)" />
-          </VCardText>
-          <VCardSubtitle class="mt-4">
-            {{ aboutCopy.article[1].title }}
-          </VCardSubtitle>
-          <VCardText>
-            <PartsHtmlTextArea :markdown="aboutCopy.article[1].text" />
-          </VCardText>
+          <section
+            v-for="(article, index) in aboutCopy.article"
+            :key="index"
+          >
+            <VCardText>
+              <h3>
+                {{ article.title }}
+              </h3>
+              <PartsHtmlTextArea :data="converterMarkdown(article.text)" />
+            </VCardText>
+          </section>
         </VCard>
       </VCol>
     </VRow>

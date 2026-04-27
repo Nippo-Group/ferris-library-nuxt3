@@ -167,7 +167,13 @@ export const itemsContents: ItemsContents[] = [
   },
 ]
 
-export const aboutCopy = {
+export const aboutCopy: {
+  title: string
+  article: {
+    title: string
+    text: string
+  }[]
+} = {
   title: '館内複写、マイクロフィルム利用時の注意事項',
   article: [
     {

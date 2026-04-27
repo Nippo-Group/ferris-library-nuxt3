@@ -82,12 +82,6 @@ useSeoMeta({
               :to="'/digital-collection/' + item.identification"
               block
             />
-            <PartsBtnOpenInNew
-              v-if="item.link"
-              link="資料をみる"
-              :url="item.link"
-              block
-            />
           </VCardActions>
         </VCard>
       </VCol>
