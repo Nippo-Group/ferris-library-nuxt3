@@ -13,17 +13,13 @@ const getIcon = (key: string) => {
   switch (key) {
     case 'PDF':
       return iconMap['pdf']
-      break
     case 'Word':
       return iconMap['word']
-      break
     case 'Excel':
       return iconMap['excel']
-      break
 
     default:
-      return iconMap['docs']
-      break
+      return iconMap['doc']
   }
 }
 </script>
