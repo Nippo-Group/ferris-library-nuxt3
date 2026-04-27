@@ -11,7 +11,6 @@ export default defineNuxtConfig({
       })
     },
     'nuxt-microcms-module',
-    'dayjs-nuxt',
     '@nuxt/eslint',
   ],
   ssr: true,
@@ -45,15 +44,6 @@ export default defineNuxtConfig({
     'vite:extendConfig': (config) => {
       config.plugins!.push(vuetify())
     },
-  },
-  dayjs: {
-    locales: ['en', 'ja'],
-    defaultLocale: 'ja',
-    defaultTimezone: 'Asia/Tokyo',
-    plugins: [
-      'utc',
-      'timezone',
-    ],
   },
   eslint: {
     config: {

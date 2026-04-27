@@ -1,4 +1,5 @@
 export * from './useConfirmDL'
+export * from './useDayjs'
 export * from './useDisplayMode'
 export * from './useElementSize'
 export * from './useLanguage'
