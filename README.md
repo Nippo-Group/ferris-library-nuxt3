@@ -1,6 +1,6 @@
 # Ferris University Library Website
 
-フェリス女学院大学附属図書館の公式ウェブサイト。
+フェリス女学院大学附属図書館の公式ウェブサイト
 
 ## 概要
 
