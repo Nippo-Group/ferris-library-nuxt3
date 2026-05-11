@@ -18,7 +18,7 @@ defineProps<{
 .text {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 .text::v-deep(h1) {
   font-size: 1.8rem;
@@ -41,9 +41,17 @@ defineProps<{
 .text::v-deep(h6) {
   font-size: 0.875rem;
 }
+.text::v-deep(p) {
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}
 .text::v-deep(ul),
 .text::v-deep(ol) {
   padding-left: 1.5em;
+}
+.text::v-deep(li) {
+  line-height: 1.8;
+  letter-spacing: 0.05em;
 }
 .text::v-deep(dt) {
   font-weight: bold;

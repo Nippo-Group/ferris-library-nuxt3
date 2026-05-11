@@ -44,7 +44,7 @@ const clickAction = (url?: string): void => {
   <VDialog
     v-model="visible"
     scrollable
-    max-width="600"
+    max-width="800"
   >
     <TemplatesCardNews
       :items="contents"
