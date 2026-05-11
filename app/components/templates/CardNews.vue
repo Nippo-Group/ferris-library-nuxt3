@@ -26,6 +26,7 @@ defineEmits(['dialogClose'])
         {{ dateFormat(items.date, 'ja') }}
       </VCardSubtitle>
     </VCardItem>
+    <VDivider />
     <div class="content-body">
       <VCardText class="news-contents">
         <PartsHtmlTextArea :data="items.contents.toString()" />
