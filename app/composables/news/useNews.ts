@@ -6,14 +6,29 @@ import { useGetNews } from '@/composables/news/useGetNews'
 import { getFiscalYear, isFuture } from '@/utils'
 
 export const useNews = (queries: Queries) => {
-  // 公開モードの状態を取得
-  const { mode } = useDisplayMode()
-
   // ニュースリストを取得
   const { contents, error } = useGetNews(queries)
 
+  // 公開モードの状態を取得
+  const { mode } = useDisplayMode()
+
+  // 未来のニュースを除外するフィルタ関数（公開モードの場合に使用）
+  const excludeFutureNews: FilterFunc = (news) => {
+    return !isFuture(news.date)
+  }
+
+  // 公開モードの場合は未来のニュースを除外するフィルタ関数を追加、それ以外は登録されたフィルタ関数のみを使用
+  const effectiveFilterFuncs = computed<FilterFunc[]>(() => {
+    return mode.value === 'public'
+      ? [excludeFutureNews, ...filterFuncs.value]
+      : [...filterFuncs.value]
+  })
+
   // ニュースリスト本体
-  const newsList = ref<News[] | undefined>()
+  const newsList = computed<News[]>(() => {
+    const items = contents.value ?? []
+    return items.filter(news => effectiveFilterFuncs.value.every(fn => fn(news)))
+  })
 
   // ニュースの件数
   const newsListSize = computed<number>(() => {
@@ -26,11 +41,6 @@ export const useNews = (queries: Queries) => {
   */
   type FilterFunc = (news: News) => boolean
   const filterFuncs = ref<FilterFunc[]>([])
-
-  // 未来のニュースを除外するフィルタ関数（公開モードの場合に使用）
-  const excludeFutureNews: FilterFunc = (news) => {
-    return !isFuture(news.date)
-  }
 
   // ニュースの年度リスト
   const years = computed<string[]>(() => {
@@ -46,23 +56,6 @@ export const useNews = (queries: Queries) => {
   const setFilterFuncs = (funcs: FilterFunc[]) => {
     filterFuncs.value = funcs
   }
-
-  // ニュースリストを更新するためのwatchEffect
-  watchEffect(() => {
-    let arr = contents.value
-
-    // 公開モードの場合は、未来の日付のニュースを除外するフィルタ関数を追加
-    if (mode.value === 'public') {
-      setFilterFuncs([excludeFutureNews])
-    }
-    // フィルタ関数が登録されている場合は、全ての関数を満たすニュースのみを表示
-    if (filterFuncs.value) {
-      arr = arr?.filter((value) => {
-        return filterFuncs.value.every(func => func(value))
-      })
-    }
-    newsList.value = arr
-  })
 
   return {
     newsList,
