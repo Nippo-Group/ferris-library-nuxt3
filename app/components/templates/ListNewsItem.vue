@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import type { News } from '@/types/news'
-import { dateFormat, isFuture, iconMap } from '@/utils'
+import { dateFormat, iconMap } from '@/utils'
 import { useVisible } from '@/composables/common'
 
 defineProps<{
   contents: News
+  scheduledPost?: boolean
 }>()
 
 const { visible, dismiss, show } = useVisible()
@@ -22,11 +23,12 @@ const clickAction = (url?: string): void => {
 <template>
   <VListItem
     link
+    class="border-b-sm"
     @click="clickAction(contents.redirect)"
   >
     <VListItemTitle class="wrap-text">
       <span
-        v-show="isFuture(contents.date)"
+        v-show="scheduledPost"
         class="text-red-lighten-2"
       >予約投稿：</span>
       {{ contents.title }}
