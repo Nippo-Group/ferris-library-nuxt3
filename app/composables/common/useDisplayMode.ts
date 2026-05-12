@@ -5,14 +5,17 @@ export const useDisplayMode = () => {
   // モードの状態管理
   const mode = ref<Mode>('public')
 
+  // ルーターのインスタンスを取得
+  const route = useRoute()
+
   // モードがPublicか
   const isPublic = computed(() => mode.value === 'public')
   // モードがPrivateか
   const isPrivate = computed(() => mode.value === 'private')
 
+  // URLクエリのmodeパラメータをもとにモードを設定する関数
   const setMode = () => {
     try {
-      const route = useRoute()
       const query = route.query.mode
       if (query === 'private') {
         mode.value = 'private'
@@ -26,7 +29,17 @@ export const useDisplayMode = () => {
       mode.value = 'public'
     }
   }
+
+  // 初期化時にモードを設定
   setMode()
+
+  // URLクエリのmodeパラメータを監視してモードを切り替える
+  watch(
+    () => route.query.mode,
+    () => {
+      setMode()
+    },
+  )
 
   return {
     mode,

@@ -25,13 +25,15 @@ export const useGetNews = (queries: Queries) => {
 
   // 取得されたニュースリスト（件数調節）
   const contents = computed<News[]>(() => {
+    const rawContents = data.value?.contents ?? []
+
     // 未来のニュースの数をカウント
-    const futureCount = data.value?.contents?.filter(news => isFuture(news.date)).length ?? 0
+    const futureCount = rawContents.filter(news => isFuture(news.date)).length
 
     // リミットで指定された件数＋未来のニュースを返す
     return queries.limit
-      ? data.value?.contents?.slice(0, queries.limit + futureCount)
-      : data.value?.contents
+      ? rawContents.slice(0, queries.limit + futureCount)
+      : rawContents
   })
 
   return {

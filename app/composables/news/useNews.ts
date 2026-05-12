@@ -1,6 +1,7 @@
 import type { News } from '@/types/news'
 import type { Queries } from '@/composables/news/useGetNews'
 
+import { useDisplayMode } from '@/composables/common'
 import { useGetNews } from '@/composables/news/useGetNews'
 import { getFiscalYear } from '@/utils'
 
@@ -8,14 +9,18 @@ export const useNews = (queries: Queries) => {
   // ニュースリストを取得
   const { contents, error } = useGetNews(queries)
 
-  // 非公開モード用のニュースリスト
-  const privateNewsList = computed<News[]>(() => {
-    return contents.value.filter(news => filterFuncs.value.every(fn => fn(news))) ?? []
-  })
+  // 表示モードを取得
+  const { mode } = useDisplayMode()
 
   // ニュースリスト本体（未来のニュースを除いたもの）
   const newsList = computed<News[]>(() => {
-    return privateNewsList.value.filter(news => !isFuture(news.date)) ?? []
+    const list = contents.value?.filter(news => filterFuncs.value.every(fn => fn(news))) ?? []
+    switch (mode.value) {
+      case 'public':
+        return list.filter(news => !isFuture(news.date))
+      case 'private':
+        return list
+    }
   })
 
   // ニュースの件数
@@ -47,7 +52,6 @@ export const useNews = (queries: Queries) => {
 
   return {
     newsList,
-    privateNewsList,
     newsListSize,
     years,
     error,
