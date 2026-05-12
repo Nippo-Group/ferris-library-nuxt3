@@ -8,10 +8,14 @@ export const useNews = (queries: Queries) => {
   // ニュースリストを取得
   const { contents, error } = useGetNews(queries)
 
-  // ニュースリスト本体
+  // 非公開モード用のニュースリスト
+  const privateNewsList = computed<News[]>(() => {
+    return contents.value.filter(news => filterFuncs.value.every(fn => fn(news))) ?? []
+  })
+
+  // ニュースリスト本体（未来のニュースを除いたもの）
   const newsList = computed<News[]>(() => {
-    const items = contents.value ?? []
-    return items.filter(news => filterFuncs.value.every(fn => fn(news)))
+    return privateNewsList.value.filter(news => !isFuture(news.date)) ?? []
   })
 
   // ニュースの件数
@@ -43,6 +47,7 @@ export const useNews = (queries: Queries) => {
 
   return {
     newsList,
+    privateNewsList,
     newsListSize,
     years,
     error,

@@ -1,6 +1,14 @@
 export const useDisplayMode = () => {
+  // モードの型
   type Mode = 'public' | 'private'
+
+  // モードの状態管理
   const mode = ref<Mode>('public')
+
+  // モードがPublicか
+  const isPublic = computed(() => mode.value === 'public')
+  // モードがPrivateか
+  const isPrivate = computed(() => mode.value === 'private')
 
   const setMode = () => {
     try {
@@ -22,5 +30,7 @@ export const useDisplayMode = () => {
 
   return {
     mode,
+    isPublic,
+    isPrivate,
   }
 }

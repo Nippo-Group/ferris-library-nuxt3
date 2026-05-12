@@ -1,9 +1,14 @@
 <script setup lang="ts">
+import { useDisplayMode } from '@/composables/common'
 import { useNews } from '@/composables/news/useNews'
 import { pickOut } from '@/contents/index'
 import { iconMap } from '@/utils'
 
-const { newsList } = useNews({ limit: 6, orders: '-date' })
+// 表示モードを取得
+const { isPublic } = useDisplayMode()
+
+// ニュースリストを取得
+const { newsList, privateNewsList } = useNews({ limit: 6, orders: '-date' })
 </script>
 
 <template>
@@ -80,7 +85,7 @@ const { newsList } = useNews({ limit: 6, orders: '-date' })
           />
           News
         </div>
-        <templates-list-news :contents-list="newsList" />
+        <templates-list-news :contents-list="isPublic ? newsList : privateNewsList" />
         <div class="text-center mt-5">
           <PartsBtnInside
             link="ニュース一覧へ"
