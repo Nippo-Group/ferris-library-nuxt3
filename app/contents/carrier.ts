@@ -78,16 +78,16 @@ export const items2: (Item | ItemHeading)[] = [
     ],
   },
   {
-    name: '毎索',
+    name: 'マイサク（旧：毎索）',
     type: 'データベース',
     logout: true,
     content:
-      '創刊号（1872年）からの「毎日新聞」「週刊エコノミスト」「Mainichi Daily News」の記事を検索・閲覧できます。（データ更新：毎日）',
+      '創刊号（1872年）からの「毎日新聞」「週刊エコノミスト」「The Mainichi （英語版）」などの記事を検索・閲覧できます。（データ更新：毎日）',
     access: '学内PCから',
     links: [
       {
         name: 'アクセス',
-        url: 'https://dbs.g-search.or.jp/WMAI/WMAI_ipcu_login.html',
+        url: 'https://maisaku.mainichi.jp/maisaku/login/?login_type=1&usage_type=1',
       },
     ],
   },
