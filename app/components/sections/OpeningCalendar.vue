@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import jsonRyokuen from '@/assets/json/calendar-ryokuen.json'
 import jsonYamate from '@/assets/json/calendar-yamate.json'
 import jsonCommon from '@/assets/json/calendar-common.json'
@@ -58,6 +58,7 @@ type CalendarEvent = {
   end?: string
   color?: string
   timed?: boolean
+  [key: string]: any
 }
 
 // カレンダーコンポーネントのタイプ
@@ -108,7 +109,9 @@ const next = (): void => {
 }
 
 // イベントの詳細表示
-const showEvent = (nativeEvent: Event, { event }: { event: CalendarEvent }): void => {
+const showEvent = (_nativeEvent: Event, scope: any): void => {
+  const event = scope.event
+  const nativeEvent = _nativeEvent
   const open = () => {
     selectedEvent.value = event
     selectedElement.value = nativeEvent.target
@@ -269,7 +272,7 @@ const eventsMap = computed(() => {
         :locale="langState"
         color="primary"
         :events="eventsMap[location]"
-        @click:event="showEvent as (nativeEvent: Event, { event }: { event: CalendarEvent }) => void"
+        @click:event="showEvent"
       />
 
       <VMenu
