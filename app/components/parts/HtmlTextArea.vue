@@ -27,13 +27,18 @@ defineProps<{
 .text::v-deep(h2) {
   font-size: 1.5rem;
   font-weight: bold;
+  padding-top: 3rem;
+  padding-bottom: 4px;
+  border-bottom: solid 1px #ddd;
 }
 .text::v-deep(h3) {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: bold;
+  padding-top: 1rem;
 }
 .text::v-deep(h4) {
-  font-size: 1.125rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 .text::v-deep(h5) {
   font-size: 1rem;
