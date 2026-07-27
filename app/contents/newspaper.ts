@@ -1,6 +1,6 @@
 import type { NewspaperCat } from '@/types/newspaper'
 
-export const updateDate = '2022年4月現在'
+export const updateDate = '2026年7月現在'
 
 export const items: NewspaperCat[] = [
   {
