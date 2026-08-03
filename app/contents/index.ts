@@ -3,8 +3,15 @@ import imgExhibition from '~/assets/images/pickout/home-pickout-exhibition.png'
 import imgDatabase from '~/assets/images/pickout/home-pickout-database.png'
 import imgDigitalCollection from '~/assets/images/pickout/home-pickout-digital-collection.png'
 import imgReference from '~/assets/images/pickout/home-pickout-reference.png'
+import imgOpenLibrary from '~/assets/images/pickout/home-pickout-open-library.jpg'
 
 export const pickOut = [
+  {
+    name: 'オープンライブラリー（図書館開放）',
+    to: '/open-library',
+    text: '高校生・大学受験生の女子を対象に、図書館を通年で開放しています。',
+    image: imgOpenLibrary,
+  },
   {
     name: '読書運動プロジェクト',
     to: '/reading-project',
