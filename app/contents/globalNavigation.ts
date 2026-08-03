@@ -75,6 +75,11 @@ export const globalNavigation: Menu[] = [
         push: '/visitor',
       },
       {
+        title: 'オープンライブラリー',
+        id: 'openLibrary',
+        push: '/open-library',
+      },
+      {
         title: 'よくある質問 Q&A',
         id: 'question',
         push: '/question',
