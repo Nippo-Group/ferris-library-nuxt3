@@ -6,7 +6,7 @@
  * @props {Array<{term: string, description: string}>} items - 用語と説明のリスト
  */
 defineProps<{
-  items: {
+  items?: {
     term: string
     description: string
   }[]

@@ -34,6 +34,8 @@ defineProps<{
 .description {
   box-sizing: border-box;
   padding: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .term {
