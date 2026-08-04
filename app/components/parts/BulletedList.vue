@@ -34,9 +34,9 @@ withDefaults(defineProps<{
 <style scoped>
 .list {
   padding-left: 1.5rem;
-  margin: 0;
+  margin-bottom: 1rem;
 }
 .list > :deep(li) {
-  padding: 0.5rem 0;
+  padding: 0.25rem 0;
 }
 </style>
