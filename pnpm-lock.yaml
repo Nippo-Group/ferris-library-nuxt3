@@ -12,8 +12,8 @@ importers:
         specifier: ^7.4.47
         version: 7.4.47
       '@tato30/vue-pdf':
-        specifier: ^1.11.5
-        version: 1.11.5(vue@3.5.40(typescript@6.0.3))
+        specifier: ^2.1.0
+        version: 2.1.0(vue@3.5.40(typescript@6.0.3))
       caniuse-lite:
         specifier: ^1.0.30001806
         version: 1.0.30001806
@@ -1216,8 +1216,8 @@ packages:
     peerDependencies:
       eslint: ^9.0.0 || ^10.0.0
 
-  '@tato30/vue-pdf@1.11.5':
-    resolution: {integrity: sha512-SV6GQx9sD0C0uO/bnAdG1k5D8OtM3lHtYKIgodCq2MbhOaHHpQoyhlSaec9Mo5JifSG4zYDFVNvbcZiMOBkyeQ==}
+  '@tato30/vue-pdf@2.1.0':
+    resolution: {integrity: sha512-0J9AlM3syJG0Mx/ddEaL2GsRlbuhwYpIc0watRh9r9pAZ1WoS9Na+w+4J1fj3Rz4w/cMmb1Tubnn4UdZfnPnag==}
     peerDependencies:
       vue: ^3.2.33
 
@@ -3139,9 +3139,9 @@ packages:
   pathe@2.0.3:
     resolution: {integrity: sha512-WUjGcAqP1gQacoQe+OBJsFA7Ld4DyXuUIjZ5cc75cLHvJ7dtNsTugphxIADwspS+AraAUePCKrSVtPLFj/F88w==}
 
-  pdfjs-dist@5.4.296:
-    resolution: {integrity: sha512-DlOzet0HO7OEnmUmB6wWGJrrdvbyJKftI1bhMitK7O2N8W2gc757yyYBbINy9IDafXAV9wmKr9t7xsTaNKRG5Q==}
-    engines: {node: '>=20.16.0 || >=22.3.0'}
+  pdfjs-dist@5.7.284:
+    resolution: {integrity: sha512-h4EdYQczmGhbOlqc3PPZwxevn7ApdWPbovAuWXOB/DjIyigSnwfy2oze7c6mRcSr9XgLp3eN3EeL4DyySTPMFw==}
+    engines: {node: '>=22.13.0 || >=24'}
 
   perfect-debounce@2.1.0:
     resolution: {integrity: sha512-LjgdTytVFXeUgtHZr9WYViYSM/g8MkcTPYDlPa3cDqMirHjKiSZPYd6DoL7pK8AJQr+uWkQvCjHNdiMqsrJs+g==}
@@ -5646,9 +5646,9 @@ snapshots:
       estraverse: 5.3.0
       picomatch: 4.0.5
 
-  '@tato30/vue-pdf@1.11.5(vue@3.5.40(typescript@6.0.3))':
+  '@tato30/vue-pdf@2.1.0(vue@3.5.40(typescript@6.0.3))':
     dependencies:
-      pdfjs-dist: 5.4.296
+      pdfjs-dist: 5.7.284
       vue: 3.5.40(typescript@6.0.3)
 
   '@tybys/wasm-util@0.10.3':
@@ -7772,7 +7772,7 @@ snapshots:
 
   pathe@2.0.3: {}
 
-  pdfjs-dist@5.4.296:
+  pdfjs-dist@5.7.284:
     optionalDependencies:
       '@napi-rs/canvas': 0.1.100
 

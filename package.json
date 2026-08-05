@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
-    "@tato30/vue-pdf": "^1.11.5",
+    "@tato30/vue-pdf": "^2.1.0",
     "caniuse-lite": "^1.0.30001806",
     "dayjs": "^1.11.21",
     "markdown-it": "^15.0.0",
