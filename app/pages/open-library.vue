@@ -39,7 +39,7 @@ const { newsList } = useNews({
             <VCard>
               <VCardTitle>期間</VCardTitle>
               <VCardText>
-                <p>2026年4月1日(水)～2026年3月31日(水) （閉館日は除く）</p>
+                <p>2026年4月1日(水)～2027年3月31日(水) （閉館日は除く）</p>
                 <p>各日の開館時間は、図書館ホームページ内のカレンダーでご確認ください。</p>
               </VCardText>
               <VCardActions>
@@ -104,7 +104,7 @@ const { newsList } = useNews({
       >
         <client-only>
           <TemplatesPdfViewer
-            src="documents/open-library/open-library-poster.pdf"
+            src="/documents/open-library/open-library-poster.pdf"
             pagination-hidden
           />
         </client-only>
@@ -112,7 +112,7 @@ const { newsList } = useNews({
       <VCol cols="12">
         <VCard>
           <VCardTitle>News</VCardTitle>
-          <templates-list-news :contents-list="newsList" />
+          <TemplatesListNews :contents-list="newsList" />
         </VCard>
       </VCol>
     </VRow>
