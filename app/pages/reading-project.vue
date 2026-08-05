@@ -78,10 +78,8 @@ const { newsList } = useNews({
                   md="5"
                 >
                   <client-only>
-                    <templates-pdf-viewer
+                    <TemplatesPdfPreview
                       :src="document.url"
-                      button-hidden
-                      pagination-hidden
                     />
                   </client-only>
                   <VBtn

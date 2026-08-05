@@ -103,9 +103,8 @@ const { newsList } = useNews({
         md="4"
       >
         <client-only>
-          <TemplatesPdfViewer
+          <TemplatesPdfPreview
             src="/documents/open-library/open-library-poster.pdf"
-            pagination-hidden
           />
         </client-only>
       </VCol>

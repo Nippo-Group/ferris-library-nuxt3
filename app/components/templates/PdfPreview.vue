@@ -1,8 +1,8 @@
 <script setup lang="ts">
 /**
- * PDF表示コンポーネント
+ * PDFファイルを小さくプレビューするためのコンポーネント
  */
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 import { useConfirmDL } from '@/composables/common/'
 import { iconMap } from '@/utils'
 
@@ -26,16 +26,7 @@ const fileName = computed(() => {
 
 <template>
   <ClientOnly>
-    <div class="d-flex flex-column ga-2">
-      <VPagination
-        v-if="pages > 1"
-        v-model="page"
-        :length="pages"
-      />
-      <VSheet
-        color="grey-lighten-5"
-        class="d-flex justify-center align-center pa-1 w-100"
-      >
+    <VCard variant="flat">
         <VuePDF
           class="w-100"
           :pdf="pdf"
@@ -48,20 +39,24 @@ const fileName = computed(() => {
               color="primary"
             />
           </div>
+
         </VuePDF>
-      </VSheet>
-      <div class="text-center pa-1">
+      <VCardActions>
         <VBtn
+          size="small"
+          variant="outlined"
+          color="primary"
+          block
           @click="show(fileName, props.src, 'PDF')"
         >
           ファイルをひらく
           <VIcon
             :icon="iconMap['pdf']"
-            size="large"
+            size="x-large"
             end
           />
         </VBtn>
-      </div>
-    </div>
+      </VCardActions>
+    </VCard>
   </ClientOnly>
 </template>
