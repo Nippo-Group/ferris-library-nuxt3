@@ -39,6 +39,14 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
+    optimizeDeps: {
+      include: ['dayjs'],
+    },
+    build: {
+      commonjsOptions: {
+        transformMixedEsModules: true,
+      },
+    },
   },
   hooks: {
     'vite:extendConfig': (config) => {
