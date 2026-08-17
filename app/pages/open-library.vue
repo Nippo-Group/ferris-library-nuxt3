@@ -44,7 +44,7 @@ const { newsList } = useNews({
               </VCardText>
               <VCardActions>
                 <PartsBtnInside
-                  to="calendar"
+                  to="/calendar"
                   link="カレンダーページへ"
                 />
               </VCardActions>
