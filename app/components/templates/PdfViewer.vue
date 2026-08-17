@@ -12,10 +12,8 @@ type Props = {
 }
 const props = defineProps<Props>()
 
-// プラグインから usePDF を取得
-const { $usePDF } = useNuxtApp()
 const page = ref(1)
-const { pdf, pages } = $usePDF(props.src)
+const pages = ref(0)
 
 const { show } = useConfirmDL()
 
@@ -25,43 +23,40 @@ const fileName = computed(() => {
 </script>
 
 <template>
-  <ClientOnly>
-    <div class="d-flex flex-column ga-2">
-      <VPagination
-        v-if="pages > 1"
-        v-model="page"
-        :length="pages"
-      />
-      <VSheet
-        color="grey-lighten-5"
-        class="d-flex justify-center align-center pa-1 w-100"
+  <div class="d-flex flex-column ga-2">
+    <VPagination
+      v-if="pages > 1"
+      v-model="page"
+      :length="pages"
+    />
+    <VSheet
+      color="grey-lighten-5"
+      class="d-flex justify-center align-center pa-1 w-100"
+    >
+      <TemplatesPdfCanvas
+        :src="props.src"
+        :page="page"
+        @pages-change="pages = $event"
       >
-        <VuePDF
-          class="w-100"
-          :pdf="pdf"
-          :page="page"
-          fit-parent
-        >
-          <div>
-            <VProgressLinear
-              indeterminate
-              color="primary"
-            />
-          </div>
-        </VuePDF>
-      </VSheet>
-      <div class="text-center pa-1">
-        <VBtn
-          @click="show(fileName, props.src, 'PDF')"
-        >
-          ファイルをひらく
-          <VIcon
-            :icon="iconMap['pdf']"
-            size="large"
-            end
+        <div>
+          <VProgressLinear
+            indeterminate
+            color="primary"
           />
-        </VBtn>
-      </div>
+        </div>
+      </TemplatesPdfCanvas>
+    </VSheet>
+    <div class="text-center pa-1">
+      <VBtn
+        @click="show(fileName, props.src, 'PDF')"
+      >
+        ファイルをひらく
+        <VIcon
+          :icon="iconMap['pdf']"
+          size="large"
+          end
+        />
+      </VBtn>
     </div>
-  </ClientOnly>
+  </div>
 </template>

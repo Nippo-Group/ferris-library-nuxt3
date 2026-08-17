@@ -12,10 +12,7 @@ type Props = {
 }
 const props = defineProps<Props>()
 
-// プラグインから usePDF を取得
-const { $usePDF } = useNuxtApp()
 const page = ref(1)
-const { pdf, pages } = $usePDF(props.src)
 
 const { show } = useConfirmDL()
 
@@ -25,38 +22,33 @@ const fileName = computed(() => {
 </script>
 
 <template>
-  <ClientOnly>
-    <VCard variant="flat">
-        <VuePDF
-          class="w-100"
-          :pdf="pdf"
-          :page="page"
-          fit-parent
-        >
-          <div>
-            <VProgressLinear
-              indeterminate
-              color="primary"
-            />
-          </div>
-
-        </VuePDF>
-      <VCardActions>
-        <VBtn
-          size="small"
-          variant="outlined"
+  <VCard variant="flat">
+    <TemplatesPdfCanvas
+      :src="props.src"
+      :page="page"
+    >
+      <div>
+        <VProgressLinear
+          indeterminate
           color="primary"
-          block
-          @click="show(fileName, props.src, 'PDF')"
-        >
-          ファイルをひらく
-          <VIcon
-            :icon="iconMap['pdf']"
-            size="x-large"
-            end
-          />
-        </VBtn>
-      </VCardActions>
-    </VCard>
-  </ClientOnly>
+        />
+      </div>
+    </TemplatesPdfCanvas>
+    <VCardActions>
+      <VBtn
+        size="small"
+        variant="outlined"
+        color="primary"
+        block
+        @click="show(fileName, props.src, 'PDF')"
+      >
+        ファイルをひらく
+        <VIcon
+          :icon="iconMap['pdf']"
+          size="x-large"
+          end
+        />
+      </VBtn>
+    </VCardActions>
+  </VCard>
 </template>
