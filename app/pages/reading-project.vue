@@ -3,24 +3,79 @@ import { useNews } from '@/composables/news/useNews'
 import { useConfirmDL } from '@/composables/common/'
 import { iconMap } from '@/utils'
 import titleImage from '@/assets/images/reading-project/reading-project-title.png'
-import {
-  isWhat,
-  mainActivity,
-  documents,
-  recommendedFor,
-  mediaInformation,
-  teamPlanning,
-  teamRecitation,
-  movies,
-} from '@/contents/reading-project'
 
 const title = '読書運動プロジェクト'
 const description
-  = '読書運動プロジェクト（通称：読プロ）は、「本が好き」「図書館が好き」な学生が集まって、教職員と一緒に活動している公認団体です。学生が主体となり、読書の魅力を届ける様々な活動を展開中です。'
+  = '通称：読プロ。「本が好き」「図書館が好き」な学生が集まって、教職員と一緒に活動している団体です。'
 useSeoMeta({
   title,
   description,
 })
+
+const isWhat
+  = '本学の読書運動プロジェクトは、1998年にシアトル市で始まり、シカゴ市で2001年以降大きな成果を収め全米各地に広まった《One Book, One Community.》にヒントを得たものです。この取組みは、選定された図書の読書を通じてコミュニティの意識を育むOneBook, One Chicagoとしてシカゴ公共図書館で現在も続いています。本学では2002年度から始まり、図書館を拠点として「読書」を個人的な経験だけでなく他者と共有・発信する活動を支援しています。'
+
+const mainActivity = [
+  '本の展示',
+  'POPコンテスト・創作コンクール',
+  '選書ツアー',
+  '朗読会',
+  '各種イベントの実施',
+]
+const documents = [
+  {
+    name: 'リーフレット',
+    url: '/documents/reading-project/activity-introduction-leaflet.pdf',
+    type: 'PDF',
+  },
+]
+
+const recommendedFor = [
+  '本が好き',
+  'イラストを描くのが好き',
+  'イベントが好き、企画してみたい',
+  '大学生だからこそできる活動がしたい',
+  '人前で話すのは苦手だが、克服したい',
+]
+
+const mediaInformation = {
+  title: '掲載されました！',
+  actions: [
+    {
+      url: 'https://magazine.ferris.ac.jp/20230511/18045/',
+      title: '読書運動プロジェクト活動報告　～2023春～',
+      source: 'フェリスを綴る　2023年5月11日掲載',
+    },
+    {
+      url: 'https://magazine.ferris.ac.jp/20230328/17905/',
+      title:
+          '読書運動プロジェクト：朗読会「しあわせの、かたち。 ―ひとりひとりが願うこと―」を開催しました',
+      source: 'フェリスを綴る　2023年3月28日掲載',
+    },
+    {
+      url: 'https://magazine.ferris.ac.jp/20221021/17101/',
+      title:
+          '読書体験の魅力を共有し、新たな本に出会う機会を創出する読書運動プロジェクト',
+      source: 'フェリスを綴る　2022年10月11日掲載',
+    },
+    {
+      url: 'https://magazine.ferris.ac.jp/20220830/16312/',
+      title: '読書運動プロジェクト活動報告　～2022夏～',
+      source: 'フェリスを綴る　2022年8月30日掲載',
+    },
+  ],
+}
+
+const movies = [
+  {
+    src: 'https://www.youtube.com/embed/HRKpRB5fZ-o',
+    title: '図書館施設・設備編',
+  },
+  {
+    src: 'https://www.youtube.com/embed/rBAip8vAxKU',
+    title: 'ラーニングコモンズ編',
+  },
+]
 
 const { show } = useConfirmDL()
 
@@ -173,63 +228,66 @@ const { newsList } = useNews({
         </VCol>
       </VRow>
 
-      <!-- 活動紹介 -->
+      <!-- 学生メンバーの活動について -->
       <VRow>
         <VCol cols="12">
           <SectionsRPHeaderLv2
-            title="活動紹介"
+            title="学生メンバーの活動について"
             :lead="description"
           />
         </VCol>
-        <VCol
-          cols="12"
-          md="6"
-        >
-          <templates-card-reading-project :title="teamPlanning.name">
+        <VCol cols="12">
+          <TemplatesCardReadingProject>
             <VCardText>
-              <PartsHtmlTextArea :data="teamPlanning.content" />
+              <p>図書館を拠点に、「読書」を個人的な体験にとどめず、他者と共有し、発信していくことを目的としています。</p>
+              <p>テーマに沿った本の展示を定期的に行うほか、大学祭では展示発表や図書館ツアー、朗読会などの企画・運営も行っています。</p>
+              <p>本や図書館の魅力を学内外のさまざまな人に伝えるため、アイデアあふれる企画や広報活動を展開します。</p>
             </VCardText>
             <VContainer>
-              <VRow dense>
+              <VRow density="compact">
                 <VCol
-                  v-for="(image, imgIndex) in teamPlanning.images"
-                  :key="imgIndex"
-                  cols="12"
-                  sm="6"
+                  cols="6"
+                  md="3"
                 >
-                  <VImg :src="image" />
+                  <VImg
+                    aspect-ratio="6/4"
+                    cover
+                    src="@/assets/images/reading-project/reading-project-01.jpg"
+                  />
+                </VCol>
+                <VCol
+                  cols="6"
+                  md="3"
+                >
+                  <VImg
+                    aspect-ratio="6/4"
+                    cover
+                    src="@/assets/images/reading-project/reading-project-02.jpg"
+                  />
+                </VCol>
+                <VCol
+                  cols="6"
+                  md="3"
+                >
+                  <VImg
+                    aspect-ratio="6/4"
+                    cover
+                    src="@/assets/images/reading-project/reading-project-03.jpg"
+                  />
+                </VCol>
+                <VCol
+                  cols="6"
+                  md="3"
+                >
+                  <VImg
+                    aspect-ratio="6/4"
+                    cover
+                    src="@/assets/images/reading-project/reading-project-04.jpg"
+                  />
                 </VCol>
               </VRow>
             </VContainer>
-          </templates-card-reading-project>
-        </VCol>
-        <VCol
-          cols="12"
-          md="6"
-        >
-          <templates-card-reading-project :title="teamRecitation.name">
-            <VCardText>
-              <PartsHtmlTextArea :data="teamRecitation.content" />
-            </VCardText>
-            <VContainer>
-              <VRow dense>
-                <VCol
-                  v-for="(image, imgIndex) in teamRecitation.images"
-                  :key="imgIndex"
-                  cols="12"
-                  sm="6"
-                >
-                  <VImg :src="image" />
-                </VCol>
-              </VRow>
-            </VContainer>
-            <VCardText v-if="teamRecitation.movie">
-              <TemplatesYoutubeViewer
-                :title="teamRecitation.movie.title"
-                :src="teamRecitation.movie.src"
-              />
-            </VCardText>
-          </templates-card-reading-project>
+          </TemplatesCardReadingProject>
         </VCol>
       </VRow>
 
