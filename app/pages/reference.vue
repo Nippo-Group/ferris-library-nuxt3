@@ -29,12 +29,30 @@ useSeoMeta({
       </VCol>
       <VCol cols="12">
         <VCard height="100%">
-          <VCardTitle> 所蔵調査 </VCardTitle>
+          <VCardTitle> 所蔵調査・文献取寄せ </VCardTitle>
           <VCardText>
-            ご希望の資料が当図書館にない時、他の図書館や資料館の所蔵調査をいたします。学部生はMyLibraryにログインして調査の依頼ができます。
+            ご希望の資料が当図書館にない時、他の図書館や資料館の所蔵調査、取寄せをいたします。<br>
+            MyLibraryからオンラインでもお申込みいただけます。
           </VCardText>
           <VCardActions class="overflow-x-auto">
             <ContainersStack>
+              <TemplatesDialogDefault title="所蔵調査">
+                <template #contents>
+                  <div class="text-h6">
+                    サービス内容
+                  </div>
+                  <ul>
+                    <li>当館にない資料について、他の図書館等の所蔵を調査します。</li>
+                    <li>
+                      調査内容をレファレンスカウンターにお申込みください。またMyLibrary＞オンラインレファレンスからも申し込みができます。
+                    </li>
+                  </ul>
+                </template>
+                <template #actions>
+                  <PartsBtnMyLibrary />
+                </template>
+              </TemplatesDialogDefault>
+
               <TemplatesDialogDefault title="文献複写">
                 <template #contents>
                   <div class="text-h6">
@@ -43,8 +61,7 @@ useSeoMeta({
                   <ul>
                     <li>当館にない文献のコピーを取り寄せることができます。</li>
                     <li>
-                      資料名、掲載巻号（雑誌）、ページなどの情報を申込用紙（MyLibrary
-                      にログインのうえ入手できます）にご記入の上、レファレンスカウンターにお申し込みください。大学院生・教員はMyLibraryからも申し込みができます。
+                      資料名、掲載巻号（雑誌）、ページなどの情報を申込用紙にご記入の上、レファレンスカウンターにお申し込みください。オンラインでMyLibrary > ILL依頼状況 からも申し込みができます。
                     </li>
                   </ul>
                   <div class="text-h6 pt-6">
@@ -71,8 +88,7 @@ useSeoMeta({
                       当館にない図書を学外の図書館から一定期間借りることができます。
                     </li>
                     <li>
-                      申込用紙（MyLibrary
-                      にログインのうえ入手できます）にご記入のうえ、レファレンスカウンターにお申し込みください。大学院生・教員はMyLibraryからも申し込みができます。
+                      申込用紙にご記入のうえ、レファレンスカウンターにお申し込みください。オンラインでMyLibrary > ILL依頼状況 からも申し込みができます。
                     </li>
                     <li>
                       館内でのみ閲覧することができます。館外への持ち出しはできません。
