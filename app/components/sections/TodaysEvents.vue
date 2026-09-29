@@ -2,7 +2,7 @@
 import ryokuen from '@/assets/json/calendar-ryokuen.json'
 import yamate from '@/assets/json/calendar-yamate.json'
 import common from '@/assets/json/calendar-common.json'
-import type { Event, Events } from '@/types/events'
+import type { ExternalCalendarEvent } from '@/types/calendar'
 import { useDayjs } from '@/composables/common'
 
 const title = '本日の開館時間'
@@ -20,14 +20,14 @@ const todaysEventsYamate = computed<string[]>(() => {
   return findEventsToday(eventsYamate)
 })
 
-const findEventsToday = (events: Events) => {
+const findEventsToday = (events: ExternalCalendarEvent[]) => {
   const todayEvents: string[] = []
 
-  events.forEach((value: Event) => {
+  events.forEach((value: ExternalCalendarEvent) => {
     const start = dayjs(value.start)
     const end = value.end !== undefined ? dayjs(value.end) : dayjs(value.start)
     if (today > start.startOf('day') && today < end.endOf('day')) {
-      todayEvents.push(value.name)
+      todayEvents.push(value.title)
     }
   })
   return todayEvents

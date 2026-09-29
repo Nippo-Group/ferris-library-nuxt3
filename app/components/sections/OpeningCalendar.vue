@@ -1,19 +1,17 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import jsonRyokuen from '@/assets/json/calendar-ryokuen.json'
-import jsonYamate from '@/assets/json/calendar-yamate.json'
-import jsonCommon from '@/assets/json/calendar-common.json'
+import { ref } from 'vue'
 
 import { iconMap } from '@/utils'
-import { useLanguage } from '@/composables/common/'
-import type { Location, LocationRecord, LangRecord } from '@/types'
+import { useCalendar } from '@/composables/calendar/useCalendar'
+import type { LocationRecord, LangRecord } from '@/types'
+import type { CalendarDisplayEvent } from '@/composables/calendar/useCalendar'
 
 /*
 モジュールの読み込み
 ------------ */
 
-// 言語の状態
-const { langState } = useLanguage()
+// カレンダーの状態と表示イベント
+const { langState, location, eventsMap } = useCalendar()
 
 /*
 定数
@@ -31,40 +29,12 @@ const locationLabel: LocationRecord<LangRecord<string>> = {
   },
 }
 
-// 時間帯指定の正規表現
-const regexTimeSpecification = /^\d{1,2}:\d{1,2}\s*.+\s*\d{1,2}:\d{1,2}$/
-
-// イベントと色の対応表
-const eventColorsMap = {
-  'default': '#5C6BC0',
-  'closed': '#616161',
-  '08:50-21:00': '#42A5F5',
-  '09:00-19:00': '#FFA726',
-  '09:00-17:00': '#66BB6A',
-  '09:00-18:00': '#FFCA28',
-  '08:50-18:30': '#AB47BC',
-  '10:00-15:00': '#FF7043',
-  '08:50-18:00': '#D81B60',
-  '10:00-17:00': '#C0CA33',
-} as const
 /*
 型定義
 ------------ */
 
-// イベントの形式
-type CalendarEvent = {
-  name: string
-  start: string
-  end?: string
-  color?: string
-  timed?: boolean
-  [key: string]: any
-}
-
 // カレンダーコンポーネントのタイプ
 type CalendarType = 'month' | 'category' | 'day' | '4day' | 'custom-daily' | 'custom-weekly' | 'week' | undefined
-
-type CalendarEventColorKey = keyof typeof eventColorsMap
 
 /*
 状態管理
@@ -73,9 +43,6 @@ type CalendarEventColorKey = keyof typeof eventColorsMap
 // カレンダーコンポーネント
 const calendar = ref()
 
-// 図書館の種類
-const location = ref<Location>('ryokuen')
-
 // フォーカスされてる日付
 const focus = ref('')
 
@@ -83,7 +50,7 @@ const focus = ref('')
 const type = ref<CalendarType>('month')
 
 // 選択中のイベント
-const selectedEvent = ref<CalendarEvent | undefined>()
+const selectedEvent = ref<CalendarDisplayEvent | undefined>()
 // 選択中イベントのエレメント
 const selectedElement = ref()
 // 選択中イベントの詳細の開閉状態
@@ -131,75 +98,6 @@ const showEvent = (_nativeEvent: Event, scope: any): void => {
 ユーティリティー
 ------------ */
 
-// 時間帯の指定方法をフォーマットする
-const formatTimeRange = (input: string): string | undefined => {
-  // 時刻(hh:mm)をすべて抽出
-  const matches = input.match(/\d{1,2}:\d{2}/g)
-
-  if (!matches || matches.length < 2) {
-    return undefined // 時刻が2つ未満ならフォーマット不可
-  }
-
-  // 先頭と次の時刻を取得
-  let [start, end] = matches
-
-  // 桁揃え（1桁の時間は2桁に直す）
-  start = start.replace(/^(\d{1}):/, '0$1:')
-  end = end?.replace(/^(\d{1}):/, '0$1:')
-
-  // コロン後の分も2桁に（例: 09:5 → 09:05）
-  start = start.replace(/:(\d{1})$/, ':0$1')
-  end = end?.replace(/:(\d{1})$/, ':0$1')
-
-  return `${start}-${end}`
-}
-
-// イベントカラーを取得する
-const getEventColor = (name: string): string => {
-  if (name === 'Closed' || name === '閉館' || name === '閉室') {
-    return eventColorsMap['closed']
-  }
-  else if (regexTimeSpecification.test(name)) {
-    const key = formatTimeRange(name)
-    if (key && key in eventColorsMap) {
-      return eventColorsMap[key as CalendarEventColorKey]
-    }
-    else {
-      return eventColorsMap['default']
-    }
-  }
-  else {
-    return eventColorsMap['default']
-  }
-}
-
-// イベントをフォーマットする
-const eventFormat = (events: CalendarEvent[]): CalendarEvent[] => {
-  const arr = []
-  for (const event of events) {
-    arr.push({
-      name: renameClosed(event.name),
-      color: event.color ?? getEventColor(event.name),
-      start: event.start,
-      end: event.end,
-      timed: true,
-    })
-  }
-  return arr
-}
-
-// 英語ページの場合は閉館・閉室を変換する関数
-const renameClosed = (eventName: string): string => {
-  if (langState.value === 'ja') return eventName
-
-  if (eventName === '閉館' || eventName === '閉室') {
-    return 'Closed'
-  }
-  else {
-    return eventName
-  }
-}
-
 // 日本語の場合の年月のフォーマット
 const formatYearAndMonth = (title: string): string => {
   if (langState.value !== 'ja') return title
@@ -211,21 +109,6 @@ const formatYearAndMonth = (title: string): string => {
   arr[0] = `${arr[0]}年`
   return arr.join(' ')
 }
-
-/*
-演算
------------- */
-
-// イベントリスト
-const eventsMap = computed(() => {
-  const eventsRyokuen = eventFormat(jsonRyokuen.concat(jsonCommon))
-  const eventsYamate = eventFormat(jsonYamate.concat(jsonCommon))
-
-  return {
-    ryokuen: eventsRyokuen,
-    yamate: eventsYamate,
-  }
-})
 </script>
 
 <template>
@@ -237,10 +120,10 @@ const eventsMap = computed(() => {
       align-tabs="start"
     >
       <VTab value="ryokuen">
-        {{ locationLabel.ryokuen[langState] }}
+        {{ locationLabel.ryokuen[langState as 'ja' | 'en'] }}
       </VTab>
       <VTab value="yamate">
-        {{ locationLabel.yamate[langState] }}
+        {{ locationLabel.yamate[langState as 'ja' | 'en'] }}
       </VTab>
     </VTabs>
 
