@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import type { JournalItem } from '@/types/journal'
-// import { iconMap } from '@/utils'
+import { useConfirmDL } from '@/composables/common/'
+import { iconMap } from '@/utils'
 
 defineProps<JournalItem>()
+
+const { show } = useConfirmDL()
 </script>
 
 <template>
@@ -32,43 +35,39 @@ defineProps<JournalItem>()
             class="overflow-y-auto"
           >
             <ContainersStack>
-              <PartsBtnOpenInNew
-                v-for="(link, k) in links"
-                :key="'link' + k"
-                :link="link.name"
-                :url="link.path"
-                class="ma-0"
-              />
-              <!-- <template v-if="documents">
+              <template
+                v-for="link in links"
+                :key="link.path"
+              >
+                <PartsBtnOpenInNew
+                  v-if="link.type === 'external'"
+                  :link="link.name"
+                  :url="link.path"
+                  class="ma-0"
+                />
+
+                <PartsBtnInside
+                  v-else-if="link.type === 'internal'"
+                  :link="link.name"
+                  :to="link.path"
+                  class="ma-0"
+                />
+
                 <VBtn
-                  v-for="(file, n) in documents"
-                  :key="'file' + n"
+                  v-else
                   variant="elevated"
                   class="ma-0"
-                  @click="show(file.name, file.url, file.type)"
+                  @click="show(link.name, link.path, link.type)"
                 >
-                  {{ file.name }}
+                  {{ link.name }}
 
                   <VIcon
-                    v-if="file.type == 'PDF'"
-                    :icon="iconMap['pdf']"
-                    dark
-                    end
-                  />
-                  <VIcon
-                    v-else-if="file.type == 'Excel'"
-                    :icon="iconMap['excel']"
-                    dark
-                    end
-                  />
-                  <VIcon
-                    v-else
-                    :icon="iconMap['doc']"
+                    :icon="iconMap[link.type]"
                     dark
                     end
                   />
                 </VBtn>
-              </template> -->
+              </template>
             </ContainersStack>
           </VCardActions>
         </VCol>
