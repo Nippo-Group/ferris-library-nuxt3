@@ -112,6 +112,11 @@ export const globalNavigation: Menu[] = [
         push: '/database',
       },
       {
+        title: '電子ジャーナル',
+        id: 'journal',
+        push: '/journal',
+      },
+      {
         title: 'キャリア支援',
         id: 'carrier',
         push: '/carrier',

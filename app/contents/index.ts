@@ -4,6 +4,7 @@ import imgDatabase from '~/assets/images/pickout/home-pickout-database.png'
 import imgDigitalCollection from '~/assets/images/pickout/home-pickout-digital-collection.png'
 import imgReference from '~/assets/images/pickout/home-pickout-reference.png'
 import imgOpenLibrary from '~/assets/images/pickout/home-pickout-open-library.jpg'
+import imgJournal from '~/assets/images/pickout/home-pickout-journal.jpg'
 
 export const pickOut = [
   {
@@ -29,6 +30,12 @@ export const pickOut = [
     to: '/database',
     text: '図書館で契約しているデータベースや電子ブックを検索することができます',
     image: imgDatabase,
+  },
+  {
+    name: ['電子ジャーナル'],
+    to: '/journal',
+    text: '図書館で契約している電子ジャーナルは、こちらから閲覧できます',
+    image: imgJournal,
   },
   {
     name: '電子コレクション',

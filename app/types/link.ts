@@ -5,5 +5,5 @@ export type LinkType = 'internal' | 'external'
 export type Link = {
   name: string
   path: string
-  type: File & LinkType
+  type: File | LinkType
 }
