@@ -80,6 +80,7 @@ const movies = [
 const { show } = useConfirmDL()
 
 const newsIds = [
+  'bd68vxaog5',
   'f_5l518j2yx',
   '5jh2hdztjnyk',
   'bp922vzsag',
