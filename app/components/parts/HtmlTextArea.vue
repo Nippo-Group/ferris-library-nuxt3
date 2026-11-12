@@ -15,33 +15,30 @@ defineProps<{
 </template>
 
 <style scoped>
-.text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
 .text::v-deep(h1) {
-  font-size: 1.8rem;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 .text::v-deep(h2) {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: bold;
-  padding-top: 3rem;
+  margin-top: 40px;
   padding-bottom: 4px;
   border-bottom: solid 1px #ddd;
 }
 .text::v-deep(h3) {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: bold;
-  padding-top: 1rem;
+  margin-top: 24px
 }
 .text::v-deep(h4) {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-weight: bold;
+  margin-top: 8px
 }
 .text::v-deep(h5) {
-  font-size: 1rem;
+  font-size: 0.875rem;
+  font-weight: bold;
 }
 .text::v-deep(h6) {
   font-size: 0.875rem;
@@ -52,7 +49,7 @@ defineProps<{
 }
 .text::v-deep(ul),
 .text::v-deep(ol) {
-  padding-left: 1.5em;
+  padding-left: 2em;
 }
 .text::v-deep(li) {
   line-height: 1.8;
